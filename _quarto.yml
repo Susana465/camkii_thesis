@@ -1,0 +1,28 @@
+project:
+  type: book
+
+book:
+  title: "camkii_thesis"
+  author: "Susana Roman Garcia"
+  date: now
+  date format: long
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - background.md
+    - methods.md
+    - results.md
+    - references.qmd
+  downloads: [pdf]
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: pulse
+  pdf:
+    documentclass: scrreprt
+
+
+
