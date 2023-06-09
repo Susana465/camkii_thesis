@@ -1,3 +1,28 @@
+---
+bibliography: [references.bib]
+---
 # Background
 
-To add from word doc second year report.
+## Report style and philosophy
+As we go through this report, you will notice here and there how I chose to write about the personal struggles and successes throughout my second year. Additionally, I also highlight and talk about some of the things I care most in research: making it transparent, inclusive, and accessible. Another unusual thing about this report is that you will see asides mentioning bias in the research I use, or potential oppressive bias on how my research could be used. This is the unfortunate reality of much of the history of the field, and I didn’t want to highlight any scientific achievements without also acknowledging a legacy of scientific racism, speciesism, ableism or any other kind of oppression.
+This report’s format and philosophy are heavily inspired by Zelenka’s thesis, which you can find here @nataliezelenkaPhenotypeGenotype. In this section, I’ll explain a little about my approach to the work in this report. This is to add clarity about the lenses through which I did this work, as well as what I consider to be a meaningful scientific contribution.
+
+## Complexity Science and Systems Biology
+Complexity science is the study of systems of interacting parts and the emergent behaviours that appear when looking at these interactions; applications of complexity science are predator-prey models, epidemiological modelling (for example,  of pandemics), protein-protein interaction networks, or models of neurons. When applied to biology, it often falls under the banner of Systems Biology. Systems biology, then, refers to the quantitative analysis of the dynamic interactions among several components of a biological system and aims to understand the behaviour of the system as a whole. 
+
+Systems biology involves development and application of systems theory concepts for the study of complex biological systems through iteration over mathematical modelling, computational simulation and biological experimentation. Systems biology serves as a tool to increase our understanding of biological systems, to develop more directed experiments, and to allow accurate predictions. In systems biology, it is helpful to understand and clarify what complexity means also in respect to: 
+
+- **The model**: the large number of variables that can determine behaviour. Some hallmarks of complexity are usually the number of parameters, order of equations and evolution of networks. For example, a protein containing n peptide substrates of kinases can potentially be found in up to 2n distinct phosphorylation states. This feature of protein–protein interactions, which arises because a typical protein involved in cellular regulation contains multiple sites of posttranslational modification and multiple binding sites, has been called combinatorial complexity and is a common challenge to our understanding of cellular regulation @klamt2002CombinatorialComplexityPathway, @green2018NetworkAnalysesSystems. This point relates to the explanations given below too. 
+
+- **The natural system**: the connectivity and non-linearity of relationships. In biological systems large numbers of functionally different, and often multifunctional, sets of elements interact selectively and non-linearly to produce complex behaviours. A biological system is not always necessarily equal to the sum of its parts @nurse1997EndsUnderstanding, where functions emerge from the properties of the networks rather than from any specific element. On the contrary, in biological systems, functions rely on a combination of the network and the specific elements involved. CaMKII interaction pathways serves as a good example here. This protein can be activated, inhibited and degraded by reactions such as phosphorylation and de-phosphorylation, while its targets are selected by the different modification patterns that exist; these are properties that reflect the complexity of the element itself.
+
+- **The technology**: the limited precision and accuracy measurements. When modelling biological systems we encounter more layers of complexity such as, for example, looking at quantitative measures by experimental biologists: for instance, which parameters are available for modelling the system? Which ones do we infer? And in doing so, what are the model parameter sensitivity and initial values sensitivities? The popular measure of complexity for dynamical system is the computational complexity (discussed in the “Computational modelling” section below). For example, although a calculated measure in a mathematical model can characterize the amount of information necessary to predict the future state of the machine, it fails to address its meaning in the world of molecular and modular cell biology. CaMKII serves as a good case here, as mathematically it has been calculated that CaMKII’s dodecamer could have up to 1020 states @pharris2019MultistateModelCaMKII. However, which ones of these states are biologically relevant is a key question that has no answer yet.
+
+- **The methodology**: the uncertainty arising from the conceptual framework chosen. The noise in complexity of the systems increases even further by introducing issues of robustness, noise-resonance and bi-modal behaviour. For example, once we have some outcomes in the model, how can we make sure results are robust and certain?
+
+## Team efforts science
+
+'decide whether to add this section or not.'
+
+## Open and reproducible Science
+### Defining reproducibility vs replicability

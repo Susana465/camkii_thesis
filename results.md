@@ -1,4 +1,11 @@
+---
+bibliography: [references.bib]
+---
+
 # Results
+
+
+@lisman2012mechanisms
 
 ## CaMKII dodecamer
 
