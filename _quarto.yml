@@ -25,6 +25,12 @@ format:
     theme: pulse
   pdf:
     documentclass: scrreprt
-
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-after-body: 
+      text: |
+        \printindex
 
 
