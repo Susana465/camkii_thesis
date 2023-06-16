@@ -59,73 +59,31 @@ During my PhD work so far, one aspect of the research that has come with quite a
 
 This of course leads to reproducibility issues, and as this unfolds, it becomes clear that the “untrustworthiness” of research is also an issue for many other researchers. In fact, a survey of 1576 scientists published in Nature @baker2016500ScientistsLift reported that over 70% of the participants failed to reproduce others’ experiments and over 50% failed to reproduce their own results. 
 
-Interestingly, @tiwari2021ReproducibilitySystemsBiology, assessed the reproducibility of 455 mathematical models in systems biology and found that about 50% of published models were not reproducible either due to incorrect or missing information in the manuscript. Having reproducibility standards like the ones offered by the frameworks discussed above, as well as having in mind something like the reproducibility scorecard introduced by @tiwari2021ReproducibilitySystemsBiology (table 2), can be used to overcome these issues. 
+Interestingly, @tiwari2021ReproducibilitySystemsBiology, assessed the reproducibility of 455 mathematical models in systems biology and found that about 50% of published models were not reproducible either due to incorrect or missing information in the manuscript. Having reproducibility standards like the ones offered by the frameworks discussed above, as well as having in mind something like the reproducibility scorecard introduced by @tiwari2021ReproducibilitySystemsBiology (@tbl-scoreboard), can be used to overcome these issues.
 
-<table>
-  <tr>
-   <td>Score:
-   </td>
-   <td> 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>1</strong>
-   </td>
-   <td>Are the mathematical expressions described in the manuscript/supplementary material?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>2</strong>
-   </td>
-   <td>Are the parameters and entity initial levels listed (as a table) in the manuscript/supplementary material?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>3</strong>
-   </td>
-   <td>Are simulation conditions including software/programming environment, algorithm, changes in parameters/concentration/states and any data normalization described under each simulation figure or attached as a supplementary material?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>4</strong>
-   </td>
-   <td>Are the model code(s) for the mathematical expression and simulation shared publicly?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>5</strong>
-   </td>
-   <td>Are the model codes available in standard formats, e.g. SBML, COMBINE archive, SEDML and are syntactically validated?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>6</strong>
-   </td>
-   <td>Are the model codes deposited in a relevant open model database?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>7</strong>
-   </td>
-   <td>Are the model codes well documented to unambiguously identify model entities/variables? (with additional annotation of reactions, mathematical expressions, events, conditions, etc. when relevant.) Are the models in standard formats such as SBML and COMBINE Archive are semantically enriched, i.e. annotated with controlled vocabularies such as Gene Ontology and ChEBI and database resources such as Gene Ontologies?
-<p>
- 
-   </td>
-  </tr>
-  <tr>
-   <td><strong>8</strong>
-   </td>
-   <td>Are the numerical results shared publicly along with the model codes?
-<p>
+|Score:|Questions:| 
+|--     |:---------|
+|1      | Are the mathematical expressions described in the manuscript/supplementary material?|
+|2      |Are the parameters and entity initial levels listed (as a table) in the manuscript/supplementary material?|
+|3      |Are simulation conditions including software/programming environment, algorithm, changes in parameters/concentration/states and any data normalization described under each simulation figure or attached as a supplementary material?|
+|4      |Are the model code(s) for the mathematical expression and simulation shared publicly?|
+|5      |Are the model codes available in standard formats, e.g. SBML, COMBINE archive, SEDML and are syntactically validated?|
+|6      |Are the model codes deposited in a relevant open model database?|
+|7      |Are the model codes well documented to unambiguously identify model entities/variables? (with additional annotation of reactions, mathematical expressions, events, conditions, etc. when relevant.) Are the models in standard formats such as SBML and COMBINE Archive are semantically enriched, i.e. annotated with controlled vocabularies such as Gene Ontology and ChEBI and database resources such as Gene Ontologies?|
+|8      |Are the numerical results shared publicly along with the model codes?|
+
+:Reproducibility Scorecard suggested by @tiwari2021ReproducibilitySystemsBiology {#tbl-scoreboard}
+
+
+We might like to think that scientific research is objective, and simply measuring reality. The reality, however, is that many decisions will be taken when doing research, and these decisions will impact the results of that research. If decisions are not well documented, the validity of the research can become more opaque. Likewise, an important issue in scientific work that makes it difficult for other people to build on is that materials or details of analyses are not freely shared, which is why open science is important when overcoming these issues. 
+
+When it comes to publishing results in science, there is a bias for “positive results” publications, which neglects insights from negative results that could aid in further understanding what works and what doesn’t work for different types of studies @mlinaric2017DealingPositivePublication. Underreporting of negative results introduces bias into meta-analysis, which consequently misinforms researchers, doctors, policymakers and the public in general. Additionally, more resources are potentially wasted on already disputed research that remains unpublished and therefore unavailable to the scientific community. The current competitive mindset of scientific research contributes and is worth mentioning as an important factor for this desire to find positive and novel outcomes in studies, which can sometimes lead to misinterpretation and distortion of results @fanelli2010PressuresPublishIncrease. 
+
+These are some of the reasons why clarity, reproducibility and noting of possible unaccounted for biases, have been an important part of the way that I do research, and I have made as much of my work as reproducible and open possible, taking new items from the Turing Way booklet and Data Hazards project as main inspiration to do so.  
+
+## Synapses and neuronal plasticity: a brief background (for beginners)
+
+Every time we learn something, neural circuits are altered in our brains. These circuits are composed of a number of neurons (nerve cells) that communicate with one another through special junctions called synapses. Synapses designate the point where the axon of one neuron connects to a dendrite of another (@fig-synapse).
+
+
+![Different components of a chemical synapse (Brain from Top to Bottom website).](background_figures/synapse.png){#fig-synapse}
