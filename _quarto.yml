@@ -7,12 +7,21 @@ book:
   date: now
   date format: long
   chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - background.md
-    - methods.md
-    - results.md
+    - part: index.qmd
+      chapters:
+      - index.qmd
+    - part: 10-intro.qmd
+      chapters:
+      - 11-philosophy.md
+    - part: 20-background.md
+      chapters:
+      - 21-complex_systems.md
+      - 22-reproducibility_open_science.md
+      - 23-memory_learning.md
+      - 24-why_modelling.md
+      - 25-how_we_model.md
+    - 30-methods.md
+    - 40-results.md
     - references.qmd
   crossref:
     fig-prefix: figure   # (default is "Figure")
