@@ -19,7 +19,8 @@ book:
       - 22-reproducibility_open_science.md
       - 23-memory_learning.md
       - 24-why_modelling.md
-      - 25-how_we_model.md
+      - 25-ssa_ode.md
+      - 26-rule-based.md
     - 30-methods.md
     - 40-results.md
     - references.qmd
