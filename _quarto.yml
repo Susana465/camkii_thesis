@@ -5,7 +5,7 @@ book:
   title: "camkii_thesis"
   author: "Susana Roman Garcia"
   date: now
-  date format: long
+  date-format: long
   chapters:
     - part: index.qmd
       chapters:
@@ -20,17 +20,14 @@ book:
       - 23-memory_learning.md
       - 24-why_modelling.md
       - 25-ssa_ode.md
-      - 26-rule-based.md
+      - 26-rule_based.ipynb
     - 30-methods.md
     - 40-results.md
     - references.qmd
-  crossref:
-    fig-prefix: figure   # (default is "Figure")
-    tbl-prefix: table    # (default is "Table")
-    ref-hyperlink: false # (default is true)
+
   downloads: [pdf]
   page-navigation: true
-
+  
 bibliography: 
 - references.bib
 link-citations: true

@@ -2,9 +2,9 @@
 bibliography: [references.bib]
 ---
 
-## Open and reproducible Science
+# Open and reproducible Science
 
-### Defining reproducibility vs replicability
+## Defining reproducibility vs replicability
 There is a long history of these terms being used interchangeably, or their meanings being swapped depending on the field of study  @claerbout1992ElectronicDocumentsGive @ivie2018ReproducibilityScientificComputing @plesser2018ReproducibilityVsReplicability. For example, a review on the usage of reproducible/replicable meanings @barba2018TerminologiesReproducibleResearch showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by Ivie and Thain, 2018. In political science and economics literature, both terms are used interchangeably. So this quickly shows how having a lack of agreement on such definitions can add even more confusion to the mix. 
 Here, we use the definition used by @turingwaycommunity2019TuringWayHandbook, where reproducible research is understood as work that can be independently recreated from the same data and the same code that the original team used. Reproducible is distinct from replicable, robust and generalisable as described in the table below.
 
@@ -20,7 +20,7 @@ The different dimensions of reproducible research described in the matrix above 
 
 - **Generalisable**: Combining replicable and robust findings allow us to form generalisable results. Note that running an analysis on a different software implementation and with a different dataset does not provide generalised results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline.
 
-### Defining Open Science
+## Defining Open Science
 
 The Organisation for Economic Cooperation and Development defines open research as the practice of making “the primary outputs of publicly funded research results – publications and the research data – publicly accessible in a digital format with no or minimal restriction” @heise2020OpenAccessOpen. In order to achieve this openness, it is suggested that each element of the process should:
 
@@ -36,7 +36,7 @@ Creating open practices has multiple benefits. Firstly, researchers can benefit 
 
 Of course it is worth noting that open science it’s not just “sharing absolutely everything”, as many fields of science involve working with sensitive personal data, with medical research being the most obvious example. Privacy and data protection, as well as consent, and national and commercially sensitive data can be some of the most common examples of when data cannot always be open @regulation2016RegulationEU2016. If access to data needs to be restricted due to security reasons, however, the justification for this should be made clear. Free access to and subsequent use of data is of significant value to society and the economy. That data should, therefore, be open by default and only as closed as necessary. 
 
-### Why is reproducibility and open science important?
+## Why is reproducibility and open science important?
 During my PhD work so far, one aspect of the research that has come with quite a lot of struggle is to find accurate parametrization of values for protein dynamics. This is a known issue for most of us who create computational models of biological systems. @wieber2020ModelsParameterizationSoftware call it an “epistemic opacity” when talking about lack of clarity in Computational Chemistry, where this opacity is entangled in methods and software alike. 
 
 This of course leads to reproducibility issues, and as this unfolds, it becomes clear that the “untrustworthiness” of research is also an issue for many other researchers. In fact, a survey of 1576 scientists published in Nature @baker2016500ScientistsLift reported that over 70% of the participants failed to reproduce others’ experiments and over 50% failed to reproduce their own results. 
