@@ -2,7 +2,7 @@
 bibliography: [references.bib]
 ---
 
-# Open and reproducible Science
+# Open and reproducible science
 
 ## Defining reproducibility vs replicability
 There is a long history of these terms being used interchangeably, or their meanings being swapped depending on the field of study  @claerbout1992ElectronicDocumentsGive @ivie2018ReproducibilityScientificComputing @plesser2018ReproducibilityVsReplicability. For example, a review on the usage of reproducible/replicable meanings @barba2018TerminologiesReproducibleResearch showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by Ivie and Thain, 2018. In political science and economics literature, both terms are used interchangeably. So this quickly shows how having a lack of agreement on such definitions can add even more confusion to the mix. 
