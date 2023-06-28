@@ -5,12 +5,12 @@ bibliography: [references.bib]
 # Open and reproducible science
 
 ## Defining reproducibility vs replicability
-There is a long history of these terms being used interchangeably, or their meanings being swapped depending on the field of study  @claerbout1992ElectronicDocumentsGive @ivie2018ReproducibilityScientificComputing @plesser2018ReproducibilityVsReplicability. For example, a review on the usage of reproducible/replicable meanings @barba2018TerminologiesReproducibleResearch showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by Ivie and Thain, 2018. In political science and economics literature, both terms are used interchangeably. So this quickly shows how having a lack of agreement on such definitions can add even more confusion to the mix. 
-Here, we use the definition used by @turingwaycommunity2019TuringWayHandbook, where reproducible research is understood as work that can be independently recreated from the same data and the same code that the original team used. Reproducible is distinct from replicable, robust and generalisable as described in the table below.
+There is a long history of these terms being used interchangeably, or their meanings being swapped depending on the field of study [@claerbout1992ElectronicDocumentsGive], [@ivie2018ReproducibilityScientificComputing], [@plesser2018ReproducibilityVsReplicability]. For example, a review on the usage of reproducible/replicable meanings [@barba2018TerminologiesReproducibleResearch] showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by Ivie and Thain, 2018. In political science and economics literature, both terms are used interchangeably. So this quickly shows how having a lack of agreement on such definitions can add even more confusion to the mix. 
+Here, we use the definition used by [@turingwaycommunity2019TuringWayHandbook], where reproducible research is understood as work that can be independently recreated from the same data and the same code that the original team used. Reproducible is distinct from replicable, robust and generalisable as described in the table below.
 
 [INSERT TURING WAY TABLE]
 
-The different dimensions of reproducible research described in the matrix above have the following definitions, taken from the Turing Way booklet (Bowler et al., 2019):
+The different dimensions of reproducible research described in the matrix above have the following definitions, taken from the Turing Way booklet::
 
 - **Reproducible**: A result is reproducible when the *same* analysis steps performed on the *same* dataset consistently produces the *same* answer.
 
@@ -22,7 +22,7 @@ The different dimensions of reproducible research described in the matrix above 
 
 ## Defining Open Science
 
-The Organisation for Economic Cooperation and Development defines open research as the practice of making “the primary outputs of publicly funded research results – publications and the research data – publicly accessible in a digital format with no or minimal restriction” @heise2020OpenAccessOpen. In order to achieve this openness, it is suggested that each element of the process should:
+The Organisation for Economic Cooperation and Development defines open research as the practice of making “the primary outputs of publicly funded research results – publications and the research data – publicly accessible in a digital format with no or minimal restriction” [@heise2020OpenAccessOpen]. In order to achieve this openness, it is suggested that each element of the process should:
 
 1.	**Be publicly available**: It is difficult to use and benefit from knowledge hidden behind barriers such as passwords and paywalls.
 

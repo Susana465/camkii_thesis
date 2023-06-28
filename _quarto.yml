@@ -22,6 +22,7 @@ book:
       - 25-ssa_ode.md
       - 26-rule_based.ipynb
       - 27-software.md
+      - 28-necklace_numbers.rmd
     - 30-methods.md
     - 40-results.md
     - references.qmd

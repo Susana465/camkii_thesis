@@ -1,0 +1,6 @@
+## need to tidy and make it work, but for now so I don't forget dependencies:
+# python =3.9
+# numpy
+# scipy
+# rpy2 ## for running R magic in ipynb (may remove if not used)
+# need some version of r and rmarkdown to render qmd files which contain r code
