@@ -7,3 +7,5 @@ _Calcium–calmodulin (CaM)-dependent protein kinase II (CaMKII) has remarkable 
 also to read from 2023: a review: https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
 
 association rates: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006991 
+
+phd 2006 camkii modelling: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://thesis.library.caltech.edu/2462/1/PhDthesis.pdf 
