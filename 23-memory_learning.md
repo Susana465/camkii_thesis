@@ -4,6 +4,23 @@ bibliography: [references.bib]
 
 # Learning and Memory
 
+### Abstract:
+Objective: Clearly state the purpose of your thesis or the research question you're addressing. Interactions between NMDARs and CaMKIIs are crucial for memory formation. In this PhD project I look at how they interact in time and space to ellucidate how they may be interacting in the postsynaptic density of dendrites. 
+
+Methodology: Briefly outline the methods or approach you used to conduct your research. In order to address this question, I model CaMKII and NMDARs interactions in the computer using monte carlo algorithm sitmulations using MCell and CellBlender. 
+
+Results: Summarize the main findings or outcomes of your study. The main findings of this study are X and Y. 
+
+Conclusion: Provide a concise conclusion or discuss the implications of your findings. Am I able to reproduce results from previous undergrad thesis? or reproduce what ordyan concluded? what literature is out there already? 
+
+Keywords: Include a few keywords that highlight the main topics or themes of your thesis.
+
+what is this chapter doing. 
+
+--
+
+This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within dendritic postsynaptic density. Using Monte Carlo algorithm simulations with MCell and CellBlender, I model their interactions. Throughout this project, I identify key factors influencing the efficacy and modulatory dynamics of these interactions.These findings contribute to understanding synaptic plasticity mechanisms crucial for memory formation.
+
 ## Synapses and neuronal plasticity: a brief background
 
 Every time we learn something, neural circuits are altered in our brains. These circuits are composed of a number of neurons (nerve cells) that communicate with one another through special junctions called synapses. Synapses designate the point where the axon of one neuron connects to a dendrite of another (@fig-synapse).
