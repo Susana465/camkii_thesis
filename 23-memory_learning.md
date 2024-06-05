@@ -5,21 +5,11 @@ bibliography: [references.bib]
 # Learning and Memory
 
 ### Abstract:
-Objective: Clearly state the purpose of your thesis or the research question you're addressing. Interactions between NMDARs and CaMKIIs are crucial for memory formation. In this PhD project I look at how they interact in time and space to ellucidate how they may be interacting in the postsynaptic density of dendrites. 
-
-Methodology: Briefly outline the methods or approach you used to conduct your research. In order to address this question, I model CaMKII and NMDARs interactions in the computer using monte carlo algorithm sitmulations using MCell and CellBlender. 
-
-Results: Summarize the main findings or outcomes of your study. The main findings of this study are X and Y. 
-
-Conclusion: Provide a concise conclusion or discuss the implications of your findings. Am I able to reproduce results from previous undergrad thesis? or reproduce what ordyan concluded? what literature is out there already? 
-
-Keywords: Include a few keywords that highlight the main topics or themes of your thesis.
-
-what is this chapter doing. 
-
 --
 
-This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within dendritic postsynaptic density. Using Monte Carlo algorithm simulations with MCell and CellBlender, I model their interactions. Throughout this project, I identify key factors influencing the efficacy and modulatory dynamics of these interactions.These findings contribute to understanding synaptic plasticity mechanisms crucial for memory formation.
+This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within dendritic postsynaptic density. Using Monte Carlo algorithm simulations with MCell and CellBlender, I model their interactions. Throughout this project, I identify key factors influencing the efficacy and dynamics of these interactions. These findings contribute to understanding synaptic plasticity mechanisms crucial for memory formation. This chapter lays out the biological background of what we already know about how CaMKII and NMDARs are interacting to be key molecules underlying LTP and consequently learning and memory.
+
+Am I able to reproduce results from previous undergrad thesis? or reproduce what ordyan concluded? what literature is out there already? 
 
 ## Synapses and neuronal plasticity: a brief background
 
@@ -97,54 +87,3 @@ Formation of CaMKII/NMDAR comples requires release of CaMKII from actin. High ph
 The stability of on state depends on intersubunit phosphorylation. Intersubunit autophosphorylation is also important for understanding why the on state stability is not compromised by protein turnover (what is protein turnover? - when there is subunit exchange in proteins i think).
 
 Note: I am bypassing acting unbinding of CaMKII, how do I argue around this for this thesis?
-
-## How are these interactions modelled?
-Initial molecules released inside the cell are: Ca2+, CaM, CaMKII, and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. 
-
-
-#### Binding of calcium to calmodulin
-CaM can bind one, two, three, and four calcium ions progressively. 
-
-#### Binding of calmodulin to CaMKII
-- Saturated CaM_Ca4 binds to CaMKII ring, T306 needs to be unphosphorylated
--> 5.1 CaMKII + CaM_Ca4 < - > CaMKII_CaM 
-_In addition, CaMKII can be made insensitive to Ca2+/CaM by autophosphorylation at T305/T306 located within the Ca2+/CaM binding site [23],[24], a process that is facilitated by interaction with the membrane associated guanylate kinase (MAGUK/CASK) [25],[26]. The balance between the Ca2+/CaM-sensitive and -insensitive CaMKII pool is critical for the regulation of post-synaptic plasticity [27],[28]._
-
-_Moreover, Ca2+/CaM binding to CaMKII with unphosphorylated T306 effectively prevents phosphorylation of this residue [26]. These data are in agreement with our co-crystal structure that showed that both threonine residues (T306/T307) were deeply buried within the Ca2+/CaM complex (Figure 4B)._
-
-_Human CaMKII kinase domains bound Ca2+/CaM with affinities between 1.6 and 3.4×106 Mol−1 (KD: 0.6–0.3 µM)_
-
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910593/
-
-The microscopic kon for CaM binding to CaMKII has been measured, using a 215 CaMKII peptide and fluorescently labeled DA-CaM, as 1 × 108 M-1s-1 [50].(Pharris et al.,).
-
-CaM only binds at high affinity to CaMKII, skipping binding at "initially bound", closed CaMKII. 
-Can CaM bind if CaMKII is closed? - what do studies say.
-
-#### States of CaMKII
-open/closed, active/inactive, docked/undocked.
-
-Active~1 means a subunit is undocked and open.
-CaM can only bind if subunit is active.
-Pharris is modelling undocked, closed state; but I am modelling flickering directly from docked/closed to undocked/open. Skipping the middle step. 
-
-Can CaMKII close/become inactive if it's phosphorylated?
-
-#### Phosphorylation of CaMKII
-
-Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated (this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014).
-
- CaMKII phosphorylation
-# When CaMKII_CaM, neighbouring subunit, if bound to CaM, can P
-	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) k_pCaM4
-# When CaMKII_CaM_P, can phosphorylate neighbouring subunit
-  	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) k_pCaM4_P	
-
-Pharris et al., also do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
-)
-#### Binding of CaMKII to NMDARs
-
-# What have other people done?
-Parris model looks at CaMKII dynamics with CaM particularly, uses mcell 
-
-Ordyan looks at CaMKII and NMDARs with mcell and bionetgen but does not look at space dynamics - I think? 

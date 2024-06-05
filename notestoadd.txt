@@ -8,3 +8,9 @@ RULE BASED MODELLING SECTION NEEDS updating from bbionetgen to more updated way 
 embed ipynb and r code
 
 tidy up files on vs code visual
+tips for abstract:
+Objective: Clearly state the purpose of your thesis or the research question you're addressing. 
+Methodology: Briefly outline the methods or approach you used to conduct your research. 
+Results: Summarize the main findings or outcomes of your study. The main findings of this study are X and Y. 
+Conclusion: Provide a concise conclusion or discuss the implications of your findings. 
+Keywords: Include a few keywords that highlight the main topics or themes of your thesis.
