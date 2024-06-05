@@ -85,4 +85,64 @@ When a stimulus is received in in the postsynaptic neuron, α-amino-3-hydroxy-5-
 
 During these processes, CaMKII can bind to NMDARs, which increases CaMKII activity @luscher2012NMDA, and determines what targets and modulators the kinase has access to thereby indirectly affecting kinase function. Neuronal CaMKII can affect synaptic plasticity in various ways. It can remain phosphorylated and active even after an initial stimulus to the neuron, which allows it to ‘react faster’ next time a stimulus is applied, leading to “molecular memory” @sanhueza2013CaMKII. CaMKII bound to actin filaments can also remodel the cytoskeleton and lead to dendritic spine growth through unbinding of CaMKII from the cytoskeleton’s actin filaments @okamoto2007Role. Therefore, these interactions can influence the shape and size of the dendritic spines, and trigger reaction cascades that ultimately lead to memory formation. 
 
-We know that neurons’ spines change shape in response to LTP, and at the same time LTP leads to increased synaptic strength @yuste2001Morphological. CaMKII is involved in these processes; under low Ca2+ concentration, actin filaments are bundled by CaMKII. When the Ca2+ concentration is raised, CaMKII dissociates from actin and opens the window for actin remodelling. This remodelling ultimately leads to a  change in the structure of the dendritic synapse @wang2019Assemblies.
+We know that neurons’ spines change shape in response to LTP, and at the same time LTP leads to increased synaptic strength @yuste2001Morphological. CaMKII is involved in these processes; under low Ca2+ concentration, actin filaments are bundled by CaMKII. When the Ca2+ concentration is raised, CaMKII dissociates from actin and opens the window for actin remodelling. This remodelling ultimately leads to a change in the structure of the dendritic synapse @wang2019Assemblies.
+
+## Specifics of CaMKII/NMDAR biochemical principles that underlie stable information storage by synapses
+
+CaMKII/NMDAR molecular switch requires prevention of spontaneous transitions from on/off states.
+
+These two stabilize the off state:
+Formation of CaMKII/NMDAR comples requires release of CaMKII from actin. High phosphorylation of CaMKII by Ca (doesn't this need Calmodulin as a prior step?).  
+
+The stability of on state depends on intersubunit phosphorylation. Intersubunit autophosphorylation is also important for understanding why the on state stability is not compromised by protein turnover (what is protein turnover? - when there is subunit exchange in proteins i think).
+
+Note: I am bypassing acting unbinding of CaMKII, how do I argue around this for this thesis?
+
+## How are these interactions modelled?
+
+#### Binding of calcium to calmodulin
+Dissertation definition will be good. 
+
+#### Binding of calmodulin to CaMKII
+- Saturated CaM_Ca4 binds to CaMKII ring, T306 needs to be unphosphorylated
+-> 5.1 CaMKII + CaM_Ca4 < - > CaMKII_CaM 
+_In addition, CaMKII can be made insensitive to Ca2+/CaM by autophosphorylation at T305/T306 located within the Ca2+/CaM binding site [23],[24], a process that is facilitated by interaction with the membrane associated guanylate kinase (MAGUK/CASK) [25],[26]. The balance between the Ca2+/CaM-sensitive and -insensitive CaMKII pool is critical for the regulation of post-synaptic plasticity [27],[28]._
+
+_Moreover, Ca2+/CaM binding to CaMKII with unphosphorylated T306 effectively prevents phosphorylation of this residue [26]. These data are in agreement with our co-crystal structure that showed that both threonine residues (T306/T307) were deeply buried within the Ca2+/CaM complex (Figure 4B)._
+
+_Human CaMKII kinase domains bound Ca2+/CaM with affinities between 1.6 and 3.4×106 Mol−1 (KD: 0.6–0.3 µM)_
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910593/
+
+The microscopic kon for CaM binding to CaMKII has been measured, using a 215 CaMKII peptide and fluorescently labeled DA-CaM, as 1 × 108 M-1s-1 [50].(Pharris et al.,).
+
+CaM only binds at high affinity to CaMKII, skipping binding at "initially bound", closed CaMKII. 
+Can CaM bind if CaMKII is closed? - what do studies say.
+
+#### States of CaMKII
+open/closed, active/inactive, docked/undocked.
+
+Active~1 means a subunit is undocked and open.
+CaM can only bind if subunit is active.
+Pharris is modelling undocked, closed state; but I am modelling flickering directly from docked/closed to undocked/open. Skipping the middle step. 
+
+Can CaMKII close/become inactive if it's phosphorylated?
+
+#### Phosphorylation of CaMKII
+
+Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated (this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014).
+
+ CaMKII phosphorylation
+# When CaMKII_CaM, neighbouring subunit, if bound to CaM, can P
+	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) k_pCaM4
+# When CaMKII_CaM_P, can phosphorylate neighbouring subunit
+  	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) k_pCaM4_P	
+
+Pharris et al., also do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
+)
+#### Binding of CaMKII to NMDARs
+
+# What have other people done?
+Parris model looks at CaMKII dynamics with CaM particularly, uses mcell 
+
+Ordyan looks at CaMKII and NMDARs with mcell and bionetgen but does not look at space dynamics - I think? 
