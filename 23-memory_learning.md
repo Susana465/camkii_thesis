@@ -99,9 +99,11 @@ The stability of on state depends on intersubunit phosphorylation. Intersubunit 
 Note: I am bypassing acting unbinding of CaMKII, how do I argue around this for this thesis?
 
 ## How are these interactions modelled?
+Initial molecules released inside the cell are: Ca2+, CaM, CaMKII, and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. 
+
 
 #### Binding of calcium to calmodulin
-Dissertation definition will be good. 
+CaM can bind one, two, three, and four calcium ions progressively. 
 
 #### Binding of calmodulin to CaMKII
 - Saturated CaM_Ca4 binds to CaMKII ring, T306 needs to be unphosphorylated
