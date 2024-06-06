@@ -1,3 +1,14 @@
+## How to use this repository
+- You don't need to have installed Quarto to work with the scripts in this repo, as you can read the markdown files without Quarto. 
+- However, I recommend that in order to get the full rendering of the structure in pdf and html formats, you download and work with Quarto either via VS code or RStudio. 
+- More instructions on how to get started with Quarto can be found [here](https://quarto.org/docs/tools/vscode.html).
+
+## How to contribute
+- You can branch from 'main' and add/remove content that way, and give feedback by adding comments.
+- You can also render the document into pdf, and add comments that way if you prefer that.
+- Add issues for tasks that need actioning.
+- Close issues that have been actioned.
+
 ## Repository and Thesis Structure
 The repository is organized to mirror the structure of the thesis document. The following project file structure provides an overview of the thesis' structure. Consult the code in the repository for a better understanding of how Quarto ties everything together. 
 
