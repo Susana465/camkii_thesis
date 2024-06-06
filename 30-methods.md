@@ -1,5 +1,6 @@
 ---
 bibliography: [references.bib]
+lightbox: true
 ---
 # Methods
 **Abstract**
@@ -54,6 +55,8 @@ CaM only binds at high affinity to CaMKII, skipping binding at "initially bound"
 Can CaM bind if CaMKII is closed? - what do studies say.
 
 #### States of CaMKII
+CaMKII functions are controlled through phosphorylation at multiple sites, and molecules localization within cells is directed by interactions with specific binding proteins.
+
 open/closed, active/inactive, docked/undocked.
 
 Active~1 means a subunit is undocked and open.
@@ -63,6 +66,7 @@ Pharris is modelling undocked, closed state; but I am modelling flickering direc
 Can CaMKII close/become inactive if it's phosphorylated?
 Electron microscopy of rat alpha-CaMKII in Sf9 cells, as per @myers2017CaMKII, suggests that less than 3 percent of subunits adopt a compact conformation (Figure 6).
 
+![Figures redrawn from Nicoll & Schulman, 2023 (left) and Pharris et al.,2019 (right)](30-methods-figures\camkii_structure_states.PNG){#fig-camkii-structure}
 
 #### Phosphorylation of CaMKII
 
@@ -73,6 +77,17 @@ Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that inters
 	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) k_pCaM4
 # When CaMKII_CaM_P, can phosphorylate neighbouring subunit
   	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) k_pCaM4_P	
+
+(Rostas and Skelding, 2023)_Initial enzyme activity of purified CaMKII requires the binding of both calcium and calmodulin. Following this, autophosphorylation of Thr286 in CaMKIIα occurs quickly and produces the following outcomes:_
+
+- A 1000-fold increase in the affinity for CaM_Ca4
+So when CaMKII_P binding of CaM_Ca4 is 1000 times more likely to bind (and stay bound) to CaMKII_P. 
+This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite slow.
+-> how do I model this?/is it already modelled in the reactions I have?
+Right now:
+CaM(ca~4,camkii) + CaMKII(cam,T306~0,active~1) <-> CaM(ca~4,camkii!1).CaMKII(cam!1,T306~0,active~1) kon_cam_ca4_camkii, koff_cam_ca4_camkii
+
+Which means that CaM can bind to CaMKII regardless of whether T286 is phosphorylated or not. 
 
 Pharris et al., also do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
 )
