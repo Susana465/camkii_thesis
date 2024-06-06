@@ -92,8 +92,17 @@ Which means that CaM can bind to CaMKII regardless of whether T286 is phosphoryl
 Pharris et al., also do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
 )
 #### Binding of CaMKII to NMDARs
+Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There no overlap, cam can bind to camkii even if this is bound to nmdars. 
+
+Autophosphorylation of Thr286 allows CaMKII to bind to the GluN2B subunit of the NMDA receptor [85,94]. 
+
+CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows CaMKII to maintain its autonomous activity even if CaMKII is dephosphorylated at Thr286. Even if calmodulin dissociates following a drop in intracellular calcium levels, CaMKII can remain active (have autonomous activity without calcium/cam).
+
+Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B. This allows CaMKII bound to GluN2B to bind cam_ca4 again following a subsequent increase in intracellular calcium concentrations.
+
+Competitive actions of DAPK1 in LTD - for future work? or can I add to model?
 
 # What have other people done?
-Parris model looks at CaMKII dynamics with CaM particularly, uses mcell 
+Parris model looks at CaMKII dynamics with CaM particularly, uses mcell - they didnt look at binding with nmdars.
 
 Ordyan looks at CaMKII and NMDARs with mcell and bionetgen but does not look at space dynamics - I think? 
