@@ -53,6 +53,7 @@ The microscopic kon for CaM binding to CaMKII has been measured, using a 215 CaM
 
 CaM only binds at high affinity to CaMKII, skipping binding at "initially bound", closed CaMKII. 
 Can CaM bind if CaMKII is closed? - what do studies say.
+CaM can bind to CaMKII even if the former is not fully saturated with calcium, but not in our model. 
 
 #### States of CaMKII
 CaMKII functions are controlled through phosphorylation at multiple sites, and molecules localization within cells is directed by interactions with specific binding proteins.
@@ -103,6 +104,15 @@ Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is 
 Competitive actions of DAPK1 in LTD - for future work? or can I add to model?
 
 # What have other people done?
-Parris model looks at CaMKII dynamics with CaM particularly, uses mcell - they didnt look at binding with nmdars.
+_Previous multi-state models of CaMKII exist but are different in focus and in scope from the 462 present model. For example, our model is based on an earlier multi-state model by Stefan et al. (2012) 463 [29] implemented in the particle-based stochastic simulator StochSim [70].StochSim does not explicitly account for spatial information. MCell, as a spatial simulator, 466 offers more possibilities to precisely account for spatial effects and to situate models in spatially realistic 467 representations of cellular compartments. In addition, the model by Stefan et al. provides only for 468 interactions between adjacent CaMKII molecules on the same hexamer ring and therefore models 469 CaMKII as a hexamer, not a dodecamer._
+
+Michalski and 470 Loew (2012) bionetgen and vcell.
+
+rule-based model of the CaMKII holoenzyme by 478 Li and Holmes [26] offers a detailed representation of how CaM binds to Ca2+ and subsequently activates 479 CaMKII subunits, based on earlier results of CaM regulation [75]. Li and Holmes offer valuable and 480 detailed insight into how CaM binding to CaMKII depends on Ca2+ dynamics.
+
+Parris model looks at CaMKII dynamics with CaM particularly, uses mcell - they didnt look at binding with nmdars. This study was done using MCell 3.3 which did not allow for diffusion of multistate molecules. 
 
 Ordyan looks at CaMKII and NMDARs with mcell and bionetgen but does not look at space dynamics - I think? 
+Ordyan et al. (199) developed a multiscale, rule-based model of CaMKII activation that accounted for kinetics of CaMKII modelled as a monomer and a holoenzyme. Their findings suggested that CaMKII functions as a leaky integrator of Ca2+ pulses in the presence of neurogranin (Ng) and PP1, consistent with previous experimental observations in short LTP (46). Their results suggest CaMKII integrates Ca2+ signals in a frequency-dependent manner, which contrasts with the earlier models that propose CaMKII functions as a bistable memory switch (212). 
+
+Likewise, another model supports the idea that CaMKII acts as a leaky integrator of Ca2+ in a PP1-rich environment (243). Rather, CaMKII might exhibit bistability in specific microenvironments, such as the 'core' PSD where it binds to the NMDA receptor (Dosemeci et al., 2016; Petersen et al., 2003). Whereas in the spine cytosol, CaMKII has been demonstrated to act not as a bistable switch but as a leaky integrator of calcium activity (Chang et al., 2017).
