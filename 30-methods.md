@@ -92,6 +92,9 @@ Which means that CaM can bind to CaMKII regardless of whether T286 is phosphoryl
 
 Pharris et al., also do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
 )
+
+_Autophosphorylation unmasks a phenylalanine (F) and a glutamine (N) in the CaM-binding domain (shown in red), enabling a large increase in the affinity of Ca2+/CaM, known as CaM-trapping._
+
 #### Binding of CaMKII to NMDARs
 Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There no overlap, cam can bind to camkii even if this is bound to nmdars. 
 
@@ -113,6 +116,10 @@ rule-based model of the CaMKII holoenzyme by 478 Li and Holmes [26] offers a det
 Parris model looks at CaMKII dynamics with CaM particularly, uses mcell - they didnt look at binding with nmdars. This study was done using MCell 3.3 which did not allow for diffusion of multistate molecules. 
 
 Ordyan looks at CaMKII and NMDARs with mcell and bionetgen but does not look at space dynamics - I think? 
-Ordyan et al. (199) developed a multiscale, rule-based model of CaMKII activation that accounted for kinetics of CaMKII modelled as a monomer and a holoenzyme. Their findings suggested that CaMKII functions as a leaky integrator of Ca2+ pulses in the presence of neurogranin (Ng) and PP1, consistent with previous experimental observations in short LTP (46). Their results suggest CaMKII integrates Ca2+ signals in a frequency-dependent manner, which contrasts with the earlier models that propose CaMKII functions as a bistable memory switch (212). 
+Ordyan et al., use rule-based modelling methodology using Monte Carlo methods similar to this work, to investigate how Ca2+ signals influence the dynamics of CaMKII phosphorylation within the PSD.
+
+_Ordyan et al. (199) developed a multiscale, rule-based model of CaMKII activation that accounted for kinetics of CaMKII modelled as a monomer and a holoenzyme. Their findings suggested that CaMKII functions as a leaky integrator of Ca2+ pulses in the presence of neurogranin (Ng) and PP1, consistent with previous experimental observations in short LTP (46). Their results suggest CaMKII integrates Ca2+ signals in a frequency-dependent manner, which contrasts with the earlier models that propose CaMKII functions as a bistable memory switch (212)._
 
 Likewise, another model supports the idea that CaMKII acts as a leaky integrator of Ca2+ in a PP1-rich environment (243). Rather, CaMKII might exhibit bistability in specific microenvironments, such as the 'core' PSD where it binds to the NMDA receptor (Dosemeci et al., 2016; Petersen et al., 2003). Whereas in the spine cytosol, CaMKII has been demonstrated to act not as a bistable switch but as a leaky integrator of calcium activity (Chang et al., 2017).
+
+Bartol et al. 2024 use particle-based stochastic simulations in MCell4 to model the activation of CaMKII by Ca2+ flowing through NMDARs within a postsynaptic spine. They translate the kinetic properties of CaMKII regulation previously measured _in vitro_ into the context of a computational model of a postsynaptic spine.
