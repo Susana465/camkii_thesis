@@ -1,12 +1,3 @@
-animal research 
-data Hazards
-reproducible model how
-camkii as a dodecamer
-what molecules are being added and why
-
-RULE BASED MODELLING SECTION NEEDS updating from bbionetgen to more updated way I do it.
-embed ipynb and r code
-
 tidy up files on vs code visual
 tips for abstract:
 Objective: Clearly state the purpose of your thesis or the research question you're addressing. 
