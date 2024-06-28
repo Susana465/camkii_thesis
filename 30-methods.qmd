@@ -1,5 +1,5 @@
 ---
-bibliography: [references.bib]
+bibliography: [methods.bib]
 lightbox: true
 ---
 # Methods
@@ -26,6 +26,8 @@ What have pharris, ordyan and other people done and how does my model relate and
 
 I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. The model created uses cBNGL and represents CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer gave rise to a combinatorial explosion due to the high number of possible states and the network of interactions generated. This is currently in the works of being resolved as I run the model using the network-free simulation using MCell. We will then be able to model CaMKII as a dodecamer. Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
 
+## Model parameters
+
 ## Model creation and visualization in CellBlender
 
 I began the model of CaMKII monomers as described in the 2017 model I created using MCell and CellBlender. At the time, MCell did not allow for molecules be modelled as multi-complexes. Thus, for example, one phosphorylated CaMKII molecule in the model was just a single subunit phosphorylated –not twelve phosphorylated subunits. This model includes Ca2+ binding rates to CaM, CaM binding rates to monomeric CaMKII, and phosphorylation rates of active CaMKII monomers by one another, all depending on how many Ca2+ ions are bound to the CaM molecules involved. CaMKII dephosphorylation by PP1 is modelled, as well as binding interactions of CaMKII with NMDARs. In order to replicate and validate the results obtained from the CaMKII monomer in 2017, I re-wrote all reactions into a cBNGL model using the same parameters used originally. We define a volume previously modelled of 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris and Stevens, 1989). Using cBNGL, I can specify the above mentioned 3D volume, with a 2D surface compartment acting as the cell membrane, where NMDARs can diffuse. Inside the cell volume, all of the interacting molecules are released as per table 1.
@@ -37,6 +39,17 @@ Initial molecules released inside the cell are: Ca2+, CaM, CaMKII, and PP1, insi
 
 #### Binding of calcium to calmodulin
 CaM can bind one, two, three, and four calcium ions progressively. 
+In this model, the C terminal and N terminal binding sites of cam are not specified because we are not focusing on ca binding to cam. 
+
+_Calmodulin comprises a 148aa residue polypeptide with four EF hands divided into C and N lobes capable of binding two calcium ions per lobe [4]._ 
+
+calmodulin lobes have been reported to differ in their kinetics and affinity for Ca2+:
+- the N lobe binding faster with lower affinity and 
+- the C lobe binding slower with higher affinity._ (Domas paper)
+
+_An E–F hand consists of an N-terminal helix (the E helix) immediately followed by a centrally located, Ca2coordinating loop and a C-terminal helix (the F helix). The three-dimensional arrangement of these domains is reminiscent of the thumb, index and middle fingers of a hand, hence the name ‘E–F hand’._ [@chin2000Calmodulin]
+
+Sensitivity tests for different parameters of ca binding to cam -> domas' suggestion model.
 
 #### Binding of calmodulin to CaMKII
 - Saturated CaM_Ca4 binds to CaMKII ring, T306 needs to be unphosphorylated
@@ -63,6 +76,8 @@ open/closed, active/inactive, docked/undocked.
 Active~1 means a subunit is undocked and open.
 CaM can only bind if subunit is active.
 Pharris is modelling undocked, closed state; but I am modelling flickering directly from docked/closed to undocked/open. Skipping the middle step. 
+
+I am only modelling high affinity binding of cam to camkii.
 
 Can CaMKII close/become inactive if it's phosphorylated?
 Electron microscopy of rat alpha-CaMKII in Sf9 cells, as per @myers2017CaMKII, suggests that less than 3 percent of subunits adopt a compact conformation (Figure 6).
