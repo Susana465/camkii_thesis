@@ -13,6 +13,7 @@ book:
     - part: 10-intro.qmd
       chapters:
       - 11-philosophy.md
+      - 12-researchQ.qmd
     - part: 20-background.md
       chapters:
       - 21-complex_systems.md

@@ -1,0 +1,55 @@
+---
+bibliography: [references.bib]
+---
+
+# Research question, motivation and scope of this thesis
+
+This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within dendritic postsynaptic density. Using Monte Carlo algorithm simulations with MCell and CellBlender, I model their interactions to identify key factors influencing the efficacy and dynamics of these interactions. These findings contribute to understanding synaptic plasticity mechanisms crucial for memory formation.
+
+_I want to relate each of the below points to other sections of the thesis once its all fleshed out a bit more_
+_I also need to rewrite the sections below as they are copy paste from data hazards paper_
+
+## Project's biological question
+
+_How does the interaction between Calcium/calmodulin-dependent protein kinase II (CaMKII) and N-methyl-D-aspartate receptor (NMDARs) in the postsynaptic neuron affect their function?_
+
+Changes in the function of these synaptic proteins have been implicated in a range of diseases and conditions, including age-related cognitive decline (see, for instance, (Li, Marcu, et al., 2020)) and neurodegenerative diseases (reviewed in (Foster, 2007; Tong et al., 2018)). Moreover, these changes have been shown to be implicated in epilepsy, schizophrenia, addiction, autism spectrum condition, and multiple neurodevelopmental disorders (reviewed in (Robison, 2014)).
+
+Moreover, alterations in synaptic strength, like Long-Term Depression (LTD) and Long-Term Potentiation (LTP), involve diverse chemical pathways that have been used to explore the molecular basis of learning and memory [@blundon2008Dissecting]. In particular, studying learning and memory at the molecular level reveals that NMDAR and CaMKII, interacting with other proteins within dendritic spines, play a role in influencing dendritic spines' shape and function [@fink2002Molecular]. Studies using rodents have shown that impairing these molecules interacting, or abolishing their functions leads to memory impairment [@moyano2004NMDA, @zhou2007Interactions, @halt2012CaMKII]. 
+
+## Project objectives
+
+We employ computer simulations to answer the project’s biological question; it is important to note that while our focus is mainly computational, this is part of a synergistic work with colleagues performing wet-lab experiments. Experiments provide data to inform simulation parameters, which in turn can guide the wet-lab process by narrowing the experimental search space, in a self-enhancing loop. In short, the main objectives of the project are to:
+
+- Build a computational model of the regulation and interactions between CaMKII and
+NMDARs in a dendritic spine.
+- Make biological predictions from the model which can then be tested experimentally
+in-vivo or in-vitro.
+- Use the model to simulate spatio-temporal dynamics of early LTP and understand the
+role of CaMKII/NMDAR interactions.
+- Develop new workflows to model biological interactions in 3D space, using software
+like MCell (Monte Carlo Cell) and CellBlender (Stiles et al., 1996; Kerr et al., 2008; Gupta et al., 2018; Husar et al., 2022), BioNetGen (Harris et al., 2016) and BioDynaMo (Breitwieser et al., 2022).
+
+
+## Data informing model parameters and output data
+In order to understand the type of data used and variables in the dataset, we first explain what kind of data goes "into the model" (model parameters) and then what data "comes out" (model outputs). The data informing model parameters are kinetic rates, equilibrium constants of molecular interactions, cellular volumes and molecular concentrations. These parameters are used to create a set of reaction rules that determine how molecules behave. Based on these rules and parameters, a simulation is run that tracks the movement and interaction of molecules over time. The simulation generates time-course data that tracks concentrations, activity patterns and the spatial distribution of molecules. These data can be represented graphically as plots of concentrations against time, or as videos showing how molecules move through space over the course of the simulation.
+
+## How and when was data collected, and by whom?
+The PhD project is based on data previously published, and data for the project is manually researched and collated from the literature primarily by the PhD student, throughout the time course of the four-year project. The data collected relies on studies done both _in-vitro_, _in-vivo_ and _in-silico_, which have published dendritic volumes, molecule concentrations [@yasuda2022CaMKII] and proposed kinetics of CaMKII and NMDARs, along with other molecules that interact with them [@ordyan2020Interactionsa;@li2020Neurogranin;@byrne2009Dissecting;@stefan2008Allosteric;@tzortzopoulos2004Mechanism]. Experimental values for kinetic rates and equilibrium constants are difficult to obtain with certainty; if no parameters can be found, they are estimated according to available data for the current model.
+
+Most of the data used to parameterise and test our computational model come directly from previous studies using animals (for example [@yasuda2022CaMKII;@tzortzopoulos2004Mechanism;@halt2012CaMKII;@zhou2007Interactionsa;@gruart2006Involvement]), parameter databases that rely at least partially on studies done on animals [@wittig2018SABIORK;@milo2010BioNumbers], or from previous computational models that have also been parameterised and validated using animal data (e.g. [@pharris2019Multistate;@ordyan2020Interactionsa;@li2020Neurogranin;@stefan2012Structural;@byrne2009Dissecting;@stefan2008Allosteric]). Some studies were done using knockouts of certain protein genes to study their effect on memory impairment others with other methods such as targeted mutagenesis. They may involve invasive or distressing procedures on rodents and require animals to be sacrificed.
+
+## Software and statistical/algorithmic methods used
+Free, open-source software and algorithms are used to create 3D models of the molecular interactions in question. 
+
+- **MCell4** is a biochemistry simulation tool to model movements and interactions of discrete molecules within and between cells. Additionally, CellBlender release 4.0 is used as a plug-in for the 3D modelling software Blender 2.93 [@flavell2011Beginning], which provides a graphical user interface for working with and visualizing MCell4 models [@gupta2018Spatiala]. 
+
+- **BioNetGen (release 2.8.5)** is a set of software tools that enable modelling biochemical reaction kinetics and protein-protein interactions through a set of rules. It facilitates the modelling of multimeric protein structures such as that of CaMKII [@harris2016BioNetGen]. Together, MCell and BioNetGen make it possible to model CaMKII as a dodecamer that interacts with NMDARs and other molecules in a 3D simulation of a dendritic spine.
+
+- **BioDynaMo (release 1.04)** is an agent-based modelling tool which can model 3D biophysical molecular interactions [@breitwieser2022BioDynaMo]. In this project, BioDynaMo provides the capability to simulate neuronal growth through formation of an actin cytoskeleton inside dendritic spines, a process which CaMKII has been shown to be involved with [@okamoto2007Rolea;@zalcman2018CaMKII;@khan2019Architectural]. 
+
+## Who are the project contributors?
+The main content and discussion contributions for the project are from the PhD student and her supervisors. Additionally, Masters and Undergraduate students have made valuable contributions as their dissertation thesis research addressed specific queries relevant to this PhD [@fong2022Silico; @trajlinek2022How]. Moreover, the Alan Turing Institute community played a crucial role in contributing to discussions on ethics and reproducibility of this PhD project. Likewise, the MCell, BioNetGen and BioDynaMo software development teams have been key for their contribution to bug fixing, coding and scripts on the simulation models. The broader scientific community and researchers contributing knowledge to the field of this PhD are indirect contributors, laying the foundations for this research.
+
+## Expected outputs and sharing strategies
+The anticipated outputs of this research include predictions of the interactions of CaMKII and NMDARs along with other molecules in time and space, providing insights for future hypothesis testing by experimentalists. Following FAIR principles, the project aims to ensure that data and models are Findable, Accessible, Interoperable, and Reusable. A reproducible model will be shared on GitHub and mathematical model repositories, along with associated materials, which will enable others to validate findings and reuse the data for their own research. The documentation will encompass the settings for running the model and the generation process of figures so that future researchers can easily build upon this work. The results of this work will be published in open-access journals to ensure that the research is freely accessible to the public, promoting broader dissemination and impact. The PhD author may submit negative findings to the Journal of Trial and Error [@devine2020Science] or bioRxiv [@sever2019BioRxiv]. 
