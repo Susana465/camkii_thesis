@@ -134,9 +134,10 @@ Finding about t305/306 phosphorylation _in vitro_ transgenic mice @pi2010Autonom
 
 Contrary to initial expectations where T286D CaMKII was thought to only potentiate synaptic strength (mimicking LTP), the researchers found that depending on the phosphorylation status at Thr305/306, T286D CaMKII could also induce synaptic depression (mimicking LTD).
 
-T286D/T305D/T306D (pseudophosphorylated form): Lead to synaptic depression (LTD-like process).
-T286D/T305A/T306A (form where T305/T306 cannot be phosphorylated - this would mean camkii is not regulated back into autoihnibited state through T305 phosphorylation): Prevented LTD and instead promotes potentiation (LTP-like effect).
+T286D/T305D/T306D (pseudophosphorylated form): Led to synaptic depression (LTD-like process).
+T286D/T305A/T306A (form where T305/T306 cannot be phosphorylated - this would mean camkii is not regulated back into autoinhibited state through T305 phosphorylation): Prevented LTD and instead promotes potentiation (LTP-like effect).
 
+t305/306 phosphorylation as also been shown to prevent camkii's activity-dependent translocation to the postsynaptic density. so if camkii is not phosphorylated at t305/306, it may translocate to PSD, but if this site is phosphorylated, translocation will be reduced - which fits in with the idea that t305/306 once again is like a "dimmer switch"
 
 Two main notes from Susana
 - Okay so we know that t305 phosphorylation structutrally impedes/reduces affinity of cam binding (which are not the same thing but have relatively similar outcomes of cam binding less to camkii)
@@ -172,7 +173,8 @@ Autophosphorylation of Thr286 allows CaMKII to bind to the GluN2B subunit of the
 
 CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows CaMKII to maintain its autonomous activity even if CaMKII is dephosphorylated at Thr286. Even if calmodulin dissociates following a drop in intracellular calcium levels, CaMKII can remain active (have autonomous activity without calcium/cam).
 
-Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B. This allows CaMKII bound to GluN2B to bind cam_ca4 again following a subsequent increase in intracellular calcium concentrations.
+Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B -> need to find reference as to how this happens.
+This allows CaMKII bound to GluN2B to bind cam_ca4 again following a subsequent increase in intracellular calcium concentrations.
 
 CaMKII bound to GluN2B Subunit Exhibits Increased ATP Affinity and Attenuated Dephosphorylation @cheriyan2011Calcium
 
