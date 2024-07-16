@@ -113,8 +113,60 @@ Pharris et al., also do a detransition of different steps for dephosphorylation.
 
 _Autophosphorylation unmasks a phenylalanine (F) and a glutamine (N) in the CaM-binding domain (shown in red), enabling a large increase in the affinity of Ca2+/CaM, known as CaM-trapping._
 
+T305/306 phosphorylation
+this phosphorylation is associated with autoinhibition of CaMKII. This phosphorylation stabilizes the interaction between the regulatory domain and the catalytic domain, locking CaMKII in an inactive state, preventing calmodulin binding. 
+
+slower CaMKII autophosphorylation at T305/306 inhibits stimulation by Ca2+/CaM, but occurs only minimally for CaMKII wild type during CaM-stimulated activity assays. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037176 
+
+Another physiologically relevant phosphorylation site is
+T305/306 at aCaMKII (T306/307 at bCaMKII, both
+denoted as T305 phosphorylation) (Hashimoto et al. 1987;
+Lou and Schulman 1989). This is an intra-subunit phosphorylation that reduces the catalytic activity of CaMKII
+(Hashimoto et al. 1987; Lou and Schulman 1989). It can
+occur after CaM dissociates from a T286 autophosphorylated subunit, and it prevents the rebinding of CaM
+(Hashimoto et al. 1987; Patton et al. 1990) @lucic2008Detailed
+
+biological importance proposal:
+This stabilization mechanism may act as a form of kinetic proofreading by ensuring that CaMKII remains inactive or less active unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
+
+Finding about t305/306 phosphorylation _in vitro_ transgenic mice @pi2010Autonomous
+- T286D mutant: autonomous CaMKII that are constitutively active and do not require calcium/calmodulin binding for activation.
+
+Contrary to initial expectations where T286D CaMKII was thought to only potentiate synaptic strength (mimicking LTP), the researchers found that depending on the phosphorylation status at Thr305/306, T286D CaMKII could also induce synaptic depression (mimicking LTD).
+
+T286D/T305D/T306D (pseudophosphorylated form): Lead to synaptic depression (LTD-like process).
+T286D/T305A/T306A (form where T305/T306 cannot be phosphorylated - this would mean camkii is not regulated back into autoihnibited state through T305 phosphorylation): Prevented LTD and instead promotes potentiation (LTP-like effect).
+
+
+Two main notes from Susana
+- Okay so we know that t305 phosphorylation structutrally impedes/reduces affinity of cam binding (which are not the same thing but have relatively similar outcomes of cam binding less to camkii)
+
+- but also, phosphorylation at the t305 site - does it render camkii in an inactive, autonibited state, or can camkii that is p at t305 remain active? need to find this in lterature. 
+
 #### Binding of CaMKII to NMDARs
-Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There no overlap, cam can bind to camkii even if this is bound to nmdars. 
+Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There is no overlap, cam can bind to camkii even if this is bound to nmdars. 
+
+CaMKII kinase domain binds to NMDARs. The kinase domain in CaMKII is responsible for the enzyme's kinase activity, which includes binding ATP and transferring a phosphate group to specific serine/threonine residues on substrate proteins, such as S1303 on the GluN2B subunit of the NMDA receptor. 
+
+Activation of the kinase domain typically involves relief of autoinhibition, often through binding of calcium/calmodulin (Ca2+/CaM).
+
+CaMKII directly interacts with GluN2B which anchors CaMKII at the synapse in an
+active conformation (Bayer et al., 2001). Targeting CaMKII to the PSD via its interaction
+with GluN2B is critical for the phosphorylation of GluA1 subunits of the AMPA receptor
+among many other PSD proteins (Lisman et al., 2002; Barria and Malinow, 2005; Zhou et al.,
+2007). 
+
+CaMKII directly binds both GluN2A and GluN2B subunits via binding sites located in
+the CTDs of the receptor subunits (Bayer et al., 2001, 2006; Gardoni et al., 1999; Leonard et al., 1999;
+Strack et al., 2000); however, it has a greater affinity for GluN2B (Strack and Colbran, 1998). 
+
+Two CaMKII-binding sites have been identified in the GluN2B subunit at residues 839–1120 and 1290–1310 (Strack and
+Colbran, 1998; Leonard et al., 1999; Strack et al., 2000; Bayer et al., 2001) @kellermayer2018Superresolution
+
+Transient CaMKII activity evokes an initial reversible, Ca2+/calmodulin-dependent binding of GluN2B
+to the substrate-binding site within the catalytic domain of CaMKII, whereas prolonged
+enzymatic activity leads to a persistent interaction between GluN2B and the Thr286-binding
+site of CaMKII, locking CaMKII in an active conformation, as mentioned above
 
 Autophosphorylation of Thr286 allows CaMKII to bind to the GluN2B subunit of the NMDA receptor [85,94]. 
 
@@ -122,7 +174,12 @@ CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows C
 
 Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B. This allows CaMKII bound to GluN2B to bind cam_ca4 again following a subsequent increase in intracellular calcium concentrations.
 
+CaMKII bound to GluN2B Subunit Exhibits Increased ATP Affinity and Attenuated Dephosphorylation @cheriyan2011Calcium
+
 Competitive actions of DAPK1 in LTD - for future work? or can I add to model?
+
+T305/306 phosphorylation directly reduces binding to GluN2B
+CaMKII binding to GluN2B participates in enhancing synaptic strength (26, 27), consistent with our findings with the CaMKII I205K mutant (Fig. 2A). Thus, we decided to test the effects of T305/306 phosphorylation on CaMKII/GluN2B interaction. T305/306 phosphorylation had been suggested to reduce CaMKII binding to GluN2B (29); however, these experiments did not differentiate between a direct effect of the phosphorylation and an indirect effect via reduced Ca2+/CaM binding. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4101658/
 
 # What have other people done?
 _Previous multi-state models of CaMKII exist but are different in focus and in scope from the 462 present model. For example, our model is based on an earlier multi-state model by Stefan et al. (2012) 463 [29] implemented in the particle-based stochastic simulator StochSim [70].StochSim does not explicitly account for spatial information. MCell, as a spatial simulator, 466 offers more possibilities to precisely account for spatial effects and to situate models in spatially realistic 467 representations of cellular compartments. In addition, the model by Stefan et al. provides only for 468 interactions between adjacent CaMKII molecules on the same hexamer ring and therefore models 469 CaMKII as a hexamer, not a dodecamer._

@@ -6,6 +6,8 @@ bibliography: [references.bib]
 
 This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within dendritic postsynaptic density. Using Monte Carlo algorithm simulations with MCell and CellBlender, I model their interactions to identify key factors influencing the efficacy and dynamics of these interactions. These findings contribute to understanding synaptic plasticity mechanisms crucial for memory formation.
 
+_Should add here that reproducibility is key here too and link ot other section of thesis where i talk about it in depth_
+
 _I want to relate each of the below points to other sections of the thesis once its all fleshed out a bit more_
 _I also need to rewrite the sections below as they are copy paste from data hazards paper_
 
@@ -15,7 +17,7 @@ _How does the interaction between Calcium/calmodulin-dependent protein kinase II
 
 Changes in the function of these synaptic proteins have been implicated in a range of diseases and conditions, including age-related cognitive decline (see, for instance, (Li, Marcu, et al., 2020)) and neurodegenerative diseases (reviewed in (Foster, 2007; Tong et al., 2018)). Moreover, these changes have been shown to be implicated in epilepsy, schizophrenia, addiction, autism spectrum condition, and multiple neurodevelopmental disorders (reviewed in (Robison, 2014)).
 
-Moreover, alterations in synaptic strength, like Long-Term Depression (LTD) and Long-Term Potentiation (LTP), involve diverse chemical pathways that have been used to explore the molecular basis of learning and memory [@blundon2008Dissecting]. In particular, studying learning and memory at the molecular level reveals that NMDAR and CaMKII, interacting with other proteins within dendritic spines, play a role in influencing dendritic spines' shape and function [@fink2002Molecular]. Studies using rodents have shown that impairing these molecules interacting, or abolishing their functions leads to memory impairment [@moyano2004NMDA, @zhou2007Interactions, @halt2012CaMKII]. 
+Additionally, alterations in synaptic strength, like Long-Term Depression (LTD) and Long-Term Potentiation (LTP), involve diverse chemical pathways that have been used to explore the molecular basis of learning and memory [@blundon2008Dissecting]. In particular, studying learning and memory at the molecular level reveals that NMDAR and CaMKII, interacting with other proteins within dendritic spines, play a role in influencing dendritic spines' shape and function [@fink2002Molecular]. Studies using rodents have shown that impairing these molecules interacting, or abolishing their functions leads to memory impairment [@moyano2004NMDA, @zhou2007Interactions, @halt2012CaMKII]. 
 
 ## Project objectives
 
