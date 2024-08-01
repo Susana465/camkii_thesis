@@ -119,18 +119,18 @@ This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite sl
 Right now:
 CaM(ca~4,camkii) + CaMKII(cam,T306~0,active~1) <-> CaM(ca~4,camkii!1).CaMKII(cam!1,T306~0,active~1) kon_cam_ca4_camkii, koff_cam_ca4_camkii
 
-the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. 
-
 Which means that CaM can bind to CaMKII regardless of whether T286 is phosphorylated or not. 
 
-Pharris et al., also do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
+the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. 
+
+Pharris et al., do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
 )
 
 _Autophosphorylation unmasks a phenylalanine (F) and a glutamine (N) in the CaM-binding domain (shown in red), enabling a large increase in the affinity of Ca2+/CaM, known as CaM-trapping._
 
 It is well established that each subunit within the 12meric CaMKII holoenzyme is activated separately by direct binding of Ca2+/CaM [for review, see (16)]. However, when Ca2+/CaM binds to two neighboring subunits, it additionally induces a fast trans-subunit autophosphorylation at T286 (46, 47), which generates autonomous kinase activity that outlasts the initial Ca2+ stimulus. Then, dissociation of Ca2+/CaM exposes T305/306 for phosphorylation by the autonomous CaMKII. 
 
- our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
+ from paper-> our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
  The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. 
 
  The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. Together, these mechanisms enable a wide array of finely tuned possible states for each CaMKII holoenzyme, with each state tightly linked to the inducing Ca2+ stimulus. 
@@ -154,7 +154,7 @@ occur after CaM dissociates from a T286 autophosphorylated subunit, and it preve
 (Hashimoto et al. 1987; Patton et al. 1990) @lucic2008Detailed
 
 biological importance proposal:
-This stabilization mechanism may act as a form of kinetic proofreading by ensuring that CaMKII remains inactive or less active unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
+(My own thoughts) This stabilization mechanism may act as a form of kinetic proofreading by ensuring that CaMKII remains inactive or less active unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
 
 Finding about t305/306 phosphorylation _in vitro_ transgenic mice @pi2010Autonomous
 - T286D mutant: autonomous CaMKII that are constitutively active and do not require calcium/calmodulin binding for activation.
@@ -169,7 +169,7 @@ t305/306 phosphorylation as also been shown to prevent camkii's activity-depende
 Two main notes from Susana
 - Okay so we know that t305 phosphorylation structutrally impedes/reduces affinity of cam binding (which are not the same thing but have relatively similar outcomes of cam binding less to camkii)
 
-- but also, phosphorylation at the t305 site - does it render camkii in an inactive, autonibited state, or can camkii that is p at t305 remain active? need to find this in lterature. 
+- but also, phosphorylation at the t305 site - does it render camkii in an inactive, autonibited state, or can camkii that is p at t305 remain active? need to find this in lterature. yes, it is likely it reduces camkii activity as it renders each subunit into the closed, inactive, autoinhibited state. 
 
 
 
@@ -202,7 +202,8 @@ Autophosphorylation of Thr286 allows CaMKII to bind to the GluN2B subunit of the
 
 CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows CaMKII to maintain its autonomous activity even if CaMKII is dephosphorylated at Thr286. Even if calmodulin dissociates following a drop in intracellular calcium levels, CaMKII can remain active (have autonomous activity without calcium/cam).
 
-Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B -> need to find reference as to how this happens.
+Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B -> need to find reference as to how this happens. probably because the binding keeps the kinase domain from closing into the autoinhibitory domain. 
+
 This allows CaMKII bound to GluN2B to bind cam_ca4 again following a subsequent increase in intracellular calcium concentrations.
 
 CaMKII bound to GluN2B Subunit Exhibits Increased ATP Affinity and Attenuated Dephosphorylation @cheriyan2011Calcium
