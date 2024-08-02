@@ -65,7 +65,7 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2910593/
 The microscopic kon for CaM binding to CaMKII has been measured, using a 215 CaMKII peptide and fluorescently labeled DA-CaM, as 1 × 108 M-1s-1 [50].(Pharris et al.,).
 
 CaM only binds at high affinity to CaMKII, skipping binding at "initially bound", closed CaMKII. 
-Can CaM bind if CaMKII is closed? - what do studies say.
+Can CaM bind if CaMKII is closed? - what do studies say. the answer is no. 
 CaM can bind to CaMKII even if the former is not fully saturated with calcium, but not in our model. 
 
  It has previously been suggested that two binding sites for calmodulin exist on CaMKII, with high and low affinities.
@@ -92,6 +92,8 @@ CaMKII can exist in different states: open or closed, active or inactive, docked
 - CaM can only bind if the subunit is active~1.
 - Pharris is modeling the undocked, closed state, but I am modeling the direct transition from docked/closed to undocked/open, skipping the intermediate step.
 
+CaMKII flickers between active/open and inactive/closed state. essential biological functions are the same, but perhaps modeled slightly differently for efficiency of running the model.
+
 I am focusing on modeling the high-affinity binding of CaM to CaMKII, because this is shown to be sufficient for CaMKII activation. [Stefan et al., 2012 and what other references?]
 
 Can CaMKII close or become inactive if it is phosphorylated? Yes -> see t305/6 phosphorylation actions below. 
@@ -114,14 +116,24 @@ Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that inters
 
 - A 1000-fold increase in the affinity for CaM_Ca4
 So when CaMKII_P binding of CaM_Ca4 is 1000 times more likely to bind (and stay bound) to CaMKII_P. 
+
 This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite slow.
+
 -> how do I model this?/is it already modelled in the reactions I have?
 Right now:
 CaM(ca~4,camkii) + CaMKII(cam,T306~0,active~1) <-> CaM(ca~4,camkii!1).CaMKII(cam!1,T306~0,active~1) kon_cam_ca4_camkii, koff_cam_ca4_camkii
 
 Which means that CaM can bind to CaMKII regardless of whether T286 is phosphorylated or not. 
 
-the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. 
+* camkii_p at t286 + cam -> will have a higher binding rate than when not p at t286.
+
+the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. 
+
+right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. 
+
+would camkii activity make a difference if camkii active~1 varies due o being bound to nmdars or cam?
+
+but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. there are also emergent properties. 
 
 Pharris et al., do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
 )

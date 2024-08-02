@@ -13,7 +13,7 @@ _I also need to rewrite the sections below as they are copy paste from data haza
 
 ## Project's biological question
 
-_How does the interaction between Calcium/calmodulin-dependent protein kinase II (CaMKII) and N-methyl-D-aspartate receptor (NMDARs) in the postsynaptic neuron affect their function?_
+_How does the interaction between Calcium/calmodulin-dependent protein kinase II (CaMKII) and N-methyl-D-aspartate receptor (NMDARs) in the postsynaptic neuron affect the function of these molecules?_
 
 Changes in the function of these synaptic proteins have been implicated in a range of diseases and conditions, including age-related cognitive decline (see, for instance, (Li, Marcu, et al., 2020)) and neurodegenerative diseases (reviewed in (Foster, 2007; Tong et al., 2018)). Moreover, these changes have been shown to be implicated in epilepsy, schizophrenia, addiction, autism spectrum condition, and multiple neurodevelopmental disorders (reviewed in (Robison, 2014)).
 
