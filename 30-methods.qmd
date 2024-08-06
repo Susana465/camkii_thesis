@@ -3,7 +3,8 @@ bibliography: [methods.bib]
 lightbox: true
 ---
 # Methods
-**Abstract**
+Abstract
+
 This chapter delves into the methods used to model molecular interactions of interest. Using Monte Carlo algorithm simulations with MCell and CellBlender, I modeled the interactions of initial molecules released inside the cell, including Ca2+, CaM, CaMKII, PP1, and NMDARs on the cell surface. The binding dynamics of calcium to calmodulin and subsequent interactions with CaMKII ware examined, alongside the states of CaMKII (open/closed, active/inactive) and the phosphorylation processes of CaMKII. 
 
 The results should highlight the importance of CaM binding to CaMKII, and NMDARs, and its regulation through phosphorylation, as well as the role of these interactions in maintaining the phosphorylated state of CaMKII within the postsynaptic density.
@@ -68,7 +69,10 @@ CaM only binds at high affinity to CaMKII, skipping binding at "initially bound"
 Can CaM bind if CaMKII is closed? - what do studies say. the answer is no. 
 CaM can bind to CaMKII even if the former is not fully saturated with calcium, but not in our model. 
 
- It has previously been suggested that two binding sites for calmodulin exist on CaMKII, with high and low affinities.
+ It has previously been suggested that two binding sites for calmodulin exist on CaMKII, with high and low affinities. cam has been suggested to be able to bind to the low affinity site when camkii is in the closed state (stefan et al., 2012). Stefan at al., 2012 propose that trapping of cam requires cam to bind to the low affinity site of camkii when camkii is closed (to keep cam bound to camkii even as it closes?). 
+
+what I am proposing in this work, according to what I have read so far [ORGANISE REFERENCES], is that cam can remain bound and in fact in a "trapped" position even without modelling the low affinity binding. cam can be trapped with camkii as it's binding affinity increases with camkii subunit phosphorylation at t286. 
+
 
 ## CaM-trapping and how we model it
 
