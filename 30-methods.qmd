@@ -1,6 +1,5 @@
 ---
 bibliography: [methods.bib]
-lightbox: true
 ---
 # Methods
 Abstract
