@@ -45,7 +45,9 @@ _Calmodulin comprises a 148aa residue polypeptide with four EF hands divided int
 
 calmodulin lobes have been reported to differ in their kinetics and affinity for Ca2+:
 - the N lobe binding faster with lower affinity and 
-- the C lobe binding slower with higher affinity._ (Domas paper)
+- the C lobe binding slower with higher affinity._ (Domas paper)*
+
+*Faas et al., 2011: _[...] the N-lobe is the first site of cellular Ca2+ binding. Furthermore, the cooperativity of Ca2+ binding differs between the two lobes and this difference gives rise to distinct properties of each lobe. Our findings show that CaM is efficiently activated upon a rise in cellular Ca2+, which might produce 10–100 times more activated CaM than previously thought._ https://www.nature.com/articles/nn.2746 
 
 _An E–F hand consists of an N-terminal helix (the E helix) immediately followed by a centrally located, Ca2coordinating loop and a C-terminal helix (the F helix). The three-dimensional arrangement of these domains is reminiscent of the thumb, index and middle fingers of a hand, hence the name ‘E–F hand’._ [@chin2000Calmodulin]
 
@@ -55,6 +57,8 @@ Sensitivity tests for different parameters of ca binding to cam -> domas' sugges
 - Saturated CaM_Ca4 binds to CaMKII ring, T306 needs to be unphosphorylated
 -> 5.1 CaMKII + CaM_Ca4 < - > CaMKII_CaM 
 _In addition, CaMKII can be made insensitive to Ca2+/CaM by autophosphorylation at T305/T306 located within the Ca2+/CaM binding site [23],[24], a process that is facilitated by interaction with the membrane associated guanylate kinase (MAGUK/CASK) [25],[26]. The balance between the Ca2+/CaM-sensitive and -insensitive CaMKII pool is critical for the regulation of post-synaptic plasticity [27],[28]._
+
+_It has been reported that the binding affinity of CaMKIIα for Ca2+/CaM increases by Thr286 phosphorylation [7]._ https://www.nature.com/articles/s41467-019-10694-z
 
 _Moreover, Ca2+/CaM binding to CaMKII with unphosphorylated T306 effectively prevents phosphorylation of this residue [26]. These data are in agreement with our co-crystal structure that showed that both threonine residues (T306/T307) were deeply buried within the Ca2+/CaM complex (Figure 4B)._
 
@@ -243,6 +247,20 @@ Ordyan et al., use rule-based modelling methodology using Monte Carlo methods si
 _Ordyan et al. (199) developed a multiscale, rule-based model of CaMKII activation that accounted for kinetics of CaMKII modelled as a monomer and a holoenzyme. Their findings suggested that CaMKII functions as a leaky integrator of Ca2+ pulses in the presence of neurogranin (Ng) and PP1, consistent with previous experimental observations in short LTP (46). Their results suggest CaMKII integrates Ca2+ signals in a frequency-dependent manner, which contrasts with the earlier models that propose CaMKII functions as a bistable memory switch (212)._
 
 Likewise, another model supports the idea that CaMKII acts as a leaky integrator of Ca2+ in a PP1-rich environment (243). Rather, CaMKII might exhibit bistability in specific microenvironments, such as the 'core' PSD where it binds to the NMDA receptor (Dosemeci et al., 2016; Petersen et al., 2003). Whereas in the spine cytosol, CaMKII has been demonstrated to act not as a bistable switch but as a leaky integrator of calcium activity (Chang et al., 2017).
+
+### How have others modelled calcium binding to cam?
+- Pharris et al., 2020: cam is set into the model as either unbound to calcium, or fully saturated, cam bound to 4 calcium (I cannot find how they model this transition).
+
+_CaM and PP are modeled in MCell as conventional cytosolic molecules. CaM is modeled as 132 having one of two states: un-bound apo-CaM and fully-saturated Ca2+/CaM (four Ca2+ bound to CaM). 133 Although we and others have described the importance of sub-saturated Ca2+/CaM states with fewer than 134 4 Ca2+ [12, 24, 31, 44-46], the dynamics of Ca2+-CaM binding and the binding of sub-saturated Ca2+/CaM 135 to CaMKII are beyond the scope of this current work._
+
+- Stefan at al., 2008: ca binds with same affinity regardless of 1, 2 or 4 binding, and affinity is modelled according to dissociation rate:
+_The kon for calcium binding was assumed to be the same for all four binding sites and both states, because it can be assumed to be controlled only by calcium and calmodulin diffusion and size (random exploration). Different affinities were represented by different koff values._
+
+### How have others modelled cam binding to camkii?
+
+### How have others modelled camkii P?
+
+### How have others modelled camkii/nmdar interactions, if at all?
 
 ## Bartol et al., 2024
 Bartol et al. 2024 use particle-based stochastic simulations in MCell4 to model the activation of CaMKII by Ca2+ flowing through NMDARs within a postsynaptic spine. They translate the kinetic properties of CaMKII regulation previously measured _in vitro_ into the context of a computational model of a postsynaptic spine.

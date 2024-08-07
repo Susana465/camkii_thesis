@@ -1,91 +1,24 @@
-@online{bartol2024Spatial,
-  title = {A Spatial Model of Autophosphorylation of {{CaMKII}} in a Glutamatergic Spine Suggests a Network-Driven Kinetic Mechanism for Bistable Changes in Synaptic Strength},
-  author = {Bartol, Thomas M. and Ordyan, Mariam and Sejnowski, Terrence J. and Rangamani, Padmini and Kennedy, Mary B.},
-  date = {2024-02-02},
-  eprinttype = {bioRxiv},
-  eprintclass = {New Results},
-  pages = {2024.02.02.578696},
-  doi = {10.1101/2024.02.02.578696},
-  url = {https://www.biorxiv.org/content/10.1101/2024.02.02.578696v1},
-  urldate = {2024-06-11},
-  abstract = {Activation of N-methyl-D-aspartate-type glutamate receptors (NMDARs) at synapses in the CNS triggers changes in synaptic strength that underlie memory formation in response to strong synaptic stimuli. The primary target of Ca2+ flowing through NMDARs is Ca2+/calmodulin-dependent protein kinase II (CaMKII) which forms dodecameric holoenzymes that are highly concentrated at the postsynaptic site. Activation of CaMKII is necessary to trigger long-term potentiation of synaptic strength (LTP), and is prolonged by autophosphorylation of subunits within the holoenzyme. Here we use MCell4, an agent-based, stochastic, modeling platform to model CaMKII holoenzymes placed within a realistic spine geometry. We show how two mechanisms of regulation of CaMKII, ‘Ca2+-calmodulin-trapping (CaM-trapping)’ and dephosphorylation by protein phosphatase-1 (PP1) shape the autophosphorylation response during a repeated high-frequency stimulus. Our simulation results suggest that autophosphorylation of CaMKII does not constitute a bistable switch. Instead, prolonged but temporary, autophosphorylation of CaMKII may contribute to a biochemical-network-based ‘kinetic proof-reading” mechanism that controls induction of synaptic plasticity.},
-  langid = {english},
-  pubstate = {prepublished},
-  file = {C:\Users\susan\Zotero\storage\7HMLXGW5\Bartol et al_2024_A spatial model of autophosphorylation of CaMKII in a glutamatergic spine.pdf}
+@book{Testbookref,
+  title = {Testbookref}
 }
 
-@article{cheriyan2011Calcium,
-  title = {Calcium/{{Calmodulin Dependent Protein Kinase II Bound}} to {{NMDA Receptor 2B Subunit Exhibits Increased ATP Affinity}} and {{Attenuated Dephosphorylation}}},
-  author = {Cheriyan, John and Kumar, Parimal and Mayadevi, Madhavan and Surolia, Avadhesha and Omkumar, Ramakrishnapillai V.},
-  date = {2011-03-15},
-  journaltitle = {PLOS ONE},
-  volume = {6},
-  number = {3},
-  pages = {e16495},
+@article{ordyan2020Interactions,
+  title = {Interactions between Calmodulin and Neurogranin Govern the Dynamics of {{CaMKII}} as a Leaky Integrator},
+  author = {Ordyan, Mariam and Bartol, Tom and Kennedy, Mary and Rangamani, Padmini and Sejnowski, Terrence},
+  date = {2020-07-17},
+  journaltitle = {PLOS Computational Biology},
+  volume = {16},
+  number = {7},
+  pages = {e1008015},
   publisher = {Public Library of Science},
-  issn = {1932-6203},
-  doi = {10.1371/journal.pone.0016495},
-  url = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0016495},
-  urldate = {2024-07-16},
-  abstract = {Calcium/calmodulin dependent protein kinase II (CaMKII) is implicated to play a key role in learning and memory. NR2B subunit of N-methyl-D-aspartate receptor (NMDAR) is a high affinity binding partner of CaMKII at the postsynaptic membrane. NR2B binds to the T-site of CaMKII and modulates its catalysis. By direct measurement using isothermal titration calorimetry (ITC), we show that NR2B binding causes about 11 fold increase in the affinity of CaMKII for ATPγS, an analogue of ATP. ITC data is also consistent with an ordered binding mechanism for CaMKII with ATP binding the catalytic site first followed by peptide substrate. We also show that dephosphorylation of phospho-Thr286-α-CaMKII is attenuated when NR2B is bound to CaMKII. This favors the persistence of Thr286 autophosphorylated state of CaMKII in a CaMKII/phosphatase conjugate system in vitro. Overall our data indicate that the NR2B- bound state of CaMKII attains unique biochemical properties which could help in the efficient functioning of the proposed molecular switch supporting synaptic memory.},
+  issn = {1553-7358},
+  doi = {10.1371/journal.pcbi.1008015},
+  url = {https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008015},
+  urldate = {2023-06-22},
+  abstract = {Calmodulin-dependent kinase II (CaMKII) has long been known to play an important role in learning and memory as well as long term potentiation (LTP). More recently it has been suggested that it might be involved in the time averaging of synaptic signals, which can then lead to the high precision of information stored at a single synapse. However, the role of the scaffolding molecule, neurogranin (Ng), in governing the dynamics of CaMKII is not yet fully understood. In this work, we adopt a rule-based modeling approach through the Monte Carlo method to study the effect of Ca2+ signals on the dynamics of CaMKII phosphorylation in the postsynaptic density (PSD). Calcium surges are observed in synaptic spines during an EPSP and back-propagating action potential due to the opening of NMDA receptors and voltage dependent calcium channels. Using agent-based models, we computationally investigate the dynamics of phosphorylation of CaMKII monomers and dodecameric holoenzymes. The scaffolding molecule, Ng, when present in significant concentration, limits the availability of free calmodulin (CaM), the protein which activates CaMKII in the presence of calcium. We show that Ng plays an important modulatory role in CaMKII phosphorylation following a surge of high calcium concentration. We find a non-intuitive dependence of this effect on CaM concentration that results from the different affinities of CaM for CaMKII depending on the number of calcium ions bound to the former. It has been shown previously that in the absence of phosphatase, CaMKII monomers integrate over Ca2+ signals of certain frequencies through autophosphorylation (Pepke et al, Plos Comp. Bio., 2010). We also study the effect of multiple calcium spikes on CaMKII holoenzyme autophosphorylation, and show that in the presence of phosphatase, CaMKII behaves as a leaky integrator of calcium signals, a result that has been recently observed in vivo. Our models predict that the parameters of this leaky integrator are finely tuned through the interactions of Ng, CaM, CaMKII, and PP1, providing a mechanism to precisely control the sensitivity of synapses to calcium signals. Author Summary not valid for PLOS ONE submissions.},
   langid = {english},
-  keywords = {Catalysis,Enzymes,Glutathione chromatography,Isothermal titration calorimetry,Memory,Phosphatases,Phosphorylation,Protein expression},
-  file = {C:\Users\susan\Zotero\storage\KD5EPTJC\Cheriyan et al_2011_Calcium-Calmodulin Dependent Protein Kinase II Bound to NMDA Receptor 2B.pdf}
-}
-
-@article{chin2000Calmodulin,
-  title = {Calmodulin: A Prototypical Calcium Sensor},
-  shorttitle = {Calmodulin},
-  author = {Chin, David and Means, Anthony R.},
-  date = {2000-08-01},
-  journaltitle = {Trends in Cell Biology},
-  volume = {10},
-  number = {8},
-  eprint = {10884684},
-  eprinttype = {pmid},
-  pages = {322--328},
-  publisher = {Elsevier},
-  issn = {0962-8924, 1879-3088},
-  doi = {10.1016/S0962-8924(00)01800-6},
-  url = {https://www.cell.com/trends/cell-biology/abstract/S0962-8924(00)01800-6},
-  urldate = {2024-06-28},
-  langid = {english},
-  keywords = {Biochemistry,Calcium sensor,Calcium signal,Calmodulin,Calmodulin binding protein,Calmodulin kinase,Cell biology,Signal transduction}
-}
-
-@article{cook2021CaMKII,
-  title = {{{CaMKII}} Holoenzyme Mechanisms That Govern the {{LTP}} versus {{LTD}} Decision},
-  author = {Cook, Sarah G. and Buonarati, Olivia R. and Coultrap, Steven J. and Bayer, K. Ulrich},
-  date = {2021-04-14},
-  journaltitle = {Science Advances},
-  volume = {7},
-  number = {16},
-  pages = {eabe2300},
-  publisher = {American Association for the Advancement of Science},
-  doi = {10.1126/sciadv.abe2300},
-  url = {https://www.science.org/doi/full/10.1126/sciadv.abe2300},
-  urldate = {2024-07-22},
-  abstract = {Higher brain functions are thought to require synaptic frequency decoding that can lead to long-term potentiation (LTP) or depression (LTD). We show that the LTP versus LTD decision is determined by complex cross-regulation of T286 and T305/306 autophosphorylation within the 12meric CaMKII holoenzyme, which enabled molecular computation of stimulus frequency, amplitude, and duration. Both LTP and LTD require T286 phosphorylation, but T305/306 phosphorylation selectively promoted LTD. In response to excitatory LTP versus LTD stimuli, the differential T305/306 phosphorylation directed CaMKII movement to either excitatory or inhibitory synapses, thereby coordinating plasticity at both synapse types. Fast T305/306 phosphorylation required prior T286 phosphorylation and then curbed CaMKII activity by two mechanisms: (i) a cis-subunit reaction reduced both Ca2+ stimulation and autonomous activity and (ii) a trans-subunit reaction enabled complete activity shutdown and feed-forward inhibition of further T286 phosphorylation. These are fundamental additions to the long-studied CaMKII regulation and function in neuronal plasticity.},
-  file = {C:\Users\susan\Zotero\storage\I4G8Z8CT\Cook et al_2021_CaMKII holoenzyme mechanisms that govern the LTP versus LTD decision.pdf}
-}
-
-@article{coultrap2012Significant,
-  title = {A {{Significant}} but {{Rather Mild Contribution}} of {{T286 Autophosphorylation}} to {{Ca2}}+/{{CaM-Stimulated CaMKII Activity}}},
-  author = {Coultrap, Steven J. and Barcomb, Kelsey and Bayer, K. Ulrich},
-  date = {2012-05-16},
-  journaltitle = {PLOS ONE},
-  volume = {7},
-  number = {5},
-  pages = {e37176},
-  publisher = {Public Library of Science},
-  issn = {1932-6203},
-  doi = {10.1371/journal.pone.0037176},
-  url = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037176},
-  urldate = {2024-07-16},
-  abstract = {Background Autophosphorylation of the Ca2+/calmodulin (CaM)-dependent protein kinase II (CaMKII) at T286 generates partially Ca2+/CaM-independent “autonomous” activity, which is thought to be required for long-term potentiation (LTP), a form of synaptic plasticity thought to underlie learning and memory. A requirement for T286 autophosphorylation also for efficient Ca2+/CaM-stimulated CaMKII activity has been described, but remains controversial. Methodology/Principal Findings In order to determine the contribution of T286 autophosphorylation to Ca2+/CaM-stimulated CaMKII activity, the activity of CaMKII wild type and its phosphorylation-incompetent T286A mutant was compared. As the absolute activity can vary between individual kinase preparations, the activity was measured in six different extracts for each kinase (expressed in HEK-293 cells). Consistent with measurements on purified kinase (from a baculovirus/Sf9 cell expression system), CaMKII T286A showed a mildly but significantly reduced rate of Ca2+/CaM-stimulated phosphorylation for two different peptide substrates (to ∼75–84\% of wild type). Additional slower CaMKII autophosphorylation at T305/306 inhibits stimulation by Ca2+/CaM, but occurs only minimally for CaMKII wild type during CaM-stimulated activity assays. Thus, we tested if the T286A mutant may show more extensive inhibitory autophosphorylation, which could explain its reduced stimulated activity. By contrast, inhibitory autophosphorylation was instead found to be even further reduced for the T286A mutant under our assay conditions. On a side note, the phospho-T305 antibody showed some basal background immuno-reactivity also with non-phosphorylated CaMKII, as indicated by T305/306A mutants. Conclusions/Significance These results indicate that Ca2+/CaM-stimulated CaMKII activity is mildly (∼1.2–1.3fold) further increased by additional T286 autophosphorylation, but that this autophosphorylation is not required for the major part of the stimulated activity. This indicates that the phenotype of CaMKII T286A mutant mice is indeed due to the lack of autonomous activity, as the T286A mutant showed no dramatic reduction in stimulated activity.},
-  langid = {english},
-  keywords = {Centrifugation,Hippocampus,Learning and memory,Long-term potentiation,Phenotypes,Phosphorylation,Reaction time,Synaptic plasticity},
-  file = {C:\Users\susan\Zotero\storage\NA23KYCN\Coultrap et al_2012_A Significant but Rather Mild Contribution of T286 Autophosphorylation to.pdf}
+  keywords = {Calcium signaling,Integrators,Monomers,Phosphatases,Phosphorylation,Simulation and modeling,Synapses,Synaptic plasticity},
+  file = {C:\Users\susan\Zotero\storage\D4FTRXDM\Ordyan et al_2020_Interactions between calmodulin and neurogranin govern the dynamics of CaMKII.pdf}
 }
 
 @article{harris1989Dendritic,
@@ -108,6 +41,35 @@
   file = {C:\Users\susan\Zotero\storage\Z6DZP45Q\Harris_Stevens_1989_Dendritic spines of CA 1 pyramidal cells in the rat hippocampus.pdf}
 }
 
+@article{lee2024Biophysical,
+  title = {Biophysical {{Modeling}} of {{Synaptic Plasticity}}},
+  author = {Lee, Christopher T. and Bell, Miriam and Bonilla-Quintana, Mayte and Rangamani, Padmini},
+  date = {2024-02-21},
+  publisher = {Annual Reviews},
+  doi = {10.1146/annurev-biophys-072123-124954},
+  url = {https://www-annualreviews-org.eux.idm.oclc.org/content/journals/10.1146/annurev-biophys-072123-124954},
+  urldate = {2024-06-10},
+  abstract = {Dendritic spines are small, bulbous compartments that function as postsynaptic sites and undergo intense biochemical and biophysical activity. The role of the myriad signaling pathways that are implicated in synaptic plasticity is well studied. A recent abundance of quantitative experimental data has made the events associated with synaptic plasticity amenable to quantitative biophysical modeling. Spines are also fascinating biophysical computational units because spine geometry, signal transduction, and mechanics work in a complex feedback loop to tune synaptic plasticity. In this sense, ideas from modeling cell motility can inspire us to develop multiscale approaches for predictive modeling of synaptic plasticity. In this article, we review the key steps in postsynaptic plasticity with a specific focus on the impact of spine geometry on signaling, cytoskeleton rearrangement, and membrane mechanics. We summarize the main experimental observations and highlight how theory and computation can aid our understanding of these complex processes. Expected final online publication date for the Annual Review of Biophysics, Volume 53 is May 2024. Please see http://www.annualreviews.org.eux.idm.oclc.org/page/journal/pubdates for revised estimates.},
+  langid = {english},
+  file = {C\:\\Users\\susan\\Zotero\\storage\\VMCBGLHT\\Lee et al_2024_Biophysical Modeling of Synaptic Plasticity.pdf;C\:\\Users\\susan\\Zotero\\storage\\I2ETA358\\annurev-biophys-072123-124954.html}
+}
+
+@online{bartol2024Spatial,
+  title = {A Spatial Model of Autophosphorylation of {{CaMKII}} in a Glutamatergic Spine Suggests a Network-Driven Kinetic Mechanism for Bistable Changes in Synaptic Strength},
+  author = {Bartol, Thomas M. and Ordyan, Mariam and Sejnowski, Terrence J. and Rangamani, Padmini and Kennedy, Mary B.},
+  date = {2024-02-02},
+  eprinttype = {bioRxiv},
+  eprintclass = {New Results},
+  pages = {2024.02.02.578696},
+  doi = {10.1101/2024.02.02.578696},
+  url = {https://www.biorxiv.org/content/10.1101/2024.02.02.578696v1},
+  urldate = {2024-06-11},
+  abstract = {Activation of N-methyl-D-aspartate-type glutamate receptors (NMDARs) at synapses in the CNS triggers changes in synaptic strength that underlie memory formation in response to strong synaptic stimuli. The primary target of Ca2+ flowing through NMDARs is Ca2+/calmodulin-dependent protein kinase II (CaMKII) which forms dodecameric holoenzymes that are highly concentrated at the postsynaptic site. Activation of CaMKII is necessary to trigger long-term potentiation of synaptic strength (LTP), and is prolonged by autophosphorylation of subunits within the holoenzyme. Here we use MCell4, an agent-based, stochastic, modeling platform to model CaMKII holoenzymes placed within a realistic spine geometry. We show how two mechanisms of regulation of CaMKII, ‘Ca2+-calmodulin-trapping (CaM-trapping)’ and dephosphorylation by protein phosphatase-1 (PP1) shape the autophosphorylation response during a repeated high-frequency stimulus. Our simulation results suggest that autophosphorylation of CaMKII does not constitute a bistable switch. Instead, prolonged but temporary, autophosphorylation of CaMKII may contribute to a biochemical-network-based ‘kinetic proof-reading” mechanism that controls induction of synaptic plasticity.},
+  langid = {english},
+  pubstate = {prepublished},
+  file = {C:\Users\susan\Zotero\storage\7HMLXGW5\Bartol et al_2024_A spatial model of autophosphorylation of CaMKII in a glutamatergic spine.pdf}
+}
+
 @article{hell2023Binding,
   title = {Binding of {{CaMKII}} to the {{NMDA}} Receptor Is Sufficient for Long-Term Potentiation},
   author = {Hell, Johannes W.},
@@ -123,6 +85,26 @@
   abstract = {Learning and the underlying long-lasting increases in glutamatergic synapse strength [called long-term potentiation (LTP)] require both Ca2+ influx through NMDA-type glutamate receptors (NMDARs) and the kinase CaMKII. New evidence now suggests that CaMKII can induce LTP purely by binding to the NMDAR subunit GluN2B and does not require the catalytic activity of the kinase.}
 }
 
+@article{chin2000Calmodulin,
+  title = {Calmodulin: A Prototypical Calcium Sensor},
+  shorttitle = {Calmodulin},
+  author = {Chin, David and Means, Anthony R.},
+  date = {2000-08-01},
+  journaltitle = {Trends in Cell Biology},
+  volume = {10},
+  number = {8},
+  eprint = {10884684},
+  eprinttype = {pmid},
+  pages = {322--328},
+  publisher = {Elsevier},
+  issn = {0962-8924, 1879-3088},
+  doi = {10.1016/S0962-8924(00)01800-6},
+  url = {https://www.cell.com/trends/cell-biology/abstract/S0962-8924(00)01800-6},
+  urldate = {2024-06-28},
+  langid = {english},
+  keywords = {Biochemistry,Calcium sensor,Calcium signal,Calmodulin,Calmodulin binding protein,Calmodulin kinase,Cell biology,Signal transduction}
+}
+
 @thesis{kellermayer2018Superresolution,
   type = {phdthesis},
   title = {Super-Resolution Imaging Reveals Differential Organization and Regulation of {{NMDA}} Receptor Subtypes},
@@ -136,17 +118,42 @@
   file = {C:\Users\susan\Zotero\storage\BPL37WWM\Kellermayer_2018_Super-resolution imaging reveals differential organization and regulation of.pdf}
 }
 
-@article{lee2024Biophysical,
-  title = {Biophysical {{Modeling}} of {{Synaptic Plasticity}}},
-  author = {Lee, Christopher T. and Bell, Miriam and Bonilla-Quintana, Mayte and Rangamani, Padmini},
-  date = {2024-02-21},
-  publisher = {Annual Reviews},
-  doi = {10.1146/annurev-biophys-072123-124954},
-  url = {https://www-annualreviews-org.eux.idm.oclc.org/content/journals/10.1146/annurev-biophys-072123-124954},
-  urldate = {2024-06-10},
-  abstract = {Dendritic spines are small, bulbous compartments that function as postsynaptic sites and undergo intense biochemical and biophysical activity. The role of the myriad signaling pathways that are implicated in synaptic plasticity is well studied. A recent abundance of quantitative experimental data has made the events associated with synaptic plasticity amenable to quantitative biophysical modeling. Spines are also fascinating biophysical computational units because spine geometry, signal transduction, and mechanics work in a complex feedback loop to tune synaptic plasticity. In this sense, ideas from modeling cell motility can inspire us to develop multiscale approaches for predictive modeling of synaptic plasticity. In this article, we review the key steps in postsynaptic plasticity with a specific focus on the impact of spine geometry on signaling, cytoskeleton rearrangement, and membrane mechanics. We summarize the main experimental observations and highlight how theory and computation can aid our understanding of these complex processes. Expected final online publication date for the Annual Review of Biophysics, Volume 53 is May 2024. Please see http://www.annualreviews.org.eux.idm.oclc.org/page/journal/pubdates for revised estimates.},
+@article{cheriyan2011Calcium,
+  title = {Calcium/{{Calmodulin Dependent Protein Kinase II Bound}} to {{NMDA Receptor 2B Subunit Exhibits Increased ATP Affinity}} and {{Attenuated Dephosphorylation}}},
+  author = {Cheriyan, John and Kumar, Parimal and Mayadevi, Madhavan and Surolia, Avadhesha and Omkumar, Ramakrishnapillai V.},
+  date = {2011-03-15},
+  journaltitle = {PLOS ONE},
+  volume = {6},
+  number = {3},
+  pages = {e16495},
+  publisher = {Public Library of Science},
+  issn = {1932-6203},
+  doi = {10.1371/journal.pone.0016495},
+  url = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0016495},
+  urldate = {2024-07-16},
+  abstract = {Calcium/calmodulin dependent protein kinase II (CaMKII) is implicated to play a key role in learning and memory. NR2B subunit of N-methyl-D-aspartate receptor (NMDAR) is a high affinity binding partner of CaMKII at the postsynaptic membrane. NR2B binds to the T-site of CaMKII and modulates its catalysis. By direct measurement using isothermal titration calorimetry (ITC), we show that NR2B binding causes about 11 fold increase in the affinity of CaMKII for ATPγS, an analogue of ATP. ITC data is also consistent with an ordered binding mechanism for CaMKII with ATP binding the catalytic site first followed by peptide substrate. We also show that dephosphorylation of phospho-Thr286-α-CaMKII is attenuated when NR2B is bound to CaMKII. This favors the persistence of Thr286 autophosphorylated state of CaMKII in a CaMKII/phosphatase conjugate system in vitro. Overall our data indicate that the NR2B- bound state of CaMKII attains unique biochemical properties which could help in the efficient functioning of the proposed molecular switch supporting synaptic memory.},
   langid = {english},
-  file = {C\:\\Users\\susan\\Zotero\\storage\\VMCBGLHT\\Lee et al_2024_Biophysical Modeling of Synaptic Plasticity.pdf;C\:\\Users\\susan\\Zotero\\storage\\I2ETA358\\annurev-biophys-072123-124954.html}
+  keywords = {Catalysis,Enzymes,Glutathione chromatography,Isothermal titration calorimetry,Memory,Phosphatases,Phosphorylation,Protein expression},
+  file = {C:\Users\susan\Zotero\storage\KD5EPTJC\Cheriyan et al_2011_Calcium-Calmodulin Dependent Protein Kinase II Bound to NMDA Receptor 2B.pdf}
+}
+
+@article{coultrap2012Significant,
+  title = {A {{Significant}} but {{Rather Mild Contribution}} of {{T286 Autophosphorylation}} to {{Ca2}}+/{{CaM-Stimulated CaMKII Activity}}},
+  author = {Coultrap, Steven J. and Barcomb, Kelsey and Bayer, K. Ulrich},
+  date = {2012-05-16},
+  journaltitle = {PLOS ONE},
+  volume = {7},
+  number = {5},
+  pages = {e37176},
+  publisher = {Public Library of Science},
+  issn = {1932-6203},
+  doi = {10.1371/journal.pone.0037176},
+  url = {https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037176},
+  urldate = {2024-07-16},
+  abstract = {Background Autophosphorylation of the Ca2+/calmodulin (CaM)-dependent protein kinase II (CaMKII) at T286 generates partially Ca2+/CaM-independent “autonomous” activity, which is thought to be required for long-term potentiation (LTP), a form of synaptic plasticity thought to underlie learning and memory. A requirement for T286 autophosphorylation also for efficient Ca2+/CaM-stimulated CaMKII activity has been described, but remains controversial. Methodology/Principal Findings In order to determine the contribution of T286 autophosphorylation to Ca2+/CaM-stimulated CaMKII activity, the activity of CaMKII wild type and its phosphorylation-incompetent T286A mutant was compared. As the absolute activity can vary between individual kinase preparations, the activity was measured in six different extracts for each kinase (expressed in HEK-293 cells). Consistent with measurements on purified kinase (from a baculovirus/Sf9 cell expression system), CaMKII T286A showed a mildly but significantly reduced rate of Ca2+/CaM-stimulated phosphorylation for two different peptide substrates (to ∼75–84\% of wild type). Additional slower CaMKII autophosphorylation at T305/306 inhibits stimulation by Ca2+/CaM, but occurs only minimally for CaMKII wild type during CaM-stimulated activity assays. Thus, we tested if the T286A mutant may show more extensive inhibitory autophosphorylation, which could explain its reduced stimulated activity. By contrast, inhibitory autophosphorylation was instead found to be even further reduced for the T286A mutant under our assay conditions. On a side note, the phospho-T305 antibody showed some basal background immuno-reactivity also with non-phosphorylated CaMKII, as indicated by T305/306A mutants. Conclusions/Significance These results indicate that Ca2+/CaM-stimulated CaMKII activity is mildly (∼1.2–1.3fold) further increased by additional T286 autophosphorylation, but that this autophosphorylation is not required for the major part of the stimulated activity. This indicates that the phenotype of CaMKII T286A mutant mice is indeed due to the lack of autonomous activity, as the T286A mutant showed no dramatic reduction in stimulated activity.},
+  langid = {english},
+  keywords = {Centrifugation,Hippocampus,Learning and memory,Long-term potentiation,Phenotypes,Phosphorylation,Reaction time,Synaptic plasticity},
+  file = {C:\Users\susan\Zotero\storage\NA23KYCN\Coultrap et al_2012_A Significant but Rather Mild Contribution of T286 Autophosphorylation to.pdf}
 }
 
 @article{lucic2008Detailed,
@@ -167,25 +174,6 @@
   file = {C:\Users\susan\Zotero\storage\RKB9R6WV\Lučić et al_2008_Detailed state model of CaMKII activation and autophosphorylation.pdf}
 }
 
-@article{ordyan2020Interactions,
-  title = {Interactions between Calmodulin and Neurogranin Govern the Dynamics of {{CaMKII}} as a Leaky Integrator},
-  author = {Ordyan, Mariam and Bartol, Tom and Kennedy, Mary and Rangamani, Padmini and Sejnowski, Terrence},
-  date = {2020-07-17},
-  journaltitle = {PLOS Computational Biology},
-  volume = {16},
-  number = {7},
-  pages = {e1008015},
-  publisher = {Public Library of Science},
-  issn = {1553-7358},
-  doi = {10.1371/journal.pcbi.1008015},
-  url = {https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008015},
-  urldate = {2023-06-22},
-  abstract = {Calmodulin-dependent kinase II (CaMKII) has long been known to play an important role in learning and memory as well as long term potentiation (LTP). More recently it has been suggested that it might be involved in the time averaging of synaptic signals, which can then lead to the high precision of information stored at a single synapse. However, the role of the scaffolding molecule, neurogranin (Ng), in governing the dynamics of CaMKII is not yet fully understood. In this work, we adopt a rule-based modeling approach through the Monte Carlo method to study the effect of Ca2+ signals on the dynamics of CaMKII phosphorylation in the postsynaptic density (PSD). Calcium surges are observed in synaptic spines during an EPSP and back-propagating action potential due to the opening of NMDA receptors and voltage dependent calcium channels. Using agent-based models, we computationally investigate the dynamics of phosphorylation of CaMKII monomers and dodecameric holoenzymes. The scaffolding molecule, Ng, when present in significant concentration, limits the availability of free calmodulin (CaM), the protein which activates CaMKII in the presence of calcium. We show that Ng plays an important modulatory role in CaMKII phosphorylation following a surge of high calcium concentration. We find a non-intuitive dependence of this effect on CaM concentration that results from the different affinities of CaM for CaMKII depending on the number of calcium ions bound to the former. It has been shown previously that in the absence of phosphatase, CaMKII monomers integrate over Ca2+ signals of certain frequencies through autophosphorylation (Pepke et al, Plos Comp. Bio., 2010). We also study the effect of multiple calcium spikes on CaMKII holoenzyme autophosphorylation, and show that in the presence of phosphatase, CaMKII behaves as a leaky integrator of calcium signals, a result that has been recently observed in vivo. Our models predict that the parameters of this leaky integrator are finely tuned through the interactions of Ng, CaM, CaMKII, and PP1, providing a mechanism to precisely control the sensitivity of synapses to calcium signals. Author Summary not valid for PLOS ONE submissions.},
-  langid = {english},
-  keywords = {Calcium signaling,Integrators,Monomers,Phosphatases,Phosphorylation,Simulation and modeling,Synapses,Synaptic plasticity},
-  file = {C:\Users\susan\Zotero\storage\D4FTRXDM\Ordyan et al_2020_Interactions between calmodulin and neurogranin govern the dynamics of CaMKII.pdf}
-}
-
 @article{pi2010Autonomous,
   title = {Autonomous {{CaMKII Can Promote}} Either {{Long-Term Potentiation}} or {{Long-Term Depression}}, {{Depending}} on the {{State}} of {{T305}}/{{T306 Phosphorylation}}},
   author = {Pi, Hyun Jae and Otmakhov, Nikolai and Lemelin, David and Koninck, Paul De and Lisman, John},
@@ -204,6 +192,22 @@
   abstract = {Ca2+/calmodulin-dependent kinase II (CaMKII) is a key mediator of long-term potentiation (LTP). Whereas acute intracellular injection of catalytically active CaMKII fragments saturates LTP (Lledo et al., 1995), an autonomously active form (T286D) of CaMKII holoenzyme expressed in transgenic mice did not saturate potentiation (Mayford et al., 1995). To better understand the role of the holoenzyme in the control of synaptic strength, we transfected hippocampal neurons with constructs encoding forms of CaMKII mimicking different phosphorylation states. Surprisingly, T286D not only failed to potentiate synaptic strength, but produced synaptic depression through an long-term depression (LTD)-like process. T305/T306 phosphorylation was critical for this depression because overexpression of the pseudophosphorylated form (T286D/T305D/T306D) caused depression that occluded LTD, and overexpression of an autonomous form in which T305/T306 could not be phosphorylated (T286D/T305A/T306A) prevented LTD (instead producing potentiation). Therefore, autonomous CaMKII can lead to either LTP or LTD, depending on the phosphorylation state of the control point, T305/T306.},
   langid = {english},
   file = {C:\Users\susan\Zotero\storage\QG4NAVKW\Pi et al_2010_Autonomous CaMKII Can Promote either Long-Term Potentiation or Long-Term.pdf}
+}
+
+@article{cook2021CaMKII,
+  title = {{{CaMKII}} Holoenzyme Mechanisms That Govern the {{LTP}} versus {{LTD}} Decision},
+  author = {Cook, Sarah G. and Buonarati, Olivia R. and Coultrap, Steven J. and Bayer, K. Ulrich},
+  date = {2021-04-14},
+  journaltitle = {Science Advances},
+  volume = {7},
+  number = {16},
+  pages = {eabe2300},
+  publisher = {American Association for the Advancement of Science},
+  doi = {10.1126/sciadv.abe2300},
+  url = {https://www.science.org/doi/full/10.1126/sciadv.abe2300},
+  urldate = {2024-07-22},
+  abstract = {Higher brain functions are thought to require synaptic frequency decoding that can lead to long-term potentiation (LTP) or depression (LTD). We show that the LTP versus LTD decision is determined by complex cross-regulation of T286 and T305/306 autophosphorylation within the 12meric CaMKII holoenzyme, which enabled molecular computation of stimulus frequency, amplitude, and duration. Both LTP and LTD require T286 phosphorylation, but T305/306 phosphorylation selectively promoted LTD. In response to excitatory LTP versus LTD stimuli, the differential T305/306 phosphorylation directed CaMKII movement to either excitatory or inhibitory synapses, thereby coordinating plasticity at both synapse types. Fast T305/306 phosphorylation required prior T286 phosphorylation and then curbed CaMKII activity by two mechanisms: (i) a cis-subunit reaction reduced both Ca2+ stimulation and autonomous activity and (ii) a trans-subunit reaction enabled complete activity shutdown and feed-forward inhibition of further T286 phosphorylation. These are fundamental additions to the long-studied CaMKII regulation and function in neuronal plasticity.},
+  file = {C:\Users\susan\Zotero\storage\I4G8Z8CT\Cook et al_2021_CaMKII holoenzyme mechanisms that govern the LTP versus LTD decision.pdf}
 }
 
 @article{stefan2012Structurala,
@@ -244,6 +248,65 @@
   file = {C:\Users\susan\Zotero\storage\QJAKWTWD\Stefan et al_2012_Structural Analysis and Stochastic Modelling Suggest a Mechanism for Calmodulin.pdf}
 }
 
-@book{Testbookref,
-  title = {Testbookref}
+@article{stefan2008Allosterica,
+  title = {An Allosteric Model of Calmodulin Explains Differential Activation of {{PP2B}} and {{CaMKII}}},
+  author = {Stefan, Melanie I. and Edelstein, Stuart J. and Le Novère, Nicolas},
+  date = {2008-08-05},
+  journaltitle = {Proceedings of the National Academy of Sciences},
+  volume = {105},
+  number = {31},
+  pages = {10768--10773},
+  publisher = {Proceedings of the National Academy of Sciences},
+  doi = {10.1073/pnas.0804672105},
+  url = {https://www.pnas.org/doi/full/10.1073/pnas.0804672105},
+  urldate = {2024-08-06},
+  abstract = {Calmodulin plays a vital role in mediating bidirectional synaptic plasticity by activating either calcium/calmodulin-dependent protein kinase II (CaMKII) or protein phosphatase 2B (PP2B) at different calcium concentrations. We propose an allosteric model for calmodulin activation, in which binding to calcium facilitates the transition between a low-affinity [tense (T)] and a high-affinity [relaxed (R)] state. The four calcium-binding sites are assumed to be nonidentical. The model is consistent with previously reported experimental data for calcium binding to calmodulin. It also accounts for known properties of calmodulin that have been difficult to model so far, including the activity of nonsaturated forms of calmodulin (we predict the existence of open conformations in the absence of calcium), an increase in calcium affinity once calmodulin is bound to a target, and the differential activation of CaMKII and PP2B depending on calcium concentration.}
+}
+
+@article{stefan2008Allostericb,
+  title = {An Allosteric Model of Calmodulin Explains Differential Activation of {{PP2B}} and {{CaMKII}}},
+  author = {Stefan, Melanie I. and Edelstein, Stuart J. and Le Novère, Nicolas},
+  date = {2008-08-05},
+  journaltitle = {Proceedings of the National Academy of Sciences},
+  volume = {105},
+  number = {31},
+  pages = {10768--10773},
+  publisher = {Proceedings of the National Academy of Sciences},
+  doi = {10.1073/pnas.0804672105},
+  url = {https://www.pnas.org/doi/full/10.1073/pnas.0804672105},
+  urldate = {2024-08-06},
+  abstract = {Calmodulin plays a vital role in mediating bidirectional synaptic plasticity by activating either calcium/calmodulin-dependent protein kinase II (CaMKII) or protein phosphatase 2B (PP2B) at different calcium concentrations. We propose an allosteric model for calmodulin activation, in which binding to calcium facilitates the transition between a low-affinity [tense (T)] and a high-affinity [relaxed (R)] state. The four calcium-binding sites are assumed to be nonidentical. The model is consistent with previously reported experimental data for calcium binding to calmodulin. It also accounts for known properties of calmodulin that have been difficult to model so far, including the activity of nonsaturated forms of calmodulin (we predict the existence of open conformations in the absence of calcium), an increase in calcium affinity once calmodulin is bound to a target, and the differential activation of CaMKII and PP2B depending on calcium concentration.}
+}
+
+@article{stefan2008Allostericc,
+  title = {An Allosteric Model of Calmodulin Explains Differential Activation of {{PP2B}} and {{CaMKII}}},
+  author = {Stefan, Melanie I. and Edelstein, Stuart J. and Le Novère, Nicolas},
+  date = {2008-08-05},
+  journaltitle = {Proceedings of the National Academy of Sciences},
+  volume = {105},
+  number = {31},
+  pages = {10768--10773},
+  publisher = {Proceedings of the National Academy of Sciences},
+  doi = {10.1073/pnas.0804672105},
+  url = {https://www.pnas.org/doi/full/10.1073/pnas.0804672105},
+  urldate = {2024-08-06},
+  abstract = {Calmodulin plays a vital role in mediating bidirectional synaptic plasticity by activating either calcium/calmodulin-dependent protein kinase II (CaMKII) or protein phosphatase 2B (PP2B) at different calcium concentrations. We propose an allosteric model for calmodulin activation, in which binding to calcium facilitates the transition between a low-affinity [tense (T)] and a high-affinity [relaxed (R)] state. The four calcium-binding sites are assumed to be nonidentical. The model is consistent with previously reported experimental data for calcium binding to calmodulin. It also accounts for known properties of calmodulin that have been difficult to model so far, including the activity of nonsaturated forms of calmodulin (we predict the existence of open conformations in the absence of calcium), an increase in calcium affinity once calmodulin is bound to a target, and the differential activation of CaMKII and PP2B depending on calcium concentration.}
+}
+
+@article{faas2011Calmodulin,
+  title = {Calmodulin as a Direct Detector of {{Ca2}}+ Signals},
+  author = {Faas, Guido C. and Raghavachari, Sridhar and Lisman, John E. and Mody, Istvan},
+  date = {2011-03},
+  journaltitle = {Nat Neurosci},
+  volume = {14},
+  number = {3},
+  pages = {301--304},
+  publisher = {Nature Publishing Group},
+  issn = {1546-1726},
+  doi = {10.1038/nn.2746},
+  url = {https://www.nature.com/articles/nn.2746},
+  urldate = {2024-08-06},
+  abstract = {The authors report that the rate at which calmodulin binds calcium is faster than that of other calcium binding proteins, and that calmodulin directly intercepts incoming calcium and sets [Ca2+]free rather than responding to the lower [Ca2+]free set by other buffers.},
+  langid = {english},
+  keywords = {Calcium signalling,Neurophysiology}
 }
