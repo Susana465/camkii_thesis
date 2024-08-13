@@ -8,6 +8,23 @@ This chapter delves into the methods used to model molecular interactions of int
 
 The results should highlight the importance of CaM binding to CaMKII, and NMDARs, and its regulation through phosphorylation, as well as the role of these interactions in maintaining the phosphorylated state of CaMKII within the postsynaptic density.
 
+## What I want out of this chapter?
+Explain CaMKII and NMDARs interactions in detail. Explain how they are structurally interacting, what bonds are binding, and what specific molecules are being attracted or repulsed in each molecule.
+
+DO NOT GET SIDE TRACKED WITH OTHER CHAPTERS. IF IDEAS COME CAN WRITE BUT FOCUS IS ON METHODS (do I want to rewrite this during the writing week? this probably takes quite a big chunk of time, decide on week have this as a maybe), BIOLOGY OF CAMKII AND NMDARS, AND RESULTS. 
+I want to specify what happens to CaMKII when its docked, open etc in all the different steps and what this means in terms of conditions of binding etc. What are the assumptions and what are the real conditions for camkii to P or be active, for exmaple?
+
+During the writing retreat, I want to:
+- read and specify in writing what happens when camkii docked vs undocked
+- tidy up all the info I have already below on CaMKII and NMDARs into a cohesive story
+- Tidy up the section where I write what others have done and why mine is different
+- Look at the feedback David game a few weeks ago on thesis layout (need to find)
+- Add result figures (add at least 4) of molecule reactions
+
+Further objectives I'd like to add here are:
+- finish model and see what different conditions I can test, mutants vs wt for example
+- look at space dynamics in mcell, need to discuss with supervisors
+
 ## Model validation
 
 The processes used in software development can also apply to biological model development. Following @husar2022MCell4, four key points were considered for this project:
@@ -162,7 +179,25 @@ It is well established that each subunit within the 12meric CaMKII holoenzyme is
 T305/306 phosphorylation
 this phosphorylation is associated with autoinhibition of CaMKII. This phosphorylation stabilizes the interaction between the regulatory domain and the catalytic domain, locking CaMKII in an inactive state, preventing calmodulin binding. 
 
+Lucic et al., 2008 -> Detailed state model of CaMKII activation and autophosphorylation
+
+We cannot exclude the
+possibility that the exact amount of T305 phosphorylated
+CaMKII was determined inaccurately because the
+Eur Biophys J (2008) 38:83–98 87
+123
+anti-phospho T286 CaMKII antibody has different affinity
+for T305 phosphorylated aCaMKII. However, this would
+not change the outcome of our simulations because, as we
+show below, that autophosphorylation at T305 does not
+significantly affect the autophosphorylation at T286 under
+our experimental conditions.
+
+This is an intra-subunit phosphorylation that reduces the catalytic activity of CaMKII-> (Hashimoto et al. 1987; Lou and Schulman 1989). It can occur after CaM dissociates from a T286 autophosphorylated subunit, and it prevents the rebinding of CaM
+(Hashimoto et al. 1987; Patton et al. 1990).
+
 slower CaMKII autophosphorylation at T305/306 inhibits stimulation by Ca2+/CaM, but occurs only minimally for CaMKII wild type during CaM-stimulated activity assays. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037176 
+-> _Previous studies that used the effect on stimulated CaMKII activity as a readout indicated similar rates for the T305/T306 burst phosphorylation (∼0.01–0.05 sec−1, based on the time observed for half-maximal kinase inhibition) [37], [39], [40],_
 
 Another physiologically relevant phosphorylation site is
 T305/306 at aCaMKII (T306/307 at bCaMKII, both
@@ -175,7 +210,7 @@ occur after CaM dissociates from a T286 autophosphorylated subunit, and it preve
 biological importance proposal:
 (My own thoughts) This stabilization mechanism may act as a form of kinetic proofreading by ensuring that CaMKII remains inactive or less active unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
 
-Finding about t305/306 phosphorylation _in vitro_ transgenic mice @pi2010Autonomous
+Finding about t305/306 phosphorylation _in vitro_ transgenic mice @pi2010Autonomous (in presence of cam)
 - T286D mutant: autonomous CaMKII that are constitutively active and do not require calcium/calmodulin binding for activation.
 
 Contrary to initial expectations where T286D CaMKII was thought to only potentiate synaptic strength (mimicking LTP), the researchers found that depending on the phosphorylation status at Thr305/306, T286D CaMKII could also induce synaptic depression (mimicking LTD).
