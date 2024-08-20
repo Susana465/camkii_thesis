@@ -27,13 +27,25 @@ Further objectives I'd like to add here are:
 
 ## Model description and molecular species
 
-I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. The model created uses cBNGL and represents CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer with only bionetgen language gave rise to combinatorial explosion due to the high number of possible states and the network of interactions generated. This was resolved running network-free simulations using MCell. Finally, the model is run with CaMKII as a dodecamer. The model contains four protein species: CaM, PP1, CaMKII and NMDARS. CaM, CaMKII and PP1 are modelled as cytosolic molecules, and NMDARs are modelled as plasma membrane molecules. 
+I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. The model created uses cBNGL and represents CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer with only bionetgen language gave rise to combinatorial explosion due to the high number of possible states and the network of interactions generated. This was resolved running network-free simulations using MCell. 
 
-CaM is modelled as being able to bind four calcium ions, as known from published literature [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various models of calmodulin dynamics, providing a useful summary of the typical categories for modeling CaM binding to Ca2+, our model falls under their proposed "scheme 3" (@fig-scheme3-cam).
+The final model is ran with CaMKII as a dodecameric molecule. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). CaM, CaMKII and PP1 are modelled as cytosolic molecules, and NMDARs are modelled as plasma membrane molecules. 
 
-![We model calcium binding to calmodulin following scheme 3 proposed by Linkevicius et al., 2024. It is a sequential calmodulin scheme where each binding site is represented individually. Figure modified from Linkevicius et al., 2024.](30-methods-figures\scheme3_cam.PNG){#fig-scheme3-cam}
+CaM is modelled as being able to bind four calcium ions, as known from published literature [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various models of calmodulin dynamics, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Other models often distinguish between the N-terminal and C-terminal binding lobes of CaM. The former lobe binds calcium faster with lower affinity and the latter binds slower with higher affinity [REFERENCES]. The model in this project does not differentiate between lobes, as exploring the details of calcium binding to calmodulin is beyond the scope of this research. Additionally, following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions. 
 
-Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
+![We model calcium binding to calmodulin following "scheme 3" proposed by Linkevicius et al., 2024. It is a sequential calmodulin scheme where each binding site is represented individually. Figure modified from Linkevicius et al., 2024.](30-methods-figures\scheme3_cam.PNG){#fig-scheme3-cam}
+
+Following calcium binding to calmodulin, we can find calmodulin bound to one, two, three and four calcium ions (see table of reactions @fig-table-rxns1). Calmodulin bound to different amounts of calcium has been shown to bind to CaMKII with different affinities, the higher calcium bound, the higher the affinity [REFERENCE]. In this model, for simplicity, we therefore assume that apo-CaM has negligible affinity for CaMKII, and only fully saturated CaM with four calciums binds to CaMKII.
+
+CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE). Each subunit is modelled to have the following possible states:
+
+- A calmodulin binding site, calmodulin can be bound or unbound
+- A NMDAR binding site, CaMKII can be bound or unbound to NMDARs
+- A T286 phosphorylation site, which can be unphosphorylated or phosphorylated,
+- A T306 phosphorylation site, which can be unphosphorylated or phosphorylated,
+- A status of being open (active) or closed (inactive)
+
+There are different ways in which these states can happen and interact. For example, CaMKII subunits can flicker, without external prompt of any other molecule, between an open and closed state (reaction #5 @fig-table-rxns1). Likewise, if two neighbouring subunits are open, one can autophosphorylate the other (reaction #7 @fig-table-rxns1). If calmodulin then binds to a subunit that is phosphorylated, it is more likely to keep the subunit in an active, phosphorylated state. In contrast, if the T306 site is phosphorylated, calmodulin cannot bind to the CaMKII subunit (reaction #8 @fig-table-rxns1), rendering the subunit more likely to eventually go into the inactive state.
 
 ## Model validation
 
@@ -47,9 +59,14 @@ The processes used in software development can also apply to biological model de
 
 4.	Human-readable code: store using version control such as git for easy review by team members. 
 
+Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
 What have pharris, ordyan and other people done and how does my model relate and differ.
 
 ## Model parameters
+
+![Table to be added as markdown but not yet as first need to render document but leaving it as screenshots for reference for now.](30-methods-figures\table_rxns1.PNG){#fig-table-rxns1}
+
+![2nd part](30-methods-figures\table_rxns2.PNG){#fig-table-rxns2}
 
 ## Model creation and visualization in CellBlender
 
