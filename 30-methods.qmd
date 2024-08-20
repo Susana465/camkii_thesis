@@ -25,6 +25,16 @@ Further objectives I'd like to add here are:
 - finish model and see what different conditions I can test, mutants vs wt for example
 - look at space dynamics in mcell, need to discuss with supervisors
 
+## Model description and molecular species
+
+I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. The model created uses cBNGL and represents CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer with only bionetgen language gave rise to combinatorial explosion due to the high number of possible states and the network of interactions generated. This was resolved running network-free simulations using MCell. Finally, the model is run with CaMKII as a dodecamer. The model contains four protein species: CaM, PP1, CaMKII and NMDARS. CaM, CaMKII and PP1 are modelled as cytosolic molecules, and NMDARs are modelled as plasma membrane molecules. 
+
+CaM is modelled as being able to bind four calcium ions, as known from published literature [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various models of calmodulin dynamics, providing a useful summary of the typical categories for modeling CaM binding to Ca2+, our model falls under their proposed "scheme 3" (@fig-scheme3-cam).
+
+![We model calcium binding to calmodulin following scheme 3 proposed by Linkevicius et al., 2024. It is a sequential calmodulin scheme where each binding site is represented individually. Figure modified from Linkevicius et al., 2024.](30-methods-figures\scheme3_cam.PNG){#fig-scheme3-cam}
+
+Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
+
 ## Model validation
 
 The processes used in software development can also apply to biological model development. Following @husar2022MCell4, four key points were considered for this project:
@@ -38,10 +48,6 @@ The processes used in software development can also apply to biological model de
 4.	Human-readable code: store using version control such as git for easy review by team members. 
 
 What have pharris, ordyan and other people done and how does my model relate and differ.
-
-## Model description
-
-I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. The model created uses cBNGL and represents CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer gave rise to a combinatorial explosion due to the high number of possible states and the network of interactions generated. This is currently in the works of being resolved as I run the model using the network-free simulation using MCell. We will then be able to model CaMKII as a dodecamer. Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
 
 ## Model parameters
 
