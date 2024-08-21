@@ -27,15 +27,15 @@ Further objectives I'd like to add here are:
 
 ## Model description and molecular species
 
-I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. The model created uses cBNGL and represents CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer with only bionetgen language gave rise to combinatorial explosion due to the high number of possible states and the network of interactions generated. This was resolved running network-free simulations using MCell. 
+I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. That model used cBNGL and represented CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer with only BNGL gave rise to combinatorial explosion due to the high number of possible states and the network of interactions generated. This was resolved running network-free simulations using MCell. The final model, and the one we will be focusing on, is ran with CaMKII as a dodecameric molecule. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). CaM, CaMKII and PP1 are modelled as cytosolic molecules, and NMDARs are modelled as plasma membrane molecules. 
 
-The final model is ran with CaMKII as a dodecameric molecule. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). CaM, CaMKII and PP1 are modelled as cytosolic molecules, and NMDARs are modelled as plasma membrane molecules. 
-
-CaM is modelled as being able to bind four calcium ions, as known from published literature [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various models of calmodulin dynamics, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Other models often distinguish between the N-terminal and C-terminal binding lobes of CaM. The former lobe binds calcium faster with lower affinity and the latter binds slower with higher affinity [REFERENCES]. The model in this project does not differentiate between lobes, as exploring the details of calcium binding to calmodulin is beyond the scope of this research. Additionally, following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions. 
+### Binding of calcium to calmodulin
+CaM is modelled as being able to bind four calcium ions; CaM has four EF hands divided into N and C lobes capable of binding two calcium ions per lobe. The N lobe binds calcium faster with lower affinity and the C lobe binds slower with higher affinity [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various of these models, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Unlike other models that distinguish between CaM's N-terminal and C-terminal binding lobes, this project does not, as the specifics of calcium binding to calmodulin are beyond its scope. Additionally, following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions. 
 
 ![We model calcium binding to calmodulin following "scheme 3" proposed by Linkevicius et al., 2024. It is a sequential calmodulin scheme where each binding site is represented individually. Figure modified from Linkevicius et al., 2024.](30-methods-figures\scheme3_cam.PNG){#fig-scheme3-cam}
 
-Following calcium binding to calmodulin, we can find calmodulin bound to one, two, three and four calcium ions (see table of reactions @fig-table-rxns1). Calmodulin bound to different amounts of calcium has been shown to bind to CaMKII with different affinities, the higher calcium bound, the higher the affinity [REFERENCE]. In this model, for simplicity, we therefore assume that apo-CaM has negligible affinity for CaMKII, and only fully saturated CaM with four calciums binds to CaMKII.
+### Binding of calmodulin to CaMKII
+Calmodulin bound to different amounts of calcium has been shown to bind to CaMKII with different affinities, the higher calcium bound, the higher the affinity [REFERENCE]. In this model, for simplicity, we therefore assume that apo-CaM has negligible affinity for CaMKII, and only fully saturated CaM with four calciums binds to CaMKII.
 
 CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE). Each subunit is modelled to have the following possible states:
 
@@ -43,55 +43,13 @@ CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top
 - A NMDAR binding site, CaMKII can be bound or unbound to NMDARs
 - A T286 phosphorylation site, which can be unphosphorylated or phosphorylated,
 - A T306 phosphorylation site, which can be unphosphorylated or phosphorylated,
-- A status of being open (active) or closed (inactive)
+- A status of being open (active) or closed (inactive).
 
-There are different ways in which these states can happen and interact. For example, CaMKII subunits can flicker, without external prompt of any other molecule, between an open and closed state (reaction #5 @fig-table-rxns1). Likewise, if two neighbouring subunits are open, one can autophosphorylate the other (reaction #7 @fig-table-rxns1). If calmodulin then binds to a subunit that is phosphorylated, it is more likely to keep the subunit in an active, phosphorylated state. In contrast, if the T306 site is phosphorylated, calmodulin cannot bind to the CaMKII subunit (reaction #8 @fig-table-rxns1), rendering the subunit more likely to eventually go into the inactive state.
+There are different ways in which these states can happen and interact. For example, CaMKII subunits can flicker, without external prompt of any other molecule, between an open and closed state (reaction #5 @fig-table-rxns1). Likewise, if two neighbouring subunits are open, one can autophosphorylate the other (reaction #7 @fig-table-rxns1). If calmodulin then binds to a subunit that is phosphorylated, it is more likely to keep the subunit in an active, phosphorylated state. In contrast, phosphorylation of the T306 site prevents calmodulin from binding to the CaMKII subunit (reaction #8 @fig-table-rxns1), making the subunit less likely to remain in its active state compared to when it is stabilized by CaM binding or T286 phosphorylation. Dephosphorylation by PP1 at T286 can occur when the site is accessible, meaning the subunit is phosphorylated at T286, unbound to CaM, and in an open state. In order to fully understand the different conditions and reactions in the model, let's look into them more in detail next.
 
-## Model validation
+### How are molecular interactions modelled?
+Initial molecules released inside the cell are: Ca2+, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.  
 
-The processes used in software development can also apply to biological model development. Following @husar2022MCell4, four key points were considered for this project:
-
-1.	Incremental model development: build the model step by step on validated foundations.
-
-2.	Modularity: create self-contained, reusable libraries
-
-3.	Unit testing and validation: ensure parts of the model behave as expected.
-
-4.	Human-readable code: store using version control such as git for easy review by team members. 
-
-Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
-What have pharris, ordyan and other people done and how does my model relate and differ.
-
-## Model parameters
-
-![Table to be added as markdown but not yet as first need to render document but leaving it as screenshots for reference for now.](30-methods-figures\table_rxns1.PNG){#fig-table-rxns1}
-
-![2nd part](30-methods-figures\table_rxns2.PNG){#fig-table-rxns2}
-
-## Model creation and visualization in CellBlender
-
-I began the model of CaMKII monomers as described in the 2017 model I created using MCell and CellBlender. At the time, MCell did not allow for molecules be modelled as multi-complexes. Thus, for example, one phosphorylated CaMKII molecule in the model was just a single subunit phosphorylated –not twelve phosphorylated subunits. This model includes Ca2+ binding rates to CaM, CaM binding rates to monomeric CaMKII, and phosphorylation rates of active CaMKII monomers by one another, all depending on how many Ca2+ ions are bound to the CaM molecules involved. CaMKII dephosphorylation by PP1 is modelled, as well as binding interactions of CaMKII with NMDARs. In order to replicate and validate the results obtained from the CaMKII monomer in 2017, I re-wrote all reactions into a cBNGL model using the same parameters used originally. We define a volume previously modelled of 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris and Stevens, 1989). Using cBNGL, I can specify the above mentioned 3D volume, with a 2D surface compartment acting as the cell membrane, where NMDARs can diffuse. Inside the cell volume, all of the interacting molecules are released as per table 1.
-
-
-## How are these interactions modelled?
-Initial molecules released inside the cell are: Ca2+, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. 
-
-
-#### Binding of calcium to calmodulin
-CaM can bind one, two, three, and four calcium ions progressively. 
-In this model, the C terminal and N terminal binding sites of cam are not specified because we are not focusing on ca binding to cam. 
-
-_Calmodulin comprises a 148aa residue polypeptide with four EF hands divided into C and N lobes capable of binding two calcium ions per lobe [4]._ 
-
-calmodulin lobes have been reported to differ in their kinetics and affinity for Ca2+:
-- the N lobe binding faster with lower affinity and 
-- the C lobe binding slower with higher affinity._ (Domas paper)*
-
-*Faas et al., 2011: _[...] the N-lobe is the first site of cellular Ca2+ binding. Furthermore, the cooperativity of Ca2+ binding differs between the two lobes and this difference gives rise to distinct properties of each lobe. Our findings show that CaM is efficiently activated upon a rise in cellular Ca2+, which might produce 10–100 times more activated CaM than previously thought._ https://www.nature.com/articles/nn.2746 
-
-_An E–F hand consists of an N-terminal helix (the E helix) immediately followed by a centrally located, Ca2coordinating loop and a C-terminal helix (the F helix). The three-dimensional arrangement of these domains is reminiscent of the thumb, index and middle fingers of a hand, hence the name ‘E–F hand’._ [@chin2000Calmodulin]
-
-Sensitivity tests for different parameters of ca binding to cam -> domas' suggestion model.
 
 #### Binding of calmodulin to CaMKII
 - Saturated CaM_Ca4 binds to CaMKII ring, T306 needs to be unphosphorylated
@@ -112,7 +70,7 @@ CaM only binds at high affinity to CaMKII, skipping binding at "initially bound"
 Can CaM bind if CaMKII is closed? - what do studies say. the answer is no. 
 CaM can bind to CaMKII even if the former is not fully saturated with calcium, but not in our model. 
 
- It has previously been suggested that two binding sites for calmodulin exist on CaMKII, with high and low affinities. cam has been suggested to be able to bind to the low affinity site when camkii is in the closed state (stefan et al., 2012). Stefan at al., 2012 propose that trapping of cam requires cam to bind to the low affinity site of camkii when camkii is closed (to keep cam bound to camkii even as it closes?). 
+It has previously been suggested that two binding sites for calmodulin exist on CaMKII, with high and low affinities. cam has been suggested to be able to bind to the low affinity site when camkii is in the closed state (stefan et al., 2012). Stefan at al., 2012 propose that trapping of cam requires cam to bind to the low affinity site of camkii when camkii is closed (to keep cam bound to camkii even as it closes?). 
 
 what I am proposing in this work, according to what I have read so far [ORGANISE REFERENCES], is that cam can remain bound and in fact in a "trapped" position even without modelling the low affinity binding. cam can be trapped with camkii as it's binding affinity increases with camkii subunit phosphorylation at t286. 
 
@@ -189,14 +147,14 @@ _Autophosphorylation unmasks a phenylalanine (F) and a glutamine (N) in the CaM-
 
 It is well established that each subunit within the 12meric CaMKII holoenzyme is activated separately by direct binding of Ca2+/CaM [for review, see (16)]. However, when Ca2+/CaM binds to two neighboring subunits, it additionally induces a fast trans-subunit autophosphorylation at T286 (46, 47), which generates autonomous kinase activity that outlasts the initial Ca2+ stimulus. Then, dissociation of Ca2+/CaM exposes T305/306 for phosphorylation by the autonomous CaMKII. 
 
- from paper-> our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
- The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. 
+from paper-> our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
+The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. 
 
- The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. Together, these mechanisms enable a wide array of finely tuned possible states for each CaMKII holoenzyme, with each state tightly linked to the inducing Ca2+ stimulus. 
+The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. Together, these mechanisms enable a wide array of finely tuned possible states for each CaMKII holoenzyme, with each state tightly linked to the inducing Ca2+ stimulus. 
 
- For instance, for a trans-pT305/306 to completely shut down a kinase subunit, the Ca2+ stimulus must be sufficiently high to induce some pT286 within the holoenzyme (which requires Ca2+/CaM binding to two neighboring subunits) but sufficiently low to not induce pT286 on all of the neighboring subunits. 
+For instance, for a trans-pT305/306 to completely shut down a kinase subunit, the Ca2+ stimulus must be sufficiently high to induce some pT286 within the holoenzyme (which requires Ca2+/CaM binding to two neighboring subunits) but sufficiently low to not induce pT286 on all of the neighboring subunits. 
  
- https://www.science.org/doi/full/10.1126/sciadv.abe2300 @cook2021CaMKII -> in vitro testing of camkii t305/6 phosphorylation and effects of ltd and ltp. 
+https://www.science.org/doi/full/10.1126/sciadv.abe2300 @cook2021CaMKII -> in vitro testing of camkii t305/6 phosphorylation and effects of ltd and ltp. 
 
 
 T305/306 phosphorylation
@@ -289,6 +247,31 @@ Competitive actions of DAPK1 in LTD - for future work? or can I add to model?
 
 T305/306 phosphorylation directly reduces binding to GluN2B
 CaMKII binding to GluN2B participates in enhancing synaptic strength (26, 27), consistent with our findings with the CaMKII I205K mutant (Fig. 2A). Thus, we decided to test the effects of T305/306 phosphorylation on CaMKII/GluN2B interaction. T305/306 phosphorylation had been suggested to reduce CaMKII binding to GluN2B (29); however, these experiments did not differentiate between a direct effect of the phosphorylation and an indirect effect via reduced Ca2+/CaM binding. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4101658/
+
+## Model validation
+
+The processes used in software development can also apply to biological model development. Following @husar2022MCell4, four key points were considered for this project:
+
+1.	Incremental model development: build the model step by step on validated foundations.
+
+2.	Modularity: create self-contained, reusable libraries
+
+3.	Unit testing and validation: ensure parts of the model behave as expected.
+
+4.	Human-readable code: store using version control such as git for easy review by team members. 
+
+Finally, I aim to validate this work against a model from @ordyan2020Interactions, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. 
+What have pharris, ordyan and other people done and how does my model relate and differ.
+
+## Model parameters
+
+![Table to be added as markdown but not yet as first need to render document but leaving it as screenshots for reference for now.](30-methods-figures\table_rxns1.PNG){#fig-table-rxns1}
+
+![2nd part](30-methods-figures\table_rxns2.PNG){#fig-table-rxns2}
+
+## Model creation and visualization in CellBlender
+
+I began the model of CaMKII monomers as described in the 2017 model I created using MCell and CellBlender. At the time, MCell did not allow for molecules be modelled as multi-complexes. Thus, for example, one phosphorylated CaMKII molecule in the model was just a single subunit phosphorylated –not twelve phosphorylated subunits. This model includes Ca2+ binding rates to CaM, CaM binding rates to monomeric CaMKII, and phosphorylation rates of active CaMKII monomers by one another, all depending on how many Ca2+ ions are bound to the CaM molecules involved. CaMKII dephosphorylation by PP1 is modelled, as well as binding interactions of CaMKII with NMDARs. In order to replicate and validate the results obtained from the CaMKII monomer in 2017, I re-wrote all reactions into a cBNGL model using the same parameters used originally. We define a volume previously modelled of 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris and Stevens, 1989). Using cBNGL, I can specify the above mentioned 3D volume, with a 2D surface compartment acting as the cell membrane, where NMDARs can diffuse. Inside the cell volume, all of the interacting molecules are released as per table 1.
 
 # What have other people done?
 _Previous multi-state models of CaMKII exist but are different in focus and in scope from the 462 present model. For example, our model is based on an earlier multi-state model by Stefan et al. (2012) 463 [29] implemented in the particle-based stochastic simulator StochSim [70].StochSim does not explicitly account for spatial information. MCell, as a spatial simulator, 466 offers more possibilities to precisely account for spatial effects and to situate models in spatially realistic 467 representations of cellular compartments. In addition, the model by Stefan et al. provides only for 468 interactions between adjacent CaMKII molecules on the same hexamer ring and therefore models 469 CaMKII as a hexamer, not a dodecamer._
