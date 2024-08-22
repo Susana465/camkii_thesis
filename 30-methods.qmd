@@ -29,7 +29,11 @@ Further objectives I'd like to add here are:
 
 I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. That model used cBNGL and represented CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits. Secondly, I created a model of CaMKII as a hexamer since modelling this molecule as a dodecamer with only BNGL gave rise to combinatorial explosion due to the high number of possible states and the network of interactions generated. This was resolved running network-free simulations using MCell. The final model, and the one we will be focusing on, is ran with CaMKII as a dodecameric molecule. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.  
 
-Molecules in the model can have various binding sites, or none. For example, Ca2+ and PP1 are modelled as reactants that can interact with other molecules, but they themselves don't have binding sites. On the other hand, CaM, CaMKII and NMDAR all have different binding sites (ADD FIGURE), additionally, CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE). Each subunit is modelled to have the following possible states:
+There are different ways in which molecular states can happen and interact. For example, CaMKII subunits can flicker, without external prompt of any other molecule, between an open and closed state (reaction #5 @fig-table-rxns1). Likewise, if two neighbouring subunits are open, one can autophosphorylate the other (reaction #7 @fig-table-rxns1). If calmodulin then binds to a subunit that is phosphorylated, it is more likely to keep the subunit in an active, phosphorylated state. In contrast, phosphorylation of the T306 site prevents calmodulin from binding to the CaMKII subunit (reaction #8 @fig-table-rxns1), making the subunit less likely to remain in its active state compared to when it is stabilized by CaM binding or T286 phosphorylation. Dephosphorylation by PP1 at T286 can occur when the site is accessible, meaning the subunit is phosphorylated at T286, unbound to CaM, and in an open state. In order to fully understand the different conditions and reactions in the model, let's look into them more in detail next.
+
+### Modelling CaMKII as a dodecamer
+
+Molecules in the model can have various binding sites, or none. For example, Ca2+ and PP1 are modelled as reactants that can interact with other molecules, but they themselves don't have binding sites. On the other hand, CaM, CaMKII and NMDAR all have different binding sites (ADD FIGURE). Importantly, CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE). Each subunit is modelled to have the following possible states:
 
 - A calmodulin binding site, calmodulin can be bound or unbound
 - A NMDAR binding site, CaMKII can be bound or unbound to NMDARs
@@ -37,9 +41,11 @@ Molecules in the model can have various binding sites, or none. For example, Ca2
 - A T306 phosphorylation site, which can be unphosphorylated or phosphorylated,
 - A status of being open (active) or closed (inactive). 
 
-An inactive subunit lacks catalytic activity because its regulatory domain is bound to its catalytic site (closed). In contrast, an active subunit has catalytic activity because the kinase domain is not inhibited structrually, the subunit is thus open when its active. In our model, CaMKII subunits can flicker between an open and closed state if they are unbound to CaM and unphosphorylated at T286, as CaM binding and T286 phosphorylation structurally impede closing; states of other binding sites and phosphorylation sites can vary. In our model, CaM can only bind to a high affinity binding site, if the subunit is in an open state. 
+An inactive subunit lacks catalytic activity because its regulatory domain is bound to its catalytic site (closed). In contrast, an active subunit has catalytic activity because the kinase domain is not inhibited structrually, the subunit is thus open when its active. In our model, CaMKII subunits are modelled with autonomous activation, where subunits can flicker between an open and closed state if they are unbound to CaM and unphosphorylated at T286, as CaM binding and T286 phosphorylation structurally impede closing. States of other binding sites and phosphorylation sites can vary. In our model, CaM can only bind to a high affinity binding site, if the subunit is in an open state. 
 
-There are different ways in which molecular states can happen and interact. For example, CaMKII subunits can flicker, without external prompt of any other molecule, between an open and closed state (reaction #5 @fig-table-rxns1). Likewise, if two neighbouring subunits are open, one can autophosphorylate the other (reaction #7 @fig-table-rxns1). If calmodulin then binds to a subunit that is phosphorylated, it is more likely to keep the subunit in an active, phosphorylated state. In contrast, phosphorylation of the T306 site prevents calmodulin from binding to the CaMKII subunit (reaction #8 @fig-table-rxns1), making the subunit less likely to remain in its active state compared to when it is stabilized by CaM binding or T286 phosphorylation. Dephosphorylation by PP1 at T286 can occur when the site is accessible, meaning the subunit is phosphorylated at T286, unbound to CaM, and in an open state. In order to fully understand the different conditions and reactions in the model, let's look into them more in detail next.
+Can CaMKII close or become inactive if it is phosphorylated? Yes -> see t305/6 phosphorylation actions below. 
+
+Electron microscopy of rat alpha-CaMKII in Sf9 cells, as per @myers2017CaMKII, suggests that less than 3 percent of subunits adopt a compact conformation (Figure 6).
 
 ### Binding of calcium to calmodulin
 CaM is modelled as being able to bind four calcium ions; CaM has four EF hands divided into N and C lobes capable of binding two calcium ions per lobe. The N lobe binds calcium faster with lower affinity and the C lobe binds slower with higher affinity [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various of these models, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Unlike other models that distinguish between CaM's N-terminal and C-terminal binding lobes, this project does not, as the specifics of calcium binding to calmodulin are beyond its scope. Additionally, following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions.
@@ -59,22 +65,27 @@ Stefan et al., 2012 predicted that calmodulin binding in itself was not sufficie
 
 In fact, stochastic simulations of a biochemical model showed that two such binding sites, with only one of them accessible in the active, open conformation, could be sufficient to explain calmodulin trapping by CaMKII [reference from stefan et al., 2012]. In the model used in this PhD project, I propose that CaM can remain bound and in a "trapped" position without modelling the low affinity binding site. CaM-trapping happens as CaM binding affinity increases with CaMKII subunit phosphorylation at T286 (REFERENCE), and CaM therefore remains bound to CaMKII subunits for longer. In a dynamic interplay, as autophosphorylation promoted CaM trapping, CaM trapping has also been proposed to lead to an enhanced, non-linear increase in autophosphorylation of CaMKII during high-frequency synaptic stimulations (De Koninck and Schulman, 1998; Nicoll and Schulman, 2023; Putney, 1998).
 
-The literature often describes CaM binding as activating CaMKII. However, this may not always be the case. When CaMKII a subunit spontaneously flickers into its active/open state CaM binding is likely to stabilize the subunit once it is already active, but not to initiate activation. Similarly, while it is commonly suggested that simultaneous binding of CaM to two neighboring subunits triggers T286 autophosphorylation, we propose that CaM's role might be more nuanced. Instead of being essential for T286 phosphorylation, CaM may stabilize the open state of CaMKII, thereby increasing the likelihood of phosphorylation. 
+The literature often describes CaM binding as activating CaMKII. However, this may not always be the case. When a CaMKII subunit spontaneously flickers into its active/open state CaM binding is likely to stabilize the subunit once it is already active, but not to initiate activation. Similarly, while it is commonly suggested that simultaneous binding of CaM to two neighboring subunits triggers T286 autophosphorylation, we propose that CaM's role might be more nuanced. Instead of being essential for T286 phosphorylation, CaM may stabilize the open state of CaMKII, thereby increasing the likelihood of phosphorylation. 
 
 (I feel like this is repetitive but leaving for now) While the ultimate effect remains the same —CaM binding increases CaMKII activity— there is a subtle distinction between CaM directly inducing activity and phosphorylation of CaMKII, versus CaM stabilizing the active/open state, thus facilitating phosphorylation. Moreover, it has been extensively demonstrated CaMKII autophosphorylation can be sustained even after CaM levels decrease [REFERNECE], adding to the argument that CaM is not necessary for autophosphorylation, but rather an indirect enhancer of it. Since CaM's affinity for CaMKII increases following phosphorylation, it is plausible that CaM remains bound to phosphorylated subunits, further stabilizing their active state and facilitating continued phosphorylation. Thus, CaM binding may not be strictly necessary for autophosphorylation but rather enhances the probability of phosphorylation by maintaining subunits in their active/open states.
 
-### CaMKII phosphorylation
+### CaMKII phosphorylation and dephosphorylation
 
-Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated (this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014).
+The most extensively studied phosphorylation sites on CaMKII are Thr286 and Thr305/Thr306, in this study, we focus on these two sites as they have been shown to be key for CaMKII activity regulation. While other phosphorylation sites on CaMKII have been identified, their functions are not yet fully understood. 
 
+First, let's look at phosphorylation of the T286 site. Phosphorylation of T286 can happen if two adjascent subunits are in their open states, in a process known as autophosphorylation. The subunits need to be open so that the ATP binding site is available for the gamma-phosphate of ATP to be transferred to the hydroxyl group of the threonine residue at T286. The open state of two neighbouring subunits is crucial for the catalytic site of one subunit to reach and phosphorylate its neighboring subunit. We assume ATP levels are saturating, meaning they are sufficient to ensure the reaction proceeds at its maximal rate, so we do not model ATP as a reactant but rather focus on the phosphorylation process under these conditions. 
+
+We do not make it a requirement for CaM to be bound to neighbouring subunits for phosphorylation to happen, as this is not certain and remains to be proven. There is evidence for CaM binding and further trapping which suggests that this is likely to structurally impede CaMKII from closing andd becoming inactive [FIND STRUCTURAL STUDIES WITH IN VITRO EXPERIMENTS]. Additionally, as explained in the section above when it comes to CaM binding, this protein is likely to be found bound to the open states of CaMKII, but that does not mean it is required for phosphorylation to happen. 
+
+Phosphorylation at this site has been shown to enhance CaMKII activity [REFERENCES]. _Autophosphorylation unmasks a phenylalanine (F) and a glutamine (N) in the CaM-binding domain (shown in red), enabling a large increase in the affinity of Ca2+/CaM, known as CaM-trapping._
+
+This manuscript reports the fundamental finding that an oligomeric protein kinase, CaMKII, can be phosphorylated by another molecule of the holoenzyme in a manner that does not involve subunit exchange. the summary by editor and abstract say different things. the abstract says inter subunit exchange, the summary says intra subunit exxchange which one is it.  https://elifesciences.org/articles/86090 
+
+Is the info below wrong, then? 
+Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated.
+(this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). 
+Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014).
 _It has been reported that the binding affinity of CaMKIIα for Ca2+/CaM increases by Thr286 phosphorylation [7]._ https://www.nature.com/articles/s41467-019-10694-z
-
-
- CaMKII phosphorylation
-# When CaMKII_CaM, neighbouring subunit, if bound to CaM, can P
-	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,cam!+) k_pCaM4
-# When CaMKII_CaM_P, can phosphorylate neighbouring subunit
-  	CaMKII(l!1,T286~0,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) -> CaMKII(l!1,T286~P,cam!2).CaM(ca~4,camkii!2).CaMKII(r!1,T286~P) k_pCaM4_P	
 
 (Rostas and Skelding, 2023)_Initial enzyme activity of purified CaMKII requires the binding of both calcium and calmodulin. Following this, autophosphorylation of Thr286 in CaMKIIα occurs quickly and produces the following outcomes:_
 
@@ -83,19 +94,11 @@ So when CaMKII_P binding of CaM_Ca4 is 1000 times more likely to bind (and stay 
 
 This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite slow.
 
--> how do I model this?/is it already modelled in the reactions I have?
-Right now:
-CaM(ca~4,camkii) + CaMKII(cam,T306~0,active~1) <-> CaM(ca~4,camkii!1).CaMKII(cam!1,T306~0,active~1) kon_cam_ca4_camkii, koff_cam_ca4_camkii
-
-Which means that CaM can bind to CaMKII regardless of whether T286 is phosphorylated or not. 
-
-* camkii_p at t286 + cam -> will have a higher binding rate than when not p at t286.
-
 the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. 
 
 right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. 
 
-would camkii activity make a difference if camkii active~1 varies due o being bound to nmdars or cam?
+would camkii activity make a difference if camkii active~1 varies due to being bound to nmdars or cam?
 
 but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. there are also emergent properties. 
 
@@ -117,6 +120,8 @@ https://www.science.org/doi/full/10.1126/sciadv.abe2300 @cook2021CaMKII -> in vi
 
 
 T305/306 phosphorylation
+
+ We first introduced phospho-mimic mutations of inhibitory autophosphorylation sites (T305D/T306D) to inhibit the interaction of CaM to the regulatory domain of CaMKIIα2,15. We found that the mutation largely inhibited the rapid CaM binding, consistent with the previous reports15. 
 this phosphorylation is associated with autoinhibition of CaMKII. This phosphorylation stabilizes the interaction between the regulatory domain and the catalytic domain, locking CaMKII in an inactive state, preventing calmodulin binding. 
 
 Lucic et al., 2008 -> Detailed state model of CaMKII activation and autophosphorylation
@@ -166,34 +171,14 @@ Two main notes from Susana
 - but also, phosphorylation at the t305 site - does it render camkii in an inactive, autonibited state, or can camkii that is p at t305 remain active? need to find this in lterature. yes, it is likely it reduces camkii activity as it renders each subunit into the closed, inactive, autoinhibited state. 
 
 
-#### States of CaMKII
-subunit activation.
-
-CaMKII functions are regulated through phosphorylation at multiple sites, and its localization within cells is directed by interactions with specific binding proteins.
-
-CaMKII can exist in different states: open or closed, active or inactive, docked or undocked.
-
-- Active~1 indicates a subunit is undocked and open.
-- CaM can only bind if the subunit is active~1.
-- Pharris is modeling the undocked, closed state, but I am modeling the direct transition from docked/closed to undocked/open, skipping the intermediate step.
-
-CaMKII flickers between active/open and inactive/closed state. essential biological functions are the same, but perhaps modeled slightly differently for efficiency of running the model.
-
-I am focusing on modeling the high-affinity binding of CaM to CaMKII, because this is shown to be sufficient for CaMKII activation. [Stefan et al., 2012 and what other references?]
-
-Can CaMKII close or become inactive if it is phosphorylated? Yes -> see t305/6 phosphorylation actions below. 
-
-Electron microscopy of rat alpha-CaMKII in Sf9 cells, as per @myers2017CaMKII, suggests that less than 3 percent of subunits adopt a compact conformation (Figure 6).
-
-![Figures redrawn from Nicoll & Schulman, 2023 (left) and Pharris et al.,2019 (right)](30-methods-figures\camkii_structure_states.PNG){#fig-camkii-structure}
-
-
 #### Binding of CaMKII to NMDARs
 Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There is no overlap, cam can bind to camkii even if this is bound to nmdars. 
 
 CaMKII kinase domain binds to NMDARs. The kinase domain in CaMKII is responsible for the enzyme's kinase activity, which includes binding ATP and transferring a phosphate group to specific serine/threonine residues on substrate proteins, such as S1303 on the GluN2B subunit of the NMDA receptor. 
 
 Activation of the kinase domain typically involves relief of autoinhibition, often through binding of calcium/calmodulin (Ca2+/CaM).
+
+To realize such a memory switch at synapses, the interaction between CaMKII and the N-methyl-D-aspartate receptor subunit GluN2B has been shown to be critically important. The interaction between CaMKII and GluN2B is required for persistent activation and translocation of CaMKII (8,9), persistent T286 phosphorylation (10), and LTP maintenance (11,12). https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3985500/
 
 CaMKII directly interacts with GluN2B which anchors CaMKII at the synapse in an
 active conformation (Bayer et al., 2001). Targeting CaMKII to the PSD via its interaction
