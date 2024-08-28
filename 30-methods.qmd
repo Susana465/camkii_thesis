@@ -87,42 +87,26 @@ The literature often describes CaM binding as activating CaMKII. However, this m
 
 The most extensively studied phosphorylation sites on CaMKII are Thr286 and Thr305/Thr306 as they have been shown to be key for CaMKII activity regulation. Likewise, in this study, we focus on these two sites. While other phosphorylation sites on CaMKII have been identified, their functions are not yet fully understood. 
 
-First, let's look at phosphorylation of the T286 site. Phosphorylation of T286 can happen if two adjascent subunits are in their open states, through a process known as autophosphorylation. CaMKII subunits need to be open so that the ATP binding site is available for the gamma-phosphate of ATP to be transferred to the hydroxyl group of the threonine residue at T286. The open state of two neighbouring subunits is crucial for the catalytic site of one subunit to reach and phosphorylate its neighboring subunit. In our model, we assume ATP molecule levels are sufficient to ensure the reaction proceeds at its maximal rate (saturating), so we do not model ATP as a reactant but rather focus on the phosphorylation process under these conditions.
+#### T286 phosphorylation
+First, let's look at phosphorylation of the T286 site. Phosphorylation of T286 can happen if two adjascent subunits are in their open states, through a process known as autophosphorylation. CaMKII subunits need to be open to expose the ATP binding site, allowing the gamma-phosphate of ATP to transfer to the threonine residue at T286. The open (kinase domain available) and undocked (subunits can reach their neighbours) states of two neighbouring subunits is crucial for the catalytic site of one subunit to reach and phosphorylate its neighboring subunit. In our model, we assume ATP molecule levels are sufficient to ensure the reaction proceeds at its maximal rate (saturating), so we do not model ATP as a reactant but rather focus on the phosphorylation process under these conditions.
 
 To test whether CaM binding is truly required for CaMKII phosphorylation, we could create a mutant of CaMKII that remains in an open, active state without CaM. If this mutant shows high levels of phosphorylation even in the absence of CaM, it would suggest that CaM binding is not structurally necessary for phosphorylation; rather, what’s essential is that CaMKII remains in an active conformation. However, if phosphorylation levels remain low without CaM, it would indicate that CaM binding is indeed required, possibly because it facilitates or stabilizes the open conformation necessary for the kinase to function.
+
+T286A
+- autophosphorylation-deficient T286A
+T286D
+- mimics the binding characteristics of autophosphorylated kinase
+I205K mutant
+- NR2B-binding-deficient 
+- does not reduce CaM affinity and allows normal kinase activation by Ca2+/CaM
 
 a mutant that remains open, phopshorylated but without cam.
 
 What is clear is that autophosphorylation at T286 and CaM binding are in a constant back and forth dance, both events feedforward each other leading to finetuned regulation of CaMKII activity. Autophosphorylation at this site unmasks a phenylalanine (F) and a glutamine (N) in the CaM-binding domain, which has been shown to increase affinity of CaM between 10-fold and 1000-fold [REFERENCES]. This increase in CaM binding has been labelled CaM-trapping; this trapping then may allow for further autophosphorylation of CaMKII. Autophosphorylation enables kinase activity to persist after CaM dissociates from CaMKII [REFEREnces]. 
 
-(This manuscript reports the fundamental finding that an oligomeric protein kinase, CaMKII, can be phosphorylated by another molecule of the holoenzyme in a manner that does not involve subunit exchange. the summary by editor and abstract say different things. the abstract says inter subunit exchange, the summary says intra subunit exxchange which one is it.  https://elifesciences.org/articles/86090 )
+#### T305/T306 phosphorylation
+Dissociation of CaM exposes the T305/T306 phosphorylation site, which allows for phosphorylation by the autonomous CaMKII. 
 
-Is the info below wrong, then? 
-Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated.
-(this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). 
-Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014).
-_It has been reported that the binding affinity of CaMKIIα for Ca2+/CaM increases by Thr286 phosphorylation [7]._ https://www.nature.com/articles/s41467-019-10694-z
-
-(Rostas and Skelding, 2023)_Initial enzyme activity of purified CaMKII requires the binding of both calcium and calmodulin. Following this, autophosphorylation of Thr286 in CaMKIIα occurs quickly and produces the following outcomes:_
-
-- A 1000-fold increase in the affinity for CaM_Ca4
-So when CaMKII_P binding of CaM_Ca4 is 1000 times more likely to bind (and stay bound) to CaMKII_P. 
-
-This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite slow.
-
-the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. 
-
-right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. 
-
-would camkii activity make a difference if camkii active~1 varies due to being bound to nmdars or cam?
-
-but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. there are also emergent properties. 
-
-Pharris et al., do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
-)
-
-
-It is well established that each subunit within the 12meric CaMKII holoenzyme is activated separately by direct binding of Ca2+/CaM [for review, see (16)]. However, when Ca2+/CaM binds to two neighboring subunits, it additionally induces a fast trans-subunit autophosphorylation at T286 (46, 47), which generates autonomous kinase activity that outlasts the initial Ca2+ stimulus. Then, dissociation of Ca2+/CaM exposes T305/306 for phosphorylation by the autonomous CaMKII. 
 
 from paper-> our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
 The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. 
@@ -185,8 +169,10 @@ Two main notes from Susana
 
 - but also, phosphorylation at the t305 site - does it render camkii in an inactive, autonibited state, or can camkii that is p at t305 remain active? need to find this in lterature. yes, it is likely it reduces camkii activity as it renders each subunit into the closed, inactive, autoinhibited state. 
 
-
 #### Binding of CaMKII to NMDARs
+
+Our binding studies, however, now demonstrate that stimulation by Ca2+/CaM is sufficient to induce binding of α-CaMKII to the cytoplasmic carboxy terminus of NR2B (residues 839–1,482) and that autophosphorylation is not required. In fact, this NR2B domain contains two sites with different modes of regulated CaMKII binding (Fig. 1), a Ca2+/CaM-regulated site within residues 1,120–1,482 of NR2B (NR2B-C) and a phosphorylation-regulated site within residues 839–1,120 (NR2B-P). https://www.nature.com/articles/35081080
+
 Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There is no overlap, cam can bind to camkii even if this is bound to nmdars. 
 
 CaMKII kinase domain binds to NMDARs. The kinase domain in CaMKII is responsible for the enzyme's kinase activity, which includes binding ATP and transferring a phosphate group to specific serine/threonine residues on substrate proteins, such as S1303 on the GluN2B subunit of the NMDA receptor. 
@@ -289,3 +275,30 @@ Bartol et al. 2024 use particle-based stochastic simulations in MCell4 to model 
 Using MCell4 simulations, the paper shows that CaMKII autophosphorylation, influenced by 'Ca2+-calmodulin-trapping' and PP1 dephosphorylation mechanisms, does not behave as a bistable switch, but instead they propose a "kinetic proofreading" mechanism of CaMKII, crucial for synaptic plasticity induction.
 
 They test CaM trapping hypothesis that it leads to an increase in CaMKII autoP during high frequency synaptic stimulation. They _test this hypothesis by investigating the impact of CaM-trapping on the dynamics of activation of CaMKII in a stochastic reaction-diffusion model instantiated in a realistic spine geometry_. _We also investigate how CaM-trapping may regulate dephosphorylation of CaMKII by protein phosphatase-1 (PP1), and thus influence the kinetics of autophosphorylation of CaMKII and the response of CaMKII to different stimulation frequencies._
+
+EXTRA THAT IM LEAVING BECAUSE IM TOO SAD TO DELETE due to sunk cost fallacy BUT PROBABLY SHOULD delete:
+(This manuscript reports the fundamental finding that an oligomeric protein kinase, CaMKII, can be phosphorylated by another molecule of the holoenzyme in a manner that does not involve subunit exchange. the summary by editor and abstract say different things. the abstract says inter subunit exchange, the summary says intra subunit exxchange which one is it.  https://elifesciences.org/articles/86090 )
+
+Is the info below wrong, then? 
+Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated.
+(this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). 
+Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014).
+_It has been reported that the binding affinity of CaMKIIα for Ca2+/CaM increases by Thr286 phosphorylation [7]._ https://www.nature.com/articles/s41467-019-10694-z
+
+(Rostas and Skelding, 2023)_Initial enzyme activity of purified CaMKII requires the binding of both calcium and calmodulin. Following this, autophosphorylation of Thr286 in CaMKIIα occurs quickly and produces the following outcomes:_
+
+- A 1000-fold increase in the affinity for CaM_Ca4
+So when CaMKII_P binding of CaM_Ca4 is 1000 times more likely to bind (and stay bound) to CaMKII_P. 
+
+This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite slow.
+
+the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model. 
+
+right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test. 
+
+would camkii activity make a difference if camkii active~1 varies due to being bound to nmdars or cam?
+
+but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. there are also emergent properties. 
+
+Pharris et al., do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
+)
