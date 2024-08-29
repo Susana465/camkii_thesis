@@ -105,37 +105,25 @@ a mutant that remains open, phopshorylated but without cam.
 What is clear is that autophosphorylation at T286 and CaM binding are in a constant back and forth dance, both events feedforward each other leading to finetuned regulation of CaMKII activity. Autophosphorylation at this site unmasks a phenylalanine (F) and a glutamine (N) in the CaM-binding domain, which has been shown to increase affinity of CaM between 10-fold and 1000-fold [REFERENCES]. This increase in CaM binding has been labelled CaM-trapping; this trapping then may allow for further autophosphorylation of CaMKII. Autophosphorylation enables kinase activity to persist after CaM dissociates from CaMKII [REFEREnces]. 
 
 #### T305/T306 phosphorylation
-Dissociation of CaM exposes the T305/T306 phosphorylation site, which allows for phosphorylation by the autonomous CaMKII. 
-
+Dissociation of CaM exposes the T305/T306 phosphorylation site. The transphosphorylation of T305/T306 is more likely to happen if a neighbouring subunit is phosophorylated at the T286
 
 from paper-> our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
 The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. 
 
-The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. Together, these mechanisms enable a wide array of finely tuned possible states for each CaMKII holoenzyme, with each state tightly linked to the inducing Ca2+ stimulus. 
+Together, these mechanisms enable a wide array of finely tuned possible states for each CaMKII holoenzyme, with each state tightly linked to the inducing Ca2+ stimulus. 
 
 For instance, for a trans-pT305/306 to completely shut down a kinase subunit, the Ca2+ stimulus must be sufficiently high to induce some pT286 within the holoenzyme (which requires Ca2+/CaM binding to two neighboring subunits) but sufficiently low to not induce pT286 on all of the neighboring subunits. 
  
 https://www.science.org/doi/full/10.1126/sciadv.abe2300 @cook2021CaMKII -> in vitro testing of camkii t305/6 phosphorylation and effects of ltd and ltp. 
 
-
 T305/306 phosphorylation
 
- We first introduced phospho-mimic mutations of inhibitory autophosphorylation sites (T305D/T306D) to inhibit the interaction of CaM to the regulatory domain of CaMKIIα2,15. We found that the mutation largely inhibited the rapid CaM binding, consistent with the previous reports15. 
+We first introduced phospho-mimic mutations of inhibitory autophosphorylation sites (T305D/T306D) to inhibit the interaction of CaM to the regulatory domain of CaMKIIα2,15. We found that the mutation largely inhibited the rapid CaM binding, consistent with the previous reports15. 
 this phosphorylation is associated with autoinhibition of CaMKII. This phosphorylation stabilizes the interaction between the regulatory domain and the catalytic domain, locking CaMKII in an inactive state, preventing calmodulin binding. 
 
 Lucic et al., 2008 -> Detailed state model of CaMKII activation and autophosphorylation
 
-We cannot exclude the
-possibility that the exact amount of T305 phosphorylated
-CaMKII was determined inaccurately because the
-Eur Biophys J (2008) 38:83–98 87
-123
-anti-phospho T286 CaMKII antibody has different affinity
-for T305 phosphorylated aCaMKII. However, this would
-not change the outcome of our simulations because, as we
-show below, that autophosphorylation at T305 does not
-significantly affect the autophosphorylation at T286 under
-our experimental conditions.
+We cannot exclude the possibility that the exact amount of T305 phosphorylated CaMKII was determined inaccurately because the anti-phospho T286 CaMKII antibody has different affinity for T305 phosphorylated aCaMKII. However, this would not change the outcome of our simulations because, as we show below, that autophosphorylation at T305 does not significantly affect the autophosphorylation at T286 under our experimental conditions.
 
 This is an intra-subunit phosphorylation that reduces the catalytic activity of CaMKII-> (Hashimoto et al. 1987; Lou and Schulman 1989). It can occur after CaM dissociates from a T286 autophosphorylated subunit, and it prevents the rebinding of CaM
 (Hashimoto et al. 1987; Patton et al. 1990).
@@ -143,13 +131,7 @@ This is an intra-subunit phosphorylation that reduces the catalytic activity of 
 slower CaMKII autophosphorylation at T305/306 inhibits stimulation by Ca2+/CaM, but occurs only minimally for CaMKII wild type during CaM-stimulated activity assays. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0037176 
 -> _Previous studies that used the effect on stimulated CaMKII activity as a readout indicated similar rates for the T305/T306 burst phosphorylation (∼0.01–0.05 sec−1, based on the time observed for half-maximal kinase inhibition) [37], [39], [40],_
 
-Another physiologically relevant phosphorylation site is
-T305/306 at aCaMKII (T306/307 at bCaMKII, both
-denoted as T305 phosphorylation) (Hashimoto et al. 1987;
-Lou and Schulman 1989). This is an intra-subunit phosphorylation that reduces the catalytic activity of CaMKII
-(Hashimoto et al. 1987; Lou and Schulman 1989). It can
-occur after CaM dissociates from a T286 autophosphorylated subunit, and it prevents the rebinding of CaM
-(Hashimoto et al. 1987; Patton et al. 1990) @lucic2008Detailed
+Another physiologically relevant phosphorylation site is T305/306 at aCaMKII (T306/307 at bCaMKII, both denoted as T305 phosphorylation) (Hashimoto et al. 1987; Lou and Schulman 1989). This is an intra-subunit phosphorylation that reduces the catalytic activity of CaMKII (Hashimoto et al. 1987; Lou and Schulman 1989). It can occur after CaM dissociates from a T286 autophosphorylated subunit, and it prevents the rebinding of CaM (Hashimoto et al. 1987; Patton et al. 1990) @lucic2008Detailed
 
 biological importance proposal:
 (My own thoughts) This stabilization mechanism may act as a form of kinetic proofreading by ensuring that CaMKII remains inactive or less active unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
@@ -167,7 +149,7 @@ t305/306 phosphorylation as also been shown to prevent camkii's activity-depende
 Two main notes from Susana
 - Okay so we know that t305 phosphorylation structutrally impedes/reduces affinity of cam binding (which are not the same thing but have relatively similar outcomes of cam binding less to camkii)
 
-- but also, phosphorylation at the t305 site - does it render camkii in an inactive, autonibited state, or can camkii that is p at t305 remain active? need to find this in lterature. yes, it is likely it reduces camkii activity as it renders each subunit into the closed, inactive, autoinhibited state. 
+- but also, phosphorylation at the t305 site -  it is likely it reduces camkii activity as it enhances chances of CaMKII subunit keeping closed, inactive, autoinhibited state, since it might prevent t286 p and rebinding of cam. 
 
 #### Binding of CaMKII to NMDARs
 
