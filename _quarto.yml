@@ -18,11 +18,15 @@ book:
       chapters:
       - 21-complex_systems.md
       - 22-reproducibility_open_science.md
-      - 23-memory_learning.md
       - 24-why_modelling.md
       - 25-ssa_ode.md
       - 27-software.md
-      - 30-methods.qmd
+    - part: 23-memory_learning.md
+      chapters:
+      - 233-nmdar-camkii.qmd
+    - part: 30-methods.qmd
+      chapters:
+      - 31-modelling-camkii.qmd
       - 40-results.md
       - references.qmd
 
