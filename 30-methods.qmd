@@ -90,7 +90,9 @@ The most extensively studied phosphorylation sites on CaMKII are Thr286 and Thr3
 #### T286 phosphorylation
 First, let's look at phosphorylation of the T286 site. Phosphorylation of T286 can happen if two adjascent subunits are in their open states, through a process known as autophosphorylation. CaMKII subunits need to be open to expose the ATP binding site, allowing the gamma-phosphate of ATP to transfer to the threonine residue at T286. The open (kinase domain available) and undocked (subunits can reach their neighbours) states of two neighbouring subunits is crucial for the catalytic site of one subunit to reach and phosphorylate its neighboring subunit. In our model, we assume ATP molecule levels are sufficient to ensure the reaction proceeds at its maximal rate (saturating), so we do not model ATP as a reactant but rather focus on the phosphorylation process under these conditions.
 
-To test whether CaM binding is truly required for CaMKII phosphorylation, we could create a mutant of CaMKII that remains in an open, active state without CaM. If this mutant shows high levels of phosphorylation even in the absence of CaM, it would suggest that CaM binding is not structurally necessary for phosphorylation; rather, what’s essential is that CaMKII remains in an active conformation. However, if phosphorylation levels remain low without CaM, it would indicate that CaM binding is indeed required, possibly because it facilitates or stabilizes the open conformation necessary for the kinase to function.
+paper has suggested x or y. 
+
+To test whether CaM binding is truly required for CaMKII phosphorylation, we could create a mutant of CaMKII that remains in an open, active state without CaM. If this mutant shows high levels of phosphorylation even in the absence of CaM, it would suggest that CaM binding is not structurally necessary for phosphorylation; rather, what’s essential is that CaMKII remains in an OPEN conformation. However, if phosphorylation levels remain low without CaM, it would indicate that CaM binding is indeed required, possibly because it facilitates or stabilizes the open conformation necessary for the kinase to function.
 
 T286A
 - autophosphorylation-deficient T286A
@@ -108,6 +110,7 @@ What is clear is that autophosphorylation at T286 and CaM binding are in a const
 Dissociation of CaM exposes the T305/T306 phosphorylation site. The transphosphorylation of T305/T306 is more likely to happen if a neighbouring subunit is phosophorylated at the T286
 
 from paper-> our results indicate that pT286 and Ca2+/CaM may not substantially differ in the degree of opening the inhibitory gate that is provided by the regulatory domain. Instead, pT305/306 actively contributes to some level of direct inhibition, independently from preventing Ca2+/CaM binding. 
+
 The trans-pT305/306 reaction requires previous pT286 on the neighboring subunit that acts as the kinase but then leads also to a feed-forward inhibition of subsequent pT286 on these pT305/306-only subunits. 
 
 Together, these mechanisms enable a wide array of finely tuned possible states for each CaMKII holoenzyme, with each state tightly linked to the inducing Ca2+ stimulus. 
