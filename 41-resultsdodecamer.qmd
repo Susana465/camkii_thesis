@@ -1,0 +1,83 @@
+# Model Validation
+
+## Ca binding to CaM
+
+To see how calcium is binding to CaM, I tested different rates to try and understand what is happening behind the scenes. Below are different runs with modified parameters ITERATIONS and time_step, the former is modified in the .bngl file and the latter in the .py file where the model is run through mcell. ITERATIONS is the number of total iterations for MCell to run. The time_step is every "how many" steps the total iterations are run.
+
+::: {#tbl-2024-08-12_16-29-55_out}
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid black;">(In .bngl) ITERATIONS=5e3</th>
+    <th style="border: 1px solid black;">(In .py) time_step=1e-3</th>
+  </tr>
+    <th style="border: 1px solid black;"> Ca=10000, CaM=2000 </th>
+  </tr>
+  <tr>
+    <td colspan="2" style="border: 1px solid black;"> 
+        <img src="40-results-figures/2024-08-12_16-29-55_out.png" alt="2024-08-12_16-29-55_out" style="width:100%;">
+        <div>2024-08-12_16-29-55_out</div>
+    </td>
+  </tr>
+</table>
+
+:::
+
+In @tbl-2024-08-12_16-29-55_out, CaM_Ca1 reacts really quickly, within less than 0.01s, and then slowly gives rise to the rest of calcium bound calmodulin species. Calcium total amount is not shown. 
+In @tbl-2024-09-02_18-07-29_out calcium and calmodulin are left to be the same as for @tbl-2024-08-12_16-29-55_out, and only time_step is altered to 1e-5. This does not seem to alter the behaviour of the molecules, as they are reactin very similarly to the first run shown.
+For @tbl-2024-09-02_18-14-16_out calcim is increased 10 fold, and calmodulin is left as the same amount. 
+
+
+::: {#tbl-2024-09-02_18-07-29_out}
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid black;">(In .bngl) ITERATIONS=5e3</th>
+    <th style="border: 1px solid black;">(In .py) time_step=1e-5</th>
+  </tr>
+    <th style="border: 1px solid black;"> Ca=10000, CaM=2000 </th>
+  </tr>
+  <tr>
+    <td colspan="2" style="border: 1px solid black;"> 
+        <img src="40-results-figures/2024-09-02_18-07-29_out.png" alt="2024-09-02_18-07-29_out" style="width:100%;">
+        <div>2024-09-02_18-07-29_out</div>
+    </td>
+  </tr>
+</table>
+
+:::
+
+::: {#tbl-2024-09-02_18-14-16_out}
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid black;">(In .bngl) ITERATIONS=3e3</th>
+    <th style="border: 1px solid black;">(In .py) time_step=1e-3</th>
+  </tr>
+    <th style="border: 1px solid black;"> Ca=100000, CaM=2000 </th>
+  </tr>
+  <tr>
+    <td colspan="2" style="border: 1px solid black;"> 
+        <img src="40-results-figures/2024-09-02_18-14-16_out.png" alt="2024-09-02_18-14-16_out" style="width:100%;">
+        <div>2024-09-02_18-14-16_out</div>
+    </td>
+  </tr>
+</table>
+
+:::
+
+
+::: {#tbl-2024-09-02_18-25-56_out}
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid black;">(In .bngl) ITERATIONS=3e3</th>
+    <th style="border: 1px solid black;">(In .py) time_step=1e-3</th>
+  </tr>
+    <th style="border: 1px solid black;"> Ca=10000, CaM=2000 </th>
+  </tr>
+  <tr>
+    <td colspan="2" style="border: 1px solid black;"> 
+        <img src="40-results-figures/2024-09-02_18-25-56_out.png" alt="2024-09-02_18-25-56_out" style="width:100%;">
+        <div>2024-09-02_18-25-56_out</div>
+    </td>
+  </tr>
+</table>
+
+:::

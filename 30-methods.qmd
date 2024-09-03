@@ -35,7 +35,6 @@ There are different ways in which molecular states can happen and interact. For 
 
 Molecules in the model can have various binding sites, or none. For example, Ca2+ and PP1 are modelled as reactants that can interact with other molecules, but they themselves don't have binding sites. On the other hand, CaM, CaMKII and NMDAR all have different binding sites (ADD FIGURE). Importantly, CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE)
 
-
 ## Model validation
 
 The processes used in software development can also apply to biological model development. Following @husar2022MCell4, four key points were considered for this project:
