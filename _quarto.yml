@@ -28,6 +28,7 @@ book:
       chapters:
       - 31-modelling-camkii.qmd
       - 40-results.md
+      - 41-resultsdodecamer.qmd
       - references.qmd
 
   downloads: [pdf]

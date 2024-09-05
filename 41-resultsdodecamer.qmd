@@ -2,9 +2,11 @@
 
 ## Ca binding to CaM
 
-To see how calcium is binding to CaM, I tested different rates to try and understand what is happening behind the scenes. Below are different runs with modified parameters ITERATIONS and time_step, the former is modified in the .bngl file and the latter in the .py file where the model is run through mcell. ITERATIONS is the number of total iterations for MCell to run. The time_step is every "how many" steps the total iterations are run.
+To see how calcium is binding to CaM, I tested different rates to try and understand what is happening behind the scenes. Below are different runs with modified parameters ITERATIONS and time_step, the former is modified in the .bngl file and the latter in the .py file where the model is run through mcell. ITERATIONS is the number of total iterations for MCell to run. The time_step is every "how many" steps the total iterations are run. time_steps is how often (interval) you measure across total lenght of time model is set to run. 
 
-::: {#tbl-2024-08-12_16-29-55_out}
+::: {#tbl-2024-09-02_18-07-29_out} 
+```{=html}
+#| label: tbl-iris
 <table border="1" style="border-collapse: collapse; width: 100%;">
   <tr>
     <th style="border: 1px solid black;">(In .bngl) ITERATIONS=5e3</th>
@@ -19,7 +21,7 @@ To see how calcium is binding to CaM, I tested different rates to try and unders
     </td>
   </tr>
 </table>
-
+```
 :::
 
 In @tbl-2024-08-12_16-29-55_out, CaM_Ca1 reacts really quickly, within less than 0.01s, and then slowly gives rise to the rest of calcium bound calmodulin species. Calcium total amount is not shown. 
@@ -45,6 +47,7 @@ For @tbl-2024-09-02_18-14-16_out calcim is increased 10 fold, and calmodulin is 
 
 :::
 
+090jjjoio
 ::: {#tbl-2024-09-02_18-14-16_out}
 <table border="1" style="border-collapse: collapse; width: 100%;">
   <tr>
@@ -63,7 +66,7 @@ For @tbl-2024-09-02_18-14-16_out calcim is increased 10 fold, and calmodulin is 
 
 :::
 
-
+popoipio
 ::: {#tbl-2024-09-02_18-25-56_out}
 <table border="1" style="border-collapse: collapse; width: 100%;">
   <tr>
