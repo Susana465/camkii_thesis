@@ -123,6 +123,8 @@ Two main notes from Susana
 
 #### Binding of CaMKII to NMDARs
 
+- differentiate and mention alpha vs delta etc isoforms i like this paper's intro: https://www.mdpi.com/1422-0067/19/1/20 
+
 Our binding studies, however, now demonstrate that stimulation by Ca2+/CaM is sufficient to induce binding of α-CaMKII to the cytoplasmic carboxy terminus of NR2B (residues 839–1,482) and that autophosphorylation is not required. In fact, this NR2B domain contains two sites with different modes of regulated CaMKII binding (Fig. 1), a Ca2+/CaM-regulated site within residues 1,120–1,482 of NR2B (NR2B-C) and a phosphorylation-regulated site within residues 839–1,120 (NR2B-P). https://www.nature.com/articles/35081080
 
 Which part of CaMKII binds to NMDAR? Is there overlap of cam binding to camkii vs nmdar/camkii binding? There is no overlap, cam can bind to camkii even if this is bound to nmdars. 

@@ -23,15 +23,10 @@ Additionally, alterations in synaptic strength, like Long-Term Depression (LTD) 
 
 We employ computer simulations to answer the project’s biological question; it is important to note that while our focus is mainly computational, this is part of a synergistic work with colleagues performing wet-lab experiments. Experiments provide data to inform simulation parameters, which in turn can guide the wet-lab process by narrowing the experimental search space, in a self-enhancing loop. In short, the main objectives of the project are to:
 
-- Build a computational model of the regulation and interactions between CaMKII and
-NMDARs in a dendritic spine.
-- Make biological predictions from the model which can then be tested experimentally
-in-vivo or in-vitro.
-- Use the model to simulate spatio-temporal dynamics of early LTP and understand the
-role of CaMKII/NMDAR interactions.
-- Develop new workflows to model biological interactions in 3D space, using software
-like MCell (Monte Carlo Cell) and CellBlender (Stiles et al., 1996; Kerr et al., 2008; Gupta et al., 2018; Husar et al., 2022), BioNetGen (Harris et al., 2016) and BioDynaMo (Breitwieser et al., 2022).
-
+- Build a computational model of the regulation and interactions between CaMKII and NMDARs in a dendritic spine.
+- Make biological predictions from the model which can then be tested experimentally in-vivo or in-vitro.
+- Use the model to simulate spatio-temporal dynamics of early LTP and understand the role of CaMKII/NMDAR interactions.
+- Develop new workflows to model biological interactions in 3D space, using software like MCell (Monte Carlo Cell) and CellBlender (Stiles et al., 1996; Kerr et al., 2008; Gupta et al., 2018; Husar et al., 2022), BioNetGen (Harris et al., 2016) and BioDynaMo (Breitwieser et al., 2022).
 
 ## Data informing model parameters and output data
 In order to understand the type of data used and variables in the dataset, we first explain what kind of data goes "into the model" (model parameters) and then what data "comes out" (model outputs). The data informing model parameters are kinetic rates, equilibrium constants of molecular interactions, cellular volumes and molecular concentrations. These parameters are used to create a set of reaction rules that determine how molecules behave. Based on these rules and parameters, a simulation is run that tracks the movement and interaction of molecules over time. The simulation generates time-course data that tracks concentrations, activity patterns and the spatial distribution of molecules. These data can be represented graphically as plots of concentrations against time, or as videos showing how molecules move through space over the course of the simulation.

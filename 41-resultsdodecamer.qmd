@@ -28,6 +28,18 @@ In @tbl-2024-08-12_16-29-55_out, CaM_Ca1 reacts really quickly, within less than
 In @tbl-2024-09-02_18-07-29_out calcium and calmodulin are left to be the same as for @tbl-2024-08-12_16-29-55_out, and only time_step is altered to 1e-5. This does not seem to alter the behaviour of the molecules, as they are reactin very similarly to the first run shown.
 For @tbl-2024-09-02_18-14-16_out calcim is increased 10 fold, and calmodulin is left as the same amount. 
 
+run_2024-09-05_14-03-36
+Total number of ray-polygon intersection tests: 2467489271
+Total number of ray-polygon intersections: 295335406
+Total number of mol reflections from a wall: 158569765
+Total number of vol mol vol mol collisions: 34103039
+Total number of molecule moves between walls: 1936615
+Total number of usages of waypoints for counted volumes: 0
+Total number of counted volume recomputations: 5420449
+Total number of diffuse 3d calls: 1483174752
+Average diffusion jump was: 0.997639 timesteps  (1.52457e+09/1528174752)        
+Simulation CPU time = 4498.39 (user) and 43.6875 (system)
+Simulation CPU time without iteration 0 = 4498.12 (user) and 43.6562 (system)
 
 ::: {#tbl-2024-09-02_18-07-29_out}
 <table border="1" style="border-collapse: collapse; width: 100%;">

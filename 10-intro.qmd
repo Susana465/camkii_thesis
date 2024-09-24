@@ -3,4 +3,10 @@ bibliography: [references.bib]
 ---
 <!--commment-->
 # Introduction:
-Introductory text.
+
+1. Establish your research territory (by situating your research in a broader context)
+One of the first things the introduction should do is to provide general statements that outline the importance of the topic and provide enough background information so that the reader can understand the context in which your research sits (although being careful not to enter into an in-depth review of the literature. More on this below). In doing so, you will need to reference existing studies.
+
+There have been many studies that focus on CaM and CaMKII dynamics. Studies using modelling like we do. For over a decade now, and these dynamics are more well documented. Likewise, there's quite a lot of information out there on Calcium and calmodulin binding. As we discuss in the coming chapters, however, there is still no consensus on certain things. parameters are hard to get to begin with. 
+
+https://www.thephdproofreaders.com/writing/how-to-write-a-thesis-introduction/
