@@ -1,7 +1,7 @@
 ---
 bibliography: [references.bib]
 ---
-<!--commment-->
+
 # Introduction:
 
 This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within the dendritic postsynaptic density. Changes in the function of these synaptic proteins have been implicated in a range of diseases and conditions, including age-related cognitive decline (see, for instance, (Li, Marcu, et al., 2020)) and neurodegenerative diseases (REFERENCES: Reviewed in (Foster, 2007; Tong et al., 2018)). Moreover, these changes have been shown to be implicated in epilepsy, schizophrenia, addiction, autism spectrum condition, and multiple neurodevelopmental disorders (reviewed in (Robison, 2014)).
@@ -21,57 +21,42 @@ I employ computer simulations to answer the project’s biological question; it 
 - Use the model to simulate spatio-temporal dynamics of early LTP and understand the role of CaMKII/NMDAR interactions.
 - Develop new workflows to model biological interactions in 3D space, using software like MCell (Monte Carlo Cell) and CellBlender (Stiles et al., 1996; Kerr et al., 2008; Gupta et al., 2018; Husar et al., 2022), BioNetGen (Harris et al., 2016) and BioDynaMo (Breitwieser et al., 2022).
 
-## Why CaMKII and NMDAR interactions to study LTP?
+## CaMKII/NMDAR interactions to understand LTP and memory:
 
-The cellular changes that underline different forms of memory are thought to involve changes in the strength of neuronal connections, as proposed by @ramonycajal1909HistologieSystemeNerveux more than a century ago. The notion that synaptic strength changes during learning and memory was refined into a concrete model by @hebb1949OrganizationBehaviorNeuropsychological. Hebb proposed that if two neurons are active at the same time, the synapses between them are strengthened. This hypothesis inspired many researchers, and the first mechanism supporting it, long-term potentiation, was discovered in the early 1970s. 
+The cellular changes that underline different forms of memory are thought to involve changes in the strength of neuronal connections, as proposed by @ramonycajal1909HistologieSystemeNerveux more than a century ago. The notion that synaptic strength changes during learning and memory was refined into a concrete model by @hebb1949OrganizationBehaviorNeuropsychological. Hebb proposed that if two neurons are active at the same time, the synapses between them are strengthened. This hypothesis inspired many researchers, and the first mechanism supporting it, long-term potentiation, was discovered in the early 1970s. The discovery of LTP showed that short, high frequency stimulation (tetanus) of hippocampal excitatory synapses produced a rapid and long-lasting increase in the strength of these synapses that could persist for many days. LTP is often divided into three phases: induction, expression, and maintenance. To this day, LTP has been described at synapses throughout the brain and remains one of the most attractive cellular models for learning and memory. There are multiple forms of LTP. The variables include the type of synapse, the stimulation parameters, the time analysed after LTP induction, and the developmental age. 
 
-The discovery of LTP showed that short, high frequency stimulation (tetanus) of hippocampal excitatory synapses produced a rapid and long-lasting increase in the strength of these synapses that could persist for many days. LTP is often divided into three phases: induction, expression, and maintenance. To this day, LTP has been described at synapses throughout the brain and remains one of the most attractive cellular models for learning and memory. There are multiple forms of LTP. The variables include the type of synapse, the stimulation parameters, the time analysed after LTP induction, and the developmental age. 
+It is LTP that depends on NMDAR activation where much research has been done [@malenka2004LTPLTDEmbarrassment; @nicoll2017BriefHistoryLongTerm], as it is a well-characterized form of LTP that directly links synaptic activity to molecular signaling pathways crucial for learning and memory. In this project we focus on this type of LTP. During NMDA-receptor dependent LTP, glutamate is released from the presynaptic terminal, this glutamate then activates a subtype of glutamate receptor known as the AMPA receptor. NMDA receptors are found nearby these AMPA receptors, but are not activated by low levels of glutamate release because the ion channel of an NMDA receptor is blocked by a magnesium ion. If frequent action potentials cause greater stimulation of AMPA receptors, however, this will cause the postsynaptic neuron to depolarize, which eventually causes the voltage-dependent magnesium blockage of the NMDA receptor to be removed, allowing calcium ions to flow in through the NMDA receptor.
 
-It is LTP that depends on NMDAR activation where much research has been done [@malenka2004LTPLTDEmbarrassment; @nicoll2017BriefHistoryLongTerm], as it is a well-characterized form of LTP that directly links synaptic activity to molecular signaling pathways crucial for learning and memory. In this project we mainly focus on this type of LTP. We know that CaMKII activity is key for induction and maintenance of this form of LTP, and that CaMKII and NMDAR binding has been shown to maintain LTP [REFERENCE]; however, the exact mechanisms behind this remain to be ellucidated. There is substancial evidence in support of the hypothesis that CaMKII/NMDAR complex maintains LTP is substantial, however, it is not agreed on yet the time course and persistence of the CaMKII/NMDAR complex after LTP induction (REFERENCES NEED TO LOOK THIS UP GOOD TO TEST.) Likewise, _Additional work is also required to elucidate how the CaMKII/NMDAR complex produces the structural growth of the synapse that underlies late LTP._
+The influx of calcium causes a rise in intracellular calcium concentrations in the postsynaptic density (PSD). The rise of intracellular calcium then triggers a cascade of events, where Ca2+ can bind to calmodulin (CaM), and CaM can then aid in CaMKII activation. The activation of CaMKII can allow for various mechanisms of LTP to proceed. CaMKII activity has been shown to be crucial for this form of LTP induction and maintenance, hence, understanding its mechanisms may offer insights into the molecular processes supporting memory stability. As a central signaling protein, CaMKII regulates various cellular functions, including synaptic plasticity, cytoskeletal organization, cell growth and division, gene transcription, and ion channel modulation. 
+
+An important asset of CaMKII is that it can remain in an active state for prolonged periods of time, even after the initial calcium stimulus is gone. CaMKII can bind to NMDA receptors in the membrane of the cell to enhance its efficiency for receiving new stimuli. CaMKII can also be found bound to the actin filaments which form the cytoskeleton of the neuron. Active CaMKII can unbind from these actin filaments which leads to an expansion in shape of the dendritic spine. This increase in sensitivity to stimuli as well as the expansion of dendritic spines are suggested to allow for synaptic strengthening that happens in LTP.
+
+Importantly, CaMKII and NMDAR binding has been shown to maintain LTP [REFERENCE]; however, the exact mechanisms behind this remain unclear. We don't know how long the CaMKII/NMDAR complex lasts after LTP induction (REFERENCES NEED TO LOOK THIS UP GOOD TO TEST) and more work is also required to elucidate how the CaMKII/NMDAR complex produces the structural growth of the synapse that underlies late LTP. What is more, the precise mechanism of CaMKII and NMDAR interaction to form a complex remains unclear. A longstanding model suggested CaMKII has two distinct sites that bind to the NMDAR C-terminal [REFERENCES]. However, recent crystal structure studies challenge this, showing that CaMKII substrates and activators bind to a single continuous site across the kinase domain [REFERENCE]. The CaMKII/NMDAR complex enables activity-dependent CaMKII incorporation into postsynaptic sites, potentially acting as a structural seed to recruit postsynaptic density proteins, contributing to synapse restructuring and plasticity. 
+
+The specific mechanisms through which the CaMKII/NMDAR complex sustains LTP and facilitates synaptic restructuring remain poorly understood, highlighting the need for further research into their interactions. Understanding these dynamics is important as it may provide insights into the biochemical processes that stabilize memories and contribute to our overall understanding of LTP and memory formation.
+
+## Why use computational modelling to study biological systems?
+
+Experimental studies are increasingly complemented by computational models to aid in characterizing the spatiotemporal regulation of proteins of interest [REFERENCES]. Given the complexity and multiscale nature of biological systems, computational models play a crucial role in integrating experimental data, facilitating theoretical hypotheses, and exploring "what if" scenarios. Models aim to make clear the current state of knowledge regarding a particular system, by attempting to be precise about the elements involved and the interactions between them. Doing this can be an effective way to highlight gaps in our understanding and guide future research directions.
+
+Moreover, these models then serve to synthesize knowledge from different published research, and make biological predictions which can then serve as hypothesis to be tested empirically by experimentalists. Additionally, computer-simulated experiments can streamline the wet-lab process by narrowing the experimental search space, making research more cost-effective, time-efficient, and environmentally friendly. This approach also promotes ethical research practices by reducing the need for animal testing, thereby minimizing animal suffering.
+
+## The big picture: What research exists already and where does this PhD stand?
+
+Numerous computational models of CaMKII dynamics have been developed over the past decade to look at different interactions of CaMKII and its substrates or binding partners at varying levels of detail [REFERENCES]. Many of these models center on the binding of calcium to calmodulin and the subsequent formation of the CaM-CaMKII complex [REFERENCES], but not on the CaMKII/NMDAR complex therefore making this research novel in its field. The research carried out in this PhD project follows recent studies [Pharris, Ordyan, Bartol] that have looked at CaMKII as a dodecamer to study its autophosphorylation and spatiotemporal regulation in poststynaptic dendrites using BioNetGen and MCell. Pharris look at this, Ordyan looks at this, Bartol looks at this. This is what I look at.
+
+There is a plethora of computational models with a focus around CaMKII that use software such as NEURON [@maki-marttunen2020Unified], Smoldyn [@khan2011Sequestration], Cellular Dynamic Simulator [@byrne2011Impacts; @byrne2010Cellular], and more [REFERENCES]. While these studies provide a good foundation for understanding CaMKII dynamics, the models either focus solely on temporal dynamics without considering geometry [@maki-marttunen2020Unified], or explore both spatial and temporal dynamics but do not model CaMKII as a multimeric molecule [Pharris, CDS paper]. Some models do account for CaMKII as a multimeric dodecamer but do not focus on its interactions with NMDARs. To my knowledge, this research is novel in the field, as it incorporates all these aspects: modeling CaMKII as a dodecamer, examining spatiotemporal dynamics, and focusing specifically on the CaMKII/NMDAR complex.
+
+More recently, research is shifting from the long-standing idea that CaMKII behaves like a bistable switch to a new understanding involving a process known as "kinetic proofreading" that enhances the specificity and fidelity of CaMKII-mediated signaling. Bartol et al., 2024 propose that for LTP to occur, the autophosphorylation of CaMKII subunits does not need to reach the high, irreversible steady-state associated with the bistable switch theory. Instead, they propose that the integration of signals at the synapse must lead to a temporary surge in autophosphorylation that is sufficient to initiate one or more downstream processes, which are essentially irreversible, ultimately resulting in synaptic potentiation. This proposed mechanism aligns well with the hypothesis that the CaMKII/NMDAR complex at the PSD plays a critical role in stabilizing CaMKII in its autophosphorylated state, thereby facilitating synaptic potentiation. 
 
 
-## What research exists already?
----- Getting lost in the details. want to keep this as the introductory room, then guide to specifics later. 
+## Main findings of this PhD
+To be completed.
 
-The literature over the past two decades proposes certain mechanisms and steps, where some are more clear than others. I will try to explain what we know so far, what we think we know, and what we don't know. Okay so first of all, it has been pretty extensively shown that after calcium entry through NMDARs after postsynaptic stimulus is induced, a cascade of reactions occur that eventually can lead to CaMKII being activated*. CaMKII undergoes autophosphorylation which can result in calcium-independent activity. The conditions for this are yet to be fully ellucidated, as we figure out how CaMKII can remain in its open state. 
+## Thesis Layout
+To be completed.
 
-2) CaMKII undergoes autophosphorylation resulting in constitutive, Ca2+-independent activity and exposure of a binding site for the NMDA receptor subunit GluN2B. 3) Active CaMKII translocates to the postsynaptic density (PSD) and binds to the cytoplasmic C-tail of GluN2B. 4) The CaMKII-GluN2B complex initiates a structural rearrangement of the PSD that may involve liquid-liquid phase separation. 5) This rearrangement involves the PSD-95 scaffolding protein, α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptors (AMPARs), and their transmembrane AMPAR-regulatory protein (TARP) auxiliary subunits, resulting in an accumulation of AMPARs in the PSD that underlies synaptic potentiation. 6) The stability of the modified PSD is maintained by the stability of the CaMKII-GluN2B complex. 7) By a process of subunit exchange or interholoenzyme phosphorylation CaMKII maintains synaptic potentiation in the face of CaMKII protein turnover. There are many other important proteins that participate in enlargement of the synaptic spine or modulation of the steps that drive and maintain the potentiation.
+As I was thinking about how to layout this thesis, an idea came to me: what if my PhD is like a house, or a hut or something like that? That would help me keep a good picture of the function of each chapter laid out here. So here are some thoughts on how this thesis is laid out; kinda like all thesis are laid out, and like all houses are built, there's common features but each thesis/house comes with the flavour of the person that lives in it.
 
-*CaMKII activation definition to be added/discussed
+If we think of the PhD as a house, then, the pillars or support beams are where I lay out the existing research, the theoretical background, and the context. These are solid and well-researched to support the entire structure, much like how background chapters provide the knowledge necessary to frame ones work. The main room or entrance is the introduction, it welcomes the guests (readers) and sets the stage. The introduction tells you what you are about to explore: the core ideas, the goals, and what to expect.
 
-impels us to propose a relatively simple model for synaptic memory involving the following steps that drive the process: 1) Ca2+ entry through N-methyl-d-aspartate (NMDA) receptors activates CaMKII. 2) CaMKII undergoes
-
-_The specific hypothesis evaluated is that LTP is maintained by the complex of activated CaMKII with the NMDAR._ The evidence in support of this hypothesis is substantial, but further experiments are required, notably to determine the time course and persistence of complex after LTP induction https://link.springer.com/article/10.1186/1756-6606-6-10 Additional work is also required to elucidate how the CaMKII/NMDAR complex produces the structural growth of the synapse that underlies late LTP.  Based on known binding reactions, we suggest the first molecularly specific version of tag/capture hypothesis: that the CaMKII/NMDAR complex, once formed, serves as a tag, which then leads to a binding cascade involving densin, delta-catenin, and N-cadherin (some of which are newly synthesized). 
-
-_CaMKII and LTP were discovered within a decade of each other and have been inextricably intertwined ever since._
-
-Memory is a complex and complicated mechanism that hasnt fully been understood yet. At the molecular level in neurons, there's lots going on. Scaffolding proteins, presynapse, postsypase, and all the in between interactions. 
-
-what we know, what we think we know vs what we dont know.
-
-## Why use Computational Modelling to study biological systems?
-
-## What research exists already?
-this is what most people will read, so keep it more simple and go into very specific descriptions later in the background where i lay out the pillars for where this phd stands on.
-
-Introduction to the introduction: a short version (of only a few paragraphs) of the thesis’ aims, research questions, contribution, objectives and findings.
-
-1. Establish your research territory (by situating your research in a broader context)
-One of the first things the introduction should do is to provide general statements that outline the importance of the topic and provide enough background information so that the reader can understand the context in which your research sits (although being careful not to enter into an in-depth review of the literature. More on this below). In doing so, you will need to reference existing studies.
-
-There have been many studies that focus on CaM and CaMKII dynamics. Studies using modelling like we do. For over a decade now, and these dynamics are more well documented. Likewise, there's quite a lot of information out there on Calcium and calmodulin binding. As we discuss in the coming chapters, however, there is still no consensus on certain things. parameters are hard to get to begin with. 
-
-https://www.thephdproofreaders.com/writing/how-to-write-a-thesis-introduction/
-
-State the overarching topic and aims of the thesis in more detail
-Provide a brief review of the literature related to the topic (this will be very brief if you have a separate literature review chapter)
-Define the terms and scope of the topic
-Critically evaluate the current state of the literature on that topic and identify your gap
-Outline why the research is important and the contribution that it makes
-Outline your epistemological and ontological position
-Clearly outline the research questions and problem(s) you seek to address
-State the hypotheses (if you are using any)
-Detail the most important concepts and variables
-Briefly describe your methodology
-Discuss the main findings
-Discuss the layout of the thesis
