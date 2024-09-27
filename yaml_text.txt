@@ -1,0 +1,57 @@
+project:
+  type: book
+
+book:
+  title: "camkii_thesis"
+  author: "Susana Roman Garcia"
+  date: now
+  date-format: long
+  chapters:
+    - part: index.qmd
+      chapters:
+      - index.qmd
+    - part: 10-intro.qmd
+      chapters:
+      - 11-philosophy.md
+      - 12-researchQ.qmd
+    - part: 20-background.md
+      chapters:
+      - 21-complex_systems.md
+      - 22-reproducibility_open_science.md
+      - 24-why_modelling.md
+      - 25-ssa_ode.md
+      - 27-software.md
+    - part: 23-memory_learning.md
+      chapters:
+      - 233-nmdar-camkii.qmd
+    - part: 30-methods.qmd
+      chapters:
+      - 31-modelling-camkii.qmd
+      - 40-results.md
+      - 41-resultsdodecamer.qmd
+      - references.qmd
+
+  downloads: [pdf]
+  page-navigation: true
+  
+bibliography: 
+- references.bib
+- methods.bib
+- background.bib
+
+link-citations: true
+
+format:
+  html:
+    theme: pulse
+  pdf:
+    documentclass: scrreprt
+    include-in-header: 
+      text: |
+        \usepackage{makeidx}
+        \makeindex
+    include-after-body: 
+      text: |
+        \printindex
+
+

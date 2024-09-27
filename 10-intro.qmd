@@ -1,8 +1,11 @@
 ---
 bibliography: [references.bib]
+number-sections: true
 ---
 
 # Introduction:
+
+## What is this PhD about?
 
 This PhD project investigates the temporal and spatial dynamics of NMDA receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within the dendritic postsynaptic density. Changes in the function of these synaptic proteins have been implicated in a range of diseases and conditions, including age-related cognitive decline (see, for instance, (Li, Marcu, et al., 2020)) and neurodegenerative diseases (REFERENCES: Reviewed in (Foster, 2007; Tong et al., 2018)). Moreover, these changes have been shown to be implicated in epilepsy, schizophrenia, addiction, autism spectrum condition, and multiple neurodevelopmental disorders (reviewed in (Robison, 2014)).
 
@@ -21,7 +24,7 @@ I employ computer simulations to answer the project’s biological question; it 
 - Use the model to simulate spatio-temporal dynamics of early LTP and understand the role of CaMKII/NMDAR interactions.
 - Develop new workflows to model biological interactions in 3D space, using software like MCell (Monte Carlo Cell) and CellBlender (Stiles et al., 1996; Kerr et al., 2008; Gupta et al., 2018; Husar et al., 2022), BioNetGen (Harris et al., 2016) and BioDynaMo (Breitwieser et al., 2022).
 
-## CaMKII/NMDAR interactions to understand LTP and memory:
+## CaMKII/NMDAR interactions to understand LTP and memory
 
 The cellular changes that underline different forms of memory are thought to involve changes in the strength of neuronal connections, as proposed by @ramonycajal1909HistologieSystemeNerveux more than a century ago. The notion that synaptic strength changes during learning and memory was refined into a concrete model by @hebb1949OrganizationBehaviorNeuropsychological. Hebb proposed that if two neurons are active at the same time, the synapses between them are strengthened. This hypothesis inspired many researchers, and the first mechanism supporting it, long-term potentiation, was discovered in the early 1970s. The discovery of LTP showed that short, high frequency stimulation (tetanus) of hippocampal excitatory synapses produced a rapid and long-lasting increase in the strength of these synapses that could persist for many days. LTP is often divided into three phases: induction, expression, and maintenance. To this day, LTP has been described at synapses throughout the brain and remains one of the most attractive cellular models for learning and memory. There are multiple forms of LTP. The variables include the type of synapse, the stimulation parameters, the time analysed after LTP induction, and the developmental age. 
 
@@ -47,16 +50,58 @@ Numerous computational models of CaMKII dynamics have been developed over the pa
 
 There is a plethora of computational models with a focus around CaMKII that use software such as NEURON [@maki-marttunen2020Unified], Smoldyn [@khan2011Sequestration], Cellular Dynamic Simulator [@byrne2011Impacts; @byrne2010Cellular], and more [REFERENCES]. While these studies provide a good foundation for understanding CaMKII dynamics, the models either focus solely on temporal dynamics without considering geometry [@maki-marttunen2020Unified], or explore both spatial and temporal dynamics but do not model CaMKII as a multimeric molecule [Pharris, CDS paper]. Some models do account for CaMKII as a multimeric dodecamer but do not focus on its interactions with NMDARs. To my knowledge, this research is novel in the field, as it incorporates all these aspects: modeling CaMKII as a dodecamer, examining spatiotemporal dynamics, and focusing specifically on the CaMKII/NMDAR complex.
 
-More recently, research is shifting from the long-standing idea that CaMKII behaves like a bistable switch to a new understanding involving a process known as "kinetic proofreading" that enhances the specificity and fidelity of CaMKII-mediated signaling. Bartol et al., 2024 propose that for LTP to occur, the autophosphorylation of CaMKII subunits does not need to reach the high, irreversible steady-state associated with the bistable switch theory. Instead, they propose that the integration of signals at the synapse must lead to a temporary surge in autophosphorylation that is sufficient to initiate one or more downstream processes, which are essentially irreversible, ultimately resulting in synaptic potentiation. This proposed mechanism aligns well with the hypothesis that the CaMKII/NMDAR complex at the PSD plays a critical role in stabilizing CaMKII in its autophosphorylated state, thereby facilitating synaptic potentiation. 
+Incorporating spatial, temporal, and multimeric aspects is crucial because these dimensions fundamentally shape the behavior of molecular complexes like like the CaMKII/NMDAR interaction. Spatial dynamics can reveal how the molecules interact within different cellular regions, in fact CaMKII phosphorylation levels, as well as its functions have been shown to differ depending on its subcellular localization [@davies2007ACaMKII]. Temporal dynamics are important to understand how CaMKII/NMDAR interactions evolve over time; which is a matter yet to be fully understood, such as: how long does the CaMKII/NMDAR complex last during and/or after LTP?. 
 
+_Needs to go somewhere else not sure where:_ More recently, research is shifting from the long-standing idea that CaMKII behaves like a bistable switch to a new understanding involving a process known as "kinetic proofreading" that enhances the specificity and fidelity of CaMKII-mediated signaling. Bartol et al., 2024 propose that for LTP to occur, the autophosphorylation of CaMKII subunits does not need to reach the high, irreversible steady-state associated with the bistable switch theory. Instead, they propose that the integration of signals at the synapse must lead to a temporary surge in autophosphorylation that is sufficient to initiate one or more downstream processes, which are essentially irreversible, ultimately resulting in synaptic potentiation. This proposed mechanism aligns well with the hypothesis that the CaMKII/NMDAR complex at the PSD plays a critical role in stabilizing CaMKII in its autophosphorylated state, thereby facilitating synaptic potentiation. 
 
 ## Main findings of this PhD
 To be completed.
 
-## Thesis Layout
+## Thesis Layout: This PhD is like a house
 To be completed.
 
 As I was thinking about how to layout this thesis, an idea came to me: what if my PhD is like a house, or a hut or something like that? That would help me keep a good picture of the function of each chapter laid out here. So here are some thoughts on how this thesis is laid out; kinda like all thesis are laid out, and like all houses are built, there's common features but each thesis/house comes with the flavour of the person that lives in it.
 
-If we think of the PhD as a house, then, the pillars or support beams are where I lay out the existing research, the theoretical background, and the context. These are solid and well-researched to support the entire structure, much like how background chapters provide the knowledge necessary to frame ones work. The main room or entrance is the introduction, it welcomes the guests (readers) and sets the stage. The introduction tells you what you are about to explore: the core ideas, the goals, and what to expect.
+1. BACKGROUND/PILLARS
+
+If we think of the PhD as a house, then, the pillars or support beams are where I lay out the existing research, the theoretical background, and the context. These are solid and well-researched to support the entire structure, much like how background chapters provide the knowledge necessary to frame ones work. The background chapter in this PhD includes:
+
+* Report style and philosophy
+* Open, reproducible and ethical sience definitions
+    * Ethics and Reproducibility
+        * Science for the profit of whom?
+        * Importance of reproducibility
+        * Ethics and reproducibility go together
+* Software used
+    * MCell, BioNetGen, Biodynamo, 
+* Different types of modelling used:
+    * SSA vs ODE, Rule-based modelling
+
+1. INTRODUCTION/HALL
+
+The main room or entrance is the introduction, it welcomes the guests (readers) and sets the stage. The introduction tells you what you are about to explore: the core ideas, the goals, and what to expect.
+
+* What is this PhD Aabout
+* Project objectives
+* CaMKII/NMDAR interactions to understand LTP and memory
+* Why use computational modelling to study biological systems?
+* The big picture: What research exists already and where does this PhD stand?
+
+1. BODY CHAPTERS/ROOMS IN THE HOUSE
+
+* Modelling CaMKII and NMDARs
+    * CaMKII structure and functions
+    * Modelling CaMKII as a dodecamer
+    * NMDARs structure and functions
+    * Modelling of NMDARs
+    * CaMKII binding to NMDARs
+
+* Data Hazards
+    * Work relating to this PhD
+    * Applying the labels
+
+* Reproducibility of this project
+
+1. DISCUSSION/ROOF
+* TBC
 
