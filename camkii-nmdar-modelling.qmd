@@ -21,7 +21,6 @@ The CaMKII holoenzyme is made up of twelve subunits [@bennett1983PurificationCha
 CaMKII subunits. (a) a single subunit structure schematic. (b) assembled as a hexamer.
 :::
 
-
 ## Modelling CaMKII as a dodecamer
 In order to model CaMKII molecules as a dodecamer we use BNGL, which allows us to not only model molecules to be multimeric, but also for each subunit to have the following possible states:
 
@@ -97,11 +96,11 @@ An aspect of phosphorylation at this site is that it does not prevent CaMKII sub
 
 There are multiple known phosphatases which act to dephosphorylate CaMKII. Different dephosphatase proteins will carry their function depending on their localization and what protein assemblies they are bound to or are available for them. Importantly, the Ser/Thr phosphatase Protein Phosphatase-1 (PP1) is a key regulator of CaMKII signaling [REFERENCES]; it can dephosphorylate both T286 and T306 sites of the kinase. 
 
-The colocalization with PSD-associated PP1 or sequestration away from PP2A may be attributable to CaMKII interactions with specific PSD proteins, resulting in differential modulation of Thr286 dephosphorylation. PP1 can form a complex with over 50 regulatory or scaffolding proteins that dictate substrate specificity and subcellular localization. PP1 appears to play a more prominent role in CaMKII dephosphorylation at PSDs [REFERENCE]
+The colocalization with PSD-associated PP1 or sequestration away from PP2A may be attributable to CaMKII interactions with specific PSD proteins, resulting in differential modulation of Thr286 dephosphorylation. PP1 can form a complex with over 50 regulatory or scaffolding proteins that dictate substrate specificity and subcellular localization. PP1 is a heterodimer comprised of a catalytic subunit that is constitutively active and a regulatory subunit. There are four known PP1 subunit isoforms of the catalytic subunit (α, β, γ1, and γ2), each interacting with over 40 known regulatory and/or target subunits. PP1α has been shown to account for the majority of phosphatase actvity with CaMKII in the PSD [REFERENCE]. Therefore, we focus on PP1α in this study. 
 
-PP1 is a heterodimer comprised of a catalytic subunit that is constitutively active and a regulatory subunit. There are four known PP1 subunit isoforms of the catalytic subunit (α, β, γ1, and γ2), each interacting with over 40 known regulatory and/or target subunits. PP1α has been shown to account for the majority of phosphatase actvity with CaMKII in the PSD. Therefore, we focus on PP1α in this study.
+In the model used here, PP1 catalyzes the dephosphorylation of CaMKII without forming a stable enzyme-substrate complex. Instead, the reaction proceeds in a manner where PP1 transiently interacts, without binding, with a CaMKII subunit under specific conditions, facilitating the dephosphorylation process. PP1 can only dephosphorylate CaMKII subunits when they are unbound from calmodulin (CaM), as CaM structurally obstructs access to the T286 phosphorylation site. Additionally, the CaMKII subunit must be in its open conformation to expose both the T286 and T306 sites for PP1-mediated dephosphorylation (see @fig-camkii-binding-rxns).
 
-Need to say how we model it and how it regulates CaMKII activity. what conditions/how do we model dephosphorylation in the model? 
+![CaMKII subunit possibility of binding reactions. ](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns}
 
 ## NMDARs structure and functions
 
@@ -119,6 +118,8 @@ NMDARs can be expressed in neuroglia, non-neuronal cells in the central nervous 
 should i model phosphorylation of s1303 or just binding of camkii? what will be the different effects of this? s1303 P seems to happen during/to induce LTD, but not LTP. Conclusions about the biochemical effect of S1303 phosphorylation on NMDAR function are somewhat conflicting, with the best direct evidence indicating that it reduces NMDAR desensitization @tullis2021GluN2B but it might also increase nmdar conductance. need to read more on this. 
 
 ## CaMKII binding to NMDARs
+
+When it comes to CaMKII and NMDAR binding, we have to think about where the molecules bind in the CaMKII molecule, and where they bind on the NMDARs. Additionally, it will be important to think about where they bind structutrally as this will affect the access of other molecules and substrates have to these molecules once they are bound. 
 
 Direct binding of CaMKII to GluN2A/B is noteworthy. In hippocampal and cortical neurons, CaMKII colocalized with NMDARs in confined subcellular compartments and CaMKII-NMDAR complexes were readily coimmunoprecipitated, while CaMKII did not coprecipitated with AMPARs [10–12]. In binding assays with purified recombinant proteins and/or peptides, CaMKII was found to directly bind to the GluN2A/B CT with high affinity [11–14]. It is now known that CaMKII binds to the membrane proximal residues 839–1120 and residues 1290–1310 in the GluN2B CT.  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4435801/
 
