@@ -1,0 +1,16 @@
+---
+bibliography: [references.bib]
+---
+
+# Model description
+
+## Cellular volume and molecule concentrations
+
+In the model presented here, reactions of cytoplasmatic molecules specified in BNGL, were placed into the geometry of a postysnaptic dendritic spine with a volume of aproximately 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris et al., 1989). The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.  
+
+
+## Boundary conditions (?)
+
+## Reaction rules and rates
+
+_Reaction rules are specified in BNGL as discrete transformations. For example, the rule “CaM(C~0,camkii) + ca ↔ CaM(C~1,camkii) k_on1C, k_off1C” encodes binding of one Ca2 to the C-terminus of CaM for CaM not bound to CaMKII. The specified rate constants for each rule are used to compute the probability that the transformation occurs when the two molecules involved in a transformation collide, or occurs at a given time step for a unimolecular transformation. At run time, a random number generator is initialized with a seed number for each individual simulation that selects a sequence of random numbers to be used to specify the sequence of probabilities of transformations for the simulation._ bartol paper . 
