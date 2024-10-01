@@ -8,6 +8,8 @@ This chapter delves into the methods used to model molecular interactions of int
 
 The results should highlight the importance of CaM binding to CaMKII, and NMDARs, and its regulation through phosphorylation, as well as the role of these interactions in maintaining the phosphorylated state of CaMKII within the postsynaptic density.
 
+The models are run using a stochastic agent-based approach, where only the reactions between existing discrete molecules that occur during the simulation need to be tracked by the program (network free simulation [119, 120]). the important quantity is the number of different states present which can be much smaller than the number of possible states. As a general rule, stochastic simulations are preferred where the numbers of particles of a chemical species is small; the ODE approach is required when the number of particles is large because the stochastic approach might be computationally intractable. When the assumption of continuous concentration fails due to small-scale cellular environment with limited reactant populations, ODE representation also fails. It is here when stochastic simulations are useful. 
+
 ## What I want out of this chapter?
 Explain CaMKII and NMDARs interactions in detail. Explain how they are structurally interacting, what bonds are binding, and what specific molecules are being attracted or repulsed in each molecule.
 

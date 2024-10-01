@@ -2,12 +2,45 @@
 bibliography: [references.bib]
 ---
 
-# Modelling CaMKII and NMDARs 
+<!---This is the chapter where I will be talking about how CaMKII works, interacting with other molecules, and most importantly focus on its interactionsn with NMDARs. Why this is relevant, and how we model these interactions. -->
 
-This is the chapter where I will be talking about how CaMKII works, interacting with other molecules, and most importantly focus on its interactionsn with NMDARs. Why this is relevant, and how we model these interactions. 
+# Model description
+I use Monte Carlo algorithm simulations with the new MCell4 which combines the spatial simulation features of MCell3 (Kerr et al., 2008) and the rule-based, network-free simulation (NFSim) framework of BioNetGen Language (BNGL) (Faeder et al., 2009). This integration of capabilities offers a flexible and robust tool that is well-suited for investigating the kinetics of complex reactions within the space of a dendritic spine. I model the interactions of various molecules released inside the cell, including Ca²⁺, CaM, CaMKII, PP1, and NMDARs on the cell surface. I examine the binding dynamics of calcium to calmodulin and its subsequent interactions with CaMKII, focusing on the different states of CaMKII (open/closed, active/inactive) and the phosphorylation processes involved. The results emphasize the importance of CaM binding to both CaMKII and NMDARs, as well as the regulatory role of phosphorylation. These interactions are crucial for maintaining the phosphorylated state of CaMKII within the postsynaptic density.
 
-## CaMKII structure and functions
+The model was validated against biological results at various stages. First, the calcium release and subsequent binding to CaM were validated against [REFERENCES], testing the sequential binding of calcium. Next, to test for CaMKII activation, I assessed how much CaMKII flickered between active/open and inactive/closed states. Stefan et al. determined that the activation probability (in the absence of CaM and phosphorylation) is 0.002, so I set it to that. This flickering behavior should allow for CaM_Ca4 to bind to the open state, further stabilizing CaMKII, as observed in in vitro and in vivo studies [REFERENCES]. The stabilization of CaMKII in the open state by CaM binding is known as CaM trapping, and our model exhibits this behavior [FIGURE]. Additionally, CaMKII autophosphorylation at T286 and T306 is also modeled to showcase the regulatory functions of these sites.
 
+The model uses a stochastic agent-based approach, where the program tracks only the reactions that occur between existing discrete molecules during the simulation (network-free simulation [119, 120]). A key aspect of this approach is that the number of different states present can be much smaller than the total number of possible states. Generally, stochastic simulations are preferred when the number of particles of a chemical species is small. When the assumption of continuous concentration fails due to limited populations of reactants in a small cellular environment, the ODE representation fails and stochastic simulations are particularly useful.
+
+## Molecule concentrations and cell volume
+All molecules were released from inside the cell to interact with each other. Due to the stochastic nature of MCell simulations, molecules are released as discrete units or ‘molecule numbers’. Concentrations can be calculated as shown below in @eq-molec-concentrations-calc.  The example calculation below considers an initial release of 10000 molecules and a dendritic volume of 0.5 µm³. The molecule concentrations in this model fall within ranges previously reported in the literature. Specifically, 10000 molecules of Ca²⁺ were released initially, corresponding to an initial [Ca²⁺] of 33.2 µM (Figure 5). Prior studies employing fluorescent Ca²⁺ indicators have shown resting intracellular calcium concentrations ([Ca²⁺]i) within 50-100 nM, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). Reported intracellular [CaM] concentrations, ranging from 8 to 250 µM, align with the values observed here (initial concentration: 6.64 µM) (Black et al., 2004; Kakiuchi et al., 1982). 
+
+$$
+1*10^{4} \text{molecules} \times 
+\frac{1 mol}{6.023*10^{23} \text{molecules}} \times 
+\frac{1}{0.5 \, \mu \text{m}^3} \times 
+\frac{1  \, \mu \text{m}^3}{10 ^{-15} \text{L}} =
+3.32*10^{-6} \text{M} \times 
+\frac{10^{6}\mu \text{m}^3}{1 \text{M}} =
+33.2 \mu \text{M}
+$${#eq-molec-concentrations-calc}
+
+In the model presented here, reactions of cytoplasmatic molecules specified in BNGL, were placed into the geometry of a postysnaptic dendritic spine with a volume of aproximately 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris et al., 1989). The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.  
+
+- CAMKII model for binding NMDARs
+- CaM trapping 
+- Dephosphorylation of CaMMKII
+- Effects of dephospho when camkii/nmdar binding is taken into acount
+- NMDA/CAMKII complex how long does it last? does it change if mutations happen at t286 or t306? 
+
+## Reaction rules and kinetic rates
+In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() <-> CaM(ca~1,camkii)” represents the binding of a single calcium ion to Calmodulin that is not bound to CaMKII (see reaction #1 in @fig-rxns-table1). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at a specific time step for unimolecular transformations. 
+
+As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1  can then continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well. During runtime, a random seed number generator is initialized with a seed number for each simulation. This generator selects a sequence of random numbers that determines the probabilities of transformations throughout the simulation.
+
+
+![Table of reactions](30-methods-figures\table_rxns1.PNG){#fig-rxns-table1}
+
+# Modelling CaMKII structure and functions
 Ca2+/calmodulin-dependent protein kinase II (CaM kinase II or CaMKII) is a serine/threonine-specific kinase, which means it’s a protein kinase enzyme that phosphorylates the OH group of amino acid residues serine or threonine. CaMKII accounts for up to 2 percent of all brain protein and is essential for memory formation [@erondu1985RegionalDistributionType; @lisman2012MechanismsCaMKIIAction]. CaMKII is involved in many signalling cascades and is thought to be an important mediator of learning and memory. Depending on its component isoforms, CaMKII can also be found in cardiomyocytes for  Ca2+ homeostasis and reuptake [@swaminathan2012CalmodulinDependentProteinKinase], chloride transport in epithelia [@fahrmann2006FunctionalPartitioningEpithelial], positive T-cell selection [@mcgargill2005ActiveCa2Calmodulindependent], and cytotoxic T-cell activation. In this research we focus on CaMKIIα isoform present in postsynaptic neurons which is relevant for memory formation. CaMKII functions are regulated through phosphorylation at multiple sites, and its localization within cells is directed by interactions with specific binding proteins.
 
 The CaMKII holoenzyme is made up of twelve subunits [@bennett1983PurificationCharacterizationCalmodulindependent; @stratton2014ActivationtriggeredSubunitExchange; @bhattacharyya2016MolecularMechanismActivationtriggered; @rosenberg2005StructureAutoinhibitedKinase] arranged as two coplanar rings of six. Each CaMKII subunit features an N-terminal kinase domain and C-terminal hub domain [@chao2011MechanismTunableAutoinhibition]. Each subunit has a hub domain, a kinase domain and a flexible regulatory domain which lends to the subunit a wide range of movement away from the holoenzyme’s central hub (@fig-camkii-subunit). @chao2011MechanismTunableAutoinhibition revealed the crystal structure of human alpha-CaMKII from E. coli, demonstrating its ability to transition between "docked" and "undocked" conformations. Electron microscopy of rat alpha-CaMKII in Sf9 cells suggests that less than 3 percent of subunits adopt a compact conformation [@myers2017CaMKII].
@@ -21,7 +54,6 @@ The CaMKII holoenzyme is made up of twelve subunits [@bennett1983PurificationCha
 CaMKII subunits. (a) a single subunit structure schematic. (b) assembled as a hexamer.
 :::
 
-## Modelling CaMKII as a dodecamer
 In order to model CaMKII molecules as a dodecamer we use BNGL, which allows us to not only model molecules to be multimeric, but also for each subunit to have the following possible states:
 
 - A calmodulin binding site, calmodulin can be bound or unbound
@@ -40,7 +72,7 @@ In order to model CaMKII molecules as a dodecamer we use BNGL, which allows us t
 CaMKII dodecamer links as per BNGL model, trying to figure out which one works best.
 :::
 
-### CaMKII activity using open/closed as synonims ignores docked/undocked:
+## CaMKII activity using open/closed as synonims ignores docked/undocked:
 
 (OPTION 1: DEFINE IT ACCORDING TO OPEN/CLOSED AND IGNORE DOCKED UNDOCKED) An inactive subunit lacks catalytic activity because its regulatory domain is bound to its catalytic site (closed). In contrast, an active subunit has catalytic activity because the kinase domain is not inhibited structrually, the subunit is thus open when its active. In our model, CaMKII subunits are modelled with autonomous activation, where subunits can flicker between an open and closed state if they are unbound to CaM and unphosphorylated at T286, as CaM binding and T286 phosphorylation structurally impede closing. States of other binding sites and phosphorylation sites can vary. In our model, CaM can only bind to a high affinity binding site, if the subunit is in an open state. 
 
@@ -56,12 +88,12 @@ In the undocked state, the regulatory domain is extended and separated from the 
 In summary, if subunits are found in their docked state, although they can have some catalytic activity with substrates in their open state, they are unable of autphosphorylation activity. If subunits are found in their undocked state, their activity will depend on whether they are open or closed. 
 So, when referring to CaMKII activity, the defintion involves a combination of the subunits' conformational states (docked/undocked, open/closed) and their functional capabilities (phosphorylation of substrates and autophosphorylation). Thus, in our case, CaMKII activity can be broadly defined as the kinase's ability to perform phosphorylation functions, modulated by its structural conformation and autonomous state.
 
-### Binding of calcium to calmodulin
+## Binding of calcium to calmodulin
 CaM is modelled as being able to bind four calcium ions; CaM has four EF hands divided into N and C lobes capable of binding two calcium ions per lobe. The N lobe binds calcium faster with lower affinity and the C lobe binds slower with higher affinity [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various of these models, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Unlike other models that distinguish between CaM's N-terminal and C-terminal binding lobes, this project does not, as the specifics of calcium binding to calmodulin are beyond its scope. Additionally, following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions.
 
 ![We model calcium binding to calmodulin following "scheme 3" proposed by Linkevicius et al., 2024. It is a sequential calmodulin scheme where each binding site is represented individually. Figure modified from Linkevicius et al., 2024.](30-methods-figures\scheme3_cam.PNG){#fig-scheme3-cam} 
 
-### Binding of calmodulin to CaMKII
+## Binding of calmodulin to CaMKII
 Calmodulin bound to different amounts of calcium has been shown to bind to CaMKII with different affinities, with calmodulin bound to four calcium having the highest affinity [REFERENCE]. In this model, for simplicity, we therefore assume that only fully saturated CaM with four calciums binds to open CaMKII subunits. Additionally, CaM binds to a CaMKII subunit only if T306 is dephosphorylated. The T305/T306 site lies within the CaM binding region. It has been shown that autophosphorylation at T305/T306 impedes CaM binding, and similarly CaM binding prevents T306 phosphorylation [26] [@rellos2010Structure]. In the model here, CaM is able to bind to CaMKII with the following rules:
 
 - CaM must be fully saturated (bound to four calcium ions), i.e. only CaM_Ca4 binds to CaMKII. We assume only one high affinity binding site for CaM in each CaMKII subunit.
@@ -76,23 +108,23 @@ In fact, stochastic simulations of a biochemical model showed that two such bind
 
 The literature often describes CaM binding as activating CaMKII. However, this may not always be the case. When a CaMKII subunit spontaneously flickers into its active/open state CaM binding is likely to stabilize the subunit once it is already active, but not to initiate activation. Similarly, while it is commonly suggested that simultaneous binding of CaM to two neighboring subunits triggers T286 autophosphorylation, we propose that CaM's role might be more nuanced. Instead of being essential for T286 phosphorylation, CaM may stabilize the open state of CaMKII, thereby increasing the likelihood of phosphorylation. Therefore, in this model, we do not make it a requirement for CaM to be bound to neighbouring subunits for phosphorylation to happen. We consider CaM binding is not strictly necessary for autophosphorylation but rather enhances the probability of phosphorylation by maintaining subunits in their active/open state.
 
-### CaMKII phosphorylation and dephosphorylation
+## CaMKII phosphorylation and dephosphorylation
 
 The most extensively studied phosphorylation sites on CaMKII are Thr286 and Thr305/Thr306 as they have been shown to be key for CaMKII activity regulation and subcellular localization at the PSD during LTP, which is of relevance for synaptic plasticity as well as learning and memory. Likewise, in this study, we focus on these two sites. While other phosphorylation sites on CaMKII have been identified, their functions are not yet fully understood and are not within the scope of this study. 
 
-#### T286 phosphorylation
+### T286 phosphorylation
 Phosphorylation of T286 can happen if two adjascent CaMKII subunits are in their open states, through a process known as autophosphorylation. CaMKII subunits need to be open to expose the ATP binding site, allowing the gamma-phosphate of ATP to transfer to the threonine residue at T286. The open (kinase domain available) and undocked (subunits can reach their neighbours) states of two neighbouring subunits is crucial for the catalytic site of one subunit to reach and phosphorylate its neighboring subunit. In our model, we assume ATP molecule levels are sufficient to ensure the reaction proceeds at its maximal rate (saturating), so we do not model ATP as a reactant but rather focus on the phosphorylation process under these conditions.
 
 Calmodulin bound to two neighbouring subunits is often referred to in the literature as being required for autophosphorylation (REFERENCES). As calmodulin has been shown to keep CaMKII subunits in their open state, and therefore it may indirectly enhance probability of T286 phosphorylation. In the model I use here I don't make calmodulin a requirement for T286 phosphorylation, but rather once CaMKII is bound to CaM_Ca4, this binding keeps CaMKII subunits in their open state and further enables phosphorylation.
 
 Autophosphorylation at threonine 286 (T286) and calmodulin (CaM) binding engage in a dynamic, reciprocal interaction, where each event amplifies the other, leading to a finely tuned regulation of CaMKII activity. Phosphorylation at T286 exposes key residues, phenylalanine (F) and glutamine (N), within the CaM-binding domain, which significantly enhances CaM's binding affinity, reportedly increasing it by 10- to 1000-fold [REFERENCES]. This enhanced binding phenomenon, termed CaM-trapping, is thought to facilitate further autophosphorylation of CaMKII. Notably, autophosphorylation allows for sustained kinase activity even after CaM dissociates from CaMKII [REFERENCES].
 
-#### T305/T306 phosphorylation
+### T305/T306 phosphorylation
 In contrast to T286 phosphorylation, T305/T306 (T306 hereforth) phosphorylation prevents binding of CaM, as the phosphate group added to the threonine creates electrostatic and steric interference, occupying the position where CaM normally interacts. In the model used here, CaM can therefore only bind to CaMKII if the T306 site is not phosphorylated, and conversely, phosphorylation at T306 cannot occur while CaM is bound. Similar to the conditions for T286, the model requires that a subunit must be in the open state for phosphorylation at T306 to take place. Since T286 phosphorylation maintains subunits in their open state, transphosphorylation at T306 is more likely to occur if a neighboring subunit is phosphorylated at T286.
 
 An aspect of phosphorylation at this site is that it does not prevent CaMKII subunits from closing, unlike T286 phosphorylation. This, together with the fact that it prevents CaM from binding, makes it more likely that subunits that are phosphorylated at T306 are found in the closed state too. When the subunit is closed, catalytic activity of the kinase is reduced, as the kinase domain is not accessible to perform catalytic activity. This subunit phosphorylation is ofen refered to as reducing catalytic activity of CaMKII. T306 phosphorylation may act as a form of kinetic proofreading, by ensuring that CaMKII remains inactive, or less active, unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
 
-#### Dephosphorylation of CaMKII subunits
+### Dephosphorylation of CaMKII subunits
 
 There are multiple known phosphatases which act to dephosphorylate CaMKII. Different dephosphatase proteins will carry their function depending on their localization and what protein assemblies they are bound to or are available for them. Importantly, the Ser/Thr phosphatase Protein Phosphatase-1 (PP1) is a key regulator of CaMKII signaling [REFERENCES]; it can dephosphorylate both T286 and T306 sites of the kinase. 
 
@@ -102,7 +134,7 @@ In the model used here, PP1 catalyzes the dephosphorylation of CaMKII without fo
 
 ![CaMKII subunit possibility of binding reactions. ](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns}
 
-## NMDARs structure and functions
+# Modelling NMDARs structure and functions
 
 The NMDAR is an ionotropic glutamate receptor. Ionotropic channel proteins open to allow ions such as Na+, K+, Ca2+ and/or Cl- to pass through the membrane in response to the binding of a chemical messenger. NMDARs are permeable to Ca2+, Na+ and K+ ions and have a voltage dependent Mg2+ block. NMDARs, depending on the subunit composition, have glutamate and glycine as its ligands, the former being more common and the latter acting as a co-agonist. The binding of a ligand to NMDARs is typically not sufficient to open the channel and let ions through, as this is usually blocked by Mg2+ ions  (voltage block) which are only removed once the neuron is sufficiently depolarized. 
 
@@ -114,10 +146,9 @@ Depending on which subunits NMDARs exhibit, they will have slightly different pr
 
 NMDARs can be expressed in neuroglia, non-neuronal cells in the central nervous system with a main objective of maintaining homeostasis and myelin formation [@fields2014GlialBiologyLearning]. However, its expression is mainly located to dendritic spines where, through subunit-specific interactions, it connects to intracellular molecules of the postsynaptic multi-protein network, or postsynaptic density area, known as the PSD. One of the proteins that interacts with NMDARs in the PSD is CaMKII, among many others which are not included in the description of this project but can be found extensively throughout publications [@volianskis2015LongtermPotentiationRole].
 
-## Modelling of NMDARs
 should i model phosphorylation of s1303 or just binding of camkii? what will be the different effects of this? s1303 P seems to happen during/to induce LTD, but not LTP. Conclusions about the biochemical effect of S1303 phosphorylation on NMDAR function are somewhat conflicting, with the best direct evidence indicating that it reduces NMDAR desensitization @tullis2021GluN2B but it might also increase nmdar conductance. need to read more on this. 
 
-## CaMKII binding to NMDARs
+# Modelling CaMKII binding to NMDARs
 
 When it comes to CaMKII and NMDAR binding, we have to think about where the molecules bind in the CaMKII molecule, and where they bind on the NMDARs. Additionally, it will be important to think about where they bind structutrally as this will affect the access of other molecules and substrates have to these molecules once they are bound. 
 

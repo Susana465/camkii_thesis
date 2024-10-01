@@ -1,16 +1,42 @@
 ---
 bibliography: [references.bib]
+format: html
+html-math-method: mathml
 ---
 
 # Model description
 
-## Cellular volume and molecule concentrations
+This chapter discusses the methods used to model molecular interactions of interest. I use Monte Carlo algorithm simulations with the new MCell4 which combines the spatial simulation features of MCell3 (Kerr et al., 2008) and the rule-based, network-free simulation (NFSim) framework of BioNetGen Language (BNGL) (Faeder et al., 2009). This integration of capabilities offers a flexible and robust tool that is well-suited for investigating the kinetics of complex reactions within the space of a dendritic spine. I model the interactions of various molecules released inside the cell, including Ca²⁺, CaM, CaMKII, PP1, and NMDARs on the cell surface. I examine the binding dynamics of calcium to calmodulin and its subsequent interactions with CaMKII, focusing on the different states of CaMKII (open/closed, active/inactive) and the phosphorylation processes involved. The results emphasize the importance of CaM binding to both CaMKII and NMDARs, as well as the regulatory role of phosphorylation. These interactions are crucial for maintaining the phosphorylated state of CaMKII within the postsynaptic density.
+
+The model was validated against biological results at various stages. First, the calcium release and subsequent binding to CaM were validated against [REFERENCES], testing the sequential binding of calcium. Next, to test for CaMKII activation, I assessed how much CaMKII flickered between active/open and inactive/closed states. Stefan et al. determined that the activation probability (in the absence of CaM and phosphorylation) is 0.002, so I set it to that. This flickering behavior should allow for CaM_Ca4 to bind to the open state, further stabilizing CaMKII, as observed in in vitro and in vivo studies [REFERENCES]. The stabilization of CaMKII in the open state by CaM binding is known as CaM trapping, and our model exhibits this behavior [FIGURE]. Additionally, CaMKII autophosphorylation at T286 and T306 is also modeled to showcase the regulatory functions of these sites.
+
+The model uses a stochastic agent-based approach, where the program tracks only the reactions that occur between existing discrete molecules during the simulation (network-free simulation [119, 120]). A key aspect of this approach is that the number of different states present can be much smaller than the total number of possible states. Generally, stochastic simulations are preferred when the number of particles of a chemical species is small. When the assumption of continuous concentration fails due to limited populations of reactants in a small cellular environment, the ODE representation fails and stochastic simulations are particularly useful.
+
+## Molecule concentrations and cellular volume
+All molecules were released from inside the cell to interact with each other. Due to the stochastic nature of MCell simulations, molecules are released as discrete units or ‘molecule numbers’. Concentrations can be calculated as shown below in @eq-molec-concentrations-calc.  The example calculation below considers an initial release of 10000 molecules and a dendritic volume of 0.5 µm³. The molecule concentrations in this model fall within ranges previously reported in the literature. Specifically, 10000 molecules of Ca²⁺ were released initially, corresponding to an initial [Ca²⁺] of 33.2 µM (Figure 5). Prior studies employing fluorescent Ca²⁺ indicators have shown resting intracellular calcium concentrations ([Ca²⁺]i) within 50-100 nM, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). Reported intracellular [CaM] concentrations, ranging from 8 to 250 µM, align with the values observed here (initial concentration: 6.64 µM) (Black et al., 2004; Kakiuchi et al., 1982). 
+
+$$
+1*10^{4} \text{molecules} \times 
+\frac{1 mol}{6.023*10^{23} \text{molecules}} \times 
+\frac{1}{0.5 \, \mu \text{m}^3} \times 
+\frac{1  \, \mu \text{m}^3}{10 ^{-15} \text{L}} =
+3.32*10^{-6} \text{M} \times 
+\frac{10^{6}\mu \text{m}^3}{1 \text{M}} =
+33.2 \mu \text{M}
+$${#eq-molec-concentrations-calc}
 
 In the model presented here, reactions of cytoplasmatic molecules specified in BNGL, were placed into the geometry of a postysnaptic dendritic spine with a volume of aproximately 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris et al., 1989). The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.  
 
+- CAMKII model for binding NMDARs
+- CaM trapping 
+- Dephosphorylation of CaMMKII
+- Effects of dephospho when camkii/nmdar binding is taken into acount
+- NMDA/CAMKII complex how long does it last? does it change if mutations happen at t286 or t306? 
 
-## Boundary conditions (?)
+## Reaction rules and kinetic rates
+In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() <-> CaM(ca~1,camkii)” represents the binding of a single calcium ion to Calmodulin that is not bound to CaMKII (see reaction #1 in @fig-rxns-table1). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at a specific time step for unimolecular transformations. 
 
-## Reaction rules and rates
+As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1  can then continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well. During runtime, a random seed number generator is initialized with a seed number for each simulation. This generator selects a sequence of random numbers that determines the probabilities of transformations throughout the simulation.
 
-_Reaction rules are specified in BNGL as discrete transformations. For example, the rule “CaM(C~0,camkii) + ca ↔ CaM(C~1,camkii) k_on1C, k_off1C” encodes binding of one Ca2 to the C-terminus of CaM for CaM not bound to CaMKII. The specified rate constants for each rule are used to compute the probability that the transformation occurs when the two molecules involved in a transformation collide, or occurs at a given time step for a unimolecular transformation. At run time, a random number generator is initialized with a seed number for each individual simulation that selects a sequence of random numbers to be used to specify the sequence of probabilities of transformations for the simulation._ bartol paper . 
+
+![Table of reactions](30-methods-figures\table_rxns1.PNG){#fig-rxns-table1}
