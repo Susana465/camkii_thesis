@@ -21,7 +21,7 @@ bibliography:
 - background.bib
 
 link-citations: true
-number-depth: 3
+number-depth: 4
 
 format:
   html:
