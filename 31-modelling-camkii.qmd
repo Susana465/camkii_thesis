@@ -170,3 +170,5 @@ Competitive actions of DAPK1 in LTD - for future work? or can I add to model?
 
 T305/306 phosphorylation directly reduces binding to GluN2B
 CaMKII binding to GluN2B participates in enhancing synaptic strength (26, 27), consistent with our findings with the CaMKII I205K mutant (Fig. 2A). Thus, we decided to test the effects of T305/306 phosphorylation on CaMKII/GluN2B interaction. T305/306 phosphorylation had been suggested to reduce CaMKII binding to GluN2B (29); however, these experiments did not differentiate between a direct effect of the phosphorylation and an indirect effect via reduced Ca2+/CaM binding. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4101658/
+
+By contrast, in response to LTD stimuli, this GluN2B binding and the synaptic accumulation of CaMKII is suppressed by two specific mechanisms: autophosphorylation of CaMKII T305/3068 and activation of death-associated protein kinase 1 (DAPK1).7 The autophosphorylation at T305/306 directly reduces CaMKII binding to GluN2B,12  https://www.sciencedirect.com/science/article/pii/S2589004223008003
