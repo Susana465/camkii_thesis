@@ -5,3 +5,39 @@ Methodology: Briefly outline the methods or approach you used to conduct your re
 Results: Summarize the main findings or outcomes of your study. The main findings of this study are X and Y. 
 Conclusion: Provide a concise conclusion or discuss the implications of your findings. 
 Keywords: Include a few keywords that highlight the main topics or themes of your thesis.
+
+
+intro dump i did not use might use later:
+break -
+
+As a central signaling protein, CaMKII regulates various cellular functions, including synaptic plasticity, cytoskeletal organization, cell growth and division, gene transcription, and ion channel modulation. 
+
+what do i wanna say here?
+Research on CaMKII strongly supports the notion that this enzyme is both necessary and sufficient for the induction of LTP, backed by substantial evidence.
+
+ENTER EVIDENCE of camkii necessry vs sufficient. SUMMARY.https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4050655/ @myers2017CaMKII
+
+As we have seen, the process of linking cellular mechanisms underlying LTP to learning and memory is often challenging and not always linear. We may feel inclined to infer that one event is a direct consequence of another; however, the mechanisms governing memory formation are intricate and do not always adhere to straightforward cause-and-effect pathways. -> have this sentence. 
+
+For instance, while the work of @morris1986Selective  selectively linking LTP to NMDARs was pivotal in advancing our understanding of the mechanisms underlying memory, it was not without its limitations. One significant limitation was the later realization that NMDA receptors play two roles. While their most widely recognized role involves LTP, NMDARs also play a role in the regulation of synaptic transmission on a moment-to-moment basis, independent of LTP (due to the incomplete Mg²⁺ block at resting potentials). This raised an alternative explanation for Morris' experiments: APV was maybe disrupting hippocampal function more broadly. This caveat was addressed by Giese et al., 1998, who genetically modified a knockin mouse containing the point mutant T286A of CaMKII. This mutation prevents autophosphorylation and blocks CaM-independent persistent activity of the enzyme. In the CaMKII mutant mice subjected to this experiment, NMDA receptor function remained intact, but LTP was absent and learning and memory were strongly impaired. This provided evidence that induced coginitive deficits in rodents were most likely caused by LTP disruption, rather than by general NMDAR dysfunction, as normal NMDA receptor function was maintained throughout the experiment. Taken together, these studies provide compelling evidence for LTP's role in learning and memory.
+
+break -
+Numerous other kinases and proteins are involved in this complex and intricate mechanism, which has made it challenging to identify all the participating components over the past century. Key players include protein kinase C (PKC), neurogranin, and DAPK1, among others; however, these proteins are beyond the scope of the present project AND discussion of possible interactions 
+
+and protein kinase C (PKC) have been extensively shown to be involved and likely mediate induction of E-LTP [REFERENCES]. In response to a rise in calcium, both kinases can be phosphorylated in an autonomous manner and remain active without the continued presence of calcium. 
+
+where Ca2+ can bind to calmodulin (CaM), and CaM can then aid in CaMKII activation. The activation of CaMKII can allow for various mechanisms of LTP to proceed. CaMKII activity has been shown to be crucial for this form of LTP induction and maintenance, hence, understanding its mechanisms may offer insights into the molecular processes supporting memory stability. As a central signaling protein, CaMKII regulates various cellular functions, including synaptic plasticity, cytoskeletal organization, cell growth and division, gene transcription, and ion channel modulation. 
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3102214/ > was reading and good to follow along
+https://www.sciencedirect.com/science/article/pii/S0896627316309576 new paper to read > Linking LTP to Learning and Memory
+https://www.sciencedirect.com/science/article/pii/B978012374951200007X long-Term Potentiation—A Candidate Cellular Mechanism for Information Storage in the Central Nervous System
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367554/ > good description of INDUCTION OF LTP AND LTD
+
+Early LTP (E-LTP) represents the very first stage of LTP and is a continual form of NMDA receptor-dependent synaptic plasticity. 
+
+While induction entails the transient activation of CaMKII and PKC, maintenance of E-LTP (early-form LTP) is characterized by their persistent activation. It lasts about 30 to 60 minutes, and is independent of protein synthesis
+
+Early LTP represents the foremost stage of LTP and is a continual form of NMDA receptor-dependent synaptic plasticity, and lasts about 30 to 60 minutes. L-LTP, induced by delivery of multiple tetanic stimuli, lasts 5–6 h and requires protein synthesis and gene expression E-LTP, which is evoked by fewer tetanic stimuli and lasts 2–3 h
+
+To this day, LTP has been described at synapses throughout the brain and remains one of the most attractive cellular models for learning and memory. 
+

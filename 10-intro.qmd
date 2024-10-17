@@ -54,41 +54,8 @@ Ultimately, any structural LTP mechanism must regulate the filamentous (F)-actin
 
 Alltogether, there is strong evidence showing CaMKII and NMDAR interactions play a critical role in maintaining LTP [REFERENCE], however, many questions remain unanswered. For example, how long does this complex last after LTP induction? (REFERENCES NEED TO LOOK THIS UP GOOD TO TEST). What is more, the precise mechanism of how CaMKII and NMDAR interactions form a complex is also hotly debated. A longstanding model posited that CaMKII binds to two distinct sites on the NMDAR C-terminal [REFERENCES]. However, recent crystal structure studies challenge this by suggesting that CaMKII substrates and activators interact at a single continuous site on the kinase domain [REFERENCE]. These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
 
-break -
+## Computational Models of CaMKII
 
-As a central signaling protein, CaMKII regulates various cellular functions, including synaptic plasticity, cytoskeletal organization, cell growth and division, gene transcription, and ion channel modulation. 
-
-what do i wanna say here?
-Research on CaMKII strongly supports the notion that this enzyme is both necessary and sufficient for the induction of LTP, backed by substantial evidence.
-
-ENTER EVIDENCE of camkii necessry vs sufficient. SUMMARY.https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4050655/ @myers2017CaMKII
-
-As we have seen, the process of linking cellular mechanisms underlying LTP to learning and memory is often challenging and not always linear. We may feel inclined to infer that one event is a direct consequence of another; however, the mechanisms governing memory formation are intricate and do not always adhere to straightforward cause-and-effect pathways. -> have this sentence. 
-
-For instance, while the work of @morris1986Selective  selectively linking LTP to NMDARs was pivotal in advancing our understanding of the mechanisms underlying memory, it was not without its limitations. One significant limitation was the later realization that NMDA receptors play two roles. While their most widely recognized role involves LTP, NMDARs also play a role in the regulation of synaptic transmission on a moment-to-moment basis, independent of LTP (due to the incomplete Mg²⁺ block at resting potentials). This raised an alternative explanation for Morris' experiments: APV was maybe disrupting hippocampal function more broadly. This caveat was addressed by Giese et al., 1998, who genetically modified a knockin mouse containing the point mutant T286A of CaMKII. This mutation prevents autophosphorylation and blocks CaM-independent persistent activity of the enzyme. In the CaMKII mutant mice subjected to this experiment, NMDA receptor function remained intact, but LTP was absent and learning and memory were strongly impaired. This provided evidence that induced coginitive deficits in rodents were most likely caused by LTP disruption, rather than by general NMDAR dysfunction, as normal NMDA receptor function was maintained throughout the experiment. Taken together, these studies provide compelling evidence for LTP's role in learning and memory.
-
-break -
-Numerous other kinases and proteins are involved in this complex and intricate mechanism, which has made it challenging to identify all the participating components over the past century. Key players include protein kinase C (PKC), neurogranin, and DAPK1, among others; however, these proteins are beyond the scope of the present project AND discussion of possible interactions 
-
-and protein kinase C (PKC) have been extensively shown to be involved and likely mediate induction of E-LTP [REFERENCES]. In response to a rise in calcium, both kinases can be phosphorylated in an autonomous manner and remain active without the continued presence of calcium. 
-
-where Ca2+ can bind to calmodulin (CaM), and CaM can then aid in CaMKII activation. The activation of CaMKII can allow for various mechanisms of LTP to proceed. CaMKII activity has been shown to be crucial for this form of LTP induction and maintenance, hence, understanding its mechanisms may offer insights into the molecular processes supporting memory stability. As a central signaling protein, CaMKII regulates various cellular functions, including synaptic plasticity, cytoskeletal organization, cell growth and division, gene transcription, and ion channel modulation. 
-
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3102214/ > was reading and good to follow along
-https://www.sciencedirect.com/science/article/pii/S0896627316309576 new paper to read > Linking LTP to Learning and Memory
-https://www.sciencedirect.com/science/article/pii/B978012374951200007X long-Term Potentiation—A Candidate Cellular Mechanism for Information Storage in the Central Nervous System
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3367554/ > good description of INDUCTION OF LTP AND LTD
-
-Early LTP (E-LTP) represents the very first stage of LTP and is a continual form of NMDA receptor-dependent synaptic plasticity. 
-
-While induction entails the transient activation of CaMKII and PKC, maintenance of E-LTP (early-form LTP) is characterized by their persistent activation. It lasts about 30 to 60 minutes, and is independent of protein synthesis
-
-Early LTP represents the foremost stage of LTP and is a continual form of NMDA receptor-dependent synaptic plasticity, and lasts about 30 to 60 minutes. L-LTP, induced by delivery of multiple tetanic stimuli, lasts 5–6 h and requires protein synthesis and gene expression E-LTP, which is evoked by fewer tetanic stimuli and lasts 2–3 h
-
-To this day, LTP has been described at synapses throughout the brain and remains one of the most attractive cellular models for learning and memory. 
-
-
-### Why use computational modelling to study biological systems
 
 ### Reproducibility, Ethics and Data Hazards
 
