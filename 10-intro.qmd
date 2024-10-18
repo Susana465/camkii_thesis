@@ -5,7 +5,7 @@ number-sections: true
 
 # Introduction:
 
-## What is this PhD about? A quick overview:
+## What is this PhD about?
 
 This PhD project weaves together multiple threads. The foundational thread of this PhD is rooted in a biological question: understanding the molecular mechanisms underlying memory in animals. In particular, I investigate temporal and spatial dynamics of N-methyl-D-aspartate receptor (NMDAR) and calcium/calmodulin-dependent protein kinase II (CaMKII) interactions within the dendritic postsynaptic density. Changes in the function of these synaptic proteins have been implicated in a range of diseases and conditions, including age-related cognitive decline in human and non-human animals [@henstridge2016Synaptic; @li2020Higha] and neurodegenerative diseases [@foster2007Calciuma; @tong2018Calciuma]. Moreover, these changes have been shown to be implicated in epilepsy, schizophrenia, addiction, autism spectrum condition, and multiple neurodevelopmental disorders [@robison2014Emerginga].
 

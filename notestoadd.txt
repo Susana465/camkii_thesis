@@ -41,3 +41,16 @@ Early LTP represents the foremost stage of LTP and is a continual form of NMDA r
 
 To this day, LTP has been described at synapses throughout the brain and remains one of the most attractive cellular models for learning and memory. 
 
+What do I want to test? 
+t306 p effects on camkii binding to nmdarS.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4050655/ 
+ A short time after T286 phosphorylation, T305 and T306 in the calmodulin-binding region become phosphorylated125. -> GOOD to see how long after and test it for validation of the model.
+
+ This delayed phosphorylation strongly reduces autonomous kinase activity126, 127.  by 20% to 40% of activity (find reference that said this exact numbers)
+
+ The phosphorylation of T305 and T306 has physiological consequences: overexpression of T286D CaMKII (to mimic the phosphorylated state) actually leads to synaptic weakening (and occlusion with long-term depression (LTD)) unless T305 and T306 phosphorylation is prevented by additional mutations128.
+
+ Phosphorylation of these sites prevents binding of CaMKII to the PSD and produces learning deficits129. Understanding the conditions that lead to T305 and T306 phosphorylation will have medical implications because Angleman’s disease, a form of intellectual disability, is associated with enhanced phosphorylation at these sites that prevents normal LTP130
+
+ Autonomous CaMKII can lead to either LTP or LTD, depending on the phosphorylation state of the control point, T305/T306. https://pmc.ncbi.nlm.nih.gov/articles/PMC2903435/
