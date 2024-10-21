@@ -54,3 +54,14 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC4050655/
  Phosphorylation of these sites prevents binding of CaMKII to the PSD and produces learning deficits129. Understanding the conditions that lead to T305 and T306 phosphorylation will have medical implications because Angleman’s disease, a form of intellectual disability, is associated with enhanced phosphorylation at these sites that prevents normal LTP130
 
  Autonomous CaMKII can lead to either LTP or LTD, depending on the phosphorylation state of the control point, T305/T306. https://pmc.ncbi.nlm.nih.gov/articles/PMC2903435/
+
+ # t305/3-6 P
+ @cook2021CaMKIIb
+  Fast T305/306 phosphorylation required prior T286 phosphorylation and then curbed CaMKII activity by two mechanisms: (i) a cis-subunit reaction reduced both Ca2+ stimulation and autonomous activity and (ii) a trans-subunit reaction enabled complete activity shutdown and feed-forward inhibition of further T286 phosphorylation. These are fundamental additions to the long-studied CaMKII regulation and function in neuronal plasticity.
+
+  # camkii activity studies
+Fluorescence imaging approaches have been developed that can monitor conformational changes of CaMKII. These imaging approaches can estimate CaMKII activity, with the limitation that an active conformation may not represent CaMKII activity as inhibitory molecules may be bound. https://www.sciencedirect.com/science/article/pii/S0028390821001702#bib15
+
+  # how did bartol et al., model nmdars to allow calcium going through? perhaps i could model camkii binding to nmdars and increasing channel conductance. 
+
+  this study phd will be the basis for someone else to come and build on it. hopefully. so what can i test that will make this model the most biologically sound as a base model?
