@@ -9,6 +9,7 @@ book:
   chapters:
     - index.qmd
     - 10-intro.qmd
+    - 20-biology_background.qmd
     - camkii-nmdar-modelling.qmd
     - references.qmd
 
