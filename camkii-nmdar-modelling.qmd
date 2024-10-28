@@ -209,7 +209,12 @@ With what I know from papers, and with how the model is set up, these are outcom
 
 ## The autophosphorylation state of CaMKII regulates its binding duration to NMDARs and subsequent phosphorylation dynamics.
 
+**Rationale:** CaMKII’s ability to remain active after calcium/calmodulin binding is influenced by its autophosphorylation at Thr286, which can make CaMKII "autonomous." This autonomous state allows CaMKII to remain active and bound to NMDARs even when calcium levels drop.
 
+**Predicted Outcomes**
+
+Autophosphorylated CaMKII should exhibit longer binding durations to NMDARs, maintaining synaptic potentiation even after calcium levels drop.
+The non-autophosphorylated CaMKII may dissociate more quickly, resulting in shorter windows for NMDAR phosphorylation and less effective synaptic potentiation.
 
 ## When CaMKII is T306p:
     - CaMKII is found bound to NMDARs in lesser amounts in comparison to when T286p
