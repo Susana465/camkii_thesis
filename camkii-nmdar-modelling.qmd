@@ -197,3 +197,30 @@ When a CaMKII subunit is bound to the C-terminal tail of GluN2B, the binding pro
 
 # Hypotheses/expected outcomes when running the model
 
+With what I know from papers, and with how the model is set up, these are outcomes I expect the model to produce:
+
+## The spatial arrangement and clustering of NMDARs influences the likelihood and duration of CaMKII-NMDAR binding.
+
+**Rationale:** NMDARs are not uniformly distributed but often form clusters at the postsynaptic membrane. CaMKII's ability to bind to NMDARs might be influenced by how these receptors are spatially organized within the synapse. Understanding how receptor clustering affects CaMKII’s capacity to bind and phosphorylate NMDARs could reveal critical insights into synaptic plasticity mechanisms.
+
+**Predicted Outcomes**
+- In a clustered arrangement, CaMKII is more likely to engage multiple NMDARs simultaneously, which could lead to more stable and prolonged binding events, potentially amplifying synaptic signaling.
+- In a dispersed arrangement, CaMKII binding may become more transient, limiting its ability to phosphorylate multiple NMDARs.
+
+## The autophosphorylation state of CaMKII regulates its binding duration to NMDARs and subsequent phosphorylation dynamics.
+
+
+
+## When CaMKII is T306p:
+    - CaMKII is found bound to NMDARs in lesser amounts in comparison to when T286p
+    - To do this I can:
+    1. Track how the binding affinity between CaMKII and the NMDAR (particularly GluN2B) changes in the T306p state compared to the unphosphorylated state.
+    2. Investigate whether the duration and stability of CaMKII-NMDAR binding are reduced when T306 is phosphorylated, resulting in fewer interactions with NMDARs over time.
+
+    - CaMKII retains partial activity, but not as high as when T286p (expected between 20 and 40% of maximal activity)
+    - To do this I can:
+    1. Record the amount of CaMKII that is t306p only -> how much of it is closed and how much is it open/active.
+
+    - extra: Incorporate calcium dynamics: model how calcium transients affect CaMKII activation in both T306p and non-T306p states, comparing the kinase’s ability to maintain activity during and after calcium influx.
+
+**Rationale:** T306 phosphorylation blocks CaM binding, reducing CaMKII’s sensitivity to calcium transients. As a result, T306-phosphorylated CaMKII may have reduced binding affinity for NMDARs compared to its unphosphorylated form. However, CaMKII may still retain some activity through other subunits within the dodecamer, or by autophosphorylation at Thr286, allowing for partial phosphorylation of NMDARs. This could lead to weaker but non-null phosphorylation of the GluN2B subunit (potentially supporting transient synaptic plasticity rather than sustained potentiation.). 
