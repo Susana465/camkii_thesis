@@ -19,6 +19,14 @@ Biological and chemical systems can be described by networks of chemical reactio
 
 Reaction-based models are formalized as sets of reactions that describe the given system in terms of mechanistic interactions between the species of interest. This is, biochemical networks are a set of chemical species that can be converted into each other through chemical reactions. The focus of biochemical network models is usually on the levels of the chemical species and this usually requires explicit mathematical expressions for the velocity at which the reactions proceed. Biological systems can be simulated in different ways using different algorithms depending on the assumptions made about the underlying kinetics. Once the kinetics have been specified, these systems can be used directly to construct full dynamic simulations of the system behaviour on a computer.
 
+### Different (but not exclusive) ways to model biochemical systems
+
+#### Deterministic and stochastic modelling {.unnumbered}
+
+#### Network free, rule based modelling {.unnumbered}
+
+#### Software used in this PhD {.unnumbered} - MIGHT need to be a chapter in itself
+
 ## Computational models of CaMKII and NMDARs
 
 Numerous computational models of CaMKII dynamics have been developed over the past decade to look at different interactions of CaMKII and its substrates or binding partners at varying levels of detail [REFERENCES]. Many of these models center on the binding of calcium to calmodulin and the subsequent formation of the CaM-CaMKII complex [REFERENCES], but not on the CaMKII/NMDAR complex therefore making this research novel in its field. The research carried out in this PhD project follows recent studies [Pharris, Ordyan, Bartol] that have looked at CaMKII as a dodecamer to study its autophosphorylation and spatiotemporal regulation in poststynaptic dendrites using BioNetGen and MCell. Pharris look at this, Ordyan looks at this, Bartol looks at this. This is what I look at.

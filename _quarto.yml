@@ -23,7 +23,7 @@ bibliography:
 - background.bib
 
 link-citations: true
-number-depth: 4
+number-depth: 2
 
 format:
   html:
