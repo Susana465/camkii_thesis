@@ -209,6 +209,10 @@ When a CaMKII subunit is bound to the C-terminal tail of GluN2B, the binding pro
 
 With what I know from papers, and with how the model is set up, these are outcomes I expect the model to produce:
 
+## CaMKII is found mostly in its open state (even prior to cam binding, so that cam can actually bind to it),  but then ->
+
+## CaM binding stabilises CaMKII in higher quantity and for longer. And viceversa, if no cam, camkii eventually found open at lower levels. 
+
 ## The spatial arrangement and clustering of NMDARs influences the likelihood and duration of CaMKII-NMDAR binding.
 
 **Rationale:** NMDARs are not uniformly distributed but often form clusters at the postsynaptic membrane. CaMKII's ability to bind to NMDARs might be influenced by how these receptors are spatially organized within the synapse. Understanding how receptor clustering affects CaMKII’s capacity to bind and phosphorylate NMDARs could reveal critical insights into synaptic plasticity mechanisms.
