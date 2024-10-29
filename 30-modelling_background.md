@@ -53,6 +53,8 @@ An intricate network of protein–protein interactions is a prominent feature of
 
 There are three main things that are important here: space, time and structure of molecules (?). 
 
+the way compratments work in this kind of modelling - will need a methods section that is more specific than this one i think.
+
 
 ### Software used in this PhD {.unnumbered} - MIGHT need to be a chapter in itself
 
