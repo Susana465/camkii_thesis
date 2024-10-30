@@ -55,6 +55,8 @@ There are three main things that are important here: space, time and structure o
 
 the way compratments work in this kind of modelling - will need a methods section that is more specific than this one i think.
 
+what goes in a model and what comes out 
+
 
 ### Software used in this PhD {.unnumbered} - MIGHT need to be a chapter in itself
 
