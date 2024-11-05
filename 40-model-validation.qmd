@@ -1,0 +1,15 @@
+# Validating behaviour in the model
+
+## Sensitivity Analysis for parameters
+Sensitivity analysis is a technique to determine how the variation in the output of a model can be attributed to different inputs or parameters. This helps in identifying which parameters are most critical for the model's performance and which can be adjusted or estimated with less precision.
+
+1. Determine the Range and Distribution of Each Parameter
+
+- For each parameter, define a plausible range and, if possible, an assumed distribution (e.g., normal, uniform, etc.).
+- These ranges should reflect the uncertainty or variability you expect in each parameter.
+
+1. Sensitivity Analysis Method
+
+- One-At-A-Time (OAT): Vary one parameter while keeping others constant. This helps assess individual parameter impact.
+
+## Sanity checks:
