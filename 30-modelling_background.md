@@ -49,6 +49,17 @@ It is important to stress that one simulation run according to stochastic approa
 
 ### Rule based modelling {.unnumbered}
 
+wHAT STORY DO I WANT TO TELL WITH RBM?
+
+combinatorial complexity 
+domai specific modelling and why this is relevant and useful, and especially for our type of modelling
+rules are useful for these things. 
+rules are also useful for not having to specify all states from a chemical network (and this helps with combinatorial complexity too). how does this thing of not having to specify all states works (there was a paper I have to find again that explained this well by faeder et al., maybes its in zotero)
+what the rules actually look like. 
+queue in bngl
+
+and then queue in bionetgen python and mcell combinatio software possibilities? where do I add mcell?
+
 Cell signalling systems involve numerous interacting biomolecules, like proteins, which are made up of various functional components (such as binding domains, motifs, and phosphorylation sites). This complexity allows biomolecules to engage in multiple interaction types, leading to a rapid, combinatorial increase in the possible states of complexes and modifications. Accurately capturing all the potential effects of these interactions requires extremely large reaction networks, which traditional approaches, such as ODEs, struggle with because they require each reaction in the network to be explicitly defined. Rule based modelling can help with this problem by representation of interactions in terms of local rules. In Rule-Based Modelling (RBM), the network structure is defined indirectly, allowing for concise and efficient model representation. 
 
 An intricate network of protein–protein interactions is a prominent feature of any signal-transduction system @gomperts2009Signal, @hunter2000Signaling. Yet despite the high relevance of modelling site-specific details on protein-protein interactions of signalling systems, there has been a lack of standards for explicitly representing the composition and connectivity of molecular complexes @ezkurdia2009Progress. Models that incorporate complex protein-protein interaction details are generally difficult or impossible to specify and analyse, largely because of the combinatorial number of protein modifications and protein complexes that can be generated through protein–protein interactions. This is known as combinatorial complexity, a common challenge to our understanding of cellular regulation. 
@@ -67,7 +78,15 @@ RBM can help with combinatorial complexity by using a set of logical rules to de
 
 #### BioNetGen: A Tool for Rule-Based Modeling {.unnumbered}
 
-There are three main things that are important here: space, time and structure of molecules (?). 
+BioNetGen is a powerful and widely used tool for performing Rule-Based Modeling of biochemical networks, particularly in the context of signaling systems and protein–protein interactions. BioNetGen uses a language called BNGL (BioNetGen Language) to define molecular species and the rules that govern their interactions. (i THINK THIS IS TOO GENERAL BUT HERE IT GOES) The key feature of BioNetGen is that it allows researchers to describe the interactions between proteins and other molecules in a high-level, abstract form, without the need to manually enumerate every possible molecular species or state. Instead, BNGL allows users to define generalized rules that specify how molecular entities can interact—such as binding, phosphorylation, or degradation—along with the conditions under which these interactions occur (e.g., certain modifications or specific conformations).
+
+--
+
+Moreover, BioNetGen can be integrated with other modeling tools, such as those for parameter estimation or network analysis, and can be used in combination with experimental data to validate and refine models. Its ability to simulate the dynamics of protein–protein interaction networks in a computationally efficient manner has made it an indispensable tool in computational biology, systems biology, and bioinformatics research.
+
+
+
+There are three main things that are important here: space, time and structure of molecules (?) -> yes thats why RBM CAN BE HELPFUL. 
 
 the way compratments work in this kind of modelling - will need a methods section that is more specific than this one i think.
 
