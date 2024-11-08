@@ -92,6 +92,14 @@ the way compratments work in this kind of modelling - will need a methods sectio
 
 what goes in a model and what comes out 
 
+## Reaction Rates
+MCell and BioNetGen use different units for bimolecular kinetic rates. In MCell, a volume-volume reaction (reaction between two molecules that are free to diffuse in 3D space) is M-1*s-1where M is the molar concentration (number of moles per liter). In BioNetGen, the user is not constricted to a specific unit but a usual unit is N-1*s-1where N is a number of molecules per compartment and the default compartment volume if a compartment is not specified is 1fl (= 1 um3).
+
+To convert from BioNetGen to MCell units, one needs to multiply the BioNetGen rate by NA * V where NA is Avogardro’s constant and V is volume of the compartment is liters as derived here:
+
+1/M = 1/(#moles/V) = 1/( (N/NA)/V) = NA * V * 1/N
+
+The unimolecular reaction rates in MCell and BioNetGen both use unit s-1.
 
 ### Software used in this PhD {.unnumbered} - MIGHT need to be a chapter in itself
 
