@@ -65,14 +65,15 @@ $$
 
 Where \( n \) represents the number of subunits (or beads on a necklace), \( a \) is the number of possible states per subunit, and \( \phi(d_i) \) is Euler’s totient function, which helps account for symmetries by considering the divisors of \( n \). 
 
-Thus, for a single CaMKII ring with 6 subunits (a=6) with each having 16 possible states (a=16), the possible number of state combinations is: 2,796,976. This number of possible states is only estimated for one of the hexamer rings of a CaMKII dodecamer (which has 2 rings of 6 subunits). This example hopefully serves to illustrate how the combinatorial explosion of CaMKII's possible states makes it practically impossible to explicitly enumerate or efficiently evaluate all possible configurations using conventional mass action-based methods. In fact, previous studies have suggested that a CaMKII dodecamer could have as many as $10^{20}$ possible states [@pharris2019Multistate].
+Thus, for a CaMKII ring with 6 subunits (a=6) with each having 16 possible states (a=16), the possible number of state combinations would be: 2,796,976. This number of possible states is only estimated for one of the hexamer rings of a CaMKII dodecamer (which has 2 rings of 6 subunits). This example hopefully serves to illustrate how the combinatorial explosion of CaMKII's possible states makes it practically impossible to explicitly enumerate or efficiently evaluate all possible configurations using conventional mass action-based methods. In fact, previous studies have suggested that a CaMKII dodecamer could have as many as $10^{20}$ possible states (see appendix S1 for [@pharris2019Multistate]). The potential states of CaMKII vastly outnumber the actual CaMKII molecules in a dendritic spine, which suggests that not all states occur with the same frequency and therefore not all mathematically calculated states are biologically relevant. 
 
+Up to date, for CaMKII, it remains unclear which states functionally participate in synaptic plasticity, which is why rbm can help. we can specify some states and let the model take the wheel.
 
-Nevertheless, this example helps to grasp the idea of how the combinatorial explosion of CaMKII possibility of states means that such large number of possible states of CaMKII can neither be explicitly specified nor efficiently evaluated with conventional mass action-based methods. It has previously been suggested that a CaMKII dodecamer could have up to `$10^{20}$` possible states [@pharris2019Multistate]. 
+get into domain specific see what pharris says after what ive used for inspo.
 
 _The numbers of possible CaMKII states far exceeds the number of CaMKII molecules in a dendritic spine, suggesting that some states rarely occur and thus likely contribute little to protein function._
 
-
+The numbers of possible CaMKII states far exceeds the number of CaMKII molecules in a dendritic spine, suggesting that some states rarely occur and thus likely contribute little to protein function. Previous models leverage this observation to reduce the model state space and provide valuable insight to CaMKII binding and autophosphorylation dynamics [24, 33–36]. However, for CaMKII it remains unclear which states functionally participate in synaptic plasticity. Reduced models can inadvertently obscure key mechanisms regulating CaMKII activation and autophosphorylation. To elucidate complex regulatory mechanisms, it may be necessary for models to provide for all possible states ab initio._
 
 combinatorial explosion next - explain 
 
