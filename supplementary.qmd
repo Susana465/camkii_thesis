@@ -36,3 +36,12 @@ In summary, these capabilities make BNGL an ideal language for encoding our mode
 
 _Moreover, BioNetGen can be integrated with other modeling tools, such as those for parameter estimation or network analysis, and can be used in combination with experimental data to validate and refine models. Its ability to simulate the dynamics of protein–protein interaction networks in a computationally efficient manner has made it an indispensable tool in computational biology, systems biology, and bioinformatics research._
 
+#### BioNetGen: A Tool for Rule-Based Modeling {.unnumbered}
+
+Moreover, BioNetGen can be integrated with other modeling tools, such as those for parameter estimation or network analysis, and can be used in combination with experimental data to validate and refine models. Its ability to simulate the dynamics of protein–protein interaction networks in a computationally efficient manner has made it an indispensable tool in computational biology, systems biology, and bioinformatics research.
+
+There are three main things that are important here: space, time and structure of molecules (?) -> yes thats why RBM CAN BE HELPFUL. 
+
+the way compratments work in this kind of modelling - will need a methods section that is more specific than this one i think.
+
+what goes in a model and what comes out 
