@@ -18,3 +18,21 @@ _For example, if the phosphosites of a receptor are lumped together and these si
 _A protein with multiple functional components has the potential to interact with multiple binding partners simultaneously. A further layer of complexity arises because a protein may be subject to post-translational modifications at multiple sites46, 47, which regulate interactions and modulate catalytic activities. Many different combinations of interactions and multi-site modifications may be possible, with different combinations contributing to different signaling functions38. This hallmark feature of signaling systems has been termed combinatorial complexity48. The challenges posed by combinatorial complexity, discussed below, motivate the rule-based modeling approach._ https://pmc.ncbi.nlm.nih.gov/articles/PMC3947470/#:~:text=Rule%2Dbased%20models%20are%20compositional,rule%20for%20that%20interaction100.
 
 _. For example, a vertex representing a tyrosine residue in a protein that is a substrate of a protein tyrosine kinase and phosphatase can be associated with the attribute “P” (or “0”) to indicate that the tyrosine is phosphorylated (or unphosphorylated). Accessible formal definitions of the graphs used in rule-based modeling are available114._ https://pmc.ncbi.nlm.nih.gov/articles/PMC3947470/#:~:text=Rule%2Dbased%20models%20are%20compositional,rule%20for%20that%20interaction100.
+
+
+MAYBE AS SUMMARY FOR BNGL AND MCELL
+
+GOOD PLACE TO LINK TO MCELL? 
+
+In summary, these capabilities make BNGL an ideal language for encoding our models, offering key advantages, BNGL can:
+
+- Facilitate the modelling of domain-specific modifications, which is crucial for understanding site-specific binding and post-translational behaviours in molecules such as CaMKII and NMDA receptors within the postsynaptic density of neuronal dendrites.
+
+- Allow for these interactions to be studied through time and space (when combined with MCell4). This means that we can not only observe site-specific interactions but also track how these interactions evolve over time and within a cellular volume. For instance, we can investigate whether CaMKII is more likely to be phosphorylated near the postsynaptic density or at a distance from it.
+
+-  make models more efficient
+
+--
+
+_Moreover, BioNetGen can be integrated with other modeling tools, such as those for parameter estimation or network analysis, and can be used in combination with experimental data to validate and refine models. Its ability to simulate the dynamics of protein–protein interaction networks in a computationally efficient manner has made it an indispensable tool in computational biology, systems biology, and bioinformatics research._
+
