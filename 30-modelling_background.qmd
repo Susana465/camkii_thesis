@@ -105,17 +105,17 @@ A model can be defined using BNGL, where molecular interactions are specified th
 
 To illustrate integration between MCell and BioNetGen using python scripts, see below @fig-bngl-workflow, where a BNGL file defines species, reaction rules, molecule releases and compartments. These elements are then imported into MCell, as shown in @fig-mcell-workflow.
 
-![Need to describe figure.](30-modelling-figures\mcell4BNGLworkflow.PNG){#fig-bngl-workflow}
+![Need to describe figure.](30-modelling-figures\mcell4BNGLworkflow.PNG){#fig-bngl-workflow}{width="50%"}
 
-![This image is taken from @husar2022MCell4. It is here to exemplify a python file for running the MCell model file. _Python code for an MCell4 model that will implement loading of the BNGL file shown in Fig 10 (referenced as subsystem.bngl). In this example the entire BNGL file is read. It is also possible to load only specific parts of the BNGL file, for example only reaction rules or only compartment and molecule release information. It is also possible to replace BNGL compartments with actual 3D geometry._](30-modelling-figures\mcell4BNGLworkflow2.PNG){#fig-mcell-workflow}
+![This image is taken from @husar2022MCell4. It is here to exemplify a python file for running the MCell model file. _Python code for an MCell4 model that will implement loading of the BNGL file shown in Fig 10 (referenced as subsystem.bngl). In this example the entire BNGL file is read. It is also possible to load only specific parts of the BNGL file, for example only reaction rules or only compartment and molecule release information. It is also possible to replace BNGL compartments with actual 3D geometry._](30-modelling-figures\mcell4BNGLworkflow2.PNG){#fig-mcell-workflow}{width="50%"}
 
 _It is important to note that the file in Fig. 10 is a standard BNGL file, compatible with other tools like BioNetGen, meaning no additional conversion is required for use with other software. This allows for rapid validation of a reaction network using BioNetGen’s ODE solver or other analysis tools. This approach ensures that the model can be directly compared with the spatial simulation results in MCell4, eliminating the need for multiple versions of the same model._
 
-For a simple but more comprehensive model that incorporates detailed compartments and cell geometry, you can access and execute the code here [TEST_ABC](https://github.com/Susana465/test_ABC). This repository includes a set of models where spatial features are taken into consideration, and a thorough README is provided with step-by-step instructions that are beyond the scope of this introduction chapter.
+For a simple but more comprehensive model that incorporates detailed compartments and cell geometry, you can access, download and execute the code here [TEST_ABC](https://github.com/Susana465/test_ABC). This repository includes a set of models where spatial features are taken into consideration, and a thorough README is provided with step-by-step instructions that are beyond the scope of this introduction chapter.
 
 This integration of tools not only provides a more accurate depiction of cellular dynamics but also enhances reproducibility, as the Python scripting enables the simulations to be replicated and adjusted easily. While this overview provides a general understanding of the model's inputs and outputs, specific methodological details will be elaborated in the Methods section.
 
-
+## Next up biodynamo or reproducibility?
 ### Software used in this PhD {.unnumbered} - MIGHT need to be a chapter in itself
 
 In summary, some of the main reasons for using modelling are:
