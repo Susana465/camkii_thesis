@@ -125,3 +125,19 @@ but how do i make it into a hypothesis without biting my own tail? as in, i add 
 
 Pharris et al., do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don't have a step for binding of pp1, then dephosphorylation
 )
+
+# Sensitivity Analysis
+
+_Correlated inputs: Most common sensitivity analysis methods assume independence between model inputs, but sometimes inputs can be strongly correlated. Correlations between inputs must then be taken into account in the analysis_
+
+the sensitivity analysis result will change even if kon remains the same but we change koff for example...
+
+should I be doing a Variance-based sensitivity analysis? 
+
+In molecular dynamics or reaction kinetics, the interplay between 
+$k_{\text{on}}$ (the association rate constant) and $k_{\text{off}}$ (the dissociation rate constant) determines the equilibrium constant ($K_d$ or $K_a$), as well as the dynamics of binding and unbinding events.
+
+If $k_{\text{on}}$ remains constant but $k_{\text{off}}$ changes, the overall equilibrium constant $K_d = \frac{k_{\text{off}}}{k_{\text{on}}}$ or $K_a = \frac{k_{\text{on}}}{k_{\text{off}}}$ will change. This directly affects the system's steady-state or equilibrium conditions and, therefore, the behavior or "value" associated with $k_{\text{on}}$.
+
+
+I could test for Time to Equilibrium: Analyze how long it takes the system to reach a steady state for various 𝑘off values. 

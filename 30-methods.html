@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>methods</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="30-methods_files/libs/clipboard/clipboard.min.js"></script>
+<script src="30-methods_files/libs/quarto-html/quarto.js"></script>
+<script src="30-methods_files/libs/quarto-html/popper.min.js"></script>
+<script src="30-methods_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="30-methods_files/libs/quarto-html/anchor.min.js"></script>
+<link href="30-methods_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="30-methods_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="30-methods_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="30-methods_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="30-methods_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="model-description" class="level1">
+<h1>Model description</h1>
+<p>Abstract</p>
+<p>This chapter delves into the methods used to model molecular interactions of interest. Using Monte Carlo algorithm simulations with MCell and CellBlender, I modeled the interactions of initial molecules released inside the cell, including Ca2+, CaM, CaMKII, PP1, and NMDARs on the cell surface. The binding dynamics of calcium to calmodulin and subsequent interactions with CaMKII ware examined, alongside the states of CaMKII (open/closed, active/inactive) and the phosphorylation processes of CaMKII.</p>
+<p>The results should highlight the importance of CaM binding to CaMKII, and NMDARs, and its regulation through phosphorylation, as well as the role of these interactions in maintaining the phosphorylated state of CaMKII within the postsynaptic density.</p>
+<p>The models are run using a stochastic agent-based approach, where only the reactions between existing discrete molecules that occur during the simulation need to be tracked by the program (network free simulation [119, 120]). the important quantity is the number of different states present which can be much smaller than the number of possible states. As a general rule, stochastic simulations are preferred where the numbers of particles of a chemical species is small; the ODE approach is required when the number of particles is large because the stochastic approach might be computationally intractable. When the assumption of continuous concentration fails due to small-scale cellular environment with limited reactant populations, ODE representation also fails. It is here when stochastic simulations are useful.</p>
+<section id="what-i-want-out-of-this-chapter" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-want-out-of-this-chapter">What I want out of this chapter?</h2>
+<p>Explain CaMKII and NMDARs interactions in detail. Explain how they are structurally interacting, what bonds are binding, and what specific molecules are being attracted or repulsed in each molecule.</p>
+<p>DO NOT GET SIDE TRACKED WITH OTHER CHAPTERS. IF IDEAS COME CAN WRITE BUT FOCUS IS ON METHODS (do I want to rewrite this during the writing week? this probably takes quite a big chunk of time, decide on week have this as a maybe), BIOLOGY OF CAMKII AND NMDARS, AND RESULTS. I want to specify what happens to CaMKII when its docked, open etc in all the different steps and what this means in terms of conditions of binding etc. What are the assumptions and what are the real conditions for camkii to P or be active, for exmaple?</p>
+<p>During the writing retreat, I want to: - read and specify in writing what happens when camkii docked vs undocked - tidy up all the info I have already below on CaMKII and NMDARs into a cohesive story - Tidy up the section where I write what others have done and why mine is different - Look at the feedback David game a few weeks ago on thesis layout (need to find) - Add result figures (add at least 4) of molecule reactions</p>
+<p>Further objectives I’d like to add here are: - finish model and see what different conditions I can test, mutants vs wt for example - look at space dynamics in mcell, need to discuss with supervisors</p>
+</section>
+<section id="molecular-species-how-are-molecular-interactions-modelled" class="level2">
+<h2 class="anchored" data-anchor-id="molecular-species-how-are-molecular-interactions-modelled">Molecular species: How are molecular interactions modelled?</h2>
+<p>I have constructed the models at different scales to validate CaMKII interactions with other molecules like calmodulin and NMDARs, at increasing levels of complexity. First I re-created a model of CaMKII as a monomer that was previously completed in 2017. That model used cBNGL and represented CaMKII as monomers to serve as a proof of concept as well as a starting validation point, as dynamics of this model were previously shown to be within biologically accurate limits.</p>
+<p>The current model is ran with CaMKII as a dodecameric molecule. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.</p>
+<p>There are different ways in which molecular states can happen and interact. For example, CaMKII subunits can flicker, without external prompt of any other molecule, between an open and closed state (reaction #5 <a href="#fig-table-rxns1" class="quarto-xref">Figure&nbsp;1</a>). Likewise, if two neighbouring subunits are open, one can autophosphorylate the other (reaction #7 <a href="#fig-table-rxns1" class="quarto-xref">Figure&nbsp;1</a>). If calmodulin then binds to a subunit that is phosphorylated, it is more likely to keep the subunit in an active, phosphorylated state. In contrast, phosphorylation of the T306 site prevents calmodulin from binding to the CaMKII subunit (reaction #8 <a href="#fig-table-rxns1" class="quarto-xref">Figure&nbsp;1</a>), making the subunit less likely to remain in its active state compared to when it is stabilized by CaM binding or T286 phosphorylation. Dephosphorylation by PP1 at T286 can occur when the site is accessible, meaning the subunit is phosphorylated at T286, unbound to CaM, and in an open state. In order to fully understand the different conditions and reactions in the model, let’s look into them more in detail next.</p>
+<p>Molecules in the model can have various binding sites, or none. For example, Ca2+ and PP1 are modelled as reactants that can interact with other molecules, but they themselves don’t have binding sites. On the other hand, CaM, CaMKII and NMDAR all have different binding sites (ADD FIGURE). Importantly, CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE)</p>
+</section>
+<section id="model-validation" class="level2">
+<h2 class="anchored" data-anchor-id="model-validation">Model validation</h2>
+<p>The processes used in software development can also apply to biological model development. Following <span class="citation" data-cites="husar2022MCell4">(<a href="#ref-husar2022MCell4" role="doc-biblioref"><strong>husar2022MCell4?</strong></a>)</span>, four key points were considered for this project:</p>
+<ol type="1">
+<li><p>Incremental model development: build the model step by step on validated foundations.</p></li>
+<li><p>Modularity: create self-contained, reusable libraries</p></li>
+<li><p>Unit testing and validation: ensure parts of the model behave as expected.</p></li>
+<li><p>Human-readable code: store using version control such as git for easy review by team members.</p></li>
+</ol>
+<p>Finally, I aim to validate this work against a model from <span class="citation" data-cites="ordyan2020Interactions">Ordyan et al. (<a href="#ref-ordyan2020Interactions" role="doc-biblioref">2020</a>)</span>, where they successfully modelled CaMKII as a twelve subunit holoenzyme using BioNetGen simulations. What have pharris, ordyan and other people done and how does my model relate and differ.</p>
+</section>
+<section id="model-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="model-parameters">Model parameters</h2>
+<div id="fig-table-rxns1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-table-rxns1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-methods-figures\table_rxns1.PNG" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table-rxns1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Table to be added as markdown but not yet as first need to render document but leaving it as screenshots for reference for now.
+</figcaption>
+</figure>
+</div>
+<div id="fig-table-rxns2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-table-rxns2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-methods-figures\table_rxns2.PNG" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table-rxns2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: 2nd part
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="model-creation-and-visualization-in-cellblender" class="level2">
+<h2 class="anchored" data-anchor-id="model-creation-and-visualization-in-cellblender">Model creation and visualization in CellBlender</h2>
+<p>I began the model of CaMKII monomers as described in the 2017 model I created using MCell and CellBlender. At the time, MCell did not allow for molecules be modelled as multi-complexes. Thus, for example, one phosphorylated CaMKII molecule in the model was just a single subunit phosphorylated –not twelve phosphorylated subunits. This model includes Ca2+ binding rates to CaM, CaM binding rates to monomeric CaMKII, and phosphorylation rates of active CaMKII monomers by one another, all depending on how many Ca2+ ions are bound to the CaM molecules involved. CaMKII dephosphorylation by PP1 is modelled, as well as binding interactions of CaMKII with NMDARs. In order to replicate and validate the results obtained from the CaMKII monomer in 2017, I re-wrote all reactions into a cBNGL model using the same parameters used originally. We define a volume previously modelled of 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris and Stevens, 1989). Using cBNGL, I can specify the above mentioned 3D volume, with a 2D surface compartment acting as the cell membrane, where NMDARs can diffuse. Inside the cell volume, all of the interacting molecules are released as per table 1.</p>
+</section>
+<section id="what-have-other-people-done" class="level2">
+<h2 class="anchored" data-anchor-id="what-have-other-people-done">What have other people done?</h2>
+<p><em>Previous multi-state models of CaMKII exist but are different in focus and in scope from the 462 present model. For example, our model is based on an earlier multi-state model by Stefan et al.&nbsp;(2012) 463 [29] implemented in the particle-based stochastic simulator StochSim [70].StochSim does not explicitly account for spatial information. MCell, as a spatial simulator, 466 offers more possibilities to precisely account for spatial effects and to situate models in spatially realistic 467 representations of cellular compartments. In addition, the model by Stefan et al.&nbsp;provides only for 468 interactions between adjacent CaMKII molecules on the same hexamer ring and therefore models 469 CaMKII as a hexamer, not a dodecamer.</em></p>
+<p>Michalski and 470 Loew (2012) bionetgen and vcell.</p>
+<p>rule-based model of the CaMKII holoenzyme by 478 Li and Holmes [26] offers a detailed representation of how CaM binds to Ca2+ and subsequently activates 479 CaMKII subunits, based on earlier results of CaM regulation [75]. Li and Holmes offer valuable and 480 detailed insight into how CaM binding to CaMKII depends on Ca2+ dynamics.</p>
+<p>Parris model looks at CaMKII dynamics with CaM particularly, uses mcell - they didnt look at binding with nmdars. This study was done using MCell 3.3 which did not allow for diffusion of multistate molecules.</p>
+<p>Ordyan looks at CaMKII and NMDARs with mcell and bionetgen but does not look at space dynamics - I think? Ordyan et al., use rule-based modelling methodology using Monte Carlo methods similar to this work, to investigate how Ca2+ signals influence the dynamics of CaMKII phosphorylation within the PSD.</p>
+<p><em>Ordyan et al.&nbsp;(199) developed a multiscale, rule-based model of CaMKII activation that accounted for kinetics of CaMKII modelled as a monomer and a holoenzyme. Their findings suggested that CaMKII functions as a leaky integrator of Ca2+ pulses in the presence of neurogranin (Ng) and PP1, consistent with previous experimental observations in short LTP (46). Their results suggest CaMKII integrates Ca2+ signals in a frequency-dependent manner, which contrasts with the earlier models that propose CaMKII functions as a bistable memory switch (212).</em></p>
+<p>Likewise, another model supports the idea that CaMKII acts as a leaky integrator of Ca2+ in a PP1-rich environment (243). Rather, CaMKII might exhibit bistability in specific microenvironments, such as the ‘core’ PSD where it binds to the NMDA receptor (Dosemeci et al., 2016; Petersen et al., 2003). Whereas in the spine cytosol, CaMKII has been demonstrated to act not as a bistable switch but as a leaky integrator of calcium activity (Chang et al., 2017).</p>
+<section id="how-have-others-modelled-calcium-binding-to-cam" class="level3">
+<h3 class="anchored" data-anchor-id="how-have-others-modelled-calcium-binding-to-cam">How have others modelled calcium binding to cam?</h3>
+<ul>
+<li>Pharris et al., 2020: cam is set into the model as either unbound to calcium, or fully saturated, cam bound to 4 calcium (I cannot find how they model this transition).</li>
+</ul>
+<p><em>CaM and PP are modeled in MCell as conventional cytosolic molecules. CaM is modeled as 132 having one of two states: un-bound apo-CaM and fully-saturated Ca2+/CaM (four Ca2+ bound to CaM). 133 Although we and others have described the importance of sub-saturated Ca2+/CaM states with fewer than 134 4 Ca2+ [12, 24, 31, 44-46], the dynamics of Ca2+-CaM binding and the binding of sub-saturated Ca2+/CaM 135 to CaMKII are beyond the scope of this current work.</em></p>
+<ul>
+<li>Stefan at al., 2008: ca binds with same affinity regardless of 1, 2 or 4 binding, and affinity is modelled according to dissociation rate: <em>The kon for calcium binding was assumed to be the same for all four binding sites and both states, because it can be assumed to be controlled only by calcium and calmodulin diffusion and size (random exploration). Different affinities were represented by different koff values.</em></li>
+</ul>
+</section>
+<section id="how-have-others-modelled-cam-binding-to-camkii" class="level3">
+<h3 class="anchored" data-anchor-id="how-have-others-modelled-cam-binding-to-camkii">How have others modelled cam binding to camkii?</h3>
+</section>
+<section id="how-have-others-modelled-camkii-p" class="level3">
+<h3 class="anchored" data-anchor-id="how-have-others-modelled-camkii-p">How have others modelled camkii P?</h3>
+</section>
+<section id="how-have-others-modelled-camkiinmdar-interactions-if-at-all" class="level3">
+<h3 class="anchored" data-anchor-id="how-have-others-modelled-camkiinmdar-interactions-if-at-all">How have others modelled camkii/nmdar interactions, if at all?</h3>
+</section>
+</section>
+<section id="bartol-et-al.-2024" class="level2">
+<h2 class="anchored" data-anchor-id="bartol-et-al.-2024">Bartol et al., 2024</h2>
+<p>Bartol et al.&nbsp;2024 use particle-based stochastic simulations in MCell4 to model the activation of CaMKII by Ca2+ flowing through NMDARs within a postsynaptic spine. They translate the kinetic properties of CaMKII regulation previously measured <em>in vitro</em> into the context of a computational model of a postsynaptic spine.</p>
+<p>Using MCell4 simulations, the paper shows that CaMKII autophosphorylation, influenced by ‘Ca2+-calmodulin-trapping’ and PP1 dephosphorylation mechanisms, does not behave as a bistable switch, but instead they propose a “kinetic proofreading” mechanism of CaMKII, crucial for synaptic plasticity induction.</p>
+<p>They test CaM trapping hypothesis that it leads to an increase in CaMKII autoP during high frequency synaptic stimulation. They <em>test this hypothesis by investigating the impact of CaM-trapping on the dynamics of activation of CaMKII in a stochastic reaction-diffusion model instantiated in a realistic spine geometry</em>. <em>We also investigate how CaM-trapping may regulate dephosphorylation of CaMKII by protein phosphatase-1 (PP1), and thus influence the kinetics of autophosphorylation of CaMKII and the response of CaMKII to different stimulation frequencies.</em></p>
+<p>EXTRA THAT IM LEAVING BECAUSE IM TOO SAD TO DELETE due to sunk cost fallacy BUT PROBABLY SHOULD delete: (This manuscript reports the fundamental finding that an oligomeric protein kinase, CaMKII, can be phosphorylated by another molecule of the holoenzyme in a manner that does not involve subunit exchange. the summary by editor and abstract say different things. the abstract says inter subunit exchange, the summary says intra subunit exxchange which one is it. https://elifesciences.org/articles/86090 )</p>
+<p>Is the info below wrong, then? Modelling studies (Lisman, 1985; Miller et al., 2005) have suggested that intersubunit autophosphorylation can maintain the phosphorylated state of the kinase once it is located in the PSD; each subunit is catalytic and, if itself phosphorylated at T286, can phosphorylate T286 on a nearby subunit that might become dephosphorylated. (this reaction requires that the substrate subunit has calmodulin bound as a result of basal Ca2+ levels (Hanson et al., 1994)). Recent reconstitution experiments directly demonstrate this mechanism (Urakubo et al., 2014). <em>It has been reported that the binding affinity of CaMKIIα for Ca2+/CaM increases by Thr286 phosphorylation [7].</em> https://www.nature.com/articles/s41467-019-10694-z</p>
+<p>(Rostas and Skelding, 2023)<em>Initial enzyme activity of purified CaMKII requires the binding of both calcium and calmodulin. Following this, autophosphorylation of Thr286 in CaMKIIα occurs quickly and produces the following outcomes:</em></p>
+<ul>
+<li>A 1000-fold increase in the affinity for CaM_Ca4 So when CaMKII_P binding of CaM_Ca4 is 1000 times more likely to bind (and stay bound) to CaMKII_P.</li>
+</ul>
+<p>This should mean that CaM_Ca4 dissociation rate from CaMKII_P should be quite slow.</p>
+<p>the active cam bound kinetics of camkii will be different to the active cam unbound kinetics. so i think this should be specified in the model.</p>
+<p>right now after conversations with melanie we decided to just add active~1 no matter whether its bound to cam nmdar or just open, but the reactions kinetics will vary depending on whether camkii is active~1 because of flickering, cam bound or nmdar bound. I think? need to look into literature and maybe this can be a hypothesis to test.</p>
+<p>would camkii activity make a difference if camkii active~1 varies due to being bound to nmdars or cam?</p>
+<p>but how do i make it into a hypothesis without biting my own tail? as in, i add x or y kinetics, of course its gonna give x or y results respectively. there are also emergent properties.</p>
+<p>Pharris et al., do a detransition of different steps for dephosphorylation. In this model we have the requirement that cam be not bound to a camkii subunit but otherwise PP1 can act and dephosorylate directly (we don’t have a step for binding of pp1, then dephosphorylation )</p>
+</section>
+</section>
+<section id="sensitivity-analysis" class="level1">
+<h1>Sensitivity Analysis</h1>
+<p><em>Correlated inputs: Most common sensitivity analysis methods assume independence between model inputs, but sometimes inputs can be strongly correlated. Correlations between inputs must then be taken into account in the analysis</em></p>
+<p>the sensitivity analysis result will change even if kon remains the same but we change koff for example…</p>
+<p>should I be doing a Variance-based sensitivity analysis?</p>
+<p>In molecular dynamics or reaction kinetics, the interplay between <span class="math inline">\(k_{\text{on}}\)</span> (the association rate constant) and <span class="math inline">\(k_{\text{off}}\)</span> (the dissociation rate constant) determines the equilibrium constant (<span class="math inline">\(K_d\)</span> or <span class="math inline">\(K_a\)</span>), as well as the dynamics of binding and unbinding events.</p>
+<p>If <span class="math inline">\(k_{\text{on}}\)</span> remains constant but <span class="math inline">\(k_{\text{off}}\)</span> changes, the overall equilibrium constant <span class="math inline">\(K_d = \frac{k_{\text{off}}}{k_{\text{on}}}\)</span> or <span class="math inline">\(K_a = \frac{k_{\text{on}}}{k_{\text{off}}}\)</span> will change. This directly affects the system’s steady-state or equilibrium conditions and, therefore, the behavior or “value” associated with <span class="math inline">\(k_{\text{on}}\)</span>.</p>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ordyan2020Interactions" class="csl-entry" role="listitem">
+Ordyan, Mariam, Tom Bartol, Mary Kennedy, Padmini Rangamani, and Terrence Sejnowski. 2020. <span>“Interactions Between Calmodulin and Neurogranin Govern the Dynamics of <span>CaMKII</span> as a Leaky Integrator.”</span> <em>PLOS Computational Biology</em> 16 (7): e1008015. <a href="https://doi.org/10.1371/journal.pcbi.1008015">https://doi.org/10.1371/journal.pcbi.1008015</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
