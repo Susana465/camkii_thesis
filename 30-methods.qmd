@@ -130,7 +130,13 @@ Pharris et al., do a detransition of different steps for dephosphorylation. In t
 
 _Correlated inputs: Most common sensitivity analysis methods assume independence between model inputs, but sometimes inputs can be strongly correlated. Correlations between inputs must then be taken into account in the analysis_
 
-the sensitivity analysis result will change even if kon remains the same but we change koff for example...
+### Sensitivity and Uncertainty Analysis
+
+**Sensitivity analysis** is a valuable tool for identifying the key parameters that most significantly influence the final results of a model. By focusing on the rate constants or interactions that have the greatest impact, you can reduce the complexity of the system. This allows you to optimize or vary only a subset of parameters, improving both the efficiency and accuracy of your analysis.
+
+**Uncertainty analysis**, on the other hand, explores how uncertainties in parameters—such as \( k_{\text{on}} \) and \( k_{\text{off}} \)—propagate through the system. This analysis helps determine how robust your model is to variations in these parameters, providing insight into the model’s reliability and the range of potential outcomes under different conditions.
+
+the sensitivity analysis result will change even if kon remains the same but we change koff for example...how do i keep track of these changes in a modular manner?
 
 should I be doing a Variance-based sensitivity analysis? 
 
@@ -139,5 +145,28 @@ $k_{\text{on}}$ (the association rate constant) and $k_{\text{off}}$ (the dissoc
 
 If $k_{\text{on}}$ remains constant but $k_{\text{off}}$ changes, the overall equilibrium constant $K_d = \frac{k_{\text{off}}}{k_{\text{on}}}$ or $K_a = \frac{k_{\text{on}}}{k_{\text{off}}}$ will change. This directly affects the system's steady-state or equilibrium conditions and, therefore, the behavior or "value" associated with $k_{\text{on}}$.
 
-
 I could test for Time to Equilibrium: Analyze how long it takes the system to reach a steady state for various 𝑘off values. 
+
+- The **equilibrium condition** is defined by:
+
+  $$
+  K_d = \frac{k_{\text{off}}}{k_{\text{on}}}.
+  $$
+
+  At equilibrium, the fraction of bound molecules ($\theta\$) depends on ($K_d$) and the total concentration of ligands ([L]):
+
+  $$
+  \theta = \frac{[L]}{[L] + K_d}.
+  $$
+
+- For **kinetics**, the rate equations govern how quickly the system approaches equilibrium:
+
+  $$
+  \frac{d[AB]}{dt} = k_{\text{on}} [A][B] - k_{\text{off}} [AB],
+  $$
+
+  where \([AB]\) is the concentration of the bound complex.
+
+How the sensitivity analysis is done (maybe good to have a README file for where the code is too, i think)
+
+prepare run model, sweep params, store them and analyze them. 
