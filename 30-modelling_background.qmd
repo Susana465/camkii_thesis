@@ -2,7 +2,7 @@
 bibliography: [references.bib]
 ---
 
-# Introduction to computational modelling
+# Introduction to computational modelling {#sec-intro-comp}
 The term "computational modelling" serves as an umbrella term, covering different ways of modelling that are designed to help humans understand real-world phenomena.  For simplicity, this PhD defines computational modelling broadly as "the use of computers to simulate and study complex systems through mathematics, physics, and computer science" (as described by the @NIBIB fact sheet). A computational model incorporates numerous variables representing the system under study, with simulations performed by adjusting these variables —either independently or in combination— and observing the outcomes. This PhD specifically employs computational modelling to explore biological systems, focusing on biochemical modelling of dynamic, complex reaction networks that underpin biological processes. 
 
 Computational modelling offers a powerful means of investigating complex biological systems by simulating molecular interactions and emergent behaviours. These models aim to describe the elements of a system, their states, and their interactions with sufficient precision to replicate real-world dynamics. Biological systems, such as cells, exhibit multiscale processes, where molecular interactions lead to larger-scale cellular behaviours, often occurring across various cellular compartments. To study these systems, appropriate mathematical tools are required to capture dynamic, multiscale processes and provide insights into both normal function and disease.

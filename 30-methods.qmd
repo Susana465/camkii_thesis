@@ -128,6 +128,70 @@ Pharris et al., do a detransition of different steps for dephosphorylation. In t
 
 # Sensitivity Analysis
 
+what is the story i wanna tell here.
+
+what is the purpose of sensitivity analysys, what are they good for, briefly what kinds there are.
+how are they specifivcally useful for parameter sensitivity analysis in complex chemical reactions like they ones we use.
+what kind of analysis we use and why
+how does it work?
+step by step explanation
+show results of sensitivity analysis for camkii model. 
+...
+
+
+As discussed in @sec-intro-comp, advanced mathematical models can serve as predictive tools to deepen our understanding of the mechanisms underlying observed biochemical processes. However, parameters such as rate constants, activation energies, thermodynamic constants, transport coefficients, etcetera, are rarely known with precision [REFEReNCE]. Consequently, predictions are typically subject to uncertainty. That is why understanding how parameter variations influence outcomes is a crucial part of model development and validation.
+
+As part of model development and validation, sensitivity analysis (SA) can be employed to determine which parameters the model is more or less responsive to. This technique focuses on quantifying the impact of parameter changes on model predictions. SA aims to determine the influence of each input parameter, on the the model's output behaviour. In other words, SA is useful to assess how variations in input parameters, such as reaction propensities, rate constants, or initial concentrations, influence the system's outputs, which might include reaction trajectories, species concentrations over time, or the likelihood of certain reaction outcomes. 
+
+By quantifying the responsiveness of the model's outputs to variations in these parameters, SA enables researchers to prioritise the most impactful parameters for precise measurement or further investigation. This is especially valuable when studying chemical kinetics, where many parameters are difficult to measure directly and often carry inherent uncertainties [REFERENCE]. SA not only aids in parameter estimation but also enhances model robustness and guides experimental design by highlighting which aspects of the reaction system are most sensitive to changes, thereby improving the predictive accuracy of kinetic models such as the ones used in this PhD.
+
+https://gsa-module.readthedocs.io/en/develop/implementation/gsa.html#id1
+
+https://www.sciencedirect.com/science/article/pii/S0951832005002437 
+
+https://onlinelibrary.wiley.com/doi/full/10.1111/0272-4332.00039?casa_token=kSMZ8az_d9oAAAAA%3ADJHlyubFxmCaaW3H5rz0VT3Gu929Eo9dIzWqkFGaYfsqmHnYQgT235CNJBMI8Mg_v2HcVFWl9qOejRmn
+
+file:///C:/Users/susan/Downloads/ssrn-3977108.pdf
+
+Applications of sensitivity analysis to
+uncertainty analysis, parametric scaling, parameter estimation, experimental design,
+stability analysis, repro-modeling, and investigation and reduction of complex reaction
+mechanisms are discussed profoundly. 
+Usually, several sensitivity tools can be used to solve the same problem and
+the selection of the appropriate method is based on a trade-off between accuracy and
+computer time demand. 
+The process of extrapolation of a modeling result to new parametric conditions
+is called _parametric scaling._
+
+
+
+Furthermore, regardless of uncertainty questions, there is always the overriding matter of which parameters control laboratory observations. Quantification of the role of the parameters in the model predictions is the traditional realm of sensitivity analysis. 
+
+Sensitivity analysis investigates the effect of parameter change on the solution of
+mathematical models. In chemical kinetics, models are usually based on differential
+equations and the results are concentration-time curves, reaction rates, and various kinetic
+features of the reaction.
+
+There are several reviews on the various subfields of sensitivity
+analysis: Tilden et al. overviewed the local and global methods [9], Cukier et al.
+summarized the FAST method [10], and other non-comprehensive reviews can also be
+found in the literature [11-17]. 
+
+Other methods, described in
+section 3, are suitable for the calculation of the sensitivity of special systems which
+occur when the kinetic model has space- and time-dependent parameters or when the
+kinetics is described by a stochastic or by a network model, or when experimental data
+are processed. file:///C:/Users/susan/Downloads/BF01166355.pdf 
+
+y are described in detail in section 6.
+In this review, sensitivity analysis will be discussed from the point of view of
+reaction kinetics.
+
+
+Complex mathematical models are increasingly being used as predictive tools and as aids for understanding the processes underlying observed chemical phenomena. The parameters appearing in these models, which may include rate constants, activation energies, thermodynamic constants, transport coefficients, initial conditions, and operating conditions, are seldom known to high precision. 
+
+...
+
 _Correlated inputs: Most common sensitivity analysis methods assume independence between model inputs, but sometimes inputs can be strongly correlated. Correlations between inputs must then be taken into account in the analysis_
 
 ### Sensitivity and Uncertainty Analysis
