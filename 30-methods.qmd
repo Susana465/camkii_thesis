@@ -145,6 +145,18 @@ As part of model development and validation, sensitivity analysis (SA) can be em
 
 By quantifying the responsiveness of the model's outputs to variations in these parameters, SA enables researchers to prioritise the most impactful parameters for precise measurement or further investigation. This is especially valuable when studying chemical kinetics, where many parameters are difficult to measure directly and often carry inherent uncertainties [REFERENCE]. SA not only aids in parameter estimation but also enhances model robustness and guides experimental design by highlighting which aspects of the reaction system are most sensitive to changes, thereby improving the predictive accuracy of kinetic models such as the ones used in this PhD.
 
+Numerous classifications of SA techniques are presented in the literature [REFERENCES], each tailored to specific applications. SA can be applied to uncertainty analysis, parametric scaling, parameter estimation, experimental design, stability analysis, and the investigation and reduction of complex reaction mechanisms, among others [REFERENCES]. 
+
+SA techniques can be can be broadly classified based on two key aspects: the analysis _scope_ and its _framework_. The scope of SA refers to whether the analysis focuses on small, local variations in input parameters or examines the global effect across a wider range of parameter values. Local sensitivity analysis typically investigates the effect of small perturbations in a single input parameter while holding others constant, often focusing on the immediate response of the model around a specific operating point. In contrast, global sensitivity analysis explores how changes in all relevant input parameters, over their entire range of possible values, influence the model's output, accounting for interactions between parameters and providing a more comprehensive view of model behaviour.
+
+The framework refers to the approach used to model uncertainty (see @sec-odessa) in the system under study, and the method for sensitivity analysis will depend on whether the system is deterministic or probabilistic. In a deterministic sensitivity analysis framework, the relationship between inputs and outputs is precise and fixed, with no inherent randomness. Whereas a probabilistic (or stochastic) framework accounts for uncertainty by incorporating variability and randomness into the model, recognising that parameters may change within defined ranges or follow probability distributions. 
+
+The framework refers to the approach used to model uncertainty in the system under study. The method for SA will vary dewpending on whether the system studied is deterministic or probabilistic. this gets complicated when models relations and behavrious are not linear and fixed, but probabilistic.  In a deterministic sensitivity analysis framework, the relationship between inputs and outputs is fixed and precise, with no inherent randomness (see @sec-odessa). On the other hand, a probabilistic (or stochastic) frameworks incorporate uncertainty into the model, where parameters are subject to variability and randomness. 
+
+this gets complicated when models relations and behavrious are not linear and fixed, but probabilistic. 
+
+Combining the single parameter sensitivity analysis and the robustness analysis to multiple parameter perturbation enables identifying critical reactions. Robustness analysis Exploring general features that do not depend on the exact values of kinetic parameters. https://slideplayer.com/slide/4128635/ 
+
 https://gsa-module.readthedocs.io/en/develop/implementation/gsa.html#id1
 
 https://www.sciencedirect.com/science/article/pii/S0951832005002437 
