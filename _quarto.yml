@@ -27,10 +27,10 @@ link-citations: true
 number-depth: 1
 
 format:
-  #docx:
-  #  toc: true
-  #  number-sections: true
-  #  highlight-style: github   
+  docx:
+   toc: true
+   number-sections: true
+   highlight-style: github   
   html:
     number-sections: true
     theme: pulse
