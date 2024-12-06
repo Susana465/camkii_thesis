@@ -72,7 +72,18 @@ CaMKII subunits can be found docked (also known as "compact state"), or undocked
 
 Notably, although CaMKII adopt the docked/compact state, multiple studies suggest that the majority of the kinase is found in its activation-competent, extended conformation (>95%), both in vitro and in intact cells (Myers et al., 2017; Sloutsky et al., 2020) https://pmc.ncbi.nlm.nih.gov/articles/PMC8985225/. 
 
-At its basal state, CaMKII is found with its subunits mostly in their closed, inactive state where the regulatory domain is bound to the kinase domain [FIGURE]. In the open conformation, CaMKII subunits can autophosphorylate each other at threonine 286 (T286) found in the inhibitory segment, which prevents the segment from closing, and uncovers the binding sites in the kinase domain for CaMKIIs substrates and anchoring proteins. This autophosphorylation event allows CaMKII to remain in an autonomous, calcium/calmodulin-independent active form, which enables enzymatic activity to persist even after the initial calcium stimulus has passed [REFERENCES]. 
+At its basal state, CaMKII is found with its subunits mostly in their closed, inactive state where the regulatory domain is bound to the kinase domain [FIGURE]. In the open conformation, CaMKII subunits can autophosphorylate each other at threonine 286 (T286) found in the inhibitory segment, which prevents the segment from closing, and uncovers the binding sites in the kinase domain for CaMKIIs substrates and anchoring proteins. 
+
+
+This autophosphorylation event allows CaMKII to remain in an autonomous, calcium/calmodulin-independent active form, which enables enzymatic activity to persist even after the initial calcium stimulus has passed [REFERENCES]. What is more, binding of CaM has been shown to significantly increase the kinase's affinity for calcium-bound CaM.[REFERENCE].
+
+In its basal state, the structural constraints of CaMKII prevent CaM from interacting with the kinase. However, after T286 autophosphorylation the autoinhibitory segment may be kep in its open state allowing more CaM to bind to the kinase. In this way, autoP allows for autonomous activity without cam AND for more CaM to bind and induce even more autoP in a sort of feedforward loop. 
+
+_"Moreover, binding of CaM significantly enhances the kinase's affinity for calcium-bound CaM. In its basal state, the structural constraints of CaMKII prevent CaM from interacting with the kinase. However, after autophosphorylation at T286, the autoinhibitory segment is held in an open conformation, facilitating greater CaM binding to the kinase. This increased CaM binding not only sustains the autonomous activity of CaMKII without the need for calcium or calmodulin, but also promotes further autophosphorylation in a positive feedback loop. As a result, CaMKII activity becomes self-reinforcing, leading to sustained kinase activation even in the absence of the initial calcium signal."_
+
+Two additional autophosphorylation sites, T305 and T306, provide CaMKII with important autoregulatory functions, although the exact mechanisms behind this remain uncovered. These sites are within the CaM binding segment; if they are phosphorylated CaM cannot bind, and if CaM is bound these sites cannot phosphorylate. These sites' activity is often referred to as ihibutory autophosphorylation, as its prevention from CaM binding consequentially leads to reduced catalytic activity of CaMKII
+
+ This subunit phosphorylation is ofen refered to as reducing catalytic activity of CaMKII. T306 phosphorylation may act as a form of kinetic proofreading, by ensuring that CaMKII remains inactive, or less active, unless sustained or repetitive calcium signals are present. It prevents premature or excessive kinase activity, thereby enhancing the specificity and fidelity of CaMKII-mediated signaling in response to synaptic activity.
 
 https://www.mdpi.com/2076-3425/12/12/1639
 
