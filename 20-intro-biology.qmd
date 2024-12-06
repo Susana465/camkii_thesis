@@ -66,9 +66,15 @@ CaMKII is expressed ubiquitously in animals, with four known isoforms $\alpha$, 
 (A) _All CaMKII isozymes are comprised of a kinase domain, a regulatory domain, a linker region that is subject to alternative splicing, and an association domain._ (B) Six CaMKII subunits..(C) Crystal structure https://www.cell.com/cell-reports/fulltext/S2211-1247%2824%2900310-3. (D) kinase domain (this figure legend needs updating).
 :::
 
--need to specify docked, undocked, open, closed in this paragrpah. 
+-need to specify docked, undocked, open, closed in this paragrpah.
+
+CaMKII subunits can be found docked (also known as "compact state"), or undocked (or extended); and open, or closed (@fig-camkii-structure). In the docked state, CaMKII subunits adopt a more compact configuration, where the regulatory domain is closely associated with the hub domain. When CaMKII subunits are found in the docked state, they cannot autophosphorylate their neighbouring subunits, even if the subunits are open. This is because the compact shape does not allow the kinase domain of one subunit to structurally reach its neighbour. Therefore, it is thought that for CaMKII to have autphosphorylation activity, subunits need to be in an “open” and undocked conformation. Subunits in a docked, open state may bind to and perform some kinase activity [REFERENCE NEEDED], but they lack the structural capacity for autophosphorylation activity. In the undocked state, the regulatory domain is extended and separated from the hub domain. This conformation makes the subunits less compact and more “loose” which can facilitate interactions within subunits, and with other substrates. When undocked, CaMKII subunits can phosphorylate neighbours so long as they are in an open state as the kinase domain is structurally available to perform such function. If a subunit is undocked but closed, it lacks catalytic activity because its regulatory domain is bound to its catalytic site, preventing the kinase domain from being accessed or accessing targets. 
+
+Notably, although CaMKII adopt the docked/compact state, multiple studies suggest that the majority of the kinase is found in its activation-competent, extended conformation (>95%), both in vitro and in intact cells (Myers et al., 2017; Sloutsky et al., 2020) https://pmc.ncbi.nlm.nih.gov/articles/PMC8985225/. 
 
 At its basal state, CaMKII is found with its subunits mostly in their closed, inactive state where the regulatory domain is bound to the kinase domain [FIGURE]. In the open conformation, CaMKII subunits can autophosphorylate each other at threonine 286 (T286) found in the inhibitory segment, which prevents the segment from closing, and uncovers the binding sites in the kinase domain for CaMKIIs substrates and anchoring proteins. This autophosphorylation event allows CaMKII to remain in an autonomous, calcium/calmodulin-independent active form, which enables enzymatic activity to persist even after the initial calcium stimulus has passed [REFERENCES]. 
+
+https://www.mdpi.com/2076-3425/12/12/1639
 
 -need to add t306 p
 
