@@ -99,6 +99,8 @@ The term “activity” in CaMKII literature can refer to different functional s
 
 use here: Notably, multiple studies suggest that the majority of the kinase is found in its activation-competent, extended/undocked conformation ( over 95%), both in vitro and in intact cells (Myers et al., 2017; Sloutsky et al., 2020) https://pmc.ncbi.nlm.nih.gov/articles/PMC8985225/. Additionally, at its basal state, CaMKII is found with its subunits mostly in their closed, inactive state where the regulatory domain is bound to the kinase domain [FIGURE]. 
 
+induced-fit vs "random" activation and binding of cam to camkii/open/closed. 
+
 ## Binding of calcium to calmodulin
 CaM is modelled as being able to bind four calcium ions; CaM has four EF hands divided into N and C lobes capable of binding two calcium ions per lobe. The N lobe binds calcium faster with lower affinity and the C lobe binds slower with higher affinity [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various of these models, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Unlike other models that distinguish between CaM's N-terminal and C-terminal binding lobes, this project does not, as the specifics of calcium binding to calmodulin are beyond its scope. Additionally, following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions.
 
@@ -241,3 +243,7 @@ The non-autophosphorylated CaMKII may dissociate more quickly, resulting in shor
 - extra: Incorporate calcium dynamics: model how calcium transients affect CaMKII activation in both T306p and non-T306p states, comparing the kinase’s ability to maintain activity during and after calcium influx.
 
 **Rationale:** T306 phosphorylation blocks CaM binding, reducing CaMKII’s sensitivity to calcium transients. As a result, T306-phosphorylated CaMKII may have reduced binding affinity for NMDARs compared to its unphosphorylated form. However, CaMKII may still retain some activity through other subunits within the dodecamer, or by autophosphorylation at Thr286, allowing for partial phosphorylation of NMDARs. This could lead to weaker but non-null phosphorylation of the GluN2B subunit (potentially supporting transient synaptic plasticity rather than sustained potentiation.). 
+
+Specifically, does T286 need to be phosphorylated to maintain the stability of the CaMKII-GluN2B complex (see sect. 9.2.1)?  https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
+
+A prediction of the basic properties of CaMKII described above is that with brief repetitive Ca2+ spikes the enzyme would recruit more Ca2+/CaM, increasing the probability of autophosphorylation and a higher level of activity (FIGURE 3).https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
