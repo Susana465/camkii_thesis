@@ -147,6 +147,8 @@ In the model used here, PP1 catalyzes the dephosphorylation of CaMKII without fo
 
 ![CaMKII subunit possibility of binding reactions. ](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns}
 
+for dephospho of camkii bound to nmndar: Binding of CaMKII to GluN2B suggests potential phosphorylation of the receptor by the kinase. Indeed, the binding between the catalytic domain of CaMKII and GluN2B 1290–1309 represents an enzyme-substrate mode of interactions and results in phosphorylation of S1303 within the binding region [16]. The Km of S1303 phosphorylation was in a nanomolar range, much lower than that of other known substrates of CaMKII, indicating that the receptor is a high affinity substrate. As expected, phospho-S1303 (pS1303) is also subject to the dephosphorylation modulation by phosphatases. Both protein phosphatase 1 (PP1) and protein phosphatase 2A (PP2A) dephosphorylated pS1303 in the GluN2B CT [17]. In the PSD, PP1 is a major phosphatase catalyzing S1303 dephosphorylation [18]._
+
 # Modelling NMDARs structure and functions
 
 The NMDAR is an ionotropic glutamate receptor. Ionotropic channel proteins open to allow ions such as Na+, K+, Ca2+ and/or Cl- to pass through the membrane in response to the binding of a chemical messenger. NMDARs are permeable to Ca2+, Na+ and K+ ions and have a voltage dependent Mg2+ block. NMDARs, depending on the subunit composition, have glutamate and glycine as its ligands, the former being more common and the latter acting as a co-agonist. The binding of a ligand to NMDARs is typically not sufficient to open the channel and let ions through, as this is usually blocked by Mg2+ ions  (voltage block) which are only removed once the neuron is sufficiently depolarized. 

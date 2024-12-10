@@ -60,6 +60,9 @@ so i think basically what is going on is that CaMKII binding to NMDAR CTD is not
 
 In addition to forming a complex with GluN2B, CaMKII phosphorylates S1303 (123) in the CTD. Disrupting CaMKII binding prevents phosphorylation (124). The predominant interaction of CaMKII to GluN2B is not via the catalytic site (S site), as it is not blocked by syntide-2 (125); however, phosphorylation at S1303 does promote slow dissociation of CaMKII (123, 125, 126). Phosphorylation of S1303 in heterologous cells enhances NMDAR current (127, 128) and reduces desensitization of GluN2B-containing receptors (129). These effects in heterologous cells contrast with the finding that overexpression of constitutively active CaMKII has little effect on synaptic NMDAR responses (130–132). Furthermore, the finding that the binding of CaMKII to GluN2B is essential for its synaptic action (see sect. 6) and constitutive activity of CaMKII-GluN2B toward substrates suggests that either S1303 is not phosphorylated in the GluN2B-CaMKII complex or phospho-S1303 does not significantly prevent binding or inhibit activity. In summary, the role of S1303 phosphorylation remains enigmatic. (2022 review: https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022)
 
+
+REFERENCES FOR CAMKII BINDING TO NMDAR:
+
 _Among iGluRs, the N-methyl-D-aspartate receptor (NMDAR) is a direct target of CaMKII. By directly binding to an intracellular C-terminal (CT) region of NMDAR GlN2B subunits, CaMKII phosphorylates a serine residue (S1303) in the GluN2B CT._ https://pmc.ncbi.nlm.nih.gov/articles/PMC4435801/ 
 
 _Interesting:  CaMKII also binds to the mGluR5 CT. This binding seems to anchor and accumulate inactive CaMKII at synaptic sites. Active CaMKII dissociates from mGluR5 and may then bind to adjacent GluN2B to mediate the mGluR5-NMDAR coupling._ https://pmc.ncbi.nlm.nih.gov/articles/PMC4435801/ 
