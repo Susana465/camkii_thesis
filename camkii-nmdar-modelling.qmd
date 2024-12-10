@@ -247,3 +247,5 @@ The non-autophosphorylated CaMKII may dissociate more quickly, resulting in shor
 Specifically, does T286 need to be phosphorylated to maintain the stability of the CaMKII-GluN2B complex (see sect. 9.2.1)?  https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
 
 A prediction of the basic properties of CaMKII described above is that with brief repetitive Ca2+ spikes the enzyme would recruit more Ca2+/CaM, increasing the probability of autophosphorylation and a higher level of activity (FIGURE 3).https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
+
+ It is assumed that with the near-saturating pairing protocol used to induce LTP the majority of the subunits of a holoenzyme would be phosphorylated (see last Ca2+ pulse in FIGURE 3B2).https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
