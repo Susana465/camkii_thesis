@@ -125,13 +125,9 @@ Alltogether, there is strong evidence showing CaMKII and NMDAR interactions play
 
 What is more, the precise mechanism of how CaMKII and NMDAR interactions form a complex is also hotly debated. As discussed, a longstanding model posited that CaMKII binds to two distinct sites on the NMDAR C-terminal [REFERENCES]. However, recent crystal structure studies challenge this by suggesting that CaMKII substrates and activators interact at a single continuous site on the kinase domain [REFERENCE]. A more recent review offers a refined perspective, suggesting that CaMKII binds continuously through its S and T sites on the kinase domain, with these sites acting in concert to mediate binding to the GluN2B subunit of NMDARs. Furthermore, although docking of CaMKII to GluN2B subunits is emerging as a key candidate for mediating the structural changes associated with LTP, the connection between this interaction and subsequent changes that affect the cytoskeleton’s structure remains unclear. 
 
-Something else is the question of the exact role of T305/306 phosphorylation of CaMKII. Evidence points towards it having regulatory effects of CaMKII activity,as well as a role for leading signalling cascade towards LTP or LTP. Where pThr286 is sufficient to induce binding to GluN2B, but this binding occurs only during LTP but not LTD. The answer was provided by the discovery of two specific mechanisms that suppress CaMKII binding to GluN2B after LTD stimuli: (i) activation of the related CaM kinase DAPK1 (which requires activation of the phosphatase calcineurin that has long been associated with LTD)45, and (ii) pThr305/306 (which requires low frequency or low amplitude of Ca2+ stimulation that indeed induces LTD)40. Notably, both mechanisms are required simultaneously, as ablation of either one allows CaMKII binding to GluN2B also in response to LTD stimuli40,45. Both mechanisms are independent from each other40 and have distinct molecular underpinnings: DAPK1 competes with CaMKII for the same binding site on GluN2B, and the calcineurin-dependent activation of DAPK1 is required for DAPK1 to win this competition45,46. The pThr305/306 directly reduces binding to GluN2B47 and, vice versa, CaMKII binding to GluN2B inhibits pThr305/306 (ref. 6).
-
-
+Another unresolved question is the exact role of T305/306 phosphorylation in regulating CaMKII activity. Evidence suggests that this phosphorylation acts as a regulatory mechanism, influencing signalling pathways associated with both LTP and LTD, with increased T305/306 phosphorylation seemingly promoting LTD. As previously discussed, T305/306 phosphorylation has been proposed to function as a form of kinetic proofreading, ensuring that CaMKII remains inactive or less active unless sustained or repetitive calcium signals are detected. This mechanism would serve to prevent premature or excessive activation of the kinase, thereby enhancing the specificity and fidelity of CaMKII-mediated signalling in response to synaptic activity. However, there is ongoing debate within the experimental literature regarding whether T305/306 phosphorylation alone inhibits LTP and facilitates LTD, or if its effects are mediated in concert with the activation of competing kinases, such as DAPK1, in regulating the bidirectional processes of LTP and LTD.
 
 These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
-
-and what about t306 actual function?
 
 two new papers to read and complete this section: 
 - https://www.nature.com/articles/s41593-024-01809-x
@@ -143,47 +139,3 @@ two new papers to read and complete this section:
 
 --THE END
 --
-
-link to camkii and nmdar complex requirements for ltp proposals. 
-
-
-
-
-This new discovery proposes that a salt bridge interaction far from active site increases binding affinity of CaMKII for binding activator peptides such as GluN2B. And that such high-affinity binders may prolong activation by maintaining the active/open conformation of CaMKII subunits by inducing αD helix,  a structural feature within the kinase domain, to rotate outward which keeps the subunit in an open conformation. activator peptides like GluN2B bind, they displace the regulatory segment, causing a conformational change that shifts the αD helix outward. This outward movement stabilizes the kinase in an active state, preventing the regulatory segment from rebinding and allowing CaMKII to remain catalytically active.
-
-and that it is these high affinity interactors that allow interaction partners to kinetically compete with regulatory segment rebinding by stabilizing the active conformation of CaMKII, with the αD helix rotated outward. 
-
-
-The exact binding mechanism of CaMKII and NMDARs bind, however, is not fully understood. At the turn of the century, research by Ulrich Bayer and colleagues (2001) demonstrated that GluN2B binding could induce autonomous CaMKII activity albeit in the absence of a crystal structure to elucidate the interaction. 
-
-
-Around the same time, there were extensive mutagenesis studies that mapped CaMKII's subunits regulatory domain interactions with the kinase domain. These studies revealed that the mechanism of autoinhibition differs from substrate binding, particularly when residues distant from the active site were examined. 
-
-
-At the start of the century, Ulrich Bayer et al., 2001, revealed that GluN2B binding could induce autonomous activity in CaMKII. Without a crystal structure to guide an understanding, This work came on the heels of an extensive mutagenesis study mapping how the regulatory domain interacts with the surface of the kinase [32]. One of the findings from this work was that the mechanism of autoinhibition is distinct from substrate binding, especially when residues far from the active site were tested. To orient thinking about these interactions, residues close to the active site were termed the S-site (for substrate binding) and residues far from the active site were termed the T-site (for Thr286 binding) [38, 47]. In 2006, these reference points were implemented into a 2-site binding model to explain this autonomous activity with GluN2B binding [8]. Equally, along the NMDAR GluN2B subunit CTD terminal, two diffrent regions to where CaMKII binds were defined: a ‘distal’ site further from the membrane spanning regions in the primary sequence (1290-1309) that contains a CaMKII phosphorylation site at Ser1303; and a less well-defined ‘proximal’ site (839-1120) that does not undergo phosphorylation. 
-
-The exact binding mechanism of CaMKII and NMDARs bind, however, is not fully understood. One hypothesis is that the C-terminal domain (CTD) of the NMDAR, which has homology to CaMKIIs regulatory segment, binds to the kinase domain in its place [REFERENCE]. However, this idea presents a paradox, as binding of the regulatory domain to the kinase domain is typically known to inhibit the kinase, rendering it inactive/closed. Thus, with this explanation, it would be expected that the GluN2B CTD would inhibit the kinase rather than keep it persistently active. A long-standing proposed mechanism to solve this paradox, and to explain how the CTD peptide can keep CaMKII in its constitutive active state, is that one end of the GluN2B CTD may act as a wedge at the T site (for Thr286 binding) of the CaMKII subunit, preventing the autoinhibitory segment from reassociating, while the other end remains loosely bound to the active S site (for substrate binding), allowing substrates to interact with the kinase [REFERENCES https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022]. 
-
-
---
-
-By definition, NMDAR-dependent LTP requires synaptic activation of NMDARs during postsynaptic depolarization. NMDARs are essential mediators for the generation of LTP, where inhibition of NMDARs in various regions of the hippocampus prevents this type of LTP induction as well as further memory and learning impairments [REFERENCES]. Likewise, both pharmacological inhibition and genetic knockout of NMDARs impair LTP induction in the hippocampus of rodents. Interestingly, NMDARs role as a mediator for further LTP expression and maintenance remains to be ellucidated as research provides different views on this; part of the reason why this is hard to ellucidate may be due to the compensating mechanisms where LTP can actually proceed through different pathways. 
-
-
-Moreover, there is extensive research demonstrating that the inhibition of NMDARs in various regions of the hippocampus prevents LTP induction as well as further memory and learning impairments [REFERENCES]. Likewise, both pharmacological inhibition and genetic knockout of NMDARs impair LTP induction in the hippocampus of rodents. Indeed, evidence suggests that NMDARs are key mediators for LTP induction, their presence and activity is necessary for inducing LTP. 
-
-
-
- blocking the activation of NMDAR uring LTP induction blocks LTP; and activation of NMDARs also induces a potentiation of synaptic transmission, which occludes further synaptic induction of LTP.
-
-
-that provides evidence for the fact that inhibiting NMDARs in different areas of the hippocampus leads to abolition of LTP [REFERENCES]. And although we know that NMDAR function is essential for LTP formation, the exact mechanisms remain elusive. NMDARs interact with various proteins in the PSD, and ellucidating what molecules are key components of the molecular machinery directly responsible for the triggering of LTP (‘mediators’), versus what molecules which may modulate the ability to generate LTP, or play a permissive role (‘modulators’) can be obtused.
-
- Some basic criteria that can be suggested for defining the role of a protein as a mediator of LTP induction are: (1) blocking the activation of the molecule during LTP induction blocks LTP; and (2) activation of the molecule induces a potentiation of synaptic transmission, which occludes further synaptic induction of LTP.
-
-https://www.sciencedirect.com/science/article/pii/S0896627304006087
-https://link.springer.com/chapter/10.1007/978-3-031-36705-2_17
-https://pmc.ncbi.nlm.nih.gov/articles/PMC4563944/
-https://www.nature.com/articles/1301559
-
-act as coincidence detectors meaning they are activated only when two conditions are met simultaneously: presynaptic neurotransmitter release and postsynaptic depolarization. Indeed, this coincidence detector properties of NMDARs also help explain the basic properties of LTP. Cooperativity and associativity occur because of the requirement for multiple synapses to be activated simultaneously to generate adequate postsynaptic depolarization to remove the magnesium block of the NMDAR. Input specificity is due to the compartmentalized increase in calcium, which is limited to the postsynaptic dendritic spine and does not influence adjacent spines (Nicoll et al, 1988).
