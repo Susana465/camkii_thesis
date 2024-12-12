@@ -136,6 +136,15 @@ two new papers to read and complete this section:
 
 ### What this PhD is aiming to answer
 
+These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
 
---THE END
---
+In particular, the overarching aim of this thesis is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
+
+Aim 1. To analyze the role of CaMKII autophosphorylation at Thr286 in regulating binding duration and phosphorylation dynamics. In this context, I investigate how T286 phosphorylation affects the ability of CaMKII to bind and phosphorylate NMDARs during calcium transients, as well as examine whether autophosphorylated CaMKII remains active during periods of low calcium (Chapter X).
+
+Aim 2. To determine the minimal conditions required for the stability of the CaMKII-GluN2B complex (Chapter X).
+
+Aim 3. To investigate the functional consequences of CaMKII phosphorylation at T306 (Chapter X).
+
+I can see a link here merging computational intro and this intro to link wiht the aims. 
+
