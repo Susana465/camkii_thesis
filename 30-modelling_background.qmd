@@ -8,12 +8,6 @@ Computational modelling offers a powerful means of investigating complex biologi
 This PhD  employs computational modelling to explore biological systems, focusing on biochemical modelling of dynamic, complex reaction networks that underpin biological processes. Specifically, we look at the interactions between CaMKII and NMDAR in the postsynaptic dendrite of neurons that are thought to be relevant for learning and memory (see Biology Chapter). The rationale for selecting various modelling approaches to study the interactions between these molecules are introduced and discussed next. These approaches include rule-based modelling, agent-based modelling, stochastic simulation algorithms, and ordinary differential equations. This chapter also discusses the computational tools used to implement these models, including MCell for stochastic spatial simulations, BioNetGen for rule-based modelling, and BioDynaMo for agent-based simulations with dynamic geometry. Together, these tools provide a robust framework for simulating complex molecular interactions and cellular behaviours, enabling the study of dynamic processes that can often be difficult to investigate experimentally. 
 
 ## Why use computational modelling to study biological systems?
-
-make a list of benefits for using then expand for each:
-- 
--
-- models allow questions to be investigated that are difficult to approach experimentally. 
-
 Computational models are becoming increasingly popular in Neuroscience (and in the sciences in general) [REFERENCE], as they provide useful advances to enhance our understanding of systems that want to be studied. When modelling biological systems, we aim to describe the system's elements, states, and interactions to accurately simulate its behaviour. In the context of this study, we examine postsynaptic neuronal dendrites, where complex biochemical processes span multiple compartments and scales. 
 
 Given the vast complexity of reactions and molecular networks within a dendrite, mathematical tools used in computational modelling can help simplify the analysis of these systems. This way, models allow questions to be investigated that are difficult to approach experimentally. By focusing on specific parts of biological multiscale dynamics, these tools allow researchers to isolate particular aspects of interest. This approach helps minimize the influence of unrelated variables and reduces the complexity of the full biological system. 
@@ -29,6 +23,8 @@ Moreover, using computational methods for studying biological mechanisms can off
 - anything else to add here?
 
 ## How do we model biochemical systems networks?
+
+2.3. Steps in building a computational model https://www.sciencedirect.com/science/article/pii/S1084952115001287
 
 Biological and chemical systems can be described by networks of chemical reactions; in other words, the cascades of interactions between CaMKII and NMDARs with other molecules in postsynaptic neuronal dendrites can be understood as a network of chemical reactions. Computational models of these reaction networks can be used to elucidate network dynamics. Reaction-based models are formalized as sets of reactions that describe the given system in terms of mechanistic interactions between the species of interest. This is, biochemical networks are a set of chemical species that can be converted into each other through chemical reactions. The focus of biochemical network models is usually on the levels of the chemical species and this usually requires explicit mathematical expressions for the velocity at which the reactions proceed (kinetic reaction rates). Once the kinetics have been specified, these systems can be used directly to construct full dynamic simulations of the system behaviour on a computer. Biochemical network models allow us to gather insight by simulating chemical interactions over time; we can observe changes in species levels, visualise stable states within the system, and look for potential direct or indirect causal relationships between the species being studied. Importantly, the modellers can modify any of these parameters to test how such changes impact the model’s results.
 
