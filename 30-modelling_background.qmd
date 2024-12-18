@@ -24,6 +24,7 @@ Moreover, using computational methods for studying biological mechanisms can off
 
 ## How do we model biochemical systems networks?
 
+I think what i wanna say here is that there are steps and assumptions one makes and how these can guide the process of modelling biochemical systems networks, then move on to ssa and odes...
 2.3. Steps in building a computational model https://www.sciencedirect.com/science/article/pii/S1084952115001287
 
 _The first step requires formulation of a conceptual model, that is, a set of ideas about the basic operation of the system of interest, or at least a catalogue of the components that are involved and how they might interact with each other._
