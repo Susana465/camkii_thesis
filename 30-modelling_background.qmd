@@ -24,6 +24,15 @@ Moreover, using computational methods for studying biological mechanisms can off
 
 ## How do we model biochemical systems networks?
 
+When constructing a computational model for biochemical system networks, researchers must first identify key components of the system as well as their critical interactions. For instance, is it necessary to represent the behaviour of the system in three dimensions, or would a two-dimensional approximation be sufficient? Similarly, should individual cells be explicitly modelled, or can their behaviour be adequately captured using appropriate constitutive equations? Other factors to consider include determining which interactions between components are essential for the model and assessing the role of stochastic influences on these interactions. Although each assumption made at this stage may introduce differences between the model and the biological system it seeks to emulate, well-considered assumptions can simplify the model and improve its clarity, providing a solid foundation for effective representation. Deciding which simplifications and choices to make during the creation of a model requires a deep understanding of the system combined with mathematical and computational skills. Moreover, modelling biochemical systems networks is usually a combined effort between modellers and biologists (although these roles are not exclusive). This interdisciplinarity is a key strength, as it means modelling combines diverse expertise, encouraging understanding of diverse perspectives, and fosters effective partnerships.
+
+
+Once the key factors to be modelled have been decided, conceptual ideas in the model are translated into mathematical form. 
+
+
+--> also say this is iterative, its not necessarily linear, one can shift between steps obviously and just like all research it all involves hefty back and forth. 
+
+--
 I think what i wanna say here is that there are steps and assumptions one makes and how these can guide the process of modelling biochemical systems networks, then move on to ssa and odes...
 2.3. Steps in building a computational model https://www.sciencedirect.com/science/article/pii/S1084952115001287
 
