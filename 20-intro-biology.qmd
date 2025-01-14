@@ -140,23 +140,8 @@ These findings underscore the importance of further research into the dynamics o
 
 In particular, the overarching aim of this thesis is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
 
-this would be like a base testing, but not one of the main aims: To analyze the role of CaMKII autophosphorylation at Thr286 in regulating binding duration and phosphorylation dynamics. In this context, I investigate how T286 phosphorylation affects the ability of CaMKII to bind and phosphorylate NMDARs during calcium transients, as well as examine whether autophosphorylated CaMKII remains active during periods of low calcium (Chapter X).
-
 **Aim 1.** To investigate the interactions between CaM binding, T306 phosphorylation, and T286 dephosphorylation in regulating CaMKII activity. Specifically, to determine whether bound CaM decreases T286 dephosphorylation and how T305/T306 phosphorylation mediates the balance between inhibiting CaM binding and promoting T286 dephosphorylation by phosphatases.
 
 **Aim 2.** To determine the minimal requirements for stabilizing the CaMKII-GluN2B complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states and phosphorylation events influence the equilibrium stability of the complex.
 
-**Aim 3.** To investigate the functional consequences of CaMKII phosphorylation at T306 (Chapter X).
-
-I can see a link here merging computational intro and this intro to link wiht the aims. 
-
-Okay so right now I have a very simple reaction where: 
-# NMDAR/CaMKII binding
-# CaMKII open can bind and unbind to NMDAR - cam binding site and nmdar binding site don't overlap so cam can be bound to camkii
-	CaMKII(open~1,nmdar) + NMDAR(camkii) <-> CaMKII(open~1,nmdar!1).NMDAR(camkii!1) kon_CaMKII_NMDAR, koff_CaMKII_NMDAR
-
-So I am not stating any phosphorylation states...or cam bound states...this gives a good fresh canvasfor the model to do its thing. so, Mutations that prevent T306 phosphorylation would allow to determine, in this model,  whether phosphorylation is essential for regulating CaMKII’s interactions with nmdars. 
-
-CaMKII’s ability to bind CaM, GluN2B, or other interaction partners.
-
-Preventing phosphorylation at T306 would allow investigation into whether phosphorylation is essential for regulating CaMKII’s interactions, activity, and role in synaptic plasticity.
+**Aim 3.** To investigate the functional consequences of CaMKII phosphorylation at T306 within the context of its interaction with NMDARs. Using a foundational model where CaMKII binding to NMDARs is independent of phosphorylation and CaM binding states, this aim will assess how mutations that prevent T306 phosphorylation (e.g., T306A) influence the stability and regulation of the CaMKII-NMDAR complex. This approach will determine whether T306 phosphorylation is essential for modulating CaMKII’s interactions with NMDARs and explore its role in regulating binding affinity and complex dynamics.
