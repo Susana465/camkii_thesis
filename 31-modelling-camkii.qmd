@@ -126,6 +126,13 @@ Two main notes from Susana
 
 #### Binding of CaMKII to NMDARs
 
+Binding of CaMKII to GluN2B: Requirements and Considerations
+What are the necessary conditions for the binding of CaMKII to GluN2B, and how do the data compare to the assumptions made in the model?
+
+Tullis et al. (2023) propose that for CaMKII to form a complex with GluN2B, two factors are crucial: CaMKII must be activated by CaM, and the ATP pocket of CaMKII must be occupied, either by an ATP-competitive phosphorylation inhibitor (e.g., AS283) or through phosphorylation at T286. However, this perspective may be incomplete.
+
+Based on the data, I hypothesize that the open conformation of CaMKII, rather than phosphorylation, is the key factor enabling binding to GluN2B. The observation that CaMKII can still bind GluN2B even when phosphorylation is inhibited by AS283 suggests that phosphorylation is not a strict requirement for complex formation. Regarding CaM binding, it's likely that the presence of CaM increases the likelihood of CaMKII being bound to GluN2B, rather than being an absolute necessity for the interaction.
+
 - differentiate and mention alpha vs delta etc isoforms i like this paper's intro: https://www.mdpi.com/1422-0067/19/1/20 
 
 Our binding studies, however, now demonstrate that stimulation by Ca2+/CaM is sufficient to induce binding of α-CaMKII to the cytoplasmic carboxy terminus of NR2B (residues 839–1,482) and that autophosphorylation is not required. In fact, this NR2B domain contains two sites with different modes of regulated CaMKII binding (Fig. 1), a Ca2+/CaM-regulated site within residues 1,120–1,482 of NR2B (NR2B-C) and a phosphorylation-regulated site within residues 839–1,120 (NR2B-P). https://www.nature.com/articles/35081080
