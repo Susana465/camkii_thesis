@@ -129,12 +129,6 @@ Another unresolved question is the exact role of T305/306 phosphorylation in reg
 
 These questions underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
 
-
-two new papers to read and complete this section: 
-- https://www.nature.com/articles/s41593-024-01809-x
-- https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01217-8?uuid=uuid%3Ae1b03284-8081-430f-b559-f8566ad0dbbd 
-
-
 ### Research objectives of this PhD:
 
 These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
