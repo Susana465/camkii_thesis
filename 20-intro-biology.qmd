@@ -137,9 +137,9 @@ These questions underscore the importance of further research into the dynamics 
 
 ### Research objectives of this PhD:
 
-These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
+These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research is of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
 
-In particular, the overarching research aim of this PhD is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
+In particular, the overarching research objective of this PhD is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
 
 **Aim 1.** To investigate the interactions between CaM binding, T306 phosphorylation, and T286 dephosphorylation in regulating CaMKII activity. Specifically, to determine whether bound CaM decreases T286 dephosphorylation and how T305/T306 phosphorylation mediates the balance between inhibiting CaM binding and promoting T286 dephosphorylation by phosphatases.
 
