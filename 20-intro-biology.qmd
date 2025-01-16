@@ -2,17 +2,8 @@
 bibliography: [references.bib]
 ---
 
-# Introduction to the Biology in this PhD
-
-
-- LTP as an attractive model to explain memory at the cellular and molecular level
-    - what is LTP: different types, phases and what we focus on
-    - image flow
-    - what molecules are we focusing on
-- NMDARs
-- CaMKII
-- NMDARs and CaMKII in LTP
-- link to difficulties in understanding camkii known challenges paper, invivo stuff can be complez: computr models can help with understanding minimal requirements to then test them
+# Abstract {.unnumbered}
+This introductory chapter outlines the biological research questions explored in this PhD. It begins by defining key concepts, including learning and synaptic plasticity, and highlights the relevance of long-term potentiation (LTP) as a model for studying these processes at the cellular level. The chapter then delves into the roles of the primary molecules of interest—N-methyl-D-aspartate receptors (NMDARs) and calcium/calmodulin-dependent protein kinase II (CaMKII)—and their critical involvement in the mechanisms underlying LTP. Finally, the chapter sets out the biological research aims of this PhD, providing the foundation for investigating these molecular pathways to advance our understanding of synaptic plasticity and memory.
 
 ## Learning, memory and synaptic plasticity
 Learning and memory, whether declarative (referring to the conscious recollection of events) or non-declarative (which underpins changes in skilled behaviour and its improvement through practice) has been a topic of interest and intrigue for centuries. The question of how the brain learns and stores information remains central to our understanding of cognition. It is widely recognised that information is encoded in patterns of synaptic connections within neuronal networks, and that changes in these connections, known as synaptic plasticity, are fundamental to learning and memory. Current understanding suggests that the cellular changes underlying different forms of memory involve modifications in the strength of neuronal connections.
@@ -102,7 +93,7 @@ Furthermore, CaM binding is commonly considered to induce activation, further ob
 
 This leads to the discussion of an 'induced fit' model versus a 'conformational change' model. In the former, an activator binds to the enzyme and induces a conformational change. For instance, CaM binding facilitates the opening of the CaMKII subunit. In contrast, a 'conformational selection' model suggests that the enzyme can exist in both active and inactive conformations independently, with the activator selectively binding to and stabilizing the active conformation, without _inducing_ a conformational change. Moreover, within cells, signaling cascades and events do not occur in a sequential, orderly fashion; rather, they happen simultaneously, with random events occurring at various locations and times. Therefore, in this dissertation, the conformational change approach is considered more appropriate to describe the interaction leading to CaMKII activation. 
 
-### CaMKII T305/306 autophosphorylation
+#### CaMKII T305/306 autophosphorylation
 Two additional phosphorylation sites, T305 and T306, are thought to provide CaMKII with important autoregulatory functions, although their exact functions and mechanisms are not fully understood. Located within the CaM binding segment, phosphorylation of these sites prevents CaM from binding to the enzyme. Similarly, if CaM is bound, these sites cannot undergo phosphorylation. Unlike T286 phosphorylation, phosphorylation at T305/306 does not prevent CaMKII subunits from closing [REFERENCES]. This, together with the fact that it prevents CaM from binding, increases the likelihood that T305/306 phosphorylated subunits adopt the closed state. In the closed state, the kinase's catalytic activity is reduced, as the kinase domain is inaccessible. Therefore, T305/306 phosphorylation is often described as reducing CaMKII’s catalytic activity. Phosphorylation at T305/306 has been proposed to act as a form of kinetic proofreading, ensuring CaMKII remains inactive or less active unless sustained or repetitive calcium signals are present. This mechanism would prevent premature or excessive kinase activation, enhancing the specificity and fidelity of CaMKII-mediated signalling in response to synaptic activity [REFERENCE].
 
 ### CaMKIIs enzymatic vs structural roles in LTP: what are CaMKII's essential functions?
@@ -147,3 +138,4 @@ In particular, the overarching research objective of this PhD is to understand h
 
 **Aim 3.** To investigate the functional consequences of CaMKII phosphorylation at T306 within the context of its interaction with NMDARs. Using a foundational model where CaMKII binding to NMDARs is independent of phosphorylation and CaM binding states, this aim will assess how mutations that prevent T306 phosphorylation (e.g., T306A) influence the stability and regulation of the CaMKII-NMDAR complex. This approach will determine whether T306 phosphorylation is essential for modulating CaMKII’s interactions with NMDARs and explore its role in regulating binding affinity and complex dynamics.
 
+To address these complexities, this work leverages computational models alongside experimental data to uncover the minimal molecular requirements for LTP. By combining these approaches, I aim to refine hypotheses about the roles of CaMKII and NMDARs in LTP and establish a robust framework for designing experiments to probe their functions. A key focus of this PhD is ensuring that the findings and methodologies are reproducible, providing a solid foundation for future research to build upon. The following section will discuss the critical importance of reproducibility and how it is prioritised throughout this work.
