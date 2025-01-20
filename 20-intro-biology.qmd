@@ -1,9 +1,5 @@
 ---
 bibliography: [references.bib]
-format:
-  pdf:
-    template-partials:
-      - before-body.tex 
 abstract: |
     This introductory chapter outlines the biological research questions explored in this PhD. It begins by defining key concepts, including learning and synaptic plasticity, and highlights the relevance of long-term potentiation (LTP) as a model for studying these processes at the cellular level. The chapter then delves into the roles of the primary molecules of interest—N-methyl-D-aspartate receptors (NMDARs) and calcium/calmodulin-dependent protein kinase II (CaMKII) — and their critical involvement in the mechanisms underlying LTP. Finally, the chapter sets out the biological research aims of this PhD, providing the foundation for investigating these molecular pathways to advance our understanding of synaptic plasticity and memory.
 ---
