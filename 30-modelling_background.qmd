@@ -152,6 +152,8 @@ In the context of this PhD, this involves constructing a model that defines CaMK
 (a) What goes in and what comes out when modelling. An overview of input and output workflow of models in this project. Input files define the model, which is run to simulate difussion of molecules in a 3D space, to give an output of molecular concetrations across time. (b) There are alternative workflows for modelling and visualisation.  BioNetGen uses .BNGL files to define biochemical reactions. MCell uses .py files. Outputs from either path can be visualised as graphs of molecular concentration over time or as 3D spatial distributions in CellBlender. The arrows emphasise the flexible flow between tools, showing how BioNetGen and MCell outputs can be independently or jointly visualised to provide both temporal and spatial insights into molecular dynamics.
 :::
 
+link to reproducibility , validation process and if i dont use here i can reuse in methods.
+
 ## Agent based modelling with BioDynaMo for visualising multi-dimensional simulations
 
 With MCell and BioNetGen, we are able to model a CaMKII dodecamer in a 3D environment, but what about the dynamic reshaping of a neuron which happens during LTP discussed in @SECTIONLINK? CaMKII interacts with the actin cytoskeleton, which is responsible for the shape and size of the dendritic spine [@okamoto2007Role].  To study this dynamic reshaping, BioDynaMo (Biology Dynamics Modeller) offers a solution, as it can simulate changes in cell shape, such as dendritic growth (@fig-biodynamoactin).
