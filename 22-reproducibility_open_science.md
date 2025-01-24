@@ -3,6 +3,17 @@ bibliography: [references.bib]
 ---
 
 # Open and reproducible science
+There is increasing awareness, need and want for more open, reproducible and overall FAIR science. In the past 60 years, science has been speeding up, and the publish or perish mindset is not uncommon among scientists who need to publish more and more in order to get more funding [REFERENCES]. Hand in hand with this fast-science, has come something we now call a "reprodicibility crisis", where [enter facts of reproducibloty crisis] have found [facts].
+
+_Much of the criticism and comment about reproducibility and solutions to the crisis—both real and perceived—focuses on statistics and methodology. In the past decade, statisticians have shown how statistics may be unintentionally misused or, in some cases, intentionally abused as researchers try to produce results that appeal to professional colleagues and attract potential funders._ https://www.nature.com/articles/s41746-019-0079-z
+
+_Several methodologists have pointed out [9–11] that the high rate of nonreplication (lack of confirmation) of research discoveries is a consequence of the convenient, yet ill-founded strategy of claiming conclusive research findings solely on the basis of a single study assessed by formal statistical significance, typically for a p-value less than 0.05. Research is not most appropriately represented and summarized by p-values, but, unfortunately, there is a widespread notion that medical research articles should be interpreted based only on p-values. Research findings are defined here as any relationship reaching formal statistical significance, e.g., effective interventions, informative predictors, risk factors, or associations. “Negative” research is also very useful. “Negative” is actually a misnomer, and the misinterpretation is widespread. However, here we will target relationships that investigators claim exist, rather than null findings._ https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124
+
+bias: reporting bias, publication bias, social bias
+
+ Selective or distorted reporting is a typical form of such bias.
+
+ what story do i wanna tell here? 
 
 ## Defining reproducibility vs replicability
 There is a long history of these terms being used interchangeably, or their meanings being swapped depending on the field of study [@claerbout1992ElectronicDocumentsGive], [@ivie2018ReproducibilityScientificComputing],[@plesser2018ReproducibilityVsReplicability]. For example, a review on the usage of reproducible/replicable meanings [@barba2018TerminologiesReproducibleResearch] showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by [@ivie2018ReproducibilityScientificComputing]. In political science and economics literature, both terms are used interchangeably. So this quickly shows how having a lack of agreement on such definitions can add even more confusion to the mix. 
