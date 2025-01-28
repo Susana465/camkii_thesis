@@ -1,0 +1,8 @@
+t305 role
+As expected, under these conditions, GluN2B binding was significantly reduced for wild-type CaMKII compared with the T305/306A mutant (Fig. 4B), further validating that phosphorylation at T305/306 reduces binding. However, this phosphorylation effect was not mimicked by T305/306D mutation (Fig. 4C).  
+
+Thus, CaMKII T305/306D mutation mimics some but not all effects of phosphorylation at these sites. It blocks Ca2+/CaM binding after T305/306 phosphorylation (18, 28), but not the reduction in GluN2B binding identified in the current study (2014).  By contrast, T286D mutation mimics the effects of T286 phosphorylation both regarding generation of autonomous activity (39, 40) and CaMKII binding to GluN2B (24, 29, 30).
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4101658/ good paper to read on the binding likelyhood of camkii binding to nmdars depending on its t305 and t328 phoshorylation with mutants
+
+heres a thought -> its thought that binding of camkii/nmdar blocks phospho at t305...but what if its the fact that t305p means subunits are less likely to be open (and more likely to be closed), so this means that when we observe for binding of camkii/nmdar and t305 p we do not see any or much at all (it was possible to still show binding with a t305d mutant), because camkii is more likely to be closed, but the binding likelyhood is not induced by t305p but rather an indirect effect of it. 
