@@ -6,3 +6,5 @@ Thus, CaMKII T305/306D mutation mimics some but not all effects of phosphorylati
 https://pmc.ncbi.nlm.nih.gov/articles/PMC4101658/ good paper to read on the binding likelyhood of camkii binding to nmdars depending on its t305 and t328 phoshorylation with mutants
 
 heres a thought -> its thought that binding of camkii/nmdar blocks phospho at t305...but what if its the fact that t305p means subunits are less likely to be open (and more likely to be closed), so this means that when we observe for binding of camkii/nmdar and t305 p we do not see any or much at all (it was possible to still show binding with a t305d mutant), because camkii is more likely to be closed, but the binding likelyhood is not induced by t305p but rather an indirect effect of it. 
+
+This is an important thought to keep: once t305/306p happens and makes it less likely for camkii to bind, the competing dapk1 could come in and its chances increased to bind to nmdars, and the cascade towards ltd is favoured.
