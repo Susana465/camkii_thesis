@@ -148,9 +148,7 @@ These findings underscore the importance of further research into the dynamics o
 
 In particular, the overarching research objective of this PhD is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
 
-**Aim 1.** To investigate the interactions between CaM binding, T306 phosphorylation, and T286 dephosphorylation in regulating CaMKII activity in relation binding NMDAR. Specifically, to determine whether bound CaM decreases T286 de-phosphorylation and how T306 phosphorylation mediates the balance between inhibiting CaM binding and promoting T286 dephosphorylation by phosphatases.
-
-- to build a model that can replicate/recapitulate what has already been shown in relation to camkii phosphorylation at t286 and cam binding, with the addition of camkii/nmdar binding.
+**Aim 1.** to build a model that can replicate/recapitulate what has already been shown in relation to camkii phosphorylation at t286 and cam binding, with the addition of camkii/nmdar binding.
 
 (the model is the hypothesis - then you can make predictions) model can 1) see what has already been observed 2) what new things are observed?
 
@@ -164,7 +162,6 @@ how long has it been seen that camkii/nmdar are bound together in research - be 
 
 functional consequencies of camkii/nmdar binding
 
-
 if a model of camkii that cannot bind to nmdars then what is the result in camkii actiity and functions (vs a model of camkii that can bind nmdar)
 
 i expect camkii that is t286 and cam bound to be bound more readily to nmdar (even though this is not explicitly defined).
@@ -174,9 +171,4 @@ binding camkii/nmdar is not defined by a function of phosphorylation in this mod
 wt camkii and mt camkii cannot t286 and t306 phospho
 wt camkii and mt camkii cannot bind to nmdar
 
-
 draw out hypothesis. 
-
-**Aim 3.** To investigate the functional consequences of CaMKII phosphorylation at T306 within the context of its interaction with NMDARs. Using a foundational model where CaMKII binding to NMDARs is independent of phosphorylation and CaM binding states, this aim will assess how mutations that prevent T306 phosphorylation (e.g., T306A) influence the stability and regulation of the CaMKII-NMDAR complex. This approach will help shed light on whether T306 phosphorylation is essential for modulating CaMKII’s interactions with NMDARs and explore its role in regulating binding affinity and complex dynamics.
-
-To address these complexities, this work leverages computational models alongside experimental data to uncover the minimal molecular requirements for LTP. By combining these approaches, I aim to refine hypotheses about the roles of CaMKII and NMDARs in LTP and establish a robust framework for designing experiments to probe their functions. The molecular interactions are explored _in silico_, offering unique advantages for studying intricate biological processes. The following chapter examines the strengths and limitations of this approach, providing a detailed rationale for employing computational models to address the biological objectives of this project.
