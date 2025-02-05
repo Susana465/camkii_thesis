@@ -16,8 +16,56 @@ Much of the criticism  surrounding the reproducibility crisis centres on statist
 
 The list of factors contributing to irreproducibility is extensive, and is not restricted to statistical methods. A lack of access to raw data or, in some cases, outright data fabrication also plays a role [REFERENCE]. Ambiguities in experimental procedures, materials, and data processing steps further undermine research reliability [REFERENCES]. On a higher, more systemic, there is also the discussion to be had around how current academic system tends to prioritise novelty and statistically significant findings. and how this is closely tied to funding structures, as research funded by industry may be biased towards more profitable outcomes, leading to selective reporting or manipulated data [REFERENCES]. And although these behaviours fall under the category of scientific misconduct [REFERENCE: https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/101/report.html] and are not considered acceptable scientific practice, rather they have been termed "questionable research practices", they still happen.
 
-Interestingly, a large-scale survey of nearly 6,000 academic psychologists (with 2,155 responses) assessed self-reported engagement in some of these questionable research practices known to introduce bias into research findings. Notably, respondents often justified their own use of these practices while simultaneously viewing them as unacceptable when used by others. As the authors put it, “Respondents considered these behaviors to be defensible when they engaged in them . . . but considered them indefensible overall” (p. 530). 
+Interestingly, a large-scale survey of nearly 6,000 academic psychologists (with 2,155 responses) assessed self-reported engagement in some of these questionable research practices known to introduce bias into research findings. Notably, respondents often justified their own use of these practices while simultaneously viewing them as unacceptable when used by others. As the authors put it, “Respondents considered these behaviors to be defensible when they engaged in them . . . but considered them indefensible overall” (p. 530). This is just one example, and it is worth noting that scientific standards and methodologies continuously evolve, meaning that questionable research practices are not static. Methods once tolerated, or even considered standard, may now be recognised as problematic, reflecting our ability to reassess and refine ethical and methodological frameworks. Encouragingly, awareness of the reproducibility crisis is growing, and there is a gradual shift towards promoting open and reproducible research practices [REFERENCES].
 
+- queue in interest increase in open science. 
+
+## Defining Reproducibility
+In order to fully understand what we mean when we are talking about when we say open and reproducible, lets delve into some definitions first.
+
+- look at that paper that talks about definitions of reproducibility in Zotero
+
+There is a long history of the terms reproducibility and replicability being used interchangeably, or their meanings being swapped depending on the field of study [@claerbout1992ElectronicDocumentsGive], [@ivie2018ReproducibilityScientificComputing],[@plesser2018ReproducibilityVsReplicability]. For example, a review on the usage of reproducible/replicable meanings [@barba2018TerminologiesReproducibleResearch] showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by [@ivie2018ReproducibilityScientificComputing]. In political science and economics literature, both terms are used interchangeably. So this quickly shows how having a lack of agreement on such definitions can add even more confusion to the mix. 
+
+In this PhD, we use the definition used by [@turingwaycommunity2019TuringWayHandbook], where reproducible research is understood as "_work that can be independently recreated from the same data and the same code that the original team used_". Reproducible, replicable, robust and generalisable have different meanings as described in the table below.
+
+![How the Turing Way defines reproducible research.](22-reproducibility-figures/repro_definintions.PNG){#fig-repro-definitions width=65%}
+
+- **Reproducible research**: is obtained when same analysis is performed on the same data, to produce the same results.
+
+- **Replicable research**: refers to conducting the same analysis on different datasets, resulting in qualitatively similar outcomes. 
+
+- **Robust research**: entails subjecting the same dataset to different analysis workflows to address the same research question, such as employing distinct pipelines in R and Python. Robustness demonstrates that findings can remain consistent regardless of different methods used for analysis, indicating validity and resilience to various factors like changes in conditions or methods (such as different programming languages).
+
+- **Generalisable research**: refers to findings or conclusions that can be applied beyond the specific context in which they were derived. It indicates that the results are not limited to a particular dataset, methodology, or experimental setup, but instead can be extended to broader populations, situations, or conditions. By combining replicable and robust research, we can obtain more generalisable results. Generalisability is important as it allows us to make inferences for bigger groups of datasets, for example a target population, by only studying a part of it (the sample).
+
+## Defining Open Science
+
+Open science is an approach to the scientific process that promotes cooperative work and new ways of diffusing knowledge accessible to everyone, without barriers such as paywalls or restrictions on use. By making research more accessible and transparent, open science seeks to accelerate scientific progress, enhance reproducibility, and increase the societal impact of research findings. In order to achieve this openness, [@turingwaycommunity2019TuringWayHandbook] and [@heise2020OpenAccessOpen] suggest that the research process should:
+
+1.	**Be publicly available**: It's hard to benefit from knowledge hidden behind barriers like passwords and paywalls.
+
+2.	**Be reusable**: Research outputs should be licensed adequately, informing potential users of any restrictions on reuse.
+
+3.	**Be transparent**: With appropriate metadata to provide clear statements of how research output was produced and what it contains.
+
+Creating open practices has multiple benefits. Firstly, researchers can benefit from it first hand by creating open access articles, as these have been shown to be cited more often [@mckiernan2016HowOpenScience]. Another benefit of openness is that while research collaborations are essential to advancing knowledge, identifying and connecting with appropriate collaborators is not trivial. Open practices can make it easier for researchers to connect by increasing the discoverability and visibility of one’s work, facilitating rapid access to novel data and software resources, and creating new opportunities to interact with and contribute to ongoing communal projects. Creating science that follows the open definitions above can therefore also foster a deeper sense of community, which contrasts starkly with the usual competitiveness of science. 
+
+Open science is not “sharing absolutely everything”, as many fields of science involve working with sensitive personal data, with medical research being the most obvious example. Privacy and data protection, as well as consent, and national and commercially sensitive data can be some of the most common examples of when data cannot always be open [@regulation2016RegulationEU2016]. If access to data needs to be restricted due to security reasons, however, the justification for this should be made clear. Free access to and subsequent use of data is of significant value to society and the economy. That data should, therefore, be open by default and only as closed as necessary. 
+
+
+---
+## Why are reproducibility and open science important?
+
+OPEN:
+
+REPRO:
+REPLI:
+
+ALL OF THESE FALL UNDER THE UNBRELLA OF FAIR: 
+
+
+----
 Scientific standards and methodology evolve over time, and so therefore questionable research practices are ever changing. There may have been practices that were once tolerated, or even considered standard, but that are now seen as problematic, highlighting the capacity to change our view of what is and isn't acceptable. In fact, not all is lost, as there is is a shift that is slowly making its way to bring awareness around the current crisis, and Open and Reproducible practices are being promoted more. 
 
 
