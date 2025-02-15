@@ -10,6 +10,7 @@ book:
     - index.qmd
     - 10-intro.qmd
     - 20-intro-biology.qmd
+    - 20-intro-biology-copy.qmd
     - 30-modelling_background.qmd
     - 30-methods.qmd
     - camkii-nmdar-modelling.qmd
