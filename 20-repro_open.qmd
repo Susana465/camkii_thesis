@@ -95,5 +95,7 @@ When collecting data, it has been important for me to consider where data origin
 This is what they are, why are they important - and this is how I do it (in order of: reproducibility, open science, FAIR principles and ethics - ethics delve into what we will be talking about and the part that is important to this thesis but not full discussion as this is not the place. why is it important. relevance to this phd show strength of it.). Link in with chapter on how I applied all of this into this thesis and PhD project.  in this follow up chapter I can talk about my projects at the ATI and OLS. 
 
 
+### Open Life Sciences project: Ethical Standards and Reproducibility of computer models in Neurobiology, Open Life Sciences.
 
+Link in with data hazards and include paper. 
 
