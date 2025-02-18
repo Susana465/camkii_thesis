@@ -1,0 +1,41 @@
+---
+bibliography: [references.bib]
+---
+# Data Hazards 
+Intro paragraph
+
+
+In data hazards: talk about ethics committees but ethics not embedded. 
+
+This is what they are, why are they important - and this is how I do it (in order of: reproducibility, open science, FAIR principles and ethics - ethics delve into what we will be talking about and the part that is important to this thesis but not full discussion as this is not the place. why is it important. relevance to this phd show strength of it.). Link in with chapter on how I applied all of this into this thesis and PhD project.  in this follow up chapter I can talk about my projects at the ATI and OLS. 
+
+
+In CHAPTER [DATA HAZARDS PAPER]. 
+
+And so as ethical values vary and evolve throughout time, ethical guidelines also vary between who is defining them; different bodies define ethical research using different definitions. For example, the National Institutes of Health (NIH) defines research as ethical if it follows the guidelines of being of social and clinical value, that it upholds scientific validity, that has fair subject selection, that has a favorable risk-benefit ratio, follows independent review and informed consent, and finally research that shows respect for potential and enrolled subjects. Likewise, ethical considerations vary depending on the topic of research, as different factors need to be taken into account. Research that deals directly with human patients will need different ethical considerations to research that studies protein dynamics using computer simulations.
+
+Here we focus on research ethics that is most applicable to Neuroscience and data intensive projects generally, but will discuss in depth ethical considerations to be taken for this PhD project in particular too. 
+
+from ttw:
+_With no intention of doing justice to the vast literature that there is on the topic, we can take Ethics to be the subject of study of moral philosophy, which seeks – amongst other things – to distinguish right from wrong. Nowadays, philosophers speak of three levels of discussion in ethics [Dit22]: metaethics, normative ethics and applied ethics. Roughly, metaethics questions the nature of good and evil, as well as the underlying assumptions held by different ethical frameworks. Normative ethics, then, provides the tools for us to create such ethical frameworks and think within them. Applied ethics, finally, is what is most pertinent to this guide, as we will be discussing the ins and outs of ethical and responsible research and innovation._
+
+_Taking ethics as the study of what behaviours are right and what behaviours are wrong highlights that it refers to action. Considering this, ethics is relevant to research insofar that researchers are acting and behaving in certain ways when conducting their work. Taking this definition seriously also means accepting moral philosophy as paramount in our everyday lives: ethics pertains to us all. Furthermore, the potential ripple effects of any research project may be far greater than an individual’s actions under normal circumstances._
+
+_To this effect, the importance of acting ethically within the academic sphere is heightened. Scientists must reflect on the ethical questions their research projects raise._
+
+_One source of diversity of ethical frameworks relates with how research institutions generally have “Ethics Committees” that appraise the ethics of research conducted within their institutions. This is traditionally done for institutions to protect themselves from legal liabilities. However, further reflection – beyond questions of data protection – can be required by these processes. The point is that one university’s process for ethical appraisal will, more often than not, differ from another’s._
+
+Two common key concepts that consider Ethics in research are "Responsible Research and Innovation" (RRI) and "Research Integrity (RI)". The former revolves around an outward impact of research, for example, "how may individuals be impacted by this research?" or "what is the view of the public on this kind of research"?. Research Integrity revolves around how research is conducted, for example asking questions such as "how are scientists conducting themselves in this research?". 
+
+We might like to think that scientific research is objective, and simply measuring reality. The reality, however, is that many decisions will be taken when doing research, and these decisions will impact the results of that research. Decisions taken in any kind of research can and will vary depending on the background of the human making these decisions, their socio-economic upbringing, religious beliefs and personal biases will affect the research even if it is unconsciously. 
+
+Science and philosophy both seek to understand the world, but they take different approaches nowadays. Science relies on empirical evidence and aims for practical applications, while philosophy explores conceptual frameworks and seeks a deeper understanding of the fundamental nature of reality. While these distinctions help clarify the differences between Science and Philosophy, it's essential to note the overlap and interdisciplinary collaboration between the two fields. Some questions may be addressed by both science and philosophy, and insights from one field can inform the other. This separation often makes it seem like you have a choice to make: are you going to do Philosophy, or are you going to do Science? 
+
+When I studied Neuroscience as an undergraduate, I remember wanting to discuss more of the Philosophy and Ethics of the subjects in my degree: Why do we study this topic in this way, what are the possible consecuences of this research, how ethical is this research on animals? Instead, the most philosophising I got was learning about the different streams of consciousness theories, and that's about it. Even now, I find a constant separation between Philosophy and Neuroscience - the call for this paper makes it clear: *"Neuroscientists share common interests with philosophers, but the two groups use very different approaches"*. The apparent separation of Philosophy from STEM (Science, Technology, Engineering and Mathematics) and viceversa is an unfortunate development of the 19th century, as this separation has not always existed [REFERENCE]. I call it an "apparent separation" because although it may seem they have been separated as we continue to study them individually, they are persistently intertwined. In my opinion, it is not only impossible to separate them, but I argue that separating (Neuro)Science from Philosophy can be a dangerous thing. In this paper, I'll explore potential dangers across my PhD research life cycle, offer neuroscience examples, and demonstrate how the Data Hazards framework aids in discussing philosophical and ethical issues in neuroscience.
+
+ - probably want to add philosophy and ethics discussion after repro section and LINK WITH DATA HAZARDS. 
+
+
+## Why are reproducibility and open science important?
+Creating open practices has multiple benefits. Firstly, researchers can benefit from it first hand by creating open access articles, as these have been shown to be cited more often [@mckiernan2016HowOpenScience]. Another benefit of openness is that while research collaborations are essential to advancing knowledge, identifying and connecting with appropriate collaborators is not trivial. Open practices can make it easier for researchers to connect by increasing the discoverability and visibility of one’s work, facilitating rapid access to novel data and software resources, and creating new opportunities to interact with and contribute to ongoing communal projects. Creating science that follows the open definitions above can therefore also foster a deeper sense of community, which contrasts starkly with the usual competitiveness of science. 
+
