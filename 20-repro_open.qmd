@@ -100,4 +100,4 @@ Overall, this project was an excellent exercise where I honed in my knowledge on
 
 ![Following Mozilla Open Leadership Training, this was some brainstorming using Open Canvas further define the project's goals, strategy, and needs for resources [@mozillaopenleadershipOpen]](22-reproducibility-figures\opencanvas.PNG){#fig-opencanvas}
 
-Ultimately, this Open Seeds project led to further applications of ethical and reproducibility practices in my PhD, including the development of the Data Hazards chapter publication in The Turing Way book, and organization of a one-day hybrid symposium, as well as multiple paper publications [links and titles REFERENCES].
+Ultimately, this Open Seeds project led to further applications of ethical and reproducibility practices in my PhD, including the development of the Data Hazards chapter publication in The Turing Way book, and organization of a one-day hybrid symposium, as well as multiple paper publications [links and titles REFERENCES], including the next chapter in this thesis, where I use my PhD as a case study to showcase how Data Hazards can be applied to a computational neuroscience project. 

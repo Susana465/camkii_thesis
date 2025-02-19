@@ -12,6 +12,7 @@ book:
     - 20-intro-biology.qmd
     - 30-modelling_background.qmd
     - 20-repro_open.qmd
+    - 20-data-hazards.qmd
     - 30-methods.qmd
     - camkii-nmdar-modelling.qmd
     - references.qmd
