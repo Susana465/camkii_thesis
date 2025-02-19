@@ -8,16 +8,46 @@ As discussed in more detail below, the Data Hazards initiative has developed a c
 There are 11 data hazards at the moment (Figure 3.1), which include a label description, examples and general safety precautions to showcase how we might go about thinking about these risks (Table REFERENCE). For a full description of the Data Hazard labels, and to avoid repetition, see [SECTION WITH DATA HAZARD LABELS]. There is no prescribed method to apply the Data Hazard labels to one's work,however in Turing Way Chapter we propose four key iterative steps that can be useful; in combination with this, in the published article, we propose two complimentary methods to go about applying Data Hazard labels. The four iterative recommended steps are:
 
 Learn about the labels: familiarise yourself with the Data Hazard labels.
-Apply them: decide which Hazard labels are relevant to your project.
-Reflect: on what to do differently and what mitigations to make.
-Display them: displaying the labels alongside your work can help you to communicate that you’ve thought about these broad ethical issues and how you’d like others to use your work.
+
+- Apply them: decide which Hazard labels are relevant to your project.
+- Reflect: on what to do differently and what mitigations to make.
+- Display them: displaying the labels alongside your work can help you to communicate that you’ve - thought about these broad ethical issues and how you’d like others to use your work.
 
 As part of my ongoing effort to assess the broader implications of my research, I encountered the Data Hazards Project in 2021. Since then, I have completed a facilitator training workshop and have progressively applied the Data Hazards framework to my PhD research. To illustrate this integration, I presented a poster at the COMBINE and ICSB 2022 conferences [REFERENCES].
 
 In addition to incorporating Data Hazards into my own work, I have facilitated several workshops on the topic, with details on my preparation available here [Data_Hazards_workshops]. In 2023, I co-organised and co-hosted a one-day symposium focused on Data Hazards, ethics, and reproducibility. Furthermore, I contributed to the development of a new chapter on Data Hazards for The Turing Way handbook [REFERENCE]. I also collaborated with the Data Hazards team to develop a poster for AI UK 2023, where I presented my PhD research [FIGURE REFERENCE] and invited conference attendees to discuss which Data Hazard labels they believed were applicable.
 
-This poster was part of an exhibition stand with the Data Hazards Team, at AIUK 2023. When creating this poster, I was able to both do some self-reflection and collaborative reflection, as described below.
+This poster was part of an exhibition stand with the Data Hazards Team, at AIUK 2023. When creating this poster, I was able to both do some collaborative reflection, where conference attendees came to talk about the project, had a look at the poster, and decided by adding stickers to a list of hazards, to say which ones applied to it. As can be seen in Figure 3.5 (before end of the day), people were adding stickers to record which data hazard labels they thought applied to my PhD project. At the end of the day, I recorded final numbers and the results can be seen in the barchart below Figure 3.6.
 
+Interestingly, not all labels were chosen as applicable to my project (Figure 3.6). Only 6 of the 11 current labels were chosen as relevant, with “difficult to understand” being the most prevalent one, chosen by 6 people. High environmental impact and danger of misuse follow in closely with 5 people having chosen these ones. Of course these numbers are small and hold, more than anything, illustrative value as to how and why people may think certain labels apply to a project. Difficult to understand” label was chosen the most, followed by “high environmental impact” and “danger of misuse”. 
+
+```{python}
+#| label: fig-barchart
+#| fig-cap: "Data Hazards labels that may apply to my PhD."
+#| fig-pos: 't'
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# The dataset:
+data = {'Reinforces existing biases':4, 'High environmental impact':5,
+        'Lacks community involvement':4, 'Danger of misuse':5, 'Difficult to understand':6,
+        'May cause direct harm':1, 'Lacks informed consent':4}
+courses = list(data.keys())
+values = list(data.values())
+  
+fig = plt.figure(figsize = (6, 5))
+plt.xticks(rotation=30,ha="right")
+ 
+# Creating the bar plot
+plt.bar(courses, values, color ='tab:red',
+        width = 0.4)
+ 
+plt.xlabel("Data Hazard Labels")
+plt.ylabel("No. of times label was chosen as \n relevant for my PhD project")
+plt.title("Data Hazards labels that may apply to my PhD")
+plt.show()
+```
 
 {insert paper}
 
