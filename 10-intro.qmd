@@ -3,7 +3,7 @@ bibliography: [references.bib]
 number-sections: true
 ---
 
-# Overview:
+# Lay Summary:
 
 ## What is this PhD about?
 
