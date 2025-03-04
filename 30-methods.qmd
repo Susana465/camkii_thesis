@@ -34,7 +34,8 @@ I have constructed the models at different scales to validate CaMKII interaction
 
 The current model is ran with CaMKII as a dodecameric molecule, which is biologically accurate. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. An insufficient amount of calcium would limit the formation of fully active CaM, thereby reducing its ability to activate CaMKII. This could introduce an unintended bottleneck in the signalling cascade, making it difficult to accurately study CaMKII activation, autophosphorylation, or its downstream effects. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates.  
 
-Molecules in the model can have various binding sites, or none. For example, Ca2+ and PP1 are modelled as reactants that can interact with other molecules, but they themselves don't have binding sites. On the other hand, CaM, CaMKII and NMDAR all have different binding sites (ADD FIGURE). Importantly, CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE)
+Molecules in the model can have various binding sites, or none. For example, Ca2+ and PP1 are modelled as reactants that can interact with other molecules, but they themselves don't have binding sites. On the other hand, CaM, CaMKII and NMDAR all have different binding sites (ADD FIGURE). Importantly, CaMKII is modelled as a dodecamer, with two rings of six subunits stacked on top of each other (ADD FIGURE).
+
 
 ## Model validation
 
@@ -97,6 +98,71 @@ pharris et al focus on how Ca2+/CaM-binding may both stabilize CaMKII subunit ac
 
 ordyan et al., also model camkii as a dodecamer and its diffusion in time and space using mcell (so does pharris), they focus on the dynamics between calmodulin and scaffolding molecule neurogranin on camkii, their model is useful for models predict that the parameters of this leaky integrator are finely tuned through the interactions of Ng, CaM, CaMKII, and PP1, providing a mechanism to precisely control the sensitivity of synapses to calcium signals, but they do not look at the important interaction nmdars. then there is a very recent paper published by bartol et al., who use the same version of mcell4 we are using, they provide a spatial temporal model of camkii as a dodecamer with calcium flowing through nmdar receptors but they do not look at nmdar interactions directly with camkii. each model is a little bit of a build up to the model we have created where camkii is modelled as a dodecamer that directly interacts with nmdars on te surface of the postsynaptic dendrite. 
 ---
+_Article
+Authors
+Metrics
+Comments
+Media Coverage
+Peer Review
+Abstract
+Author summary
+Introduction
+Methods
+Results
+Discussion
+Supporting information
+Acknowledgments
+References
+Reader Comments
+Figures
+Accessible Data IconAccessible Data
+See the data
+Link Icon
+This article includes the Accessible Data icon, an experimental feature to encourage data sharing and reuse. Find out how research articles qualify for this feature.
+Abstract
+Calmodulin-dependent kinase II (CaMKII) has long been known to play an important role in learning and memory as well as long term potentiation (LTP). More recently it has been suggested that it might be involved in the time averaging of synaptic signals, which can then lead to the high precision of information stored at a single synapse. However, the role of the scaffolding molecule, neurogranin (Ng), in governing the dynamics of CaMKII is not yet fully understood. In this work, we adopt a rule-based modeling approach through the Monte Carlo method to study the effect of Ca2+ signals on the dynamics of CaMKII phosphorylation in the postsynaptic density (PSD). Calcium surges are observed in synaptic spines during an EPSP and back-propagating action potential due to the opening of NMDA receptors and voltage dependent calcium channels. Using agent-based models, we computationally investigate the dynamics of phosphorylation of CaMKII monomers and dodecameric holoenzymes. The scaffolding molecule, Ng, when present in significant concentration, limits the availability of free calmodulin (CaM), the protein which activates CaMKII in the presence of calcium. We show that Ng plays an important modulatory role in CaMKII phosphorylation following a surge of high calcium concentration. We find a non-intuitive dependence of this effect on CaM concentration that results from the different affinities of CaM for CaMKII depending on the number of calcium ions bound to the former. It has been shown previously that in the absence of phosphatase, CaMKII monomers integrate over Ca2+ signals of certain frequencies through autophosphorylation (Pepke et al, Plos Comp. Bio., 2010). We also study the effect of multiple calcium spikes on CaMKII holoenzyme autophosphorylation, and show that in the presence of phosphatase, CaMKII behaves as a leaky integrator of calcium signals, a result that has been recently observed in vivo. Our models predict that the parameters of this leaky integrator are finely tuned through the interactions of Ng, CaM, CaMKII, and PP1, providing a mechanism to precisely control the sensitivity of synapses to calcium signals. Author Summary not valid for PLOS ONE submissions.
+
+Author summary
+Neurons communicate with each other through synapses. The strength of a particular synapse is effectively the level of sensitivity of the postsynaptic neuron in response to firing of the presynaptic neuron. The process of changing synaptic strength is dubbed synaptic plasticity, a foundational aspect of learning and memory. In this work, we create a computational model of a calcium signaling pathway that sets off a chain reaction in CaMKII phosphorylation, eventually leading to synaptic plasticity. Computational modeling provides a unique way to tease apart and understand the non-intuitive results of interactions between the molecules involved. Our model successfully predicts the experimentally observed activation dynamics of this crucially important enzyme which is necessary for learning. These dynamics, along with other pathways, regulate the size of the synapse, which is known to be highly correlated with synaptic strength. In this work, we reveal quantitative characteristics of CaMKII activation for various stimuli, leading to important insights regarding the potential role of Neurogranin, a scaffolding protein in this pathway.
+
+Figures
+Fig 11Fig 1Table 1Table 2Fig 2Fig 3Fig 4Fig 5Fig 6Fig 7Fig 8Fig 9Fig 10Fig 11Fig 1Table 1Table 2
+     
+Citation: Ordyan M, Bartol T, Kennedy M, Rangamani P, Sejnowski T (2020) Interactions between calmodulin and neurogranin govern the dynamics of CaMKII as a leaky integrator. PLoS Comput Biol 16(7): e1008015. https://doi.org/10.1371/journal.pcbi.1008015
+
+Editor: Joanna Jędrzejewska-Szmek, Instytut Biologii Doswiadczalnej im M Nenckiego Polskiej Akademii Nauk, POLAND
+
+Received: December 10, 2019; Accepted: June 4, 2020; Published: July 17, 2020
+
+Copyright: © 2020 Ordyan et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+
+Data Availability: All bngl files are available on GitHub at the following repository: https://github.com/marordyan/CaMKII_well_mixed/.
+
+Funding: PR,MO,TB,TS: FA9550-18-1-0051 US Air Force https://www.airforce.com/, TB,TS: P41GM103712 National Institute of Health https://www.nih.gov/ MK,TB,TS: NS44306MK National Institute of Health https://www.nih.gov/ MK,TB,TS: DA030749 National Institute of Health https://www.nih.gov/ The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
+
+Competing interests: The authors have declared that no competing interests exist.
+
+Introduction
+Information is stored in the brain through synaptic plasticity. It has been reported that synaptic strength is highly correlated with the size of the spine head, and the precision of information stored at a single synapse is quite high despite the stochastic variability of synaptic activation [1–3]. Structural changes to the postsynaptic spine that can lead to spine enlargement, and thus structural plasticity are triggered by Ca2+ signaling [4, 5]. Time averaging of these calcium signals has been suggested as a plausible mechanism for achieving the high precision of information processing observed in spines. Furthermore, phosphorylation of calcium/calmodulin-dependent protein kinase II (CaMKII) has been postulated as the most probable pathway satisfying the long time scales predicted for averaging [1].
+
+CaMKII is an autophosphorylating kinase [6, 7] [8–10]; in postsynaptic densities (PSD), CaMKII has been shown to play an important role in learning and memory [11]. Specifically, mice with a mutation in a subtype of CaMKII exhibit deficiencies in long-term potentiation (LTP) and spatial learning [10, 12, 13]. Moreover, CaMKII expression regulates the rate of dendritic arborization and the branch dynamics [14, 15], highlighting its importance in structural plasticity. Additionally, CaMKII has been shown to bind actin, the major cytoskeletal protein in dendritic spines [16–18], further emphasizing its role in structural plasticity. Activation of CaMKII is exquisitely regulated at multiple levels as summarized below.
+
+CaMKII activation by calmodulin (CaM): CaMKII is activated by calmodulin (CaM) [6], which is a protein with 4 Ca2+ binding sites: 2 on its C-terminal and 2 on N-terminal (Fig 1A) [19, 20]. CaM binds Ca2+ cooperatively and is able to activate CaMKII more potently if it has more Ca2+ ions bound to it [21].
+Neurogranin (Ng)-CaM interactions: In the absence of Ca2+, CaM is bound to scaffolding protein neurogranin (Ng), which dramatically reduces the affinity of CaM for Ca2+ (Fig 1B). On the other hand, Ca2+ decreases binding affinity of CaM for Ng [22]. Thus, CaM activation and therefore CaMKII activation depend on the competitive effects of Ca2+ and Ng.
+The role of structure in CaMKII activation: Further complexity for CaMKII activation is built into the structure of the molecule itself. CaMKII is a dodecamer arranged in 2 stacked hexomeric rings [6, 23]. Monomers of CaMKII truncated to remove the association domain (mCaMKII) contain a kinase domain, CaM-binding domain, and phosphorylation sites T286(287), and T305(306) [9, 24–26]. When the CaM-binding domain is unoccupied, and the T286(287) site is unphosphorylated, the monomer is in a conformation such that the kinase is inactive (Fig 1C, top). When CaM is bound to a CaMKII monomer, the latter undergoes a conformational change, such that the kinase is now active. An active CaMKII monomer can phosphorylate other Ca2+/CaM-bound CaMKII monomers resulting in CaMKII autophosphorylation. A CaMKII monomer can only be phosphorylated if the calmodulin bound to it has at least one calcium ion, and once phosphorylated [27], the monomer remains in the active state even after unbinding from CaM (Fig 1C middle). The same is true for full length monomers that are bound within the holoenzyme. In this manner, a brief Ca2+ influx initiates a prolonged CaMKII activation [7, 9, 26, 27, 27–29]. Within the holoenzyme each of the monomers can phosphorylate neighbors, as long as the former is active and the latter has CaM bound to it (Fig 1D) [8, 27]. The phosphorylation rate of the CaMKII monomers depends on how many Ca2+ ions are bound to the CaM bound to that substrate [30].
+Phosphatases are important: Various types of protein phosphatases (PP1, PP2A, PP2B, PP2C) can dephosphorylate CaMKII in the brain and, if CaM is not bound to the latter, bring it back to its inactive state [25, 31]. In the PSD, however, protein phosphatase 1 (PP1) has been shown to be mainly responsible for CaMKII dephosphorylation [31, 32] (Fig 1C bottom).
+thumbnail	Download:
+PPTPowerPoint slide
+PNGlarger image
+TIFForiginal image
+Fig 1. Schematic representation of the interactions between calmodulin (CaM), calcium, CaMKII, and neurogranin (Ng).
+
+(A) Calmodulin has 4 calcium binding sites; it binds Ca2+ cooperatively and its ability to activate CaMKII depends on how many of these sites are occupied. (B) Neurogranin (Ng) is a scaffolding molecule; upon binding calmodulin it dramatically reduces the latter’s affinity for calcium. In this work, we assume that CaM cannot bind calcium and Ng simultaneously. (C) The default conformation of CaMKII monomers is inactive (top); they can be activated by CaM binding. Once bound to CaM, the monomers can be phosphorylated by another active CaMKII protein. In this case, the CaMKII monomer will remain active even after losing CaM. Protein phosphatase 1 (PP1) dephosphorylates CaMKII (bottom). (D) CaMKII holoenzyme is a dodecamer, which consists of 2 stacked hexomeric rings of CaMKII monomers. Within the ring, a given CaMKII monomer can be phosphorylated by its neighbor provided that they are both in the active conformation. This is commonly referred to as autophosphorylation.
+
+https://doi.org/10.1371/journal.pcbi.1008015.g001
+
+_Many computational models of CaMKII dynamics have been developed in the literature to probe the different interactions in this cascade at varying levels of detail [11, 33–40]._
+
 This is not intended to be an in-depth review of the existing models, but rather a summary aimed at comparing how previous models relate to the model I have developed. Several multi-state models of CaMKII have been proposed, each differing in focus and scope from the present one. Notably, there are multiple models by Stefan et al. on CaMKII  which explore the dynamics between these two molecules using Stochsim which does not does not account for spatial effects, unlike MCell. These mathematical models provide insights into the mechanisms of calcium binding to calmodulin and the subsequent interaction with CaMKII, influencing the kinase’s activation, phosphorylation, and opening and closing dynamics. These models, primarily from the early 2000s, include a multi-state model by Stefan et al. (2012) [29], implemented in the particle-based stochastic simulator StochSim [70].
 
 Pharris et al. propose a model in which CaMKII is represented as a dodecamer in 3D space; however, their CaMKII dodecamer does not diffuse spatially. Their work primarily investigates how Ca²⁺/CaM binding may stabilize the activation of CaMKII subunits and regulate the maintenance of CaMKII autophosphorylation. Similarly, Ordyan et al. also model CaMKII as a dodecamer and its diffusion over time and space using MCell (as does Pharris et al.). Their model focuses on the interactions between calmodulin and the scaffolding molecule neurogranin on CaMKII. It is valuable in showing how the finely tuned interactions between neurogranin, CaM, CaMKII, and PP1 provide a mechanism for precisely controlling synaptic sensitivity to calcium signals. However, they do not consider the important interaction with NMDA receptors (NMDARs).
