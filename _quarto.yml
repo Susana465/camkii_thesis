@@ -13,8 +13,7 @@ book:
     - 30-modelling_background.qmd
     - 20-repro_open.qmd
     - 20-data-hazards.qmd
-    - 30-methods.qmd
-    - camkii-nmdar-modelling.qmd
+    - 30-model.qmd
     - references.qmd
 
   downloads: [pdf]
@@ -40,10 +39,12 @@ format:
     toc: true
     number-sections: true
     documentclass: scrreprt
+    latex_engine: xelatex
     include-in-header: 
       text: |
         \usepackage{makeidx}
         \makeindex
+        \usepackage{geometry}
     include-after-body: 
       text: |
         \printindex

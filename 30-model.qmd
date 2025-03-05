@@ -1,0 +1,120 @@
+---
+bibliography: [references.bib]
+---
+
+# Modelling CaMKII and NMDAR interactions 
+
+Numerous computational models of CaMKII dynamics have been developed over the past decade to look at different interactions of CaMKII and its substrates or binding partners at varying levels of detail [REFERENCES]. Many of these models center on the binding of calcium to calmodulin and the subsequent formation of the CaM-CaMKII complex [REFERENCES]. While these studies provide a good foundation for understanding CaMKII dynamics, the models either focus solely on temporal dynamics without considering geometry [@maki-marttunen2020Unified], or explore both spatial and temporal dynamics but do not model CaMKII as a multimeric molecule [Pharris, CDS paper]. Some models do account for CaMKII as a multimeric dodecamer but do not focus on its interactions with NMDARs. To my knowledge, this research is novel in the field, as it incorporates all these aspects: modeling CaMKII as a dodecamer, examining spatiotemporal dynamics, and focusing specifically on the CaMKII/NMDAR complex.
+
+The research carried out in this PhD project follows recent studies [Pharris, Ordyan, Bartol] that have looked at CaMKII as a dodecamer to study its autophosphorylation and spatiotemporal regulation in poststynaptic dendrites using BioNetGen and MCell, as we will see next. Incorporating spatial, temporal, and multimeric aspects is crucial because these  dimensions fundamentally shape the behavior of molecular complexes like like the CaMKII/NMDAR interaction. Spatial dynamics can reveal how the molecules interact within different cellular regions, in fact CaMKII phosphorylation levels, as well as its functions have been shown to differ depending on its subcellular localization [@davies2007ACaMKII]. Temporal dynamics are important to understand how CaMKII/NMDAR interactions evolve over time.
+
+## Previous work 
+
+This is not intended to be an in-depth review of the existing models, but rather a summary aimed at comparing how previous models relate to the model I have developed. Several multi-state models of CaMKII have been proposed, each differing in focus and scope from the present one. Notably, there are multiple models by Stefan et al. on CaMKII  which explore the dynamics between these two molecules using Stochsim which does not does not account for spatial effects, unlike MCell. These mathematical models provide insights into the mechanisms of calcium binding to calmodulin and the subsequent interaction with CaMKII, influencing the kinase’s activation, phosphorylation, and opening and closing dynamics. 
+
+Notably, Pharris et al., published a model that specifically examines the dynamics of CaMKII in relation to CaM using MCell. However, this study was conducted using MCell 3.3, which did not support the diffusion of multi-state molecules. 
+
+Ordyan et al. [199] employ a BioNetGen rule-based modelling approach using Monte Carlo methods, similar to the present study, to investigate how Ca²⁺ signals influence CaMKII phosphorylation dynamics within the postsynaptic density (PSD). Their work primarily focuses on the interactions between CaM and the scaffolding molecule Ng in regulating CaMKII dynamics. Their model predicts that the parameters governing this leaky integration mechanism are finely tuned through interactions between Ng, CaM, CaMKII, and PP1, thereby providing a precise means of controlling synaptic sensitivity to calcium signals. However, their study does not investigate the crucial interaction between CaMKII and NMDARs.  
+
+More recently, Bartol et al. have published a study using the same version of MCell 4 as the model used in this PhD. Theyr use particle-based stochastic simulations in MCell4 to model the activation of CaMKII by Ca2+ flowing through NMDARs within a postsynaptic spine. Their spatial-temporal model simulates CaMKII as a dodecamer with calcium influx through NMDARs, yet they do not directly examine interactions between NMDARs and CaMKII.
+
+Each of these models represents a step towards the development of the present study, which advances the field by explicitly modelling CaMKII as a dodecamer that directly interacts with NMDARs on the surface of the postsynaptic dendrite.
+
+
+## Model description
+
+I use Monte Carlo algorithm simulations with the new MCell4 which combines the spatial simulation features of MCell3 (Kerr et al., 2008) and the rule-based, network-free simulation (NFSim) framework of BioNetGen Language (BNGL) (Faeder et al., 2009). This integration of capabilities offers a flexible and robust tool that is well-suited for investigating the kinetics of complex reactions within the space of a dendritic spine. 
+
+I model the interactions of various molecules released inside the cell, including Ca²⁺, CaM, CaMKII, PP1, and NMDARs on the cell surface. I examine the binding dynamics of calcium to calmodulin and its subsequent interactions with CaMKII, focusing on the different states of CaMKII (open/closed, active/inactive) and the phosphorylation processes involved. _The results emphasize the importance of CaM binding to both CaMKII and NMDARs, as well as the regulatory role of phosphorylation._ 
+
+The model was validated against biological results at various stages. First, the calcium release and subsequent binding to CaM were validated against [REFERENCES], testing the sequential binding of calcium. Next, to test for CaMKII activation, I assessed how much CaMKII flickered between active/open and inactive/closed states. Stefan et al. determined that the activation probability (in the absence of CaM and phosphorylation) is 0.002, so I set it to that. 
+
+This flickering behavior should allow for CaM_Ca4 to bind to the open state, further stabilizing CaMKII, as observed in in vitro and in vivo studies [REFERENCES]. The stabilization of CaMKII in the open state by CaM binding is known as CaM trapping, and our model exhibits this behavior [FIGURE]. Additionally, CaMKII autophosphorylation at T286 and T306 is also modeled to showcase the regulatory functions of these sites.
+
+The model uses a stochastic agent-based approach, where the program tracks only the reactions that occur between existing discrete molecules during the simulation (network-free simulation [119, 120]). A key aspect of this approach is that the number of different states present can be much smaller than the total number of possible states. Generally, stochastic simulations are preferred when the number of particles of a chemical species is small. When the assumption of continuous concentration fails due to limited populations of reactants in a small cellular environment, the ODE representation fails and stochastic simulations are particularly useful.
+
+### Molecule concentrations and cell volume
+All molecules, except NMDARs which are surface molecules, were released from inside the cell to interact with each other. Due to the stochastic nature of MCell simulations, molecules are released as discrete molecule numbers. Concentrations can be calculated as shown below in @eq-molec-concentrations-calc.  The example calculation below considers an initial release of 10000 molecules and a dendritic volume of 0.5 µm³.  
+
+$$
+1*10^{4} \text{molecules} \times 
+\frac{1 mol}{6.023*10^{23} \text{molecules}} \times 
+\frac{1}{0.5 \, \mu \text{m}^3} \times 
+\frac{1  \, \mu \text{m}^3}{10 ^{-15} \text{L}} =
+3.32*10^{-6} \text{M} \times 
+\frac{10^{6}\mu \text{m}^3}{1 \text{M}} =
+33.2 \mu \text{M}
+$${#eq-molec-concentrations-calc}
+
+The molecule concentrations in this model fall within ranges previously reported in the literature. Specifically, 10000 molecules of Ca²⁺ were released initially, corresponding to an initial [Ca²⁺] of 33.2 µM (Figure 5). Prior studies employing fluorescent Ca²⁺ indicators have shown resting intracellular calcium concentrations ([Ca²⁺]i) within 50-100 nM, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). Reported intracellular [CaM] concentrations, ranging from 8 to 250 µM, align with the values observed here (initial concentration: 6.64 µM) (Black et al., 2004; Kakiuchi et al., 1982). 
+
+In the model presented here, reactions of cytoplasmatic molecules specified in BNGL, were placed into the geometry of a postysnaptic dendritic spine with a volume of aproximately 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris et al., 1989). 
+
+The model is ran with CaMKII as a dodecameric molecule, which is biologically accurate. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (see table of molecules included in the model). Initial molecules released inside the cell are: Ca2+ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Since four calcium ions are needed to fully saturate CaM (CaM_Ca4) [REFERENCES], five times more calcium than CaM and CaMKII was released to ensure it would not be a limiting factor [TABLE REFERENCE]. An insufficient amount of calcium would limit the formation of fully active CaM, thereby reducing its ability to activate CaMKII. This could introduce an unintended bottleneck in the signalling cascade, making it difficult to accurately study CaMKII activation, autophosphorylation, or its downstream effects. Interactions between different molecules are modelled as rules in BNGL (as explained in CHAPTER REFERENCE), where each molecule reacts according to certain conditions and kinetic rates. 
+
+## Reaction rules and kinetic rates
+In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() <-> CaM(ca~1,camkii)” represents the binding of a single calcium ion to Calmodulin that is not bound to CaMKII (see reaction #1 in @fig-rxns-table1). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at a specific time step for unimolecular transformations. 
+
+As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1  can then continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well. During runtime, a random seed number generator is initialized with a seed number for each simulation. This generator selects a sequence of random numbers that determines the probabilities of transformations throughout the simulation.
+
+
+\newpage
+<!-- Make the table landscape -->
+\KOMAoptions{usegeometry, paper=landscape, pagesize}
+\recalctypearea
+\newgeometry{right=20mm,left=20mm,top=30mm,bottom=30mm}
+
+
+\begin{table}[h]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|l|c|c|l|}
+        \hline
+        \textbf{Reaction} & \textbf{Kon} & \textbf{Koff} & \textbf{References} \\
+        \hline
+        \multicolumn{4}{|l|}{\textbf{Calcium binding to calmodulin}} \\
+        \hline
+        \#1 Ca + CaM $\leftrightarrow$ CaM\_Ca1 & $2.57 \times 10^8$ & $2.04 \times 10^3$ & Linkevicius et al., 2024 \\
+        CaM(cav$\sim$0,camkii) + Ca() $\leftrightarrow$ CaM(cav$\sim$1,camkii) \textbf{kon\_CaCaM, koff\_1Ca} & & & \\
+        \hline
+        \#2 CaM\_Ca1 $\leftrightarrow$ CaM\_Ca2 & $2.29 \times 10^7$ & $3.90 \times 10^1$ & Linkevicius et al., 2024 \\
+        CaM(cav$\sim$1,camkii) + Ca() $\leftrightarrow$ CaM(cav$\sim$2,camkii) \textbf{kon\_CaCaM, koff\_2Ca} & & & \\
+        \hline
+        \#3 Ca + CaM\_Ca2 $\leftrightarrow$ CaM\_Ca3 & $2.14 \times 10^7$ & $7.42 \times 10^2$ & Linkevicius et al., 2024 \\
+        CaM(cav$\sim$2,camkii) + Ca() $\leftrightarrow$ CaM(cav$\sim$3,camkii) \textbf{kon\_CaCaM, koff\_3Ca} & & & \\
+        \hline
+        \#4 Ca + CaM\_Ca3 $\leftrightarrow$ CaM\_Ca4 & $1.10 \times 10^8$ & $9.80 \times 10^2$ & Linkevicius et al., 2024 \\
+        CaM(cav$\sim$3,camkii) + Ca() $\leftrightarrow$ CaM(cav$\sim$4,camkii) \textbf{kon\_CaCaM, koff\_4Ca} & & & \\
+        \hline
+        \multicolumn{4}{|l|}{\textbf{CaMKII open/closed flickering}} \\
+        \hline
+        \#5 CaMKII\_closed $\leftrightarrow$ CaMKII\_open & $2.00 \times 10^4$ & $1.00 \times 10^7$ & Stefan et al., 2012; Pharris et al., 2020 \\
+        CaMKII(cam,T286$\sim$0,nmdar,open$\sim$0) $\leftrightarrow$ CaMKII(cam,T286$\sim$0,nmdar,open$\sim$1) \textbf{kon\_camkii\_act, koff\_camkii\_inact} & & & \\
+        \hline
+        \multicolumn{4}{|l|}{\textbf{CaM\_Ca4 binding/unbinding to CaMKII}} \\
+        \hline
+        \#6 CaM\_Ca4 + CaMKII $\rightarrow$ CaM\_Ca4\_CaMKII/286\_0 & $1.50 \times 10^8$ & $0.46$ & Meyer et al., 1992 \\
+        CaM(cav$\sim$4,camkii) + CaMKII(cam,T286$\sim$0,T306$\sim$0,open$\sim$1) $\rightarrow$ \\
+        CaM(cav$\sim$4,camkii!1).CaMKII(cam!1,T286$\sim$0,T306$\sim$0,open$\sim$1) & & & \\
+        \hline
+        \#7 CaM\_Ca4 + CaMKII $\rightarrow$ CaM\_Ca4\_CaMKII/286\_P & $5.00 \times 10^7$ & $1.00 \times 10^3$ & Meyer et al., 1992 \\
+        CaM(cav$\sim$4,camkii) + CaMKII(cam,T286$\sim$P,T306$\sim$0,open$\sim$1) $\rightarrow$ \\
+        CaM(cav$\sim$4,camkii!1).CaMKII(cam!1,T286$\sim$P,T306$\sim$0,open$\sim$1) & & & \\
+        \hline
+        \multicolumn{4}{|l|}{\textbf{CaMKII T286 phosphorylation}} \\
+        \hline
+        \#8 CaMKII\_open\_T286$\sim$0 $\rightarrow$ CaMKII\_open\_T286$\sim$P & $0.96$ & n/a &  \\
+        CaMKII(11,T286$\sim$0,open$\sim$1).CaMKII(r!1,open$\sim$1) $\rightarrow$ \\
+        CaMKII(11,T286$\sim$P,open$\sim$1).CaMKII(r!1,open$\sim$1) \textbf{k\_pCaM4} & & & \\
+        \hline
+    \end{tabular}
+    \caption{Reaction table including BioNetGen reactions, rate constants, and references.}
+\end{table}
+
+\newpage
+
+\KOMAoptions{usegeometry, paper=portrait,pagesize}
+\recalctypearea
+\newgeometry{top=20mm,bottom=20mm,left=30mm,right=30mm}
+
+## Title
