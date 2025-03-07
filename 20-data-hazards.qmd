@@ -8,21 +8,22 @@ execute:
 ---
 # Data Hazards 
 
-As discussed in more detail below, the Data Hazards initiative was developed a community-driven, shared vocabulary to identify and address risks in data science. This project aims to mitigate risks by helping researchers recognize potential ethical challenges that may not have been initially considered and explore strategies for addressing them. While data scientists are typically trained to solve technical problems, ethical considerations are often overlooked. Second, the project seeks to foster a cultural shift in research by encouraging the wider adoption of ethical reflexivity within the data science community, promoting a more responsible and socially aware approach to scientific work. Before I present the published article where co-authors and I propose the Data Hazards as an ethical framework for neuroscience and in particular think about the Data Hazard Labels apply to this PhD, let me show you the work leading up to it. 
+As discussed in more detail below, the Data Hazards initiative was developed a community-driven, shared vocabulary to identify and address risks in data science. This project aims to mitigate risks by helping researchers recognize potential ethical challenges that may not have been initially considered and explore strategies for addressing them. While data scientists are typically trained to solve technical problems, ethical considerations are often overlooked. The Data Hazards project seeks to foster a cultural shift in research by encouraging a wider adoption of ethical considerations within the science community, promoting a more responsible and socially aware approach to scientific work.
 
-There are 11 Data Hazards at the moment (Figure 3.1), which include a label description, examples and general safety precautions to showcase how we might go about thinking about these risks (Table REFERENCE). For a full description of the Data Hazard labels, and to avoid repetition, see [SECTION WITH DATA HAZARD LABELS]. There is no prescribed method to apply the Data Hazard labels to one's work,however in Turing Way Chapter we propose four key iterative steps that can be useful; in combination with this, in the published article, we propose two complimentary methods to go about applying Data Hazard labels. The four iterative recommended steps are:
+As part of my ongoing effort to assess the broader implications of my research, I encountered the Data Hazards Project in 2021. Since then, I have progressively applied the Data Hazards framework to my PhD research. In addition to incorporating Data Hazards into my own research, I have facilitated several workshops on the topic, with details of these sessions available here [Data_Hazards_workshops]. In 2023, I co-organised and co-hosted a one-day symposium focused on Data Hazards, ethics, and reproducibility. Furthermore, I co-authored a chapter on Data Hazards to The Turing Way handbook [REFERENCE]. All of this work culminates with this PhD and the paper I present below, where we extend the application of the Data Hazards framework to the field of neuroscience, exploring how these hazard labels can highlight ethical challenges in computational modelling, specifically focusing on my PhD as a case study. The following paper demonstrates how I have identified risks of my work as well as the efforts taken to mitigate them.
 
-Learn about the labels: familiarise yourself with the Data Hazard labels.
+\newpage
+\newgeometry{top=0.5in, bottom=1in, left=0.5in, right=0.5in} 
 
-- Apply them: decide which Hazard labels are relevant to your project.
-- Reflect: on what to do differently and what mitigations to make.
-- Display them: displaying the labels alongside your work can help you to communicate that you’ve - thought about these broad ethical issues and how you’d like others to use your work.
+\pagestyle{plain}  
 
-As part of my ongoing effort to assess the broader implications of my research, I encountered the Data Hazards Project in 2021. Since then, I have completed a facilitator training workshop and have progressively applied the Data Hazards framework to my PhD research. To illustrate this integration, I presented a poster at the COMBINE and ICSB 2022 conferences [REFERENCES].
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{neuroethics_paper.pdf}
 
-In addition to incorporating Data Hazards into my own work, I have facilitated several workshops on the topic, with details on my preparation available here [Data_Hazards_workshops]. In 2023, I co-organised and co-hosted a one-day symposium focused on Data Hazards, ethics, and reproducibility. Furthermore, I contributed to the development of a new chapter on Data Hazards for The Turing Way handbook [REFERENCE]. I also collaborated with the Data Hazards team to develop a poster for AI UK 2023, where I presented my PhD research [FIGURE REFERENCE] and invited conference attendees to discuss which Data Hazard labels they believed were applicable.
+\newpage 
+\restoregeometry
 
-This poster was part of an exhibition stand with the Data Hazards Team, at AIUK 2023. When creating this poster, I was able to both do some collaborative reflection, where conference attendees came to talk about the project, had a look at the poster, and decided by adding stickers to a list of hazards, to say which ones applied to it. As can be seen in Figure 3.5 (before end of the day), people were adding stickers to record which data hazard labels they thought applied to my PhD project. At the end of the day, I recorded final numbers and the results can be seen in the barchart below Figure 3.6.
+
+The work building up to the paper discussed above was preceeded by a collaboration with the Data Hazards team, where I developed a poster for AI UK 2023 that followed the methodology described in Method 1 of the paper. The poster allowed for reflective discussions with conference attendees, who engaged by selecting Data Hazard labels they believed applied to my PhD project. As shown in @fig-barchart, the labels were chosen in different quantities, with some labels being chosen more often than others.
 
 ```{python}
 #| label: fig-barchart
@@ -53,8 +54,5 @@ plt.show()
 ```
 
 Interestingly, not all labels were chosen as applicable to my project (Figure 3.6). Only 6 of the 11 current labels were chosen as relevant, with “difficult to understand” being the most prevalent one, chosen by 6 people. High environmental impact and danger of misuse follow in closely with 5 people having chosen these ones. Of course these numbers are small and hold, more than anything, illustrative value as to how and why people may think certain labels apply to a project. Difficult to understand” label was chosen the most, followed by “high environmental impact” and “danger of misuse”. 
-
-
-\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{neuroethics_paper.pdf}
 
 conclusion 
