@@ -19,7 +19,7 @@ More recently, @bartol2024Spatial have published a study using the same version 
 Each of these models represents a step towards the development of the present study, which advances the field by explicitly modelling CaMKII as a dodecamer that directly interacts with NMDARs on the surface of the postsynaptic dendrite.
 
 ## Model description
-I use Monte Carlo algorithm simulations with the new MCell4 which combines the spatial simulation features of MCell3 (Kerr et al., 2008) and the rule-based, network-free simulation (NFSim) framework of BioNetGen Language (BNGL) (Faeder et al., 2009), as described in [computer-background chapter]. This integration of capabilities offers a flexible and robust tool that is well-suited for investigating the kinetics of complex reactions within the space of a dendritic spine. 
+As explained in [INTRO-COMP-CHAPTER] I use Monte Carlo algorithm simulations with the new MCell4 which combines the spatial simulation features of MCell3 (Kerr et al., 2008) and the rule-based, network-free simulation (NFSim) framework of BioNetGen Language (BNGL). This integration of capabilities offers a flexible and robust tool that is well-suited for investigating the kinetics of complex reactions within the space of a dendritic spine. 
 
 I model the interactions of various molecules released inside the cell, including Ca²⁺, CaM, CaMKII, PP1, and NMDARs on the cell surface. I examine the binding dynamics of calcium to calmodulin and its subsequent interactions with CaMKII, focusing on the different states of CaMKII (open/closed, active/inactive) and the phosphorylation processes involved. _The results emphasize the importance of CaM binding to both CaMKII and NMDARs, as well as the regulatory role of phosphorylation._ 
 
@@ -136,6 +136,9 @@ One proposed mechanism is that the C-terminal domain (CTD) of NMDAR, which share
 
 In the midst of this uncertainty, it is well-established that CaMKII binds to the GluN2B subunit of NMDARs, a critical interaction that stabilizes CaMKII in its open, active conformation. In this model, CaMKII is capable of associating with an NMDAR, provided CaMKII is in its open conformation and that the receptor has a free CaMKII binding site (see reaction rule number 12 in TABLE-REFERENCE). Once bound, the CaMKII/NMDAR complex is formed, maintaining the kinase in its active state by stabilizing its open conformation. 
 
+![Compartmental BioNetGen cell with plasma membrane (PM) and cytoplasm (CP). Molecules are released as surface molecules (NMDARs) or volume molecules (rest).](30-methods-figures\cbngl_camkii_nmdar.PNG){#fig-cbngl width="95%"}
+
+![Reaction rules](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns width="95%"}
 
 
 
