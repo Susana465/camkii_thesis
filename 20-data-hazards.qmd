@@ -1,5 +1,10 @@
 ---
 bibliography: [references.bib]
+execute:
+  echo: false      # Hide code in all chunks
+  warning: false   # Suppress warnings
+  eval: true       # Evaluate code
+  output: true     # Include the output (e.g., plots, results) in the final document
 ---
 # Data Hazards 
 
@@ -18,8 +23,6 @@ As part of my ongoing effort to assess the broader implications of my research, 
 In addition to incorporating Data Hazards into my own work, I have facilitated several workshops on the topic, with details on my preparation available here [Data_Hazards_workshops]. In 2023, I co-organised and co-hosted a one-day symposium focused on Data Hazards, ethics, and reproducibility. Furthermore, I contributed to the development of a new chapter on Data Hazards for The Turing Way handbook [REFERENCE]. I also collaborated with the Data Hazards team to develop a poster for AI UK 2023, where I presented my PhD research [FIGURE REFERENCE] and invited conference attendees to discuss which Data Hazard labels they believed were applicable.
 
 This poster was part of an exhibition stand with the Data Hazards Team, at AIUK 2023. When creating this poster, I was able to both do some collaborative reflection, where conference attendees came to talk about the project, had a look at the poster, and decided by adding stickers to a list of hazards, to say which ones applied to it. As can be seen in Figure 3.5 (before end of the day), people were adding stickers to record which data hazard labels they thought applied to my PhD project. At the end of the day, I recorded final numbers and the results can be seen in the barchart below Figure 3.6.
-
-Interestingly, not all labels were chosen as applicable to my project (Figure 3.6). Only 6 of the 11 current labels were chosen as relevant, with “difficult to understand” being the most prevalent one, chosen by 6 people. High environmental impact and danger of misuse follow in closely with 5 people having chosen these ones. Of course these numbers are small and hold, more than anything, illustrative value as to how and why people may think certain labels apply to a project. Difficult to understand” label was chosen the most, followed by “high environmental impact” and “danger of misuse”. 
 
 ```{python}
 #| label: fig-barchart
@@ -49,6 +52,9 @@ plt.title("Data Hazards labels that may apply to my PhD")
 plt.show()
 ```
 
-{insert paper}
+Interestingly, not all labels were chosen as applicable to my project (Figure 3.6). Only 6 of the 11 current labels were chosen as relevant, with “difficult to understand” being the most prevalent one, chosen by 6 people. High environmental impact and danger of misuse follow in closely with 5 people having chosen these ones. Of course these numbers are small and hold, more than anything, illustrative value as to how and why people may think certain labels apply to a project. Difficult to understand” label was chosen the most, followed by “high environmental impact” and “danger of misuse”. 
+
+
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{neuroethics_paper.pdf}
 
 conclusion 

@@ -25,7 +25,7 @@ bibliography:
 - background.bib
 
 link-citations: true
-number-depth: 1
+number-depth: 3
 
 format:
   docx:
@@ -45,6 +45,7 @@ format:
         \usepackage{makeidx}
         \makeindex
         \usepackage{geometry}
+        \usepackage{pdfpages}
     include-after-body: 
       text: |
         \printindex
