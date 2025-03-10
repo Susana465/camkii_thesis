@@ -30,29 +30,25 @@ This flickering behavior should allow for CaM_Ca4 to bind to the open state, fur
 The model uses a stochastic agent-based approach, where the program tracks only the reactions that occur between existing discrete molecules during the simulation (network-free simulation [119, 120]). A key aspect of this approach is that the number of different states present can be much smaller than the total number of possible states. Generally, stochastic simulations are preferred when the number of particles of a chemical species is small. When the assumption of continuous concentration fails due to limited populations of reactants in a small cellular environment, the ODE representation fails and stochastic simulations are particularly useful.
 
 ## Modelling CaMKII and NMDARs 
-In the model at hand, the individual subunits are specified in BNGL as follows: CaMKII(open~0~1,T286~0~P,T306~0~P,cam,nmdar,l,r,c). The components l, r, and c represent binding sites within the holoenzyme: l is a binding site on the left of the subunit, r on the right, and c is the central site interacting with an opposing subunit in the six-membered ring (@fig-camkii-dodecamer). In BNGL syntax, interactions between components are represented by a period, with a “!” (bang) followed by a number to denote specific binding. For example, a bond between the right side of one subunit and the left side of another is written as: CaMKII(cam,nmdar,T286~0,T306~0,open~0,l!6,**r!1**,c!13).CaMKII(cam,nmdar,T286~0,T306~0,open~0,**l!1**,r!2,c!14) as highlighted in @fig-camkii-dodecamer.  The “!” is followed by any number, provided the two binding components share the same number.
+In the model at hand, the individual subunits are specified in BNGL as follows: `CaMKII(open~0~1,T286~0~P,T306~0~P,cam,nmdar,l,r,c)` The components l, r, and c represent binding sites within the holoenzyme: l is a binding site on the left of the subunit, r on the right, and c is the central site interacting with an opposing subunit in the six-membered ring (@fig-camkii-dodecamer). In BNGL syntax, interactions between components are represented by a period, with a “!” (bang) followed by a number to denote specific binding. For example, a bond between the right side of one subunit and the left side of another is written as: `CaMKII(cam,nmdar,T286~0,T306~0,open~0,l!6,**r!1**,c!13).CaMKII(cam,nmdar,T286~0,T306~0,open~0,**l!1**,r!2,c!14)` as highlighted in @fig-camkii-dodecamer.  The “!” is followed by any number, provided the two binding components share the same number.
 
 Modelling CaMKII as a dodecamer using BNGL enables the representation of the molecule as multimeric, with each subunit able to adopt the following possible states:
 
 - A calmodulin binding site, calmodulin can be bound or unbound
 - A NMDAR binding site, CaMKII can be bound or unbound to NMDARs
-- A T286 phosphorylation site, which can be unphosphorylated (0) or phosphorylated (P),
-- A T306 phosphorylation site, which can be unphosphorylated (0) or phosphorylated (P),
+- A T286 phosphorylation site, which can be unphosphorylated (T286~0) or phosphorylated (T286~P),
+- A T306 phosphorylation site, which can be unphosphorylated (T306~0) or phosphorylated (T306~P),
 - A status of being open (open~1) or closed (open~0).
 
-![Compartmental BioNetGen cell with plasma membrane (PM) and cytoplasm (CP). Molecules are released as surface molecules (NMDARs) or volume molecules (rest).](30-methods-figures\cbngl_camkii_nmdar.PNG){#fig-camkii_nmdar width="95%"}
+![CaMKII dodecamer in BNGL](30-methods-figures\camkii_dodecamer_bngl.PNG){#fig-camkii-dodecamer width="95%"}
 
 _Write about the different ways in which CaMKII is instantiated in different runs._
-
-![CaMKII dodecamer in BNGL](30-methods-figures\camkii_dodecamer_bngl.PNG){#fig-camkii-dodecamer width="95%"}
 
 The model includes autonomous activation of CaMKII subunits, allowing them to flicker between open and closed states when unbound to CaM and unphosphorylated at T286 (see @sec-binding-cam-camkii). The binding of CaM or phosphorylation at T286 stabilises the open state by preventing reversion to a closed conformation. Additionally, CaM binding can only occur if the subunit is in an open state due to the structural requirements for high-affinity binding. Electron microscopy of rat alpha-CaMKII in Sf9 cells (Myers et al., 2017) suggests that fewer than 3% of CaMKII subunits adopt a compact, docked-like conformation (Figure 6). The model therefore assumes all CaMKII to be in an undocked confirmation, in order to streamline the focus on the fundamental functional states of CaMKII. 
 
 Each CaMKII holoenzyme diffuses through the cell volume with a specified diffusion constant of [ENTER VALUE], which is within biological limits. CaMKII subunits can interact with NMDA receptors located on the cell surface. When they interact, CaMKII can bind reversibly to the NMDA receptor, forming a complex in which the CaMKII subunit that has been bound remains open. 
 
 As CaMKII remains open when bound to NMDARs, further reactions can happen such as phosphorylation at T286 and T305, as well as binding to CaM molecules. _I need to double check if CaM can bind to the bound camkii subunit, or to others but not to the already bound one. equally if cam can actually bind to camkii/nmdar complex._ 
-
-![cbngl](30-methods-figures\cbngl.PNG){#fig-cbngl width="95%"}
 
 In this model, the NMDARs are represented as single-site molecules, rather than as tetramers, due to the fact that the primary interaction between CaMKII and NMDARs occurs predominantly through the GluN2B subunit. While it is important to acknowledge that the GluN2B subunit is distinct from the entire NMDAR heteromer, we refer to the model as NMDAR for simplicity and clarity. This nomenclature is used as a practical approximation, since the interactions we are modelling are specifically associated with the GluN2B subunit, which is often studied in isolation in experimental settings.In many in vitro experiments, the focus is on the GluN2B subunit, and the behaviour of the whole NMDAR complex is inferred based on these more controlled interactions. Therefore, for the purposes of this model, referring to the system as NMDAR aligns with the established experimental approach, even though the underlying interactions are predominantly occurring via the GluN2B subunit. Further developments of this model to account for a more complex NMDAR molecule are possible, as I propose in [DISCUSSION SECTION].
 
@@ -80,6 +76,8 @@ $$
 $${#eq-molec-concentrations-calc-example}
 
 The molecule concentrations in this model fall within ranges previously reported in the literature. Specifically, 10000 molecules of Ca²⁺ were released initially, corresponding to an initial [Ca²⁺] of 33.2 µM (Figure 5). Prior studies employing fluorescent Ca²⁺ indicators have shown resting intracellular calcium concentrations ([Ca²⁺]i) within 50-100 nM, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). Reported intracellular [CaM] concentrations, ranging from 8 to 250 µM, align with the values observed here (initial concentration: 6.64 µM) (Black et al., 2004; Kakiuchi et al., 1982). 
+
+![Compartmental BioNetGen cell with plasma membrane (PM) and cytoplasm (CP). Molecules are released as surface molecules (NMDARs) or volume molecules (rest).](30-methods-figures\cbngl_camkii_nmdar.PNG){#fig-camkii_nmdar width="95%"}
 
 In the model presented here, reactions of cytoplasmatic molecules specified in BNGL, were placed into the geometry of a postysnaptic dendritic spine with a volume of aproximately 0.5μm3, which is within ranges of spine volume of 0.004 to 0.6 μm3 in hippocampal CA1 neurons (Harris et al., 1989). 
 
