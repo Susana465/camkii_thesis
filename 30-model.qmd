@@ -38,7 +38,7 @@ Modelling CaMKII as a dodecamer using BNGL enables the representation of the mol
 - A T306 phosphorylation site, which can be unphosphorylated or phosphorylated,
 - A status of being open or closed.
 
-[ADD FIGURE HERE OF A CAMKII HEXAMER/DODECAMER STATES]
+![CaMKII dodecamer in BNGL](30-methods-figures\camkii_dodecamer_bngl.PNG){#fig-camkii_bngl width="95%"}
 
 The model includes autonomous activation of CaMKII subunits, allowing them to flicker between open and closed states when unbound to CaM and unphosphorylated at T286 (see @sec-binding-cam-camkii). The binding of CaM or phosphorylation at T286 stabilises the open state by preventing reversion to a closed conformation. Additionally, CaM binding can only occur if the subunit is in an open state due to the structural requirements for high-affinity binding. Electron microscopy of rat alpha-CaMKII in Sf9 cells (Myers et al., 2017) suggests that fewer than 3% of CaMKII subunits adopt a compact, docked-like conformation (Figure 6). The model therefore assumes all CaMKII to be in an undocked confirmation, in order to streamline the focus on the fundamental functional states of CaMKII.
 
