@@ -87,6 +87,8 @@ INSERT TABLE OF REACTIONS
 
 ![Table of reactions screenshot for now](30-methods-figures\table_rxns1.PNG){#fig-tbl-1}
 
+![Reaction rules](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns width="95%"}
+
 ### Binding of calcium to calmodulin {.unnmbered #sec-binding-ca-cam}
 The binding of calcium to CaM is represented in reaction rules number 1 to number 4 in TABLE-OF-REACTIONS. CaM has four EF hands divided into N and C lobes capable of binding two calcium ions per lobe, consequently CaM is modelled as being able to bind four calcium ions in our model. The N lobe binds calcium faster with lower affinity and the C lobe binds slower with higher affinity [REFERENCES]. Numerous models have been developed to investigate the dynamics of calcium binding to CaM [REFERENCES]. Linkevicius et al. (2024) examined and compared various of these models, providing a useful summary of the typical categories for modeling CaM binding to Ca2+. The model used here falls under their proposed "scheme 3" (@fig-scheme3-cam), where calcium binds and unbinds to four separate calcium binding sites in calmodulin. Unlike other models that distinguish between CaM's N-terminal and C-terminal binding lobes, this project does not, as the specifics of calcium binding to calmodulin are beyond its scope and following "scheme 3" approach to calcium binding produces biologically relevant results while avoiding complexity, allowing us to focus on further CaMKII and NMDARs interactions.
 
@@ -140,7 +142,6 @@ One proposed mechanism is that the C-terminal domain (CTD) of NMDAR, which share
 
 In the midst of this uncertainty, it is well-established that CaMKII binds to the GluN2B subunit of NMDARs, a critical interaction that stabilizes CaMKII in its open, active conformation. In this model, CaMKII is capable of associating with an NMDAR, provided CaMKII is in its open conformation and that the receptor has a free CaMKII binding site (see reaction rule number 12 in TABLE-REFERENCE). Once bound, the CaMKII/NMDAR complex is formed, maintaining the kinase in its active state by stabilizing its open conformation. 
 
-![Reaction rules](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns width="95%"}
 
 
 
