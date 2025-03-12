@@ -63,6 +63,8 @@ In addition to forming a complex with GluN2B, CaMKII phosphorylates S1303 (123) 
 
 REFERENCES FOR CAMKII BINDING TO NMDAR:
 
+this paper suggests that camkii enzymatic activity is not necessary and does not affect nmdar function (including s1303p) for ltp: https://www.sciencedirect.com/science/article/pii/S1044743116302718#bb0205 _since CaMKII binding to GluN2B is stabilized by S1303A mutation, our observation that the activity of S1303A mutated receptors is not affected by co-expression of CaMKII indicates that CaMKII binding alone has no direct effect on NMDA receptor activity, at least under these conditions.[...] Thus, Ser1303 phosphorylation might be expected to enhance Ca2+ entry into spines, which could sustain or further stimulate CaMKII activity (Barcomb et al., 2014, Coultrap et al., 2010), enabling feed-forward CaMKII-mediated control of other synaptic substrates, such as GluA1 subunits of the AMPA receptor (see Introduction)._
+
 _Among iGluRs, the N-methyl-D-aspartate receptor (NMDAR) is a direct target of CaMKII. By directly binding to an intracellular C-terminal (CT) region of NMDAR GlN2B subunits, CaMKII phosphorylates a serine residue (S1303) in the GluN2B CT._ https://pmc.ncbi.nlm.nih.gov/articles/PMC4435801/ 
 
 _Interesting:  CaMKII also binds to the mGluR5 CT. This binding seems to anchor and accumulate inactive CaMKII at synaptic sites. Active CaMKII dissociates from mGluR5 and may then bind to adjacent GluN2B to mediate the mGluR5-NMDAR coupling._ https://pmc.ncbi.nlm.nih.gov/articles/PMC4435801/ 
