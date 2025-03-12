@@ -90,3 +90,15 @@ Need to add T306p.
 ## Why focus on CaMKII and NMDARs to understand memory?
 
 https://www.cell.com/cell-reports/fulltext/S2211-1247(24)01217-8?uuid=uuid%3Ae1b03284-8081-430f-b559-f8566ad0dbbd these two papers seem contardictory at first sight https://www.pnas.org/doi/abs/10.1073/pnas.2402783121
+
+# REFERENCES FOR PHOSPHATASES ON CAMKII AND NMDAR, TOGETHER AND SEPARATELY
+
+This paper mentions how phosphatases pp1 and pp2b may be acting on camkii and nmdar as a complex and separately:
+
+https://www.jbc.org/article/S0021-9258(19)66044-8/fulltext
+
+_Thus, the CaMKII/NR2B interaction is inversely controlled by two phosphorylation events,i.e. enhanced by CaMKII Thr286autophosphorylation and inhibited by NR2B Ser1303phosphorylation!_
+
+_However, NR2B phosphorylated at Ser1303appears to retain residual affinity for CaMKII, as evidenced by overlay assays (Fig. 4) and by slow dissociation of CaMKII from NR2B after phosphorylation (Fig. 5) and as suggested by the activity-dependent targeting of CaMKII by the NR2B S1303D mutant (Fig. 7 D). Furthermore, the extremely low turnover rate (K cat) of NR2B Ser1303phosphorylation by CaMKII (∼10 min–1 compared with 300 min−1 for syntide-2) implies that CaMKII·NR2B complexes exist for several seconds before phosphorylated NR2B can dissociate, even in the presence of a large excess of non-phosphorylated NR2B._
+
+_Phosphatases add another layer of complexity to the regulation of the CaMKII/NR2B interaction. Although in vitro data suggest a negative role for protein phosphatases by returning CaMKII to its non-phosphorylated state (Fig. 5 C), the in vivosituation is undoubtedly more complex since dephosphorylation of NR2B Ser1303 is expected to increase the affinity for CaMKII. Thus, the lifetime of the kinase·channel complex appears to be controlled by the balance of phosphatase activities toward CaMKII Thr286 and NR2B Ser1303. Whereas CaMKII Thr286 is dephosphorylated by protein phosphatase type 1 or 2A depending on its subcellular localization (33), the identity of the NR2B Ser1303 phosphatase is unknown._
