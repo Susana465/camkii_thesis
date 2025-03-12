@@ -5,6 +5,8 @@ lightbox: true
 
 # Results
 
+9.96181304\times10^{-8} concentration of NMDAR/CAMKII complex at equilibrium (30 molecules converted to Molar) following equation in modelling chapter. 
+
 ## CaMKII dodecamer
 
 mutant CaMKII/NMDAR binding abolition and how this replicates in the cBNGL model too.
