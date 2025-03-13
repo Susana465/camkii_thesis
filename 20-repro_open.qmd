@@ -73,6 +73,14 @@ It is not uncommon for scientific code and workflows to originate within small, 
 
 In order to make research FAIR, there are numerous resources out there [REFERENCES] that offer guidance on how to do so. Generally, it is recommended to think about this at the different stages of the research life cycle, as an iterative process. In the [REFERENCE CHAPTER HOW I MAKE THIS PHD REPRODUCIBLE] I will dive deeper as to how these principles are thought about in this PhD and how they have been applied throughout the different stages of the research carried out here.  
 
+This might go in a different section, but writing it here for now can always change order. Some repetition from section below.
+
+how have I made my PhD reproducible and followed FAIR principles? is what I am trying to get at, so that people can not only see how it could be done, but maybe use it as inspiration to do so as well. there is very extensive literature and tutorials out there on how to do all of these things, but I will provide below a personal account of what I have used and how it has been useful to create a model that can reproduced by other people. Later, on the social ethics of it, I discuss data hazards and application to this PhD. 
+
+
+
+- make an environment for code, use github for version control, use quarto for thesis write up
+
 ## Defining Ethical Science
 Open, reproducible and FAIR ideas are fundamentally linked to ethics, as these practices ultimately promote more ethical and responsible research by fostering transparency, integrity, and accountability. Likewise, regardless of how efficient or reproducible a research outcome is, its value is questionable if it causes harm to a group of individuals. Likewise, if a project acknowledges potential biases and risks in its data but fails to provide sufficient resources for others to replicate the research, can we truly call it progress?
 
