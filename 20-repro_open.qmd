@@ -73,14 +73,6 @@ It is not uncommon for scientific code and workflows to originate within small, 
 
 In order to make research FAIR, there are numerous resources out there [REFERENCES] that offer guidance on how to do so. Generally, it is recommended to think about this at the different stages of the research life cycle, as an iterative process. In the [REFERENCE CHAPTER HOW I MAKE THIS PHD REPRODUCIBLE] I will dive deeper as to how these principles are thought about in this PhD and how they have been applied throughout the different stages of the research carried out here.  
 
-This might go in a different section, but writing it here for now can always change order. Some repetition from section below.
-
-how have I made my PhD reproducible and followed FAIR principles? is what I am trying to get at, so that people can not only see how it could be done, but maybe use it as inspiration to do so as well. there is very extensive literature and tutorials out there on how to do all of these things, but I will provide below a personal account of what I have used and how it has been useful to create a model that can reproduced by other people. Later, on the social ethics of it, I discuss data hazards and application to this PhD. 
-
-
-
-- make an environment for code, use github for version control, use quarto for thesis write up
-
 ## Defining Ethical Science
 Open, reproducible and FAIR ideas are fundamentally linked to ethics, as these practices ultimately promote more ethical and responsible research by fostering transparency, integrity, and accountability. Likewise, regardless of how efficient or reproducible a research outcome is, its value is questionable if it causes harm to a group of individuals. Likewise, if a project acknowledges potential biases and risks in its data but fails to provide sufficient resources for others to replicate the research, can we truly call it progress?
 
@@ -98,7 +90,21 @@ As we have seen, creating research that takes into account opennes, reproducibil
 Beyond academic advantages, open, ethical, and reproducible research contributes to more equitable knowledge dissemination. When data, methods, and findings are openly shared, barriers to access are reduced, enabling a wider range of researchers, institutions, and communities to engage with and build upon existing work. This inclusivity can drive innovation, improve public trust in science, and ensure that research benefits can be reaped by as many individuals as possible. 
 
 ## How are these principles applied throughout this PhD?
-The implementation of open and reproducible practices in this PhD has evolved through multiple iterations. Rather than creating a rigid guideline, I draw from the wealth of existing resources that provide guidance on applying these principles to research. In the section below, I aim to illustrate my approach to embedding ethics and reproducibility more generally, with examples of work I have done to achieve a more reproducible, open and ethics-focused PhD. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. The result is a PhD that not only considers practical applications of reproducibility but also embeds ethical and philosophical reflections about this works' future impact. To illustrate how I have achieved this, I will walk you through the various projects, posters, and presentations I have developed, highlighting how they have influenced and shaped the work of this PhD.
+_The implementation of open and reproducible practices in this PhD has evolved through multiple iterations. Rather than creating a rigid guideline, I draw from the wealth of existing resources that provide guidance on applying these principles to research. In the section below, I aim to illustrate my approach to embedding ethics and reproducibility more generally, with examples of work I have done to achieve a more reproducible, open and ethics-focused PhD. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. The result is a PhD that not only considers practical applications of reproducibility but also embeds ethical and philosophical reflections about this works' future impact. To illustrate how I have achieved this, I will walk you through the various projects, posters, and presentations I have developed, highlighting how they have influenced and shaped the work of this PhD._
+
+This might go in a different section, but writing it here for now can always change order. Some repetition from section below.
+
+While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates how these practices can be implemented but also serves as a potential framework for others seeking to adopt similar approaches. Later, in the discussion on the social ethics of this research, I will address data hazards and their relevance to this PhD.
+
+
+
+--
+
+how have I made my PhD reproducible and followed FAIR principles? is what I am trying to get at, so that people can not only see how it could be done, but maybe use it as inspiration to do so as well. there is very extensive literature and tutorials out there on how to do all of these things, but I will provide below a personal account of what I have used and how it has been useful to create a model that can reproduced by other people. Later, on the social ethics of it, I discuss data hazards and application to this PhD. 
+
+I guess it makes sense to divide how ive done things into various sections, although the whole process has included many back and forth and continuous learning throughout. 
+
+- make an environment, repository for code, use github for version control, open publication, trying my best to follow good software practices, and then there is the use quarto for thesis write up. 
 
 ### Getting started: Bias and reproducibility in a computational neurobiology PhD's journey
 A common experience in my academic career has been the limited focus on the social dimensions of ethics in the research I conduct. Over time, I developed a keen interest in examining the biases within my own work, as I became aware that a lot of the research I do is based on biased views of how the world works (although it is almost -if not fully- impossible to have no bias) [REFERENCES]. This led me to the realization that in order to address and acknowledge any biases in my research, it also needed to be more reproducible and accessible, so that conversations are open and hold integrity. The initial bias I encountered was the assumption that "there is no need to account for social bias in my research", because one might think my research topic is neutral at first glance: computer simulations of proteins does not scream a need for ethical considerations, mainly because we are not directly using animals, human or non-human. 
