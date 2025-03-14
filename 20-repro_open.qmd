@@ -87,7 +87,7 @@ Thinking about the (un)ethical history and future implications of the research w
 
 As we have seen, creating research that takes into account opennes, reproducibility and ethical considerations offers benefits not only for researchers but for society as a whole. Researchers can directly benefit through increased visibility and citation rates, greater opportunities for collaboration, and reduced waste of time and resources. Additionally, fostering open scientific practices helps build a stronger sense of community, in contrast to the traditionally competitive nature of research. Embedding these considerations into research workflows can enhance the credibility and reliability of scientific findings. Furthermore, reflecting on the broader impact of research promotes accountability and encourages proactive measures to mitigate potential harm. 
 
-Beyond academic advantages, open, ethical, and reproducible research contributes to more equitable knowledge dissemination. When data, methods, and findings are openly shared, barriers to access are reduced, enabling a wider range of researchers, institutions, and communities to engage with and build upon existing work. This inclusivity can drive innovation, improve public trust in science, and ensure that research benefits can be reaped by as many individuals as possible. 
+Beyond academic advantages, open, ethical, and reproducible research contributes to more equitable knowledge dissemination. When data, methods, and findings are openly shared, barriers to access are reduced, enabling a wider range of researchers, institutions, and communities to engage with and build upon existing work. This can drive innovation, improve public trust in science, and ensure that research benefits can be reaped by as many individuals as possible. 
 
 ## How are these principles applied throughout this PhD?
 _The implementation of open and reproducible practices in this PhD has evolved through multiple iterations. Rather than creating a rigid guideline, I draw from the wealth of existing resources that provide guidance on applying these principles to research. In the section below, I aim to illustrate my approach to embedding ethics and reproducibility more generally, with examples of work I have done to achieve a more reproducible, open and ethics-focused PhD. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. The result is a PhD that not only considers practical applications of reproducibility but also embeds ethical and philosophical reflections about this works' future impact. To illustrate how I have achieved this, I will walk you through the various projects, posters, and presentations I have developed, highlighting how they have influenced and shaped the work of this PhD._
@@ -96,6 +96,11 @@ This might go in a different section, but writing it here for now can always cha
 
 While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates how these practices can be implemented but also serves as a potential framework for others seeking to adopt similar approaches. Later, in the discussion on the social ethics of this research, I will address data hazards and their relevance to this PhD.
 
+The content below pretty much follows the content for reproducible research proposed by TTW. 
+
+## Sustainable Code 
+
+As someone with a heavier background of biology - I never learnt how to code in my undergrad - I must admit I don't find coding intuitive. Since my undergraduate degree, I did a 9 months masters into computer science, and I have completed various courses on good computer science practices during my PhD. And although of course these things have been helpful, I think most of the steps I have taken towards making sustainable code has
 
 
 --
