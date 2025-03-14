@@ -99,7 +99,15 @@ The content below pretty much follows the content for reproducible research prop
 - Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
 
 ### Reusable
-Ultimately, the goal is that the model created in this PhD is reusable, so it can be built up on. So most of what I have described already should ideally lead to a project that can be reused in the future. Following the FAIR principles guideline for reusability of (meta)data, to this end, in model-creation-section, I describe the context under which the data was generated, including kinetic rates, molecule reaction rule names and where they have come from and/or how they were calculated, if applicable. 
+Ultimately,goal of this PhD project is to ensure that the developed model is reusable and enables future extensions and applications. 
+-  I have provided a detailed description of the model and its components, ensuring that (meta)data are richly annotated with relevant attributes. Specifically, in the model-creation section, I outline the conditions under which the data was generated, including kinetic rates, molecule reaction rule names, and their sources or calculation methods.
+- Where appropriate (whether it be in a GitHub repository or data repository), I have licensed and explicitly stated data usage rights or accessibility constraints, making it clear how others can build upon this work.
+- the model includes comprehensive provenance details [see table of reactions with references], documenting the origins of data, methodologies used for derivations, and any transformations applied. This ensures transparency and facilitates reproducibility.
+
+https://www.data.cam.ac.uk/data-management-guide/sharing-your-data
+
+https://journalologytraining.ca/topic/checklist-to-ensure-your-data-support-the-fair-principles/
+
 ### Version Control 
 - there are different possibilities to use version control, i use github
 - benefits
