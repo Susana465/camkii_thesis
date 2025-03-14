@@ -96,9 +96,34 @@ This might go in a different section, but writing it here for now can always cha
 
 While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates how these practices can be implemented but also serves as a potential framework for others seeking to adopt similar approaches. Later, in the discussion on the social ethics of this research, I will address data hazards and their relevance to this PhD.
 
-The content below pretty much follows the content for reproducible research proposed by TTW. 
+The content below pretty much follows the content for reproducible research proposed by TTW. Organising how ive made both the model and whole thesis project:
 
-## Sustainable Code 
+### Findable
+- Model and thesis are available in github repos, where people can access and find data, with appropriate README files that explain how each repository works and what it contains.
+- presentations, workshops and papers are available with persistent identifiers where pertinent [REFERENCE REPOS AND DOIS]
+
+### Accessible
+
+### Interoperable
+
+### Reusable
+
+### Version Control 
+- there are different possibilities to use version control, i use github
+- benefits
+- it can be scary sometimes
+### Clear and Reusable Code
+
+- clear comments
+- clear documentation of what software, hardware and versions I used
+- readme files
+- environments for future reuse
+
+### Code Testing
+- prepare for errors
+- validate step by step (learn to debug)
+- use of a mock/dummie test model (as main one is too convoluted to follow errors sometimes). ABC model
+- things like unit testing, system testing, runtime testing, mention too.
 
 As someone with a heavier background of biology - I never learnt how to code in my undergrad - I must admit I don't find coding intuitive. Since my undergraduate degree, I did a 9 months masters into computer science, and I have completed various courses on good computer science practices during my PhD. And although of course these things have been helpful, I think most of the steps I have taken towards making sustainable code has
 
