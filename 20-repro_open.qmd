@@ -94,37 +94,10 @@ In order to ensure compliance with the FAIR principles, I have referenced checkl
 - The scripts written in Python utilize libraries that facilitate cross-software integration, making the model adaptable [see CHAPTER-REFERENCE].
 - Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
 
---
-
-_The implementation of open and reproducible practices in this PhD has evolved through multiple iterations. Rather than creating a rigid guideline, I draw from the wealth of existing resources that provide guidance on applying these principles to research. In the section below, I aim to illustrate my approach to embedding ethics and reproducibility more generally, with examples of work I have done to achieve a more reproducible, open and ethics-focused PhD. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. The result is a PhD that not only considers practical applications of reproducibility but also embeds ethical and philosophical reflections about this works' future impact. To illustrate how I have achieved this, I will walk you through the various projects, posters, and presentations I have developed, highlighting how they have influenced and shaped the work of this PhD._
-
-This might go in a different section, but writing it here for now can always change order. Some repetition from section below.
-
-While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates how these practices can be implemented but also serves as a potential framework for others seeking to adopt similar approaches. Later, in the discussion on the social ethics of this research, I will address data hazards and their relevance to this PhD.
-
-The content below pretty much follows the content for reproducible research proposed by TTW. In order to make sure I follow FAIR principles, looking at checklists such s [REFERENCES] helps to have a guide to follow along. 
-
-### Findable
-- Model and thesis are available in github repos, where people can access and find data, with appropriate README files that explain how each repository works and what it contains.
-- Dataset is available as per [insert doi once ready]
-- presentations, workshops and papers are available with persistent identifiers where pertinent [REFERENCE REPOS AND DOIS]
-- metadata such as that used in the model has human readable names that are still niche within the discipline of neuroscience, but notations and terminologies are provided [see code link]
-
-### Accessible
-- The models created during this PhD project are open and accessible through github
-- Data is available through [chosen database]
-- README files are avialable for protocol use, and the protocols are open, free and implementable providing that software and hardware are available
-
-### Interoperable
-- This one was of particular relevance to this project, as I interface the models using different software (for example BioNetGen, MCell, Python [see CHAPTER-REFERENCE]). So the data in this model can be integrated with future data, and additionally  the data need to interoperate with applications or workflows for analysis, storage, and processing.
-- the scripts written in python use libraries that allow interface of different software [see chapter reference].
-- Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
-
 ### Reusable
-Ultimately,goal of this PhD project is to ensure that the developed model is reusable and enables future extensions and applications. 
--  I have provided a detailed description of the model and its components, ensuring that (meta)data are richly annotated with relevant attributes. Specifically, in the model-creation section, I outline the conditions under which the data was generated, including kinetic rates, molecule reaction rule names, and their sources or calculation methods.
-- Where appropriate (whether it be in a GitHub repository or data repository), I have licensed and explicitly stated data usage rights or accessibility constraints, making it clear how others can build upon this work.
-- the model includes comprehensive provenance details [see table of reactions with references], documenting the origins of data, methodologies used for derivations, and any transformations applied. This ensures transparency and facilitates reproducibility.
+- I have provided a detailed description of the model and its components, ensuring that (meta)data are richly annotated with relevant attributes. Specifically, in the model-creation section, I outline the conditions under which the data was generated, including kinetic rates, molecule reaction rule names, and their sources or calculation methods.
+- Where appropriate (e.g., GitHub repositories or data repositories), I have explicitly licensed the data and stated usage rights, making it clear how others can build upon this work.
+- The model includes comprehensive provenance details [see table of reactions with references], documenting data origins, derivation methods, and any transformations applied. 
 
 https://www.data.cam.ac.uk/data-management-guide/sharing-your-data
 
