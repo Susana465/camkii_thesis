@@ -74,6 +74,28 @@ It is not uncommon for scientific code and workflows to originate within small, 
 In order to make research FAIR, there are numerous resources out there [REFERENCES] that offer guidance on how to do so. Generally, it is recommended to think about this at the different stages of the research life cycle, as an iterative process. In the [REFERENCE CHAPTER HOW I MAKE THIS PHD REPRODUCIBLE] I will dive deeper as to how these principles are thought about in this PhD and how they have been applied throughout the different stages of the research carried out here. 
 
 ## How are these principles applied throughout this PhD?
+While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates the practical implementation of these practices but also showcases this PhD as an example of working towards a reproducible, open, and ethics-focused PhD in computational neuroscience. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. 
+
+In order to ensure compliance with the FAIR principles, I have referenced checklists such as [REFERENCES] as a guide to applying these standards. The following sections demonstrate how the FAIR principles have been integrated into this PhD. Each section outlines specific practices that I have used in order to make this research more open, transparent, and reproducible. These efforts align closely with best practices for reproducible research proposed by TTW [REFERENCE].
+
+### Findable
+- The model and thesis are available in GitHub repositories, where people can access and find data, with appropriate README files explaining how each repository works and what it contains.
+- The dataset will be available with a DOI upon finalization [insert DOI once ready].
+- Presentations, workshops, and papers are available with persistent identifiers where applicable [REFERENCE REPOS AND DOIs].
+- Metadata used in the model follows human-readable naming conventions while still being domain-specific within neuroscience. Although some terminology is niche, notations and explanations are provided [see code link].
+
+### Accessible
+- The models created during this PhD project are open and accessible through GitHub, with proper documentation.
+- Data is stored in [chosen database], ensuring long-term access.
+- README files provide clear guidance on protocols, which are open, free, and implementable, provided the necessary software and hardware are available.
+
+### Interoperable
+- This aspect is particularly relevant to this project, as the model needs to interface with multiple software tools (e.g., BioNetGen, MCell, Python) [see CHAPTER-REFERENCE]. By structuring the data and code to be compatible across these platforms, I ensure that the model can be integrated with future datasets and incorporated into diverse workflows for analysis, storage, and processing.
+- The scripts written in Python utilize libraries that facilitate cross-software integration, making the model adaptable [see CHAPTER-REFERENCE].
+- Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
+
+--
+
 _The implementation of open and reproducible practices in this PhD has evolved through multiple iterations. Rather than creating a rigid guideline, I draw from the wealth of existing resources that provide guidance on applying these principles to research. In the section below, I aim to illustrate my approach to embedding ethics and reproducibility more generally, with examples of work I have done to achieve a more reproducible, open and ethics-focused PhD. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. The result is a PhD that not only considers practical applications of reproducibility but also embeds ethical and philosophical reflections about this works' future impact. To illustrate how I have achieved this, I will walk you through the various projects, posters, and presentations I have developed, highlighting how they have influenced and shaped the work of this PhD._
 
 This might go in a different section, but writing it here for now can always change order. Some repetition from section below.
@@ -112,8 +134,8 @@ https://journalologytraining.ca/topic/checklist-to-ensure-your-data-support-the-
 - there are different possibilities to use version control, i use github
 - benefits
 - it can be scary sometimes
-### Clear and Reusable Code
 
+### Clear and Reusable Code
 - clear comments
 - clear documentation of what software, hardware and versions I used
 - readme files
