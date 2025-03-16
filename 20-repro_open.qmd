@@ -13,10 +13,6 @@ In the culture of continuously publishing and publishing fast, those who are alr
 
 Moreover, this pressure to publish (predominantly statistically significant results), is closely tied to what is known as publication bias. In published academic research, publication bias occurs when the outcome of an experiment or research study biases the decision to publish or otherwise distribute it. This typically results in a preference for publishing significant or positive results, disrupting the balance of findings and favouring those that are deemed novel or noteworthy. Whilst negative or inconclusive results are rarely published or considered less worthy of publication [REFERENCES].
 
-https://onlinelibrary.wiley.com/doi/full/10.1111/emre.12618?casa_token=j3R2YYkfgVsAAAAA%3A8LuIsxYdzSA6FiWCaHMq2Ox_nalGjhqFqnoXbCo9p8RApG0iDTjrhPCb2bu0vYRY9mW370rjipSCW4E
-
-https://www.tandfonline.com/doi/full/10.1080/01425692.2025.2454315?casa_token=F2Ti3XPhKU8AAAAA%3AiWYVo5oi-M2kwXK9Uaxj7GsFDO4kkcYv2h7RvkzYNO12puyFDCwMLC0zzF_dm5VLW2WJMB43ZRE1gg
-
 Examining this bias towards positive results reveals substantial evidence of a troubling trend: an overrepresentation of false-positive findings in the scientific literature [@esarey2016Measuring; @hartgerink2017Too; @stahl2018Fact; @schneck2023Are]. This bias towards positive results has several concerning and wasteful consequences, including, but not restricted to: a significant number of valid negative results remaining unpublished, which excludes critical findings from the scientific record. This means that other research teams, unaware of these unpublished negative results, may continue to unknowingly test the same hypotheses (which may actually be false) until, by chance or artifact, a positive result is obtained. These chance positive results are then published, as they align with the preference for significant findings, even when substantial and more definitive contradictory evidence may exist in contrast to it [@carlson2012Understanding]. What is more, this underreporting of negative results introduces bias into meta-analysis, which consequently misinforms researchers, doctors, policymakers and the public in general. Additionally, more resources are wasted on already disputed research that remains unpublished and therefore unavailable to the scientific community [@kicinski2013Publication; @kicinski2014How; @aert2019Publication; @page2019Assessing]. 
 
 This cycle sustains an error-prone body of scientific literature, undermining the reliability of published research. Hand in hand with this publication bias, comes something now known as a _Reproducibility Crisis_, where it is becoming increasingly apparent that making "fast-science" is associated with a lack of being able to reproduce research [REFERENCE]. The reproducibility crisis has been in the rise for the past few decades as we uncover the fact that much of the research that is published fails to be reproduced by others. To give some examples, a survey of 1576 scientists published in Nature (Baker, 2016) reported that over 70% of the participants failed to reproduce others’ experiments and over 50% failed to reproduce their own results. Similarly, @tiwari2021ReproducibilitySystemsBiology assessed the reproducibility of 455 mathematical models in systems biology and found that about 50% of published models were not reproducible either due to incorrect or missing information in the manuscript [REFERENCE].
@@ -99,9 +95,7 @@ In order to ensure compliance with the FAIR principles, I have referenced checkl
 - Where appropriate (e.g., GitHub repositories or data repositories), I have explicitly licensed the data and stated usage rights, making it clear how others can build upon this work.
 - The model includes comprehensive provenance details [see table of reactions with references], documenting data origins, derivation methods, and any transformations applied. 
 
-https://www.data.cam.ac.uk/data-management-guide/sharing-your-data
-
-https://journalologytraining.ca/topic/checklist-to-ensure-your-data-support-the-fair-principles/
+In addition to adhering to the FAIR principles, I want to highlight several key practices that have been fundamental in ensuring the reproducibility of this thesis. These practices have provided a strong foundation for transparent, structured, and well-documented research, making it easier for others to understand, validate, and build upon my work. In no order of preference, these are: 
 
 ### Version Control 
 Version control is a pillar of most, if not all, guides for reproducible research. Version control is a method for tracking and managing changes to files or projects over time. It allows you and your collaborators to monitor modifications, review past edits, and restore previous versions if needed. Using version control helps maintain a relatively organized and traceable record of updates across different stages of development. This is extremely helpful for times when I needed to check back on when and where I did a specific change to my work, or when working collaboratively to know who wrote what and when. In terms of reproducibility, this means that version control helps with having clear provenance of information [REFERENCE]. As a result of using version control, I have made my life easier (and potentially others in the future too) as I could track what version of the code and data produced specific outputs, for example. And as datasets grow larger and more complex, having a solid version control workflow feels like doing your future self a huge favor (because you are).
@@ -118,11 +112,10 @@ In addition to maintaining version control of the model(s), I also used Quarto [
 
 !['Piled Higher and Deeper' by Jorge Cham www.phdcomics.com](22-reproducibility-figures\final.PNG){#fig-final}
 
-- there are different possibilities to use version control, i use github
-- benefits
-- it can be scary sometimes
-
 ### Clear and Reusable Code
+
+
+---
 - clear comments
 - clear documentation of what software, hardware and versions I used
 - readme files
