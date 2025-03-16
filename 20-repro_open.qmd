@@ -113,6 +113,14 @@ In addition to maintaining version control of the model(s), I also used Quarto [
 !['Piled Higher and Deeper' by Jorge Cham www.phdcomics.com](22-reproducibility-figures\final.PNG){#fig-final}
 
 ### Clear and Reusable Code
+Ensuring that code is clear, well-documented, and reusable is essential for both my own future reference and for others who may build upon this work. Indeed, code that is human readable with useful comments [see TTW REFERENCE for guidelines on good code comment practices] not only enhances reproducibility but also facilitates collaboration by making it easier to understand, modify, and extend. Some of the key strategies I have implemented to achieve clarity and reusability in my code are: 
+
+Clear Comments: I have incorporated detailed comments throughout the code to explain its purpose, logic, and key functions. This helps anyone (including my future self) quickly grasp what each section does without having to decipher it from scratch. Comments also clarify why certain decisions were made, which is crucial for long-term sustainability of the project.
+
+[INSERT EXAMPLE OF CODE SNIPPET(S)]
+
+Comprehensive Documentation: Beyond inline comments, I have documented the broader aspects of my computational work, including the software, hardware specifications, and version numbers used. This ensures that the research can be replicated under similar conditions, minimising inconsistencies caused by version mismatches or dependency issues [REFERENCE TO SECTIONS WHERE THIS IS STATED]. Likewise, each repository includes a README file that provides an overview of the project, instructions for installation, dependencies, and usage guidelines. This serves as an entry point for users, making it easier to navigate the codebase and understand how to run and interpret the scripts.
+
 
 
 ---
