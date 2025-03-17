@@ -1,5 +1,6 @@
 ---
 bibliography: [references.bib]
+csl: https://www.zotero.org/styles/vancouver
 ---
 # Creating an open, reproducible and ethics-focused PhD
 Intro paragraph

@@ -18,7 +18,7 @@ book:
 
   downloads: [pdf]
   page-navigation: true
-  
+
 bibliography: 
 - references.bib
 - methods.bib
@@ -36,6 +36,8 @@ format:
     number-sections: true
     theme: pulse
   pdf:
+    citeproc: true
+    csl: https://www.zotero.org/styles/ieee
     toc: true
     number-sections: true
     documentclass: scrreprt
