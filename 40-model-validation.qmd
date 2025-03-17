@@ -13,3 +13,5 @@ Sensitivity analysis is a technique to determine how the variation in the output
 - One-At-A-Time (OAT): Vary one parameter while keeping others constant. This helps assess individual parameter impact.
 
 ## Sanity checks:
+
+
