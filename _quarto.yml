@@ -37,7 +37,7 @@ format:
     theme: pulse
   pdf:
     citeproc: true
-    csl: https://www.zotero.org/styles/ieee
+    csl: https://www.zotero.org/styles/vancouver-brackets
     toc: true
     number-sections: true
     documentclass: scrreprt
