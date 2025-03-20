@@ -2,7 +2,7 @@
 bibliography: [references.bib]
 ---
 
-# Introduction to Biology in this PhD
+# Introduction to Biology in this PhD{#sec-biology-chapter}
 
 To situate this PhD within its broader biological context, it is essential to first outline the theoretical and practical knowledge frameworks underpinning this research. This background chapter provides an overview of key concepts relevant to the study, establishing the foundational understanding needed to appreciate both the aims and implications of the work carried out here onwards. 
 
