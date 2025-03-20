@@ -6,7 +6,7 @@ execute:
   eval: true       # Evaluate code
   output: true     # Include the output (e.g., plots, results) in the final document
 ---
-# Data Hazards 
+# Data Hazards{#sec-data-hazards-chapter}
 
 As discussed in more detail below, the Data Hazards initiative was developed a community-driven, shared vocabulary to identify and address risks in data science. This project aims to mitigate risks by helping researchers recognize potential ethical challenges that may not have been initially considered and explore strategies for addressing them. While data scientists are typically trained to solve technical problems, ethical considerations are often overlooked. The Data Hazards project seeks to foster a cultural shift in research by encouraging a wider adoption of ethical considerations within the science community, promoting a more responsible and socially aware approach to scientific work.
 
