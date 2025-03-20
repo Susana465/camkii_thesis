@@ -52,28 +52,51 @@ Additionally, Open Science and its various elements are directly related with th
 
 It is worth noting that Open Science does not mean “sharing absolutely everything”. Many fields of science involve working with sensitive personal data, with medical research being the most obvious example, where data is not to be widely shared. Likewise, privacy and data protection, as well as consent, and national and commercially sensitive data can be some of the most common examples of when data cannot always be open [@regulation2016RegulationEU2016]. If access to data needs to be restricted due to security reasons, however, the justification for this should be made clear. Free access to and subsequent use of data is of significant value to society and the economy. The concept of Open Science views that data should, therefore, be open by default and only as closed as necessary.
 
-### Open Science by Design
-"Open Science by Design" is the concept I have tried to follow through this PhD, it is a concept that promotes integrating open science principles directly into the research process from the very beginning. Instead of treating openness as an afterthought, it emphasizes proactively designing research to be transparent, accessible, and reproducible at every stage. Some key principles of Open Science by Design are reflected in this PhD, including efforts to ensure:
+## FAIR Principles for Open and Reproducible Science
+Weaved in with the topics already discussed, are the FAIR principles for scientific data management. These principles were created as a guideline to develop and collectively support a clear and measurable set of principles that allow for **F**indability, **A**ccessibility, **I**nteroperability and **R**eusability of digital assets, to ultimately support more reproducible research [@wilkinson2016FAIRa]. FAIR principles, therefore, serve as a valuable framework for conducting research with integrity. 
 
-#### Open Access {.unnumbered}
-By making research content freely available, or as accessible as possible. There are different ways to achieve this; sometimes, it may involve self-archiving a version of the research, often alongside preprints, allowing public access without direct journal fees (this is known as Green Open Access) [@bjork2014Anatomy]. 
+The advantages of applying FAIR principles become apparent when we understand each principle. For example, when data is more easy to find, more accessible and readable, discoverability naturally improves [@cole2017Using; @kremen2018Improving; @kim2024Findability]. Beyond this, and more specifically linked to computational projects such as this PhD, FAIR practices can lead to more efficient code, minimising time spent on things like model retraining/rewriting, and reducing redundant data generation and storage [@hasselbring2019FAIR; @borrego2023Article]. Likewise, the interoperability aspect of FAIR principles enables researchers to integrate datasets from various sources, fostering new insights and innovative problem-solving approaches. Ultimately application of FAIR principles can result in lowering carbon footprint of computer simulations as less time and resources are wasted trying to run models that lacks useful information on how to run it [@lannelongue2023GREENER].
+
+It is not uncommon for scientific code and workflows to originate within small, specialised research groups, often resulting in code that functions as a 'black box' to external researchers and developers. As this process unfolds and mixes with the fast-paced mindset mentioned above, if a workflow and materials are not clear from the beginning, future researchers may prioritise immediate functionality over long-term code quality, often due to constraints such as tight deadlines, limited resources, or evolving project requirements, causing something known as technical debt where the long term costs of workflow opacity costs human effort, money and time. One of the goals of this thesis project is to provide a workflow that enables reusability at initial creation and at the time of reuse, so that technical debt is decreased and the barriers for driving community interactions and innovations are lowered as a result.
+
+While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates the practical implementation of these practices but also showcases this PhD as an example of working towards a reproducible, open, and ethics-focused PhD in computational neuroscience. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. 
+
+### Findable:
+_Data is well-described with rich metadata, making it easier to locate by both humans and machines._ 
+
+- The model and thesis are available in GitHub repositories, where people can access and find data, with appropriate README files explaining how each repository works and what it contains.
+- The dataset will be available with a DOI upon finalization [insert DOI once ready].
+- Presentations, workshops, and papers are available with persistent identifiers where applicable [REFERENCE REPOS AND DOIs].
+- Metadata used in the model follows human-readable naming conventions while still being domain-specific within neuroscience. Although some terminology is niche, notations and explanations are provided [see code link].
+
+### Accessible
+_Data is stored in a way that ensures users can retrieve it with clear licensing and open protocols._ 
+
+- The models created during this PhD project are open and accessible through GitHub, with proper documentation.
+- Data is stored in [chosen database], ensuring long-term access.
+- README files provide clear guidance on protocols, which are open, free, and implementable, provided the necessary software and hardware are available.
+- Open Access, Open Publication - expand.By making research content freely available, or as accessible as possible. There are different ways to achieve this; sometimes, it may involve self-archiving a version of the research, often alongside preprints, allowing public access without direct journal fees (this is known as Green Open Access) [@bjork2014Anatomy]. 
 
 To this end, for example, the publication of "Data Hazards ethical toolkit for neuroscience" was first made available as a preprint on the Open Science Framework (OSF) [reference]. This meant that the work was already shareable even before it was finally published in the journal of Neuroethics, and people were able to reference back to it and have access to it without any payment barriers. Later, when the paper was published in the journal, we chose Open Access publication, which involved paying an Article Processing Charge to the journal, which then published the final version of the article under an open license [@borrego2023Article], making it permanently free to access online (this is known as Gold Open Access). 
 
-Additionally, I have made concerted efforts to ensure that models, workshops, and presentations associated with my research are available in public repositories such as GitHub and Zenodo [REFERENCES]. These platforms are invaluable in making the tools and materials I have developed publicly accessible, while also offering mechanisms for proper citation through DOIs and appropriate licensing, where applicable.
+Additionally, I have made concerted efforts to ensure that models, workshops, and presentations associated with my research are available in public repositories such as GitHub and Zenodo [REFERENCES]. These platforms are invaluable in making the tools and materials I have developed publicly accessible, while also offering mechanisms for proper citation through DOIs and appropriate licensing, where applicable. 
 
-#### Open Data {.unnumbered}
+### Interoperable
+_Data is formatted using standardised vocabularies and structures, enabling seamless integration across different applications or workflows._
 
-refers to the openness and accessibility of data. It involves thinking about data sharing, privacy, and protection, as well as considerations like consent and the nuances of handling sensitive data. 
+- This aspect is particularly relevant to this project, as the model needs to interface with multiple software tools (e.g., BioNetGen, MCell, Python) [see CHAPTER-REFERENCE]. By structuring the data and code to be compatible across these platforms, I ensure that the model can be integrated with future datasets and incorporated into diverse workflows for analysis, storage, and processing.
+- The scripts written in Python utilize libraries that facilitate cross-software integration, making the model adaptable [see CHAPTER-REFERENCE].
+- Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
 
-#### Open Collaboration {.unnumbered}
+### Reusable
+_Data is well-documented, with detailed provenance and clear usage rights, supporting reproducibility and future research._
 
-#### Open Source {.unnumbered}
-text...
+- I have provided a detailed description of the model and its components, ensuring that (meta)data are richly annotated with relevant attributes. Specifically, in the model-creation section, I outline the conditions under which the data was generated, including kinetic rates, molecule reaction rule names, and their sources or calculation methods.
+- Where appropriate (e.g., GitHub repositories or data repositories), I have explicitly licensed the data and stated usage rights, making it clear how others can build upon this work.
+- The model includes comprehensive provenance details [see table of reactions with references], documenting data origins, derivation methods, and any transformations applied. 
 
-## Code Sustainability
 
-By documenting methodologies and sharing code for reproducibility. Sustainable code refers to code that remains usable, maintainable, and effective over time, even as technology, user needs, and environments change. It emphasizes long-term viability rather than just short-term functionality. This point is directly related to version control and automation, described in the following section [REFERENCE SECTION]. 
+## Important steps taken to apply FAIR principles, Open Science by Design and Reproducibility. 
 
 ### Comprehensive Documentation
 Ensuring that my code is clear, well-documented, and reusable has proven essential for both my own future reference and for others who may build upon this work. Indeed, code that is human readable with useful comments [see TTW REFERENCE for guidelines on good code comment practices] not only enhances reproducibility but also facilitates collaboration by making it easier to understand, modify, and extend. One of the key strategies I have implemented to achieve clarity and reusability is incorporating detailed and clear comments throughout the code to explain its purpose, logic, and key functions has been essential to help anyone (including my future self) quickly grasp what each section does without having to decipher it from scratch. Comments also help to clarify why certain decisions were made, which is crucial for long-term sustainability of the project.
@@ -106,45 +129,6 @@ In addition to maintaining version control of the model(s), I also used Quarto [
 
 ## Automation for Efficacy and Sustainability
 Beyond ensuring clarity, documentation, and reproducibility, automation plays a key role in making code more sustainable. By automating repetitive tasks, I reduce the likelihood of human error, save time, and ensure consistency across different runs of the model. This is particularly important when working with complex simulations, large datasets, or high-performance computing (HPC) environments, where manually setting up and executing processes can be inefficient and error-prone. One example of automation in this project is the use of scripts for setting up environments and running simulations. Instead of manually installing dependencies and configuring settings each time the model is used, I have created scripts that automatically set up the required computational environment and execute the necessary commands [REFERENCE README IN GITHUB]. This eliminates the risk of missing dependencies, ensures the correct software versions are used, and reduces the setup burden for new users. Additionally, I have automated data processing workflows to streamline the handling of simulation outputs. Large-scale simulations generate significant amounts of data, and manually processing these results would be time-consuming and inconsistent. By writing reusable scripts for tasks such as data cleaning, aggregation, and visualization, I ensure that results are processed systematically and efficiently. This not only saves time but also makes it easier to compare outputs across different runs, improving the reproducibility of results.
-
-## FAIR Principles for Open and Reproducible Science
-Weaved in with the topics already discussed, are the FAIR principles for scientific data management. These principles were created as a guideline to develop and collectively support a clear and measurable set of principles that allow for **F**indability, **A**ccessibility, **I**nteroperability and **R**eusability of digital assets, to ultimately support more reproducible research [@wilkinson2016FAIRa]. FAIR principles, therefore, serve as a valuable framework for conducting research with integrity. 
-
-The advantages of applying FAIR principles become apparent when we understand each principle. For example, when data is more easy to find, more accessible and readable, discoverability naturally improves [@cole2017Using; @kremen2018Improving; @kim2024Findability]. Beyond this, and more specifically linked to computational projects such as this PhD, FAIR practices can lead to more efficient code, minimising time spent on things like model retraining/rewriting, and reducing redundant data generation and storage [@hasselbring2019FAIR; @borrego2023Article]. Likewise, the interoperability aspect of FAIR principles enables researchers to integrate datasets from various sources, fostering new insights and innovative problem-solving approaches. Ultimately application of FAIR principles can result in lowering carbon footprint of computer simulations as less time and resources are wasted trying to run models that lacks useful information on how to run it [@lannelongue2023GREENER].
-
-It is not uncommon for scientific code and workflows to originate within small, specialised research groups, often resulting in code that functions as a 'black box' to external researchers and developers. As this process unfolds and mixes with the fast-paced mindset mentioned above, if a workflow and materials are not clear from the beginning, future researchers may prioritise immediate functionality over long-term code quality, often due to constraints such as tight deadlines, limited resources, or evolving project requirements, causing something known as technical debt where the long term costs of workflow opacity costs human effort, money and time. One of the goals of this thesis project is to provide a workflow that enables reusability at initial creation and at the time of reuse, so that technical debt is decreased and the barriers for driving community interactions and innovations are lowered as a result.
-
-While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a research model that others can reproduce. This not only demonstrates the practical implementation of these practices but also showcases this PhD as an example of working towards a reproducible, open, and ethics-focused PhD in computational neuroscience. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research. 
-
-### Findable:
-_Data is well-described with rich metadata, making it easier to locate by both humans and machines._ 
-
-- The model and thesis are available in GitHub repositories, where people can access and find data, with appropriate README files explaining how each repository works and what it contains.
-- The dataset will be available with a DOI upon finalization [insert DOI once ready].
-- Presentations, workshops, and papers are available with persistent identifiers where applicable [REFERENCE REPOS AND DOIs].
-- Metadata used in the model follows human-readable naming conventions while still being domain-specific within neuroscience. Although some terminology is niche, notations and explanations are provided [see code link].
-
-### Accessible
-_Data is stored in a way that ensures users can retrieve it with clear licensing and open protocols._ 
-
-- The models created during this PhD project are open and accessible through GitHub, with proper documentation.
-- Data is stored in [chosen database], ensuring long-term access.
-- README files provide clear guidance on protocols, which are open, free, and implementable, provided the necessary software and hardware are available.
-- Open Access, Open Publication - expand. 
-
-### Interoperable
-_Data is formatted using standardised vocabularies and structures, enabling seamless integration across different applications or workflows._
-
-- This aspect is particularly relevant to this project, as the model needs to interface with multiple software tools (e.g., BioNetGen, MCell, Python) [see CHAPTER-REFERENCE]. By structuring the data and code to be compatible across these platforms, I ensure that the model can be integrated with future datasets and incorporated into diverse workflows for analysis, storage, and processing.
-- The scripts written in Python utilize libraries that facilitate cross-software integration, making the model adaptable [see CHAPTER-REFERENCE].
-- Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
-
-### Reusable
-_Data is well-documented, with detailed provenance and clear usage rights, supporting reproducibility and future research._
-
-- I have provided a detailed description of the model and its components, ensuring that (meta)data are richly annotated with relevant attributes. Specifically, in the model-creation section, I outline the conditions under which the data was generated, including kinetic rates, molecule reaction rule names, and their sources or calculation methods.
-- Where appropriate (e.g., GitHub repositories or data repositories), I have explicitly licensed the data and stated usage rights, making it clear how others can build upon this work.
-- The model includes comprehensive provenance details [see table of reactions with references], documenting data origins, derivation methods, and any transformations applied. 
 
 ## want a section on what i wish i did better/future improvements
 
