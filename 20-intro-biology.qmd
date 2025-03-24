@@ -76,7 +76,7 @@ CaMKII is expressed ubiquitously in animals, with four known isoforms $\alpha$, 
 ### CaMKII's states, activity and autonomy {.unnumbered}
 
 #### Docking and undocking of subunits
-CaMKII subunits can be found docked (also known as "compact state"), or undocked (or extended); and open, or closed (@fig-camkii-structure) [@hoffman2011Conformational]. The docked/undocked states describe the compact or extended structure configurations of the CaMKII holoenzyme subunits, where the kinase domains are packed close to the central hub or not. The closed/open states refer to the conformational changes in the kinase and regulatory domains; these domains can adopt an "open" state, allowing interactions and kinase activity, or a "closed" state, in which the kinase and regulatory domain are bound together, reducing CaMKII's kinase activity [@nguyen2015Covert; @pandini2019Conformational; @ozden2022CaMKIIb] (FIGURE). 
+CaMKII subunits can be found docked (also known as "compact state"), or undocked (or extended); and open, or closed (@fig-CAMKII) [@hoffman2011Conformational]. The docked/undocked states describe the compact or extended structure configurations of the CaMKII holoenzyme subunits, where the kinase domains are packed close to the central hub or not. The closed/open states refer to the conformational changes in the kinase and regulatory domains; these domains can adopt an "open" state, allowing interactions and kinase activity, or a "closed" state, in which the kinase and regulatory domain are bound together, reducing CaMKII's kinase activity [@nguyen2015Covert; @pandini2019Conformational; @ozden2022CaMKIIb] (FIGURE). 
 
 - add figure!
 
