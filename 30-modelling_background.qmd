@@ -20,7 +20,7 @@ Models that survive this initial validation can be used to predict new outcomes 
 
 Furthermore, models can be refined iteratively as new data becomes available or as understanding of the system deepens, facilitating continuous improvement and development of the system at hand. Even if a model does not encompass every element of the system, it remains a powerful tool for identifying critical relationships, predict system behaviour, guiding experimental design, generating hypotheses and offering structured frameworks for exploring complex biological phenomena [@szekely2014Stochastic; @brodland2015How].
 
-![Adapted from @szekely2014Stochastic](30-modelling-figures\dry_wet_lab_cycle.PNG){#fig-dry_wet_lab_cycle.PNG}
+![Adapted from @szekely2014Stochastic](30-modelling-figures\dry_wet_lab_cycle.PNG){#fig-dry-wet-lab-cycle.PNG}
 
 Moreover, using computational methods for studying biological mechanisms can be time and cost-efficient. Modelling is well positioned for integration into the experimental cycle of biology. Although _in vitro_ and _in vivo_ experiments are still needed to advance our understanding of biological processes, conducting _in silico_, or computer-simulated experiments can help guide the wet-lab process by narrowing the experimental search space [@robinson2004Simulation]. Importantly, this creates an iterative cycle, where computational models inform experimental design, and experimental findings, in turn, refine and improve the models. This continuous process strengthens both approaches, leading to a deeper and more accurate understanding of biological systems.
 
