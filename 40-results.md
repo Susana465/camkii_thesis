@@ -14,6 +14,11 @@ mutant CaMKII/NMDAR binding abolition and how this replicates in the cBNGL model
 ### Does this model reproduce previously suggested results of CaMKII activation?
 
 ### CaMKII interaction with NMDARs
+our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and calmodulin (Fig. 1)
+
+does our model show that camkii_p, independent of cam binding, binds at higher rates? id expect camkii_p to be found bound to nmdar independently of cam_bound_camkii, so higher number of camkii_p_camfree, and less of camkii_p_cam_ca4
+
+->model where camkii cannot p
 
 ## Parameter accuracy
 
