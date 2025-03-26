@@ -150,19 +150,11 @@ In the context of this PhD, this involves constructing a model that defines CaMK
 
 link to reproducibility , validation process and if i dont use here i can reuse in methods.
 
-## Agent based modelling with BioDynaMo for visualising multi-dimensional simulations
 
-With MCell and BioNetGen, we are able to model a CaMKII dodecamer in a 3D environment, but what about the dynamic reshaping of a neuron which happens during LTP discussed in @SECTIONLINK? CaMKII interacts with the actin cytoskeleton, which is responsible for the shape and size of the dendritic spine [@okamoto2007Role]. To study this dynamic reshaping, BioDynaMo (Biology Dynamics Modeller) offers a solution, as it can simulate changes in cell shape, such as dendritic growth (@fig-biodynamoactin).
-
-Similar to MCell, BioDynaMo is an agent-based modelling tool that enables the simulation of 3D biophysical molecular interactions [@breitwieser2021BioDynaMo]. However, unlike MCell, BioDynaMo supports dynamic geometry modelling, allowing geometries to change in size or shape during a simulation. In MCell, geometries are static and predefined at the start of the simulation, and they remain fixed throughout the modelling process. To simulate dynamic changes, such as a geometry growing, shrinking, or morphing over time, we can use BioDynaMo. This way, MCell and BioNetGen allow modelling multmeric protein dynamics with a rule based approach (which BioDynaMo does not offer) and BioDynaMo allows for dynamic geometry modelling. 
-
-![Actin filaments modelled in BioDynaMo showing mushroom-like shaped polymerization on a dendritic spine. Data not published, Trajlinek A., 2022](30-modelling-figures\BioDynaMo-actin.PNG){#fig-biodynamoactin width=50%}
 
 We have seen how BioNetGen and MCell can be integrated and used together via the Python API. But how can we extend this integration to include BioDynaMo? The key lies in SBML integration. BioDynaMo supports the Systems Biology Markup Language (SBML), a widely recognised standard for representing biological models. SBML enables the translation and integration of models written in different formats, allowing them to be executed across a range of software platforms [@hucka2003Systems; @keating2020SBML]. As a well-established standard, SBML is frequently used to describe chemical reaction networks, such as those involved in metabolic processes or cell signalling pathways.
 
 Critically, BioNetGen can export models written in BNGL to the SBML format. This export capability allows for the conversion of rule-based BNGL models into a format that is compatible with SBML-supporting tools like BioDynaMo. Consequently, this interoperability facilitates the integration of BNGL models with BioDynaMo, harnessing BioNetGen’s strengths in rule-based modelling alongside BioDynaMo’s advanced capabilities for dynamic geometry simulations. 
-
-To demonstrate the possibility of using BioDynaMo as a tool to simulate neuronal growth through formation of an actin cytoskeleton inside dendritic spines, I helped with supervision of a project that carried out by Adrian Trajlinek (Reference not published). The model works with actin filaments represented as molecular agents with cylindrical shapes [@fig-biodynamoactin]. These can then be modelled to support tree-like structures that can branch out, sever, polymerize and depolymerize in similar manners to the biological equivalent. Overall, this project provided proof of concept that actin dynamics can be modelled in BioDynaMo, and further research can be developed from here onwards. Tools like MCell+CellBlender, BioDynaMo and RuleBender provide an exciting prospect of modelling how the morphology of dendritic spines changes during synaptic plasticity. Together, they provide tools to build a general-purpose platform for large-scale biological simulations.
 
 EXTRA
 REPRODUCIBILITY LINK?
