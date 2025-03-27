@@ -144,7 +144,13 @@ These questions underscore the importance of further research into the dynamics 
 
 ### Research objectives of this PhD:
 
-These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the biochemical processes that stabilise memories and provide crucial insights into LTP and memory formation. Therefore, this PhD research is of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
+These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the molecular processes that lead to LTP and memory formation. As discussed, although it seems apparent that the interaction between CaMKII and NMDARs is crucial for LTP [REFERENCES], the exact mechanism in which their interaction is influencing LTP remains unclear. The overarching research objective of this PhD is to understand how CaMKII and NMDAR receptors interact in a postsynaptic dendrite after calcium entry, mimicking the induction phase of LTP. To this end, I have the following specific aims:
+
+**Aim 1.** Develop a computational model that accurately replicates known findings on CaMKII phosphorylation at T286 and calmodulin (CaM) binding, with the addition of CaMKII/NMDAR binding interactions. This way, the model itself functions as a hypothesis as it includes literature knowledge about CaMKII/NMDAR interactions that can be tested by comparing its predictions with experimental results. This approach allows for both the validation of previously observed interactions and the identification of new potential mechanisms and interactions.
+
+
+
+Therefore, this PhD research is of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
 
 In particular, the overarching research objective of this PhD is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
 
