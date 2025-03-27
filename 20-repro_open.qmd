@@ -86,7 +86,7 @@ _Data is formatted using standardised vocabularies and structures, enabling seam
 
 - This aspect is particularly relevant to this project, as the model needs to interface with multiple software tools (e.g., BioNetGen, MCell, Python) [see CHAPTER-REFERENCE]. By structuring the data and code to be compatible across these platforms, I ensure that the model can be integrated with future datasets and incorporated into diverse workflows for analysis, storage, and processing.
 - The scripts written in Python utilize libraries that facilitate cross-software integration, making the model adaptable [see CHAPTER-REFERENCE].
-- Ideally, a vocabulary that is interoperable includes terms and concepts that have e globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
+- Ideally, a vocabulary that is interoperable includes terms and concepts that have globally unique and persistent identifiers. The nomenclature in this project tries to follow similar naming of molecules but there are slight variances in naming as the model is not exactly the same and molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language for knowledge representation.
 
 ### Reusable
 _Data is well-documented, with detailed provenance and clear usage rights, supporting reproducibility and future research._
