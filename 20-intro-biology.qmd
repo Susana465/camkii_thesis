@@ -146,19 +146,24 @@ These questions underscore the importance of further research into the dynamics 
 
 These findings underscore the importance of further research into the dynamics of CaMKII/NMDAR interactions. Gaining a clearer understanding of these interactions may shed light on the molecular processes that lead to LTP and memory formation. As discussed, although it seems apparent that the interaction between CaMKII and NMDARs is crucial for LTP [REFERENCES], the exact mechanism in which their interaction is influencing LTP remains unclear. The overarching research objective of this PhD is to understand how CaMKII and NMDAR receptors interact in a postsynaptic dendrite after calcium entry, mimicking the induction phase of LTP. To this end, I have the following specific aims:
 
-**Aim 1.** Develop a computational model that accurately replicates known findings on CaMKII phosphorylation at T286 and calmodulin (CaM) binding, with the addition of CaMKII/NMDAR binding interactions. This way, the model itself functions as a hypothesis as it includes literature knowledge about CaMKII/NMDAR interactions that can be tested by comparing its predictions with experimental results. This approach allows for both the validation of previously observed interactions and the identification of new potential mechanisms and interactions.
+**Aim 1.** Develop a computational model that accurately replicates known findings on CaMKII phosphorylation at T286 and calmodulin (CaM) binding, with the addition of CaMKII/NMDAR binding interactions. This way, the model itself functions as a hypothesis that includes literature knowledge about CaMKII/NMDAR interactions, which can be tested by comparing its predictions with experimental results. This approach allows for both the validation of previously observed interactions and the identification of new potential mechanisms.
+
+**Aim 2.** Determine the minimal requirements for stabilizing the CaMKII-GluN2B complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the equilibrium stability of the complex.
+
+_**Aim 3.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by comparing models with and without CaMKII-NMDAR interactions._
+
+**Aim 4.** Investigate how CaMKII/NMDAR interactions influence CaMKII activity, as well as how different conditions of CaMKII binding and phosphorylation affect the stability and function of the complex. 
+
+- How CaMKII activity and function change in a model where CaMKII cannot bind NMDARs, compared to one where it can.
+
+- Whether CaMKII that is phosphorylated at T286 and bound to CaM exhibits a higher likelihood of binding to NMDARs, even if this is not explicitly defined in the model.
+
+- The role of phosphorylation in CaMKII/NMDAR binding, given that the model does not define binding as a direct function of phosphorylation.
+
+- How wild-type and mutant CaMKII variants behave, particularly those that cannot undergo phosphorylation at T286 and T306 or bind to NMDARs.
 
 
-
-Therefore, this PhD research is of relevance and is well positioned to allow us to test the minimal requirements of CaMKII/NMDAR interactions while considering the spatial and temporal dynamics of CaMKII activity using computer models of these interactions.
-
-In particular, the overarching research objective of this PhD is to understand how CaMKII and NMDAR receptors interact during LTP. To this end, I have the following specific aims:
-
-**Aim 1.** to build a model that can replicate/recapitulate what has already been shown in relation to camkii phosphorylation at t286 and cam binding, with the addition of camkii/nmdar binding.
-
-(the model is the hypothesis - then you can make predictions) model can 1) see what has already been observed 2) what new things are observed?
-
-**Aim 2.** To determine the minimal requirements for stabilizing the CaMKII-GluN2B complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states and phosphorylation events influence the equilibrium stability of the complex.
+---
 
 how do i know equilibrium has been reached? how is this tested quantitaviely. a definition of equilibrium, and by that definition is the answer yes or no. 
 
