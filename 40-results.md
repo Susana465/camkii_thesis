@@ -20,6 +20,8 @@ does our model show that camkii_p, independent of cam binding, binds at higher r
 
 ->model where camkii cannot p
 
+CaMKII/GluN2B binding requires an initial Ca2+/CaM stimulus but then persists even after dissociation of CaM from the complex. https://www.jbc.org/article/S0021-9258(20)42434-2/fulltext
+
 ## Parameter accuracy
 
 # Trying to understand how parameters are limiting or not
