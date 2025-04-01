@@ -137,7 +137,7 @@ In addition to forming a complex with GluN2B, CaMKII can phosphorylate the S1303
 
 Regarding LTD, phosphorylation at T305/306, unlike T286, has been more readily observed during LTD [@pi2010Autonomousa; @coultrap2014Autonomous] and is suggested to direct the signalling cascade toward LTD [@bayer2024Revised], although the exact mechanisms remain unclear. Specifically, phosphorylation at these sites seems to be important when CaMKII binds to GluN2B of NMDARs. Some studies suggest that phosphorylation at these sites inhibits binding to GluN2B (REFERENCES:  Barcomb et al., 2014; Elgersma et al., 2002), while others propose that binding to GluN2B suppresses T305/306 phosphorylation (REFERENCE: Bayer et al., 2001). Interestingly, REFERENCE Barcomb et al. (2014) demonstrated that a phosphomimic T305/306D CaMKII mutant retained its ability to bind GluN2B without significant reduction. This finding suggests that T305/306 phosphorylated CaMKII can still bind to GluN2B, challenging the idea that T305/306 phosphorylation directly inhibits binding, and that indeed CaMKII can bind to GluN2B and phosphorylate at T305/306 at the same time. 
 
-If phosphorylation at T305/306 makes CaMKII more likely to be in a "closed" state (see @sec-t305-p), this would reduce its likelihood of binding to GluN2B. In other words, it is not the phosphorylation itself that directly inhibits binding, but rather that the kinase, when phosphorylated at T305/306, is more likely to be in a closed state, which in turn reduces its chances of binding with NMDARs. This explanation, however, does not fully account for the observed reduction in T305/306 phosphorylation once CaMKII is bound to the GluN2B subunit [barcomb et al and more references]. It remains unclear whether binding to GluN2B directly suppresses T305/306 phosphorylation or if another mechanism is at play. Testing this possibility could involve designing experiments to monitor T305/306 phosphorylation levels in CaMKII while it is actively bound to GluN2B, [EXAMPLES NOT SURE]_
+If phosphorylation at T305/306 makes CaMKII more likely to be in a "closed" state (see @sec-t305-p), this would reduce its likelihood of binding to GluN2B. In other words, it is not the phosphorylation itself that directly inhibits binding, but rather that the kinase, when phosphorylated at T305/306, is more likely to be in a closed state, which in turn reduces its chances of binding with NMDARs. This explanation, however, does not fully account for the observed reduction in T305/306 phosphorylation once CaMKII is bound to the GluN2B subunit [barcomb et al and more references]. It remains unclear whether binding to GluN2B directly suppresses T305/306 phosphorylation or if another mechanism is at play. Testing this possibility could involve designing experiments to monitor T305/306 phosphorylation levels in CaMKII while it is actively bound to GluN2B, [REFERENCE - EXAMPLES NOT SURE]_
 
 Another well-known CaMKII substrate site is S831 (and, to a lesser extent, S845) on the CTD of the AMPAR subunit GluA1. CaMKII phosphorylation of S831 in GluA1 increases AMPAR single-channel conductance, enhancing sodium ion flow into the postsynaptic neuron upon glutamate activation. This enhanced conductance of AMPARs can also result in a larger excitatory postsynaptic current (EPSC), which strengthens synaptic connections. The greater influx of sodium ions through phosphorylated AMPARs can lead to a more substantial depolarization of the postsynaptic membrane. This depolarization can facilitate further calcium entry through NMDA receptors (NMDARs), which is critical for LTP induction as dicussed above. By increasing the activity and efficiency of AMPARs, CaMKII-mediated phosphorylation of the GluA1 subunit can help stabilize synaptic changes over time. It is also proposed that $\alpha$ and $\beta$ CaMKII isoforms activation and their postsynaptic translocation induces the synaptic trapping of AMPARs diffusing in the membrane, although the exact mechanisms remain unclear [@diaz-alonsoLongterm; @opazo2010CaMKII; @patriarchi2018Postsynaptic; @hell2014CaMKII]. Notably, while CaMKII phosphorylation of GluA1 is important for mediating LTP mechanisms, strong evidence suggests that this may not be essential for LTP. LTP could still be observed _in vivo_ in knock-in mice lacking the CTD of GluA1 subunit in AMPA receptors. Additionally, LTP was also observed _in vitro_ when the GluA1 C-tail was transfected in mouse CA1 hippocampal pyramidal neurons. Instead, what may be necessary is a reserve pool of glutamate receptors independent of subunit type [@lee2010Specific; @diaz-alonsoLongterm; @granger2013LTP]. These findings further support the idea that the essential requirement for molecular LTP induction and maintenance may be the CaMKII/NMDAR interactions studied in this PhD. 
 
@@ -164,14 +164,6 @@ These findings underscore the importance of further research into the dynamics o
 
 **Aim 2.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
 
-- our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and calmodulin (Fig. 1)
-
-does cam binding make a difference to camkii/nmdar binding 
-
-camkii_p free from cam binds more readily to nmdars than when camkii_p is bound to cam
-
-does our model show that camkii_p, independent of cam binding, binds more readily than when camkii is free from cam binding? id expect camkii_p to be found bound to nmdar independently of cam_bound_camkii, so higher number of camkii_p_camfree, and less of camkii_p_cam_ca4
-
 **Aim 3.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an _in silico_ mutation model where CaMKII-NMDAR interaction is disrupted. 
 
 **Aim 4.** Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an _in silico_ mutation model where CaMKII cannot be phosphorylated at key functional residues.  
@@ -180,38 +172,3 @@ does our model show that camkii_p, independent of cam binding, binds more readil
 **aim** ethics - data hazards. 
 
 
-
-
- models with and without CaMKII-NMDAR interactions.
-
-**Aim 4.** Investigate how CaMKII/NMDAR interactions influence CaMKII activity, as well as how different conditions of CaMKII binding and phosphorylation affect the stability and function of the complex. 
-
-- How CaMKII activity and function change in a model where CaMKII cannot bind NMDARs, compared to one where it can.
-
-- Whether CaMKII that is phosphorylated at T286 and bound to CaM exhibits a higher likelihood of binding to NMDARs, even if this is not explicitly defined in the model.
-
-- The role of phosphorylation in CaMKII/NMDAR binding, given that the model does not define binding as a direct function of phosphorylation.
-
-- How wild-type and mutant CaMKII variants behave, particularly those that cannot undergo phosphorylation at T286 and T306 or bind to NMDARs.
-
-
----
-
-how do i know equilibrium has been reached? how is this tested quantitaviely. a definition of equilibrium, and by that definition is the answer yes or no. 
-
-what do you expect the steady state to be? eigen values, in a linear setting, how is it determined with ssa? statistic to extract from the data, something like smoothing the data, smooth version of what i have. maybe look at variance. stde/mean. coefficient variation greater than x then thats the steady state. and some visual checking. 
-
-how long has it been seen that camkii/nmdar are bound together in research - be specific about timeframe. 
-
-functional consequencies of camkii/nmdar binding
-
-if a model of camkii that cannot bind to nmdars then what is the result in camkii actiity and functions (vs a model of camkii that can bind nmdar)
-
-i expect camkii that is t286 and cam bound to be bound more readily to nmdar (even though this is not explicitly defined).
-
-binding camkii/nmdar is not defined by a function of phosphorylation in this model
-
-wt camkii and mt camkii cannot t286 and t306 phospho
-wt camkii and mt camkii cannot bind to nmdar
-
-draw out hypothesis. 
