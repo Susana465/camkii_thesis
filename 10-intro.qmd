@@ -3,7 +3,7 @@ bibliography: [references.bib]
 number-sections: true
 ---
 
-# Lay Summary:
+# Lay Summary
 
 This PhD project weaves together multiple threads, including biological questions as well as ethical ones. The foundational thread of this PhD is rooted in a biological question: looking at specific molecular mechanisms underlying learning and memory in animals. Interwoven with this, is the exploration of how these mechanisms can be studied through computer models in a manner that is both reproducible and ethically responsible.
 
@@ -31,3 +31,26 @@ To explore the ethical implications of this PhD, I use the Data Hazards framewor
 
 I use something known as the Data Hazards framework. This framework highlights the potential risks associated with research, including topics such as environmental impacts, biases, and misuse of the work at hand. By using Data Hazards, I identify and address key ethical concerns, assigning hazard-like labels (similar to chemical warning labels) to specific risks such as "danger of misuse" or "high environmental impact". This proactive approach allows me to implement and suggest precautions to mitigate potential risks throughout the research process —from design to execution. 
 
+# Introduction
+
+This research aims to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. The overarching objective is to develop and refine these models to enhance our understanding of synaptic plasticity and memory formation. To achieve this, the research is structured around specific aims, including the development of computational models, parameter exploration, and the study of CaMKII/NMDAR interactions in both functional and pathological contexts. Additionally, this work emphasizes the importance of FAIR (Findable, Accessible, Interoperable, and Reproducible) principles to ensure transparency and reproducibility. Finally, the ethical considerations of this research are evaluated using the Data Hazards framework, contributing to a broader discussion on responsible computational and biological research.
+
+## Research objectives of this PhD:
+The overarching objective of this PhD research is to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. To achieve this, the research is structured around the following specific aims:
+
+**Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.
+
+**Aim 2.** Perform parameter sweeps for reaction rates that have not been measured experimentally. This allows mapping the model's response to parameter changes and determining plausible ranges of the unknown parameters.
+
+**Aim 3.** Throughout the model development process, ensure that the computational models follow FAIR (Findable, Accessible, Interoperable, and Reproducible) principles, promoting transparency and reproducibility. 
+
+**Aim 4.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
+
+**Aim 5.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an _in silico_ mutation model where CaMKII-NMDAR interaction is disrupted. 
+
+**Aim 6.** Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an _in silico_ mutation model where CaMKII cannot be phosphorylated at key functional residues.  
+
+**Aim 7.** Evaluate the ethical considerations of this research using the Data Hazards framework, a community-driven interdisciplinary vocabulary for assessing ethical risks in computational and biological research. 
+
+
+- Chapters layout
