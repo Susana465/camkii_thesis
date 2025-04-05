@@ -1,0 +1,16 @@
+# List of abbreviations
+
+NMDAR
+AMPAR
+CAMKII
+CaM
+calcium, sodium, etc?
+glutanate
+glycine
+t286
+t306?
+PP1
+RBM
+BNGL
+MCell?
+LTP, LTD
