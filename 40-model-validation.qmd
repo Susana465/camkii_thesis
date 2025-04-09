@@ -27,8 +27,11 @@ By quantifying the responsiveness of the model's outputs to variations in these 
 
 SA techniques can be broadly classified based on two key aspects: the analysis _scope_ and its _framework_. The scope of SA refers to whether the analysis focuses on small, local variations in input parameters or examines the global effect across a wider range of parameter values. Local sensitivity analysis typically investigates the effect of small perturbations in a single input parameter while holding others constant, often focusing on the immediate response of the model around a specific operating point. In contrast, global sensitivity analysis explores how changes in all relevant input parameters, over their entire range of possible values, influence the model's output, accounting for interactions between parameters and providing a more comprehensive view of model behaviour.
 
-The framework refers to the approach used to model uncertainty (see @sec-odessa) in the system under study, and the method for sensitivity analysis will depend on whether the system is deterministic or probabilistic. In a deterministic sensitivity analysis framework, the relationship between inputs and outputs is precise and fixed, with no inherent randomness. Whereas a probabilistic (or stochastic) framework accounts for uncertainty by incorporating variability and randomness into the model, recognising that parameters may change within defined ranges or follow probability distributions.
+The framework aspect of SA refers to the approach used to model uncertainty (see @sec-how-do-we-model) in the system under study, and the method for sensitivity analysis will depend on whether the system is deterministic or probabilistic. In a deterministic sensitivity analysis framework, the relationship between inputs and outputs is precise and fixed, with no inherent randomness. 
 
+Whereas a probabilistic (or stochastic) framework accounts for uncertainty by incorporating variability and randomness into the model, recognising that parameters may change within defined ranges or follow probability distributions. In a probabilistic model there are two sources of uncertainty: the parameter uncertainty and the uncertainty due to the stochasticity of the model. In a stochastic model, for any set of parameters, statistics derived from simulations have a distribution rather than being one value. A sensitivity analysis of a stochastic system typically considers how the estimated mean or median of that distribution varies as parameter(s) change.
+
+- do i need to mention here limitation of runs of phd?
 --
 Sensitivity analysis is a technique to determine how the variation in the output of a model can be attributed to different inputs or parameters. This helps in identifying which parameters are most critical for the model's performance and which can be adjusted or estimated with less precision.
 
@@ -42,5 +45,10 @@ Sensitivity analysis is a technique to determine how the variation in the output
 - One-At-A-Time (OAT): Vary one parameter while keeping others constant. This helps assess individual parameter impact.
 
 ## Sanity checks:
+As part of the validation process, sanity checks were implemented to ensure that the model behaved in a biologically reasonable manner across a wide range of conditions. These checks primary aim was to ensure that the model adhered to known biochemical constraints and reaction rules.
+
+The sanity checks looked like looking for molecules that we know are not "allowed" to happen in the model according to the set reaction rules. 
+
+List of sanity checks. i want to provide this, what would be a neat way of showing them? so i have molecules like cam_camkii_t306p must be zero because t306 cannot p if camkii subunit bound to camkii, for example...should i have a table, or a list?
 
 ## Reproducibility and numerical robustness
