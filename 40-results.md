@@ -3,6 +3,10 @@ bibliography: [references.bib]
 lightbox: true
 ---
 
+# limitations
+need to add a list
+
+- could do with more runs, could do with further parameter analysis? 
 # Results
 
 9.96181304\times10^{-8} concentration of NMDAR/CAMKII complex at equilibrium (30 molecules converted to Molar) following equation in modelling chapter. 

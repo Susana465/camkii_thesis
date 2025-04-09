@@ -1,6 +1,35 @@
-# Validating behaviour in the model
+# Validating model behaviour
+Model validation is essential to ensure that computational simulations reliably reflect underlying biological mechanisms. In this work, the validation involved modular development of the model, comparison with experimental data, and assessment of both qualitative and quantitative accuracy. Each aspect of the model was tested in isolation before integration, and several complementary strategies were employed to evaluate the accuracy, robustness, and predictive capabilities of the system.
 
-## Sensitivity Analysis for parameters
+## Modularity
+In order to validate model behaviour, it was constructed in a modular fashion, with each reaction or set of reactions added sequentially and tested independently. Modular testing is a key strategy in model validation that, in this case, involved building the model in discrete, self-contained units (or modules). Each module corresponds to a specific biochemical rule, where each one was added one by one and tested to see if it reproduced biologically beliavable results. By structuring the model in this way, it becomes possible to test and validate individual components independently before integrating them into the full system. This modular approach ensures that the model is built gradually, allowing for careful validation of each new set of reactions before proceeding to more complex processes. This stepwise approach minimises the risk of introducing compounded errors when combining multiple reactions or pathways.
+
+For example, I initially incorporated reactions involving calcium binding to calmodulin and validated this by comparing its output against a previously developed and validated model described in the dissertation [reference]. This comparison served as an internal benchmark, as the original model had already been validated against experimental biological data. 
+
+Moreover, the modular design facilitates future updates and refinements. As new experimental data becomes available or as the biological understanding of the system evolves, individual modules can be updated or expanded without the need to revalidate the entire model. This flexibility is a key advantage in a building long-term, adaptable computational model.
+
+## Biological Plausibility
+Furthermore, to examine whether the model produced biologically plausible behaviour, the results were compared to known biological processes described in the literature or seen in experimental data. Likewise, simulation outputs such as concentration profiles and reaction kinetics were directly compared to values reported in the literature.
+
+Kinetic parameters used in the reactions were either sourced directly from the literature or inferred from experimental data where available. Where parameters were uncertain, sensitivity analyses were conducted to determine how kinetic rates impact model behaviour (see @sec-SA below). 
+
+Furthermore, the model's ability to reproduce experimentally observed phenomena, such as CaMKII phosphorylation patterns, was critically assessed to confirm that the simulated system reflected realistic biological dynamics. Any discrepancies or deviations from expected biological behaviour were noted and considered in the context of the model's limitations. The results of these validation efforts, as well as the identified limitations, are discussed in more detail in the RESULTS-SECTION-REFERENCE.
+
+- prob need to mention and not sure if discuss here the models i took params from? or not?
+
+## Sensitivity Analysis for parameters{#sec-SA}
+
+As discussed in @sec-intro-comp, computational models can serve as predictive tools to deepen our understanding of the mechanisms underlying observed biochemical processes. However, parameters such as rate constants, activation energies, thermodynamic constants, transport coefficients, etcetera, are rarely known with precision [REFERENCE]. Consequently, predictions are typically subject to uncertainty. That is why understanding how parameter variations influence outcomes is a crucial part of model development and validation.
+
+As part of model development and validation, sensitivity analysis (SA) can be employed to determine which parameters the model is more or less responsive to. This technique focuses on  quantifying the impact of parameter changes on model predictions. SA aims to determine the influence of each input parameter on the model's output behaviour. In other words, SA is useful to assess how variations in input parameters, such as reaction propensities, rate constants, or initial concentrations, influence the system's outputs, which might include reaction trajectories, species concentrations over time, or the likelihood of certain reaction outcomes.
+
+By quantifying the responsiveness of the model's outputs to variations in these parameters, SA enables researchers to prioritise the most impactful parameters for precise measurement or further investigation. This is especially valuable when studying chemical kinetics, where many parameters are difficult to measure directly and often carry inherent uncertainties [REFERENCE]. SA not only aids in parameter estimation but also guides experimental design by highlighting which aspects of the reaction system are most sensitive to changes, thereby improving the predictive accuracy of kinetic models such as the ones used in this PhD.
+
+SA techniques can be broadly classified based on two key aspects: the analysis _scope_ and its _framework_. The scope of SA refers to whether the analysis focuses on small, local variations in input parameters or examines the global effect across a wider range of parameter values. Local sensitivity analysis typically investigates the effect of small perturbations in a single input parameter while holding others constant, often focusing on the immediate response of the model around a specific operating point. In contrast, global sensitivity analysis explores how changes in all relevant input parameters, over their entire range of possible values, influence the model's output, accounting for interactions between parameters and providing a more comprehensive view of model behaviour.
+
+The framework refers to the approach used to model uncertainty (see @sec-odessa) in the system under study, and the method for sensitivity analysis will depend on whether the system is deterministic or probabilistic. In a deterministic sensitivity analysis framework, the relationship between inputs and outputs is precise and fixed, with no inherent randomness. Whereas a probabilistic (or stochastic) framework accounts for uncertainty by incorporating variability and randomness into the model, recognising that parameters may change within defined ranges or follow probability distributions.
+
+--
 Sensitivity analysis is a technique to determine how the variation in the output of a model can be attributed to different inputs or parameters. This helps in identifying which parameters are most critical for the model's performance and which can be adjusted or estimated with less precision.
 
 1. Determine the Range and Distribution of Each Parameter
@@ -14,4 +43,4 @@ Sensitivity analysis is a technique to determine how the variation in the output
 
 ## Sanity checks:
 
-
+## Reproducibility and numerical robustness
