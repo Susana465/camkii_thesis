@@ -15,6 +15,9 @@ need to add a list
 
 mutant CaMKII/NMDAR binding abolition and how this replicates in the cBNGL model too.
 
+## in camkii286p mutant
+
+
 ### Does this model reproduce previously suggested results of CaMKII activation?
 
 ### CaMKII interaction with NMDARs
@@ -32,6 +35,18 @@ Both protein phosphatase 1 (PP1) and protein phosphatase 2A (PP2A) dephosphoryla
 - not checking for this but for future discussions: CaMKII binding to GluN2B even blocks this phosphorylation (Bayer et al., 2001).  https://www.sciencedirect.com/science/article/pii/S0896627319304866
 
 - Secondary T305/T306 autophosphorylation takes place at ~100-fold slower rate than the T286/7 reaction, https://link.springer.com/chapter/10.1007/978-3-319-24364-1_3
+
+# same as before, most activity of camkii is from autonomous, not due to bound to cam:
+
+CaMKIIα activation, but not CaMKIIα-CaM binding, integrates Ca2+ pulses. This suggests that most of the active CaMKIIα population is in a CaM-independent, autonomous activation state. 
+
+Taken together with our previous studies of CaMKIIα activation during repetitive Ca2+ pulses in the spine6,10, CaMKIIα activation, but not CaMKIIα-CaM binding, integrates Ca2+ pulses. This suggests that most of the active CaMKIIα population is in a CaM-independent, autonomous activation state. Our kinetic model also predicts that the CaMKIIα bound to CaM accounts for only a small fraction of CaMKIIα activity (~1/4), and most of the activity is from autonomous activation.
+
+from paper: Mechanisms of Ca2+/calmodulin-dependent kinase II activation in single dendritic spines
+
+# t305/306 p
+
+this is what we see in our model too: These results suggested that inhibitory phosphorylation at Thr305/Thr306 dynamically occurs during CaMKIIα activation, which inhibits the rebinding of Ca2+/CaM on CaMKIIα. However, preventing this regulation during the induction of sLTP (enhancing binding affinity to Ca2+/CaM) did not result in a higher level of Ca2+/CaM binding. https://link.springer.com/article/10.1038/s41467-019-10694-z?fromPaywallRec=false
  
 **Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.
 
