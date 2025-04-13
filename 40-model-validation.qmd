@@ -65,3 +65,5 @@ there are others that i havent done, how do i argue why yes or why not?
 
 
 ## Reproducibility and model robustness
+
+## specs and reproducibility
