@@ -14,9 +14,24 @@ This model simulates the CaMKII T286A mutant, in which the critical autophosphor
 ## CaMKII/NMDAR binding mutant model
 This model represents a mutation that prevents CaMKII from binding to the GluN2B subunit of NMDARs, a key interaction implicated in synaptic plasticity, as discussed in SECTION-REFERENCE. When it comes to _in vivo_ and _in vitro_ mutants of CaMKII and NMDAR binding, the mutation can tackle either molecule to prevent their binding. For example, a CaMKII I205K mutation in which isoleucine is replaced with a lysine impairs binding to GluN2B without affecting kinase activity [REFERENCE], and is demonstrated to reduce CaMKII accumulation at synapses after LTP induction [REFERENCE]. 
 
+example of nmdar mutant https://link.springer.com/article/10.1186/1756-6606-6-10 impaired by the mutations L1298A and R1300Q [22]. https://www.embopress.org/doi/full/10.1038/emboj.2011.482
 
+Why L1298 and R1300?
+These residues are located in a short, conserved sequence motif within the cytoplasmic tail of GluN2B (often referred to as the CaMKII-binding site), which spans approximately amino acids 1290–1309. Structural, biochemical, and mutational studies have pinpointed L1298 and R1300 as essential contact points for high-affinity binding to the CaMKII kinase domain.
+ Leucine 1298 (L1298)
+A hydrophobic residue, crucial for fitting into a hydrophobic pocket on CaMKII.
+
+Mutating it to alanine removes hydrophobic bulk, destabilising this core interaction.
+
+This significantly reduces binding affinity without disrupting the structure of GluN2B broadly.
+
+2. Arginine 1300 (R1300)
+A positively charged residue, likely involved in electrostatic interactions or hydrogen bonding with CaMKII residues.
+
+Substituting arginine with glutamine (neutral, polar) removes the charge and disrupts those interactions.
 In biological systems, this has been examined using GluN2B mutants that disrupt the CaMKII-binding motif, or CaMKII mutants that selectively impair binding without affecting kinase activity. Both in vitro studies and in vivo models have demonstrated that disrupting this interaction impairs LTP maintenance and learning-related plasticity. The computational model isolates this mechanism by setting CaMKII–NMDAR binding reactions to zero, allowing for a focused analysis of how this interaction contributes to model behaviour.
----
+
+<!--
 # limitations
 need to add a list
 

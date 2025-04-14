@@ -8,6 +8,7 @@ book:
   date-format: long
   chapters:
     - index.qmd
+    - lists.qmd
     - 10-intro.qmd
     - 20-intro-biology.qmd
     - 30-modelling_background.qmd
@@ -54,4 +55,6 @@ format:
     include-after-body: 
       text: |
         \printindex
-
+crossref:
+  lof-title: "List of Figures"
+  lot-title: "List of Tables"
