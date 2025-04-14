@@ -15,6 +15,7 @@ book:
     - 20-data-hazards.qmd
     - 30-model.qmd
     - 40-model-validation.qmd
+    - 40-results.md
     - references.qmd
 
   downloads: [pdf]
