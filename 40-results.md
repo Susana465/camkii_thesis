@@ -21,6 +21,17 @@ mutant CaMKII/NMDAR binding abolition and how this replicates in the cBNGL model
 ### Does this model reproduce previously suggested results of CaMKII activation?
 
 ### CaMKII interaction with NMDARs
+
+Some conditions/hypotheses:
+Binding of cam_ca4_camkii is favoured to bind nmdar vs camkii_free, and camkii_p286 should also be favoured to bind nmdar. This is currently not included with how the model stands. 
+
+Yes it is included actually just not explicitly. Because camkii bound to camca4 is already more likely to exist in the open state; and so is camkii_p – so we expect these will be the ones binding more readily to nmdar (biology explanation because kinase domain is available to bind nmdars)
+-	Do we need to specify different reaction rates? Or will camkii_camca4 bind more readily to nmdar anyway because camkii_camca4 is favoured to exist at higher quantities? How will this affect the model?
+
+Cam_ca4 binding to camkii favours phosphorylation at t286 -> this is also modelled but not expliclty. 
+Camkii t306 P does not happen when camkii bound to nmdar (see condition reaction #8)
+
+
 our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and calmodulin (Fig. 1)
 
 does our model show that camkii_p, independent of cam binding, binds at higher rates? id expect camkii_p to be found bound to nmdar independently of cam_bound_camkii, so higher number of camkii_p_camfree, and less of camkii_p_cam_ca4

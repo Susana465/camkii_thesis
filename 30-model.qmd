@@ -60,8 +60,7 @@ N \, \text{molecules} \times
 \frac{1 \, \text{mol}}{N_A \, \text{molecules}} \times 
 \frac{1}{V(\mu \text{m}^3)} \times 
 \frac{V \, (\mu \text{m}^3)}{V \, (\text{L})} = 
-C_1 \, (\text{M}) \times \frac{V \, (\mu \text{m}^3)}{C \, (\text{M})} = 
-C_2 \, (\mu \text{M})
+C_1 \, (\text{M})
 $${#eq-molec-concentrations-calc}
 
 The example calculation below considers an initial release of 10000 molecules and a dendritic volume of 0.5 µm³  (@eq-molec-concentrations-calc-example). 
@@ -70,9 +69,7 @@ $$
 \frac{1 mol}{6.023*10^{23} \text{molecules}} \times 
 \frac{1}{0.5 \, \mu \text{m}^3} \times 
 \frac{1  \, \mu \text{m}^3}{10 ^{-15} \text{L}} =
-3.32*10^{-6} \text{M} \times 
-\frac{10^{6}\mu \text{m}^3}{1 \text{M}} =
-33.2 \mu \text{M}
+3.32*10^{-6} \text{M}
 $${#eq-molec-concentrations-calc-example}
 
 The molecule concentrations in this model fall within ranges previously reported in the literature. Specifically, 10000 molecules of Ca²⁺ were released initially, corresponding to an initial [Ca²⁺] of 33.2 µM (Figure 5). Prior studies employing fluorescent Ca²⁺ indicators have shown resting intracellular calcium concentrations ([Ca²⁺]i) within 50-100 nM, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). Reported intracellular [CaM] concentrations, ranging from 8 to 250 µM, align with the values observed here (initial concentration: 6.64 µM) (Black et al., 2004; Kakiuchi et al., 1982). 
@@ -90,7 +87,9 @@ As molecules diffuse within the simulation volume, all molecules within a specif
 
 INSERT TABLE OF REACTIONS
 
-![Table of reactions screenshot for now](30-methods-figures\table_rxns1.PNG){#fig-tbl-1}
+![Table of reactions](30-methods-figures\table_rxns1.PNG){#fig-tbl-1}
+
+figure [molecules releassed. in a dendrtic volume of: 0.50588 um3]
 
 ![Reaction rules](30-methods-figures\rxns1to7_border.png){#fig-cam-binding-rxns width="95%"}
 
