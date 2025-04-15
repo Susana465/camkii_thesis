@@ -1,4 +1,4 @@
-# Validating model behaviour{#sec-validating-model}
+# Validating model behaviour {#sec-validating-model}
 Model validation is essential to ensure that computational simulations reliably reflect underlying biological mechanisms. In this work, the validation involved modular development of the model, comparison with experimental data, and assessment of both qualitative and quantitative accuracy. Each aspect of the model was tested in isolation before integration, and several complementary strategies were employed to evaluate the accuracy, robustness, and predictive capabilities of the system.
 
 ## Modularity
