@@ -31,6 +31,18 @@ A positively charged residue, likely involved in electrostatic interactions or h
 Substituting arginine with glutamine (neutral, polar) removes the charge and disrupts those interactions.
 In biological systems, this has been examined using GluN2B mutants that disrupt the CaMKII-binding motif, or CaMKII mutants that selectively impair binding without affecting kinase activity. Both in vitro studies and in vivo models have demonstrated that disrupting this interaction impairs LTP maintenance and learning-related plasticity. The computational model isolates this mechanism by setting CaMKII–NMDAR binding reactions to zero, allowing for a focused analysis of how this interaction contributes to model behaviour.
 
+# Limitations
+
+
+# Future directions
+
+decrease volume
+increase calcium
+calcium pulses
+
+adding structural proteins to psd
+make drawing figures of what i expect, could do in future. 
+
 <!--
 # limitations
 need to add a list
