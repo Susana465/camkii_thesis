@@ -5,7 +5,11 @@ lightbox: true
 
 # Results 
 
-Following a preliminary sensitivity analysis (can I/should I do statistical methods?) [REFERENCE SECTION], and initial model validation [REFERENCE SECTION], three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in [SECTION-MODEL.QMD REFERENCE]. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to undergo autophosphorylation32, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
+Following a preliminary sensitivity analysis (can I/should I do statistical methods?) [REFERENCE SECTION], and initial model validation [REFERENCE SECTION], three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to undergo autophosphorylation32, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
+
+## Wild-type model
+
+In the WT model (described in detail in @sec-model-description)
 
 ## T286 mutant model
 
@@ -38,7 +42,7 @@ In biological systems, this has been examined using GluN2B mutants that disrupt 
 
 decrease volume
 increase calcium
-calcium pulses
+calcium pulses chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://mcell.org/documentation/MCellQuickReferenceGuide.pdf release pattern interval
 
 adding structural proteins to psd
 make drawing figures of what i expect, could do in future. 

@@ -65,5 +65,6 @@ there are others that i havent done, how do i argue why yes or why not?
 
 
 ## Reproducibility and model robustness
+_Write about the different ways in which CaMKII is instantiated in different runs._
 
 ## specs and reproducibility

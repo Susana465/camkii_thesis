@@ -38,6 +38,8 @@ format:
     number-sections: true
     theme: pulse
   pdf:
+    code-block:
+      wrap: true
     citeproc: true
     csl: https://www.zotero.org/styles/vancouver-brackets
     toc: true
@@ -45,7 +47,7 @@ format:
     number-sections: true
     documentclass: scrreprt
     latex_engine: xelatex
-    include-in-header: 
+    include-in-header:
       text: |
         \usepackage{makeidx}
         \makeindex
