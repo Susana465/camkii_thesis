@@ -57,6 +57,8 @@ this figure is a sanity test prob go in appendix ?
 
 subset of camkii bound to ndmdar, of which x is p and x is not p
 
+![alt text](40-results-figures\WT\subset-of-nmdar-p-not-pt286.png)
+
 ![alt text](40-results-figures\WT\camkii-nmdar-unphospho.png)
 
 ## T286 mutant model
@@ -94,6 +96,7 @@ calcium pulses chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://mcell
 
 adding structural proteins to psd
 make drawing figures of what i expect, could do in future. 
+t306 mutant too. what would i expect?
 
 <!--
 # limitations
