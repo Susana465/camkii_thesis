@@ -63,6 +63,7 @@ The sanity checks were focused on ensuring that molecules which could not exist 
 
 there are others that i havent done, how do i argue why yes or why not? 
 
+this figure is a sanity test prob go in appendix ? ![alt text](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png)
 
 ## Reproducibility and model robustness
 _Write about the different ways in which CaMKII is instantiated in different runs._

@@ -37,7 +37,7 @@ All CaMKII subunits categorised as camkii_t286p are necessarily in the open conf
 
 Out of the 104 CaMKII subunits that are open at the end of the simulation, 45 are found to be phosphorylated at T286 [@fig-camkii-t286p-nmdar-b]. This indicates that approximately half of the open CaMKII subunits are in the T286-phosphorylated state. Of these 45 T286-phosphorylated CaMKII molecules, a subset of 25 are found to be bound to NMDARs (camkii_t286p1_bound_nmdar), as shown in @fig-camkii-t286p-nmdar-b. The difference between these values corresponds to the number of CaMKII molecules that are T286-phosphorylated but not associated with NMDARs. 
 
-Within the population of T286-phosphorylated CaMKII bound to NMDARs, only a very small number of subunits remain bound to CaM. Thus, the majority of CaMKII subunits in this bound state are both phosphorylated at T286 and free from CaM.
+Within the population of T286-phosphorylated CaMKII bound to NMDARs, only a very small number of subunits remain bound to CaM. Thus, the majority of CaMKII subunits that are bound in a NMDAR/CaMKII complex are both phosphorylated at T286 and free from CaM. (this is consistent with literature for discussion-REFERENCE)
 
 ::: {#fig-camkii-t286p-nmdar layout-ncol=1 fig-pos='H' fig-scap="CaMKII T286 phosphorylation and NMDARs" width= "80%"}
 
@@ -47,6 +47,17 @@ Within the population of T286-phosphorylated CaMKII bound to NMDARs, only a very
 
 CaMKII T286 phosphorylation and binding to NMDARs. Description NEEDED. _For reproducibility, this figure was obtained from plotting data from "run_2025-04-03_08-45-21_seed_2."_
 :::
+
+
+subset of camkiip of which cam bound and cam unbound
+
+this figure is a sanity test prob go in appendix ? 
+
+![alt text](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png)
+
+subset of camkii bound to ndmdar, of which x is p and x is not p
+
+![alt text](40-results-figures\WT\camkii-nmdar-unphospho.png)
 
 ## T286 mutant model
 
