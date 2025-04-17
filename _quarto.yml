@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "camkii_thesis"
+  title: "CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches"
   author: "Susana Roman Garcia"
   date: now
   date-format: long
