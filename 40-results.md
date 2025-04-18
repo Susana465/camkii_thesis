@@ -27,35 +27,41 @@ In the model at hand, CaMKII is defined as dynamically transitioning between ope
 
 ![Description NEEDED. _For reproducibility, this figure was obtained from plotting data from "run_2025-04-03_08-45-21_seed_2."_](40-results-figures\WT\cam-camkii-binding.png){#fig-cam-camkii-binding fig-pos='H' fig-scap="Ratio of CaMKII bound to CaM"}
 
-By examining @fig-camkii-opening-nmdar, we observe that the levels of CaMKII binding to NMDARs closely follow the same pattern as CaM unbinding from CaMKII. In other words, as CaMKII associates with NMDARs, this interaction appears to maintain CaMKII in an open state, during which calmodulin dissociates from the complex. Interestingly, the proportion of CaMKII free from CaM (camkii_cam_unbound_open) fluctuates, indicating that calmodulin is continuously binding to and dissociating from CaMKII; whereas the CaMKII/NMDAR complex stabilises as all NMDARs are saturated (there are 30 NMDARs released and by the end they are all bound to CaMKII). After approximately 30 seconds, the levels of camkii_cam_unbound_open stabilise and remain lower than the total amount of CaMKII bound to the NMDAR complex. This observation may indicates that CaM is binding and unbinding from the CaMKII holoenzymes that have formed a complex with NMDARs. 
+By examining @fig-camkii-opening-nmdar, we observe that the levels of CaMKII binding to NMDARs closely follow the same pattern as CaM unbinding from CaMKII. In other words, as CaMKII associates with NMDARs, this interaction appears to maintain CaMKII in an open state, during which calmodulin dissociates from the complex. Interestingly, the proportion of CaMKII free from CaM, but keeps the open conformation (camkii_cam_unbound_open) fluctuates up and down frequently, indicating that calmodulin is continuously binding to and dissociating from CaMKII; whereas the CaMKII/NMDAR complex stabilises as all NMDARs are saturated (there are 30 NMDARs released and by the end they are all bound to CaMKII). After approximately 30 seconds, the levels of camkii_cam_unbound_open stabilise and remain lower than the total amount of CaMKII bound to the NMDAR complex. This observation indicates that CaM is binding and unbinding from CaMKII holoenzymes that have formed a complex with NMDARs, and that binding of CaMKII to the NMDAR, stabilises the subunits in their open conformation. 
 
 ![Description NEEDED. _For reproducibility, this figure was obtained from plotting data from "run_2025-04-03_08-45-21_seed_2."_](40-results-figures\WT\camkii-open-nmdar.png){#fig-camkii-opening-nmdar fig-pos='H' fig-scap="CaMKII opening and NMDARs"}
 
 Further analysis focuses on levels of T286 phosphorylation, as shown in @fig-camkii-t286p-nmdar. The total number of CaMKII subunits phosphorylated at T286 is represented by the red trace (camkii_t286p).  This trace reflects the full population of T286-phosphorylated CaMKII, irrespective of any other concurrent molecular states.
 
-All CaMKII subunits categorised as camkii_t286p are necessarily in the open conformation. This is consistent with both the model's coding and biological evidence, as phosphorylation at T286 locks CaMKII in an autonomously active, open conformation by preventing the regulatory segment from re-binding to the catalytic domain, which physically prevents reversion to the closed state. Therefore, camkii_t286p represents a subset of the camkii_open population.
+All CaMKII subunits categorised as camkii_t286p are necessarily in the open conformation. Therefore, camkii_t286p represents a subset of the camkii_open population. This is consistent with both the model's coding and biological evidence, as phosphorylation at T286 locks CaMKII in an autonomously active, open conformation by preventing the regulatory segment from re-binding to the catalytic domain, which physically prevents closing of the subunit.
 
-Out of the 104 CaMKII subunits that are open at the end of the simulation, 45 are found to be phosphorylated at T286 [@fig-camkii-t286p-nmdar-b]. This indicates that approximately half of the open CaMKII subunits are in the T286-phosphorylated state. Of these 45 T286-phosphorylated CaMKII molecules, a subset of 25 are found to be bound to NMDARs (camkii_t286p1_bound_nmdar), as shown in @fig-camkii-t286p-nmdar-b. The difference between these values corresponds to the number of CaMKII molecules that are T286-phosphorylated but not associated with NMDARs. 
+Out of the 104 CaMKII subunits that are open at the end of the simulation, 45 are found to be phosphorylated at T286 [@fig-camkii-t286p-nmdar-b]. This indicates that approximately half of the open CaMKII subunits are in the T286-phosphorylated state. Of these 45 T286-phosphorylated CaMKII subunits, a subset of 25 are found to be bound to NMDARs (camkii_t286p1_bound_nmdar), as shown in @fig-camkii-t286p-nmdar-b. The difference between the T286-phosphorylated CaMKII subunits (45) and the 25 bound and phosphorylated, corresponds to the number of CaMKII molecules that are T286-phosphorylated but not associated with NMDARs. This is, out of all the CaMKII subunits that are phosphorylated at T286, half can be found bound to NMDARs.
 
-Within the population of T286-phosphorylated CaMKII bound to NMDARs, only a very small number of subunits remain bound to CaM. Thus, the majority of CaMKII subunits that are bound in a NMDAR/CaMKII complex are both phosphorylated at T286 and free from CaM. (this is consistent with literature for discussion-REFERENCE)
+Within the population of T286-phosphorylated CaMKII bound to NMDARs, only a very small number of subunits remain bound to CaM [@fig-camkii-t286p-nmdar-b]. Thus, the majority of CaMKII subunits that are bound in a NMDAR/CaMKII complex are both phosphorylated at T286 and free from CaM. (this is consistent with literature for discussion-REFERENCE). Suggesting that once CaMKII is bound to the NMDARs, the holoenzyme can remain open, and autophosphorylate even in the absence of CaM. 
 
-::: {#fig-camkii-t286p-nmdar layout-ncol=1 fig-pos='H' fig-scap="CaMKII T286 phosphorylation and NMDARs" width= "80%"}
+::: {#fig-camkii-t286p-nmdar layout-ncol=1 fig-pos='H' fig-scap="CaMKII T286 phosphorylation and NMDARs" width="80%"}
 
-![](40-results-figures\WT\camkii-phospho-nmdar.png){#fig-fig-camkii-t286p-nmdar-a}
+![](40-results-figures/WT/camkii-phospho-nmdar.png){#fig-fig-camkii-t286p-nmdar-a}
 
-![](40-results-figures\WT\camkii-t286p.png){#fig-camkii-t286p-nmdar-b}
+![](40-results-figures/WT/camkii-t286p.png){#fig-camkii-t286p-nmdar-b}
 
 CaMKII T286 phosphorylation and binding to NMDARs. Description NEEDED. _For reproducibility, this figure was obtained from plotting data from "run_2025-04-03_08-45-21_seed_2."_
+
 :::
 
+out of all the CaMKII subunits that are t286p, roughly half of them (23 molecules) are also bound to CaM (camkii_cam_ca4_t286p1), and the other half are CaM unbound (22 molecules) [@fig-subsets-of-camkii-t286p-cam-binding]. this suggsts that CaM binding is promoting t286 phosphorylation to a degree and viceversa, but not all phosphorylation is due to cam binding; in fact molecules that are cam bound and t286 phosphorylated, appear more slowly in the simulation. conversely, the other half of camkii that is t286p matches the timeline of camkii/nmdar complex formation [@fig-subsets_nmdar-t268p], where nmda_camkii_complex forms and camkii t286 p follows shortly after. this shows that once camkii is bound to nmdars, and subunits are kept in their open state, autophosphorylation at t286 ensues. @fig-subsets_nmdar-t268p also shows how most of the camkii that is bound to nmdars and t286 phosphorylated, is unbound from cam, and complements what we see in @fig-camkii-t286p-nmdar-b (25 camkii subunits are t286p and bound to the nmdar, out of which 23 are free from cam, and 2 are bound to cam by the end of the simulation). 
+
+camkii free from cam but phosphorylated at t286 (light orange line in @fig-subsets_nmdar-t268p) fits the amount of camkii_cam_unbound_t286p1 and bound to nmdar, meaning that all of camkii that is free from cam and t286p is found bound to nmdars. interestingly, there is a slight increase of camkii subunits in camkii that is free from cam and t286 p around 80s. this increase suggests that camkii holoenzymes that are locked in the camkii/nmdar complex are autophosphorylating neighbouring subunits, causing a slight increase in the number of camkii subunits that are free from cam and phosphorylated at t286 (d=make drawing to explain/understand better). 
 
 subset of camkiip of which cam bound and cam unbound
 
 this figure is a sanity test prob go in appendix ? 
 
-![alt text](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png)
+![note for figure: its a redundancy that camkii_cam_unbound_optent28p1 has open in it because all camkii that is t286p1 is open anyway. ](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png){#fig-subsets-of-camkii-t286p-cam-binding}
 
 subset of camkii bound to ndmdar, of which x is p and x is not p
+
+![alt text](40-results-figures\WT\subsets_nmdar-t268p.png){#fig-subsets_nmdar-t268p}
 
 ![alt text](40-results-figures\WT\subset-of-nmdar-p-not-pt286.png)
 
