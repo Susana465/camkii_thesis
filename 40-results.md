@@ -7,29 +7,7 @@ lightbox: true
 
 Following a preliminary sensitivity analysis (can I/should I do statistical methods?) [REFERENCE SECTION], and initial model validation [REFERENCE SECTION], three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphrylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
-| Observable Name                              | Description                                         | Color |
-|---------------------------------------------|-----------------------------------------------------|:-----:|
-| `cam_free`                                   | Free CaM, not bound to any calcium.                 | 🟨    |
-| `cam_ca1`                                    | CaM bound to 1 calcium ion.                         | 🟫    |
-| `cam_ca2`                                    | CaM bound to 2 calcium ions.                        | 🟩    |
-| `cam_ca3`                                    | CaM bound to 3 calcium ions.                        | 🟩    |
-| `cam_ca4`                                    | Fully saturated CaM (4 calcium ions).               | 🟢    |
-| `camkii_cam_ca4`                             | CaMKII bound to fully saturated CaM.                | 🟪    |
-| `camkii_cam_unbound_open`                   | CaMKII open but not bound to CaM.                   | 🔷    |
-| `camkii_open`                                | All CaMKII subunits in the open conformation.       | 🟫    |
-| `camkii_open_t286p0`                         | Open CaMKII not phosphorylated at T286.             | ⚪    |
-| `nmdar_free`                                 | Free NMDARs.                                        | 🔹    |
-| `nmdar_camkii_complex`                       | NMDARs bound to CaMKII.                             | 🔵    |
-| `camkii_t286p`                               | CaMKII phosphorylated at T286.                      | 🔴    |
-| `camkii_t286p1_bound_nmdar`                  | Phospho-CaMKII bound to NMDARs.                     | 💗    |
-| `camkii_t286p0_bound_nmdar`                  | Non-phospho CaMKII bound to NMDARs.                 | ⚫    |
-| `camkii_cam_unbound_open_t286p1`             | Open T286P CaMKII not bound to CaM.                 | 🟧    |
-| `camkii_cam_unbound_open_t286p0`             | Open non-T286P CaMKII, CaM-free.                    | 🩶    |
-| `camkii_cam_unbound_t286p0_bound_nmdar`      | Non-T286P, CaM-free CaMKII bound to NMDAR.          | 🟦    |
-| `camkii_cam_ca4_t286p1`                      | CaMKII bound to saturated CaM and phosphorylated.   | 🟫    |
-| `camkii_cam_ca4_t286p1_bound_nmdar`          | CaMKII bound to CaM and NMDAR, T286P.               | 💜    |
-
-
+![alt](40-results-figures\observable_names.PNG)
 
 ## Wild-type model
 
@@ -99,6 +77,23 @@ subset of camkii bound to ndmdar, of which x is p and x is not p
 
 ![alt text](40-results-figures\WT\camkii-nmdar-unphospho.png)
 
+### NMDAR CaMKII interaction title described above but fill in here
+
+### T306 phosphorylation
+
+Phosphorylation at the T306 site is known to occur at a slower rate than phosphorylation at T286 [REFERENCE SECTION], and this is reflected in the model outputs. A total of 25 CaMKII subunits become phosphorylated at T306 over the course of the simulation, of which 21 are bound to the NMDAR —indicating that approximately 84% of T306-phosphorylated subunits are part of NMDAR complexes. This may suggest that, once bound to NMDARs, CaMKII subunits are protected from dephosphorylation at this site.
+
+Moreover, the accumulation of doubly phosphorylated subunits (T286P and T306P; here referred to as CaMKII_PP) appears to track closely with the rate of T306 phosphorylation. This indicates that T306 phosphorylation typically follows T286 phosphorylation, particularly during the earlier stages of the simulation. This behaviour is consistent with both the modelled mechanisms and findings reported in the literature.
+
+Interestingly, after around 80 seconds, subunits that are solely phosphorylayed at T306 continue to increase, whilst CaMKII_PP does not. This suggests that, at later stages, T306 phosphorylation can occur and persist independently of T286 phosphorylation. Extending the simulation time may offer further insights into this dynamic, as it could support the biological hypothesis that initial T286 phosphorylation enables subsequent T306 phosphorylation, but that T306P can then be maintained even in the absence of T286P.
+
+Notably, the sustained presence of T306P may contribute to the closure of CaMKII subunits, thereby reducing their catalytic activity. This aligns with hypotheses that link T306 phosphorylation to the functional inhibition of CaMKII. The observed co-occurrence of NMDAR binding and T306 phosphorylation in the majority of subunits further supports a mechanism by which these interactions contribute to reduced CaMKII activity. A competing hypothesis, discussed in the Reference Section, posits that NMDAR binding suppresses T306 phosphorylation; however, our model does not support this outcome under the simulated conditions.
+
+T306 phosphorylation follows NMDAR binding dynamics closely. As shown in the figure above, CaMKII subunits initially bind to NMDARs in an unphosphorylated T306 state. Once the CaMKII–NMDAR complex reaches equilibrium, levels of T306 phosphorylation increase correspondingly, as unphosphorylated T306 (T306P0) decreases. In the final phase, after approximately 40 seconds —when all NMDARs are saturated, T306 phosphorylation continues to rise. This is likely supported by the concurrent increase in T286 phosphorylation (as shown in the previous figure), and by a decrease in CaM binding to CaMKII subunits already bound to NMDARs. That is, by this point, a greater proportion of CaMKII subunits are free from CaM. This aligns with expectations, as CaM binding and T306 phosphorylation are mutually exclusive processes —CaM must be unbound for T306 phosphorylation to occur. Therefore, as the model shows a decrease in CaM binding to CaMKII subunits that are already part of the CaMKII–NMDAR complex, the opportunity for T306 phosphorylation increases. In simple terms, the less CaM is bound, the more likely it is that T306 can become phosphorylated. 
+
+The three peaks shown in figure-REFERENCE correspond to CaMKII subunits in the p00 state—that is, unphosphorylated at both T286 and T306. These peaks closely align with CaMKII subunits that are also unphosphorylated at T286, suggesting that complex formation with NMDARs can occur independently of T286 phosphorylation. This is emergent behaviour from the model and reflects findings in the literature, which show that CaMKII does not need to be phosphorylated at T286 in order to bind to NMDARs or to carry out its catalytic functions—although T286 phosphorylation can influence or enhance both processes.
+
+Furthermore, we observe that prior to any T286 phosphorylation, there is no detectable T306 phosphorylation. However, once the CaMKII–NMDAR complex forms, T286 phosphorylation appears to facilitate subsequent T306 phosphorylation. This progression suggests a dependency or sequence in post-translational modifications, where T286 phosphorylation primes or enables the conditions under which T306 phosphorylation can take place (HELP, this is a bit -duh- should i delete?).
 
 
 ## T286 mutant model
