@@ -149,6 +149,14 @@ One area still under development is the conversion of the model code into standa
 
 With respect to the seventh criterion in the Tiwari et al. (2021) framework, I awarded a partial point. The model is well annotated, with inline comments and supporting tables that describe variables and their meanings, thus aiding interpretability. However, molecule and reaction naming conventions, while consistent within the project, could benefit from further simplification. This is a known challenge in computational biology, where names must often strike a balance between being human-readable and programmatically functional (see, e.g., discussions on standardised biological ontologies). 
 
+Moreover, additional steps can be taken to further enhance the FAIRness and interpretability of the data and models presented here. As Balaur et al. (2025) emphasise, reproducibility involves more than simply making metadata and code available—it also requires a critical evaluation of their quality. 
+
+--
+Moreover, further steps can be taken to enhance the FAIRness and interpretability of the data and models. For example, as @balaur2025FAIRification emphasise, ensuring reproducibility also requires assessing the quality of how points such as the ones suggested by @tiwari2021Reproducibility or the FAIR principles must also be assessed. Rich metadata, model being available, code dposited in database, all help with reproducinbility, but can still be of limited value if they are inaccurate, or remain overly general. FAIR-compliant metadata does not automatically equate to metadata that is genuinely informative or high in information content.
+
+
+
+
 Moreover, even further steps can be taken, like @balaur2025FAIRification propose, Quality of metadata should be assessed in addition to its pure existence. . Data objects with rich metadata may still contribute little to the actual understanding of the data if, for example, the metadata is not domain-specific, is not correct, or is too general. FAIR metadata does not itself guarantee that the metadata is informative, i.e. has a high information content25. the quality of the data could be assessed through collaboration with other researchers and Validation Through Collaboration: Encouraging Team Efforts to Ensure Internal and External Validity of Computational Models of Biochemical Pathways as @fitzpatrick2022Validation suggest. 
 
 
