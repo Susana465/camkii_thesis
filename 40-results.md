@@ -7,6 +7,30 @@ lightbox: true
 
 Following a preliminary sensitivity analysis (can I/should I do statistical methods?) [REFERENCE SECTION], and initial model validation [REFERENCE SECTION], three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphrylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
+| Observable Name                              | Description                                         | Color |
+|---------------------------------------------|-----------------------------------------------------|:-----:|
+| `cam_free`                                   | Free CaM, not bound to any calcium.                 | 🟨    |
+| `cam_ca1`                                    | CaM bound to 1 calcium ion.                         | 🟫    |
+| `cam_ca2`                                    | CaM bound to 2 calcium ions.                        | 🟩    |
+| `cam_ca3`                                    | CaM bound to 3 calcium ions.                        | 🟩    |
+| `cam_ca4`                                    | Fully saturated CaM (4 calcium ions).               | 🟢    |
+| `camkii_cam_ca4`                             | CaMKII bound to fully saturated CaM.                | 🟪    |
+| `camkii_cam_unbound_open`                   | CaMKII open but not bound to CaM.                   | 🔷    |
+| `camkii_open`                                | All CaMKII subunits in the open conformation.       | 🟫    |
+| `camkii_open_t286p0`                         | Open CaMKII not phosphorylated at T286.             | ⚪    |
+| `nmdar_free`                                 | Free NMDARs.                                        | 🔹    |
+| `nmdar_camkii_complex`                       | NMDARs bound to CaMKII.                             | 🔵    |
+| `camkii_t286p`                               | CaMKII phosphorylated at T286.                      | 🔴    |
+| `camkii_t286p1_bound_nmdar`                  | Phospho-CaMKII bound to NMDARs.                     | 💗    |
+| `camkii_t286p0_bound_nmdar`                  | Non-phospho CaMKII bound to NMDARs.                 | ⚫    |
+| `camkii_cam_unbound_open_t286p1`             | Open T286P CaMKII not bound to CaM.                 | 🟧    |
+| `camkii_cam_unbound_open_t286p0`             | Open non-T286P CaMKII, CaM-free.                    | 🩶    |
+| `camkii_cam_unbound_t286p0_bound_nmdar`      | Non-T286P, CaM-free CaMKII bound to NMDAR.          | 🟦    |
+| `camkii_cam_ca4_t286p1`                      | CaMKII bound to saturated CaM and phosphorylated.   | 🟫    |
+| `camkii_cam_ca4_t286p1_bound_nmdar`          | CaMKII bound to CaM and NMDAR, T286P.               | 💜    |
+
+
+
 ## Wild-type model
 
 ### Calcium release and initial CaM saturation
@@ -54,10 +78,12 @@ Further, within the population of T286-phosphorylated CaMKII that is also bound 
 
 ![alt text](40-results-figures\WT\subsets_nmdar-t268p.png){#fig-subsets_nmdar-t268p fig-pos='H' fig-scap="CaMKII T286 phosphorylated and bound to CaM"}
 
-### CaM facilitates T286 phosphorylation but is not necessary for it
-As explained in @sec-cam-binding-and-t286-p, we use a 'conformational selection' approach to modelling CaMKII activation, where CaMKII can exist in both open and closed states independently, and CaM selectively binds to and stabilizes the open conformation, without _inducing_ a conformational change. In order to understand how CaM is interacting with CaMKII T286 phosphorylation, we look at @fig-subsets-of-camkii-t286p-cam-binding. Here we can see that among all CaMKII subunits phosphorylated at T286, approximately half (23 molecules) are also bound to CaM, represented by the trace _"camkii_cam_ca4_t286p1"_, while the remaining half (22 molecules) are unbound from CaM.  This indicates that CaM binding facilitates T286 phosphorylation to some extent and/or vice versa, we can't know for sure which ones is causing the other? (HELP). However, not all phosphorylation appears to result from CaM binding; in fact, subunits that are both CaM-bound and T286-phosphorylated emerge more slowly during the simulation.
+### CaM binding is not necessary for T286 phosphorylation (dont like it - HELP)
+As explained in @sec-cam-binding-and-t286-p, we use a 'conformational selection' approach to modelling CaMKII activation, where CaMKII can exist in both open and closed states independently, and CaM selectively binds to and stabilizes the open conformation, without _inducing_ a conformational change. In order to understand how CaM is interacting with CaMKII T286 phosphorylation, we look at @fig-subsets-of-camkii-t286p-cam-binding. Here we can see that among all CaMKII subunits phosphorylated at T286, approximately half (23 molecules) are also bound to CaM, represented by the peach-coloured trace _"camkii_cam_ca4_t286p1"_, while the remaining half (22 molecules) are unbound from CaM (brown-coloured trace: _"camkii_cam_unbound_open_t286p1"_). 
 
-In contrast, the other half of the T286-phosphorylated CaMKII population, which is free from CaM (light orange line in @fig-subsets_nmdar-t268p) corresponds in timing with the formation of the CaMKII/NMDAR complex [@fig-subsets_nmdar-t268p]. Moreover, the overlap between camkii_cam_unbound_open_t286p1 (light orange trace) and camkii_cam_unbound_t286p1_bound_nmdar shows that all of the CaMKII that is both free from CaM and T286 phosphorylated, is bound to NMDARs (but not all CaMKII that is bound to NMDARs is phosphorylated, nor bound CaM). 
+This indicates that CaM binding facilitates T286 phosphorylation to some extent and/or vice versa, we can't know for sure which ones is causing the other? (HELP). However, not all phosphorylation results from CaM binding; in fact, subunits that are both CaM-bound and T286-phosphorylated emerge more slowly during the simulation [@fig-subsets-of-camkii-t286p-cam-binding], suggesting that CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, but as we will see next, NMDAR binding is (by keeping CaMKII subunits in their open conformation and allowing subsequent T286 phosphorylation).
+
+T286-phosphorylated CaMKII which is free from CaM (light orange line in @fig-subsets_nmdar-t268p) corresponds in timing with the formation of the CaMKII/NMDAR complex [@fig-subsets_nmdar-t268p]. Moreover, the overlap between camkii_cam_unbound_open_t286p1 (light orange trace) and camkii_cam_unbound_t286p1_bound_nmdar (purple trace) shows that all of the CaMKII that is both free from CaM and T286 phosphorylated, is bound to NMDARs (but not all CaMKII that is bound to NMDARs is phosphorylated, nor bound to CaM). 
 
 This suggests that, once CaMKII binds to NMDARs and its subunits are held in the open conformation, autophosphorylation at T286 is further facilitated in the CaMKII subunits that are part of the CaMKII/NMDAR complex. Interestingly, a slight increase in the population of CaMKII free from CaM and T286 phosphorylayed is observed around 80 seconds. This rise suggests that subunits of holoenzymes locked into the CaMKII/NMDAR complex undergo further autophosphorylation of neighbouring subunits, resulting in a momentary increase in CaMKII subunits that are free from CaM and phosphorylated at T286 (consider illustrating this mechanism for clarity).
 

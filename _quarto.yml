@@ -54,6 +54,7 @@ format:
         \usepackage{geometry}
         \usepackage{pdfpages}
         \usepackage{afterpage}
+
     include-after-body: 
       text: |
         \printindex
