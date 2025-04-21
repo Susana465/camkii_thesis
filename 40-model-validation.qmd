@@ -29,6 +29,10 @@ Furthermore, the model's ability to reproduce experimentally observed phenomena,
 
 - prob need to mention and not sure if discuss here the models i took params from? or not?
 
+discuss each molecule concetation validity? 
+The molecular concentrations used in this model fall within physiologically plausible ranges reported in the literature. For example, the initial release of 1000 $\mathrm{Ca^{2+}}$ ions corresponds to a concentration of 3.28~$\mu\text{M}$. Prior studies employing fluorescent $\mathrm{Ca^{2+}}$ indicators have shown resting intracellular $\mathrm{Ca^{2+}}$ concentrations ([$\mathrm{Ca^{2+}}$]$_i$) in the range of 0.05–0.1~$\mu\text{M}$, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). As such, the calcium input concentrations used in this model are consistent with the expected values under simulated conditions. Similarly, while the concentration of calmodulin (CaM) can vary widely in different studies, ranging from 0.1~$\mu\text{M}$ to 8~$\mu\text{M}$, with some reports extending up to 250~$\mu\text{M}$, the concentration of 0.98~$\mu\text{M}$ used in this model falls within these reported ranges. A more in depth discussion of the validity of chosen values and potential limitations is provided in @sec-sec-validating-model. 
+iooooooooooo8loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 ## Sensitivity Analysis for parameters{#sec-SA}
 
 As discussed in @sec-intro-comp, computational models can serve as predictive tools to deepen our understanding of the mechanisms underlying observed biochemical processes. However, parameters such as rate constants, activation energies, thermodynamic constants, transport coefficients, etcetera, are rarely known with precision [REFERENCE]. Consequently, predictions are typically subject to uncertainty. That is why understanding how parameter variations influence outcomes is a crucial part of model development and validation.
