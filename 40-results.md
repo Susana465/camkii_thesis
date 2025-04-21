@@ -81,7 +81,7 @@ subset of camkii bound to ndmdar, of which x is p and x is not p
 
 ### T306 phosphorylation
 
-Phosphorylation at the T306 site is known to occur at a slower rate than phosphorylation at T286 [REFERENCE SECTION], and this is reflected in the model outputs. A total of 25 CaMKII subunits become phosphorylated at T306 over the course of the simulation, of which 21 are bound to the NMDAR —indicating that approximately 84% of T306-phosphorylated subunits are part of NMDAR complexes. This may suggest that, once bound to NMDARs, CaMKII subunits are protected from dephosphorylation at this site.
+Phosphorylation at the T306 site is known to occur at a slower rate than phosphorylation at T286 [@otmakhov2015Fast; @chang2017CaMKII], and this is reflected in the model outputs. A total of 25 CaMKII subunits become phosphorylated at T306 over the course of the simulation, of which 21 are bound to the NMDAR —indicating that approximately 84% of T306-phosphorylated subunits are part of NMDAR complexes. This may suggest that, once bound to NMDARs, CaMKII subunits are protected from dephosphorylation at this site.
 
 Moreover, the accumulation of doubly phosphorylated subunits (T286P and T306P; here referred to as CaMKII_PP) appears to track closely with the rate of T306 phosphorylation. This indicates that T306 phosphorylation typically follows T286 phosphorylation, particularly during the earlier stages of the simulation. This behaviour is consistent with both the modelled mechanisms and findings reported in the literature.
 
@@ -99,6 +99,10 @@ Furthermore, we observe that prior to any T286 phosphorylation, there is no dete
 ## T286 mutant model
 
 This model simulates the CaMKII T286A mutant, in which the critical autophosphorylation site threonine 286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both _in vitro_ biochemical assays and _in vivo_ using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. he computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions [REFERENCES].
+
+okayyyy, so becayse t286 phosphorylation increases the chances of camkii subunits remaining in their open conformation, abolishing t286 phosphorylation we would exxpect a decrease in this opening. so we would expect iverall decrease of total camkii_open - but contrary to these expactions, we don't see that!
+
+
 
 ## CaMKII/NMDAR binding mutant model
 This model represents a mutation that prevents CaMKII from binding to the GluN2B subunit of NMDARs, a key interaction implicated in synaptic plasticity, as discussed in SECTION-REFERENCE. When it comes to _in vivo_ and _in vitro_ mutants of CaMKII and NMDAR binding, the mutation can tackle either molecule to prevent their binding. For example, a CaMKII I205K mutation in which isoleucine is replaced with a lysine impairs binding to GluN2B without affecting kinase activity [REFERENCE], and is demonstrated to reduce CaMKII accumulation at synapses after LTP induction [REFERENCE]. 
@@ -124,6 +128,8 @@ In biological systems, this has been examined using GluN2B mutants that disrupt 
 
 
 # Future directions
+
+The combined phosphorylation of Thr286, Thr305, and Thr306 is considered vital to the mechanism of subunit exchange because the regulatory domain needs to be accessible to interact with negatively charged residues located on the hub at the vertical interface between subunits, leading to the release of dimers.  https://www.proquest.com/docview/3165639837?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
 
 decrease volume
 increase calcium
