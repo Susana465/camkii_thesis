@@ -3,7 +3,7 @@ bibliography: [references.bib]
 lightbox: true
 ---
 
-# Results and discussion of results
+# Results and discussion of results {#sec-results}
 
 Following a preliminary sensitivity analysis (can I/should I do statistical methods?) [REFERENCE SECTION], and initial model validation [REFERENCE SECTION], three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphrylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
@@ -127,7 +127,8 @@ In biological systems, this has been examined using GluN2B mutants that disrupt 
 # Limitations
 
 
-# Future directions
+# Future directions [#sec-future-directions]
+Further developments of this model to account for a more complex NMDAR molecule are possible, as I propose in [DISCUSSION SECTION].
 
 The combined phosphorylation of Thr286, Thr305, and Thr306 is considered vital to the mechanism of subunit exchange because the regulatory domain needs to be accessible to interact with negatively charged residues located on the hub at the vertical interface between subunits, leading to the release of dimers.  https://www.proquest.com/docview/3165639837?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
 
