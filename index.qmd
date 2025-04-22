@@ -1,3 +1,14 @@
+# Declaration {-}
+I declare:
+
+- That the thesis has been composed by myself, and
+
+- that the work is my own, and that if I have been a member of a research group, that I have made a substantial contribution to the work, such contribution is clearly indicated, and 
+
+- that the work has not been submitted for any other degree or professional qualification except as specified, and 
+
+- that any included publications are my own work, except where indicated throughout the thesis and summarised and clearly identified on the declarations page of the thesis. 
+
 # Abstract {.unnumbered}
 
 This PhD project integrates biological inquiry with ethical considerations. On the one hand, this PhD investigates the molecular interactions between N-methyl-D-aspartate receptors (NMDARs) and calcium/calmodulin-dependent protein kinase II (CaMKII) in the postsynaptic dendrite during Long-Term Potentiation (LTP), a key process believed to underlie memory formation in animals. Understanding these molecular interactions can provide valuable insights into cognitive function and neurological disorders. Beyond the biological scope, this research also examines how computational models can be employed to study these mechanisms in a way that is both reproducible and ethically responsible. 
@@ -35,3 +46,19 @@ Therefore, this project goes beyond simply creating a model to understand a biol
 To explore the ethical implications of this PhD, I use the Data Hazards framework, to which I have contributed in its development. This framework highlights the potential risks associated with research, including topics such as environmental impacts, biases, and misuse of the work at hand. By using Data Hazards, I identify and address key ethical concerns, assigning hazard-like labels (similar to chemical warning labels) to specific risks such as "danger of misuse" or "high environmental impact". This proactive approach allows me to implement and suggest precautions to mitigate potential risks throughout the research process —from design to execution. 
 
 I use something known as the Data Hazards framework. This framework highlights the potential risks associated with research, including topics such as environmental impacts, biases, and misuse of the work at hand. By using Data Hazards, I identify and address key ethical concerns, assigning hazard-like labels (similar to chemical warning labels) to specific risks such as "danger of misuse" or "high environmental impact". This proactive approach allows me to implement and suggest precautions to mitigate potential risks throughout the research process —from design to execution. 
+
+
+```{=latex}
+\clearpage
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\listoffigures
+}
+```
+
+# Publications and Author Contributions {-}
+Chapter 5 includes a published article titled “Data Hazards as an Ethical Toolkit for Neuroscience”, co-authored with Susana Román García, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. The article was published in the Journal of Neuroethics on 19 February 2025.
+
+Co-author contributions are detailed in the chapter using Contributor Roles Taxonomy (CRediT) (https://credit.niso.org/). 

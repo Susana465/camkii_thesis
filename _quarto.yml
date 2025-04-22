@@ -3,7 +3,12 @@ project:
 
 book:
   title: "CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches"
-  author: "Susana Roman Garcia"
+  author: 
+    - name: "Susana Roman Garcia"
+      orcid: "https://orcid.org/0009-0004-6967-7754"
+      affiliations:
+        - name: "The University of Edinburgh"
+          department: "Centre for Discovery Brain Sciences, College of Medicine & Veterinary Medicine, Biomedical Sciences"
   date: now
   date-format: long
   chapters:
@@ -38,12 +43,14 @@ format:
     number-sections: true
     theme: pulse
   pdf:
+    template-partials:
+      - before-body.tex
     code-block:
       wrap: true
     citeproc: true
     csl: https://www.zotero.org/styles/vancouver-brackets
-    toc: true
-    lof: true 
+    toc: false
+    lof: false
     number-sections: true
     documentclass: scrreprt
     latex_engine: xelatex
@@ -54,6 +61,8 @@ format:
         \usepackage{geometry}
         \usepackage{pdfpages}
         \usepackage{afterpage}
+
+        \addtokomafont{disposition}{\rmfamily}
 
     include-after-body: 
       text: |
