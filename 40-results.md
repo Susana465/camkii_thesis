@@ -140,6 +140,16 @@ adding structural proteins to psd
 make drawing figures of what i expect, could do in future. 
 t306 mutant too. what would i expect?
 
+effects of dephosphorylation could be interesting to look at:
+
+In the GluN2B-bound state,
+the enzyme becomes resistant to the action of phosphatases
+(Cheriyan et al., 2011) indicating GluN2B-induced structural
+changes which can be abolished by specific mutations in CaMKII (Mayadevi et al., 2016). file:///C:/Users/susan/Downloads/fnmol-15-855752.pdf 
+
+we dont model this, but could be an emergent behaviour? 
+
+Importantly, the CaMKII/GluN2B complex was also shown to endure for hours even after dissociation of CaM from the kinase [@barcomb2016CaMKIIa].
 <!--
 # limitations
 need to add a list
