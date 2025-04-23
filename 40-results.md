@@ -157,7 +157,50 @@ WT: 9 values | MT-t286: 9 values
   W = 0.8739, p = 0.1353
   ✅ Data appears normally distributed.
 
-MT -NMDAR
+MT -NMDAR :10 
+
+📊 Shapiro–Wilk test for MT
+  W = 0.9458, p = 0.6189
+  ✅ Data appears normally distributed.
+
+
+![camkii_open](40-results-figures\statistics\camkii_open2.png)
+
+ANOVA F-statistic: 8.498, p-value: 1.528e-03
+
+Tukey's HSD Post Hoc Test:
+      Multiple Comparison of Means - Tukey HSD, FWER=0.05      
+===============================================================
+     group1      group2 meandiff p-adj   lower    upper  reject
+---------------------------------------------------------------
+NMDAR_CaMKII_MT T286_MT  -8.5667 0.0023 -14.1775 -2.9558   True
+NMDAR_CaMKII_MT      WT     -0.9 0.9161  -6.5109  4.7109  False
+        T286_MT      WT   7.6667 0.0076     1.91 13.4233   True
+
+
+no stat difference for t306p
+
+ANOVA F-statistic: 1.493, p-value: 2.441e-01
+
+![camkii_t306p](40-results-figures\statistics\t396p.png)
+
+https://blog.4dcu.be/programming/2021/12/30/Posthoc-Statannotations.html
+
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.tukey_hsd.html 
+
+for camkii_cam_ca4 40-results-figures\statistics\CaMKII_CaM_Ca4.png
+
+Tukey's HSD Post Hoc Test:
+      Multiple Comparison of Means - Tukey HSD, FWER=0.05      
+===============================================================
+     group1      group2 meandiff p-adj   lower    upper  reject
+---------------------------------------------------------------
+NMDAR_CaMKII_MT T286_MT  -6.7111 0.0042 -11.4067 -2.0155   True
+NMDAR_CaMKII_MT      WT   0.6222 0.9419  -4.0734  5.3178  False
+        T286_MT      WT   7.3333 0.0024   2.5158 12.1509   True
+---------------------------------------------------------------
+(mcell4-env) 
+
 # Limitations
 
 
