@@ -150,6 +150,8 @@ changes which can be abolished by specific mutations in CaMKII (Mayadevi et al.,
 we dont model this, but could be an emergent behaviour? 
 
 Importantly, the CaMKII/GluN2B complex was also shown to endure for hours even after dissociation of CaM from the kinase [@barcomb2016CaMKIIa].
+
+discuss why biodynamo not used, the idea at the beginning and how it could be used in the future. 
 <!--
 # limitations
 need to add a list

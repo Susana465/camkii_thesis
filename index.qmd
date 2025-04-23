@@ -9,6 +9,18 @@ I declare:
 
 - that any included publications are my own work, except where indicated throughout the thesis and summarised and clearly identified on the declarations page of the thesis. 
 
+```{=latex}
+\vspace*{\fill}
+\begin{center}
+    {\large\bfseries This PhD was supervised by:}
+    
+    \vspace{2ex}
+    
+    {\large Dr Nicola Romanò, Dr David C. Sterratt, and Prof Melanie I. Stefan.}
+\end{center}
+\vfill
+```
+
 # Abstract {.unnumbered}
 
 This PhD project integrates biological inquiry with ethical considerations. On the one hand, this PhD investigates the molecular interactions between N-methyl-D-aspartate receptors (NMDARs) and calcium/calmodulin-dependent protein kinase II (CaMKII) in the postsynaptic dendrite during Long-Term Potentiation (LTP), a key process believed to underlie memory formation in animals. Understanding these molecular interactions can provide valuable insights into cognitive function and neurological disorders. Beyond the biological scope, this research also examines how computational models can be employed to study these mechanisms in a way that is both reproducible and ethically responsible. 
@@ -47,6 +59,24 @@ To explore the ethical implications of this PhD, I use the Data Hazards framewor
 
 I use something known as the Data Hazards framework. This framework highlights the potential risks associated with research, including topics such as environmental impacts, biases, and misuse of the work at hand. By using Data Hazards, I identify and address key ethical concerns, assigning hazard-like labels (similar to chemical warning labels) to specific risks such as "danger of misuse" or "high environmental impact". This proactive approach allows me to implement and suggest precautions to mitigate potential risks throughout the research process —from design to execution. 
 
+# Acknowledgements
+
+> “_I want to thank me for believing in me, I want to thank me for doing all this hard work._" 
+> — Snoop Dogg. 
+
+Inspired by that quote, I'd like to first and foremost thank myself for persevering throughout these four years and a bit, and for being patient with myself and this PhD. It feels a bit unusual to thank myself but the personal growth I’ve experienced feels significant enough to be recognized here for future reference. I am proud of myself. I can see the differences in my confidence when it comes to coding and my knowledge of what I want and how I want things done. This journey has been one of love, patience, and consistent effort.
+
+I'd like to thank my friend Ceilidh, who has been a refreshing, kind, loving, and solid friendship that I did not expect would happen midway through my PhD. You have been a major support buddy and inspiration to get through this PhD.
+
+I'd like to thank my family and particularly my siblings, _Felipe y Clara_, who remind me constantly to take care of myself first, fill up my cup, and, in doing so, show up to anything else with revitalized energy, including this PhD. _Gracias, hermanos amados, os quiero_. My gratitude is extended to James, Florence and Clementine who have put up with a lot of my breakdowns and been there for me all throughout this journey. 
+
+I am very grateful for the opportunity to have been an enrichment student at The Alan Turing Institute during the 2022–2023 cohort. It was a catalytic moment for me and for this PhD. My time here really propelled my PhD into what I wanted it to be. The people I met during this time have made a huge impact on my academic and personal life, and I am forever grateful. This experience was also an opening door to the Turing Way Community, whom I would also like to thank as a whole, but particularly some of the people with whom I have had meaningful conversations that have steered the direction of my PhD: Anne Le Steele, Claudia Fischer, Malvika Sharan, and Kirstie Whittaker.
+
+Mention OLS -
+
+The Data Hazards team has also been an amazing group to have been able to work with, and I'd like to especially thank Natalie Zelenka and Nina Di Cara for their help and support in my Data Hazard endeavours, from co-organising workshops, and attending conferences to present this topic to other researchers. 
+
+This PhD would have not been possible without the amazing support of my supervisors: Melanie Stefan, David Sterratt and Nicola Romano. I am very lucky that I have had such understanding, caring, supportive and intelligent people as my supervisors; I know I am extremely privileged to have carried out my PhD under your supervision. Not only have you helped me with the content of this thesis, but I feel like you have truly impacted my life in how I want to do research. Your passion and knowledge for doing research with integrity is contagious. Thank you, truly. 
 
 ```{=latex}
 \clearpage

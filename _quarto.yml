@@ -4,7 +4,7 @@ project:
 book:
   title: "CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches"
   author: 
-    - name: "Susana Roman Garcia"
+    - name: "Susana Román García"
       orcid: "https://orcid.org/0009-0004-6967-7754"
       affiliations:
         - name: "The University of Edinburgh"
@@ -43,6 +43,7 @@ format:
     number-sections: true
     theme: pulse
   pdf:
+    fontsize: 11pt
     template-partials:
       - before-body.tex
     code-block:
@@ -58,9 +59,9 @@ format:
       text: |
         \usepackage{makeidx}
         \makeindex
-        \usepackage{geometry}
         \usepackage{pdfpages}
         \usepackage{afterpage}
+        \usepackage[a4paper, left=2.3cm, right=2.3cm, top=2.3cm, bottom=2.3cm]{geometry}
 
         \addtokomafont{disposition}{\rmfamily}
 
