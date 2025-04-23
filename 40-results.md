@@ -11,61 +11,19 @@ Following a preliminary sensitivity analysis (can I/should I do statistical meth
 
 ## Wild-type model
 
-This is a summary of WT results. 
+This section presents a summary of the results obtained from the wild-type (WT) model. In the WT simulation, the final total number of CaMKII_open molecules reaches a mean of approximately 108 molecules at 100 seconds. The shaded area surrounding the mean trajectory in the graph represents the standard deviation (SD), reflecting the degree of fluctuation in molecule counts across different simulation runs. 
+
+The relatively wide spread of the SD indicates that there is considerable variability in the activation of CaMKII.
+
+This variability is also evident in other molecular behaviours within the model. Specifically, there is substantial variation across runs in the binding of CaMKII to NMDARs, as well as in the phosphorylation dynamics of CaMKII subunits during these interactions. To better understand the source and nature of this variability, the following section will explore a representative single simulation run in more detail.
+
 
 ::: {.landscape}
 
-This will appear in landscape.
+![a,b,c,d](40-results-figures\WT\t286p-means.PNG){#fig-t286p-means fig-scap="abcd" fig-pos='H'}
 
 :::
 
-
-
-\newpage
-
-<!-- changing the orientation to landscape --------------------------------- -->
-
-\KOMAoptions{paper=landscape,pagesize}
-\recalctypearea
-\newgeometry{paper=a4paper, landscape, left=2.3cm, right=2.3cm, top=2.3cm, bottom=2.3cm}
-\pagestyle{plain}
-
-```{=latex}
-\begin{figure}[H]
-  \centering
-  \begin{minipage}{0.45\textwidth}
-    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/nmdar-binding-mean.png}}
-    \caption*{(a) NMDAR binding (mean)}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.45\textwidth}
-    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/subset-t286p-cam-binding.png}}
-    \caption*{(b) T286P-CaM binding subset}
-  \end{minipage}
-  \vspace{1em}
-
-  \begin{minipage}{0.45\textwidth}
-    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/subset-t286p.png}}
-    \caption*{(c) T286P subset}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.45\textwidth}
-    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/t286p-cam-binding-unbinding.png}}
-    \caption*{(d) T286P-CaM binding and unbinding}
-  \end{minipage}
-  \caption{Combined figure of WT simulations with borders around each subfigure.}
-\end{figure}
-
-```
-
-\newpage
-
-<!-- % changing the orientation to portrait again -------------------------- -->
-
-\KOMAoptions{paper=portrait,pagesize}
-\recalctypearea
-\newgeometry{paper=a4paper, landscape, left=2.3cm, right=2.3cm, top=2.3cm, bottom=2.3cm}
-\pagestyle{plain}
 
 ### Calcium release and initial CaM saturation
 In the WT model (described in detail in @sec-model-description), a release of 1000 calcium ions occurs within a dendritic spine volume of 0.50588 $\mu\text{m}^3$. This calcium subsequently binds to CaM, which can bind up to four calcium ions. Full saturation of CaM is required for subsequent binding to CaMKII, resulting in the formation of the CaMKII–CaM complex (CaMKII_CaM_Ca4).
@@ -183,6 +141,23 @@ A positively charged residue, likely involved in electrostatic interactions or h
 Substituting arginine with glutamine (neutral, polar) removes the charge and disrupts those interactions.
 In biological systems, this has been examined using GluN2B mutants that disrupt the CaMKII-binding motif, or CaMKII mutants that selectively impair binding without affecting kinase activity. Both in vitro studies and in vivo models have demonstrated that disrupting this interaction impairs LTP maintenance and learning-related plasticity. The computational model isolates this mechanism by setting CaMKII–NMDAR binding reactions to zero, allowing for a focused analysis of how this interaction contributes to model behaviour.
 
+# STATSSSS
+
+NORMALITY TEST RESULTS:
+
+camkii_open
+
+WT: 9 values | MT-t286: 9 values
+
+📊 Shapiro–Wilk test for WT
+  W = 0.9399, p = 0.5811
+  ✅ Data appears normally distributed.
+
+📊 Shapiro–Wilk test for MT
+  W = 0.8739, p = 0.1353
+  ✅ Data appears normally distributed.
+
+MT -NMDAR
 # Limitations
 
 
