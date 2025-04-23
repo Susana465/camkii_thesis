@@ -49,7 +49,7 @@ format:
     code-block:
       wrap: true
     citeproc: true
-    csl: https://www.zotero.org/styles/vancouver-brackets
+    csl: http://www.zotero.org/styles/springer-socpsych-brackets
     toc: false
     lof: false
     number-sections: true
