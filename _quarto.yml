@@ -57,6 +57,7 @@ format:
     latex_engine: xelatex
     include-in-header:
       text: |
+        \usepackage{typearea}
         \usepackage{makeidx}
         \makeindex
         \usepackage{pdfpages}

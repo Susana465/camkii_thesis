@@ -11,6 +11,62 @@ Following a preliminary sensitivity analysis (can I/should I do statistical meth
 
 ## Wild-type model
 
+This is a summary of WT results. 
+
+::: {.landscape}
+
+This will appear in landscape.
+
+:::
+
+
+
+\newpage
+
+<!-- changing the orientation to landscape --------------------------------- -->
+
+\KOMAoptions{paper=landscape,pagesize}
+\recalctypearea
+\newgeometry{paper=a4paper, landscape, left=2.3cm, right=2.3cm, top=2.3cm, bottom=2.3cm}
+\pagestyle{plain}
+
+```{=latex}
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/nmdar-binding-mean.png}}
+    \caption*{(a) NMDAR binding (mean)}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/subset-t286p-cam-binding.png}}
+    \caption*{(b) T286P-CaM binding subset}
+  \end{minipage}
+  \vspace{1em}
+
+  \begin{minipage}{0.45\textwidth}
+    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/subset-t286p.png}}
+    \caption*{(c) T286P subset}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \fbox{\includegraphics[width=10cm]{40-results-figures/WT/t286p-cam-binding-unbinding.png}}
+    \caption*{(d) T286P-CaM binding and unbinding}
+  \end{minipage}
+  \caption{Combined figure of WT simulations with borders around each subfigure.}
+\end{figure}
+
+```
+
+\newpage
+
+<!-- % changing the orientation to portrait again -------------------------- -->
+
+\KOMAoptions{paper=portrait,pagesize}
+\recalctypearea
+\newgeometry{paper=a4paper, landscape, left=2.3cm, right=2.3cm, top=2.3cm, bottom=2.3cm}
+\pagestyle{plain}
+
 ### Calcium release and initial CaM saturation
 In the WT model (described in detail in @sec-model-description), a release of 1000 calcium ions occurs within a dendritic spine volume of 0.50588 $\mu\text{m}^3$. This calcium subsequently binds to CaM, which can bind up to four calcium ions. Full saturation of CaM is required for subsequent binding to CaMKII, resulting in the formation of the CaMKII–CaM complex (CaMKII_CaM_Ca4).
 
