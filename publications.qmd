@@ -1,0 +1,34 @@
+# List of publications and presentations resulting from this PhD
+
+The following publications have emerged as a direct outcome of the research conducted during this PhD. They reflect the various strands of work undertaken, ranging from the development and application of computational models to contributions in open science and data ethics. Together, they demonstrate the interdisciplinary impact of the project and the collaborative efforts that supported its progress.
+
+- **Román García, S., Welsh, C., Di Cara, N. H., Sterratt, D., Romano, N., & Stefan, M. I.** (2025). _Data Hazards as an ethical toolkit for neuroscience._  
+  *Neuroethics*, **18**, 15.  
+  DOI: [10.1007/s12152-024-09580-3](https://doi.org/10.1007/s12152-024-09580-3)
+
+- **Zelenka, N., Di Cara, N. H., Bennet, E., Clatworthy, P., Day, H., Kherroubi Garcia, I., Román García, S., Hanschke, V. A., & Kuwertz, E. S.** (2025). _Data Hazards: An open-source vocabulary of ethical hazards for data-intensive projects._  
+  *Journal of Responsible Technology*, **21**, 100110.  
+  DOI: [10.1016/j.jrt.2025.100110](https://doi.org/10.1016/j.jrt.2025.100110)
+
+- **Welsh, C., Román García, S., Barnett, G. C., & Jena, R.** (2024). _Democratising artificial intelligence in healthcare: community-driven approaches for ethical solutions._  
+  *Future Healthcare Journal*  
+  DOI: [10.1016/j.fhj.2024.100165](https://doi.org/10.1016/j.fhj.2024.100165)
+
+- **Welsh, C., Román García, S., Zelenka, N. & Turing Way Community** (2023). _Data Hazards Chapter._ In *The Turing Way: A handbook for reproducible, ethical and collaborative data science*.  
+  Co-authored and available at: [https://book.the-turing-way.org/ethical-research/data-hazards](https://book.the-turing-way.org/ethical-research/data-hazards)
+
+- **Román García, S., & Steele.** (2023). _Open Science & Reproducibility: The Turing Way Workshop._  
+  Presented at the “Data Science Perspectives” PhD conference, Newcastle University.  
+  DOI: [10.5281/zenodo.7704563](https://doi.org/10.5281/zenodo.7704563)
+
+- **Román García, S.** (2023). _Ethical Standards and Reproducibility of Computer Models in Neurobiology._  
+  Presented as part of Open Life Sciences cohort 6.  
+  [Watch the recording](https://www.youtube.com/watch?v=3qb28JDFhGw)
+
+- **Román García, S.** (2023). _Enrichment Scheme Reflections._  
+  *Women in High Performance Computing* blog.  
+  [Read the post](https://womeninhpc.org/paths-to-hpc/enrichment-scheme-reflections-the-alan-turing-institute)
+
+- **Román García, S., Sterratt, D., & Stefan, M. I.** (2022). _Thinking about Ethics in (Computer) Science._  
+  *Edinburgh College of Medicine and Veterinary Medicine Good Practice Showcase*  
+  DOI: [10.5281/zenodo.6973796](https://doi.org/10.5281/zenodo.6973796)

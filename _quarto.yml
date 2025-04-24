@@ -21,6 +21,7 @@ book:
     - 30-model.qmd
     - 40-model-validation.qmd
     - 40-results.md
+    - publications.qmd
     - references.qmd
 
   downloads: [pdf]
