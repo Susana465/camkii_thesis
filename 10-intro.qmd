@@ -14,8 +14,10 @@ This introductory chapter outlines the rationale, methodology, and contributions
 In this chapter, I introduce the biological foundations of this project. I outline the mechanisms of Long-Term Potentiation (LTP), focusing on how CaMKII and NMDARs are involved, and why and how they are important. I also explore the detailed molecular interactions between these two key molecules in the context of LTP, covering what is currently known and what remains unknown. This chapter sets the scene for the biological mechanisms that will be studied throughout the thesis.
 
 ##### Chapter 2 {.unnumbered}
+In this chapter, I explain why I use computational modelling to investigate the biological questions described in Chapter 1. I introduce the modelling techniques used in this PhD and provide an overview of the software workflow. 
 
 ##### Chapter 3 {.unnumbered}
+This chapter introduces the importance of open and ethical research practices. I discuss why these considerations matter in scientific research and provide a personal account of the steps I have taken to make this project more reproducible and ethically responsible.
 
 ##### Chapter 4 {.unnumbered}
 
