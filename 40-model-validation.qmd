@@ -1,52 +1,80 @@
 # Validating model behaviour {#sec-validating-model}
-Model validation is essential to ensure that computational simulations reliably reflect underlying biological mechanisms. In this work, the validation involved modular development of the model, comparison with experimental data, and assessment of both qualitative and quantitative accuracy. Each aspect of the model was tested in isolation before integration, and several complementary strategies were employed to evaluate the accuracy, robustness, and predictive capabilities of the system.
 
-In order to validate model behaviour, it was constructed in a modular fashion, with each reaction or set of reactions added sequentially and tested independently. Modular testing is a key strategy in model validation that, in this case, involved building the model in discrete, self-contained sets of reaction rules. 
+In order to validate the model, I did five main things: 
 
-Each reaction rule was added one by one and tested to see if it reproduced biologically relevant results. By structuring the model in this way, it becomes possible to test and validate individual components independently before integrating them into the full system. This modular approach ensures that the model is built gradually, allowing for careful validation of each new set of reactions before proceeding to more complex processes. This stepwise approach minimises the risk of introducing compounded errors when combining multiple reactions or pathways.
+1-> model closeness to reality, biological plausibility.
+2-> model was built incrementally
 
-For example, I initially incorporated reactions involving calcium binding to calmodulin and validated this by comparing its output against a previously developed and validated model described in [REFERENCE]. This comparison served as an internal benchmark, as the original model had already been validated against experimental biological data. 
+4 -> Kinetic parameters used in the model's reactions were sourced from the literature or inferred from experimental data where available. In cases of uncertainty, parameter exploration was conducted to assess how kinetic rates impact model behaviour (see @sec-SA).
 
 ## Biological Plausibility
-While care was taken to compare the model outputs with known biological processes described in the literature and supported by experimental data, it is important to acknowledge that this type of comparison is inherently complex. Different models capture different aspects of the system, and even subtle variations in assumptions or parameter choices can lead to divergent behaviours. Different models may capture different aspects of the system, and even subtle variations in assumptions or parameter choices can lead to divergent behaviours. That said, these behaviours are still expected to remain within a plausible biological range—there is a limit to the extent of acceptable variation before a model becomes unrealistic. 
+While care was taken to compare model outputs with known biological processes described in the literature and supported by experimental data, this type of comparison is inherently complex. Different models capture different aspects of biological systems, and even subtle variations in assumptions or parameter choices can lead to divergent behaviours.
 
 As such, the evaluation of biological plausibility should be interpreted with caution; it provides useful insight, but not definitive validation. The process of matching simulated outputs—such as concentration profiles and reaction kinetics—to literature values is valuable, yet inherently limited by the variability and uncertainty present in both modelling and experimental data.
 
-Kinetic parameters used in the reactions were either sourced directly from the literature or inferred from experimental data where available. Where parameters were uncertain, sensitivity analyses were conducted to determine how kinetic rates impact model behaviour (see @sec-SA below). 
+### Model Geometry and Concentrations
+The model simulates cytoplasmic molecular reactions within the geometry of a postsynaptic dendritic spine with a volume of 0.50588 $\mu\text{m}^3$.  This volume matches the value used by @ordyan2020Interactions in their model of CaMKII in the postsynaptic density and falls within the physiological range of 0.004–0.6 $\mu\text{m}^3$reported for hippocampal CA1 neurons (Harris et al., 1989). Tonnesen et al. (2018) reported a median spine volume of 0.1 $\mu\text{m}^3$, with some spines reaching up to 0.5 $\mu\text{m}^3$, supporting the plausibility of the volume chosen.
 
-Furthermore, the model's ability to reproduce experimentally observed phenomena, such as CaMKII phosphorylation patterns, was critically assessed to confirm that the simulated system reflected realistic biological dynamics. Any discrepancies or deviations from expected biological behaviour were noted and considered in the context of the model's limitations. The results of these validation efforts, as well as the identified limitations, are discussed in more detail in the RESULTS-SECTION-REFERENCE.
+The molecular concentrations used are also within biologically plausible ranges. For example, the initial release of 1000 Ca²⁺ ions corresponds to a concentration of 3.28 μM. Fluorescent $\mathrm{Ca^{2+}}$ indicator studies show resting intracellular $\mathrm{Ca^{2+}}$ concentrations between 0.05–0.1 $\mu\text{M}$, with increases up to 100-fold during stimulation (Grienberger et al., 2012; Maravall et al., 2000). Therefore, the calcium concentrations used are consistent with simulated neuronal activation.
 
-The molecular concentrations used in this model fall within physiologically plausible ranges reported in the literature. For example, the initial release of 1000 $\mathrm{Ca^{2+}}$ ions corresponds to a concentration of 3.28~$\mu\text{M}$. Prior studies employing fluorescent $\mathrm{Ca^{2+}}$ indicators have shown resting intracellular $\mathrm{Ca^{2+}}$ concentrations ([$\mathrm{Ca^{2+}}$]$_i$) in the range of 0.05–0.1~$\mu\text{M}$, with increases up to 100-fold under stimulated conditions (Grienberger et al., 2012; Maravall et al., 2000). As such, the calcium input concentrations used in this model are consistent with the expected values under simulated conditions. Similarly, while the concentration of calmodulin (CaM) can vary widely in different studies, ranging from 0.1~$\mu\text{M}$ to 8~$\mu\text{M}$, with some reports extending up to 250~$\mu\text{M}$, the concentration of 0.98~$\mu\text{M}$ used in this model falls within these reported ranges. 
+Similarly, CaM concentrations reported in the literature range from 0.1 to 8 $\mu\text{M}$, with some reports suggesting levels up to 250 $\mu\text{M}$. The model uses a concentration of 0.98 μM, which is within this range. Experimental estimates place CaMKII concentrations in dendritic spines around 5 μM, with NMDAR concentrations reported at approximately 0.17 μM (Lisman et al., 2012; Petralia et al., 2009), yielding a literature-based ratio of roughly 29:1. In the current model, CaMKII is present at 2.36 $\mu\text{M}$, and NMDARs at 0.099 $\mu\text{M}$, giving a model ratio of about 24:1. This close correspondence demonstrates that the functional relationship between CaMKII and NMDARs is preserved, even if the absolute concentrations are slightly reduced. PP1 concentrations in neurons are typically reported between 1 μM and 10 μM (Cohen, 2002), with CaMKII concentrations around 5 $\mu\text{M}$, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 $\mu\text{M}$, and CaMKII at 2.36 $\mu\text{M}$, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.
 
-## Limitations
+These values are on the lower end of the reported ranges but remain within an order of magnitude of typical experimental data. This margin is reasonable, particularly given the experimental variability and the fact that many biological responses are robust to moderate concentration differences [REFERENCE]. Additionally, the relative abundance of these molecules is often more important than their absolute concentrations, as it governs the signaling dynamics. The values used in this model were taken from other computational models that have been validated against experimental biological data, ensuring that the concentrations are within the expected range based on observed physiological conditions. 
 
-A more in depth discussion of the validity of chosen values and potential limitations is provided in @sec-validating-model. 
+These values are consistent with those found in the literature and previous models that accurately represent the biological system at hand. Albeit, because the model uses a cell volume that is on the larger side for dendritic spines, the molecular concentrations are slightly lower than what others report [REFERENCES]. In the future, running the model with a slightly smaller cell volume would naturally increase the total observed molecular concentrations. However, the actual behavior of the molecules is not expected to change significantly, as the relative ratios of the molecules would remain the same. Thus, the signalling dynamics are expected to be largely unaffected by such changes in concentration.
 
-## Sensitivity Analysis for parameters{#sec-SA}
+## Incremental Construction and Stepwise Validation
+In order to validate model behaviour, each reaction rule was added one at a time and tested to see if it produced biologically relevant results. Reactions or sets of reactions were introduced sequentially and tested independently. Structuring the model this way made it possible to validate individual components before integrating them into the full system.
+
+For example, the model was first tested by incorporating the calcium binding to calmodulin (CaM) reactions. These were validated by comparing the outputs to those of a previously published and experimentally validated model [REFERENCE]. Once consistent behavior was observed, the next layer—CaM binding to CaMKII—was added and validated in a similar manner. Finally, interactions between CaMKII and NMDARs were introduced and tested.
+
+By using previously validated models as benchmarks at each stage, confidence in the biological accuracy of the newly constructed system was enhanced. This approach also ensured that complex interactions were introduced gradually, minimizing the risk of errors and improving the interpretability of the simulation results. While a detailed, step-by-step account of each reaction is not provided here for the sake of clarity and conciseness, a summary of the model reactions and the expected confirmed outputs can be found in the table below.
+
+Note that not all steps are shown here—for instance, I initially tested CaMKII as a hexamer before constructing the full dodecamer to ensure the functionality of the multistate molecule. This was a critical step, but the results of these intermediate tests are not included, as they were part of the model-building process. Additionally, I conducted tests before adding NMDARs, which were modeled as surface molecules and required specialized testing. Once this testing was completed, I confirmed the interaction between CaMKII and NMDARs.
+
+|Expected Result| Associated Reaction Rules | Observed in Models |
+|-----------------|---------------------------------|-----------------------------|
+|
+$\mathrm{Ca^{2+}}$ binds to CaM in a stepwise manner, with higher affinity for forming CaM\_Ca3 and CaM\_Ca4 states [REFERENCE]. | Rules #1 – #4 (@fig-tbl-1)| Yes, see @fig-calcium-binding
+|
+CaMKII subunits flicker between open and closed and are stabilised in open conformation by T286 phosphorylation, CaM binding and/or NMDAR binding. | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see |
+|
+CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation [REFERENCE]. | Rule #6 |  Yes, see |
+|
+Open CaMKII binds to NMDARs, anchoring the kinase at the membrane  [REFERENCE].| Rule #12  | Yes, see |
+|
+CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding [REFERENCE].| Rule #8 | Yes, see | 
+|
+CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation [REFERENCE]. | Rules #8, #9 | Yes, see |
+|
+CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation [REFERENCE]. | Rules #5, #10 | Yes, see |
+|
+PP1 dephosphorylates CaMKII at T286 and T306, reversing its activation and enabling cycling between open and closed states. [REFERENCE]. | Rules #10, #11 | Unclear, see |
+
+: Summary of Model Predictions and Results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
+
+
+
+Summary of above table.
+
+## Exploration of Uncertain Parameters
 As discussed in @sec-intro-comp, computational models can serve as predictive tools to deepen our understanding of the mechanisms underlying observed biochemical processes. However, parameters such as rate constants, activation energies, thermodynamic constants, transport coefficients, etcetera, are rarely known with precision [REFERENCE]. Consequently, predictions are typically subject to uncertainty. That is why understanding how parameter variations influence outcomes is a crucial part of model development and validation.
 
-As part of model development and validation, sensitivity analysis (SA) can be employed to determine which parameters the model is more or less responsive to. This technique focuses on  quantifying the impact of parameter changes on model predictions. SA aims to determine the influence of each input parameter on the model's output behaviour. In other words, SA is useful to assess how variations in input parameters, such as reaction propensities, rate constants, or initial concentrations, influence the system's outputs, which might include reaction trajectories, species concentrations over time, or the likelihood of certain reaction outcomes.
+While other models have explored the dynamics of calcium, calmodulin, and CaMKII, to the best of our knowledge none have specifically focused on the direct interactions between CaMKII and NMDARs, as is done in the present study. Consequently, determining parameters for calcium binding to CaM and CaM binding to CaMKII was relatively straightforward, as there are studies that have provided analyses and reviews of parameters that best fit biological phenomena [REFERENCE]. However, there were four reaction parameters that were more uncertain and key for this study: $k_{\text{on}} / k_{\text{off}}$ for camkii opening and closing, and $k_{\text{on}} / k_{\text{off}}$ for CaMKII binding to NMDARs.
 
-By quantifying the responsiveness of the model's outputs to variations in these parameters, SA enables researchers to prioritise the most impactful parameters for precise measurement or further investigation. This is especially valuable when studying chemical kinetics, where many parameters are difficult to measure directly and often carry inherent uncertainties [REFERENCE]. SA not only aids in parameter estimation but also guides experimental design by highlighting which aspects of the reaction system are most sensitive to changes, thereby improving the predictive accuracy of kinetic models such as the ones used in this PhD.
+Most models assume that CaM binding to CaMKII induces activation; however, this assumption is not applied in the current model, as discussed throughout this thesis. To our knowledge, Pharris et al. are the only ones who have modelled the flickering of CaMKII between open and closed states. Since the model used here integrates parameters from multiple sources, parameter exploration was conducted to identify values for the flickering dynamics that would yield robust and consistent results in alignment with the existing literature. Specifically, the opening and closing rates for CaMKII were tested by varying them by factors of 0.1, 1, and 10 relative to the values proposed by Pharris et al. [REFERENCE].
 
-SA techniques can be broadly classified based on two key aspects: the analysis _scope_ and its _framework_. The scope of SA refers to whether the analysis focuses on small, local variations in input parameters or examines the global effect across a wider range of parameter values. Local sensitivity analysis typically investigates the effect of small perturbations in a single input parameter while holding others constant, often focusing on the immediate response of the model around a specific operating point. In contrast, global sensitivity analysis explores how changes in all relevant input parameters, over their entire range of possible values, influence the model's output, accounting for interactions between parameters and providing a more comprehensive view of model behaviour.
+table of parameters used.
 
-The framework aspect of SA refers to the approach used to model uncertainty (see @sec-how-do-we-model) in the system under study, and the method for sensitivity analysis will depend on whether the system is deterministic or probabilistic. In a deterministic sensitivity analysis framework, the relationship between inputs and outputs is precise and fixed, with no inherent randomness. 
+Similarly, parameter variations for the CaMKII and NMDAR binding rates were explored. We found a $k_{\text{off}}$ for the unbinding of CaMKII from the NR1 subunit of NMDARs, albeit not for the GluN2B subunit that CaMKII is known to bind more readily too. Very recently, a new study published a proposed dissociation constant ($k_{\text{D}}$) or CaMKII/GLuN2B binding. Yet, we did not know a $k_{\text{off}}$ and wanted to see if changing these parameyters changed the model much. 
 
-Whereas a probabilistic (or stochastic) framework accounts for uncertainty by incorporating variability and randomness into the model, recognising that parameters may change within defined ranges or follow probability distributions. In a probabilistic model there are two sources of uncertainty: the parameter uncertainty and the uncertainty due to the stochasticity of the model. In a stochastic model, for any set of parameters, statistics derived from simulations have a distribution rather than being one value. A sensitivity analysis of a stochastic system typically considers how the estimated mean or median of that distribution varies as parameter(s) change.
+To quantify how these parameter changes affect model predictions, the influence of the four key input parameters on the model’s output behaviour was carefully examined.  Specifically, the goal was to assess how variations in these rate constants influenced system outputs such as the concentrations of CaMKII T286 phosphorylation, total CaMKII opening, NMDAR binding over time, and the likelihood of specific reaction outcomes. This was achieved by varying one set of parameter at a time while keeping others constant, allowing for an assessment of each set of parameter's individual impact.
 
-- do i need to mention here limitation of runs of phd?
---
-Sensitivity analysis is a technique to determine how the variation in the output of a model can be attributed to different inputs or parameters. This helps in identifying which parameters are most critical for the model's performance and which can be adjusted or estimated with less precision.
+The approach taken involved the following steps:
 
-1. Determine the Range and Distribution of Each Parameter
+First, the model was tested by varying the kon/koff for CaMKII opening and closing, keeping the Kd constant. The rates were altered by factors of 0.1, 1, and 10, with all other reactions held constant.
 
-- For each parameter, define a plausible range and, if possible, an assumed distribution (e.g., normal, uniform, etc.).
-- These ranges should reflect the uncertainty or variability you expect in each parameter.
-
-1. Sensitivity Analysis Method
-
-- One-At-A-Time (OAT): Vary one parameter while keeping others constant. This helps assess individual parameter impact.
+Once the factor of 1 was selected, runs were performed to change the koff for CaMKII binding to NMDARs. This was the most uncertain parameter, as although a kon was identified (albeit for NR1, not NR2B), no koff had been proposed. The koff value was varied to observe the effect of changing the Kd. Ultimately, a Kd value of approximately 1e-7 was found to match the expected range, and this value was subsequently used in the model.
 
 ## Sanity checks:
 As part of the validation process, sanity checks were implemented to ensure that the model behaved in a biologically reasonable manner across a wide range of conditions. These checks primary aim was to ensure that the model adhered to known biochemical constraints and reaction rules.
