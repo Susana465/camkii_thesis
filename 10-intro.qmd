@@ -1,13 +1,34 @@
 ---
 bibliography: [references.bib]
 number-sections: true
+number-offset: 0
 ---
 
-# Introduction
+# Introduction {.unnumbered}
 
-This research aims to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. The overarching objective is to develop and refine these models to enhance our understanding of synaptic plasticity and memory formation. To achieve this, the research is structured around specific aims, including the development of computational models, parameter exploration, and the study of CaMKII/NMDAR interactions in both functional and pathological contexts. Additionally, this work emphasizes the importance of FAIR (Findable, Accessible, Interoperable, and Reproducible) principles to ensure transparency and reproducibility. Finally, the ethical considerations of this research are evaluated using the Data Hazards framework, contributing to a broader discussion on responsible computational and biological research.
+This thesis integrates molecular neuroscience, computational modelling, and research ethics into a an interdisciplinary PhD project. As such, the structure of this thesis reflects its multifaceted aims: to deepen understanding of the molecular basis of learning and memory, to advance how such systems can be computationally modelled, and to question the ethical responsibilities of this work.
 
-## Research objectives of this PhD:
+This introductory chapter outlines the rationale, methodology, and contributions of each subsequent chapter, showing how they interweave to support the overarching thesis argument: that rigorous, ethical, and reproducible computational models can serve as powerful tools in molecular neuroscience, offering both scientific insight and a blueprint for responsible research practice.
+
+##### Chapter 1 {.unnumbered}
+In this chapter, I introduce the biological foundations of this project. I outline the mechanisms of Long-Term Potentiation (LTP), focusing on how CaMKII and NMDARs are involved, and why and how they are important. I also explore the detailed molecular interactions between these two key molecules in the context of LTP, covering what is currently known and what remains unknown. This chapter sets the scene for the biological mechanisms that will be studied throughout the thesis.
+
+##### Chapter 2 {.unnumbered}
+
+##### Chapter 3 {.unnumbered}
+
+##### Chapter 4 {.unnumbered}
+
+##### Chapter 5 {.unnumbered}
+
+##### Chapter 6 {.unnumbered}
+
+##### Chapter 7 {.unnumbered}
+
+##### Chapter 8 {.unnumbered}
+
+
+## Research objectives of this PhD: {.unnumbered}
 The overarching objective of this PhD research is to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. To achieve this, the research is structured around the following specific aims:
 
 **Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.
