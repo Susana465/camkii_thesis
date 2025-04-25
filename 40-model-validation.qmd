@@ -77,27 +77,70 @@ First, the model was tested by varying the kon/koff for CaMKII opening and closi
 Once the factor of 1 was selected, runs were performed to change the koff for CaMKII binding to NMDARs. This was the most uncertain parameter, as although a kon was identified (albeit for NR1, not NR2B), no koff had been proposed. The koff value was varied to observe the effect of changing the Kd. Ultimately, a Kd value of approximately 1e-7 was found to match the expected range, and this value was subsequently used in the model.
 
 ## Sanity checks:
+As part of the model validation process, a series of sanity checks were implemented to ensure the system behaved in accordance with known biochemical rules and structural constraints. These checks primarily aimed to verify that the model did not produce molecular species that are biologically implausible or explicitly forbidden by the reaction rules defined in the system.
+
+Sanity checks were performed by recording observables in the BioNetGen Language (BNGL) model file. These observables are explicitly commented with justifications within the code itself and are structured to align with the logic and reaction rules outlined in @fig-tbl-1. The purpose of these observables is to serve as logical safeguards: if any of them yield a nonzero value during simulation, it indicates a breach of the model’s core assumptions or rule constraints. 
+
+All sanity check observables listed above were expected to yield zero values, and did so consistently in simulation results. This confirms that the implemented reaction rules correctly prohibit the formation of biologically impossible species. These results are consistent and replicable; if the model is executed under the same rules and initial conditions, these observables are expected to remain zero in any future runs.
+
+Below is a list of observables defined for sanity checks, along with a description of the corresponding molecular species, and an explanation of why their expected output should be zero under biologically valid conditions.
+
+#### CaMKII_CaM_Ca4_PP
+- Description: CaMKII bound to CaM (saturated with four Ca²⁺ ions), phosphorylated at both T286 and T306.
+- Expected Output: 0
+- Rationale: CaM binding and T306 phosphorylation are mutually exclusive. T306 lies within the CaM-binding domain of CaMKII, and its phosphorylation prevents CaM association. Thus, the coexistence of CaM and T306 phosphorylation is structurally impossible.
+
+#### CaMKII_CaM_Ca4_T306P1
+- Description: CaMKII bound to Ca⁴⁺-CaM, phosphorylated at T306 only.
+- Expected Output: 0
+- Rationale: Similar to the case above, T306 phosphorylation sterically blocks CaM binding. Therefore, this species cannot exist under correct model logic.
+
+#### CaMKII_CaM_closed
+- Description: CaMKII bound to CaM_Ca4 while in a closed conformation.
+Expected Output: 0
+Rationale: CaM binding induces a conformational opening of CaMKII. Thus, the closed state is incompatible with CaM-bound configurations.
+
+#### CaMKII_CaM_unbound_closed_T286P1
+- Description:  CaMKII phosphorylated at T286, unbound to CaM, and in a closed state.
+- Expected Output: 0
+- Rationale: Phosphorylation at T286 stabilizes the open conformation of CaMKII. Once phosphorylated at T286, the subunit is expected to remain open and cannot revert to the closed conformation.
+
+#### CaMKII_closed_complex
+- Description: CaMKII subunit is closed and bound to NMDAR forming NMDAR/CaMKII complex.
+- Expected Output: 0
+- Rationale: CaMKII can only bind to NMDARs if open and will remain open once bound, so none can be closed when bound in the NMDAR/CaMKII complex. 
+
+
+Beyond molecular states which were expected to yield a value of zero, other sanity checks focused on conservation rules and population consistency. For example, if a simulation starts with 100 CaMKII subunits and 50% are phosphorylated at T286, the remaining 50% should be in unphosphorylated. Any deviation from this expected balance may indicate erroneous reaction pathways or state duplications. These sanity checks were observed during simulation results and cross-validated with the total molecule counts to ensure system integrity, as we will explore in @sec-results.
+
+--
 As part of the validation process, sanity checks were implemented to ensure that the model behaved in a biologically reasonable manner across a wide range of conditions. These checks primary aim was to ensure that the model adhered to known biochemical constraints and reaction rules.
 
 The sanity checks looked like looking for molecules that we know are not "allowed" to happen in the model according to the set reaction rules. 
 
 The sanity checks were focused on ensuring that molecules which could not exist due to reaction constraints and biological principles, were not produced by the model. For instance, certain molecules, like cam_camkii_t306p, were expected to have a concentration of zero, or in other words, to not exist in the model, as the T306 phosphorylation site on CaMKII cannot be phosphorylated when the CAMKII subunit is bound to calmodulin.
 
-- say that this is done through recording of observables in bngl file? and are commented with exact reasonings in the file itself too.
+say that this is done through recording of observables in bngl file? and are commented with exact reasonings in the file itself too. these are all observables that are for sanity checks and make sense whn looking at @fig-tbl-1 logic of rules. 
 
-- CaMKII_CaM_Ca4_PP
-- CaMKII_CaM_Ca4_T306P1
-- CaMKII_CaM_closed
+- CaMKII_CaM_Ca4_PP, which means camkii is bound to cam and phosphorylated at both t286 and t306. should be zero, as camkii subunit cant be phosphorylated at t306 and be bound to cam
+- CaMKII_CaM_Ca4_T306P1, same reason as above, cam and t306 cannot coexist.
+- CaMKII_CaM_closed, when camkii is bound to cam, camkii cannot close, so this observable should be zero. 
 - CaMKII_CaM_unbound_closed_T286P1
 - CaMKII_closed_complex 
 - CaMKII_CaM_Ca4_PP_bound_NMDAR 
 - CaMKII_CaM_Ca4_T306P1_bound_NMDAR
 
+all these molecules were checked and are added in the code for observables. 
+
 there are others that i havent done, how do i argue why yes or why not? 
 
-this figure is a sanity test prob go in appendix ? ![alt text](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png)
+then there are other types of sanity checks, like for example if there are 100 molecules of camkii, and 50% of them are phosphorylated, then the rest should be unphosohorylated. we see some of these in the results. 
+
+![alt text](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png)
 
 ## Reproducibility and model robustness
 _Write about the different ways in which CaMKII is instantiated in different runs._
 
 ## specs and reproducibility
+
+the model is run with x y files and theese is where everything is. 

@@ -17,7 +17,7 @@ More recently, @bartol2024Spatial have published a study using the same version 
 Each of these models represents a step towards the development of the present study, which advances the field by explicitly modelling CaMKII as a dodecamer that directly interacts with NMDARs on the surface of the postsynaptic dendrite.
 
 ## Model Description
-In this model, CaMKII is represented as a dodecamer using BioNetGen [@sec-camkii-as-dodecamer]. The model simulates its diffusion over time and space within a postsynaptic density (PSD) volume. Other molecules involved in the system include calcium, CaM, and protein phosphatase 1 (PP1), and NMDARs. The following sections provide a detailed breakdown of how these reactions are modelled, highlighting their biological relevance.
+In this model, CaMKII is represented as a dodecamer using BioNetGen [@sec-camkii-as-dodecamer]. The model simulates its diffusion over time and space within a postsynaptic density (PSD) volume. Other molecules involved in the system include calcium, CaM, and protein phosphatase 1 (PP1), and NMDARs. The following sections provide a detailed breakdown of how these reactions are modelled, highlighting their biological relevance. 
 
 ### Molecule concentrations, localization and cell volume
 All molecules (except NMDARs which are surface molecules) are released from inside the cell to interact with each other. Molecules are released as discrete molecule numbers. Concentrations can be calculated as shown below in @eq-molec-concentrations-calc, where we begin with the number of molecules $N$ and convert it to moles using Avogadro's number $N_A$. Next, we account for the volume in cubic micrometers, represented as $V \, (\mu \text{m}^3)$. This equation gives us concentration in Molar.
@@ -57,7 +57,10 @@ As molecules diffuse within the simulation volume, all molecules within a specif
 
 
 ### Modelling CaMKII as a dodecamer {#sec-camkii-as-dodecamer}
-In the model at hand, the individual subunits are specified in BNGL as follows: `CaMKII(open~0~1,T286~0~P,T306~0~P,cam,nmdar,l,r,c)` The components l, r, and c represent binding sites within the holoenzyme: l is a binding site on the left of the subunit, r on the right, and c is the central site interacting with an opposing subunit in the six-membered ring (@fig-camkii-dodecamer). In BNGL syntax, interactions between components are represented by a period, with a “!” (bang) followed by a number to denote specific binding. For example, a bond between the right side of one subunit and the left side of another is written as shown in @fig-camkii-dodecamer (B). The “!” is followed by any number, provided the two binding components share the same number.
+In the model at hand, the individual subunits are specified in BNGL as follows: 
+`CaMKII(open~0~1,T286~0~P,T306~0~P,cam,nmdar,l,r,c)`
+
+The components l, r, and c represent binding sites within the holoenzyme: l is a binding site on the left of the subunit, r on the right, and c is the central site interacting with an opposing subunit in the six-membered ring (@fig-camkii-dodecamer). In BNGL syntax, interactions between components are represented by a period, with a “!” (bang) followed by a number to denote specific binding. For example, a bond between the right side of one subunit and the left side of another is written as shown in @fig-camkii-dodecamer (B). The “!” is followed by any number, provided the two binding components share the same number.
 
 Modelling CaMKII as a dodecamer using BNGL enables the representation of the molecule as multimeric, with each subunit able to adopt the following possible states:
 

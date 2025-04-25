@@ -20,10 +20,13 @@ In this chapter, I explain why I use computational modelling to investigate the 
 This chapter introduces the importance of open and ethical research practices. I discuss why these considerations matter in scientific research and provide a personal account of the steps I have taken to make this project more reproducible and ethically responsible.
 
 ##### Chapter 4 {.unnumbered}
+This chapter presents a detailed case study on ethical reflection within this project, using the Data Hazards framework. I explore how this framework can be used to identify and address ethical risks associated with computational modelling, including environmental impact, misuse, and bias. I reflect on the application of Data Hazards to this research and the practical steps taken to mitigate potential risks.
 
 ##### Chapter 5 {.unnumbered}
+This chapter describes the computational model developed for this PhD, focusing on CaMKII, NMDARs, and their associated signalling molecules. I begin with a review of relevant prior work, followed by a detailed description of the model. This includes the molecular concentrations, spatial considerations, reaction rules, and kinetic parameters. Special attention is given to modelling CaMKII as a dodecamer and simulating its interactions with NMDARs, as well as processes such as calcium binding, conformational states, and phosphorylation dynamics.
 
 ##### Chapter 6 {.unnumbered}
+Here, I discuss the validation of the computational model. The chapter covers how biological plausibility is assessed, how the model was incrementally built and validated at each step, and how uncertainty in parameters was explored. I also present the results of various sanity checks and reproducibility tests, emphasizing the robustness of the model and detailing the specification practices used to ensure transparency and reusability.
 
 ##### Chapter 7 {.unnumbered}
 
