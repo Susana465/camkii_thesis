@@ -8,16 +8,19 @@ In order to validate the model, I did five main things:
 4 -> Kinetic parameters used in the model's reactions were sourced from the literature or inferred from experimental data where available. In cases of uncertainty, parameter exploration was conducted to assess how kinetic rates impact model behaviour (see @sec-SA).
 
 ## Biological Plausibility
-While care was taken to compare model outputs with known biological processes described in the literature and supported by experimental data, this type of comparison is inherently complex. Different models capture different aspects of biological systems, and even subtle variations in assumptions or parameter choices can lead to divergent behaviours.
+While care was taken to compare model outputs with known biological processes described in the literature and supported by experimental data, this type of comparison is inherently complex. Different models capture different aspects of biological systems, and even subtle variations in assumptions or parameter choices can lead to divergent behaviours. As such, the evaluation of biological plausibility should be interpreted with caution; it provides useful insight, but not definitive validation. The process of matching simulated outputs—such as concentration profiles and reaction kinetics—to literature values is valuable, yet inherently limited by the variability and uncertainty present in both modelling and experimental data.
 
-As such, the evaluation of biological plausibility should be interpreted with caution; it provides useful insight, but not definitive validation. The process of matching simulated outputs—such as concentration profiles and reaction kinetics—to literature values is valuable, yet inherently limited by the variability and uncertainty present in both modelling and experimental data.
+The model simulates cytoplasmic molecular reactions within the geometry of a postsynaptic dendritic spine with a volume of 0.50588 $\mu\text{m}^3$. This volume matches the value used by @ordyan2020Interactions in their model of CaMKII in the postsynaptic density and falls within the physiological range of 0.004–0.6 $\mu\text{m}^3$ reported for hippocampal CA1 neurons (Harris et al., 1989). Tonnesen et al. (2018) reported a median spine volume of 0.1 $\mu\text{m}^3$, with some spines reaching up to 0.5 $\mu\text{m}^3$, supporting the plausibility of the volume chosen.
 
-### Model Geometry and Concentrations
-The model simulates cytoplasmic molecular reactions within the geometry of a postsynaptic dendritic spine with a volume of 0.50588 $\mu\text{m}^3$.  This volume matches the value used by @ordyan2020Interactions in their model of CaMKII in the postsynaptic density and falls within the physiological range of 0.004–0.6 $\mu\text{m}^3$reported for hippocampal CA1 neurons (Harris et al., 1989). Tonnesen et al. (2018) reported a median spine volume of 0.1 $\mu\text{m}^3$, with some spines reaching up to 0.5 $\mu\text{m}^3$, supporting the plausibility of the volume chosen.
+The molecular concentrations used are also within biologically plausible ranges. For example, the initial release of 1000 $\mathrm{Ca^{2+}}$ ions corresponds to a concentration of 3.28 $\mu\text{M}$. Fluorescent $\mathrm{Ca^{2+}}$ indicator studies show resting intracellular $\mathrm{Ca^{2+}}$ concentrations between 0.05–0.1 $\mu\text{M}$, with increases up to 100-fold during stimulation (Grienberger et al., 2012; Maravall et al., 2000). Therefore, the calcium concentrations used are consistent with simulated neuronal activation.
 
-The molecular concentrations used are also within biologically plausible ranges. For example, the initial release of 1000 Ca²⁺ ions corresponds to a concentration of 3.28 μM. Fluorescent $\mathrm{Ca^{2+}}$ indicator studies show resting intracellular $\mathrm{Ca^{2+}}$ concentrations between 0.05–0.1 $\mu\text{M}$, with increases up to 100-fold during stimulation (Grienberger et al., 2012; Maravall et al., 2000). Therefore, the calcium concentrations used are consistent with simulated neuronal activation.
+other things binding to calcium. calcium influx more like an action potential. synaptic input would be utliple calcium inputs. calcium uncaging 
 
-Similarly, CaM concentrations reported in the literature range from 0.1 to 8 $\mu\text{M}$, with some reports suggesting levels up to 250 $\mu\text{M}$. The model uses a concentration of 0.98 μM, which is within this range. Experimental estimates place CaMKII concentrations in dendritic spines around 5 μM, with NMDAR concentrations reported at approximately 0.17 μM (Lisman et al., 2012; Petralia et al., 2009), yielding a literature-based ratio of roughly 29:1. In the current model, CaMKII is present at 2.36 $\mu\text{M}$, and NMDARs at 0.099 $\mu\text{M}$, giving a model ratio of about 24:1. This close correspondence demonstrates that the functional relationship between CaMKII and NMDARs is preserved, even if the absolute concentrations are slightly reduced. PP1 concentrations in neurons are typically reported between 1 μM and 10 μM (Cohen, 2002), with CaMKII concentrations around 5 $\mu\text{M}$, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 $\mu\text{M}$, and CaMKII at 2.36 $\mu\text{M}$, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.
+Similarly, CaM concentrations reported in the literature range from 0.1 to 8 $\mu\text{M}$, with some reports suggesting levels up to 250 $\mu\text{M}$ [REFERENCE]. The model uses a concentration of 0.98 μM, which is within this range. Experimental estimates place CaMKII concentrations [REFERENCE CHECK HOLONENZYME OR SUBUNITS] in dendritic spines around 5 μM, with NMDAR concentrations reported at approximately 0.17 μM (Lisman et al., 2012; Petralia et al., 2009), yielding a literature-based ratio of roughly 29:1. 
+
+RATIO I USE OF CAMKII/NMDAR is same ratio as bartol et al., 
+
+In the current model, CaMKII SUBUNITS is present at 2.36 $\mu\text{M}$, and NMDARs at 0.099 $\mu\text{M}$, giving a model ratio of about 24:1. This close correspondence demonstrates that the functional relationship between CaMKII and NMDARs is preserved, even if the absolute concentrations are slightly reduced. PP1 concentrations in neurons are typically reported between 1 μM and 10 μM (Cohen, 2002), with CaMKII concentrations around 5 $\mu\text{M}$, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 $\mu\text{M}$, and CaMKII at 2.36 $\mu\text{M}$, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.
 
 These values are on the lower end of the reported ranges but remain within an order of magnitude of typical experimental data. This margin is reasonable, particularly given the experimental variability and the fact that many biological responses are robust to moderate concentration differences [REFERENCE]. Additionally, the relative abundance of these molecules is often more important than their absolute concentrations, as it governs the signaling dynamics. The values used in this model were taken from other computational models that have been validated against experimental biological data, ensuring that the concentrations are within the expected range based on observed physiological conditions. 
 
@@ -26,36 +29,89 @@ These values are consistent with those found in the literature and previous mode
 ## Incremental Construction and Stepwise Validation
 In order to validate model behaviour, each reaction rule was added one at a time and tested to see if it produced biologically relevant results. Reactions or sets of reactions were introduced sequentially and tested independently. Structuring the model this way made it possible to validate individual components before integrating them into the full system.
 
-For example, the model was first tested by incorporating the calcium binding to calmodulin (CaM) reactions. These were validated by comparing the outputs to those of a previously published and experimentally validated model [REFERENCE]. Once consistent behavior was observed, the next layer—CaM binding to CaMKII—was added and validated in a similar manner. Finally, interactions between CaMKII and NMDARs were introduced and tested.
+For example, the model was first tested by incorporating the calcium binding to calmodulin (CaM) reactions. These were validated by comparing the outputs to those of a previously published and experimentally validated model [REFERENCE]. Once consistent behavior was observed, the next layer—CaM binding to CaMKII—was added and validated in a similar manner. Finally, interactions between CaMKII and NMDARs were introduced and tested. While a detailed account of each individual rule implementation is not provided here for the sake of conciseness, a summary of the key reaction layers and their expected outputs is presented in @tbl-model-predictions. Each row links an expected biological behaviour to its underlying model rule(s), along with an indication of whether the behaviour was observed in simulation results. These outputs not only confirm that the system produces plausible results at each stage but also serve as checkpoints for model development.
 
-By using previously validated models as benchmarks at each stage, confidence in the biological accuracy of the newly constructed system was enhanced. This approach also ensured that complex interactions were introduced gradually, minimizing the risk of errors and improving the interpretability of the simulation results. While a detailed, step-by-step account of each reaction is not provided here for the sake of clarity and conciseness, a summary of the model reactions and the expected confirmed outputs can be found in the table below.
+The table below relates to @fig-tbl-1; where there are expected behaviours resulting from addition of coded reactions. 
 
-Note that not all steps are shown here—for instance, I initially tested CaMKII as a hexamer before constructing the full dodecamer to ensure the functionality of the multistate molecule. This was a critical step, but the results of these intermediate tests are not included, as they were part of the model-building process. Additionally, I conducted tests before adding NMDARs, which were modeled as surface molecules and required specialized testing. Once this testing was completed, I confirmed the interaction between CaMKII and NMDARs.
 
 |Expected Result| Associated Reaction Rules | Observed in Models |
 |-----------------|---------------------------------|-----------------------------|
 |
-$\mathrm{Ca^{2+}}$ binds to CaM in a stepwise manner, with higher affinity for forming CaM\_Ca3 and CaM\_Ca4 states [REFERENCE]. | Rules #1 – #4 (@fig-tbl-1)| Yes, see @fig-calcium-binding
+CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding [REFERENCE]. | Rules  (@fig-tbl-1)| Yes, see @fig-calcium-binding
 |
-CaMKII subunits flicker between open and closed and are stabilised in open conformation by T286 phosphorylation, CaM binding and/or NMDAR binding. | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see |
+CaMKII autophosphorylation at T286 is promoted once CaMKII is bound to NMDARs [REFERENCE].  | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see |
 |
-CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation [REFERENCE]. | Rule #6 |  Yes, see |
+CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation [REFERENCE]. | Rule #6 (@fig-tbl-1) |  Yes, see |
 |
-Open CaMKII binds to NMDARs, anchoring the kinase at the membrane  [REFERENCE].| Rule #12  | Yes, see |
+Open CaMKII binds to NMDARs, anchoring the kinase at the membrane  [REFERENCE].| Rule #12 (@fig-tbl-1) | Yes, see |
 |
-CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding [REFERENCE].| Rule #8 | Yes, see | 
+CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding [REFERENCE].| Rule #8 (@fig-tbl-1)| Yes, see | 
 |
-CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation [REFERENCE]. | Rules #8, #9 | Yes, see |
+CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation [REFERENCE]. | Rules #8, #9 (@fig-tbl-1)| Yes, see |
 |
-CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation [REFERENCE]. | Rules #5, #10 | Yes, see |
+CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation [REFERENCE]. | Rules #5, #10 (@fig-tbl-1)| Yes, see |
 |
-PP1 dephosphorylates CaMKII at T286 and T306, reversing its activation and enabling cycling between open and closed states. [REFERENCE]. | Rules #10, #11 | Unclear, see |
+PP1 dephosphorylates CaMKII at T286 and T306, reversing its activation and enabling cycling between open and closed states. [REFERENCE]. | Rules #10, #11 (@fig-tbl-1)| Unclear, see |
 
-: Summary of Model Predictions and Results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
+: Summary of model predictions and  expected results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
+
+## Sanity checks:
+As part of the model validation process, a series of sanity checks were implemented to ensure the system behaved in accordance with known biochemical rules and structural constraints. These checks primarily aimed to verify that the model did not produce molecular species that are biologically implausible or explicitly forbidden by the reaction rules defined in the system.
+
+Sanity checks were performed by recording observables in the BioNetGen Language (BNGL) model file. These observables are explicitly commented with justifications within the code itself and are structured to align with the logic and reaction rules outlined in @fig-tbl-1. The purpose of these observables is to serve as logical safeguards: if any of them yield a nonzero value during simulation, it indicates a breach of the model’s core assumptions or rule constraints. 
+
+All sanity check observables listed above were expected to yield zero values, and did so consistently in simulation results. This confirms that the implemented reaction rules correctly prohibit the formation of biologically impossible species. These results are consistent and replicable; if the model is executed under the same rules and initial conditions, these observables are expected to remain zero in any future runs.
+
+Below is a list of observables defined for sanity checks, along with a description of the corresponding molecular species, and an explanation of why their expected output should be zero under biologically valid conditions.
+
+#### CaMKII_CaM_Ca4_PP {.unnumbered}
+- Description: CaMKII bound to CaM (saturated with four Ca²⁺ ions), phosphorylated at both T286 and T306.
+- Expected Output: 0
+- Rationale: CaM binding and T306 phosphorylation are mutually exclusive. T306 lies within the CaM-binding domain of CaMKII, and its phosphorylation prevents CaM association. Thus, the coexistence of CaM and T306 phosphorylation is structurally impossible.
+
+#### CaMKII_CaM_Ca4_T306P1 {.unnumbered}
+- Description: CaMKII bound to Ca⁴⁺-CaM, phosphorylated at T306 only.
+- Expected Output: 0
+- Rationale: Similar to the case above, T306 phosphorylation sterically blocks CaM binding. Therefore, this species cannot exist under correct model logic.
+
+#### CaMKII_CaM_closed {.unnumbered}
+- Description: CaMKII bound to CaM_Ca4 while in a closed conformation.
+- Expected Output: 0
+- Rationale: CaM binding induces a conformational opening of CaMKII. Thus, the closed state is incompatible with CaM-bound configurations.
+
+#### CaMKII_CaM_unbound_closed_T286P1 {.unnumbered}
+- Description:  CaMKII phosphorylated at T286, unbound to CaM, and in a closed state.
+- Expected Output: 0
+- Rationale: Phosphorylation at T286 stabilizes the open conformation of CaMKII. Once phosphorylated at T286, the subunit is expected to remain open and cannot revert to the closed conformation.
+
+#### CaMKII_closed_complex {.unnumbered}
+- Description: CaMKII subunit is closed and bound to NMDAR forming NMDAR/CaMKII complex.
+- Expected Output: 0
+- Rationale: CaMKII can only bind to NMDARs if open and will remain open once bound, so none can be closed when bound in the NMDAR/CaMKII complex. 
+
+Beyond molecular states which were expected to yield a value of zero, other sanity checks focused on conservation rules and population consistency. For example, if a simulation starts with 100 CaMKII subunits and 50% are phosphorylated at T286, the remaining 50% should be in unphosphorylated. Any deviation from this expected balance may indicate erroneous reaction pathways or state duplications. These sanity checks were observed during simulation results and cross-validated with the total molecule counts to ensure system integrity, as we will explore in @sec-results.
+
+## Qualitative Checks
+In addition to direct rule-by-rule validation and formal sanity checks, qualitative checks were carried out to assess whether the model was capable of producing emergent behaviours consistent with known biological expectations—despite these behaviours not being explicitly hardcoded. These behaviours arise not from isolated reactions, but from the interaction and timing of multiple rules within the network, offering important insight into whether the system captures the complex, context-dependent behaviour observed in vivo.
+
+For instance, phenomena such as the sustained opening of CaMKII following transient calcium signalling are not encoded as fixed outcomes. Instead, they should emerge from the model structure if the underlying mechanisms of encoded rules are implemented correctly. Similarly, the transition from CaM-dependent to CaM-independent anchoring at the NMDAR, are emergent outcomes expected to arise from the model’s rule interactions. The following emergent behaviours were not coded into the rules in @fig-tbl-1, but were expected behaviours to follow what is known in the literature. 
+
+1. **CaMKII phosphorylation at T286 occurs regardless of CaM binding, although phosphorylation is more likely when CaM is present.** This behaviour is not explicitly hardcoded into the model, but is expected as an emergent property of the system. Both CaM binding and T286 phosphorylation stabilise the CaMKII subunit in its open conformation (rules #6 and #8), which increases the likelihood of both events co-occurring. Therefore, while the model does not directly specify this co-occurrence, the chances of T286 phosphorylation are indirectly increased when CaMKII is either already phosphorylated at T286 or bound to CaM, as both conditions promote an open state conducive to phosphorylation.
+
+2. **When phosphorylated at T286, CaMKII binds more readily to NMDARs, independent of the presence of CaM.** This behaviour arises from the fact that T286 phosphorylation stabilises CaMKII in its open conformation, and only open CaMKII can bind to NMDARs. While the model does not explicitly encode a direct link between T286 phosphorylation and NMDAR binding, it encodes the conditions that promote each event separately. As a result, we expect that T286-phosphorylated CaMKII subunits will indirectly bind NMDARs more readily due to their maintained open state.
+
+3. **When CaMKII is maintained in the open state by CaM binding, the kinase binds more readily to NMDARs and remains associated with the NMDAR/CaMKII complex even after CaM dissociates.** Both CaM binding and NMDAR binding stabilise CaMKII in its open conformation. The model allows multiple routes to maintaining this open state, one of them being CaM binding, hence CaM-bound CaMKII may be more likely to interact with NMDARs, and once that interaction occurs, the open conformation can be preserved by NMDAR binding alone.
+
+4. **T306-phosphorylated CaMKII can adopt a closed conformation, which eventually this leads to decreased binding to nmdars.** wedo not code this into the model as a direct conditionconsistent with structural studies suggesting reversion to an "autoinhibited" state following disengagement from activators.
+
+--
+6. **if camkii is t306 p, eventually this leads to decreased binding to nmdars**
+
+4. **Only Open CaMKII binds to NMDARs, anchoring the enzyme at the postsynaptic membrane.** This statement encapsulates 
 
 
+Taken together, these outcomes confirm that the model produces not only direct, rule-driven behaviour, but also a range of higher-order dynamics that reflect the biological system it aims to replicate. This capacity for emergent behaviour strengthens confidence in the model’s predictive utility and mechanistic coherence.
 
-Summary of above table.
 
 ## Exploration of Uncertain Parameters
 As discussed in @sec-intro-comp, computational models can serve as predictive tools to deepen our understanding of the mechanisms underlying observed biochemical processes. However, parameters such as rate constants, activation energies, thermodynamic constants, transport coefficients, etcetera, are rarely known with precision [REFERENCE]. Consequently, predictions are typically subject to uncertainty. That is why understanding how parameter variations influence outcomes is a crucial part of model development and validation.
@@ -76,67 +132,7 @@ First, the model was tested by varying the kon/koff for CaMKII opening and closi
 
 Once the factor of 1 was selected, runs were performed to change the koff for CaMKII binding to NMDARs. This was the most uncertain parameter, as although a kon was identified (albeit for NR1, not NR2B), no koff had been proposed. The koff value was varied to observe the effect of changing the Kd. Ultimately, a Kd value of approximately 1e-7 was found to match the expected range, and this value was subsequently used in the model.
 
-## Sanity checks:
-As part of the model validation process, a series of sanity checks were implemented to ensure the system behaved in accordance with known biochemical rules and structural constraints. These checks primarily aimed to verify that the model did not produce molecular species that are biologically implausible or explicitly forbidden by the reaction rules defined in the system.
-
-Sanity checks were performed by recording observables in the BioNetGen Language (BNGL) model file. These observables are explicitly commented with justifications within the code itself and are structured to align with the logic and reaction rules outlined in @fig-tbl-1. The purpose of these observables is to serve as logical safeguards: if any of them yield a nonzero value during simulation, it indicates a breach of the model’s core assumptions or rule constraints. 
-
-All sanity check observables listed above were expected to yield zero values, and did so consistently in simulation results. This confirms that the implemented reaction rules correctly prohibit the formation of biologically impossible species. These results are consistent and replicable; if the model is executed under the same rules and initial conditions, these observables are expected to remain zero in any future runs.
-
-Below is a list of observables defined for sanity checks, along with a description of the corresponding molecular species, and an explanation of why their expected output should be zero under biologically valid conditions.
-
-#### CaMKII_CaM_Ca4_PP
-- Description: CaMKII bound to CaM (saturated with four Ca²⁺ ions), phosphorylated at both T286 and T306.
-- Expected Output: 0
-- Rationale: CaM binding and T306 phosphorylation are mutually exclusive. T306 lies within the CaM-binding domain of CaMKII, and its phosphorylation prevents CaM association. Thus, the coexistence of CaM and T306 phosphorylation is structurally impossible.
-
-#### CaMKII_CaM_Ca4_T306P1
-- Description: CaMKII bound to Ca⁴⁺-CaM, phosphorylated at T306 only.
-- Expected Output: 0
-- Rationale: Similar to the case above, T306 phosphorylation sterically blocks CaM binding. Therefore, this species cannot exist under correct model logic.
-
-#### CaMKII_CaM_closed
-- Description: CaMKII bound to CaM_Ca4 while in a closed conformation.
-Expected Output: 0
-Rationale: CaM binding induces a conformational opening of CaMKII. Thus, the closed state is incompatible with CaM-bound configurations.
-
-#### CaMKII_CaM_unbound_closed_T286P1
-- Description:  CaMKII phosphorylated at T286, unbound to CaM, and in a closed state.
-- Expected Output: 0
-- Rationale: Phosphorylation at T286 stabilizes the open conformation of CaMKII. Once phosphorylated at T286, the subunit is expected to remain open and cannot revert to the closed conformation.
-
-#### CaMKII_closed_complex
-- Description: CaMKII subunit is closed and bound to NMDAR forming NMDAR/CaMKII complex.
-- Expected Output: 0
-- Rationale: CaMKII can only bind to NMDARs if open and will remain open once bound, so none can be closed when bound in the NMDAR/CaMKII complex. 
-
-
-Beyond molecular states which were expected to yield a value of zero, other sanity checks focused on conservation rules and population consistency. For example, if a simulation starts with 100 CaMKII subunits and 50% are phosphorylated at T286, the remaining 50% should be in unphosphorylated. Any deviation from this expected balance may indicate erroneous reaction pathways or state duplications. These sanity checks were observed during simulation results and cross-validated with the total molecule counts to ensure system integrity, as we will explore in @sec-results.
-
---
-As part of the validation process, sanity checks were implemented to ensure that the model behaved in a biologically reasonable manner across a wide range of conditions. These checks primary aim was to ensure that the model adhered to known biochemical constraints and reaction rules.
-
-The sanity checks looked like looking for molecules that we know are not "allowed" to happen in the model according to the set reaction rules. 
-
-The sanity checks were focused on ensuring that molecules which could not exist due to reaction constraints and biological principles, were not produced by the model. For instance, certain molecules, like cam_camkii_t306p, were expected to have a concentration of zero, or in other words, to not exist in the model, as the T306 phosphorylation site on CaMKII cannot be phosphorylated when the CAMKII subunit is bound to calmodulin.
-
-say that this is done through recording of observables in bngl file? and are commented with exact reasonings in the file itself too. these are all observables that are for sanity checks and make sense whn looking at @fig-tbl-1 logic of rules. 
-
-- CaMKII_CaM_Ca4_PP, which means camkii is bound to cam and phosphorylated at both t286 and t306. should be zero, as camkii subunit cant be phosphorylated at t306 and be bound to cam
-- CaMKII_CaM_Ca4_T306P1, same reason as above, cam and t306 cannot coexist.
-- CaMKII_CaM_closed, when camkii is bound to cam, camkii cannot close, so this observable should be zero. 
-- CaMKII_CaM_unbound_closed_T286P1
-- CaMKII_closed_complex 
-- CaMKII_CaM_Ca4_PP_bound_NMDAR 
-- CaMKII_CaM_Ca4_T306P1_bound_NMDAR
-
-all these molecules were checked and are added in the code for observables. 
-
-there are others that i havent done, how do i argue why yes or why not? 
-
-then there are other types of sanity checks, like for example if there are 100 molecules of camkii, and 50% of them are phosphorylated, then the rest should be unphosohorylated. we see some of these in the results. 
-
-![alt text](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png)
+![](validation-figures\all_variables_plot.png)
 
 ## Reproducibility and model robustness
 _Write about the different ways in which CaMKII is instantiated in different runs._

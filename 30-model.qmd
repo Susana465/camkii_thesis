@@ -51,10 +51,9 @@ CaMKII is modelled as a dodecameric molecule, which is biologically accurate. Th
 ### Reaction rules and kinetic rates
 In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() <-> CaM(ca~1,camkii)” represents the binding of a single calcium ion to CaM that is not bound to CaMKII (see reaction #1 in @fig-tbl-1). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at each time step for unimolecular transformations. 
 
-As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. For example, when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1 can continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well. During runtime, a random seed number generator is initialized with a seed number for each simulation. This generator selects a sequence of random numbers that determines the probabilities of transformations throughout the simulation. To gain a deeper understanding of the reactions, they are described in detail below.
+As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. For example, when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1 can continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well. 
 
 ![Table of reactions. dont care dont write of rule based modelling. mention these reacgtions are done in bionetgen and rule based mdoelling sooner in introduction](30-methods-figures\table_rxns1.PNG){#fig-tbl-1 fig-pos='H'}
-
 
 ### Modelling CaMKII as a dodecamer {#sec-camkii-as-dodecamer}
 In the model at hand, the individual subunits are specified in BNGL as follows: 
