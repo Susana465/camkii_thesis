@@ -246,6 +246,8 @@ we dont model this, but could be an emergent behaviour?
 Importantly, the CaMKII/GluN2B complex was also shown to endure for hours even after dissociation of CaM from the kinase [@barcomb2016CaMKIIa].
 
 discuss why biodynamo not used, the idea at the beginning and how it could be used in the future. 
+
+Because binding of CaMKII to the NMDA receptor is enhanced by CaMKII phosphorylation, the structurally mediated strengthening could be reversed by dephosphorylating CaMKII through the phosphatase-dependent processes (Fig. 4c,d) that are involved in DEPOTENTIATION73. https://www.nature.com/articles/nrn753
 <!--
 # limitations
 need to add a list

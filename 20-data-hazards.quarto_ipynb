@@ -21,7 +21,7 @@
         "\n",
         "The work that ultimately led to the development of the paper “Data Hazards as an Ethical Toolkit for Neuroscience” was preceded by an earlier collaboration with the Data Hazards team. As part of this, I designed a poster for AI UK 2023 that followed the methodology outlined in Method 1 of the  [@romangarcia2023Data]. This poster served as an interactive tool, enabling reflective discussions with conference attendees who were invited to engage by selecting Data Hazard labels they felt were applicable to my PhD project.\n"
       ],
-      "id": "791c903d"
+      "id": "acffb28a"
     },
     {
       "cell_type": "code",
@@ -97,7 +97,7 @@
         "## Conclusion {style=\"display:none\"}\n",
         "This chapter has detailed my journey with the Data Hazards framework, from initial engagement and community-driven activities to the co-authorship of a publication applying the framework within Neuroscience. Through workshops, symposiums, and collaborative writing, I've sought to embed ethical reflection into the core of my research practice. The culmination of these efforts is the paper “Data Hazards as an Ethical Toolkit for Neuroscience”, which not only applies the framework to my PhD research but also proposes Data Hazards to better suit the nuances of ethical discussions and risks in Neuroscience. This work demonstrates how a PhD project such as this one can create space for critical reflection on the potential consequences of scientific research, and contribute to improving research integrity more broadly.\n"
       ],
-      "id": "5acce0b8"
+      "id": "124b7ebf"
     }
   ],
   "metadata": {
