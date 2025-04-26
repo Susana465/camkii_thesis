@@ -217,6 +217,10 @@ NMDAR_CaMKII_MT      WT   0.6222 0.9419  -4.0734  5.3178  False
 
 # Limitations
 
+# discussion of results
+
+. It is also important to understand whether the proposed constitutive enzymatic activity of such subunits leading to T286 phosphorylation is critical for maintaining the CaMKII-NMDAR complex. What is clear is that given the ∼40-fold higher concentration of CaMKII subunits than GluN2B subunits (see sects. 9.2.2 and 13.2),  https://journals.physiology.org/doi/full/10.1152/physrev.00034.2022
+
 
 # Future directions [#sec-future-directions]
 
