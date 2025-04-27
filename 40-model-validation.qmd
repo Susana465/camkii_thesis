@@ -40,7 +40,7 @@ CaMKII subunits can be found to be T306-phosphorylated and in a closed conformat
 |
 PP1 dephosphorylates CaMKII at T286 and T306, reversing its activation and enabling cycling between open and closed states. | Rules #10, #11 (@fig-tbl-1)| Unclear, see |
 
-: Summary of model predictions and expected results. {#tbl-model-predictions .striped tbl-colwidths="[70,15,15]"}
+: Summary of model predictions and expected results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
 
 ## Sanity Checks
 As part of the model validation process, a series of sanity checks were implemented to ensure the system behaved in accordance with known biochemical rules and structural constraints. These checks primarily aimed to verify that the model did not produce molecular species that are biologically implausible or explicitly forbidden by the reaction rules defined in the system.
@@ -125,14 +125,5 @@ The objective was to determine how changes in these parameters affected the mole
 
 ![CaMKII T286 phosphorylation CaMKII binding to CaM was unaffected by changes in $K_D$ by factors of 0.1 and 0.01.](validation-figures\nmdar-varying-kd-camkiit286p.png){#fig-nmdar-varying-kd-camkiit286p fig-pos="H" fig-scap="CaMKII binding to CaM was unaffected by changes in $k_\text{on}$ and $k_\text{off}$"}
 
-###
 
-the model is run with x y files and theese is where everything is. 
-
-- **Reproducible research**: is obtained when same analysis is performed on the same data, to produce the same results.
-
-- **Replicable research**: refers to conducting the same analysis on different datasets, resulting in qualitatively similar outcomes. 
-
-- **Robust research**: entails subjecting the same dataset to different analysis workflows to address the same research question, such as employing distinct pipelines in R and Python. Robustness demonstrates that findings can remain consistent regardless of different methods used for analysis, indicating validity and resilience to various factors like changes in conditions or methods (such as different programming languages).
-
-- **Generalisable research**: refers to findings or conclusions that can be applied beyond the specific context in which they were derived. It indicates that the results are not limited to a particular dataset, methodology, or experimental setup, but instead can be extended to broader populations, situations, or conditions. By combining replicable and robust research, we can obtain more generalisable results.
+how do i conclude this. 
