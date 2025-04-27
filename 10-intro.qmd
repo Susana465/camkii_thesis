@@ -6,7 +6,7 @@ number-offset: 0
 
 # Introduction {.unnumbered}
 
-This thesis integrates molecular neuroscience, computational modelling, and research ethics into a an interdisciplinary PhD project. As such, the structure of this thesis reflects its multifaceted aims: to deepen understanding of the molecular basis of learning and memory, to advance how such systems can be computationally modelled, and to question the ethical responsibilities of this work.
+This thesis integrates molecular neuroscience, computational modelling, and research ethics into an interdisciplinary PhD project. As such, the structure of this thesis reflects its multifaceted aims: to deepen understanding of the molecular basis of learning and memory, to advance how such systems can be computationally modelled, and to question the ethical responsibilities of this work.
 
 This introductory chapter outlines the rationale, methodology, and contributions of each subsequent chapter, showing how they interweave to support the overarching thesis argument: that rigorous, ethical, and reproducible computational models can serve as powerful tools in molecular neuroscience, offering both scientific insight and a blueprint for responsible research practice.
 
@@ -20,7 +20,7 @@ In this chapter, I explain why I use computational modelling to investigate the 
 This chapter introduces the importance of open and ethical research practices. I discuss why these considerations matter in scientific research and provide a personal account of the steps I have taken to make this project more reproducible and ethically responsible.
 
 ##### Chapter 4 {.unnumbered}
-This chapter presents a detailed case study on ethical reflection within this project, using the Data Hazards framework. I explore how this framework can be used to identify and address ethical risks associated with computational modelling, including environmental impact, misuse, and bias. I reflect on the application of Data Hazards to this research and the practical steps taken to mitigate potential risks.
+This chapter presents a detailed case study on ethical reflection within this project, using the Data Hazards framework. I present a published paper were the co-authors and I explore how this framework can be used to identify and address ethical risks associated with computational modelling, and use my PhD as a case study to apply Data Hazard labels. I reflect on the application of Data Hazards to this research and the practical steps taken to mitigate potential risks.
 
 ##### Chapter 5 {.unnumbered}
 This chapter describes the computational model developed for this PhD, focusing on CaMKII, NMDARs, and their associated signalling molecules. I begin with a review of relevant prior work, followed by a detailed description of the model. This includes the molecular concentrations, spatial considerations, reaction rules, and kinetic parameters. Special attention is given to modelling CaMKII as a dodecamer and simulating its interactions with NMDARs, as well as processes such as calcium binding, conformational states, and phosphorylation dynamics.
@@ -29,26 +29,24 @@ This chapter describes the computational model developed for this PhD, focusing 
 Here, I discuss the validation of the computational model. The chapter covers how biological plausibility is assessed, how the model was incrementally built and validated at each step, and how uncertainty in parameters was explored. I also present the results of various sanity checks and reproducibility tests, emphasizing the robustness of the model and detailing the specification practices used to ensure transparency and reusability.
 
 ##### Chapter 7 {.unnumbered}
+This chapter presents and discusses the results generated from the computational models. I first introduce findings from the wild-type model, including calcium signalling, CaMKII activation, phosphorylation patterns, and interactions with NMDARs. I then explore mutant models, specifically those affecting T286 phosphorylation and CaMKII/NMDAR binding. The results are interpreted in relation to existing literature, and unexpected findings are highlighted and examined.
 
 ##### Chapter 8 {.unnumbered}
 
+
+##### Chapter 9 {.unnumbered}
 
 ## Research objectives of this PhD: {.unnumbered}
 The overarching objective of this PhD research is to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. To achieve this, the research is structured around the following specific aims:
 
 **Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.
 
-**Aim 2.** Perform parameter sweeps for reaction rates that have not been measured experimentally. This allows mapping the model's response to parameter changes and determining plausible ranges of the unknown parameters.
+**Aim 2.** Throughout the model development process, ensure that the computational models follow FAIR (Findable, Accessible, Interoperable, and Reproducible) principles, promoting transparency and reproducibility. 
 
-**Aim 3.** Throughout the model development process, ensure that the computational models follow FAIR (Findable, Accessible, Interoperable, and Reproducible) principles, promoting transparency and reproducibility. 
+**Aim 3.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
 
-**Aim 4.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
+**Aim 4.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an _in silico_ mutation model where CaMKII-NMDAR interaction is disrupted. 
 
-**Aim 5.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an _in silico_ mutation model where CaMKII-NMDAR interaction is disrupted. 
+**Aim 5.** Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an _in silico_ mutation model where CaMKII cannot be phosphorylated at key functional residues.  
 
-**Aim 6.** Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an _in silico_ mutation model where CaMKII cannot be phosphorylated at key functional residues.  
-
-**Aim 7.** Evaluate the ethical considerations of this research using the Data Hazards framework, a community-driven interdisciplinary vocabulary for assessing ethical risks in computational and biological research. 
-
-
-- Chapters layout
+**Aim 6.** Evaluate the ethical considerations of this research using the Data Hazards framework, a community-driven interdisciplinary vocabulary for assessing ethical risks in computational and biological research. 

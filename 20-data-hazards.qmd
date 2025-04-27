@@ -76,6 +76,6 @@ I am deeply grateful to all co-authors for their collaborative spirit, critical 
 \restoregeometry
 
 
-## Conclusion {style="display:none"}
+## Conclusion {.unnumbered}
 This chapter has detailed my journey with the Data Hazards framework, from initial engagement and community-driven activities to the co-authorship of a publication applying the framework within Neuroscience. Through workshops, symposiums, and collaborative writing, I've sought to embed ethical reflection into the core of my research practice. The culmination of these efforts is the paper “Data Hazards as an Ethical Toolkit for Neuroscience”, which not only applies the framework to my PhD research but also proposes Data Hazards to better suit the nuances of ethical discussions and risks in Neuroscience. This work demonstrates how a PhD project such as this one can create space for critical reflection on the potential consequences of scientific research, and contribute to improving research integrity more broadly.
 
