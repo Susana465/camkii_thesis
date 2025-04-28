@@ -19,6 +19,10 @@ Figure 7.2c dissects the T286-phosphorylated CaMKII subunits that are bound to N
 
 To further dissect the molecular events underlying these dynamics, the following sections will explore a representative simulation run in detail, focusing on the specific behaviours of CaMKII subunits in relation to NMDAR and CaM binding, and T286 phosphorylation.
 
+which figure is best? separated or all in one?
+
+![Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)](40-results-figures\WT\wt-redo.png){#fig-all-means-WT fig-scap="Final value means of total molecule counts"}
+
 ::: {.landscape}
 
 ![Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)](40-results-figures\WT\t286p-means.PNG){#fig-t286p-means fig-scap="abcd"}
@@ -123,6 +127,27 @@ These findings show that the formation of CaMKII-NMDAR complexes does not depend
 
 The T286 mutant model is simialr biologically to the CaMKII T286A mutant, in which the critical autophosphorylation site threonine 286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both _in vitro_ biochemical assays and _in vivo_ using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. he computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions [REFERENCES].
 
+![camkii_cam_ca4_variance](40-results-figures\statistics\camkii_cam_ca4_variance.png)
+
+![CaMKII_CaM_Ca4_ttest](40-results-figures\statistics\CaMKII_CaM_Ca4_ttest.png)
+
+![camkii_open_variance](40-results-figures\statistics\camkii_open_variance.png)
+
+![camkii_open_ttest](40-results-figures\statistics\camkii_open_ttest.png)
+
+![what does this mean](40-results-figures\statistics\cam_unbound_open.png)
+
+![what does this mean](40-results-figures\statistics\cam_unbound_open_ttest.png)
+
+![nmdar_MTvsWT. no t-test because final mean and variance are same between both sets. what else could I do here?](40-results-figures\statistics\nmdar_MTvsWT.png)
+
+## Discussion of results
+
+## Limitations and future steps
+
+
+
+--
 The NMDAR/CaMKII binding mutant model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [REFERENCES]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [REFERENCE]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [REFERENCE].
 
 
