@@ -5,10 +5,27 @@ number-offset: 0
 ---
 
 # Introduction {.unnumbered}
+This PhD project combines biological research with ethical considerations. It investigates how N-methyl-D-aspartate receptors (NMDARs) and calcium/calmodulin-dependent protein kinase II (CaMKII) interact in the postsynaptic dendrite during Long-Term Potentiation (LTP), a key process thought to underlie memory formation in animals [@lynch2004LongTerm; @dringenberg2020History; @vorhees2024Tests; @park2024Fear]. Understanding these molecular interactions could offer important insights into cognitive function and neurological disorders [@ghosh2015Calciuma; @liang2017Computational; @schmidt2020DAPK1; @yang2023NMDA]. Addressing these questions is challenging due to the complexity of the molecular environment and the limitations of experimental techniques to resolve highly dynamic protein interactions at fine spatiotemporal scales. Computational modelling offers a powerful tool alongside experimental work by enabling researchers to systematically explore and test models about molecular mechanisms of interest.
 
-This thesis integrates molecular neuroscience, computational modelling, and research ethics into an interdisciplinary PhD project. As such, the structure of this thesis reflects its multifaceted aims: to deepen understanding of the molecular basis of learning and memory, to advance how such systems can be computationally modelled, and to question the ethical responsibilities of this work.
+Alongside the biological focus, this project also looks at how computational models can be used to study these mechanisms in a way that is reproducible and ethically responsible. Therefore, this thesis integrates molecular neuroscience, computational modelling, and research ethics into an interdisciplinary PhD project. As such, the structure of this thesis reflects its multifaceted aims: to deepen understanding of the molecular basis of learning and memory, to advance how such systems can be computationally modelled, and to question the ethical responsibilities of this work.
 
 This introductory chapter outlines the rationale, methodology, and contributions of each subsequent chapter, showing how they interweave to support the overarching thesis argument: that rigorous, ethical, and reproducible computational models can serve as powerful tools in molecular neuroscience, offering both scientific insight and a blueprint for responsible research practice.
+
+## Research objectives of this PhD: {.unnumbered}
+The overarching objective of this PhD research is to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. To achieve this, the research is structured around the following specific aims:
+
+**Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.
+
+**Aim 2.** Throughout the model development process, ensure that the computational models follow FAIR (Findable, Accessible, Interoperable, and Reproducible) principles, promoting transparency and reproducibility. 
+
+**Aim 3.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
+
+**Aim 4.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an _in silico_ mutation model where CaMKII-NMDAR interaction is disrupted. 
+
+**Aim 5.** Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an _in silico_ mutation model where CaMKII cannot be phosphorylated at key functional residues.  
+
+**Aim 6.** Evaluate the ethical considerations of this research using the Data Hazards framework, a community-driven interdisciplinary vocabulary for assessing ethical risks in computational and biological research. 
+
 
 ##### Chapter 1 {.unnumbered}
 In this chapter, I introduce the biological foundations of this project. I outline the mechanisms of Long-Term Potentiation (LTP), focusing on how CaMKII and NMDARs are involved, and why and how they are important. I also explore the detailed molecular interactions between these two key molecules in the context of LTP, covering what is currently known and what remains unknown. This chapter sets the scene for the biological mechanisms that will be studied throughout the thesis.
@@ -35,18 +52,3 @@ This chapter presents and discusses the results generated from the computational
 
 
 ##### Chapter 9 {.unnumbered}
-
-## Research objectives of this PhD: {.unnumbered}
-The overarching objective of this PhD research is to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. To achieve this, the research is structured around the following specific aims:
-
-**Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.
-
-**Aim 2.** Throughout the model development process, ensure that the computational models follow FAIR (Findable, Accessible, Interoperable, and Reproducible) principles, promoting transparency and reproducibility. 
-
-**Aim 3.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
-
-**Aim 4.** Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an _in silico_ mutation model where CaMKII-NMDAR interaction is disrupted. 
-
-**Aim 5.** Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an _in silico_ mutation model where CaMKII cannot be phosphorylated at key functional residues.  
-
-**Aim 6.** Evaluate the ethical considerations of this research using the Data Hazards framework, a community-driven interdisciplinary vocabulary for assessing ethical risks in computational and biological research. 
