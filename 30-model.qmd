@@ -47,19 +47,8 @@ CaMKII is modelled as a dodecameric molecule, which is biologically accurate. Th
 
 ![Molecules released into the model, including their defined possible states specified in BioNetGen. Concentrations were calculated using Equation @eq-molec-concentrations-calc, based on a simulation volume of 0.50588 $\mu\text{m}^3$. *Note: 60 CaMKII holoenzymes, each comprising 12 subunits, correspond to a total of 720 subunits (60 × 12).](30-methods-figures\molecule-concentrations.PNG){#fig-molecule-concentrations fig-scap="Molecule concentrations in the model" fig-pos='H'}
 
-
-### Reaction rules and kinetic rates
-In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() <-> CaM(ca~1,camkii)” represents the binding of a single calcium ion to CaM that is not bound to CaMKII (see reaction #1 in @fig-tbl-1). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at each time step for unimolecular transformations. 
-
-As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. For example, when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1 can continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well. 
-
-![Table of reactions. dont care dont write of rule based modelling. mention these reacgtions are done in bionetgen and rule based mdoelling sooner in introduction](30-methods-figures\table_rxns1.PNG){#fig-tbl-1 fig-pos='H'}
-
 ### Modelling CaMKII as a dodecamer {#sec-camkii-as-dodecamer}
-In the model at hand, the individual subunits are specified in BNGL as follows: 
-`CaMKII(open~0~1,T286~0~P,T306~0~P,cam,nmdar,l,r,c)`
-
-The components l, r, and c represent binding sites within the holoenzyme: l is a binding site on the left of the subunit, r on the right, and c is the central site interacting with an opposing subunit in the six-membered ring (@fig-camkii-dodecamer). In BNGL syntax, interactions between components are represented by a period, with a “!” (bang) followed by a number to denote specific binding. For example, a bond between the right side of one subunit and the left side of another is written as shown in @fig-camkii-dodecamer (B). The “!” is followed by any number, provided the two binding components share the same number.
+In the model at hand, the individual subunits are specified in BNGL as follows: _CaMKII(open~0~1,T286~0~P,T306~0~P,cam,nmdar,l,r,c)_. The components l, r, and c represent binding sites within the holoenzyme: l is a binding site on the left of the subunit, r on the right, and c is the central site interacting with an opposing subunit in the six-membered ring (@fig-camkii-dodecamer). In BNGL syntax, interactions between components are represented by a period, with a “!” (bang) followed by a number to denote specific binding. For example, a bond between the right side of one subunit and the left side of another is written as shown in @fig-camkii-dodecamer (B). The “!” is followed by any number, provided the two binding components share the same number.
 
 Modelling CaMKII as a dodecamer using BNGL enables the representation of the molecule as multimeric, with each subunit able to adopt the following possible states:
 
@@ -131,5 +120,13 @@ The colocalization with PSD-associated PP1 or sequestration away from other prot
 
 In the model used here, PP1 catalyzes the dephosphorylation of CaMKII without forming a stable enzyme-substrate complex. Instead, the reaction proceeds in a manner where PP1 transiently interacts, without binding, with a CaMKII subunit under specific conditions, facilitating the dephosphorylation process. PP1 can only dephosphorylate CaMKII subunits when they are unbound from CaM, as CaM structurally obstructs access to the T286 phosphorylation site. Additionally, the CaMKII subunit must be in its open conformation to expose both the T286 and T306 sites for PP1-mediated dephosphorylation. 
 
+### Reaction rules and kinetic rates
+In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() <-> CaM(ca~1,camkii)” represents the binding of a single calcium ion to CaM that is not bound to CaMKII (see reaction #1 in @fig-tbl-1). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at each time step for unimolecular transformations. 
+
+As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. For example, when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1 can continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well (see back for diagram example explanation in @fig-mcell-works). 
+
+The reaction rules defined below follow the "don't care, don't write" principle of rule-based modelling: if a molecular feature is irrelevant to a particular reaction, it is simply omitted from the reaction definition. For example, in reaction #5, which describes the flickering of CaMKII subunits between open and closed states, the conditions specified are that the subunit's CaM-binding site must be free, the subunit must be unphosphorylated at T286, and the subunit must be open. However, the phosphorylation state at T306 is irrelevant to this reaction, and therefore is not specified.
+
+![Reaction rules and rate constants used in the model. $k_\text{on}$ (association rates) in M$^{-1}$s$^{-1}$, $k_\text{off}$ (dissociation rates) in s$^{-1}$, $k_\text{cat}$ (catalytic rates) in s$^{-1}$.](30-methods-figures\table_rxns1.PNG){#fig-tbl-1 fig-pos='H fig-scap="Reactions and rate constants used in the model"}
 
 ![Reaction rules. #d is missing. all possible iterations of a camkii subunit](30-methods-figures\camkii-binding-rxns.PNG){#fig-camkii-binding-rxns fig-pos='H' width="90%"}
