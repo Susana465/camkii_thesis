@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Computational Modelling Background – CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./20-repro_open.html" rel="next">
+<link href="./20-intro-biology.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0a0063f14e87237348a3db0020d9102a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./30-modelling_background.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</a> 
+        <div class="sidebar-tools-main">
+    <a href="./CaMKII-NMDAR-interactions-in-Learning-and-Memory--A-Case-Study-in-Ethical-and-Reproducible-Modelling-Approaches.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Declaration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-intro-biology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Biological Research Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-modelling_background.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-repro_open.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-data-hazards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Case Study in Ethical Reflection: Data Hazards in this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./40-model-validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Validating model behaviour</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./40-results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of CaMKII Dynamics in Wild-Type and Mutant Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">List of publications and presentations resulting from this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-use-computational-modelling-to-study-biological-systems" id="toc-why-use-computational-modelling-to-study-biological-systems" class="nav-link active" data-scroll-target="#why-use-computational-modelling-to-study-biological-systems"><span class="header-section-number">2.1</span> Why use computational modelling to study biological systems?</a></li>
+  <li><a href="#sec-how-do-we-model" id="toc-sec-how-do-we-model" class="nav-link" data-scroll-target="#sec-how-do-we-model"><span class="header-section-number">2.2</span> How do we model biochemical systems networks?</a>
+  <ul class="collapse">
+  <li><a href="#reaction-based-modelling" id="toc-reaction-based-modelling" class="nav-link" data-scroll-target="#reaction-based-modelling">Reaction-based modelling:</a></li>
+  <li><a href="#deterministic-modelling" id="toc-deterministic-modelling" class="nav-link" data-scroll-target="#deterministic-modelling">Deterministic modelling:</a></li>
+  <li><a href="#stochastic-modelling" id="toc-stochastic-modelling" class="nav-link" data-scroll-target="#stochastic-modelling">Stochastic modelling:</a></li>
+  </ul></li>
+  <li><a href="#sec-complexity-systems-biology" id="toc-sec-complexity-systems-biology" class="nav-link" data-scroll-target="#sec-complexity-systems-biology"><span class="header-section-number">2.3</span> Complexity in Systems Biology: Modelling approaches and challenges</a></li>
+  <li><a href="#rule-based-modelling" id="toc-rule-based-modelling" class="nav-link" data-scroll-target="#rule-based-modelling"><span class="header-section-number">2.4</span> Rule based modelling</a>
+  <ul class="collapse">
+  <li><a href="#bionetgen-a-tool-for-rule-based-modelling" id="toc-bionetgen-a-tool-for-rule-based-modelling" class="nav-link" data-scroll-target="#bionetgen-a-tool-for-rule-based-modelling">BioNetGen: A tool for rule based modelling</a></li>
+  <li><a href="#mcell-a-tool-for-dynamic-protein-visualisation-and-modelling" id="toc-mcell-a-tool-for-dynamic-protein-visualisation-and-modelling" class="nav-link" data-scroll-target="#mcell-a-tool-for-dynamic-protein-visualisation-and-modelling">MCell: A tool for dynamic protein visualisation and modelling</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-intro-comp" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Computational modelling offers a powerful means of investigating complex biological systems by simulating molecular interactions. These models aim to describe the elements of a system, their states, and their interactions with sufficient precision to replicate real-world dynamics. Biological systems, such as cells, operate through multiscale processes in which molecular interactions give rise to larger-scale cellular behaviors <span class="citation" data-cites="rothschild2006Role suki2011Complexity">(<a href="#ref-rothschild2006Role" role="doc-biblioref">Rothschild 2006</a>; <a href="#ref-suki2011Complexity" role="doc-biblioref">Suki, Bates, and Frey 2011</a>)</span>. For example, in neurons, molecular interactions like neurotransmitter release, receptor activation, and intracellular signalling regulate synaptic plasticity. These interactions give rise to emergent behaviours, where molecular and cellular changes scale up to influence higher-order functions. Changes in synaptic strength, such as Long-Term Potentiation (LTP) and Long-Term Depression (LTD) (see <a href="#sec-LTP-to-explain-memory" class="quarto-xref"><span class="quarto-unresolved-ref">sec-LTP-to-explain-memory</span></a>), drive larger-scale processes like dendritic spine remodelling and receptor trafficking, ultimately influencing neural circuit activity —key mechanisms underlying learning and memory.</p>
+<p>To study intricate cellular processes such as signal transduction and neuronal plasticity we require appropriate mathematical tools and models capable of simulating dynamic, nonlinear interactions at multiple scales. A computational model incorporates numerous variables representing the system under study, with simulations performed by adjusting these variables, either independently or in combination, and observing the outcomes <span class="citation" data-cites="hassan2023Perspectives">(<a href="#ref-hassan2023Perspectives" role="doc-biblioref">Hassan et al. 2023</a>)</span>. Computational models allow for the exploration of the system’s emergent behaviors, where system-level properties arise from simple interactions among individual components but are not explicitly encoded at the molecular level <span class="citation" data-cites="xiao2015Emergent">(<a href="#ref-xiao2015Emergent" role="doc-biblioref">Xiao, Zhang, and Huang 2015</a>)</span>.</p>
+<p>This PhD employs computational modelling to explore biological systems, focusing on biochemical modelling of dynamic, complex reaction networks that underpin biological processes. Specifically, we look at the interactions between CaMKII and NMDAR in the postsynaptic dendrite of neurons that are thought to be relevant for learning and memory (see <a href="#sec-biology-chapter" class="quarto-xref"><span class="quarto-unresolved-ref">sec-biology-chapter</span></a>). The rationale for selecting specific modelling approaches to study the interactions between these molecules are introduced and discussed next. These approaches include rule-based modelling, agent-based modelling and stochastic simulation algorithms. This chapter also discusses the computational tools used to implement these models, including Monte Carlo Cell (MCell) <span class="citation" data-cites="stiles1996Miniaturea 2000Monte kerr2008FAST husar2022MCell4">(<a href="#ref-stiles1996Miniaturea" role="doc-biblioref">Stiles et al. 1996</a>; <a href="#ref-2000Monte" role="doc-biblioref"><span>“Monte <span>Carlo Methods</span> for <span>Simulating Realistic Synaptic Microphysiology Using MCell</span>”</span> 2000</a>; <a href="#ref-kerr2008FAST" role="doc-biblioref">Kerr et al. 2008</a>; <a href="#ref-husar2022MCell4" role="doc-biblioref">Husar et al. 2022</a>)</span> for stochastic spatial simulations and Biological Network Generator (BioNetGen) <span class="citation" data-cites="harris2016BioNetGena">(<a href="#ref-harris2016BioNetGena" role="doc-biblioref">Harris et al. 2016</a>)</span> for rule-based modelling. Together, these tools provide a robust framework for simulating complex molecular interactions and cellular behaviours, enabling the study of dynamic processes that can often be difficult to investigate experimentally.</p>
+<section id="why-use-computational-modelling-to-study-biological-systems" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="why-use-computational-modelling-to-study-biological-systems"><span class="header-section-number">2.1</span> Why use computational modelling to study biological systems?</h2>
+<p>Computational models are becoming increasingly popular in Neuroscience (and in the sciences in general) <span class="citation" data-cites="noble2002Rise kaur2021Computational levenstein2023Role">(<a href="#ref-noble2002Rise" role="doc-biblioref">Noble 2002</a>; <a href="#ref-kaur2021Computational" role="doc-biblioref">Kaur and Gaba 2021</a>; <a href="#ref-levenstein2023Role" role="doc-biblioref">Levenstein et al. 2023</a>)</span>, as they provide useful advances to enhance our understanding of systems that want to be studied. When modelling biological systems, we aim to describe the system’s elements, states, and interactions to accurately simulate its behaviour. In the context of this PhD study, we examine postsynaptic neuronal dendrites, where complex biochemical processes span multiple compartments and scales.</p>
+<p>Given the vast complexity of reactions and molecular networks within a dendrite, mathematical tools used in computational modelling can help simplify the analysis of these systems. This way, models allow questions to be investigated that are difficult to approach experimentally. By focusing on specific parts of biological multiscale dynamics, these tools allow researchers to isolate particular aspects of interest. This approach helps minimize the influence of unrelated variables and reduces the complexity of the full biological system. Computer simulations allow adjustments to almost any state variable at any given time point, and they enable data to be analysed with virtually any level of precision, both in terms of time and space <span class="citation" data-cites="levenstein2023Role">(<a href="#ref-levenstein2023Role" role="doc-biblioref">Levenstein et al. 2023</a>)</span>.</p>
+<p>It is important to note that when modelling, just like with wet-lab, care must be taken when interpreting simulation results, as they are subject to finite accuracy. Errors can arise from a variety of reasons, such as the properties used in simulations, the mathematical models, their numerical algorithms, and more (this is further discussed in <a href="#sec-data-hazards-chapter" class="quarto-xref"><span class="quarto-unresolved-ref">sec-data-hazards-chapter</span></a>). Moreover, biological systems are inherently stochastic and exhibit natural variability <span class="citation" data-cites="teschendorff2021Statistical demopoulos2025Chaos">(<a href="#ref-teschendorff2021Statistical" role="doc-biblioref">Teschendorff and Feinberg 2021</a>; <a href="#ref-demopoulos2025Chaos" role="doc-biblioref">Demopoulos 2025</a>)</span>. For computational results to be meaningful, they must account for the full range of expected variability in the physical systems they aim to represent. That is why simulations are carefully validated by comparing their behaviour to experimental data; and inconsistencies can suggest incomplete assumptions or misinterpretations. However, it is also important to recognize that even if a model successfully recapitulates experimental results, this does not necessarily mean it is correct. Biological systems can often exist in multiple states that produce the same observable outcome, meaning that different underlying mechanisms could lead to similar results.</p>
+<p>Models that survive this initial validation can be used to predict new outcomes and explore scenarios that are challenging to investigate experimentally, offering insights into the workings and principles of biological systems. This way, modelling aims to clarify the current state of knowledge about a system by precisely defining its elements and interactions, which can reveal gaps in understanding <span class="citation" data-cites="szekely2014Stochastic">(<a href="#ref-szekely2014Stochastic" role="doc-biblioref">Székely and Burrage 2014</a>)</span>. Whilst it is true that models may omit certain details of a biological system, the purpose of computational models is not to replicate every detail of a biological system, but rather to offer a specific representation that captures the essential dynamics relevant to a specific research question. By focusing on key components and interactions, models offer the capability of testing minimal requirements of very complex systems by just considering the molecules immediately influencing the phenomenon that is being studied.</p>
+<p>Furthermore, models can be refined iteratively as new data becomes available or as understanding of the system deepens, facilitating continuous improvement and development of the system at hand. Even if a model does not encompass every element of the system, it remains a powerful tool for identifying critical relationships, predict system behaviour, guiding experimental design, generating hypotheses and offering structured frameworks for exploring complex biological phenomena <span class="citation" data-cites="szekely2014Stochastic brodland2015How">(<a href="#ref-szekely2014Stochastic" role="doc-biblioref">Székely and Burrage 2014</a>; <a href="#ref-brodland2015How" role="doc-biblioref">Brodland 2015</a>)</span>.</p>
+<div id="fig-dry-wet-lab-cycle" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Dry and wet lab cycle of research">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dry-wet-lab-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\dry_wet_lab_cycle.PNG" class="img-fluid figure-img" data-fig-scap="Dry and wet lab cycle of research">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dry-wet-lab-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Computational models can guide and refine biological experiments and vice versa, creating an iterative cycle that improves both approaches. Adapted from <span class="citation" data-cites="szekely2014Stochastic">Székely and Burrage (<a href="#ref-szekely2014Stochastic" role="doc-biblioref">2014</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>Moreover, using computational methods for studying biological mechanisms can be time and cost-efficient. Modelling is well positioned for integration into the experimental cycle of biology. Although <em>in vitro</em> and <em>in vivo</em> experiments are still needed to advance our understanding of biological processes, conducting <em>in silico</em>, or computer-simulated experiments can help guide the wet-lab process by narrowing the experimental search space <span class="citation" data-cites="robinson2004Simulation">(<a href="#ref-robinson2004Simulation" role="doc-biblioref">Robinson et al. 2004</a>)</span>. Importantly, this creates an iterative cycle, where computational models inform experimental design, and experimental findings, in turn, refine and improve the models. This continuous process strengthens both approaches, leading to a deeper and more accurate understanding of biological systems (<a href="#fig-dry-wet-lab-cycle" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-dry-wet-lab-cycle</span></a>).</p>
+<p>In addition to the reasons discussed, my preference for computational modelling over wet-lab experiments is also shaped by personal considerations. Among these personal reasons, is my desire to move away from animal experimentation, as the speciesist assumption that testing on animals is both acceptable and necessary does not align with my values. A detailed and nuanced discussion of this perspective is provided in <a href="#sec-data-hazards-chapter" class="quarto-xref"><span class="quarto-unresolved-ref">sec-data-hazards-chapter</span></a>. Following the principles of the “3Rs alternatives” framework: replacement, reduction, and refinement of animal use in research; I am particularly committed to the goals of replacement and reduction. as I don’t believe in the speciesist beliefs that place one species above another, justifying the harm of those deemed inferior for research <span class="citation" data-cites="lafollette1995Utilizing dhont2019Psychology jaquet2021Debunking">(<a href="#ref-lafollette1995Utilizing" role="doc-biblioref">LaFOLLETTE and Shanks 1995</a>; <a href="#ref-dhont2019Psychology" role="doc-biblioref">Dhont et al. 2019</a>; <a href="#ref-jaquet2021Debunking" role="doc-biblioref">Jaquet 2021</a>)</span>.</p>
+<p>In my opinion, computational modelling research such as the one undertaken in this PhD, however, cannot be fully separated from animal research because experimental data is often derived from studies that have involved using animals to a certain degree <span class="citation" data-cites="dominguez-oliva2023Importance mukherjee2022Role">(<a href="#ref-dominguez-oliva2023Importance" role="doc-biblioref">Domínguez-Oliva et al. 2023</a>; <a href="#ref-mukherjee2022Role" role="doc-biblioref">Mukherjee et al. 2022</a>)</span>. Moreover, models must usually be validated against experimental results to confirm their biological relevance, and in many cases, such validation still depends on data from <em>in vivo</em> or <em>in vitro</em> studies <span class="citation" data-cites="madden2020Review">(<a href="#ref-madden2020Review" role="doc-biblioref">Madden et al. 2020</a>)</span>. Nevertheless, I advocate for a shift toward computational research that not only minimizes reliance on animal studies but also emphasizes reproducibility. Ensuring that research is reproducible helps avoid redundant experimentation by allowing scientists to verify and build upon existing findings rather than repeating studies due to unclear methodologies or irreproducible results <span class="citation" data-cites="pound2004Where">(<a href="#ref-pound2004Where" role="doc-biblioref">Pound et al. 2004</a>)</span>. When computational models are rigorously validated and openly shared, they can serve as reliable references, reducing the need for additional animal-based experiments to confirm previous findings. Reproducibility and opennnes of computational models is further discussed in <a href="#sec-open-repro-chapter" class="quarto-xref"><span class="quarto-unresolved-ref">sec-open-repro-chapter</span></a>.</p>
+</section>
+<section id="sec-how-do-we-model" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-how-do-we-model"><span class="header-section-number">2.2</span> How do we model biochemical systems networks?</h2>
+<p>When constructing a computational model for biochemical system networks, one of the first steps researchers must undertake is identifying the key components of the system and the critical interactions between them. There is no single applicable method for this, as the approaches and questions will vary depending on the specific study being conducted, just like in wet-lab experiments. For instance, is it necessary to represent the behaviour of the system in three dimensions, or would a two-dimensional approximation be sufficient, or is spatial information necessary at all? Similarly, should individual cells and molecules be explicitly modelled, or can their behaviour be adequately captured using appropriate constitutive equations? Other factors to consider include determining which interactions between components are essential for the model and assessing the role of stochastic influences on these interactions. These examples are not exhaustive, as the questions and decisions depend on the system studied, the hypotheses being tested, the study approach, and more. A detailed description of factors chosen for the model in this project are given in <a href="#sec-model-description" class="quarto-xref"><span class="quarto-unresolved-ref">sec-model-description</span></a>. Although each assumption made at this stage may introduce differences between the model and the biological system it seeks to emulate, well-considered assumptions -chosen based on biological knowledge, empirical evidence, and modelling best practices- can improve the model’s clarity, providing a solid foundation for effective representation of the biological system.</p>
+<p>Deciding which simplifications and choices to make during the creation of a model requires a deep understanding of the system combined with mathematical and computational skills. Modelling biochemical systems networks is usually a combined effort between modellers and biologists (although these roles are not exclusive). This interdisciplinarity is a key strength of the process, as it means modelling combines diverse expertise, encouraging are more holistic understanding of diverse perspectives.</p>
+<p>Once the key factors to be modelled have been identified, conceptual elements of the model can be translated into a mathematical framework. This process involves defining aspects such as state variables, as well as representing components of the system using appropriate data types to model the system. Each interaction within the system may then be characterised by appropriate mathematical relationships too. For instance, biochemical reactions can be expressed through differential equations that describe the rate of change in the concentrations of reactants and products. The implementation of suitable algorithms to accurately realise the various components of the model is critical in ensuring its functionality and efficiency.</p>
+<p>For example, is deterministic modelling or stochastic modelling more suitable for studying a particular system of interest? See deterministic modelling and stochastic modelling below. Additionally, there is an expanding array of tools and modelling approaches available that researchers can choose from <span class="citation" data-cites="ghosh2011Software olivier2016Modeling bartocci2016Computational kohl2011Standards">(<a href="#ref-ghosh2011Software" role="doc-biblioref">Ghosh et al. 2011</a>; <a href="#ref-olivier2016Modeling" role="doc-biblioref">Olivier, Swat, and Moné 2016</a>; <a href="#ref-bartocci2016Computational" role="doc-biblioref">Bartocci and Lió 2016</a>; <a href="#ref-kohl2011Standards" role="doc-biblioref">Kohl 2011</a>)</span>; translating biological processes into mathematical models on a computer requires not only the appropriate algorithms but also a suitable programming language. There is a wide range of programming languages to choose from —such as Python, MATLAB, and C to name a few- each with its own advantages and limitations. In the following sections, we will explore the modelling approaches and programming languages that are relevant to this PhD.</p>
+<section id="reaction-based-modelling" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="reaction-based-modelling">Reaction-based modelling:</h3>
+<p>When translating biological and chemical systems (such as CaMKII and NMDARs interactions in the postsynaptic neuron) into algorithms, one way of describing these systems can be through networks of chemical reactions <span class="citation" data-cites="cook2009Programmability">(<a href="#ref-cook2009Programmability" role="doc-biblioref">Cook et al. 2009</a>)</span>. This approach is known as <em>reaction-based modelling</em>, where mathematical models are used to represent the dynamics of biological systems in a computer <span class="citation" data-cites="besozzi2016ReactionBased">(<a href="#ref-besozzi2016ReactionBased" role="doc-biblioref">Besozzi 2016</a>)</span>. Reaction-based models are formalized as sets of reactions that describe the given system in terms of mechanistic interactions between the species of interest. This is, biochemical networks are a set of chemical species that can be converted into each other through chemical reactions.</p>
+<p>The focus of biochemical network models is usually on the levels of the chemical species and this usually requires explicit mathematical expressions for the velocity at which the reactions proceed (kinetic reaction rates). Once kinetics have been specified, these systems can be used directly to construct full dynamic simulations of the system behaviour <span class="citation" data-cites="cook2009Programmability">(<a href="#ref-cook2009Programmability" role="doc-biblioref">Cook et al. 2009</a>)</span>.</p>
+<p>Biochemical network models allow us to gather insight by simulating chemical interactions over time; we can observe changes in species levels, visualise stable states within the system, and look for potential direct or indirect causal relationships between the species being studied. Importantly, the modellers can modify any of these parameters to test how such changes impact the model’s results. Computational models allow us to modify parameters in ways that would be extremely difficult or even impossible to test experimentally, such as precisely controlling molecular concentrations of molecules in particular states, eliminating specific interactions, or simulating conditions that cannot be easily replicated in a laboratory setting. Using a reaction-based approach is particularly useful for modelling the interactions of molecules of interest in this PhD, where we can simulate various chemical components such as NMDARs and CaMKII among others and their interactions in an efficient manner, as seen in <a href="#sec-model-description" class="quarto-xref"><span class="quarto-unresolved-ref">sec-model-description</span></a>.</p>
+<p>Biological systems can be simulated in different ways using different algorithms depending on the assumptions made about the underlying kinetics [<span class="citation" data-cites="resat2009Kinetic">Resat, Petzold, and Pettigrew (<a href="#ref-resat2009Kinetic" role="doc-biblioref">2009</a>)</span>;], as discussed below; and different formalisms are usually applied to describe the dynamics of these biochemical systems <span class="citation" data-cites="marchetti2017Simulation">(<a href="#ref-marchetti2017Simulation" role="doc-biblioref">Marchetti, Priami, and Thanh 2017</a>)</span>. The kinetics of chemical reactions vary based on the timing of molecular interactions, with reactions unfolding over a timescale determined by the microscopic mechanics involved. Molecular collisions occur randomly inside cells, and are influenced by factors like thermal motion and diffusion. This randomness means that the number of molecules of a particular species fluctuates as a random variable <span class="citation" data-cites="mazo2008PROBABILITY earnest2018Simulating">(<a href="#ref-mazo2008PROBABILITY" role="doc-biblioref">Mazo 2008</a>; <a href="#ref-earnest2018Simulating" role="doc-biblioref">Earnest, Cole, and Luthey-Schulten 2018</a>)</span>.</p>
+<p>However, when we observe large-scale, or macroscopic, quantities —such as the concentration of a substance over time— the outcomes tend to be consistent and predictable. This predictable trend enables us to develop rate laws, mathematical expressions that describe how the concentration of molecules changes over time. Rate laws are foundational to deterministic modelling, as they assume that, given a specific starting point (initial conditions), the progression of a chemical process is fixed or “predestined.” Deterministic models thus allow scientists to predict the time evolution of chemical concentrations with high accuracy, even if the underlying molecular interactions remain random on a microscopic scale. Deterministic models work well where molecular species exists in vast quantities. However, as systems decrease in scale, such as in the confined environment of a cell’s cytosol, random fluctuations in molecular populations become significant, making experimental results less reproducible and measurements more variable. Unlike deterministic models, which assume smooth, predictable changes, stochastic models accommodate the random fluctuations in molecule numbers that can significantly impact reaction outcomes in confined environments. Lets briefly examine the reasons why each of these approaches may be employed for distinct purposes:</p>
+</section>
+<section id="deterministic-modelling" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="deterministic-modelling">Deterministic modelling:</h3>
+<p>Deterministic approaches to chemical kinetics are often used to characterize time evolutions of chemical reactions in large systems <span class="citation" data-cites="marin2019Kinetics">(<a href="#ref-marin2019Kinetics" role="doc-biblioref">Marin, Yablonsky, and Constales 2019</a>)</span>. A popular representation for these models is to use ordinary differential equations (ODEs) to describe the change in the concentrations of chemical species <span class="citation" data-cites="hoops2016Chapter">(<a href="#ref-hoops2016Chapter" role="doc-biblioref">Hoops et al. 2016</a>)</span>. Running the same set of parameters using deterministic simulations will produce the same results each time by solving these ODEs. Such descriptions are appropriate when the number of particles involved in the biochemical network is large enough to be able to consider continuous concentrations and when spatial effects are negligible, i.e.&nbsp;well-mixed environment is assumed and space has no effect on reactions. In ODE-based models, each chemical species in the network is represented by an ODE that describes the rate of change of that species along time. Therefore, ODE models of biochemical processes are useful and accurate in the high-concentration limit, but often fail to capture stochastic cellular dynamics accurately because the deterministic continuous formulation assumes spatial homogeneity and continuous molecular concentrations <span class="citation" data-cites="johnson2021Quantifying smith2019Spatial">(<a href="#ref-johnson2021Quantifying" role="doc-biblioref">Johnson et al. 2021</a>; <a href="#ref-smith2019Spatial" role="doc-biblioref">Smith and Grima 2019</a>)</span>.</p>
+<p>These ODE models can be used to simulate the dynamics of the concentrations of the chemical species along time given their initial values. This is achieved by numerical integration of the system of ODE which can be carried out with well-established algorithms <span class="citation" data-cites="postawa2020Comprehensive">(<a href="#ref-postawa2020Comprehensive" role="doc-biblioref">Postawa, Szczygieł, and Kułażyński 2020</a>)</span>. They are also useful to find, for example, steady states of the system, which are conditions when the concentrations of the chemical species do not change <span class="citation" data-cites="maly2009Introduction">(<a href="#ref-maly2009Introduction" role="doc-biblioref">Maly 2009</a>)</span>.</p>
+</section>
+<section id="stochastic-modelling" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="stochastic-modelling">Stochastic modelling:</h3>
+<p>As a general rule, stochastic simulations are preferred where the numbers of particles of a chemical species is small <span class="citation" data-cites="gillespie2007Stochastic szekely2014Stochastic">(<a href="#ref-gillespie2007Stochastic" role="doc-biblioref">Gillespie 2007</a>; <a href="#ref-szekely2014Stochastic" role="doc-biblioref">Székely and Burrage 2014</a>)</span>; the ODE approach is required when the number of particles is large because the stochastic approach might be computationally intractable. However, when the assumption of continuous concentration fails due to small-scale cellular environment with limited reactant populations ODE representation also fails. It is here when stochastic simulations are useful. Unlike ODE models, which assume continuous concentrations, stochastic simulations track individual reaction events using probability distribution functions. Stochastic Simulation Algorithms (SSAs) <span class="citation" data-cites="gillespie2007Stochastic szekely2014Stochastic">(<a href="#ref-gillespie2007Stochastic" role="doc-biblioref">Gillespie 2007</a>; <a href="#ref-szekely2014Stochastic" role="doc-biblioref">Székely and Burrage 2014</a>)</span>, determine the timing and sequence of reactions based on these probabilities.</p>
+<p>It is important to stress that one simulation run according to stochastic approaches is only one realization of a probabilistic representation, and thus provides limited amount of information on its own. When running stochastic simulations, it is important that they are repeated for a sufficient number of times in order to reveal the entire range of behaviour presented by such a system to estimate a probability distribution for each chemical species and its dynamic evolution. The number of required runs depends on the system’s complexity and the degree of variability in its dynamics, with guidelines available in the literature <span class="citation" data-cites="ritter2011Determining byrne2013How">(<a href="#ref-ritter2011Determining" role="doc-biblioref">Ritter et al. 2011</a>; <a href="#ref-byrne2013How" role="doc-biblioref">Byrne 2013</a>)</span> for determining sufficient sampling (for example based on statistical confidence intervals).</p>
+<p>Ultimately, both SSAs and ODEs offer valuable modelling insights, and the selection of the appropriate method depends on the specific dynamics and the level of detail required for simulating the biochemical network under investigation.</p>
+<p>As we have seen, computational modelling has its benefits for studying biological systems. However, the complexity of these systems presents unique challenges. Biological systems consist of numerous interacting components and emergent behaviours, requiring careful consideration of both individual components and their dynamic interactions. The next section delves deeper into the concept of complexity in biological systems, examining the challenges of modelling such networks, and how these challenges are directly linked to the biological questions of this PhD. I will also discuss the modelling approaches I employ to handle the complexity of these systems.</p>
+</section>
+</section>
+<section id="sec-complexity-systems-biology" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-complexity-systems-biology"><span class="header-section-number">2.3</span> Complexity in Systems Biology: Modelling approaches and challenges</h2>
+<p>This PhD thesis is grounded in <em>Complexity Science</em>, which studies how interactions between components of a system give rise to emergent behaviors. Examples of application of Complexity Science can be predator-prey models, epidemiological modelling of pandemics, protein-protein interaction networks, models of neurons, and more. When applied to biology, complexity science often falls under the banner of <em>Systems Biology</em>. Systems biology refers to the quantitative analysis of dynamic interactions between multiple components within a biological system, with the goal of understanding the system’s behaviour as a whole. Systems biology entails the study of complex biological systems by combining mathematical modelling, computational simulation, and biological experimentation.</p>
+<p>Complexity is a critical aspect of the systems studied in this project, that is, the spatiotemporal dynamics of molecules such as CaMKII and NMDARs in the PSD; making it essential to understand our choices in how and why we model these elements. Specifically, this project looks at catalytic interactions that drive post-translational modifications such as enzyme-driven phosphorylation of CaMKII and NMDARs, as well as interactions between these proteins that promote the assembly of molecular complexes <span class="citation" data-cites="sanhueza2013CaMKII 2015Biochemical">(<a href="#ref-sanhueza2013CaMKII" role="doc-biblioref">Sanhueza and Lisman 2013</a>; <a href="#ref-2015Biochemical" role="doc-biblioref"><span>“Biochemical Principles Underlying the Stable Maintenance of <span>LTP</span> by the <span>CaMKII</span>/<span>NMDAR</span> Complex”</span> 2015</a>)</span>. These types of interactions are hallmark drivers of something known as <em>combinatorial complexity</em> in cellular systems and biochemical networks <span class="citation" data-cites="klamt2002Combinatorial">(<a href="#ref-klamt2002Combinatorial" role="doc-biblioref">Klamt and Stelling 2002</a>)</span>.</p>
+<p>When proteins interact, they create unique states that alter the protein’s function, structure, or binding capabilities. Meaning that each protein can undergo multiple types of modifications or engage in various site binding interactions, which leads to a multitude of distinct protein configurations. Systems of interacting proteins are inherently complex as the interactions between its constituent proteins usually have the potential to create a vast array of distinct chemical species. This number can far exceed the actual count of proteins or protein interactions within the system itself, creating a combinatorial explosion where every modification or binding event adds another layer of potential molecular arrangements. This high number in potential molecular arrangements is referred to as <em>combinatorial complexity</em>, a defining feature of cellular systems and biochemical networks <span class="citation" data-cites="stefan2014Multistate">(<a href="#ref-stefan2014Multistate" role="doc-biblioref">Stefan et al. 2014</a>)</span>.</p>
+<p>Moreover, these distinct molecular species states do not exist in isolation. They are interconnected through an extensive network of reactions, further amplifying the system’s complexity. Intricate network of protein–protein interactions is in fact a prominent feature of any signal-transduction system <span class="citation" data-cites="gomperts2009Signal hunter2000Signaling">(<a href="#ref-gomperts2009Signal" role="doc-biblioref">Gomperts, Tatham, and Kramer 2009</a>; <a href="#ref-hunter2000Signaling" role="doc-biblioref">Hunter 2000</a>)</span>. These interactions can occur at multiple levels, including feedback loops, cross-talk between pathways, and spatial-temporal variations. Each reaction acts as a link within a larger network, creating pathways that connect different species. Modelling these networks is therefore particularly complex due to the difficulty in capturing all possible interactions and the uncertainty in the exact nature of these interactions; i.e.&nbsp;not all possible states of a molecular species may be relevant for its functions <span class="citation" data-cites="changeux2005Allosteric pharris2019Multistate">(<a href="#ref-changeux2005Allosteric" role="doc-biblioref">Changeux and Edelstein 2005</a>; <a href="#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>)</span>.</p>
+<p>The magnitude of combinatorial complexity can be exemplified well with the CaMKII holoenzyme studied in this PhD. CaMKII is a multi-subunit protein that can exist in a vast number of possible functional states, depending on the modifications and interactions at each subunit. Each of the individual subunits of CaMKII can have multiple possible states, influenced by factors such as phosphorylation, binding to calmodulin, and interactions with other proteins like NMDARs, and more <span class="citation" data-cites="nicoll2023Synapticc">(<a href="#ref-nicoll2023Synapticc" role="doc-biblioref">Nicoll and Schulman 2023</a>)</span>. It has been proposed that a CaMKII dodecamer could potentially exist in as many as <span class="math inline">\(10^{20}\)</span> possible states (see calculations in methods section and appendix S1 in <span class="citation" data-cites="pharris2019Multistate">Pharris et al. (<a href="#ref-pharris2019Multistate" role="doc-biblioref">2019</a>)</span>). Moreover, the fact that the potential states of CaMKII vastly outnumber the actual CaMKII molecules in a dendritic spine <span class="citation" data-cites="pharris2019Multistate">(<a href="#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>)</span>, suggests that not all states occur with the same frequency and therefore not all mathematically calculated states are of equal biological relevance, which highlights the challenges of modelling systems that involve combinatorial complexity.</p>
+<p>Combinatorial complexity of signalling systems involving multi-state proteins impacts both the process of writing the model, known as the <em>specification problem</em>, and the computational demands of running it, particularly in terms of time and resources, known as the <em>computation problem</em> <span class="citation" data-cites="stefan2014Multistate">(<a href="#ref-stefan2014Multistate" role="doc-biblioref">Stefan et al. 2014</a>)</span>. The specification problem encompasses challenges such as representing all possible states of a molecule like CaMKII, the various complexes it can form, the transformations those complexes can undergo, and the parameters and conditions that govern these processes, all in a robust and efficient manner. When faced with the computation problem, where it may become computationally infeasible to enumerate or simulate all state and network possibilities, the model may become intractable, requiring excessive time and resources to compute, store and/or analyse.</p>
+<p>As explored next, rule based modelling provides a powerful solution to the specification problem: rather than accounting for every possible state explicitly, it enables a focus on biologically significant states while allowing emergent behaviours to arise through rule-based interactions. As for the computation problem, we will see later on how particle-based rule evaluations can help with it.</p>
+</section>
+<section id="rule-based-modelling" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="rule-based-modelling"><span class="header-section-number">2.4</span> Rule based modelling</h2>
+<p>The challenges posed by the specification problem of combinatorial complexity motivate the adoption of a rule based modelling (RBM) approach for simulating cell signalling systems in this PhD. RBM can help by using a set of logical rules to describe how molecules interact with each other. With this type of modelling, the system is modelled by specifying the reactions (or rules) that describe how molecules interact and change <span class="citation" data-cites="harris2009Compartmental chylek2014Rulebased chylek2015Modeling">(<a href="#ref-harris2009Compartmental" role="doc-biblioref">Harris, Hogg, and Faeder 2009</a>; <a href="#ref-chylek2014Rulebased" role="doc-biblioref">Lily A. Chylek et al. 2014</a>; <a href="#ref-chylek2015Modeling" role="doc-biblioref">Lily A. Chylek et al. 2015</a>)</span>. Instead of listing every individual interaction or molecular species explicitly, rules are used to represent how molecules bind, modify, and transform. These rules, which are primarily based on experimental observations, are applied to sets of molecules that can be in different states or configurations, and the overall dynamics of the system emerge from the repeated application of these rules. This method allows for more efficient specification of models, and can scale to handle complex systems like the ones studied in this PhD; this way, avoiding the impossible enumeration of the <span class="math inline">\(10^{20}\)</span> calculated states of CaMKII alone.</p>
+<section id="bionetgen-a-tool-for-rule-based-modelling" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="bionetgen-a-tool-for-rule-based-modelling">BioNetGen: A tool for rule based modelling</h3>
+<p>BioNetGen (Biological Network Generator) <span class="citation" data-cites="harris2016BioNetGena">(<a href="#ref-harris2016BioNetGena" role="doc-biblioref">Harris et al. 2016</a>)</span> is a useful tool for performing RBM of biochemical networks, particularly in the context of signalling systems and protein–protein interactions. BioNetGen uses a language called BNGL (BioNetGen Language) to define molecular species and the rules that govern their interactions. A key feature of BNGL is that it allows researchers to describe the interactions between proteins and other molecules in a high-level, abstract form, without the need to manually enumerate every possible molecular species or state. Instead, BNGL allows users to define generalized rules using an RBM approach, specifying how molecular entities can interact -such as binding, phosphorylation, or degradation — along with the conditions under which these interactions occur.</p>
+<p>Different approaches to RBM are used depending on one’s objectives and modelling focus <span class="citation" data-cites="schaff2016Rulebased faeder2009Rulebased lopez2013Programming boutillier2018Kappa">(<a href="#ref-schaff2016Rulebased" role="doc-biblioref">Schaff et al. 2016</a>; <a href="#ref-faeder2009Rulebased" role="doc-biblioref">Faeder, Blinov, and Hlavacek 2009</a>; <a href="#ref-lopez2013Programming" role="doc-biblioref">Lopez et al. 2013</a>; <a href="#ref-boutillier2018Kappa" role="doc-biblioref">Boutillier et al. 2018</a>)</span>. In our approach, we employ BioNetGen and its associated language BNGL, as it provides some key advantages for the research at hand. Firstly, BNGL provides a language that is tailored towards modelling biochemical networks with domain-specific requirements, allowing for the detailed specification of molecules and their binding domains, which is particularly useful for studying protein post-translational modifications, for example autophosphorylation of CaMKII. Moreover, BNGL helps resolve nomenclature challenges by allowing explicit naming of molecules, binding sites, and modification states in a structured and consistent manner (see <a href="#fig-camkii-dodecamer" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-camkii-dodecamer</span></a> for an in depth example of CaMKII nomenclature using BNGL). The ability to model site-specific details of protein-protein interactions allows these dynamics to be captured systematically.</p>
+<p>Guided by the “don’t care, don’t write” principle at the heart of RBM modeling <span class="citation" data-cites="chylek2014Rulebased">(<a href="#ref-chylek2014Rulebased" role="doc-biblioref">Lily A. Chylek et al. 2014</a>)</span>, BNGL allows us to specify only the relevant states for a given reaction. This approach eliminates the need to define every possible state explicitly. That is, the rules determine when an implicitly defined reaction can happen and then, for any given iteration, only the states that matter for the execution of a particular reaction (or rule) are explicitly declared. States that do not matter to a particular rule can be omitted. For instance, lets consider a reaction rule where a CaMKII subunit binds to a CaM molecule (<a href="#fig-bngl-rbm-example" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-bngl-rbm-example</span></a>).</p>
+<div id="fig-bngl-rbm-example" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="BioNetGen Language rule based modelling example">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bngl-rbm-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\AB_phospho.PNG" class="img-fluid figure-img" data-fig-scap="BioNetGen Language rule based modelling example">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bngl-rbm-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: A and B molecule binding causes phosphorylation; an example of don’t care, don’t write in BNGL. The possible states of molecules A and B are defined under the molecule types block. Molecule A has a binding site (b) and a phosphorylation site (T286), which can exist in a phosphorylated (~P) or unphosphorylated (~0) state. Molecule B is defined simply with a single binding site (a). The initial states of these molecules are defined in the species block, which specifies how the molecules are introduced at the start of the simulation. Molecule A is released with its binding site (b) free (unbound to B) and its phosphorylation site in the unphosphorylated state (T286~0). Molecule B is released in a free state, unbound to molecule A. The reaction rules block defines how the molecules interact. In this example, the rule specifies that phosphorylation occurs when molecules A and B bind (indicated by the “!1” link notation). Importantly, the state of A’s phosphorylation site does not need to be explicitly stated in the rule. What is required for the reaction to occur is the binding of A and B, after which phosphorylation can take place. While this is a simple example with limited complexity, as more possible states are introduced, the value of this method becomes clearer. Note this example does not represent a complete BNGL model, as indicated by the “[…]”, which denote additional model definitions that would typically appear before and after these lines.
+</figcaption>
+</figure>
+</div>
+<p>In the example shown in <a href="#fig-bngl-rbm-example" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-bngl-rbm-example</span></a>, we don’t specify the state of T286 in the reaction rule of A and B leading to phosphorylation of the former. Instead, we only specify the states that are relevant for a specified reaction (in this case, that molecule A has a free binding site to bind with B, and vice versa) and the rest is left unspecified. In more complex models such as the one used in this thesis, this dramatically reduces the number of reactions that need to be written <span class="citation" data-cites="karp1975Computational karp1972Reducibility blazewicz2005Selected suarez2009Challenges">(<a href="#ref-karp1975Computational" role="doc-biblioref">R. M. Karp 1975</a>; <a href="#ref-karp1972Reducibility" role="doc-biblioref">Richard M. Karp 1972</a>; <a href="#ref-blazewicz2005Selected" role="doc-biblioref">Błażewicz, Formanowicz, and Kasprzak 2005</a>; <a href="#ref-suarez2009Challenges" role="doc-biblioref">Suárez and Jaramillo 2009</a>)</span>. Details of how this is done in our model are described in <a href="#sec-model-description" class="quarto-xref"><span class="quarto-unresolved-ref">sec-model-description</span></a>.</p>
+<p>Additionally, BNGL supports the inclusion of cellular compartments through its compartmental extension (cBNGL), enabling explicit modelling of the compartmental organization of the cell and its effects on system dynamics <span class="citation" data-cites="harris2009Compartmental">(<a href="#ref-harris2009Compartmental" role="doc-biblioref">Harris, Hogg, and Faeder 2009</a>)</span>. This way, we can introduce localization attributes for molecular species, as well as appropriate volumetric scaling of reaction rates. BioNetGen and its associated language BNGL have been integrated with MCell via pyBNGL, a Python library <span class="citation" data-cites="husar2022MCell4">(<a href="#ref-husar2022MCell4" role="doc-biblioref">Husar et al. 2022</a>)</span>. As we will see next, this provides further advantages when it comes to the computation problem of combinatorial complexity.</p>
+</section>
+<section id="mcell-a-tool-for-dynamic-protein-visualisation-and-modelling" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="mcell-a-tool-for-dynamic-protein-visualisation-and-modelling">MCell: A tool for dynamic protein visualisation and modelling</h3>
+<p>MCell (Monte Carlo Cell) is an agent-based (also known as particle-based) reaction-diffusion software platform designed to simulate complex biochemical processes with a focus on spatial and stochastic dynamics <span class="citation" data-cites="stiles1996Miniaturea 2000Monte kerr2008FAST husar2022MCell4">(<a href="#ref-stiles1996Miniaturea" role="doc-biblioref">Stiles et al. 1996</a>; <a href="#ref-2000Monte" role="doc-biblioref"><span>“Monte <span>Carlo Methods</span> for <span>Simulating Realistic Synaptic Microphysiology Using MCell</span>”</span> 2000</a>; <a href="#ref-kerr2008FAST" role="doc-biblioref">Kerr et al. 2008</a>; <a href="#ref-husar2022MCell4" role="doc-biblioref">Husar et al. 2022</a>)</span>. Agent-based modelling simulates the interactions of autonomous agents -such as molecules- to understand how a system behaves and to capture emergent behaviours; for example, the formation of molecular complexes, signal transduction pathways, or spatial patterning within a cell. MCell is particularly valuable for modelling biological systems where the precise location and movement of molecules are crucial, such as synaptic signalling or interactions at the cellular level studied in this PhD. To facilitate the visualisation of these complex geometries, MCell integrates with CellBlender. CellBlender is an addon for Blender, a widely used open-source 3D modelling and animation software <span class="citation" data-cites="gupta2018Spatial">(<a href="#ref-gupta2018Spatial" role="doc-biblioref">Gupta et al. 2018</a>)</span>.</p>
+<p>Reaction-based models typically rely on networks to represent chemical interactions (as discussed in <a href="#sec-complexity-systems-biology" class="quarto-xref"><span class="quarto-unresolved-ref">sec-complexity-systems-biology</span></a>), but they can become computationally expensive as system complexity grows, especially when handling large numbers of reactions or species. MCell, however, bypasses this limitation by tracking individual molecules and their interactions in real-time, only focusing on the relevant species and states. Its particle-based rule evaluation eliminates the need to construct full or partial reaction networks, both at the start and during the simulation, by concentrating solely on the molecules present, their current states, and the reactions they can participate in at any given moment. This approach, known as network-free simulation, not only reduces computational demands but also allows researchers to explore more complex and realistic biological scenarios without the constraints of predefined reaction networks.</p>
+<p>As a spatial particle-based simulator, MCell models molecules as point particles within a 3D space. Each time step of an MCell simulation, particles can move, interact with other particles or surfaces, and undergo bimolecular and/or unimolecular reactions. Briefly, MCell operates as follows: as a volume molecule diffuses, all molecules within a given radius along its trajectory, or at the point of collision on a surface, are considered for a reaction. For surface molecules (in membranes), the molecule first diffuses, and then its neighbours are evaluated for reaction <a href="#fig-mcell-works" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-mcell-works</span></a>. Moreover, MCell allows defining arbitrary geometry, and complex models such as a 180μm3 3DEM reconstruction of hippocampal neuropil have been used to construct a geometrically-precise simulation of 100s of neuronal synapses at once <span class="citation" data-cites="bartol2015Computational">(<a href="#ref-bartol2015Computational" role="doc-biblioref">Bartol et al. 2015</a>)</span>. A detailed description of mathematical foundations of MCell’s algorithms can be found here <span class="citation" data-cites="bartol2000Monte kerr2008FAST">(<a href="#ref-bartol2000Monte" role="doc-biblioref">Bartol and Stiles 2000</a>; <a href="#ref-kerr2008FAST" role="doc-biblioref">Kerr et al. 2008</a>)</span></p>
+<div id="fig-mcell-works" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="MCell simplified schematic to understand how particle collision works">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mcell-works-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\mcell_works.PNG" class="img-fluid figure-img" style="width:85.0%" data-fig-scap="MCell simplified schematic to understand how particle collision works">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mcell-works-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.3: MCell simplified schematic to understand how particle collision works. At time zero, molecules are released into a 3D space (represented by a blue circle), and they begin to diffuse according to specified diffusion coefficients (not shown). Over time, if molecules A and B collide, they are considered for a reaction, in this case, where A and B combine to form molecule C, with kinetic rates kon and koff.
+</figcaption>
+</figure>
+</div>
+<p>MCell software employs stochastic Monte Carlo algorithms, which rely on random sampling to simulate the behaviour of molecules. This stochastic approach makes MCell particularly effective for capturing the inherent randomness found in biological systems, previously discussed in <a href="#sec-how-do-we-model" class="quarto-xref"><span class="quarto-unresolved-ref">sec-how-do-we-model</span></a>. MCell can model the diffusion of molecules within cellular compartments and the probabilistic interactions between proteins, making it a powerful tool for studying phenomena where small fluctuations can have significant impacts, such as in the postsynaptic signalling pathways studied in this thesis.</p>
+<p>MCell4 (version 4, the one used here) also provides a versatile Python interface. This recently implemented Python interface allows for greater ease in scripting and model construction, making it more user-friendly and adaptable for researchers <span class="citation" data-cites="husar2022MCell4">(<a href="#ref-husar2022MCell4" role="doc-biblioref">Husar et al. 2022</a>)</span>. Additionally, the newly created BioNetGen Library for python (pyBNG) allows direct loading and parsing of a BNG model into MCell. This allows for the creation of models that capture multimeric structures, site-specific binding properties, and the dynamic interactions of proteins over time and space <span class="citation" data-cites="husar2022MCell4">(<a href="#ref-husar2022MCell4" role="doc-biblioref">Husar et al. 2022</a>)</span>. Next, we provide a more detailed discussion emphasizing how this approach supports the goals of this PhD project.</p>
+<section id="mcell-and-bionetgen-integration" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="mcell-and-bionetgen-integration">MCell and BioNetGen integration</h4>
+<p>The main components of MCell4 (henceforth MCell), which enable interaction between various libraries and engines, include: a PyMCell library which offers a Python interface and contains classes to manage the model representation. The MCell4 engine, responsible for executing simulation algorithms, and a pyBNG library, which provides methods for resolving BioNetGen reactions <a href="#fig-mcellparsing" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-mcellparsing</span></a>.</p>
+<div id="fig-mcellparsing" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="MCell components">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mcellparsing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\mcellparsing.PNG" class="img-fluid figure-img" style="width:70.0%" data-fig-scap="MCell components">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mcellparsing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.4: The MCell4 (version used in this PhD) components that allow for integration between different libraries and engines. PyMCell Library allows for python interface for model representation. The MCell4 engine implements simulation algorithms through a scheduler that keeps track of events to be run in each iteration. The pyBNG library provides methods to resolve BioNetGen reactions using python scripts. Figure modified from <span class="citation" data-cites="husar2022MCell4">Husar et al. (<a href="#ref-husar2022MCell4" role="doc-biblioref">2022</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<p>A model can be defined using BNGL, where molecular interactions are specified through detailed rules and reactions. This model can then be parsed using the pyBNG library, allowing Python scripts to handle the BNGL files and initiate simulations with MCell. Python scripts play a crucial role in this workflow. They are not only responsible for parsing BNGL files but also for defining the cellular geometry and setting parameters required for MCell simulations. Once the simulation is executed in MCell, the output is generated in the form of data files, containing time-series data on molecular concentrations and dynamics as dictated by the initial reactions <a href="#fig-input-output" class="quarto-xref">see&nbsp;<span class="quarto-unresolved-ref ref-noprefix">fig-input-output</span></a>.</p>
+<p>To illustrate the integration between MCell and BioNetGen using python scripts, see <a href="#fig-bngl-workflow" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-bngl-workflow</span></a>, where a BNGL file defines species, reaction rules, molecule released and compartments. These elements are then imported into MCell, as shown in <a href="#fig-mcell-workflow" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-mcell-workflow</span></a>, through a python script that “calls” the BNGL file to run it through MCell, using the mechanisms described in <a href="#fig-mcellparsing" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-mcellparsing</span></a>.</p>
+<p>Standard BNGL files, such as the one shown in <a href="#fig-bngl-workflow" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-bngl-workflow</span></a>, are compatible with tools like BioNetGen itself, which enables rapid validation of a reaction network using BioNetGen’s ODE or SSA solver or other analysis tools <span class="citation" data-cites="harris2016BioNetGena">(<a href="#ref-harris2016BioNetGena" role="doc-biblioref">Harris et al. 2016</a>)</span>. This method allows the model to be directly compared with spatial simulation results in MCell4, eliminating the need of creating multiple versions of the same model. This integration of tools not only provides a more accurate depiction of cellular dynamics but also enhances reproducibility, as the Python scripting enables the simulations to be replicated and adjusted easily. While this overview provides a general understanding of the model’s inputs and outputs, specific methodological details will be elaborated in <a href="#sec-model-description" class="quarto-xref"><span class="quarto-unresolved-ref">sec-model-description</span></a>.</p>
+<p>For a simpler but more comprehensive model that incorporates detailed compartments and cell geometry, you can access, download and execute the code here <a href="https://github.com/Susana465/test_ABC">TEST_ABC</a>. This repository includes a set of models where spatial features are taken into consideration, and a thorough README is provided with step-by-step instructions that are beyond the scope of this introduction chapter.</p>
+<p>Altogether, the integration of MCell and BioNetGen provides a robust framework for addressing key challenges in this PhD project. BioNetGen’s rule-based modelling approach effectively addresses the specification problem arising from the combinatorial complexity of the biochemical systems under study. By enabling the concise representation of CaMKII as a multimeric molecule and its interactions with other multimeric proteins, BioNetGen simplifies the modelling process. MCell complements this by allowing these molecular interactions to be modelled within spatially defined geometries. Additionally, the data output from simulations can be further analysed and interpreted to explore key behavioural patterns, quantify interaction dynamics, and assess model accuracy, providing a deeper understanding of the system’s behaviour. The particle-based, network-free simulation capabilities of MCell are critically helpful for addressing the computational challenges associated with the combinatorial complexity of CaMKII. Moreover, MCell enables the stochastic modelling of molecules within defined environments, such as dendritic spines, providing advantages that are key for studying the stochastic dynamics relevant to this research.</p>
+<div id="fig-workflow" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workflow" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-bngl-workflow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-bngl-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\mcell4BNGLworkflow.PNG" class="img-fluid figure-img" style="width:70.0%" data-ref-parent="fig-workflow">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bngl-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) An example BNGL model file titled “ABC.bngl” includes initial parameters, defined compartments, and species within those compartments. It also contains a simple reaction rule, where A + B produces C, and the reverse reaction is also possible.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workflow" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-mcell-workflow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mcell-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\mcell4BNGLworkflow2.PNG" class="img-fluid figure-img" style="width:70.0%" data-ref-parent="fig-workflow">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mcell-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) The Python file run_model.py imports mcell as a module via the PyMCell library. This script loads the BNGL file shown in (a), where the entire BNGL file is read, the model is initialised and run for 10 iterations. Specific parts of the BNGL file, such as reaction rules or compartment and molecule release information, can be loaded. BNGL compartments can be replaced with actual 3D geometry.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.5: BNGL and PyMCell workflow.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="birds-eye-view-of-model-inputs-and-outputs" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="birds-eye-view-of-model-inputs-and-outputs">Birds eye view of model inputs and outputs</h4>
+<p>To provide an overview of the implementation of model files (<a href="#fig-workflow" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-workflow</span></a>) and to clarify the overall process of what goes into a model and what is generated, see a simplified illustration in (<a href="#fig-input-output" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-input-output</span></a>). The inputs to the model are the model files, which are written in the chosen modelling language, such as Python or BioNetGen. These input files include the reaction rules, the definitions of molecular species, and other parameters that define the model. The molecular interactions defined in these models are executed and simulated within a 3D environment, and an output is produced, typically displaying changes in molecular concentrations over time.</p>
+<p>In the context of this PhD, this involves constructing a model that defines CaMKII and NMDAR interactions, along with other relevant molecules (detailed in <a href="#sec-model-description" class="quarto-xref"><span class="quarto-unresolved-ref">sec-model-description</span></a>). These interactions are simulated within a postsynaptic dendritic volume, and the resulting data captures the variations in molecular concentrations over time. Capturing the variations in molecular concentrations over time allows for a detailed analysis of the kinetics of these interactions, providing insights into the rates and mechanisms of biochemical reactions at a level of precision that is challenging to achieve experimentally. This information can then reveal how specific molecular dynamics contribute to larger-scale cellular behaviours like LTP for understanding how learning and memory work. Additionally, understanding the chemical properties of the reactions involved, including binding affinities, reaction rates, and diffusion characteristics, can aid in predicting how changes at the molecular level may impact the overall function of the synapse.</p>
+<div id="fig-workflow" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workflow" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-input-output" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-input-output-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\inputoutput.PNG" class="img-fluid figure-img" style="width:90.0%" data-ref-parent="fig-workflow">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-input-output-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) What goes in and what comes out when modelling. An overview of input and output workflow of models in this project. Input files define the model, which is run to simulate difussion of molecules in a 3D space, to give an output of molecular concetrations across time.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-workflow" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-input-output2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-input-output2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="30-modelling-figures\inputoutput2.PNG" class="img-fluid figure-img" style="width:90.0%" data-ref-parent="fig-workflow">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-input-output2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) There are alternative workflows for modelling and visualisation. BioNetGen uses .BNGL files to define biochemical reactions. MCell uses .py files. Outputs from either path can be visualised as graphs of molecular concentration over time or as 3D spatial distributions in CellBlender. The arrows emphasise the flexible flow between tools, showing how BioNetGen and MCell outputs can be independently or jointly visualised to provide both temporal and spatial insights into molecular dynamics.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.6: Modelling workflow.
+</figcaption>
+</figure>
+</div>
+<p>Not only can BioNetGen and MCell can be integrated and used together via the Python API, but the models created here can, in theory, be further integrated with software that supports Systems Biology Markup Language (SBML), a widely recognised standard for representing biological models. SBML enables the translation and integration of models written in different formats, allowing them to be executed across a range of software platforms <span class="citation" data-cites="hucka2003Systems keating2020SBML">(<a href="#ref-hucka2003Systems" role="doc-biblioref">Hucka et al. 2003</a>; <a href="#ref-keating2020SBML" role="doc-biblioref">Keating et al. 2020</a>)</span>. As a well-established standard, SBML is frequently used to describe chemical reaction networks, such as those involved in metabolic processes or cell signalling pathways. Critically, BioNetGen can export models written in BNGL to the SBML format. This export capability allows for the conversion of rule-based BNGL models into a format that is compatible with SBML-supporting tools, increasing the flexibility of what future researchers can do with models like this one.</p>
+<p>The ability to export BioNetGen models to SBML not only enhances interoperability but also aligns with key principles of reproducible and open science. This is particularly relevant to the FAIR (Findable, Accessible, Interoperable, and Reusable) principles for research, which are central to fostering transparency and collaboration in computational biology. The following chapter builds on these concepts, discussing how this project embeds openness, reproducibility, and responsible research practices.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bartocci2016Computational" class="csl-entry" role="listitem">
+Bartocci, Ezio, and Pietro Lió. 2016. <span>“Computational <span>Modeling</span>, <span>Formal Analysis</span>, and <span>Tools</span> for <span>Systems Biology</span>.”</span> <em>PLOS Computational Biology</em> 12 (1): e1004591. <a href="https://doi.org/10.1371/journal.pcbi.1004591">https://doi.org/10.1371/journal.pcbi.1004591</a>.
+</div>
+<div id="ref-bartol2015Computational" class="csl-entry" role="listitem">
+Bartol, Thomas M., Daniel X. Keller, Justin P. Kinney, Chandrajit L. Bajaj, Kristen M. Harris, Terrence J. Sejnowski, and Mary B. Kennedy. 2015. <span>“Computational Reconstitution of Spine Calcium Transients from Individual Proteins.”</span> <em>Frontiers in Synaptic Neuroscience</em> 7. <a href="https://www.frontiersin.org/articles/10.3389/fnsyn.2015.00017">https://www.frontiersin.org/articles/10.3389/fnsyn.2015.00017</a>.
+</div>
+<div id="ref-bartol2000Monte" class="csl-entry" role="listitem">
+Bartol, Thomas M., and Joel R Stiles. 2000. <em>Monte <span>Carlo Methods</span> for <span>Simulating Realistic Synaptic Microphysiology Using MCell</span></em>. Vol. chapter 4. CRC Press. <a href="https://books.google.com?id=8TLpBwAAQBAJ">https://books.google.com?id=8TLpBwAAQBAJ</a>.
+</div>
+<div id="ref-besozzi2016ReactionBased" class="csl-entry" role="listitem">
+Besozzi, Daniela. 2016. <span>“Reaction-<span>Based Models</span> of <span>Biochemical Networks</span>.”</span> In <em>Pursuit of the <span>Universal</span></em>, edited by Arnold Beckmann, Laurent Bienvenu, and Nataša Jonoska, 24–34. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-40189-8_3">https://doi.org/10.1007/978-3-319-40189-8_3</a>.
+</div>
+<div id="ref-2015Biochemical" class="csl-entry" role="listitem">
+<span>“Biochemical Principles Underlying the Stable Maintenance of <span>LTP</span> by the <span>CaMKII</span>/<span>NMDAR</span> Complex.”</span> 2015. <em>Brain Research</em> 1621 (September): 51–61. <a href="https://doi.org/10.1016/j.brainres.2014.12.010">https://doi.org/10.1016/j.brainres.2014.12.010</a>.
+</div>
+<div id="ref-blazewicz2005Selected" class="csl-entry" role="listitem">
+Błażewicz, Jacek, Piotr Formanowicz, and Marta Kasprzak. 2005. <span>“Selected Combinatorial Problems of Computational Biology.”</span> <em>European Journal of Operational Research</em> 161 (3): 585–97. <a href="https://doi.org/10.1016/j.ejor.2003.10.054">https://doi.org/10.1016/j.ejor.2003.10.054</a>.
+</div>
+<div id="ref-boutillier2018Kappa" class="csl-entry" role="listitem">
+Boutillier, Pierre, Mutaamba Maasha, Xing Li, Héctor F Medina-Abarca, Jean Krivine, Jérôme Feret, Ioana Cristescu, Angus G Forbes, and Walter Fontana. 2018. <span>“The <span>Kappa</span> Platform for Rule-Based Modeling.”</span> <em>Bioinformatics</em> 34 (13): i583–92. <a href="https://doi.org/10.1093/bioinformatics/bty272">https://doi.org/10.1093/bioinformatics/bty272</a>.
+</div>
+<div id="ref-brodland2015How" class="csl-entry" role="listitem">
+Brodland, G. Wayne. 2015. <span>“How Computational Models Can Help Unlock Biological Systems.”</span> <em>Seminars in Cell &amp; Developmental Biology</em>, Coding and non-coding <span>RNAs</span> &amp; <span>Mammalian</span> development, 47–48 (December): 62–73. <a href="https://doi.org/10.1016/j.semcdb.2015.07.001">https://doi.org/10.1016/j.semcdb.2015.07.001</a>.
+</div>
+<div id="ref-byrne2013How" class="csl-entry" role="listitem">
+Byrne, Michael D. 2013. <span>“How <span>Many Times Should</span> a <span>Stochastic Model Be Run</span>? <span>An Approach Based</span> on <span>Confidence Intervals</span>.”</span> In <em>Proceedings of the 12th <span>International</span> Conference on Cognitive Modeling</em>.
+</div>
+<div id="ref-changeux2005Allosteric" class="csl-entry" role="listitem">
+Changeux, Jean-Pierre, and Stuart J. Edelstein. 2005. <span>“Allosteric <span>Mechanisms</span> of <span>Signal Transduction</span>.”</span> <em>Science</em> 308 (5727): 1424–28. <a href="https://doi.org/10.1126/science.1108595">https://doi.org/10.1126/science.1108595</a>.
+</div>
+<div id="ref-chylek2014Rulebased" class="csl-entry" role="listitem">
+Chylek, Lily A., Leonard A. Harris, Chang-Shung Tung, James R. Faeder, Carlos F. Lopez, and William S. Hlavacek. 2014. <span>“Rule-Based Modeling: A Computational Approach for Studying Biomolecular Site Dynamics in Cell Signaling Systems.”</span> <em>WIREs Systems Biology and Medicine</em> 6 (1): 13–36. <a href="https://doi.org/10.1002/wsbm.1245">https://doi.org/10.1002/wsbm.1245</a>.
+</div>
+<div id="ref-chylek2015Modeling" class="csl-entry" role="listitem">
+Chylek, Lily A, Leonard A Harris, James R Faeder, and William S Hlavacek. 2015. <span>“Modeling for (Physical) Biologists: An Introduction to the Rule-Based Approach.”</span> <em>Phys. Biol.</em> 12 (4): 045007. <a href="https://doi.org/10.1088/1478-3975/12/4/045007">https://doi.org/10.1088/1478-3975/12/4/045007</a>.
+</div>
+<div id="ref-cook2009Programmability" class="csl-entry" role="listitem">
+Cook, Matthew, David Soloveichik, Erik Winfree, and Jehoshua Bruck. 2009. <span>“Programmability of&nbsp;<span>Chemical Reaction Networks</span>.”</span> In <em>Algorithmic <span>Bioprocesses</span></em>, edited by Anne Condon, David Harel, Joost N. Kok, Arto Salomaa, and Erik Winfree, 543–84. Berlin, Heidelberg: Springer. <a href="https://doi.org/10.1007/978-3-540-88869-7_27">https://doi.org/10.1007/978-3-540-88869-7_27</a>.
+</div>
+<div id="ref-demopoulos2025Chaos" class="csl-entry" role="listitem">
+Demopoulos, Nikos. 2025. <span>“From <span>Chaos</span> to <span>Order</span>: <span>A Stochastic Approach</span> to <span>Self Organizing Systems</span>.”</span> February 21, 2025. <a href="https://doi.org/10.20944/preprints202502.1719.v1">https://doi.org/10.20944/preprints202502.1719.v1</a>.
+</div>
+<div id="ref-dhont2019Psychology" class="csl-entry" role="listitem">
+Dhont, Kristof, Gordon Hodson, Ana C. Leite, and Alina Salmen. 2019. <span>“The <span>Psychology</span> of <span>Speciesism</span>.”</span> In <em>Why <span>We Love</span> and <span>Exploit Animals</span></em>. Routledge.
+</div>
+<div id="ref-dominguez-oliva2023Importance" class="csl-entry" role="listitem">
+Domínguez-Oliva, Adriana, Ismael Hernández-Ávalos, Julio Martínez-Burnes, Adriana Olmos-Hernández, Antonio Verduzco-Mendoza, and Daniel Mota-Rojas. 2023. <span>“The <span>Importance</span> of <span>Animal Models</span> in <span>Biomedical Research</span>: <span>Current Insights</span> and <span>Applications</span>.”</span> <em>Animals</em> 13 (7, 7): 1223. <a href="https://doi.org/10.3390/ani13071223">https://doi.org/10.3390/ani13071223</a>.
+</div>
+<div id="ref-earnest2018Simulating" class="csl-entry" role="listitem">
+Earnest, Tyler M, John A Cole, and Zaida Luthey-Schulten. 2018. <span>“Simulating Biological Processes: Stochastic Physics from Whole Cells to Colonies.”</span> <em>Rep. Prog. Phys.</em> 81 (5): 052601. <a href="https://doi.org/10.1088/1361-6633/aaae2c">https://doi.org/10.1088/1361-6633/aaae2c</a>.
+</div>
+<div id="ref-faeder2009Rulebased" class="csl-entry" role="listitem">
+Faeder, James R., Michael L. Blinov, and William S. Hlavacek. 2009. <span>“Rule-Based Modeling of Biochemical Systems with <span>BioNetGen</span>.”</span> <em>Methods Mol Biol</em> 500: 113–67. <a href="https://doi.org/10.1007/978-1-59745-525-1_5">https://doi.org/10.1007/978-1-59745-525-1_5</a>.
+</div>
+<div id="ref-ghosh2011Software" class="csl-entry" role="listitem">
+Ghosh, Samik, Yukiko Matsuoka, Yoshiyuki Asai, Kun-Yi Hsin, and Hiroaki Kitano. 2011. <span>“Software for Systems Biology: From Tools to Integrated Platforms.”</span> <em>Nat Rev Genet</em> 12 (12): 821–32. <a href="https://doi.org/10.1038/nrg3096">https://doi.org/10.1038/nrg3096</a>.
+</div>
+<div id="ref-gillespie2007Stochastic" class="csl-entry" role="listitem">
+Gillespie, Daniel T. 2007. <span>“Stochastic <span>Simulation</span> of <span>Chemical Kinetics</span>.”</span> <em>Annual Review of Physical Chemistry</em> 58 (May): 35–55. <a href="https://doi.org/10.1146/annurev.physchem.58.032806.104637">https://doi.org/10.1146/annurev.physchem.58.032806.104637</a>.
+</div>
+<div id="ref-gomperts2009Signal" class="csl-entry" role="listitem">
+Gomperts, B. D., Peter E. R. Tatham, and Ijsbrand M. Kramer. 2009. <em>Signal <span>Transduction</span></em>. Elsevier/Academic Press. <a href="https://books.google.com?id=5ZvNngEACAAJ">https://books.google.com?id=5ZvNngEACAAJ</a>.
+</div>
+<div id="ref-gupta2018Spatial" class="csl-entry" role="listitem">
+Gupta, Sanjana, Jacob Czech, Robert Kuczewski, Thomas M. Bartol, Terrence J. Sejnowski, Robin E. C. Lee, and James R. Faeder. 2018. <span>“Spatial <span>Stochastic Modeling</span> with <span>MCell</span> and <span>CellBlender</span>.”</span> September 30, 2018. <a href="https://doi.org/10.48550/arXiv.1810.00499">https://doi.org/10.48550/arXiv.1810.00499</a>.
+</div>
+<div id="ref-harris2009Compartmental" class="csl-entry" role="listitem">
+Harris, Leonard A., Justin S. Hogg, and James R. Faeder. 2009. <span>“Compartmental Rule-Based Modeling of Biochemical Systems.”</span> In <em>Proceedings of the 2009 <span>Winter Simulation Conference</span> (<span>WSC</span>)</em>, 908–19. <a href="https://doi.org/10.1109/WSC.2009.5429719">https://doi.org/10.1109/WSC.2009.5429719</a>.
+</div>
+<div id="ref-harris2016BioNetGena" class="csl-entry" role="listitem">
+Harris, Leonard A., Justin S. Hogg, José-Juan Tapia, John A. P. Sekar, Sanjana Gupta, Ilya Korsunsky, Arshi Arora, Dipak Barua, Robert P. Sheehan, and James R. Faeder. 2016. <span>“<span>BioNetGen</span> 2.2: Advances in Rule-Based Modeling.”</span> <em>Bioinformatics</em> 32 (21): 3366–68. <a href="https://doi.org/10.1093/bioinformatics/btw469">https://doi.org/10.1093/bioinformatics/btw469</a>.
+</div>
+<div id="ref-hassan2023Perspectives" class="csl-entry" role="listitem">
+Hassan, Sa’adah, Novia Indriaty Admodisastro, Hazura Zulzalil, and Mohd Hafeez Osman. 2023. <span>“The <span>Perspectives</span> on <span>Developing</span> a <span>Conceptual Model</span> for <span>Exploring Emergent Behaviors</span> in <span>Complex Systems</span>.”</span> In <em>Proceedings of the 9th <span>International Conference</span> on <span>Computational Science</span> and <span>Technology</span></em>, edited by Dae-Ki Kang, Rayner Alfred, Zamhar Iswandono Bin Awang Ismail, Aslina Baharum, and Vinesh Thiruchelvam, 501–15. Singapore: Springer Nature. <a href="https://doi.org/10.1007/978-981-19-8406-8_40">https://doi.org/10.1007/978-981-19-8406-8_40</a>.
+</div>
+<div id="ref-hoops2016Chapter" class="csl-entry" role="listitem">
+Hoops, Stefan, Raquel Hontecillas, Vida Abedi, Andrew Leber, Casandra Philipson, Adria Carbo, and Josep Bassaganya-Riera. 2016. <span>“Chapter 5 - <span>Ordinary Differential Equations</span> (<span>ODEs</span>) <span>Based Modeling</span>.”</span> In <em>Computational <span>Immunology</span></em>, edited by Josep Bassaganya-Riera, 63–78. Academic Press. <a href="https://doi.org/10.1016/B978-0-12-803697-6.00005-9">https://doi.org/10.1016/B978-0-12-803697-6.00005-9</a>.
+</div>
+<div id="ref-hucka2003Systems" class="csl-entry" role="listitem">
+Hucka, M., A. Finney, H. M. Sauro, H. Bolouri, J. C. Doyle, H. Kitano, A. P. Arkin, et al. 2003. <span>“The Systems Biology Markup Language (<span>SBML</span>): A Medium for Representation and Exchange of Biochemical Network Models.”</span> <em>Bioinformatics</em> 19 (4): 524–31. <a href="https://doi.org/10.1093/bioinformatics/btg015">https://doi.org/10.1093/bioinformatics/btg015</a>.
+</div>
+<div id="ref-hunter2000Signaling" class="csl-entry" role="listitem">
+Hunter, Tony. 2000. <span>“Signaling—2000 and <span>Beyond</span>.”</span> <em>Cell</em> 100 (February): 113–27. <a href="https://doi.org/10.1016/S0092-8674(00)81688-8">https://doi.org/10.1016/S0092-8674(00)81688-8</a>.
+</div>
+<div id="ref-husar2022MCell4" class="csl-entry" role="listitem">
+Husar, Adam, Mariam Ordyan, Guadalupe C. Garcia, Joel G. Yancey, Ali S. Saglam, James R. Faeder, Thomas M. Bartol, and Terrence J. Sejnowski. 2022. <span>“<span>MCell4</span> with <span>BioNetGen</span>: <span>A Monte Carlo Simulator</span> of <span>Rule-Based Reaction-Diffusion Systems</span> with <span>Python Interface</span>.”</span> May 19, 2022. <a href="https://doi.org/10.1101/2022.05.17.492333">https://doi.org/10.1101/2022.05.17.492333</a>.
+</div>
+<div id="ref-jaquet2021Debunking" class="csl-entry" role="listitem">
+Jaquet, François. 2021. <span>“A Debunking Argument Against Speciesism.”</span> <em>Synthese</em> 198 (2): 1011–27. <a href="https://doi.org/10.1007/s11229-019-02080-5">https://doi.org/10.1007/s11229-019-02080-5</a>.
+</div>
+<div id="ref-johnson2021Quantifying" class="csl-entry" role="listitem">
+Johnson, M. E., A. Chen, J. R. Faeder, P. Henning, I. I. Moraru, M. Meier-Schellersheim, R. F. Murphy, T. Prüstel, J. A. Theriot, and A. M. Uhrmacher. 2021. <span>“Quantifying the Roles of Space and Stochasticity in Computer Simulations for Cell Biology and Cellular Biochemistry.”</span> <em>MBoC</em> 32 (2): 186–210. <a href="https://doi.org/10.1091/mbc.E20-08-0530">https://doi.org/10.1091/mbc.E20-08-0530</a>.
+</div>
+<div id="ref-karp1975Computational" class="csl-entry" role="listitem">
+Karp, R. M. 1975. <span>“On the <span>Computational Complexity</span> of <span>Combinatorial Problems</span>.”</span> <em>Networks</em> 5 (1): 45–68. <a href="https://doi.org/10.1002/net.1975.5.1.45">https://doi.org/10.1002/net.1975.5.1.45</a>.
+</div>
+<div id="ref-karp1972Reducibility" class="csl-entry" role="listitem">
+Karp, Richard M. 1972. <span>“Reducibility Among <span>Combinatorial Problems</span>.”</span> In <em>Complexity of <span>Computer Computations</span>: <span>Proceedings</span> of a Symposium on the <span>Complexity</span> of <span>Computer Computations</span>, Held <span>March</span> 20–22, 1972, at the <span>IBM Thomas J</span>. <span>Watson Research Center</span>, <span>Yorktown Heights</span>, <span>New York</span>, and Sponsored by the <span>Office</span> of <span>Naval Research</span>, <span>Mathematics Program</span>, <span>IBM World Trade Corporation</span>, and the <span>IBM Research Mathematical Sciences Department</span></em>, edited by Raymond E. Miller, James W. Thatcher, and Jean D. Bohlinger, 85–103. Boston, MA: Springer US. <a href="https://doi.org/10.1007/978-1-4684-2001-2_9">https://doi.org/10.1007/978-1-4684-2001-2_9</a>.
+</div>
+<div id="ref-kaur2021Computational" class="csl-entry" role="listitem">
+Kaur, Parampreet, and Gurjot Singh Gaba. 2021. <span>“Computational <span>Neuroscience Models</span> and <span>Tools</span>: <span>A Review</span>.”</span> In <em>Bio-Inspired <span>Neurocomputing</span></em>, edited by Akash Kumar Bhoi, Pradeep Kumar Mallick, Chuan-Ming Liu, and Valentina E. Balas, 403–17. Singapore: Springer. <a href="https://doi.org/10.1007/978-981-15-5495-7_22">https://doi.org/10.1007/978-981-15-5495-7_22</a>.
+</div>
+<div id="ref-keating2020SBML" class="csl-entry" role="listitem">
+Keating, Sarah M, Dagmar Waltemath, Matthias König, Fengkai Zhang, Andreas Dräger, Claudine Chaouiya, Frank T Bergmann, et al. 2020. <span>“<span>SBML Level</span> 3: An Extensible Format for the Exchange and Reuse of Biological Models.”</span> <em>Molecular Systems Biology</em> 16 (8): e9110. <a href="https://doi.org/10.15252/msb.20199110">https://doi.org/10.15252/msb.20199110</a>.
+</div>
+<div id="ref-kerr2008FAST" class="csl-entry" role="listitem">
+Kerr, Rex A., Thomas M. Bartol, Boris Kaminsky, Markus Dittrich, Jen-Chien Jack Chang, Scott B. Baden, Terrence J. Sejnowski, and Joel R. Stiles. 2008. <span>“<span>FAST MONTE CARLO SIMULATION METHODS FOR BIOLOGICAL REACTION-DIFFUSION SYSTEMS IN SOLUTION AND ON SURFACES</span>.”</span> <em>SIAM J Sci Comput</em> 30 (6): 3126. <a href="https://doi.org/10.1137/070692017">https://doi.org/10.1137/070692017</a>.
+</div>
+<div id="ref-klamt2002Combinatorial" class="csl-entry" role="listitem">
+Klamt, Steffen, and Jörg Stelling. 2002. <span>“Combinatorial <span>Complexity</span> of <span>Pathway Analysis</span> in <span>Metabolic Networks</span>.”</span> <em>Mol Biol Rep</em> 29 (1): 233–36. <a href="https://doi.org/10.1023/A:1020390132244">https://doi.org/10.1023/A:1020390132244</a>.
+</div>
+<div id="ref-kohl2011Standards" class="csl-entry" role="listitem">
+Kohl, Michael. 2011. <span>“Standards, <span>Databases</span>, and <span>Modeling Tools</span> in <span>Systems Biology</span>.”</span> In <em>Data <span>Mining</span> in <span>Proteomics</span>: <span>From Standards</span> to <span>Applications</span></em>, edited by Michael Hamacher, Martin Eisenacher, and Christian Stephan, 413–27. Totowa, NJ: Humana Press. <a href="https://doi.org/10.1007/978-1-60761-987-1_26">https://doi.org/10.1007/978-1-60761-987-1_26</a>.
+</div>
+<div id="ref-lafollette1995Utilizing" class="csl-entry" role="listitem">
+LaFOLLETTE, Hugh, and Niall Shanks. 1995. <span>“Util-Izing <span>Animals</span>.”</span> <em>Journal of Applied Philosophy</em> 12 (1): 13–25. <a href="https://doi.org/10.1111/j.1468-5930.1995.tb00116.x">https://doi.org/10.1111/j.1468-5930.1995.tb00116.x</a>.
+</div>
+<div id="ref-levenstein2023Role" class="csl-entry" role="listitem">
+Levenstein, Daniel, Veronica A. Alvarez, Asohan Amarasingham, Habiba Azab, Zhe S. Chen, Richard C. Gerkin, Andrea Hasenstaub, et al. 2023. <span>“On the <span>Role</span> of <span>Theory</span> and <span>Modeling</span> in <span>Neuroscience</span>.”</span> <em>J. Neurosci.</em> 43 (7): 1074–88. <a href="https://doi.org/10.1523/JNEUROSCI.1179-22.2022">https://doi.org/10.1523/JNEUROSCI.1179-22.2022</a>.
+</div>
+<div id="ref-lopez2013Programming" class="csl-entry" role="listitem">
+Lopez, Carlos F, Jeremy L Muhlich, John A Bachman, and Peter K Sorger. 2013. <span>“Programming Biological Models in <span>Python</span> Using <span>PySB</span>.”</span> <em>Molecular Systems Biology</em> 9 (1): 646. <a href="https://doi.org/10.1038/msb.2013.1">https://doi.org/10.1038/msb.2013.1</a>.
+</div>
+<div id="ref-madden2020Review" class="csl-entry" role="listitem">
+Madden, Judith C., Steven J. Enoch, Alicia Paini, and Mark T. D. Cronin. 2020. <span>“A <span>Review</span> of <span>In Silico Tools</span> as <span>Alternatives</span> to <span>Animal Testing</span>: <span>Principles</span>, <span>Resources</span> and <span>Applications</span>.”</span> <em>Altern Lab Anim</em> 48 (4): 146–72. <a href="https://doi.org/10.1177/0261192920965977">https://doi.org/10.1177/0261192920965977</a>.
+</div>
+<div id="ref-maly2009Introduction" class="csl-entry" role="listitem">
+Maly, Ivan V. 2009. <span>“Introduction: A Practical Guide to the Systems Approach in Biology.”</span> <em>Methods Mol Biol</em> 500: 3–13. <a href="https://doi.org/10.1007/978-1-59745-525-1_1">https://doi.org/10.1007/978-1-59745-525-1_1</a>.
+</div>
+<div id="ref-marchetti2017Simulation" class="csl-entry" role="listitem">
+Marchetti, Luca, Corrado Priami, and Vo Hong Thanh. 2017. <em>Simulation <span>Algorithms</span> for <span>Computational Systems Biology</span></em>. 1st ed. Springer Publishing Company, Incorporated.
+</div>
+<div id="ref-marin2019Kinetics" class="csl-entry" role="listitem">
+Marin, Guy B., Gregory S. Yablonsky, and Denis Constales. 2019. <em>Kinetics of <span>Chemical Reactions</span>: <span>Decoding Complexity</span></em>. John Wiley &amp; Sons. <a href="https://books.google.com?id=v357DwAAQBAJ">https://books.google.com?id=v357DwAAQBAJ</a>.
+</div>
+<div id="ref-mazo2008PROBABILITY" class="csl-entry" role="listitem">
+Mazo, Robert M. 2008. <span>“<span>PROBABILITY THEORY</span>.”</span> In <em>Brownian <span>Motion</span>: <span>Fluctuations</span>, <span>Dynamics</span>, and <span>Applications</span></em>, edited by Robert M. Mazo, 0. Oxford University Press. <a href="https://doi.org/10.1093/acprof:oso/9780199556441.003.0002">https://doi.org/10.1093/acprof:oso/9780199556441.003.0002</a>.
+</div>
+<div id="ref-2000Monte" class="csl-entry" role="listitem">
+<span>“Monte <span>Carlo Methods</span> for <span>Simulating Realistic Synaptic Microphysiology Using MCell</span>.”</span> 2000. In <em>Computational <span>Neuroscience</span></em>. CRC Press.
+</div>
+<div id="ref-mukherjee2022Role" class="csl-entry" role="listitem">
+Mukherjee, P., S. Roy, D. Ghosh, and S. K. Nandi. 2022. <span>“Role of Animal Models in Biomedical Research: A Review.”</span> <em>Laboratory Animal Research</em> 38 (1): 18. <a href="https://doi.org/10.1186/s42826-022-00128-1">https://doi.org/10.1186/s42826-022-00128-1</a>.
+</div>
+<div id="ref-nicoll2023Synapticc" class="csl-entry" role="listitem">
+Nicoll, Roger A., and Howard Schulman. 2023. <span>“Synaptic Memory and <span>CaMKII</span>.”</span> <em>Physiological Reviews</em> 103 (4): 2897–2945. <a href="https://doi.org/10.1152/physrev.00034.2022">https://doi.org/10.1152/physrev.00034.2022</a>.
+</div>
+<div id="ref-noble2002Rise" class="csl-entry" role="listitem">
+Noble, Denis. 2002. <span>“The Rise of Computational Biology.”</span> <em>Nat Rev Mol Cell Biol</em> 3 (6): 459–63. <a href="https://doi.org/10.1038/nrm810">https://doi.org/10.1038/nrm810</a>.
+</div>
+<div id="ref-olivier2016Modeling" class="csl-entry" role="listitem">
+Olivier, Brett G., Maciej J. Swat, and Martijn J. Moné. 2016. <span>“Modeling and <span>Simulation Tools</span>: <span>From Systems Biology</span> to <span>Systems Medicine</span>.”</span> In <em>Systems <span>Medicine</span></em>, edited by Ulf Schmitz and Olaf Wolkenhauer, 441–63. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-4939-3283-2_19">https://doi.org/10.1007/978-1-4939-3283-2_19</a>.
+</div>
+<div id="ref-pharris2019Multistate" class="csl-entry" role="listitem">
+Pharris, Matthew C., Neal M. Patel, Tyler G. VanDyk, Thomas M. Bartol, Terrence J. Sejnowski, Mary B. Kennedy, Melanie I. Stefan, and Tamara L. Kinzer-Ursem. 2019. <span>“A Multi-State Model of the <span>CaMKII</span> Dodecamer Suggests a Role for Calmodulin in Maintenance of Autophosphorylation.”</span> <em>PLOS Computational Biology</em> 15 (12): e1006941. <a href="https://doi.org/10.1371/journal.pcbi.1006941">https://doi.org/10.1371/journal.pcbi.1006941</a>.
+</div>
+<div id="ref-postawa2020Comprehensive" class="csl-entry" role="listitem">
+Postawa, Karol, Jerzy Szczygieł, and Marek Kułażyński. 2020. <span>“A Comprehensive Comparison of <span>ODE</span> Solvers for Biochemical Problems.”</span> <em>Renewable Energy</em> 156 (August): 624–33. <a href="https://doi.org/10.1016/j.renene.2020.04.089">https://doi.org/10.1016/j.renene.2020.04.089</a>.
+</div>
+<div id="ref-pound2004Where" class="csl-entry" role="listitem">
+Pound, Pandora, Shah Ebrahim, Peter Sandercock, Michael B. Bracken, and Ian Roberts. 2004. <span>“Where Is the Evidence That Animal Research Benefits Humans?”</span> <em>BMJ</em> 328 (7438): 514–17. <a href="https://doi.org/10.1136/bmj.328.7438.514">https://doi.org/10.1136/bmj.328.7438.514</a>.
+</div>
+<div id="ref-resat2009Kinetic" class="csl-entry" role="listitem">
+Resat, Haluk, Linda Petzold, and Michel F. Pettigrew. 2009. <span>“Kinetic <span>Modeling</span> of <span>Biological Systems</span>.”</span> In <em>Computational <span>Systems Biology</span></em>, edited by Reneé Ireton, Kristina Montgomery, Roger Bumgarner, Ram Samudrala, and Jason McDermott, 311–35. Totowa, NJ: Humana Press. <a href="https://doi.org/10.1007/978-1-59745-243-4_14">https://doi.org/10.1007/978-1-59745-243-4_14</a>.
+</div>
+<div id="ref-ritter2011Determining" class="csl-entry" role="listitem">
+Ritter, Frank E., Michael J. Schoelles, Karen S. Quigley, and Laura Cousino Klein. 2011. <span>“Determining the <span>Number</span> of <span>Simulation Runs</span>: <span>Treating Simulations</span> as <span>Theories</span> by <span>Not Sampling Their Behavior</span>.”</span> In <em>Human-in-the-<span>Loop Simulations</span>: <span>Methods</span> and <span>Practice</span></em>, edited by Ling Rothrock and S. Narayanan, 97–116. London: Springer. <a href="https://doi.org/10.1007/978-0-85729-883-6_5">https://doi.org/10.1007/978-0-85729-883-6_5</a>.
+</div>
+<div id="ref-robinson2004Simulation" class="csl-entry" role="listitem">
+Robinson, Stewart, Richard E. Nance, Ray J. Paul, Michael Pidd, and Simon J. E. Taylor. 2004. <span>“Simulation Model Reuse: Definitions, Benefits and Obstacles.”</span> <em>Simulation Modelling Practice and Theory</em>, Simulation in <span>Operational Research</span>, 12 (7): 479–94. <a href="https://doi.org/10.1016/j.simpat.2003.11.006">https://doi.org/10.1016/j.simpat.2003.11.006</a>.
+</div>
+<div id="ref-rothschild2006Role" class="csl-entry" role="listitem">
+Rothschild, Lynn. 2006. <span>“The <span>Role</span> of <span>Emergence</span> in <span>Biology</span>.”</span> In <em>The Re-Emergence of Emergence: The Emergentist Hypothesis from Science to Religion</em>, edited by Philip Clayton and Paul Davies, 151–65. Oxford University Press.
+</div>
+<div id="ref-sanhueza2013CaMKII" class="csl-entry" role="listitem">
+Sanhueza, Magdalena, and John Lisman. 2013. <span>“The <span>CaMKII</span>/<span>NMDAR</span> Complex as a Molecular Memory.”</span> <em>Molecular Brain</em> 6 (1): 10. <a href="https://doi.org/10.1186/1756-6606-6-10">https://doi.org/10.1186/1756-6606-6-10</a>.
+</div>
+<div id="ref-schaff2016Rulebased" class="csl-entry" role="listitem">
+Schaff, James C., Dan Vasilescu, Ion I. Moraru, Leslie M. Loew, and Michael L. Blinov. 2016. <span>“Rule-Based Modeling with <span>Virtual Cell</span>.”</span> <em>Bioinformatics</em> 32 (18): 2880–82. <a href="https://doi.org/10.1093/bioinformatics/btw353">https://doi.org/10.1093/bioinformatics/btw353</a>.
+</div>
+<div id="ref-smith2019Spatial" class="csl-entry" role="listitem">
+Smith, Stephen, and Ramon Grima. 2019. <span>“Spatial <span>Stochastic Intracellular Kinetics</span>: <span>A Review</span> of <span>Modelling Approaches</span>.”</span> <em>Bull Math Biol</em> 81 (8): 2960–3009. <a href="https://doi.org/10.1007/s11538-018-0443-1">https://doi.org/10.1007/s11538-018-0443-1</a>.
+</div>
+<div id="ref-stefan2014Multistate" class="csl-entry" role="listitem">
+Stefan, Melanie I., Thomas M. Bartol, Terrence J. Sejnowski, and Mary B. Kennedy. 2014. <span>“Multi-State Modeling of Biomolecules.”</span> <em>PLoS Comput Biol</em> 10 (9): e1003844. <a href="https://doi.org/10.1371/journal.pcbi.1003844">https://doi.org/10.1371/journal.pcbi.1003844</a>.
+</div>
+<div id="ref-stiles1996Miniaturea" class="csl-entry" role="listitem">
+Stiles, J R, D Van Helden, T M Bartol, E E Salpeter, and M M Salpeter. 1996. <span>“Miniature Endplate Current Rise Times Less Than 100 Microseconds from Improved Dual Recordings Can Be Modeled with Passive Acetylcholine Diffusion from a Synaptic Vesicle.”</span> <em>Proceedings of the National Academy of Sciences</em> 93 (12): 5747–52. <a href="https://doi.org/10.1073/pnas.93.12.5747">https://doi.org/10.1073/pnas.93.12.5747</a>.
+</div>
+<div id="ref-suarez2009Challenges" class="csl-entry" role="listitem">
+Suárez, María, and Alfonso Jaramillo. 2009. <span>“Challenges in the Computational Design of Proteins.”</span> <em>Journal of the Royal Society Interface</em> 6 (March): S477. <a href="https://doi.org/10.1098/rsif.2008.0508.focus">https://doi.org/10.1098/rsif.2008.0508.focus</a>.
+</div>
+<div id="ref-suki2011Complexity" class="csl-entry" role="listitem">
+Suki, Béla, Jason H. T. Bates, and Urs Frey. 2011. <span>“Complexity and <span>Emergent Phenomena</span>.”</span> <em>Comprehensive Physiology</em> 1 (2): 995–1029. <a href="https://doi.org/10.1002/j.2040-4603.2011.tb00341.x">https://doi.org/10.1002/j.2040-4603.2011.tb00341.x</a>.
+</div>
+<div id="ref-szekely2014Stochastic" class="csl-entry" role="listitem">
+Székely, Tamás, and Kevin Burrage. 2014. <span>“Stochastic Simulation in Systems Biology.”</span> <em>Computational and Structural Biotechnology Journal</em> 12 (20): 14–25. <a href="https://doi.org/10.1016/j.csbj.2014.10.003">https://doi.org/10.1016/j.csbj.2014.10.003</a>.
+</div>
+<div id="ref-teschendorff2021Statistical" class="csl-entry" role="listitem">
+Teschendorff, Andrew E., and Andrew P. Feinberg. 2021. <span>“Statistical Mechanics Meets Single-Cell Biology.”</span> <em>Nat Rev Genet</em> 22 (7): 459–76. <a href="https://doi.org/10.1038/s41576-021-00341-z">https://doi.org/10.1038/s41576-021-00341-z</a>.
+</div>
+<div id="ref-xiao2015Emergent" class="csl-entry" role="listitem">
+Xiao, Renbin, Yaofeng Zhang, and Zhendong Huang. 2015. <span>“Emergent Computation of Complex Systems: A Comprehensive Review.”</span> <em>IJBIC</em> 7 (2): 75. <a href="https://doi.org/10.1504/IJBIC.2015.069292">https://doi.org/10.1504/IJBIC.2015.069292</a>.
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./20-intro-biology.html" class="pagination-link" aria-label="Biological Research Background">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Biological Research Background</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./20-repro_open.html" class="pagination-link" aria-label="Open, Reproducible and Ethics-focused PhD">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

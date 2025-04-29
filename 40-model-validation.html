@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Validating model behaviour – CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./40-results.html" rel="next">
+<link href="./30-model.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0a0063f14e87237348a3db0020d9102a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./40-model-validation.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Validating model behaviour</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</a> 
+        <div class="sidebar-tools-main">
+    <a href="./CaMKII-NMDAR-interactions-in-Learning-and-Memory--A-Case-Study-in-Ethical-and-Reproducible-Modelling-Approaches.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Declaration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-intro-biology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Biological Research Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-modelling_background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-repro_open.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-data-hazards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Case Study in Ethical Reflection: Data Hazards in this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./40-model-validation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Validating model behaviour</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./40-results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of CaMKII Dynamics in Wild-Type and Mutant Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">List of publications and presentations resulting from this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#biological-plausibility" id="toc-biological-plausibility" class="nav-link active" data-scroll-target="#biological-plausibility"><span class="header-section-number">6.1</span> Biological Plausibility</a></li>
+  <li><a href="#incremental-construction-and-stepwise-validation" id="toc-incremental-construction-and-stepwise-validation" class="nav-link" data-scroll-target="#incremental-construction-and-stepwise-validation"><span class="header-section-number">6.2</span> Incremental Construction and Stepwise Validation</a></li>
+  <li><a href="#sanity-checks" id="toc-sanity-checks" class="nav-link" data-scroll-target="#sanity-checks"><span class="header-section-number">6.3</span> Sanity Checks</a></li>
+  <li><a href="#qualitative-checks" id="toc-qualitative-checks" class="nav-link" data-scroll-target="#qualitative-checks"><span class="header-section-number">6.4</span> Qualitative Checks</a></li>
+  <li><a href="#exploration-of-uncertain-parameters" id="toc-exploration-of-uncertain-parameters" class="nav-link" data-scroll-target="#exploration-of-uncertain-parameters"><span class="header-section-number">6.5</span> Exploration of Uncertain Parameters</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-validating-model" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Validating model behaviour</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>To validate the model, I focused on several key aspects: first, I checked how closely the model matched biological reality and ensured it was biologically plausible. I also built the model step by step, allowing for gradual improvements and refinements. The kinetic parameters for the model’s reactions were either taken from existing literature or estimated from experimental data. When there was uncertainty, I ran parameter explorations to see how changes in the kinetic rates affected the model’s behavior.</p>
+<section id="biological-plausibility" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="biological-plausibility"><span class="header-section-number">6.1</span> Biological Plausibility</h2>
+<p>While care was taken to compare model outputs with known biological processes described in the literature and supported by experimental data, this type of comparison is inherently complex. Different models capture different aspects of biological systems, and even subtle variations in assumptions or parameter choices can lead to divergent behaviours. As such, the evaluation of biological plausibility should be interpreted with caution; it provides useful insight, but not definitive validation. The process of matching simulated outputs—such as concentration profiles and reaction kinetics—to literature values is valuable, yet inherently limited by the variability and uncertainty present in both modelling and experimental data.</p>
+<p>The model simulates cytoplasmic molecular reactions within the geometry of a postsynaptic dendritic spine with a volume of 0.50588 <span class="math inline">\(\mu\text{m}^3\)</span>. This volume matches the value used by <span class="citation" data-cites="ordyan2020Interactions">Ordyan et al. (<a href="#ref-ordyan2020Interactions" role="doc-biblioref">2020</a>)</span> in their model of CaMKII in the postsynaptic density and falls within the physiological range of 0.004–0.6 <span class="math inline">\(\mu\text{m}^3\)</span> reported for hippocampal CA1 neurons <span class="citation" data-cites="harris1989Dendritica">(<a href="#ref-harris1989Dendritica" role="doc-biblioref">Harris and Stevens 1989</a>)</span>. Tonnesen et al.&nbsp;(2018) reported a median spine volume of 0.1 <span class="math inline">\(\mu\text{m}^3\)</span>, with some spines reaching up to 0.5 <span class="math inline">\(\mu\text{m}^3\)</span>, supporting the plausibility of the volume chosen, albeit the volume is on the bigger end of the spectrum for dendritic spine volume. <em>In vivo</em> calcium influx during synaptic input is often more complex, involving multiple calcium entry events and interactions with calcium-binding proteins.</p>
+<p>The molecular concentrations used are also within biologically plausible ranges. For example, the initial release of 1000 <span class="math inline">\(\mathrm{Ca^{2+}}\)</span> ions corresponds to a concentration of 3.28 <span class="math inline">\(\mu\text{M}\)</span>. Fluorescent <span class="math inline">\(\mathrm{Ca^{2+}}\)</span> indicator studies show resting intracellular <span class="math inline">\(\mathrm{Ca^{2+}}\)</span> concentrations between 0.05–0.1 <span class="math inline">\(\mu\text{M}\)</span>, with increases up to 100-fold during stimulation (Grienberger et al., 2012; Maravall et al., 2000). Therefore, the calcium concentrations used are within ranges of stimulated neuronal activation. I discuss this further in the discussion section and future steps of the model.</p>
+<p>With respect to CaMKII, concentrations of CaMKIIα subunits have been reported to range between 5 and 100 <span class="math inline">\(\mu\text{M}\)</span> in neuronal dendrites <span class="citation" data-cites="lee2009Activation feng2011Quantitative otmakhov2012Measuring">(<a href="#ref-lee2009Activation" role="doc-biblioref">Lee et al. 2009</a>; <a href="#ref-feng2011Quantitative" role="doc-biblioref">Feng, Raghavachari, and Lisman 2011</a>; <a href="#ref-otmakhov2012Measuring" role="doc-biblioref">Otmakhov and Lisman 2012</a>)</span>. NMDARs are typically found at approximately 10 to 100 receptors per synapse <span class="citation" data-cites="petralia2012Distribution">(<a href="#ref-petralia2012Distribution" role="doc-biblioref">Petralia 2012</a>)</span>. In the present model, the concentrations of CaMKII and NMDARs are positioned at the lower end of these reported ranges, primarily due to the relatively large spine volume modeled. Specifically, we include 290 CaMKII subunits (equivalent to 2.36 <span class="math inline">\(\mu\text{M}\)</span>) and 30 NMDARs (0.099 <span class="math inline">\(\mu\text{M}\)</span>). Although the concentration of CaMKII in this model is on the lower end of reported values, this choice remains valid given the larger spine volume incorporated in the model, which dilutes the concentration of CaMKII while maintaining a reasonable estimate for its overall abundance [REFERENCE]. Furthermore, the number of NMDARs in the model is within the reported range, reinforcing the biological relevance of the simulation. The limitations of these parameter choices and potential future directions for refining this model are further discussed in the Future Directions section.</p>
+<p>PP1 concentrations in neurons are typically reported between 1 <span class="math inline">\(\mu\text{M}\)</span> and 10 <span class="math inline">\(\mu\text{M}\)</span> (REFERENCE Cohen, 2002), with CaMKII concentrations around 5 <span class="math inline">\(\mu\text{M}\)</span>, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 <span class="math inline">\(\mu\text{M}\)</span>, and CaMKII at 2.36 <span class="math inline">\(\mu\text{M}\)</span>, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.</p>
+<p>These values are on the lower end of the reported ranges but remain within an order of magnitude of typical experimental data. This margin is reasonable, particularly given the experimental variability and the fact that many biological responses are robust to moderate concentration differences [REFERENCE]. Additionally, the relative abundance of these molecules is often more important than their absolute concentrations, as it governs the signaling dynamics. The values used in this model were taken from other computational models that have been validated against experimental biological data, ensuring that the concentrations are within the expected range based on observed physiological conditions.</p>
+<p>These values are consistent with those found in the literature and previous models that accurately represent the biological system at hand. Albeit, because the model uses a cell volume that is on the larger side for dendritic spines, the molecular concentrations are slightly lower than what others report [REFERENCES]. In the future, running the model with a slightly smaller cell volume would naturally increase the total observed molecular concentrations. However, the actual behavior of the molecules is not expected to change significantly, as the relative ratios of the molecules would remain the same. Thus, the signalling dynamics are expected to be largely unaffected by such changes in concentration.</p>
+</section>
+<section id="incremental-construction-and-stepwise-validation" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="incremental-construction-and-stepwise-validation"><span class="header-section-number">6.2</span> Incremental Construction and Stepwise Validation</h2>
+<p>In order to validate model behaviour, each reaction rule was added one at a time and tested to see if it produced biologically plausible results. Reactions or sets of reactions were introduced sequentially and tested independently. Structuring the model this way made it possible to validate individual components before integrating them into the full system. For example, the model was first tested by incorporating the calcium binding to CaM reactions. These were validated by comparing the outputs to those of a previously published and experimentally validated model <span class="citation" data-cites="romangarcia2017Computationala">(<a href="#ref-romangarcia2017Computationala" role="doc-biblioref">Roman Garcia and Stefan 2017</a>)</span>. Once consistent behavior was observed, the next layer —CaM binding to CaMKII— was added and validated in a similar manner. Finally, interactions between CaMKII and NMDARs were introduced and tested. While a detailed account of each individual rule implementation is not provided here for the sake of conciseness, a summary of the key reaction layers and their expected outputs is presented in <a href="#tbl-model-predictions" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-model-predictions</span></a>. Each row links an expected biological behaviour to its underlying model rule(s), along with an indication of whether the behaviour was observed in simulation results. These outputs not only confirm that the system produces plausible results at each stage but also serve as checkpoints for model development.</p>
+<p>The list below presents a series of expected model behaviours that arise from specific reaction rules defined in the model, as per <a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a> (in <a href="#sec-model-description" class="quarto-xref"><span class="quarto-unresolved-ref">sec-model-description</span></a>).</p>
+<div id="tbl-model-predictions" class="striped quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[60,20,20]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-model-predictions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6.1: Summary of model predictions and expected results.
+</figcaption>
+<div aria-describedby="tbl-model-predictions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped caption-top table">
+<colgroup>
+<col style="width: 60%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Expected Result</th>
+<th>Associated Reaction Rules</th>
+<th>Observed in Models</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathrm{Ca^{2+}}\)</span> binds to CaM in a stepwise manner, with higher affinity for forming CaM_Ca3 and CaM_Ca4 states.</td>
+<td>Rules #1 - #4 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see <a href="#fig-calcium-binding" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-calcium-binding</span></a></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CaMKII autophosphorylation at T286 is increased by binding to NMDARs.</td>
+<td>Rules #5, #6, #8, #12 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation.</td>
+<td>Rule #6 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Open CaMKII binds to NMDARs, anchoring the kinase at the membrane .</td>
+<td>Rule #12 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding.</td>
+<td>Rule #8 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation.</td>
+<td>Rules #8, #9 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation.</td>
+<td>Rules #5, #10 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Yes, see</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>PP1 dephosphorylates CaMKII at T286 and T306, reversing its activation and enabling cycling between open and closed states.</td>
+<td>Rules #10, #11 (<a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>)</td>
+<td>Unclear, see</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sanity-checks" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sanity-checks"><span class="header-section-number">6.3</span> Sanity Checks</h2>
+<p>As part of the model validation process, a series of sanity checks were implemented to ensure the system behaved in accordance with known biochemical rules and structural constraints. These checks primarily aimed to verify that the model did not produce molecular species that are biologically implausible or explicitly forbidden by the reaction rules defined in the system.</p>
+<p>Sanity checks were performed by recording observables in the BioNetGen Language (BNGL) model file. These observables are explicitly commented with justifications within the code itself and are structured to align with the logic and reaction rules outlined in <a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>. The purpose of these observables is to serve as logical safeguards: if any of them yield a nonzero value during simulation, it indicates a breach of the model’s core assumptions or rule constraints.</p>
+<p>All sanity check observables listed above were expected to yield zero values, and did so consistently in simulation results. This confirms that the implemented reaction rules correctly prohibit the formation of biologically impossible species. These results are consistent and replicable; if the model is executed under the same rules and initial conditions, these observables are expected to remain zero in any future runs.</p>
+<p>Below is a list of observables defined for sanity checks, along with a description of the corresponding molecular species, and an explanation of why their expected output should be zero under biologically valid conditions.</p>
+<section id="camkii_cam_ca4_pp" class="level5">
+<h5 class="anchored" data-anchor-id="camkii_cam_ca4_pp"><strong>CaMKII_CaM_Ca4_PP</strong></h5>
+<ul>
+<li>Description: CaMKII bound to CaM (saturated with four Ca²⁺ ions), phosphorylated at both T286 and T306.</li>
+<li>Expected Output: 0</li>
+<li>Rationale: CaM binding and T306 phosphorylation are mutually exclusive. T306 lies within the CaM-binding domain of CaMKII, and its phosphorylation prevents CaM association. Thus, the coexistence of CaM and T306 phosphorylation is structurally impossible.</li>
+</ul>
+</section>
+<section id="camkii_cam_ca4_t306p1" class="level5">
+<h5 class="anchored" data-anchor-id="camkii_cam_ca4_t306p1"><strong>CaMKII_CaM_Ca4_T306P1</strong></h5>
+<ul>
+<li>Description: CaMKII bound to Ca⁴⁺-CaM, phosphorylated at T306 only.</li>
+<li>Expected Output: 0</li>
+<li>Rationale: Similar to the case above, T306 phosphorylation sterically blocks CaM binding. Therefore, this species cannot exist under correct model logic.</li>
+</ul>
+</section>
+<section id="camkii_cam_closed" class="level5">
+<h5 class="anchored" data-anchor-id="camkii_cam_closed"><strong>CaMKII_CaM_closed</strong></h5>
+<ul>
+<li>Description: CaMKII bound to CaM_Ca4 while in a closed conformation.</li>
+<li>Expected Output: 0</li>
+<li>Rationale: CaM binding induces a conformational opening of CaMKII. Thus, the closed state is incompatible with CaM-bound configurations.</li>
+</ul>
+</section>
+<section id="camkii_cam_unbound_closed_t286p1" class="level5">
+<h5 class="anchored" data-anchor-id="camkii_cam_unbound_closed_t286p1"><strong>CaMKII_CaM_unbound_closed_T286P1</strong></h5>
+<ul>
+<li>Description: CaMKII phosphorylated at T286, unbound to CaM, and in a closed state.</li>
+<li>Expected Output: 0</li>
+<li>Rationale: Phosphorylation at T286 stabilizes the open conformation of CaMKII. Once phosphorylated at T286, the subunit is expected to remain open and cannot revert to the closed conformation.</li>
+</ul>
+</section>
+<section id="camkii_closed_complex" class="level5">
+<h5 class="anchored" data-anchor-id="camkii_closed_complex"><strong>CaMKII_closed_complex</strong></h5>
+<ul>
+<li>Description: CaMKII subunit is closed and bound to NMDAR forming NMDAR/CaMKII complex.</li>
+<li>Expected Output: 0</li>
+<li>Rationale: CaMKII can only bind to NMDARs if open and will remain open once bound, so none can be closed when bound in the NMDAR/CaMKII complex.</li>
+</ul>
+<p>Beyond molecular states which were expected to yield a value of zero, other sanity checks focused on conservation rules and population consistency. For example, if a simulation starts with 100 CaMKII subunits and 50% are phosphorylated at T286, the remaining 50% should be in unphosphorylated. Any deviation from this expected balance may indicate erroneous reaction pathways or state duplications. These sanity checks were observed during simulation results and cross-validated with the total molecule counts to ensure system integrity, as we will explore in <a href="#sec-results" class="quarto-xref"><span class="quarto-unresolved-ref">sec-results</span></a>.</p>
+</section>
+</section>
+<section id="qualitative-checks" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="qualitative-checks"><span class="header-section-number">6.4</span> Qualitative Checks</h2>
+<p>In addition to direct rule-by-rule validation and formal sanity checks, qualitative checks were carried out to assess whether the model was capable of producing emergent behaviours consistent with known biological expectations—despite these behaviours not being explicitly hardcoded. These behaviours arise not from isolated reactions, but from the interaction and timing of multiple rules within the network, offering important insight into whether the system captures the complex, context-dependent behaviour observed in vivo.</p>
+<p>For instance, phenomena such as the sustained opening of CaMKII following transient calcium signalling are not encoded as fixed outcomes. Instead, they should emerge from the model structure if the underlying mechanisms of encoded rules are implemented correctly. Similarly, the transition from CaM-dependent to CaM-independent anchoring at NMDARs, are emergent outcomes expected to arise from the model’s rule interactions. The following emergent behaviours were not coded into the rules in <a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>, but were expected behaviours to follow what is known in the literature.</p>
+<ol type="1">
+<li><p><strong>CaMKII phosphorylation at T286 occurs regardless of CaM binding, although phosphorylation is more likely when CaM is present.</strong> This behaviour is not explicitly hardcoded into the model, but is expected as an emergent property of the system. Both CaM binding and T286 phosphorylation stabilise the CaMKII subunit in its open conformation (rules #6 and #8), which increases the likelihood of both events co-occurring. Therefore, while the model does not directly specify this co-occurrence, the chances of T286 phosphorylation are indirectly increased when CaMKII is either already phosphorylated at T286 or bound to CaM, as both conditions promote an open state conducive to phosphorylation.</p></li>
+<li><p><strong>When phosphorylated at T286, CaMKII binds more readily to NMDARs, independent of the presence of CaM.</strong> This behaviour arises from the fact that T286 phosphorylation stabilises CaMKII in its open conformation, and only open CaMKII can bind to NMDARs. While the model does not explicitly encode a direct link between T286 phosphorylation and NMDAR binding, it encodes the conditions that promote each event separately. As a result, we expect that T286-phosphorylated CaMKII subunits will indirectly bind NMDARs more readily due to their maintained open state.</p></li>
+<li><p><strong>When CaMKII is maintained in the open state by CaM binding, the kinase binds more readily to NMDARs and is likely to remain associated with the NMDAR/CaMKII complex even after CaM dissociates.</strong> Both CaM binding and NMDAR binding stabilise CaMKII in its open conformation. The model allows multiple routes to maintaining this open state, one of them being CaM binding, hence CaM-bound CaMKII may be more likely to interact with NMDARs, and once that interaction occurs, the open conformation can be preserved by NMDAR binding alone.</p></li>
+</ol>
+</section>
+<section id="exploration-of-uncertain-parameters" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="exploration-of-uncertain-parameters"><span class="header-section-number">6.5</span> Exploration of Uncertain Parameters</h2>
+<p>As discussed in <a href="#sec-intro-comp" class="quarto-xref"><span class="quarto-unresolved-ref">sec-intro-comp</span></a>, computational models can serve as predictive tools to deepen our understanding of the mechanisms underlying observed biochemical processes. However, parameters such as rate constants, activation energies, diffusion coefficients, etcetera, are rarely known with precision <span class="citation" data-cites="sumathi2002Priori turanyi2012Determination mcdonald2022Parameter">(<a href="#ref-sumathi2002Priori" role="doc-biblioref">Sumathi and Green Jr. 2002</a>; <a href="#ref-turanyi2012Determination" role="doc-biblioref">Turányi et al. 2012</a>; <a href="#ref-mcdonald2022Parameter" role="doc-biblioref">McDonald and Tipton 2022</a>)</span>. Consequently, predictions are typically subject to uncertainty. Thus understanding how parameter variations influence outcomes is a crucial part of model development and validation.</p>
+<p>While other models have explored the dynamics of calcium, calmodulin, and CaMKII <span class="citation" data-cites="holmes2000Models lisman2001Model lisman2002Molecular zhabotinsky2000Bistability lucic2008Detaileda stefan2008Allostericd stefan2011MultiStage johnson2015Model pharris2019Multistate ordyan2020Interactions bartol2024Spatial">(<a href="#ref-holmes2000Models" role="doc-biblioref">Holmes 2000</a>; <a href="#ref-lisman2001Model" role="doc-biblioref">J. E. Lisman and Zhabotinsky 2001</a>; <a href="#ref-lisman2002Molecular" role="doc-biblioref">J. Lisman, Schulman, and Cline 2002</a>; <a href="#ref-zhabotinsky2000Bistability" role="doc-biblioref">Zhabotinsky 2000</a>; <a href="#ref-lucic2008Detaileda" role="doc-biblioref">Lučić, Greif, and Kennedy 2008</a>; <a href="#ref-stefan2008Allostericd" role="doc-biblioref">M. I. Stefan, Edelstein, and Le Novère 2008</a>; <a href="#ref-stefan2011MultiStage" role="doc-biblioref">M. Stefan et al. 2011</a>; <a href="#ref-johnson2015Model" role="doc-biblioref">Johnson et al. 2015</a>; <a href="#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>; <a href="#ref-ordyan2020Interactions" role="doc-biblioref">Ordyan et al. 2020</a>; <a href="#ref-bartol2024Spatial" role="doc-biblioref">Bartol et al. 2024</a>)</span>, to the best of our knowledge none have specifically focused on the direct interactions between CaMKII and NMDARs, as is done in the present study. Consequently, determining parameters for calcium binding to CaM and CaM binding to CaMKII was relatively straightforward, as there are studies that have provided analyses and reviews of parameters that best fit biological phenomena <span class="citation" data-cites="linkevicius2025Fitting">(<a href="#ref-linkevicius2025Fitting" role="doc-biblioref">Linkevicius et al. 2025</a>)</span>. However, there were four reaction parameters that were more uncertain and key for this study: <span class="math inline">\(k_\text{on}\)</span>/<span class="math inline">\(k_\text{off}\)</span> for CaMKII flicker of opening and closing (reaction rule #5 in <a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>), and <span class="math inline">\(k_\text{on}\)</span>/<span class="math inline">\(k_\text{off}\)</span> for CaMKII binding to NMDARs (reaction rule #12 in <a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-tbl-1</span></a>).</p>
+<p>First, we examine the opening and closing kinetics of CaMKII subunits, specifically focusing on the association <span class="math inline">\(k_\text{on}\)</span> and dissociation <span class="math inline">\(k_\text{off}\)</span> rates of these two states. While most models assume that CaM binding directly induces CaMKII activation, this assumption is not applied in the current model, as discussed throughout this thesis. Instead, we use the parameters proposed by <span class="citation" data-cites="pharris2019Multistate">(<a href="#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>)</span>, as they modeled the flickering (transient opening and closing) of CaMKII holoenzyme subunits. However, since the current model integrates parameters from multiple sources, parameter exploration was performed to ensure robust and consistent dynamics aligned with the existing literature. Specifically, we varied the opening and closing rates by factors of 0.01, 0.1, and 1 relative to the values proposed by Pharris et al. <span class="citation" data-cites="pharris2019Multistate">(<a href="#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>)</span>, where <span class="math inline">\(k_\text{off}\)</span> = <span class="math inline">\(1.00 \times 10^7\)</span> <span class="math inline">\(\mathrm{s}^{-1}\)</span> and <span class="math inline">\(k_\text{off}\)</span> = <span class="math inline">\(2.00 \times 10^4\)</span> <span class="math inline">\(\mathrm{M}^{-1}\mathrm{s}^{-1}\)</span>.</p>
+<p>To ensure that the behavior of CaMKII was well-understood and stable before introducing additional complexity, I first modelled the changes in the binding kinetics of CaMKII without the inclusion of NMDARs. This approach allowed me to isolate and focus on the fundamental properties of CaMKII itself. NMDARs introduce their own kinetic properties and interactions with CaMKII, which could influence the system’s behavior. By first confirming that CaMKII operates predictably in isolation, I ensured that any subsequent changes observed after introducing NMDARs could be confidently attributed to interactions between the two systems, rather than unaccounted-for variations in CaMKII dynamics. By initially focusing on CaMKII alone, I could verify that its kinetic behavior was stable and robust before layering on the complexities of NMDAR interactions.</p>
+<p><a href="#fig-open-close-t286p" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-open-close-t286p</span></a> and <a href="#fig-open-close-camca4" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-open-close-camca4</span></a> show the accumulation of CaMKII bound to CaM_Ca4 and CaMKII T286 phosphorylation over time, under different kinetic conditions for the opening and closing rates <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> of CaMKII subunits. Each curve represents a simulation where <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> were changed by factors of 0.01, 0.1, and 1 relative to baseline parameters, while keeping the equilibrium dissociation constant <span class="math inline">\(k_{\text{D}}\)</span> fixed at 500~M. Even though <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> differ across conditions (spanning orders of magnitude), the general trajectory of molecule accumulation over time remains broadly similar. Small differences are visible: simulations with faster kinetics (higher <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span>) tend to show slightly faster initial accumulation, but by the end (around 100 seconds), the molecule counts converge relatively closely across all conditions.</p>
+<p>Across both datasets, although <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> span orders of magnitude, the general trajectory of molecule accumulation remains broadly similar. Simulations with faster kinetics (higher <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span>) show a steeper initial accumulation, reflecting more rapid binding and activation due to quicker subunit opening and closing. However, by approximately 100 seconds, the total number of bound or phosphorylated molecules converges across conditions.</p>
+<p>Maintaining the same <span class="math inline">\(k_{\text{D}}\)</span> isolates the effects of flickering rates on early dynamics without confounding the overall binding strength. Faster flickering enhances the speed at which steady-state is approached, but does not alter the final outcome because the underlying affinity remains the same. If <span class="math inline">\(k_{\text{D}}\)</span> were instead varied, it would affect not just the kinetics but also the steady-state occupancy, leading to fundamentally different final amounts of CaMKII-CaM complexes or T286-phosphorylated CaMKII.</p>
+<p>These results led to the conclusion that varying <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> by factors of 0.01, 0.1, and 1 did not significantly affect the system’s final outcomes. The system was robust enough that these changes in flickering rates did not alter the overall behavior, making it reasonable to retain the original parameters proposed by <span class="citation" data-cites="pharris2019Multistate">(<a href="#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>)</span>. Since altering the rates did not drastically change the system’s dynamics or steady-state outcomes, the original parameter values were kept unchanged for the final model simulations.</p>
+<div id="fig-open-close-t286p" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII T286 phosphorylation was unaffected by changes in $k_\text{on}$ and $k_\text{off}$ for CaMKII opening parameter sweep">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-open-close-t286p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="validation-figures\open-close-t286p.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII T286 phosphorylation was unaffected by changes in $k_\text{on}$ and $k_\text{off}$ for CaMKII opening parameter sweep">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-open-close-t286p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: CaMKII T286 phosphorylation was unaffected by changes in <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> by factors of 0.1 and 0.01. The baseline values for <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> were taken from the Pharris model: <span class="math inline">\(k_\text{off}\)</span> = <span class="math inline">\(1.00 \times 10^7\)</span> <span class="math inline">\(\mathrm{s}^{-1}\)</span> and <span class="math inline">\(k_\text{off}\)</span> = <span class="math inline">\(2.00 \times 10^4\)</span> <span class="math inline">\(\mathrm{M}^{-1}\mathrm{s}^{-1}\)</span>. Simulations were performed by varying these parameters by factors of 0.1 and 0.01, with the equilibrium dissociation constant (<span class="math inline">\(k_{\text{D}}\)</span>) held constant at 500 M.
+</figcaption>
+</figure>
+</div>
+<div id="fig-open-close-camca4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII binding to CaM was unaffected by changes in $k_\text{on}$ and $k_\text{off}$ for CaMKII opening parameter sweep">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-open-close-camca4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="validation-figures\open-close-camca4.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII binding to CaM was unaffected by changes in $k_\text{on}$ and $k_\text{off}$ for CaMKII opening parameter sweep">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-open-close-camca4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: CaMKII binding to CaM was unaffected by changes in <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> by factors of 0.1 and 0.01. The baseline values for <span class="math inline">\(k_\text{on}\)</span> and <span class="math inline">\(k_\text{off}\)</span> were taken from the Pharris model: <span class="math inline">\(k_\text{off}\)</span> = <span class="math inline">\(1.00 \times 10^7\)</span> <span class="math inline">\(\mathrm{s}^{-1}\)</span> and <span class="math inline">\(k_\text{off}\)</span> = <span class="math inline">\(2.00 \times 10^4\)</span> <span class="math inline">\(\mathrm{M}^{-1}\mathrm{s}^{-1}\)</span>. Simulations were performed by varying these parameters by factors of 0.1 and 0.01, with the equilibrium dissociation constant (<span class="math inline">\(k_{\text{D}}\)</span>) held constant at 500 M.
+</figcaption>
+</figure>
+</div>
+<p>Similarly, parameter variations for CaMKII and NMDAR binding rates were explored to assess their impact on the model. Specifically, a <span class="math inline">\(k_\text{off}\)</span> for the unbinding of CaMKII from the NR1 subunit of NMDARs was estimated by <span class="citation" data-cites="leonard2002Regulation">(<a href="#ref-leonard2002Regulation" role="doc-biblioref">Leonard et al. 2002</a>)</span>, though to the best of our knowledge, we could not find estimated values for the GluN2B subunit, to which CaMKII binds more readily <span class="citation" data-cites="strack1998Autophosphorylationdependent leonard2002Regulation barria2005NMDA">(<a href="#ref-strack1998Autophosphorylationdependent" role="doc-biblioref">Strack and Colbran 1998</a>; <a href="#ref-leonard2002Regulation" role="doc-biblioref">Leonard et al. 2002</a>; <a href="#ref-barria2005NMDA" role="doc-biblioref">Barria and Malinow 2005</a>)</span>. We therefore proceeded to use the parameters that were used for a previously validated model <span class="citation" data-cites="romangarcia2017Computationala">(<a href="#ref-romangarcia2017Computationala" role="doc-biblioref">Roman Garcia and Stefan 2017</a>)</span>, with a <span class="math inline">\(k_{\text{D}}\)</span> value of <span class="math inline">\(1.5 \times 10^{-7} \text{M}\)</span>. We run the simulation by varying this <span class="math inline">\(k_{\text{D}}\)</span> by factor of 0.1 and 0.01.</p>
+<p>The objective was to determine how changes in these parameters affected the molecules in the model. Specifically, we focused on CaMKII T286 phosphorylation and CaM binding, as they had been used in previous parameter sweeps and were indirectly influenced by these changes. While direct changes such as CaMKII binding or unbinding would obviously be affected by the change in parameters that directly affect their dynamics, T286 phosphorylation and CaM binding are not directly impacted in the same way, making them suitable for testing the effects of parameter variation on the system.</p>
+<p>After varying <span class="math inline">\(k_{\text{D}}\)</span> as described (<a href="#fig-nmdar-varying-kd-cam-ca4" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-nmdar-varying-kd-cam-ca4</span></a> and <a href="#fig-nmdar-varying-kd-camkiit286p" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-nmdar-varying-kd-camkiit286p</span></a>), we found a recent paper proposing a <span class="math inline">\(k_{\text{D}}\)</span> value of <span class="math inline">\(1.07 \times 10^{-7} \text{M}\)</span>. Observing that the results did not vary significantly with this new <span class="math inline">\(k_{\text{D}}\)</span> value, which was in close agreement with our original one, we proceeded with the choice of <span class="math inline">\(k_{\text{D}} = 1.5 \times 10^{-7} \text{M}\)</span>.</p>
+<p>Similarly, parameter variations for CaMKII and NMDAR binding rates were explored to assess their impact on the model. Specifically, a <span class="math inline">\(k_\text{off}\)</span> for the unbinding of CaMKII from the NR1 subunit of NMDARs was estimated by <span class="citation" data-cites="leonard2002Regulation">(<a href="#ref-leonard2002Regulation" role="doc-biblioref">Leonard et al. 2002</a>)</span>. However, to the best of our knowledge, we could not find estimated values for the GluN2B subunit, to which CaMKII binds more readily <span class="citation" data-cites="strack1998Autophosphorylationdependent leonard2002Regulation barria2005NMDA">(<a href="#ref-strack1998Autophosphorylationdependent" role="doc-biblioref">Strack and Colbran 1998</a>; <a href="#ref-leonard2002Regulation" role="doc-biblioref">Leonard et al. 2002</a>; <a href="#ref-barria2005NMDA" role="doc-biblioref">Barria and Malinow 2005</a>)</span>. We therefore proceeded to use the parameters from a previously validated model <span class="citation" data-cites="romangarcia2017Computationala">(<a href="#ref-romangarcia2017Computationala" role="doc-biblioref">Roman Garcia and Stefan 2017</a>)</span>, with a <span class="math inline">\(k_{\text{D}}\)</span> value of <span class="math inline">\(1.5 \times 10^{-7} \text{M}\)</span>. We ran the simulation by varying this <span class="math inline">\(k_{\text{D}}\)</span> by factors of 0.1 and 0.01.</p>
+<p>The objective was to determine how changes in these parameters affected the molecules in the model. Specifically, we focused on CaMKII T286 phosphorylation and CaM binding, as they had been used in previous parameter sweeps and were indirectly influenced by these changes. While direct changes such as CaMKII binding or unbinding would obviously be affected by the change in parameters that directly affect their dynamics, T286 phosphorylation and CaM binding are not directly impacted in the same way, making them suitable for testing the effects of parameter variation on the system.</p>
+<div id="fig-nmdar-varying-kd-cam-ca4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII T286 phosphorylation was unaffected by changes in $k_\text{on}$ and $k_\text{off}$">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nmdar-varying-kd-cam-ca4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="validation-figures\nmdar-varying-kd-cam-ca4.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII T286 phosphorylation was unaffected by changes in $k_\text{on}$ and $k_\text{off}$">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmdar-varying-kd-cam-ca4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: CaMKII binding to CaM was unaffected by changes in <span class="math inline">\(k_{\text{D}}\)</span> by factors of 0.1 and 0.01.
+</figcaption>
+</figure>
+</div>
+<div id="fig-nmdar-varying-kd-camkiit286p" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII binding to CaM was unaffected by changes in $k_\text{on}$ and $k_\text{off}$">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nmdar-varying-kd-camkiit286p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="validation-figures\nmdar-varying-kd-camkiit286p.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII binding to CaM was unaffected by changes in $k_\text{on}$ and $k_\text{off}$">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmdar-varying-kd-camkiit286p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.4: CaMKII T286 phosphorylation CaMKII binding to CaM was unaffected by changes in <span class="math inline">\(k_{\text{D}}\)</span> by factors of 0.1 and 0.01.
+</figcaption>
+</figure>
+</div>
+<p>how do i conclude this.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-barria2005NMDA" class="csl-entry" role="listitem">
+Barria, Andres, and Roberto Malinow. 2005. <span>“<span>NMDA Receptor Subunit Composition Controls Synaptic Plasticity</span> by <span>Regulating Binding</span> to <span>CaMKII</span>.”</span> <em>Neuron</em> 48 (2): 289–301. <a href="https://doi.org/10.1016/j.neuron.2005.08.034">https://doi.org/10.1016/j.neuron.2005.08.034</a>.
+</div>
+<div id="ref-bartol2024Spatial" class="csl-entry" role="listitem">
+Bartol, Thomas M., Mariam Ordyan, Terrence J. Sejnowski, Padmini Rangamani, and Mary B. Kennedy. 2024. <span>“A Spatial Model of Autophosphorylation of <span>CaMKII</span> in a Glutamatergic Spine Suggests a Network-Driven Kinetic Mechanism for Bistable Changes in Synaptic Strength.”</span> February 2, 2024. <a href="https://doi.org/10.1101/2024.02.02.578696">https://doi.org/10.1101/2024.02.02.578696</a>.
+</div>
+<div id="ref-feng2011Quantitative" class="csl-entry" role="listitem">
+Feng, Bihua, Sridhar Raghavachari, and John Lisman. 2011. <span>“Quantitative Estimates of the Cytoplasmic, <span>PSD</span>, and <span class="nocase">NMDAR-bound</span> Pools of <span>CaMKII</span> in Dendritic Spines.”</span> <em>Brain Research</em> 1419 (October): 46–52. <a href="https://doi.org/10.1016/j.brainres.2011.08.051">https://doi.org/10.1016/j.brainres.2011.08.051</a>.
+</div>
+<div id="ref-harris1989Dendritica" class="csl-entry" role="listitem">
+Harris, K. M., and J. K. Stevens. 1989. <span>“Dendritic Spines of <span>CA</span> 1 Pyramidal Cells in the Rat Hippocampus: Serial Electron Microscopy with Reference to Their Biophysical Characteristics.”</span> <em>J. Neurosci.</em> 9 (8): 2982–97. <a href="https://doi.org/10.1523/JNEUROSCI.09-08-02982.1989">https://doi.org/10.1523/JNEUROSCI.09-08-02982.1989</a>.
+</div>
+<div id="ref-holmes2000Models" class="csl-entry" role="listitem">
+Holmes, William R. 2000. <span>“Models of <span>Calmodulin Trapping</span> and <span>CaM Kinase II Activation</span> in a <span>Dendritic Spine</span>.”</span> <em>J Comput Neurosci</em> 8 (1): 65–86. <a href="https://doi.org/10.1023/A:1008969032563">https://doi.org/10.1023/A:1008969032563</a>.
+</div>
+<div id="ref-johnson2015Model" class="csl-entry" role="listitem">
+Johnson, Todd, Tom Bartol, Terrence Sejnowski, and Eric Mjolsness. 2015. <span>“Model Reduction for Stochastic <span>CaMKII</span> Reaction Kinetics in Synapses by Graph-Constrained Correlation Dynamics.”</span> <em>Phys. Biol.</em> 12 (4): 045005. <a href="https://doi.org/10.1088/1478-3975/12/4/045005">https://doi.org/10.1088/1478-3975/12/4/045005</a>.
+</div>
+<div id="ref-lee2009Activation" class="csl-entry" role="listitem">
+Lee, Seok-Jin R., Yasmin Escobedo-Lozoya, Erzsebet M. Szatmari, and Ryohei Yasuda. 2009. <span>“Activation of <span>CaMKII</span> in Single Dendritic Spines During Long-Term Potentiation.”</span> <em>Nature</em> 458 (7236): 299–304. <a href="https://doi.org/10.1038/nature07842">https://doi.org/10.1038/nature07842</a>.
+</div>
+<div id="ref-leonard2002Regulation" class="csl-entry" role="listitem">
+Leonard, A. Soren, K.-Ulrich Bayer, Michelle A. Merrill, Indra A. Lim, Madeline A. Shea, Howard Schulman, and Johannes W. Hell. 2002. <span>“Regulation of <span>Calcium</span>/<span class="nocase">Calmodulin-dependent Protein Kinase II Docking toN-Methyl-d-aspartate Receptors</span> by <span>Calcium</span>/<span>Calmodulin</span> and α-<span>Actinin</span> *.”</span> <em>Journal of Biological Chemistry</em> 277 (50): 48441–48. <a href="https://doi.org/10.1074/jbc.M205164200">https://doi.org/10.1074/jbc.M205164200</a>.
+</div>
+<div id="ref-linkevicius2025Fitting" class="csl-entry" role="listitem">
+Linkevicius, Domas, Angus Chadwick, Guido C. Faas, Melanie I. Stefan, and David C. Sterratt. 2025. <span>“Fitting and Comparison of Calcium-Calmodulin Kinetic Schemes to a Common Data Set Using Non-Linear Mixed Effects Modelling.”</span> <em>PLoS One</em> 20 (2): e0318646. <a href="https://doi.org/10.1371/journal.pone.0318646">https://doi.org/10.1371/journal.pone.0318646</a>.
+</div>
+<div id="ref-lisman2001Model" class="csl-entry" role="listitem">
+Lisman, John E., and Anatol M. Zhabotinsky. 2001. <span>“A <span>Model</span> of <span>Synaptic Memory</span>: <span>A CaMKII</span>/<span>PP1 Switch</span> That <span>Potentiates Transmission</span> by <span>Organizing</span> an <span>AMPA Receptor Anchoring Assembly</span>.”</span> <em>Neuron</em> 31 (2): 191–201. <a href="https://doi.org/10.1016/S0896-6273(01)00364-6">https://doi.org/10.1016/S0896-6273(01)00364-6</a>.
+</div>
+<div id="ref-lisman2002Molecular" class="csl-entry" role="listitem">
+Lisman, J., H. Schulman, and H. Cline. 2002. <span>“The Molecular Basis of <span>CaMKII</span> Function in Synaptic and Behavioural Memory.”</span> <em>Nat Rev Neurosci</em> 3 (3): 175–90. <a href="https://doi.org/10.1038/nrn753">https://doi.org/10.1038/nrn753</a>.
+</div>
+<div id="ref-lucic2008Detaileda" class="csl-entry" role="listitem">
+Lučić, Vladan, Gabriela J. Greif, and Mary B. Kennedy. 2008. <span>“Detailed State Model of <span>CaMKII</span> Activation and Autophosphorylation.”</span> <em>Eur Biophys J</em> 38 (1): 83–98. <a href="https://doi.org/10.1007/s00249-008-0362-4">https://doi.org/10.1007/s00249-008-0362-4</a>.
+</div>
+<div id="ref-mcdonald2022Parameter" class="csl-entry" role="listitem">
+McDonald, Andrew G., and Keith F. Tipton. 2022. <span>“Parameter <span>Reliability</span> and <span>Understanding Enzyme Function</span>.”</span> <em>Molecules</em> 27 (1): 263. <a href="https://doi.org/10.3390/molecules27010263">https://doi.org/10.3390/molecules27010263</a>.
+</div>
+<div id="ref-ordyan2020Interactions" class="csl-entry" role="listitem">
+Ordyan, Mariam, Tom Bartol, Mary Kennedy, Padmini Rangamani, and Terrence Sejnowski. 2020. <span>“Interactions Between Calmodulin and Neurogranin Govern the Dynamics of <span>CaMKII</span> as a Leaky Integrator.”</span> <em>PLOS Computational Biology</em> 16 (7): e1008015. <a href="https://doi.org/10.1371/journal.pcbi.1008015">https://doi.org/10.1371/journal.pcbi.1008015</a>.
+</div>
+<div id="ref-otmakhov2012Measuring" class="csl-entry" role="listitem">
+Otmakhov, Nikolai, and John Lisman. 2012. <span>“Measuring <span>CaMKII</span> Concentration in Dendritic Spines.”</span> <em>Journal of Neuroscience Methods</em> 203 (1): 106–14. <a href="https://doi.org/10.1016/j.jneumeth.2011.09.022">https://doi.org/10.1016/j.jneumeth.2011.09.022</a>.
+</div>
+<div id="ref-petralia2012Distribution" class="csl-entry" role="listitem">
+Petralia, Ronald S. 2012. <span>“Distribution of <span>Extrasynaptic NMDA Receptors</span> on <span>Neurons</span>.”</span> <em>The Scientific World Journal</em> 2012 (1): 267120. <a href="https://doi.org/10.1100/2012/267120">https://doi.org/10.1100/2012/267120</a>.
+</div>
+<div id="ref-pharris2019Multistate" class="csl-entry" role="listitem">
+Pharris, Matthew C., Neal M. Patel, Tyler G. VanDyk, Thomas M. Bartol, Terrence J. Sejnowski, Mary B. Kennedy, Melanie I. Stefan, and Tamara L. Kinzer-Ursem. 2019. <span>“A Multi-State Model of the <span>CaMKII</span> Dodecamer Suggests a Role for Calmodulin in Maintenance of Autophosphorylation.”</span> <em>PLOS Computational Biology</em> 15 (12): e1006941. <a href="https://doi.org/10.1371/journal.pcbi.1006941">https://doi.org/10.1371/journal.pcbi.1006941</a>.
+</div>
+<div id="ref-romangarcia2017Computationala" class="csl-entry" role="listitem">
+Roman Garcia, Susana, and Melanie Stefan. 2017. <span>“Computational Modelling and Simulation of the Interaction Between <span>NMDA</span> Receptors and <span>CaMKII</span> in the Postsynaptic Neuron.”</span> <em>With Thanks to Colleagues from MCell.org for Assistance with Technical Matters.</em> University of Edinburgh. School of Biological Sciences. <a href="https://doi.org/10.7488/ds/2226">https://doi.org/10.7488/ds/2226</a>.
+</div>
+<div id="ref-stefan2008Allostericd" class="csl-entry" role="listitem">
+Stefan, Melanie I., Stuart J. Edelstein, and Nicolas Le Novère. 2008. <span>“An Allosteric Model of Calmodulin Explains Differential Activation of <span>PP2B</span> and <span>CaMKII</span>.”</span> <em>Proceedings of the National Academy of Sciences</em> 105 (31): 10768–73. <a href="https://doi.org/10.1073/pnas.0804672105">https://doi.org/10.1073/pnas.0804672105</a>.
+</div>
+<div id="ref-stefan2011MultiStage" class="csl-entry" role="listitem">
+Stefan, Melanie, Shirley Pepke, Stefan Mihalas, Thomas M. Bartol, Terrence J. Sejnowski, and Mary B. Kennedy. 2011. <span>“Multi-<span>Stage Modeling</span> of the <span>Kinetics</span> of <span>Activation</span> of <span>CaMKII</span>.”</span> In <em>Multi-<span>Stage Modeling</span> of the <span>Kinetics</span> of <span>Activation</span> of <span>CaMKII</span></em>. <a href="https://doi.org/10.3389/conf.fninf.2011.08.00033">https://doi.org/10.3389/conf.fninf.2011.08.00033</a>.
+</div>
+<div id="ref-strack1998Autophosphorylationdependent" class="csl-entry" role="listitem">
+Strack, Stefan, and Roger J. Colbran. 1998. <span>“Autophosphorylation-Dependent <span>Targeting</span> of <span>Calcium</span>/ <span class="nocase">Calmodulin-dependent Protein Kinase II</span> by the <span>NR2B Subunit</span> of <span class="nocase">theN-Methyl-d-aspartate Receptor</span> *.”</span> <em>Journal of Biological Chemistry</em> 273 (33): 20689–92. <a href="https://doi.org/10.1074/jbc.273.33.20689">https://doi.org/10.1074/jbc.273.33.20689</a>.
+</div>
+<div id="ref-sumathi2002Priori" class="csl-entry" role="listitem">
+Sumathi, R., and William H. Green Jr. 2002. <span>“A Priori Rate Constants for Kinetic Modeling.”</span> <em>Theor Chem Acc</em> 108 (4): 187–213. <a href="https://doi.org/10.1007/s00214-002-0368-4">https://doi.org/10.1007/s00214-002-0368-4</a>.
+</div>
+<div id="ref-turanyi2012Determination" class="csl-entry" role="listitem">
+Turányi, T., T. Nagy, I. Gy. Zsély, M. Cserháti, T. Varga, B. T. Szabó, I. Sedyó, P. T. Kiss, A. Zempléni, and H. J. Curran. 2012. <span>“Determination of Rate Parameters Based on Both Direct and Indirect Measurements.”</span> <em>International Journal of Chemical Kinetics</em> 44 (5): 284–302. <a href="https://doi.org/10.1002/kin.20717">https://doi.org/10.1002/kin.20717</a>.
+</div>
+<div id="ref-zhabotinsky2000Bistability" class="csl-entry" role="listitem">
+Zhabotinsky, Anatol M. 2000. <span>“Bistability in the <span>Ca2</span>+/<span>Calmodulin-Dependent Protein Kinase-Phosphatase System</span>.”</span> <em>Biophysical Journal</em> 79 (5): 2211–21. <a href="https://doi.org/10.1016/S0006-3495(00)76469-1">https://doi.org/10.1016/S0006-3495(00)76469-1</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./30-model.html" class="pagination-link" aria-label="In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./40-results.html" class="pagination-link" aria-label="Analysis of CaMKII Dynamics in Wild-Type and Mutant Models">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analysis of CaMKII Dynamics in Wild-Type and Mutant Models</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

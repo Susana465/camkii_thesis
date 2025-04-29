@@ -3,7 +3,7 @@ bibliography: [references.bib]
 lightbox: true
 ---
 
-# Results and discussion of results {#sec-results}
+# Analysis of CaMKII Dynamics in Wild-Type and Mutant Models {#sec-results}
 
 Three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphrylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
@@ -96,7 +96,6 @@ Interestingly, a slight increase in the population of CaMKII free from CaM and T
 
 ![note for figure: its a redundancy that camkii_cam_unbound_optent28p1 has open in it because all camkii that is t286p1 is open anyway. ](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png){#fig-subsets-of-camkii-t286p-cam-binding}
 
-subset of camkii bound to ndmdar, of which x is p and x is not p
 
 ![1](40-results-figures\WT\xsubsets_nmdar-t268p.png){#fig-xsubsets_nmdar-t268p}
 
@@ -123,19 +122,19 @@ In the final phase of CaMKII binding to NMDARs, after approximately 40 seconds �
 
 These findings show that the formation of CaMKII-NMDAR complexes does not depend on prior phosphorylation at T286. However, once T286 phosphorylation occurs, it can initiate a cascade of further autophosphorylation events, including at T306, within the same NMDAR/CaMKII complex. Previous studies have shown that CaMKII does not need to be phosphorylated at T286 in order to bind to NMDARs or to perform its catalytic functions. That said, phosphorylation at T286 can modulate or enhance both the binding affinity and the enzymatic activity of CaMKII, making it an important regulatory step rather than an absolute requirement.
 
-## T286 and CaMKII/NMDAR binding mutant models
+## T286 and CaMKII/NMDAR binding MT models
 
-The T286 mutant model is simialr biologically to the CaMKII T286A mutant, in which the critical autophosphorylation site threonine 286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both _in vitro_ biochemical assays and _in vivo_ using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. he computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions [REFERENCES]. In the T286 MT model, this mutation is represented by setting reaction rule #8 to zero (@fig-tbl-1), so phosphorylation can not happen.
+The T286 MT model is simialr biologically to the CaMKII T286A MT, in which the critical autophosphorylation site threonine 286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both _in vitro_ biochemical assays and _in vivo_ using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. he computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions [REFERENCES]. In the T286 MT model, this mutation is represented by setting reaction rule #8 to zero (@fig-tbl-1), so phosphorylation can not happen.
 
-The NMDAR/CaMKII binding mutant model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [REFERENCES]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [REFERENCE]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [REFERENCE]. CHECK - this  would be good to see in vizz output and future models. In the CaMKII/NMDAR MT model, this binding disruption is represented by setting reaction rule #12 to zero (@fig-tbl-1), so NMDAR and CaMKII binding can not proceed.
+The NMDAR/CaMKII binding MT model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [REFERENCES]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [REFERENCE]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [REFERENCE]. CHECK - this  would be good to see in vizz output and future models. In the CaMKII/NMDAR MT model, this binding disruption is represented by setting reaction rule #12 to zero (@fig-tbl-1), so NMDAR and CaMKII binding can not proceed.
 
-The following analysis compares wild-type (WT) simulations with those of the two mutant models. The total number of simulation runs for each group is as follows: WT (N = 9), T286 mutant (N = 9), and CaMKII/NMDAR mutant (N = 4). t-test and one-way anovas were performed with prior testing for normality of data sets using whitely test. 
+The following analysis compares wild-type (WT) simulations with those of the two MT models. The total number of simulation runs for each group is as follows: WT (N = 9), T286 MT (N = 9), and CaMKII/NMDAR MT (N = 4). t-test and one-way anovas were performed with prior testing for normality of data sets using whitely test. 
 
-Simulations were conducted under identical parameters across all conditions (see @fig-molecule-concentrations for initial molecule release and @fig-tbl-1 for reaction rates), except for two CaMKII/NMDAR mutant runs, as I explain below, which were part of preliminary tests involving a different CaMKII release state. Aside from this, the only intended differences between groups were the modifications to the relevant reaction rules described above.
+Simulations were conducted under identical parameters across all conditions (see @fig-molecule-concentrations for initial molecule release and @fig-tbl-1 for reaction rates), except for two CaMKII/NMDAR MT runs, as I explain below, which were part of preliminary tests involving a different CaMKII release state. Aside from this, the only intended differences between groups were the modifications to the relevant reaction rules described above.
 
-The reduced number of simulations for the CaMKII/NMDAR mutant model resulted from a human error during file execution, which will be explored in greater detail in the discussion section below. Due to this error, only four usable simulation runs were available for this model. It is important to note that, while all other simulation groups released CaMKII in its open state, the CaMKII/NMDAR mutant group includes two runs with CaMKII released in the closed state and two with CaMKII released in the open state. These files, originally generated during preliminary testing (data not shown), were the only available usable runs for this condition due to the aforementioned error. As no substantial differences in simulation outcomes were observed between the two release states, all four runs were retained in the analysis. This detail is provided here for transparency.
+The reduced number of simulations for the CaMKII/NMDAR MT model resulted from a human error during file execution, which will be explored in greater detail in the discussion section below. Due to this error, only four usable simulation runs were available for this model. It is important to note that, while all other simulation groups released CaMKII in its open state, the CaMKII/NMDAR MT group includes two runs with CaMKII released in the closed state and two with CaMKII released in the open state. These files, originally generated during preliminary testing (data not shown), were the only available usable runs for this condition due to the aforementioned error. As no substantial differences in simulation outcomes were observed between the two release states, all four runs were retained in the analysis. This detail is provided here for transparency.
 
-Having established the simulation conditions for each model, we now present quantitative comparisons between wild-type and mutant simulations across key molecular outputs. A primary focus of this analysis is the extent of CaMKII opening, as this conformational state is influenced by both T286 phosphorylation and binding to NMDARs. Given that both of these interactions promote and stabilise the open conformation of CaMKII, it was expected that disrupting either mechanism, through mutation at T286 or impairment of NMDAR binding, would lead to a reduction in CaMKII opening.
+Having established the simulation conditions for each model, we now present quantitative comparisons between wild-type and MT simulations across key molecular outputs. A primary focus of this analysis is the extent of CaMKII opening, as this conformational state is influenced by both T286 phosphorylation and binding to NMDARs. Given that both of these interactions promote and stabilise the open conformation of CaMKII, it was expected that disrupting either mechanism, through mutation at T286 or impairment of NMDAR binding, would lead to a reduction in CaMKII opening.
 
 @fig-camkii_open_anova displays the results of an ANOVA, with an F-statistic of 36.327, indicating a substantial difference between the group means relative to the variation within each group. Further, the associated p-value of $3.219 \times 10^{-7}$ indicates a very low probability that the observed differences between the groups are due to random chance.
 
@@ -143,21 +142,25 @@ Both mutations significantly decreased CaMKII opening relative to the wild-type 
 
 The NMDAR_CaMKII_MT group exhibited a much more pronounced and highly significant reduction in CaMKII opening compared to the wild-type (WT) group (p < 0.0001). As expected, reduced binding to NMDARs corresponds to a decreased likelihood of CaMKII remaining in its open conformation. Interestingly, CaMKII opening in the NMDAR_CaMKII_MT group was not only significantly lower than in the WT group, but also lower than in the T286_MT group (p < 0.0001). These findings reinforce the idea that NMDAR binding plays a central role in maintaining CaMKII in its open state in our simulations. While T286 phosphorylation is also important, it is the disruption of CaMKII/NMDAR binding that most strongly impacts CaMKII opening levels.
 
-![Both the T286 mutant (T286_MT) and the NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) exhibit significantly lower levels of CaMKII opening compared to WT, with the largest reduction observed in the NMDAR_CaMKII_MT condition. Statistical comparisons were performed using one-way ANOVA followed by Tukey’s HSD post hoc test. Asterisks indicate levels of statistical significance: p < 0.05 (*), p < 0.001 (**), and p < 0.0001 (****). ANOVA F-statistic between groups = 36.327, and $p = 3.219 \times 10^{-7}$. ](40-results-figures\statistics\camkii_open_anova.png){#fig-camkii_open_anova fig-scap="Both the T286 mutant and the NMDAR/CaMKII binding mutant exhibit significantly lower levels of CaMKII opening compared to WT"}
+![Both the T286 MT (T286_MT) and the NMDAR/CaMKII binding MT (NMDAR_CaMKII_MT) exhibit significantly lower levels of CaMKII opening compared to WT, with the largest reduction observed in the NMDAR_CaMKII_MT condition. Final molecule counts for camkii_open are shown for each simulation run (dots), with group-level distributions represented as boxplots. Solid lines represent medians, and dashed lines represent means. Statistical comparisons were performed using one-way ANOVA followed by Tukey’s HSD post hoc test. Asterisks indicate levels of statistical significance from Tukey’s HSD post hoc test: p < 0.05 (*), p < 0.001 (**), and p < 0.0001 (****). ANOVA F-statistic between groups = 36.327, and $p = 3.219 \times 10^{-7}$.](40-results-figures\statistics\camkii_open_anova.png){#fig-camkii_open_anova fig-scap="Both the T286 MT and the NMDAR/CaMKII binding MT exhibit significantly lower levels of CaMKII opening compared to WT"}
 
-Next, I aimed to examine whether calmodulin binding to CaMKII was affected across the three models. Given the expected reduction in CaMKII opening, I expected that this decrease might also result in reduced calmodulin binding in both mutant models. Specifically, I wanted to explore the relationship between T286 phosphorylation, NMDAR/CaMKII binding, and calmodulin binding.
+Next, I aimed to examine whether CaM binding to CaMKII was affected across the three models. Given the expected reduction in CaMKII opening, I expected that this decrease might also result in reduced CaM binding in both MT models. Specifically, I wanted to explore how CaM binding is related to both T286 phosphorylation and NMDAR/CaMKII binding.
 
-then this is what i saw! that actually for nmdar mutant it is not redecued. 
+As shown in @fig-CaMKII_CaM_Ca4_anova, total CaMKII bound to CaM (camkii_cam_ca4) was significantly reduced only in the T286 MT. The F-value of 4.668 indicates that the variance _between_ groups (i.e., how much the CaM binding values differ between the WT, T286_MT, and NMDAR/CaMKII_MT) is considerably larger than the variance _within_ groups (i.e., how much individual data points vary within each group). In other words, the groups are not just randomly different; the differences between the groups are meaningful and consistent. The significant reduction in CaM binding in the T286 MT (p < 0.05), and the lack of difference in the NMDAR/CaMKII MT compared to WT, suggests that T286 phosphorylation influences CaM binding to CaMKII by keeping it in the open state. On the other hand, NMDAR binding does not appear to have a similar effect.
 
-you know what i am saying? we saw for the WT that cam binding and nmdar binding to camkii subunits were not affecting each other; but rather they were independent events, where most of camkii that was bound to nmdars was free from cam. because of this, I expected that the nmdar/camkii mutant would prpbably not affect how much camkii is binding or unbinding from cam, and therefore the total camkii bound to cam (camkii_cam_ca4) would largely remain unaffected. 
+Although these findings were initially unexpected, as I had anticipated that reduced CaMKII opening in both MTs might affect CaM binding in both models, the results are actually consistent with the underlying mechanisms that we had previously obeserved. In the WT model, CaM binding and NMDAR binding to CaMKII subunits appeared to be independent processes. Notably, the majority of CaMKII bound to NMDARs did not interact with CaM. This independence between NMDAR binding and CaM binding to CaMKII helps explain why the NMDAR/CaMKII MT, which disrupts NMDAR binding, does not significantly affect CaM binding. Since NMDAR binding and CaM binding to CaMKII are independent events, disrupting NMDAR binding does not impact the ability of CaMKII to bind to or release CaM. In contrast, the T286 mutation does lead to a reduction in CaM binding, highlighting the specific role of T286 phosphorylation in regulating CaM binding.
 
-on the other hand, we did see that cam binding co-occured with t286 phosphorylation, although T286 was not necessarily more likely when subunits are bound to CaM.
+![CaM binding to CaMKII is significantly reduced only with the loss of T286 phosphorylation. Final molecule counts for camkii_cam_ca4 are shown for each simulation run (dots), with group-level distributions represented as boxplots. Solid lines represent medians, and dashed lines represent means. The T286 MT (T286_MT) shows a significant reduction in CaM-bound CaMKII compared to wild-type (WT) (p < 0.05), whereas no significant difference ('ns') is observed between WT and the NMDAR/CaMKII MT (NMDAR_CaMKII_MT), or between the two MT groups. Statistical analysis was performed using one-way ANOVA (F = 4.668, p = 0.022), followed by Tukey’s HSD post hoc test.](40-results-figures\statistics\CaMKII_CaM_Ca4_anova.png){#fig-CaMKII_CaM_Ca4_anova fig-scap="CaM binding to CaMKII is significantly reduced only with the loss of T286 phosphorylation"}
 
-we saw in the wt that camkii subunits could be kept open regardless of cam binding, meaning the two events (cam binding and nmdar binding are separate and so abolishing nmdar/camkii binding should not affect cam binding to camkii, it will still do its thing regardless of nmdar binding or not). 
+To further explore how NMDARs and T286 phosphorylation affect CaMKII opening, I looked at the amount of CaMKII subunits that remain free from CaM and are kept in their open state (denoted as CaMKII–CaM_unbound_open, @fig-camkii_cam_unbound_open). I observed a significant decrease in this molecule count in the NMDAR/CaMKII binding MT. As discussed previously, in the WT model, NMDARs play an active role in stabilizing CaMKII in its open state, even in the absence of CaM. This means that, in this model, NMDARs are crucial for maintaining CaMKII in its open form, free from calmodulin. When this stabilizing mechanism is disrupted in the NMDAR/CaMKII mutant, less CaMKII remains in the open state without CaM, because the NMDAR binding, which normally helps keep the CaMKII subunits open and CaM-free, is no longer functioning. As a result, there is a reduction in the amount of CaMKII remaining in its open state. Conversely, in the T286 mutant model, the ability of NMDARs to keep CaMKII in its open, CaM-free state is still intact, which explains why this aspect remains unaffected in this model. 
 
-to make sure that 
+![NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state (camkii_cam_unbound_open). Boxplot shows final molecule counts for camkii_cam_unbound_open across wild-type (WT), T286 phosphorylation mutant (T286_MT), and NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) models. Individual simulation runs are represented as dots. Boxes represent the interquartile range, solid lines show medians, and dashed lines show group means. A one-way ANOVA revealed a significant group effect (F = 236.180, $p = 3.80 \times 10^{-14}$), with post hoc Tukey’s HSD tests indicating significantly fewer CaMKII molecules in this state in the NMDAR/CaMKII mutant compared to both WT and T286_MT (**p < 0.001). No significant difference was observed between WT and T286_MT.](40-results-figures\statistics\camkii_cam_unbound_open.png){#fig-camkii_cam_unbound_open fig-scap="NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state"}
 
-discard the possibility of cam biding acting as
+Since NMDARs play an essential role in keeping CaMKII subunits open and free from CaM (as shown by the CaMKII_cam_unbound_open data), this opens up the question of whether T286 phosphorylation, which is a key event for CaMKII activation, is also influenced by NMDAR signalling.
+
+suggesting that CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, but as we will see next, NMDAR binding is (by keeping CaMKII subunits in their open conformation and allowing subsequent T286 autophosphorylation).
+
+
 <!-- 
 ![camkii_cam_ca4_variance](40-results-figures\statistics\camkii_cam_ca4_variance.png)
 
@@ -180,16 +183,16 @@ discard the possibility of cam biding acting as
 
 <!--
 --
-The NMDAR/CaMKII binding mutant model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [REFERENCES]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [REFERENCE]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [REFERENCE].
+The NMDAR/CaMKII binding MT model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [REFERENCES]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [REFERENCE]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [REFERENCE].
 
 
 okayyyy, so becayse t286 phosphorylation increases the chances of camkii subunits remaining in their open conformation, abolishing t286 phosphorylation we would exxpect a decrease in this opening. so we would expect iverall decrease of total camkii_open - but contrary to these expactions, we don't see that!
 
 
-## CaMKII/NMDAR binding mutant model
-This model represents a mutation that prevents CaMKII from binding to the GluN2B subunit of NMDARs, a key interaction implicated in synaptic plasticity, as discussed in SECTION-REFERENCE. When it comes to _in vivo_ and _in vitro_ mutants of CaMKII and NMDAR binding, the mutation can tackle either molecule to prevent their binding. For example, a CaMKII I205K mutation in which isoleucine is replaced with a lysine impairs binding to GluN2B without affecting kinase activity [REFERENCE], and is demonstrated to reduce CaMKII accumulation at synapses after LTP induction [REFERENCE]. 
+## CaMKII/NMDAR binding MT model
+This model represents a mutation that prevents CaMKII from binding to the GluN2B subunit of NMDARs, a key interaction implicated in synaptic plasticity, as discussed in SECTION-REFERENCE. When it comes to _in vivo_ and _in vitro_ MTs of CaMKII and NMDAR binding, the mutation can tackle either molecule to prevent their binding. For example, a CaMKII I205K mutation in which isoleucine is replaced with a lysine impairs binding to GluN2B without affecting kinase activity [REFERENCE], and is demonstrated to reduce CaMKII accumulation at synapses after LTP induction [REFERENCE]. 
 
-example of nmdar mutant https://link.springer.com/article/10.1186/1756-6606-6-10 impaired by the mutations L1298A and R1300Q [22]. https://www.embopress.org/doi/full/10.1038/emboj.2011.482
+example of nmdar MT https://link.springer.com/article/10.1186/1756-6606-6-10 impaired by the mutations L1298A and R1300Q [22]. https://www.embopress.org/doi/full/10.1038/emboj.2011.482
 
 Why L1298 and R1300?
 These residues are located in a short, conserved sequence motif within the cytoplasmic tail of GluN2B (often referred to as the CaMKII-binding site), which spans approximately amino acids 1290–1309. Structural, biochemical, and mutational studies have pinpointed L1298 and R1300 as essential contact points for high-affinity binding to the CaMKII kinase domain.
@@ -204,7 +207,7 @@ This significantly reduces binding affinity without disrupting the structure of 
 A positively charged residue, likely involved in electrostatic interactions or hydrogen bonding with CaMKII residues.
 
 Substituting arginine with glutamine (neutral, polar) removes the charge and disrupts those interactions.
-In biological systems, this has been examined using GluN2B mutants that disrupt the CaMKII-binding motif, or CaMKII mutants that selectively impair binding without affecting kinase activity. Both in vitro studies and in vivo models have demonstrated that disrupting this interaction impairs LTP maintenance and learning-related plasticity. The computational model isolates this mechanism by setting CaMKII–NMDAR binding reactions to zero, allowing for a focused analysis of how this interaction contributes to model behaviour.
+In biological systems, this has been examined using GluN2B MTs that disrupt the CaMKII-binding motif, or CaMKII MTs that selectively impair binding without affecting kinase activity. Both in vitro studies and in vivo models have demonstrated that disrupting this interaction impairs LTP maintenance and learning-related plasticity. The computational model isolates this mechanism by setting CaMKII–NMDAR binding reactions to zero, allowing for a focused analysis of how this interaction contributes to model behaviour.
 
 # STATSSSS
 
@@ -212,19 +215,19 @@ NORMALITY TEST RESULTS:
 
 camkii_open
 
-WT: 9 values | MT-t286: 9 values
+WT: 9 values |mutant-t286: 9 values
 
 📊 Shapiro–Wilk test for WT
   W = 0.9399, p = 0.5811
   ✅ Data appears normally distributed.
 
-📊 Shapiro–Wilk test for MT
+📊 Shapiro–Wilk test formutant
   W = 0.8739, p = 0.1353
   ✅ Data appears normally distributed.
 
 MT -NMDAR :10 
 
-📊 Shapiro–Wilk test for MT
+📊 Shapiro–Wilk test formutant
   W = 0.9458, p = 0.6189
   ✅ Data appears normally distributed.
 
@@ -288,7 +291,7 @@ calcium pulses chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://mcell
 
 adding structural proteins to psd
 make drawing figures of what i expect, could do in future. 
-t306 mutant too. what would i expect?
+t306 MT too. what would i expect?
 
 effects of dephosphorylation could be interesting to look at:
 
@@ -317,7 +320,7 @@ need to add a list
 
 mutant CaMKII/NMDAR binding abolition and how this replicates in the cBNGL model too.
 
-## in camkii286p mutant
+## in camkii286p MT
 
 
 ### Does this model reproduce previously suggested results of CaMKII activation?
@@ -334,7 +337,7 @@ Cam_ca4 binding to camkii favours phosphorylation at t286 -> this is also modell
 Camkii t306 P does not happen when camkii bound to nmdar (see condition reaction #8)
 
 
-our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and calmodulin (Fig. 1)
+our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and CaM (Fig. 1)
 
 does our model show that camkii_p, independent of cam binding, binds at higher rates? id expect camkii_p to be found bound to nmdar independently of cam_bound_camkii, so higher number of camkii_p_camfree, and less of camkii_p_cam_ca4
 
@@ -355,7 +358,7 @@ This is good stuff: CaMKIIα activation, but not CaMKIIα-CaM binding, integrate
 
 Taken together with our previous studies of CaMKIIα activation during repetitive Ca2+ pulses in the spine6,10, CaMKIIα activation, but not CaMKIIα-CaM binding, integrates Ca2+ pulses. This suggests that most of the active CaMKIIα population is in a CaM-independent, autonomous activation state. Our kinetic model also predicts that the CaMKIIα bound to CaM accounts for only a small fraction of CaMKIIα activity (~1/4), and most of the activity is from autonomous activation.
 
-from paper: Mechanisms of Ca2+/calmodulin-dependent kinase II activation in single dendritic spines
+from paper: Mechanisms of Ca2+/CaM-dependent kinase II activation in single dendritic spines
 
 # t305/306 p
 
@@ -367,7 +370,7 @@ this is what we see in our model too: These results suggested that inhibitory ph
 
 **Aim 2.** Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium. This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
 
-- our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and calmodulin (Fig. 1)
+- our results indicate that CaMKII binds with high affinity to NR2B/C when autophosphorylated on Thr286 independent of the presence of Ca2+ and CaM (Fig. 1)
 
 does cam binding make a difference to camkii/nmdar binding 
 
