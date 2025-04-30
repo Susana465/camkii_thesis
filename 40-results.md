@@ -5,19 +5,24 @@ lightbox: true
 
 # Results of _In Silico_ Wild-Type and Mutant Models {#sec-results}
 
-Three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphrylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
+Three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphorylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
-##  model
+The simulations were designed to observe whether known emergent behaviours of CaMKII could be reproduced by the model without being explicitly encoded. In particular, following the expected outputs stated in @sec-expected-outputs, I looked for: (1) phosphorylation at T286 occurring with or without CaM binding; (2) increased NMDAR binding by T286-phosphorylated CaMKII; and (3) enhanced NMDAR binding in the CaM-bound open state, with continued association after CaM dissociation.
+
+The results show that two out of the three expected behaviours emerge from the model dynamics. T286 phosphorylation was more likely when CaM was bound, though not strictly dependent on it. Similarly, T286-phosphorylated CaMKII was increased through NMDAR binding due to its stabilised open state. Finally, CaMKII bound to CaM binding and NMDAR association were shown to be independent. These observations will be discussed in more detail in the sections that follow.
+
+##  Analysis of the Wild-type model
 
 This section presents a summary of the results obtained from the WT model. In the WT simulation, the final total number of CaMKII_open molecules reaches a mean of approximately 108 molecules at 100 seconds. The shaded area surrounding the mean trajectory in the graph represents the standard deviation (SD), indicating the degree of variability across different simulation runs.
 
-Figure 7.2 provides an overview of the key molecular interactions and states observed in the  WT CaMKII/NMDAR model during the simulation. Each subpanel (a–d) captures specific aspects of the molecular dynamics, focusing particularly on the interplay between CaMKII opening, T286 phosphorylation, CaM binding, and NMDAR binding.
+### CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation
+@fig-t286p-means provides an overview of the key molecular interactions and states observed in the  WT CaMKII/NMDAR model during the simulation. Each subpanel (a–d) captures specific aspects of the molecular dynamics, focusing particularly on the interplay between CaMKII opening, T286 phosphorylation, CaM binding, and NMDAR binding.
 
-Figure 7.2a shows the evolution of the open conformation of CaMKII over time. The brown line represents the total number of CaMKII_open subunits, which steadily increases as the simulation progresses. Two main factors contribute to the stabilisation of CaMKII in the open state: (i) CaM binding (light blue line, camkii_cam_unbound_open) and (ii) NMDAR binding (dark blue line, nmdar_camkii_complex). Notably, NMDAR binding can maintain CaMKII in the open conformation even in the absence of CaM binding (Fig 7.2c). Figure 7.2b focuses on T286 phosphorylation dynamics of CaMKII. The orange line (camkii_t286p) shows the total number of CaMKII subunits phosphorylated at T286, while the pink line (camkii_t286p1_bound_nmdar) represents the subset of T286-phosphorylated subunits that are also bound to NMDARs. A large fraction of phosphorylated subunits are found associated with NMDARs, indicating that NMDAR binding promotes or sustains T286 phosphorylation. Importantly, this phosphorylation happens largely independently of CaM, as further illustrated in panels (c) and (d).
+Panel (a) in @fig-t286p-means shows the evolution of the open conformation of CaMKII over time. The brown line represents the total number of CaMKII_open subunits, which steadily increases as the simulation progresses. Two main factors contribute to the stabilisation of CaMKII in the open state: (1) CaM binding (light blue line, camkii_cam_unbound_open) and (2) NMDAR binding (dark blue line, nmdar_camkii_complex). Notably, NMDAR binding can maintain CaMKII in the open conformation even in the absence of CaM binding (Fig 7.2c). Figure 7.2b focuses on T286 phosphorylation dynamics of CaMKII. The orange line (camkii_t286p) shows the total number of CaMKII subunits phosphorylated at T286, while the pink line (camkii_t286p1_bound_nmdar) represents the subset of T286-phosphorylated subunits that are also bound to NMDARs. A large fraction of phosphorylated subunits are found associated with NMDARs, indicating that NMDAR binding promotes or sustains T286 phosphorylation. Importantly, this phosphorylation happens largely independently of CaM, as further illustrated in panels (c) and (d).
 
-Figure 7.2c dissects the T286-phosphorylated CaMKII subunits that are bound to NMDARs into CaM-bound and CaM-unbound populations. Here, the pink line represents all T286-phosphorylated CaMKII subunits bound to NMDARs, while the orange line shows the subset that are CaM-free  (camkii_cam_unbound_t286p1_bound_nmdar). It is clear that the majority of the T286-phosphorylated CaMKII subunits bound to NMDARs are unbound from CaM, emphasizing that CaMKII can maintain phosphorylation at T286 even after CaM dissociates. This further supports the idea that NMDAR binding alone is sufficient to stabilize the active, open, phosphorylated state in this model. Figure 7.2d provides a more detailed look at T286 phosphorylation in relation to CaM binding across the whole CaMKII population. The data shows that roughly equal numbers of CaMKII subunits are phosphorylated at T286 whether they are CaM-bound or CaM-unbound. This demonstrates that although CaM binding facilitates CaMKII opening and activation, T286 phosphorylation does not require continuous CaM binding once CaMKII is locked in its open, phosphorylated conformation.
+Panel (c) in @fig-t286p-means dissects the T286-phosphorylated CaMKII subunits that are bound to NMDARs into CaM-bound and CaM-unbound populations. Here, the pink line represents all T286-phosphorylated CaMKII subunits bound to NMDARs, while the orange line shows the subset that are CaM-free  (camkii_cam_unbound_t286p1_bound_nmdar). It is clear that the majority of the T286-phosphorylated CaMKII subunits bound to NMDARs are unbound from CaM, emphasizing that CaMKII can maintain phosphorylation at T286 even after CaM dissociates. This further supports the idea that NMDAR binding alone is sufficient to stabilize the active, open, phosphorylated state in this model. Figure 7.2d provides a more detailed look at T286 phosphorylation in relation to CaM binding across the whole CaMKII population. The data shows that roughly equal numbers of CaMKII subunits are phosphorylated at T286 whether they are CaM-bound or CaM-unbound. This demonstrates that although CaM binding facilitates CaMKII opening and activation, T286 phosphorylation does not require continuous CaM binding once CaMKII is locked in its open, phosphorylated conformation.
 
-To further dissect the molecular events underlying these dynamics, the following sections will explore a representative simulation run in detail, focusing on the specific behaviours of CaMKII subunits in relation to NMDAR and CaM binding, and T286 phosphorylation.
+To further dissect the molecular events underlying these dynamics, the following sections will explore a representative simulation run in detail, focusing on the specific behaviours of CaMKII subunits in relation to NMDAR and CaM binding, and T286 phosphorylation. For reproducibility, the simulation run was "run_2025-04-03_08-45-21_seed_2". The model simulation files will be available in the model's GitHub repository page: https://github.com/Susana465/CaMKII_hexa_bgnl_to_mcell. In order to facilitate comprehensive understanding of the molecule names used, a summary is provided in @fig-observable_names. 
 
 ::: {.landscape}
 
@@ -25,17 +30,17 @@ To further dissect the molecular events underlying these dynamics, the following
 
 :::
 
-![blablaneeds](40-results-figures\observable_names.PNG)
+![Summary of observable names and their meaning.](40-results-figures\observable_names.PNG){#fig-observable_names}
 
 
-### Calcium release and initial CaM saturation
+### Approximately half of CaM binds to calcium within the first 5s
 In the WT model (described in detail in @sec-model-description), a release of 1000 calcium ions occurs within a dendritic spine volume of 0.50588 $\mu\text{m}^3$. This calcium subsequently binds to CaM, which can bind up to four calcium ions. Full saturation of CaM is required for subsequent binding to CaMKII, resulting in the formation of the CaMKII–CaM complex (CaMKII_CaM_Ca4).
 
 This progression is illustrated in (@fig-calcium-binding), where the gradual formation of partially and fully calcium-bound CaM species is shown. Although calcium itself is not displayed (due to its relatively high concentration distorting the plot scale), the stepwise increase in CaM species bound to one, two, three, and four calcium ions is clearly visible. The appearance of CaMKII bound to fully saturated CaM (camkii_cam_ca4) further confirms the expected dynamics. as per the set reaction rates and established literature, CaM fully bound to four calcium ions is immediately available for binding to CaMKII, whereas CaM bound to fewer calcium ions is less readily available for this interaction.
 
 The simulation reveals a rapid decrease in the concentration of free CaM, which stabilises at approximately half of its initial value, suggesting that roughly half of the CaM molecules remain unbound to calcium. Upon further investigation, this suggests that calcium is acting as a saturating factor. Given that each CaM molecule can bind up to four calcium ions, the 290 CaM molecules would require at least 1200 calcium ions (290 × 4 $\approx$ 1200) for full saturation. However, the model uses 1000 calcium ions, which is slightly below this threshold. It is also worth noting that calcium ions are continuously binding to and dissociating from CaM as part of the ongoing reactions, so as some calcium may dissociate from one species, it might then associate to another, allowing for dynamic and emergent molecule behaviours. Even if the calcium concentration were increased (the difference between 1000 and 1200 calcium ions would be relatively small, from 3.282 $\mu\text{M}$ to 3.938 $\mu\text{M}$, respectively), we would expect an increase in the number of CaM molecules bound to four calcium ions, but the change might not be substantial. 
 
-![CaM binding to 1,2,3 and 4 calcium ions (calcium not shown) and formation of CaMKII-CaM complex (CaMKII_CaM_Ca4). _For reproducibility, this figure was obtained from plotting "run_2025-04-03_08-45-21_seed_2."_](40-results-figures\WT\calcium-binding.png){#fig-calcium-binding fig-pos='H' fig-scap="CaM binding calcium"}
+![CaM binding to 1,2,3 and 4 calcium ions (calcium not shown) and formation of CaMKII-CaM complex (CaMKII_CaM_Ca4).](40-results-figures\WT\calcium-binding.png){#fig-calcium-binding fig-pos='H' fig-scap="CaM binding calcium"}
 
 ### CaM stabilises CaMKII in the open conformation, but is not required for CaMKII/NMDAR binding
 Next, we examine CaM–CaMKII binding (@fig-cam-camkii-binding), focusing on how CaMKII's open conformation of subunits stabilises over time. Out of the 720 CaMKII subunits released (not shown), a total of 104 molecules remain in the open conformation (camkii_open), at 100 seconds. Camkii_open represent the total population of CaMKII subunits that are structurally in their open state. To determine how many of these open subunits are simultaneously bound to CaM, we refer to the pink trace in @fig-cam-camkii-binding, which indicates that 79 subunits are CaM-bound by the end of the simulation. This shows that approximately 75% of the open CaMKII subunits are being stabilised in this state through CaM binding up until the end of the simulation. 
@@ -50,9 +55,9 @@ Interestingly, the proportion of CaMKII free from CaM that are still in their op
 
 Initially, the level of CaMKII free from CaM that are still in their open conformation (camkii_cam_unbound_open) fluctuates and exceeds the amount of CaMKII bound to NMDARs (nmdar_camkii_complex). This indicates that while a pool of open CaMKII is available, not all of it is bound to NMDARs at once. Over time, as CaMKII binding to NMDARs progresses and the system approaches a steady state, newly opened CaMKII subunits are quickly captured by available NMDAR binding sites. Consequently, the amount of free, open CaMKII stabilizes at a level consistently lower than the amount of NMDAR-bound CaMKII, indicating that binding to NMDARs efficiently sequesters and stabilizes open CaMKII in the later phase.
 
-Moreover, in @fig-camkii-opening-nmdar, we observe a three-step, ladder-like progression of CaMKII binding to NMDARs. Each step corresponds to an increase in the number of CaMKII subunits bound: first reaching approximately 12 subunits, then 24, and finally 30. This pattern suggests that entire CaMKII holoenzymes (each containing 12 subunits) sequentially bind to NMDARs.
+Moreover, in @fig-camkii-opening-nmdar, we observe a three-step, ladder-like progression of CaMKII binding to NMDARs. Each step corresponds to an increase in the number of CaMKII subunits bound: first reaching approximately 12 subunits, then 24, and finally 30. This pattern suggests that entire CaMKII holoenzymes (each containing 12 subunits) sequentially bind to NMDARs. Here, looking at a single run reveals a clear pattern that was obscured when averaging across multiple simulations 
 
-Initially, one holoenzyme binds rapidly, with its subunits quickly associating with available NMDARs. Once 12 subunits are bound, a second holoenzyme begins binding. However, this process is slower, likely because after the first 12 subunits are bound, there are fewer free NMDARs left. Now, the second holoenzyme has fewer choices, and it may need to "search" or "diffuse" around more to find free receptors. Finally, after the second holoenzyme binds (up to 24 subunits), a third holoenzyme binds partially, occupying the remaining 6 NMDARs. By the time the third holoenzyme tries to bind, only 6 NMDARs are free — not enough for all 12 subunits. The progressive slowing reflects decreasing availability of free NMDARs for binding. The implications of these findings are discussed in the REFERENCE-SECTION; however, this particular mode of CaMKII binding to NMDARs may be an artifact of the model. Although not necessarily invalid, this aspect warrants further scrutiny and should be revisited in future research, as explored further in the discussion section below.
+Initially, one holoenzyme binds rapidly, with its subunits quickly associating with available NMDARs. The process of a second holoenzyme binding is slower, likely because after the first 12 subunits are bound, there are fewer free NMDARs left. Now, the second holoenzyme has fewer choices, and it may need to "search" or "diffuse" around more to find free receptors. Finally, after the second holoenzyme binds (up to 24 subunits), a third holoenzyme binds partially, occupying the remaining 6 NMDARs. By the time the third holoenzyme tries to bind, only 6 NMDARs are free — not enough for all 12 subunits. The progressive slowing reflects decreasing availability of free NMDARs for binding. The implications of these findings are discussed in @sec-discussion. However, this particular mode of CaMKII binding to NMDARs may be an artifact of the model. Although not necessarily invalid, this aspect warrants further scrutiny and should be revisited in future research, as explored further in the discussion section below.
 
 In summary, the majority (75%) of CaMKII subunits in the open conformation are stabilized by binding to CaM. However, while  CaM helps stabilize CaMKII in the open state, the binding of CaMKII to NMDARs is not dependent on CaM. As CaMKII binds to NMDARs, it maintains its open conformation even without CaM binding, indicating that the interaction between CaMKII and NMDARs can stabilize the open state of CaMKII independently of CaM. 
 
@@ -62,7 +67,7 @@ In summary, the majority (75%) of CaMKII subunits in the open conformation are s
 
 ![](40-results-figures\WT\camkii-open-nmdar.png){#fig-camkii-opening-nmdar}
 
-Stabilisation of CaMKII in the Open Conformation. _For reproducibility, this figure was obtained from plotting data from "run_2025-04-03_08-45-21_seed_2."_
+Stabilisation of CaMKII in the Open Conformation._
 
 :::
 
@@ -71,7 +76,7 @@ Next we look at total number of CaMKII subunits phosphorylated at T286. CaMKII_T
 
 Out of the 104 CaMKII subunits that are open at the end of the simulation, 45 are found to be phosphorylated at T286 (@fig-subsets-of-open-t286p1_p0), and the rest (104 - 45 = 59) are therefore not phosphorylated at this site. This indicates that approximately half of the open CaMKII subunits are in a T286-phosphorylated state. 
 
-Of the 45 T286-phosphorylated CaMKII subunits, a subset of 25 are found to be bound to NMDARs (pink line: camkii_t286p1_bound_nmdar as shown in @fig-camkii-t286p-nmdar-b). The difference between these two molecules, corresponds to the number of CaMKII molecules that are T286-phosphorylated but not associated with NMDARs. This is, out of all the CaMKII subunits that are phosphorylated at T286, about half can be found bound to NMDARs, and the other half is not. @fig-subsets_nmdar-t268p further demonstrates that the majority of CaMKII subunits bound to NMDARs and phosphorylated at T286 are unbound from CaM. This complements observations in @fig-camkii-t286p-nmdar-b, where 25 CaMKII subunits are both T286-phosphorylated and bound to NMDARs, of which 23 are CaM-free and only 2 remain CaM-bound by the end of the simulation.
+Of the 45 T286-phosphorylated CaMKII subunits, a subset of 25 are found to be bound to NMDARs (pink line: camkii_t286p1_bound_nmdar as shown in @fig-camkii-t286p-nmdar-b). The difference between these two molecules, corresponds to the number of CaMKII molecules that are T286-phosphorylated but not associated with NMDARs. This is, out of all the CaMKII subunits that are phosphorylated at T286, about half can be found bound to NMDARs, and the other half is not. @fig-subsets_nmdar-t268p further demonstrates that the majority of CaMKII subunits bound to NMDARs and phosphorylated at T286 are free from CaM. This complements observations in @fig-camkii-t286p-nmdar-b, where 25 CaMKII subunits are both T286-phosphorylated and bound to NMDARs, of which 23 are CaM-free and only 2 remain CaM-bound by the end of the simulation.
 
 Further, within the population of T286-phosphorylated CaMKII that is also bound to NMDARs (pink line: camkii_t286p1_bound_nmdar), only a very small number of subunits remain bound to CaM (@fig-subsets_nmdar-t268p). Thus, the majority of CaMKII subunits that are bound in a NMDAR/CaMKII complex are both phosphorylated at T286 and free from CaM (which is consistent with literature, as further discussed in REFERENCE-SECTION). This is, once CaMKII is bound to the NMDARs, the holoenzyme subunits can remain open, and autophosphorylate even in the absence of CaM. 
 
@@ -102,27 +107,27 @@ Interestingly, a slight increase in the population of CaMKII free from CaM and T
 ### NMDAR binding also promotes CaMKII autophosphorylation at T306 site
 Phosphorylation at the T306 site is known to occur at a slower rate than phosphorylation at T286 [@otmakhov2015Fast; @chang2017CaMKII], and this is reflected in the model outputs. A total of 25 CaMKII subunits become phosphorylated at T306 over the course of the simulation (marroon trace: camkii_t306p in @fig-t306p), of which 21 are bound to the NMDAR (golden trace:camkii_cam_unbound_t306p1_bound_nmdar in @fig-t306p) —indicating that approximately 84% of T306-phosphorylated subunits are part of NMDAR complexes. 
 
-Moreover, the accumulation of doubly phosphorylated subunits (T286P and T306P; here referred to as CaMKII_PP, hot pink trace in @fig-t306p) appears to track closely with the rate of T306 phosphorylation. This indicates that T306 phosphorylation typically follows T286 phosphorylation, particularly during the earlier stages of the simulation. This behaviour is consistent with both the modelled mechanisms and findings reported in the literature [REFERENCE].
+Moreover, the accumulation of doubly phosphorylated subunits (T286P and T306P; here referred to as CaMKII_PP, hot pink trace in @fig-t306p) appears to track closely with the rate of T306 phosphorylation. This indicates that T306 phosphorylation typically follows T286 phosphorylation, particularly during the earlier stages of the simulation. This behaviour is consistent with both the modelled mechanisms and findings reported in the literature [@pi2010Autonomousa].
 
-![alt text](40-results-figures\WT\t306p.png){#fig-t306p fig-pos="H"} 
+![At later stages, T306 phosphorylation can occur and persist independently of T286 in CaMKII that is bound to NMDARs.](40-results-figures\WT\t306p.png){#fig-t306p fig-pos="H"} 
 
-Interestingly, after around 60 seconds, subunits that are solely phosphorylayed at T306 continue to increase, whilst CaMKII_PP does not (@fig-t306p). This suggests that, at later stages in the simulation, T306 phosphorylation can occur and persist independently of T286 phosphorylation. Extending the simulation time may offer further insights into this dynamic, as it could support the biological hypothesis that initial T286 phosphorylation enables subsequent T306 phosphorylation, but that T306P can then be maintained even in the absence of T286P [REFERENCE].
+Interestingly, after around 60 seconds, subunits that are solely phosphorylayed at T306 continue to increase above CaMKII_PP (@fig-t306p). This suggests that, at later stages in the simulation, T306 phosphorylation can occur and persist independently of T286 phosphorylation. Extending the simulation time may offer further insights into this dynamic, as it could support the biological hypothesis that initial T286 phosphorylation enables subsequent T306 phosphorylation, but that T306P can then be maintained even in the absence of T286P [@hanson1992Inhibitory; @pi2010Autonomousa; @bhattacharyya2020Flexible]].
 
 Furthermore, T306 phosphorylation follows NMDAR binding dynamics closely. As shown in @fig-t306p-nmdar-binding, CaMKII subunits initially bind to NMDARs in an unphosphorylated T306 state (slate-green: camkii_t306p0_bound_nmdar in @fig-t306p-nmdar-binding). Once the CaMKII–NMDAR complex reaches equilibrium, levels of T306 phosphorylation increase correspondingly, as unphosphorylated T306 decreases. 
 
-![alt text](40-results-figures\WT\t306p-nmdar-binding.png){#fig-t306p-nmdar-binding fig-pos="H"} 
+![CaMKII binds unphosphorylated to NMDARs (camkii_00_bound_nmdar). T286 phosphorylation ensues, followed by an increase in T306 phosphorylation (camkii_t306p1_bound_nmdar) -and a T306 unphosphorylated state descrease (camkii_t306p0_bound_nmdar). All these molecules are a subset of CaMKII bound to NMDARs (nmdar_camkii_complex).](40-results-figures\WT\t306p-nmdar-binding.png){#fig-t306p-nmdar-binding fig-pos="H"} 
 
-In the final phase of CaMKII binding to NMDARs, after approximately 40 seconds —when all NMDARs are saturated, T306 phosphorylation continues to rise. This is likely supported by the concurrent increase in T286 phosphorylation, and by a decrease in CaM binding to CaMKII subunits already bound to NMDARs. That is, by 40s, a greater proportion of CaMKII subunits are free from CaM (as seen in @fig-subsets-of-camkii-t286p-cam-binding). This aligns with expectations, as CaM binding and T306 phosphorylation are mutually exclusive processes —CaM must be unbound for T306 phosphorylation to occur. Therefore, as the model shows a decrease in CaM binding to CaMKII subunits that are already part of the CaMKII–NMDAR complex, the opportunity for T306 phosphorylation increases. In other words, the less CaM is bound to CaMKII subunits, the more likely it is that T306 can become phosphorylated, and the less likely CaM is to bind. 
+In the final phase of CaMKII binding to NMDARs, after approximately 40 seconds —when all NMDARs are saturated, T306 phosphorylation continues to rise. This is likely supported by the concurrent increase in T286 phosphorylation, and by a decrease in CaM binding to CaMKII subunits already bound to NMDARs. This aligns with expectations, as CaM binding and T306 phosphorylation are mutually exclusive processes —CaM must be unbound for T306 phosphorylation to occur. Therefore, as the model shows a decrease in CaM binding to CaMKII subunits that are already part of the CaMKII–NMDAR complex, the opportunity for T306 phosphorylation increases. In other words, the less CaM is bound to CaMKII subunits, the more likely it is that T306 can become phosphorylated, and the less likely CaM is to bind. 
 
 @fig-t306p-nmdar-binding shows three distinct peaks, each representing CaMKII subunits that are in the "p00" state — meaning they are not phosphorylated at either T286 or T306. This pattern highlights three important insights. First, CaMKII binds to NMDARs before any phosphorylation has occurred. Second, although phosphorylation is not required for binding, once CaMKII is incorporated into an NMDAR complex, autophosphorylation becomes more likely. Third, phosphorylation at T306 follows phosphorylation at T286, following a sequential phosphorylation mechanism as expected.
 
 These findings show that the formation of CaMKII-NMDAR complexes does not depend on prior phosphorylation at T286. However, once T286 phosphorylation occurs, it can initiate a cascade of further autophosphorylation events, including at T306, within the same NMDAR/CaMKII complex. Previous studies have shown that CaMKII does not need to be phosphorylated at T286 in order to bind to NMDARs or to perform its catalytic functions. That said, phosphorylation at T286 can modulate or enhance both the binding affinity and the enzymatic activity of CaMKII, making it an important regulatory step rather than an absolute requirement.
 
-## T286 and CaMKII/NMDAR binding MT models
+## Analysis of the T286 and CaMKII/NMDAR binding mutant models
 
-The T286 MT model is simialr biologically to the CaMKII T286A MT, in which the critical autophosphorylation site threonine 286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both _in vitro_ biochemical assays and _in vivo_ using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. he computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions [REFERENCES]. In the T286 MT model, this mutation is represented by setting reaction rule #8 to zero (@fig-tbl-1), so phosphorylation can not happen.
+The T286 MT model is simialr biologically to the CaMKII T286A MT, in which the critical autophosphorylation site T286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both _in vitro_ biochemical assays and _in vivo_ using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. This computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions. In the T286 MT model, this mutation is represented by setting reaction rule #8 to zero (@fig-tbl-1), so phosphorylation can not happen.
 
-The NMDAR/CaMKII binding MT model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [REFERENCES]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [REFERENCE]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [REFERENCE]. CHECK - this  would be good to see in vizz output and future models. In the CaMKII/NMDAR MT model, this binding disruption is represented by setting reaction rule #12 to zero (@fig-tbl-1), so NMDAR and CaMKII binding can not proceed.
+The NMDAR/CaMKII binding MT model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity [@sanhueza2013CaMKII]. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact [@bayer2001Interactiona]. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction [@bayer2001Interactiona]. In the CaMKII/NMDAR MT model, this binding disruption is represented by setting reaction rule #12 to zero (@fig-tbl-1), so NMDAR and CaMKII binding can not proceed.
 
 The following analysis compares  WT simulations with those of the two MT models. The total number of simulation runs for each group is as follows: WT (N = 9), T286 MT (N = 9), and CaMKII/NMDAR MT (N = 4). t-test and one-way anovas were performed with prior testing for normality of data sets using whitely test. 
 
@@ -195,107 +200,12 @@ Likewise, although the current model uses biologically plausible molecular conce
 
 Furthermore, future implementations could introduce calcium pulses to enable the model to more accurately investigate how the timing, frequency, and amplitude of calcium signals influence downstream molecular interactions, such as CaM binding and CaMKII phosphorylation. In the present study, the model simulates a single calcium stimulus to initiate signalling events. Future model developments could incorporate repetitive calcium bursts—akin to the approach used by [@chang2019Mechanismsa]—designed to emulate theta burst stimulation, a well-established protocol for inducing LTP. Incorporating such bursts would allow for the investigation of threshold effects (e.g., how many pulses are required for full CaMKII activation and sustained LTP). It would also enable exploration of further temporal integration, a key feature of CaMKII, which responds not just to the presence of calcium signals but also to their frequency and duration, thereby shaping downstream signalling outcomes [reference]. As a potential direction for this future implementation, calcium pulses could be incorporated directly into the BNGL file using time-dependent functions. 
 
-In addition to the proposed biochemical refinements, future adaptations of the model could benefit from incorporating spatial visualisation using MCell’s viz_output feature in CellBlender. This would allow the model to move beyond abstract molecule counts and provide an intuitive, dynamic representation of molecular interactions within a defined spatial environment. Such visualisations can help identify spatial effects—such as molecular crowding, diffusion limitations, or compartmental segregation—that may influence the behaviour of key species like CaMKII, CaM, or PP1. Although preliminary simulation runs with visual output were conducted, time constraints precluded their full integration and analysis in the present study. Nevertheless, spatial visualisation remains a valuable avenue for expanding the interpretability and realism of future CaMKII-NMDAR models.
+In addition to the proposed biochemical refinements, future adaptations of the model could benefit from incorporating spatial visualisation using MCell’s viz_output feature in CellBlender. This would allow the model to move beyond abstract molecule counts and provide an intuitive, dynamic representation of molecular interactions within a defined spatial environment. Such visualisations can help identify spatial effects—such as molecular crowding, diffusion limitations, or compartmental segregation—that may influence the behaviour of key species like CaMKII, CaM, or PP1. For example, experimental evidence has shown that mutations disrupting CaMKII binding to NMDARs reduces CaMKII accumulation at synapses following LTP induction [@bayer2001Interactiona], which could be effectively visualised and explored in future models. For example, experimental evidence has shown that mutations disrupting CaMKII binding to NMDARs reduces CaMKII accumulation at synapses following LTP induction [@bayer2001Interactiona], which could be effectively visualised and explored in future models. Although preliminary simulation runs with visual output were conducted, time constraints precluded their full integration and analysis in the present study. Nevertheless, spatial visualisation remains a valuable avenue for expanding the interpretability and realism of future CaMKII-NMDAR models.
 
-now viz output
-
-
-Furthermore, future implementations could introduce calcium pulses would allow the model to more accurately explore how the timing, frequency, and amplitude of calcium signals influence downstream molecular interactions, such as CaM binding and CaMKII phosphorylation. In the current study, the model simulates the release of a single calcium stimulus to initiate signalling events. Future implementations could incorporate repetitive calcium bursts, perhaps similarly to what [@chang2019Mechanismsa] did, designed to emulate theta burst stimulation, which is a well estblished protocol for inducing LTP.  Implementing calcium bursts in this form would allow the exploration of threshold effects (e.g., how many pulses are required for full CaMKII activation and sustained LTP) and would enable probing of temporal integration, a hallmark feature of CaMKII, which can decode the frequency and duration of calcium transients to determine downstream signaling outcomes. 
+Furthermore, future implementations could introduce calcium pulses would allow the model to more accurately explore how the timing, frequency, and amplitude of calcium signals influence downstream molecular interactions, such as CaM binding and CaMKII phosphorylation. In the current study, the model simulates the release of a single calcium stimulus to initiate signalling events. Future implementations could incorporate repetitive calcium bursts, perhaps similarly to what [@chang2019Mechanismsa] did, designed to emulate theta burst stimulation, which is a well estblished protocol for inducing LTP. Implementing calcium bursts in this form would allow the exploration of threshold effects (e.g., how many pulses are required for full CaMKII activation and sustained LTP) and would enable probing of temporal integration, a hallmark feature of CaMKII, which can decode the frequency and duration of calcium transients to determine downstream signaling outcomes. 
 
 
---
-s another thing i wanna say here is that molecular concentrations such as pp1 could be changed - i want the following summarised muchly. 
-CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows CaMKII to maintain its autonomous activity even if CaMKII is dephosphorylated at Thr286. -> in principle its possible - importance of camkii opening by nmdars in fig 6.16
-
-WE Dont see this, we dont see camkii that remains bound to nmdar and is unphosphorylated, all of camkii bound to nmdars remains phosphorylated. the levels of pp1 in the model used here are -> PP1 concentrations in neurons are typically reported between 1 $\mu\text{M}$ and 10 $\mu\text{M}$ [@cohen2002Protein], with CaMKII concentrations around 5 $\mu\text{M}$, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 $\mu\text{M}$, and CaMKII at 2.36 $\mu\text{M}$, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.
-
-pp1 binding is impaired by cam binding - pharris suggest this. nmdar-camkii may be more readily dephospho by pp1 if cam is unbound more likely.
-
-another thing is that as we have argued in biological plausibility molecular concentrations are valid but in order to improve the model further, concentrations of molecules could be adjusted too. 
-
-However, these results should be taken with a pinch of salt considering this might be an artifact of the model as camkii binds to nmdars and it is this binding that is promoting most of the phosphorylation in the model. future studies on this should consider the suggestion we give above of allowing only one camkii subunit to bind per nmdar, as well as consider implementing camkii's competing kinase, dapk1 to regulate camkii binding and t306p. hows does dapk1 work? can u add? 
-
-
-then link in with pp1
-
-and future things to do
-
-- talking of future things...concentration and volume of molecules, model camkii binding to nmdar by subunit only, and!! could even model nmdar different binding mechanisms to test how camkii may be binding to nmdars and whether this makes a difference. 
 - cytoskeleton
-
---
-SUMMARY:
-The model used in this study reveals that the binding of CaMKII to NMDARs stabilizes the "open" conformation of CaMKII, independent from CaM binding, which in turn promotes a persistent interaction between GluN2B and the T286 phospho-site on CaMKII, locking it in an active open conformation. This suggests that NMDAR binding alone can support the prolonged activation of CaMKII, even without CaM involvement.
-
-Based on the data, I hypothesize that the open conformation of CaMKII, rather than phosphorylation, is the key factor enabling binding to GluN2B. The observation that CaMKII can still bind GluN2B even when phosphorylation is inhibited by AS283 suggests that phosphorylation is not a strict requirement for complex formation. Regarding CaM binding, it's likely that the presence of CaM increases the likelihood of CaMKII being bound to GluN2B, rather than being an absolute necessity for the interaction.
-
-
---
-
-what was the question, what was the method, what was the result and what did that mean. 
-
-Determine in detail how functional states of CaMKII contribute to stabilizing the CaMKII/NMDAR complex, defined as achieving long-lasting binding that reaches equilibrium.
-This includes investigating how conformational states of CaMKII and phosphorylation events influence the stability of the complex.
-
-Aim 4. Investigate how CaMKII/NMDAR binding influences CaMKII activity and function by examining an in silico mutation model where CaMKII-NMDAR interaction is disrupted.
-
-Aim 5. Investigate how CaMKII phosphorylation influences CaMKII/NMDAR binding by examining an in silico mutation model where CaMKII cannot be phosphorylated at key functional
-residues.
-
-previous studies have shown [REFERENCES] that : Transient CaMKII activity evokes an initial reversible, Ca2+/calmodulin-dependent binding of GluN2B to the substrate-binding site within the catalytic domain of CaMKII, whereas prolonged enzymatic activity leads to a persistent interaction between GluN2B and the Thr286 phospho site of CaMKII, locking CaMKII in an active conformation --> 
-
-and this is what we see too!!! the way model is happening of camkii holoenzyme - explain here. 
-
-Autophosphorylation of Thr286 allows CaMKII to bind to the GluN2B subunit of the NMDA receptor [85,94]. -> so we actually see that indeed t286 phosphorylation is maintained when CaMKII is bound to NMDARs, however what we see in this model is not that autophosphorylation helps camkii bind to the ndmdar, in fact camkii binds to nmdars unphosphorylated first, but that nmdars facilitate further camkii autophosphorylation instead. 
-
-should i reference figures from before? 
-
-okay two more things on how camkiia ctivity is maintained through binding to nmdars:
-
-CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows CaMKII to maintain its autonomous activity even if CaMKII is dephosphorylated at Thr286. -> in principle its possible - importance of camkii opening by nmdars in fig 6.16
-
-WE Dont see this, we dont see camkii that remains bound to nmdar and is unphosphorylated, all of camkii bound to nmdars remains phosphorylated. the levels of pp1 in the model used here are -> PP1 concentrations in neurons are typically reported between 1 $\mu\text{M}$ and 10 $\mu\text{M}$ [@cohen2002Protein], with CaMKII concentrations around 5 $\mu\text{M}$, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 $\mu\text{M}$, and CaMKII at 2.36 $\mu\text{M}$, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.
-
-pp1 binding is impaired by cam binding - pharris suggest this. nmdar-camkii may be more readily dephospho by pp1 if cam is unbound more likely.
-
-Even if calmodulin dissociates following a drop in intracellular calcium levels, CaMKII can remain active (have autonomous activity without calcium/cam). -> so actually cam dissociates but there isnta drop in calcium...humm
-
-Binding of CaMKII to GluN2B: Requirements and Considerations
-What are the necessary conditions for the binding of CaMKII to GluN2B, and how do the data compare to the assumptions made in the model?
-
-Tullis et al. (2023) propose that for CaMKII to form a complex with GluN2B, two factors are crucial: CaMKII must be activated by CaM, and the ATP pocket of CaMKII must be occupied, either by an ATP-competitive phosphorylation inhibitor (e.g., AS283) or through phosphorylation at T286. However, this perspective may be incomplete.
-
-Based on the data, I hypothesize that the open conformation of CaMKII, rather than phosphorylation, is the key factor enabling binding to GluN2B. The observation that CaMKII can still bind GluN2B even when phosphorylation is inhibited by AS283 suggests that phosphorylation is not a strict requirement for complex formation. Regarding CaM binding, it's likely that the presence of CaM increases the likelihood of CaMKII being bound to GluN2B, rather than being an absolute necessity for the interaction.
-
--> this is what we see actually!
-
-t306 discussions
-
-By contrast, in response to LTD stimuli, this GluN2B binding and the synaptic accumulation of CaMKII is suppressed by two specific mechanisms: autophosphorylation of CaMKII T305/3068 and activation of death-associated protein kinase 1 (DAPK1).7 The autophosphorylation at T305/306 directly reduces CaMKII binding to GluN2B,12 https://www.sciencedirect.com/science/article/pii/S2589004223008003
-
-Phosphorylation of Thr305/306 that would occur in autonomously active CaMKII is inhibited when CaMKII is bound to GluN2B -> probably because the binding keeps the kinase domain from closing into the autoinhibitory domain. -> we dont see this. 
-This allows CaMKII bound to GluN2B to bind cam_ca4 again following a subsequent increase in intracellular calcium concentrations.
-
-in fact we see that t306 continues to rise and PREVENTS CaM from binding back into the holoenzyme. 
-
-## Limitations and future steps
-
-biology
-things that can be done in the future: 
-
-add ampars to see this? CaMKII directly interacts with GluN2B which anchors CaMKII at the synapse in an
-active conformation (Bayer et al., 2001). Targeting CaMKII to the PSD via its interaction
-with GluN2B is critical for the phosphorylation of GluA1 subunits of the AMPA receptor
-among many other PSD proteins (Lisman et al., 2002; Barria and Malinow, 2005; Zhou et al.,
-2007). 
-
-Competitive actions of DAPK1 in LTD - for future work?
-
-mechanics of modelling - codeworkflow reflections
-- errors
-- how to fix
-
-next steps - paper publication how would this look like?
 
 
 
