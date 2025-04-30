@@ -19,10 +19,6 @@ Figure 7.2c dissects the T286-phosphorylated CaMKII subunits that are bound to N
 
 To further dissect the molecular events underlying these dynamics, the following sections will explore a representative simulation run in detail, focusing on the specific behaviours of CaMKII subunits in relation to NMDAR and CaM binding, and T286 phosphorylation.
 
-which figure is best? separated or all in one?
-
-![Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)](40-results-figures\WT\wt-redo.png){#fig-all-means-WT fig-scap="Final value means of total molecule counts"}
-
 ::: {.landscape}
 
 ![Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)](40-results-figures\WT\t286p-means.PNG){#fig-t286p-means fig-scap="abcd"}
@@ -156,29 +152,16 @@ To further explore how NMDARs and T286 phosphorylation affect CaMKII opening, I 
 
 ![NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state (camkii_cam_unbound_open). Boxplot shows final molecule counts for camkii_cam_unbound_open across wild-type (WT), T286 phosphorylation mutant (T286_MT), and NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) models. Individual simulation runs are represented as dots. Boxes represent the interquartile range, solid lines show medians, and dashed lines show group means. A one-way ANOVA revealed a significant group effect (F = 236.180, $p = 3.80 \times 10^{-14}$), with post hoc Tukey’s HSD tests indicating significantly fewer CaMKII molecules in this state in the NMDAR/CaMKII mutant compared to both WT and T286_MT (**p < 0.001). No significant difference was observed between WT and T286_MT.](40-results-figures\statistics\camkii_cam_unbound_open.png){#fig-camkii_cam_unbound_open fig-scap="NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state"}
 
-Since NMDARs play an essential role in keeping CaMKII subunits open and free from CaM (as shown by the CaMKII_cam_unbound_open data), this opens up the question of whether T286 phosphorylation, which is a key event for CaMKII activation, is also influenced by NMDAR signalling.
+Since NMDARs play an essential role in keeping CaMKII subunits open and free from CaM (as shown by the CaMKII_cam_unbound_open data), this opens up the question of whether T286 phosphorylation, which is a key event for CaMKII activation, is also influenced by NMDAR signalling. In the WT model, we observed that CaMKII subunits bind to NMDARs in an unphosphorylated state, and T286 phosphorylation is subsequently stabilized once these subunits associate with NMDARs, even in the absence of CaM. What is more, NMDAR binding was identified as the key event leading to T286 phosphorylation, as it helps maintain CaMKII in its open conformation, thus enabling T286 autophosphorylation. Consequently, in the NMDAR/CaMKII binding mutant, where NMDAR-CaMKII interaction is disrupted, we expect T286 phosphorylation to be significantly reduced due to the loss of this stabilization mechanism. As expected, in the NMDAR/CaMKII binding MT, we observed a significant reduction in T286 phosphorylation, confirming the importance of NMDAR-CaMKII binding in T286 autophosphorylation (@fig-camkii_t286p_nmdarMT).
 
-suggesting that CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, but as we will see next, NMDAR binding is (by keeping CaMKII subunits in their open conformation and allowing subsequent T286 autophosphorylation).
+![NMDAR binding is critical for promoting T286 phosphorylation of CaMKII. Individual simulation runs are shown as dots; boxes indicate the interquartile range, with solid lines denoting the median and dashed lines the mean. A two-tailed t-test revealed a highly significant reduction in T286-phosphorylated CaMKII in the NMDAR mutant (t = 7.73, p < 0.0001, ***), consistent with the proposed mechanism where NMDAR binding stabilizes CaMKII in an open conformation that favors autophosphorylation at T286](40-results-figures\statistics\camkii_t286p_nmdarMT.png){#fig-camkii_t286p_nmdarMT fig-scap="NMDAR binding is critical for promoting T286 phosphorylation of CaMKII"}
 
 
-<!-- 
-![camkii_cam_ca4_variance](40-results-figures\statistics\camkii_cam_ca4_variance.png)
-
-![CaMKII_CaM_Ca4_ttest](40-results-figures\statistics\CaMKII_CaM_Ca4_ttest.png)
-
-![camkii_open_variance](40-results-figures\statistics\camkii_open_variance.png)
-
-![camkii_open_ttest](40-results-figures\statistics\camkii_open_ttest.png)
-
-![what does this mean](40-results-figures\statistics\cam_unbound_open.png)
-
-![what does this mean](40-results-figures\statistics\cam_unbound_open_ttest.png)
-
-![nmdar_MTvsWT. no t-test because final mean and variance are same between both sets. what else could I do here?](40-results-figures\statistics\nmdar_MTvsWT.png)
--->
 ## Discussion of results
 
 ## Limitations and future steps
+
+# Conclusion
 
 
 <!--
