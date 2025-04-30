@@ -3,7 +3,7 @@ bibliography: [references.bib]
 lightbox: true
 ---
 
-# Analysis of CaMKII Dynamics in Wild-Type and Mutant Models {#sec-results}
+# Results of _In Silico_ Wild-Type and Mutant Models {#sec-results}
 
 Three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in @sec-model-description. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphrylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
@@ -170,7 +170,7 @@ As shown in @fig-nmdar_MTvsWT, both the T286 mutant model and the wild-type (WT)
 ![NMDAR binding reaches full saturation in and NMDAR/CaMKII mutant models. Shaded areas indicate the standard deviation. Both models ultimately reach a plateau of 30 bound CaMKII/NMDAR complexes. Due to the lack of variability in the final molecule count (both reach 30 with no variance), statistical comparisons of the end-point data are not shown.](40-results-figures\statistics\nmdar_MTvsWT.png){#fig-nmdar_MTvsWT fig-scap="NMDAR binding is critical for promoting T286 phosphorylation of CaMKII" fig-pos="H"}
 
 
-## Discussion of results
+## Discussion of results and future directions
 
 An overarching aim of this study was to investigate how the functional states of CaMKII—particularly through its phosphorylation and binding to NMDARs—affect the stability of the CaMKII/NMDAR complex and its role in synaptic signalling. To address this, I examined how the interaction between CaMKII and NMDARs influences CaMKII activity and function, using an in silico mutation model where CaMKII–NMDAR binding is disrupted. Likewise, I explored how CaMKII phosphorylation impacts its binding to NMDARs by investigating a model in which CaMKII cannot be phosphorylated at the T286 site. The following discussion will interpret the results from these _in silico_ mutation models, assess their relevance to the original research questions, and highlight how these findings contribute to a deeper understanding of the molecular processes underlying synaptic plasticity.
 
@@ -190,14 +190,28 @@ An intriguing observation in the results of this model is the emergent behaviour
 
 Although both T286 phosphorylation (T286P) and NMDAR binding contribute to maintaining CaMKII in its open state, T286P appears to play a more critical role in facilitating CaM binding. This is likely due to the fact that T286 phosphorylation is leading to this emergent CaM trapping behaviour, whereas NMDAR binding keeps CaMKII in an open conformation independently of CaM.  Furthermore, NMDAR binding not only stabilises the open conformation of CaMKII but also promotes further phosphorylation at T286 and T306, with the latter competing for the CaM binding site. Therefore, when T286 phosphorylation is abolished, CaM binding decreases, as the phosphorylation event at T286 is the primary mechanism that facilitates CaM binding by keeping CaMKII in its open state. In contrast, when NMDAR binding is disrupted, the main mechanism for CaM binding —T286 phosphorylation— remains intact, and as a result, CaM binding is preserved (refer back to @fig-CaMKII_CaM_Ca4_anova).
 
+There is ongoing debate on the role  of T306 phosphorylation in synaptic plasticity. As discussed in @sec-biology-chapter, the experimental literature remains divided on whether T305/306 phosphorylation alone inhibits LTP and facilitates long-term depression LTD, or if its effects are mediated in concert with the activation of competing kinases, such as DAPK1, which play a role in regulating these bidirectional processes. In the model presented here, the majority of T306 phosphorylation is driven by NMDAR binding.  This is an intriguing finding, as it may suggest that NMDAR signalling plays a critical role not only in maintaining CaMKII in an open, CaM-free conformation, but also in enabling downstream T306 phosphorylation. However, these results should be interpreted cautiously, as they could be an artefact of the model, given the way CaMKII is binding to NMDARs (one holoenzyme can bind multiple NMDARs). Future studies should consider testing the proposal that only one CaMKII subunit binds per NMDAR, as well as incorporating CaMKII’s competing kinase, DAPK1, to further regulate CaMKII binding and T306 phosphorylation. DAPK1 has been shown to directly phosphorylate CaMKII at T306 and displace it from NMDARs, suggesting it plays a critical antagonistic role in regulating CaMKII-NMDAR interactions and synaptic plasticity outcomes. Including DAPK1 would allow the model to test how kinase competition dynamically regulates CaMKII activity and subunit phosphorylation, especially under conditions favoring LTD induction.
 
-DISCUSS THIS CONTRADICTION: NMDAR binding also promotes CaMKII autophosphorylation at T306 site - say more work needs to be done on this. currently, 
+
+--
+s another thing i wanna say here is that molecular concentrations such as pp1 could be changed - i want the following summarised muchly. 
+CaMKII bound to GluN2B induces a conformational change in CaMKII, which allows CaMKII to maintain its autonomous activity even if CaMKII is dephosphorylated at Thr286. -> in principle its possible - importance of camkii opening by nmdars in fig 6.16
+
+WE Dont see this, we dont see camkii that remains bound to nmdar and is unphosphorylated, all of camkii bound to nmdars remains phosphorylated. the levels of pp1 in the model used here are -> PP1 concentrations in neurons are typically reported between 1 $\mu\text{M}$ and 10 $\mu\text{M}$ [@cohen2002Protein], with CaMKII concentrations around 5 $\mu\text{M}$, yielding a literature-based ratio of approximately 5:1. In the model, PP1 is present at 0.039 $\mu\text{M}$, and CaMKII at 2.36 $\mu\text{M}$, resulting in a model ratio of about 60:1. While this higher CaMKII:PP1 ratio may exaggerate the kinase dominance. Higher PP1 concentrations should be considered in future iterations for a more accurate representation of the CaMKII:PP1 ratio, though the model remains useful for exploring activation dynamics and regulation under varying conditions.
+
+pp1 binding is impaired by cam binding - pharris suggest this. nmdar-camkii may be more readily dephospho by pp1 if cam is unbound more likely.
+
+another thing is that as we have argued in biological plausibility molecular concentrations are valid but in order to improve the model further, concentrations of molecules could be adjusted too. 
+
+However, these results should be taken with a pinch of salt considering this might be an artifact of the model as camkii binds to nmdars and it is this binding that is promoting most of the phosphorylation in the model. future studies on this should consider the suggestion we give above of allowing only one camkii subunit to bind per nmdar, as well as consider implementing camkii's competing kinase, dapk1 to regulate camkii binding and t306p. hows does dapk1 work? can u add? 
+
 
 then link in with pp1
 
 and future things to do
 
-talking of future things...concentration and volume of molecules, model camkii binding to nmdar by subunit only, and!! could even model nmdar different binding mechanisms to test how camkii may be binding to nmdars and whether this makes a difference. 
+- talking of future things...concentration and volume of molecules, model camkii binding to nmdar by subunit only, and!! could even model nmdar different binding mechanisms to test how camkii may be binding to nmdars and whether this makes a difference. 
+- cytoskeleton
 
 --
 SUMMARY:
@@ -205,15 +219,6 @@ The model used in this study reveals that the binding of CaMKII to NMDARs stabil
 
 Based on the data, I hypothesize that the open conformation of CaMKII, rather than phosphorylation, is the key factor enabling binding to GluN2B. The observation that CaMKII can still bind GluN2B even when phosphorylation is inhibited by AS283 suggests that phosphorylation is not a strict requirement for complex formation. Regarding CaM binding, it's likely that the presence of CaM increases the likelihood of CaMKII being bound to GluN2B, rather than being an absolute necessity for the interaction.
 
---
-
-okay so what i wanna say here in summary is that these results seem to match results from literature, BUT the thing is that the way camkii is binding may not be totally accurate. i mean it doesnt mean these results are wrong, its just that with the strucure of camkii, it is unlikely thta its doing this. what i imagine camkii is doing in th current model is that a holoenxyme binds to one nmdar, and then following subunits proceed to bind to adjacent ndmdars, kinda trapping the receptors. so like one holoenzyme traps a total of 12 nmdars. this is unlikely because of camkiis structure. camkii may more likely bind to nmdars with one of its subunits, but its actual protein structure is unlikely to let itextend binding to more than one, maybe two, nmdars. 
-
-Moreover, in @fig-camkii-opening-nmdar, we observe a three-step, ladder-like progression of CaMKII binding to NMDARs. Each step corresponds to an increase in the number of CaMKII subunits bound: first reaching approximately 12 subunits, then 24, and finally 30. This pattern suggests that entire CaMKII holoenzymes (each containing 12 subunits) sequentially bind to NMDARs.
-
-Initially, one holoenzyme binds rapidly, with its subunits quickly associating with available NMDARs. Once 12 subunits are bound, a second holoenzyme begins binding. However, this process is slower, likely because after the first 12 subunits are bound, there are fewer free NMDARs left. Now, the second holoenzyme has fewer choices, and it may need to "search" or "diffuse" around more to find free receptors. Finally, after the second holoenzyme binds (up to 24 subunits), a third holoenzyme binds partially, occupying the remaining 6 NMDARs. By the time the third holoenzyme tries to bind, only 6 NMDARs are free — not enough for all 12 subunits. The progressive slowing reflects decreasing availability of free NMDARs for binding. The implications of these findings are discussed in the REFERENCE-SECTION; however, this particular mode of CaMKII binding to NMDARs may be an artifact of the model. Although not necessarily invalid, this aspect warrants further scrutiny and should be revisited in future research.
-
-this mode of binding of camkii to nmdars in the model is happening because of the way reaction rules are encoded: we do not prevent camkii subunits within the holoenzyme to be bound to nmdars a the same time. a future thing to do here would be to add a rule where only one camkii subunit from the holoenzyme can bind to nmdar; as this would allow for a higher chance of different camkii holoenzymes to interact with nmdars. 
 
 --
 
