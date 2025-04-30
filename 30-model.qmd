@@ -156,19 +156,17 @@ The list below presents a series of expected model behaviours that arise from sp
 |
 $\mathrm{Ca^{2+}}$ binds to CaM in a stepwise manner, with higher affinity for forming CaM_Ca3 and CaM_Ca4 states. | Rules #1 - #4 (@fig-tbl-1)| Yes, see @fig-calcium-binding
 |
-CaMKII autophosphorylation at T286 is increased by binding to NMDARs and CaM. | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see |
+CaMKII autophosphorylation at T286 is increased by binding to NMDARs and CaM. | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see @fig-camkii-t286p-nmdar-b |
 |
-CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation. | Rule #6 (@fig-tbl-1) |  Yes, see |
+CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation. | Rule #6 (@fig-tbl-1) |  Yes, see @fig-camkii-open |
 |
-Open CaMKII binds to NMDARs, anchoring the kinase at the membrane .| Rule #12 (@fig-tbl-1) | Yes, see |
+Open CaMKII binds to NMDARs, anchoring the kinase at the membrane .| Rule #12 (@fig-tbl-1) | Yes, see @fig-camkii-open |
 |
-CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding.| Rule #8 (@fig-tbl-1)| Yes, see | 
+CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding.| Rule #8 (@fig-tbl-1)| Yes, see @fig-subsets-of-camkii-t286p-cam-binding | 
 |
-CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation. | Rules #8, #9 (@fig-tbl-1)| Yes, see |
+CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation. | Rules #8, #9 (@fig-tbl-1)| Yes, see @fig-subset-of-nmdar-p-not-pt286|
 |
-CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation. | Rules #5, #10 (@fig-tbl-1)| Yes, see |
-|
-PP1 dephosphorylates CaMKII at T286 and T306, reversing its activation and enabling cycling between open and closed states. | Rules #10, #11 (@fig-tbl-1)| Unclear, see |
+CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation. | Rules #5, #10 (@fig-tbl-1)| Yes, data not shown |
 
 : Summary of model predictions and expected results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
 
@@ -257,4 +255,4 @@ For instance, phenomena such as the sustained opening of CaMKII following transi
 
 3. **When CaMKII is maintained in the open state by CaM binding, the kinase binds more readily to NMDARs and is likely to remain associated with the NMDAR/CaMKII complex even after CaM dissociates.** Both CaM binding and NMDAR binding stabilise CaMKII in its open conformation. The model allows multiple routes to maintaining this open state, one of them being CaM binding, hence CaM-bound CaMKII may be more likely to interact with NMDARs, and once that interaction occurs, the open conformation can be preserved by NMDAR binding alone. 
 
-These expected behaviours serve as key indicators of the model’s capacity to recapitulate biologically realistic dynamics through rule interactions alone. How these behaviours emerge in simulation is examined in detail in the REFERENCE-SECTIONS, where the model’s outputs are evaluated against known experimental observations.
+These expected behaviours serve as key indicators of the model’s capacity to recapitulate biologically realistic dynamics through rule interactions alone. How these behaviours emerge in simulation is examined in detail in @sec-discussion, where the model’s outputs are evaluated against known experimental observations.
