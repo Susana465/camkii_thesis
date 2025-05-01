@@ -40,15 +40,13 @@ This chapter introduces the importance of open and ethical research practices. I
 This chapter presents a detailed case study on ethical reflection within this project, using the Data Hazards framework. I present a published paper were the co-authors and I explore how this framework can be used to identify and address ethical risks associated with computational modelling, and use my PhD as a case study to apply Data Hazard labels. I reflect on the application of Data Hazards to this research and the practical steps taken to mitigate potential risks.
 
 ##### Chapter 5 {.unnumbered}
-This chapter describes the computational model developed for this PhD, focusing on CaMKII, NMDARs, and their associated signalling molecules. I begin with a review of relevant prior work, followed by a detailed description of the model. This includes the molecular concentrations, spatial considerations, reaction rules, and kinetic parameters. Special attention is given to modelling CaMKII as a dodecamer and simulating its interactions with NMDARs, as well as processes such as calcium binding, conformational states, and phosphorylation dynamics.
+This chapter describes the computational model developed for this PhD, focusing on CaMKII, NMDARs, and their associated signalling molecules. I begin with a review of relevant prior work, followed by a detailed description of the model. This includes the molecular concentrations, spatial considerations, reaction rules, and kinetic parameters. Special attention is given to modelling CaMKII as a dodecamer and simulating its interactions with NMDARs, as well as processes such as calcium binding, conformational states, and phosphorylation dynamics. Furthermore, I discuss the validation of the computational model. The chapter covers how biological plausibility is assessed, how the model was incrementally built and validated at each step, and how uncertainty in parameters was explored. 
 
 ##### Chapter 6 {.unnumbered}
-Here, I discuss the validation of the computational model. The chapter covers how biological plausibility is assessed, how the model was incrementally built and validated at each step, and how uncertainty in parameters was explored. I also present the results of various sanity checks and reproducibility tests, emphasizing the robustness of the model and detailing the specification practices used to ensure transparency and reusability.
+This chapter presents and discusses the results generated from the computational models. I first introduce findings from the wild-type model, including calcium signalling, CaMKII activation, phosphorylation patterns, and interactions with NMDARs. I then explore mutant models, specifically those affecting T286 phosphorylation and CaMKII/NMDAR binding. Findings are discussed in the context of existing literature, with particular attention to unexpected results and their possible implications. Limitations of the models are acknowledged, and potential directions for refining model complexity and experimental validation are proposed.
 
 ##### Chapter 7 {.unnumbered}
-This chapter presents and discusses the results generated from the computational models. I first introduce findings from the wild-type model, including calcium signalling, CaMKII activation, phosphorylation patterns, and interactions with NMDARs. I then explore mutant models, specifically those affecting T286 phosphorylation and CaMKII/NMDAR binding. The results are interpreted in relation to existing literature, and unexpected findings are highlighted and examined.
+This chapter provides the overall conclusions of the thesis. It summarises key findings, reflects on the research questions, and outlines broader implications for the field.
 
 ##### Chapter 8 {.unnumbered}
-
-
-##### Chapter 9 {.unnumbered}
+This final chapter lists the publications and presentations that have resulted from this PhD project.

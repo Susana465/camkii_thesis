@@ -19,7 +19,7 @@ book:
     - 20-repro_open.qmd
     - 20-data-hazards.qmd
     - 30-model.qmd
-    - 40-results.md
+    - 40-results.qmd
     - publications.qmd
     - references.qmd
 
