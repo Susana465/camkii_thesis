@@ -26,7 +26,7 @@ To further dissect the molecular events underlying these dynamics, the following
 
 ::: {.landscape}
 
-![Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)](40-results-figures\WT\t286p-means.PNG){#fig-t286p-means fig-scap="abcd"}
+![CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation. Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)](40-results-figures\WT\t286p-means.PNG){#fig-t286p-means fig-scap="CaM binding and NMDAR binding independently stabilise CaMKII activity"}
 
 :::
 
@@ -97,18 +97,14 @@ Interestingly, a slight increase in the population of CaMKII free from CaM and T
 
 ![CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, as out of all the CaMKII that is T286 phosphorylated (camki_t286p), most of it first increases in a state that is free from CaM (camkii_cam_unbound_open_t286p1), whereas CaMKII that is bound to CaM and T286 phosphorylated (camkii_cam_ca4_t286p1) increases more slowly and later.](40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png){#fig-subsets-of-camkii-t286p-cam-binding}
 
-
-![1](40-results-figures\WT\xsubsets_nmdar-t268p.png){#fig-xsubsets_nmdar-t268p}
-
-![1.1](40-results-figures\WT\subset-of-nmdar-p-not-pt286.png){#fig-subset-of-nmdar-p-not-pt286}
-
+![Binding of CaMKII to NMDARs promotes and stabilizes the open conformation of its subunits, facilitating T286 autophosphorylation within the CaMKII/NMDAR complex.](40-results-figures\WT\xsubsets_nmdar-t268p.png){#fig-xsubsets_nmdar-t268p fig-scap="Binding of CaMKII to NMDARs promotes and stabilizes the open conformation of its subunits"}
 
 ### NMDAR binding also promotes CaMKII autophosphorylation at T306 site
 Phosphorylation at the T306 site is known to occur at a slower rate than phosphorylation at T286 [@otmakhov2015Fast; @chang2017CaMKII], and this is reflected in the model outputs. A total of 25 CaMKII subunits become phosphorylated at T306 over the course of the simulation (burgundy trace: camkii_t306p in @fig-t306p), of which 21 are bound to the NMDAR (golden trace:camkii_cam_unbound_t306p1_bound_nmdar in @fig-t306p) —indicating that approximately 84% of T306-phosphorylated subunits are part of NMDAR complexes. 
 
 Moreover, the accumulation of doubly phosphorylated subunits (T286P and T306P; here referred to as CaMKII_PP, hot pink trace in @fig-t306p) appears to track closely with the rate of T306 phosphorylation. This indicates that T306 phosphorylation typically follows T286 phosphorylation, particularly during the earlier stages of the simulation. This behaviour is consistent with both the modelled mechanisms and findings reported in the literature [@pi2010Autonomousa].
 
-![At later stages, T306 phosphorylation can occur and persist independently of T286 in CaMKII that is bound to NMDARs.](40-results-figures\WT\t306p.png){#fig-t306p fig-pos="H" fig-scap="T306 phosphorylation can occur and persist independently of T286"} 
+![At later stages, T306 phosphorylation can occur and persist independently of T286 in CaMKII that is bound to NMDARs.Initially, most of the CaMKII phosphorylated at T306 (camkii_t306p) is also phosphorylated at T286—i.e., it is in the doubly phosphorylated state (camkii_pp_bound_nmdar). This indicates that early T306 phosphorylation often coincides with T286 phosphorylation. After 60 seconds, the amount of CaMKII that is bound to NMDARs and phosphorylated only at T306 (camkii_cam_unbound_t306p1_bound_nmdar*) surpasses the doubly phosphorylated form. *Saying cam_unbound (CaM free) in this molecule name is redundant as camkii that is t306p is necessarily free from CaM.](40-results-figures\WT\t306p.png){#fig-t306p fig-pos="H" fig-scap="T306 phosphorylation can occur and persist independently of T286"} 
 
 Interestingly, after around 60 seconds, subunits that are solely phosphorylated at T306 continue to increase above CaMKII_PP (@fig-t306p). This suggests that, at later stages in the simulation, T306 phosphorylation can occur and persist independently of T286 phosphorylation. Extending the simulation time may offer further insights into this dynamic, as it could support the biological hypothesis that initial T286 phosphorylation enables subsequent T306 phosphorylation, but that T306P can then be maintained even in the absence of T286 phosphorylation [@hanson1992Inhibitory; @pi2010Autonomousa; @bhattacharyya2020Flexible].
 
@@ -211,4 +207,10 @@ To demonstrate the possibility of using BioDynaMo as a tool to simulate neuronal
 
 # Conclusion
 
-aims wrap up
+The _in silico_ models presented in this research suggest that NMDAR binding constitutes an early and important mechanism for maintaining CaMKII in its open, active conformation. The mode of CaMKII binding, whereby the holoenzyme anchors itself to membrane-bound NMDARs, underscores the potential role of its dodecameric structure as a molecular scaffold, locally organising and stabilising signalling complexes. This structural arrangement may contribute to the spatial coordination of signalling molecules during LTP, offering a potential mechanism by which CaMKII supports activity-dependent synaptic strengthening.
+
+As outlined in the discussion, further investigations are warranted to elucidate the precise dynamics and constraints governing CaMKII–NMDAR interactions, particularly in the context of subunit accessibility and spatial organisation. Additionally, the simulations revealed distinct contributions of NMDAR binding and T286 autophosphorylation to CaM binding dynamics: while NMDAR-mediated activation appears largely independent of CaM, T286 phosphorylation facilitates and stabilises CaM association with CaMKII. Finally, the findings indicate that NMDAR binding not only maintains CaMKII in an open conformation but also promotes phosphorylation at T286 and T306 sites. These results collectively support a model in which membrane-bound NMDARs serve as pivotal regulators of CaMKII activation, both structurally and biochemically.
+
+In addition to the biological findings, this PhD has placed considerable emphasis on the principles of reproducibility, research integrity, and ethical responsibility. These values were integrated throughout the research process, from model development and data analysis to documentation and dissemination. In particular, this work serves as a case study in how computational neuroscience can be conducted with a strong commitment to transparency and responsible research practices.
+
+Issues such as data hazard classification, future societal implications, and ethical foresight were actively considered and discussed in detail. These reflections highlight that, while computational modelling may seem distant from direct experimental risks, it too carries responsibilities. Addressing these challenges is not without complexity or time costs, but as with all rigorous science, I believe the investment in doing so with integrity is worthwhile.It is my hope that this thesis contributes not only to the scientific understanding of CaMKII–NMDAR signalling in memory-related processes; but also offers a useful example for how to embed reproducibility and ethics into research. Reproducible and ethically grounded research should not be viewed as an idealistic add-on, but as an integral part of good science, something achievable, impactful, and worth striving for. This has been the guiding principle throughout this PhD, and it is what I have consistently aimed to uphold.

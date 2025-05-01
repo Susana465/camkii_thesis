@@ -164,9 +164,9 @@ Open CaMKII binds to NMDARs, anchoring the kinase at the membrane .| Rule #12 (@
 |
 CaMKII undergoes autophosphorylation at T286 regardless of CaM binding, though this phosphorylation is enhanced by CaM binding.| Rule #8 (@fig-tbl-1)| Yes, see @fig-subsets-of-camkii-t286p-cam-binding | 
 |
-CaMKII undergoes autophosphorylation at T306 following T286 phosphorylation. | Rules #8, #9 (@fig-tbl-1)| Yes, see @fig-subset-of-nmdar-p-not-pt286|
+CaMKII is likely to undergo autophosphorylation at T306 following T286 phosphorylation, but T286 phosphorylation is not strictly required for T306 phosphorylation to occur. | Rules #8, #9 (@fig-tbl-1)| Yes, see @fig-t306p and @fig-t306p_anova|
 |
-CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation. | Rules #5, #10 (@fig-tbl-1)| Yes, data not shown |
+CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation. | Rules #5, #10 (@fig-tbl-1)| Yes, data not shown. |
 
 : Summary of model predictions and expected results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
 
