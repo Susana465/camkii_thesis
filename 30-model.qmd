@@ -154,11 +154,11 @@ The list below presents a series of expected model behaviours that arise from sp
 |Expected Result| Associated Reaction Rules | Observed in Models |
 |-----------------|---------------------------------|-----------------------------|
 |
-$\mathrm{Ca^{2+}}$ binds to CaM in a stepwise manner, with higher affinity for forming CaM_Ca3 and CaM_Ca4 states. | Rules #1 - #4 (@fig-tbl-1)| Yes, see @fig-calcium-binding
+$\mathrm{Ca^{2+}}$ binds to CaM in a stepwise manner, with higher affinity for forming CaM_Ca3 and CaM_Ca4 states. | Rules #1 - #4 (@fig-tbl-1)| No, see discussion.
 |
-CaMKII autophosphorylation at T286 is increased by binding to NMDARs and CaM. | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see @fig-camkii-t286p-nmdar-b |
+CaMKII autophosphorylation at T286 is increased by binding to NMDARs and CaM. | Rules #5, #6, #8, #12 (@fig-tbl-1)| Yes, see @fig-camkii-t286p-nmdar-b and 6.8|
 |
-CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation. | Rule #6 (@fig-tbl-1) |  Yes, see @fig-camkii-open |
+CaM binds CaMKII only in its fully saturated state (CaM_Ca4), stabilizing CaMKII in its open conformation. | Rule #6 (@fig-tbl-1) |  Yes, data not shown |
 |
 Open CaMKII binds to NMDARs, anchoring the kinase at the membrane .| Rule #12 (@fig-tbl-1) | Yes, see @fig-camkii-open |
 |

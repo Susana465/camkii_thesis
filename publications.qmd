@@ -10,6 +10,9 @@ The following publications have emerged as a direct outcome of the research cond
   *Journal of Responsible Technology*, **21**, 100110.  
   DOI: [10.1016/j.jrt.2025.100110](https://doi.org/10.1016/j.jrt.2025.100110)
 
+- **Fong, P., Román García, S., Stefan, M. I., & Sterratt, D. C.** (2024). In silico identification and modelling of FDA-approved drugs targeting T-type calcium channels [Preprint]. bioRxiv.
+  DOI: [10.1101/2024.09.27.615366](https://doi.org/10.1101/2024.09.27.615366)
+
 - **Welsh, C., Román García, S., Barnett, G. C., & Jena, R.** (2024). _Democratising artificial intelligence in healthcare: community-driven approaches for ethical solutions._  
   *Future Healthcare Journal*  
   DOI: [10.1016/j.fhj.2024.100165](https://doi.org/10.1016/j.fhj.2024.100165)
@@ -21,6 +24,16 @@ The following publications have emerged as a direct outcome of the research cond
   Presented at the “Data Science Perspectives” PhD conference, Newcastle University.  
   DOI: [10.5281/zenodo.7704563](https://doi.org/10.5281/zenodo.7704563)
 
+- **Román García, S., & Welsh, C.** (2023). Data Hazards, Ethics and Reproducibility Hybrid Symposium.
+  Co-organised and facilitated event, Alan Turing Institute, London (March 2023).
+  Theme: “Aligning our values with our research: thinking about how to embed ethics and reproducibility into our work.”
+  [Materials available in GitHub](https://github.com/Susana465/der_symposium_20230310)
+
+- **Román García, S.** (2023). What Data Hazards apply to my PhD?
+  Poster presented at AI UK 2023, London.
+  Volunteered and presented a summary of PhD research to prompt discussion on applicable Data Hazards.
+  [Materials available in GitHub](https://github.com/Susana465/DH_Project_CaseStudy)
+
 - **Román García, S.** (2023). _Ethical Standards and Reproducibility of Computer Models in Neurobiology._  
   Presented as part of Open Life Sciences cohort 6.  
   [Watch the recording](https://www.youtube.com/watch?v=3qb28JDFhGw)
@@ -29,6 +42,11 @@ The following publications have emerged as a direct outcome of the research cond
   *Women in High Performance Computing* blog.  
   [Read the post](https://womeninhpc.org/paths-to-hpc/enrichment-scheme-reflections-the-alan-turing-institute)
 
-- **Román García, S., Sterratt, D., & Stefan, M. I.** (2022). _Thinking about Ethics in (Computer) Science._  
+- **Román García, S., Stefan, M., Hanschke, V., Di Cara, N., & Zelenka, N.** (2022). Data Hazard Workshops.
+  [Materials available in GitHub](https://github.com/Susana465/Data_Hazards_workshops)
+  Presented at _Data Hazards, Ethics and Reproducibility One-Day Symposium, Alan Turing Institute, London_
+  Presented at _[COMBINE and ICSB Conferences](https://co.mbine.org/events/)_ 2022, Berlin. 
+
+- **Román García, S., Sterratt, D., & Stefan, M. I.** (2022). _Thinking about Ethics in (Computer) Science._ 
   *Edinburgh College of Medicine and Veterinary Medicine Good Practice Showcase*  
   DOI: [10.5281/zenodo.6973796](https://doi.org/10.5281/zenodo.6973796)
