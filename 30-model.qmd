@@ -151,6 +151,7 @@ In order to validate model behaviour, each reaction rule was added one at a time
 
 The list below presents a series of expected model behaviours that arise from specific reaction rules defined in the model, as per @fig-tbl-1 (in @sec-model-description). 
 
+
 |Expected Result| Associated Reaction Rules | Observed in Models |
 |-----------------|---------------------------------|-----------------------------|
 |
@@ -169,6 +170,7 @@ CaMKII is likely to undergo autophosphorylation at T306 following T286 phosphory
 CaMKII subunits can be found to be T306-phosphorylated and in a closed conformation. | Rules #5, #10 (@fig-tbl-1)| Yes, data not shown. |
 
 : Summary of model predictions and expected results. {#tbl-model-predictions .striped tbl-colwidths="[60,20,20]"}
+
 
 ### Sanity Checks
 As part of the model validation process, a series of sanity checks were implemented to ensure the system behaved in accordance with known biochemical rules and structural constraints. These checks primarily aimed to verify that the model did not produce molecular species that are biologically implausible or explicitly forbidden by the reaction rules defined in the system.
