@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Open, Reproducible and Ethics-focused PhD – CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./20-data-hazards.html" rel="next">
+<link href="./30-modelling_background.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0a0063f14e87237348a3db0020d9102a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./20-repro_open.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</a> 
+        <div class="sidebar-tools-main">
+    <a href="./CaMKII-NMDAR-interactions-in-Learning-and-Memory--A-Case-Study-in-Ethical-and-Reproducible-Modelling-Approaches.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Declaration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-intro-biology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Biological Research Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-modelling_background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-repro_open.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-data-hazards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Case Study in Ethical Reflection: Data Hazards in this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./40-results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results of <em>In Silico</em> Wild-Type and Mutant Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">List of publications and presentations resulting from this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#reproducibility-definition-used-in-this-phd" id="toc-reproducibility-definition-used-in-this-phd" class="nav-link active" data-scroll-target="#reproducibility-definition-used-in-this-phd"><span class="header-section-number">3.1</span> Reproducibility Definition Used in this PhD</a></li>
+  <li><a href="#open-science" id="toc-open-science" class="nav-link" data-scroll-target="#open-science"><span class="header-section-number">3.2</span> Open Science</a></li>
+  <li><a href="#fair-principles-for-open-and-reproducible-science" id="toc-fair-principles-for-open-and-reproducible-science" class="nav-link" data-scroll-target="#fair-principles-for-open-and-reproducible-science"><span class="header-section-number">3.3</span> FAIR Principles for Open and Reproducible Science</a></li>
+  <li><a href="#important-steps-taken-to-apply-fair-principles-open-science-by-design-and-reproducibility" id="toc-important-steps-taken-to-apply-fair-principles-open-science-by-design-and-reproducibility" class="nav-link" data-scroll-target="#important-steps-taken-to-apply-fair-principles-open-science-by-design-and-reproducibility"><span class="header-section-number">3.4</span> Important steps taken to apply FAIR principles, Open Science by Design and Reproducibility</a>
+  <ul class="collapse">
+  <li><a href="#findable" id="toc-findable" class="nav-link" data-scroll-target="#findable"><span class="header-section-number">3.4.1</span> Findable:</a></li>
+  <li><a href="#accessible" id="toc-accessible" class="nav-link" data-scroll-target="#accessible"><span class="header-section-number">3.4.2</span> Accessible</a></li>
+  <li><a href="#interoperable" id="toc-interoperable" class="nav-link" data-scroll-target="#interoperable"><span class="header-section-number">3.4.3</span> Interoperable</a></li>
+  <li><a href="#reusable" id="toc-reusable" class="nav-link" data-scroll-target="#reusable"><span class="header-section-number">3.4.4</span> Reusable</a></li>
+  <li><a href="#good-computational-research-practices" id="toc-good-computational-research-practices" class="nav-link" data-scroll-target="#good-computational-research-practices"><span class="header-section-number">3.4.5</span> Good Computational Research Practices</a></li>
+  </ul></li>
+  <li><a href="#reflections-and-future-steps" id="toc-reflections-and-future-steps" class="nav-link" data-scroll-target="#reflections-and-future-steps"><span class="header-section-number">3.5</span> Reflections and Future Steps</a></li>
+  <li><a href="#defining-ethical-science" id="toc-defining-ethical-science" class="nav-link" data-scroll-target="#defining-ethical-science"><span class="header-section-number">3.6</span> Defining Ethical Science</a></li>
+  <li><a href="#why-is-this-important" id="toc-why-is-this-important" class="nav-link" data-scroll-target="#why-is-this-important"><span class="header-section-number">3.7</span> Why is this important?</a>
+  <ul class="collapse">
+  <li><a href="#a-personal-account-where-it-started" id="toc-a-personal-account-where-it-started" class="nav-link" data-scroll-target="#a-personal-account-where-it-started"><span class="header-section-number">3.7.1</span> A personal account: Where it started</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-open-repro-chapter" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In recent decades, scientific research has accelerated significantly, with a “publish or perish” culture becoming deeply ingrained in the academic community’s consciousness <span class="citation" data-cites="angell1986Publish rawat2014Publish">(<a href="references.html#ref-angell1986Publish" role="doc-biblioref">ANGELL 1986</a>; <a href="references.html#ref-rawat2014Publish" role="doc-biblioref">Rawat and Meena 2014</a>)</span>. Frequent publication is widely regarded as a powerful tool for scholars to showcase their expertise and gain recognition among their peers. Likewise, there is a generalised view that this keeps academics constantly engaged with relevant knowledge works in their fields of expertise. In theory, it also serves to benefit the wider public by making scholarly insights available. Successfully published research not only enhances an individual’s reputation but also raises the profile of their institution, often attracting greater funding opportunities. Moreover, academic institutions and universities commonly use the number of publications credited to a researcher as a key indicator of their competence and career progression <span class="citation" data-cites="york2015Defining aksnes2019Citations elbanna2023Publish">(<a href="references.html#ref-york2015Defining" role="doc-biblioref">York, Gibson, and Rankin 2015</a>; <a href="references.html#ref-aksnes2019Citations" role="doc-biblioref">Aksnes, Langfeldt, and Wouters 2019</a>; <a href="references.html#ref-elbanna2023Publish" role="doc-biblioref">Elbanna and Child 2023</a>)</span>. In this view, a strong publication record can be beneficial, opening up opportunities for researchers and their institutions.</p>
+<p>However, this mindset exerts significant pressure on researchers to continuously publish in order to secure funding and advance their careers <span class="citation" data-cites="miller2011Publish hangel2017Why">(<a href="references.html#ref-miller2011Publish" role="doc-biblioref">Miller, Taylor, and Bedeian 2011</a>; <a href="references.html#ref-hangel2017Why" role="doc-biblioref">Hangel and Schmidt-Pfister 2017-09-18Z</a>)</span>. Alongside this, there are persistent biases in academic publishing, where work affiliated with prestigious institutions is often (wrongly) perceived as higher quality than that from less well-known or under-resourced institutions, regardless of the actual merit of the research <span class="citation" data-cites="morley2007Employers paradeise2013Academic campbell2019Prestige">(<a href="references.html#ref-morley2007Employers" role="doc-biblioref">Morley and Aynsley 2007</a>; <a href="references.html#ref-paradeise2013Academic" role="doc-biblioref">Paradeise and Thoenig 2013</a>; <a href="references.html#ref-campbell2019Prestige" role="doc-biblioref">Campbell, Jimenez, and Arrozal 2019</a>)</span>. On top of this, the Eurocentric bias where academic knowledge produced in wealthier countries is often regarded as superior, marginalises and even dismisses the realities and contributions of the Global South <span class="citation" data-cites="jazeel2010Limits jyothis2016NeuroOppression castrotorres2022North amutuhaire2022Reality">(<a href="references.html#ref-jazeel2010Limits" role="doc-biblioref">Jazeel and McFarlane 2010</a>; <a href="references.html#ref-jyothis2016NeuroOppression" role="doc-biblioref">Jyothis 2016</a>; <a href="references.html#ref-castrotorres2022North" role="doc-biblioref">Castro Torres and Alburez-Gutierrez 2022</a>; <a href="references.html#ref-amutuhaire2022Reality" role="doc-biblioref">Amutuhaire 2022</a>)</span>. Similarly, the expectation for a high volume of publications impacts disproportionately low-paid academics in resource-constrained countries, who can face a variety of structural barriers, including limited grant funding <span class="citation" data-cites="castrotorres2022North">(<a href="references.html#ref-castrotorres2022North" role="doc-biblioref">Castro Torres and Alburez-Gutierrez 2022</a>)</span> and inaccessible academic journal costs <span class="citation" data-cites="chan2014Increasing collyer2018Global">(<a href="references.html#ref-chan2014Increasing" role="doc-biblioref">Chan et al. 2014</a>; <a href="references.html#ref-collyer2018Global" role="doc-biblioref">Collyer 2018</a>)</span> among many other reasons <span class="citation" data-cites="hopkins2013Disparities willis2021Gender">(<a href="references.html#ref-hopkins2013Disparities" role="doc-biblioref">Hopkins et al. 2013</a>; <a href="references.html#ref-willis2021Gender" role="doc-biblioref">Willis, Bridges, and Jozkowski 2021</a>)</span>.</p>
+<p>In the culture of continuously publishing and publishing fast, those who are already at a disadvantage due to systemic bias and oppression are the ones who continue to lose the most. For example, research has shown that minoritised communities —whether this be due to race, gender, sexual orientation, or other factors— are underrepresented in prestigious journals, partly due to implicit biases and the dominance of Western academic frameworks <span class="citation" data-cites="hopkins2013Disparities willis2021Gender boda2022What">(<a href="references.html#ref-hopkins2013Disparities" role="doc-biblioref">Hopkins et al. 2013</a>; <a href="references.html#ref-willis2021Gender" role="doc-biblioref">Willis, Bridges, and Jozkowski 2021</a>; <a href="references.html#ref-boda2022What" role="doc-biblioref">Boda, and and Kulkarni 2022</a>)</span>. Consequently, the “publish or perish” culture overwhelmingly benefits scholars in wealthier countries while deepening global inequalities in knowledge production.</p>
+<p>Moreover, a pressure to publish in high impact journals is closely tied to what is known as publication bias. In published academic research, publication bias occurs when the outcome of an experiment or research study biases the decision to publish or otherwise distribute it. This typically results in a preference for publishing significant or positive results, disrupting the balance of findings and favouring those that are deemed novel or noteworthy. Whilst negative or inconclusive results are rarely published or considered less worthy of publication <span class="citation" data-cites="thornton2000Publication page2021Investigating">(<a href="references.html#ref-thornton2000Publication" role="doc-biblioref">Thornton and Lee 2000</a>; <a href="references.html#ref-page2021Investigating" role="doc-biblioref">Matthew J. Page et al. 2021</a>)</span>.</p>
+<p>Examining this bias towards positive results reveals substantial evidence of a troubling trend: an overrepresentation of false-positive findings in the scientific literature <span class="citation" data-cites="sinha2006Reporting esarey2016Measuring hartgerink2017Too stahl2018Fact schneck2023Are">(<a href="references.html#ref-sinha2006Reporting" role="doc-biblioref">Sinha and and Montori 2006</a>; <a href="references.html#ref-esarey2016Measuring" role="doc-biblioref">Esarey and Wu 2016</a>; <a href="references.html#ref-hartgerink2017Too" role="doc-biblioref">Hartgerink, Wicherts, and van Assen 2017</a>; <a href="references.html#ref-stahl2018Fact" role="doc-biblioref">Stahl and Pickles 2018</a>; <a href="references.html#ref-schneck2023Are" role="doc-biblioref">Schneck 2023</a>)</span>. This bias towards positive results has several concerning and wasteful consequences, including, but not restricted to a significant number of valid negative results remaining unpublished, which excludes critical findings from the scientific record. This means that other research teams, unaware of these unpublished negative results, may continue to unknowingly test the same hypotheses (which may actually be false) until, by chance or artifact, a positive result is obtained. These chance positive results are then published, as they align with the preference for significant findings, even when substantial and more definitive contradictory evidence may exist in contrast to it <span class="citation" data-cites="carlson2012Understanding">(<a href="references.html#ref-carlson2012Understanding" role="doc-biblioref">Carlson and Herdman 2012</a>)</span>. What is more, this underreporting of negative results introduces bias into meta-analysis, which consequently misinforms researchers, doctors, policymakers and the public in general <span class="citation" data-cites="afonso2024Perils">(<a href="references.html#ref-afonso2024Perils" role="doc-biblioref">Afonso et al. 2024</a>)</span>. Additionally, more resources are wasted on already disputed research that remains unpublished and therefore unavailable to the scientific community <span class="citation" data-cites="kicinski2013Publication kicinski2014How aert2019Publication page2019Assessing">(<a href="references.html#ref-kicinski2013Publication" role="doc-biblioref">Kicinski 2013</a>, <a href="references.html#ref-kicinski2014How" role="doc-biblioref">2014</a>; <a href="references.html#ref-aert2019Publication" role="doc-biblioref">Aert, Wicherts, and Assen 2019</a>; <a href="references.html#ref-page2019Assessing" role="doc-biblioref">Matthew J. Page, Higgins, and Sterne 2019</a>)</span>.</p>
+<p>This cycle sustains an error-prone body of scientific literature, undermining the reliability of published research. Hand in hand with this publication bias, comes something now known as a <em>Reproducibility Crisis</em>, where it is becoming increasingly apparent that making “fast-science”, while not the sole cause, is associated with a lack of being able to reproduce research <span class="citation" data-cites="stengers2016Another leite2021Juggling">(<a href="references.html#ref-stengers2016Another" role="doc-biblioref">Stengers 2016</a>; <a href="references.html#ref-leite2021Juggling" role="doc-biblioref">Leite and Diele-Viegas 2021</a>)</span>. The reproducibility crisis has been in the rise for the past few decades as we uncover the fact that much of the research that is published fails to be reproduced by others. To give some examples, a survey of 1576 scientists published in Nature <span class="citation" data-cites="baker2016500ScientistsLift">(<a href="references.html#ref-baker2016500ScientistsLift" role="doc-biblioref">Baker 2016</a>)</span> reported that over 70% of the participants failed to reproduce others’ experiments and over 50% failed to reproduce their own results. Similarly, <span class="citation" data-cites="tiwari2021ReproducibilitySystemsBiology">Tiwari et al. (<a href="references.html#ref-tiwari2021ReproducibilitySystemsBiology" role="doc-biblioref">2021a</a>)</span> assessed the reproducibility of 455 mathematical models in systems biology and found that about 50% of published models were not reproducible either due to incorrect or missing information in the manuscript.</p>
+<p>Much of the criticism surrounding the reproducibility crisis centres on statistical methods and research practices <span class="citation" data-cites="ioannidis2005Whya friese2020PHacking stefan2023Big">(<a href="references.html#ref-ioannidis2005Whya" role="doc-biblioref">Ioannidis 2005</a>; <a href="references.html#ref-friese2020PHacking" role="doc-biblioref">Friese and Frankenbach 2020</a>; <a href="references.html#ref-stefan2023Big" role="doc-biblioref">Stefan and Schönbrodt 2023</a>)</span>. Problematic scientific behaviours, such as HARKing (Hypothesising After the Results are Known), p-hacking (manipulating data analysis to achieve statistical significance), and selectively reporting only positive outcomes, as discussed above, have been identified as major contributors to irreproducibility <span class="citation" data-cites="wagenmakers2007Practical nuzzo2014Statistical lew2020Reckless">(<a href="references.html#ref-wagenmakers2007Practical" role="doc-biblioref">Wagenmakers 2007</a>; <a href="references.html#ref-nuzzo2014Statistical" role="doc-biblioref">Nuzzo 2014</a>; <a href="references.html#ref-lew2020Reckless" role="doc-biblioref">Lew 2020</a>)</span>. Indeed, this reliance on p-values, provided they meet the conventional threshold of statistical significance (typically p &lt; 0.05), can sometimes lead to studies being treated as definitive evidence, even when their findings are not robust or reproducible <span class="citation" data-cites="lew2020Reckless">(<a href="references.html#ref-lew2020Reckless" role="doc-biblioref">Lew 2020</a>)</span>.</p>
+<p>The list of factors contributing to irreproducibility is extensive and is not restricted to statistical methods. A lack of access to raw data or, in some cases, outright data fabrication also plays a role <span class="citation" data-cites="flier2017Irreproducibility bausell2021Problem">(<a href="references.html#ref-flier2017Irreproducibility" role="doc-biblioref">Flier 2017</a>; <a href="references.html#ref-bausell2021Problem" role="doc-biblioref">Bausell 2021</a>)</span>. Ambiguities in experimental procedures and data analysis steps further undermine research reliability. On a broader, more systemic level, there’s an important discussion regarding how current academic systems often prioritize novelty and statistically significant findings, as research funding is more likely to be secured and promoted when the outcomes are more profitable <span class="citation" data-cites="bhandari2004Association lynch2007Commercially ebadi2016How">(<a href="references.html#ref-bhandari2004Association" role="doc-biblioref">Bhandari et al. 2004</a>; <a href="references.html#ref-lynch2007Commercially" role="doc-biblioref">Lynch et al. 2007</a>; <a href="references.html#ref-ebadi2016How" role="doc-biblioref">Ebadi and Schiffauerova 2016</a>)</span>. Although these behaviours fall under scientific misconduct <span class="citation" data-cites="science2023Reproducibility">(<a href="references.html#ref-science2023Reproducibility" role="doc-biblioref">Science 2023</a>)</span> and are not considered acceptable scientific practice, they continue to occur as the mindset of publish or perish continues to embed itself in how scientists work.</p>
+<p>Interestingly, a large-scale survey of nearly 6,000 academic psychologists (with 2,155 responses) assessed self-reported engagement in some of these questionable research practices (for example ambiguities in experimental procedures, p-harking, etc) known to introduce bias into research findings <span class="citation" data-cites="john2012Measuring">(<a href="references.html#ref-john2012Measuring" role="doc-biblioref">John, Loewenstein, and Prelec 2012</a>)</span>. Notably, respondents often justified their own use of these practices while simultaneously viewing them as unacceptable when used by others (p.&nbsp;530). This is just one example, and it is worth noting that scientific standards and methodologies continuously evolve, meaning that questionable research practices are not static. Methods once tolerated, or even considered standard, may now be recognised as problematic, reflecting our ability to reassess and refine ethical and methodological frameworks. Encouragingly, awareness of the reproducibility crisis is growing, and there is a gradual shift towards promoting open and reproducible research practices <span class="citation" data-cites="umbach2024Open">Nature (<a href="references.html#ref-nature2018Challenges" role="doc-biblioref">2018</a>)</span>.</p>
+<p>Together, the issues outlined above, from the reproducibility crisis and publication bias to the prevalence of questionable research practices, reveal not isolated failings, but a systemic entanglement that compromises the integrity, efficiency, and ethical foundation of scientific research. In this context, the need for a fundamental shift becomes clear: one that centres reproducibility and accessibility not as optional enhancements, but as essential to producing ethical and meaningful research.</p>
+<p>While I cannot solve these systemic issues alone, this PhD is an opportunity to actively engage with them. I am approaching my research with a conscious commitment to reproducibility, transparency, and accessibility, while also taking seriously the ethical responsibilities that come with producing and sharing knowledge. By embedding these values into the way I design, conduct, and communicate my work, I hope to contribute to a broader shift towards more inclusive, accountable, and responsible research practices.</p>
+<section id="reproducibility-definition-used-in-this-phd" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="reproducibility-definition-used-in-this-phd"><span class="header-section-number">3.1</span> Reproducibility Definition Used in this PhD</h2>
+<p>There is a long history of the terms reproducibility and replicability being used interchangeably, or their meanings being swapped depending on the field of study <span class="citation" data-cites="claerbout1992ElectronicDocumentsGive ivie2018ReproducibilityScientificComputing plesser2018ReproducibilityVsReplicability">(<a href="references.html#ref-claerbout1992ElectronicDocumentsGive" role="doc-biblioref">Claerbout and Karrenbach 1992</a>; <a href="references.html#ref-ivie2018ReproducibilityScientificComputing" role="doc-biblioref">Ivie and Thain 2018</a>; <a href="references.html#ref-plesser2018ReproducibilityVsReplicability" role="doc-biblioref">Plesser 2018</a>)</span>. For example, a review on the usage of reproducible/replicable meanings <span class="citation" data-cites="barba2018TerminologiesReproducibleResearch">(<a href="references.html#ref-barba2018TerminologiesReproducibleResearch" role="doc-biblioref">Barba 2018</a>)</span> showed that most papers and disciplines use the terminology as defined by Claerbout and Karrenbach <span class="citation" data-cites="claerbout1992ElectronicDocumentsGive">(<a href="references.html#ref-claerbout1992ElectronicDocumentsGive" role="doc-biblioref">Claerbout and Karrenbach 1992</a>)</span>, whereas microbiology, immunology and computer science tend to follow the Associtation for Computing Machinery use of reproducibility and replication given by <span class="citation" data-cites="ivie2018ReproducibilityScientificComputing">(<a href="references.html#ref-ivie2018ReproducibilityScientificComputing" role="doc-biblioref">Ivie and Thain 2018</a>)</span>. In political science and economics literature, both terms are used interchangeably.</p>
+<p>In this PhD, we use the definition used by <span class="citation" data-cites="turingwaycommunity2019TuringWayHandbook">(<a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">Turing Way Community et al. 2019</a>)</span>, where reproducible research is understood as “<em>work that can be independently recreated from the same data and the same code that the original team used</em>”. Reproducible, replicable, robust and generalisable have different meanings as described in the table below.</p>
+<div id="fig-repro-definitions" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="How The Turing Way defines reproducible research">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-repro-definitions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="22-reproducibility-figures/repro_definintions.PNG" class="img-fluid figure-img" style="width:65.0%" data-fig-scap="How The Turing Way defines reproducible research">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-repro-definitions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: How The Turing Way defines reproducible research. Adapted from <span class="citation" data-cites="turingwaycommunity2019TuringWayHandbook">Turing Way Community et al. (<a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">2019</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Reproducible research</strong>: is obtained when same analysis is performed on the same data, to produce the same results.</p></li>
+<li><p><strong>Replicable research</strong>: refers to conducting the same analysis on different datasets, resulting in qualitatively similar outcomes.</p></li>
+<li><p><strong>Robust research</strong>: entails subjecting the same dataset to different analysis workflows to address the same research question, such as employing distinct pipelines in R and Python. Robustness demonstrates that findings can remain consistent regardless of different methods used for analysis, indicating validity and resilience to various factors like changes in conditions or methods (such as different programming languages).</p></li>
+<li><p><strong>Generalisable research</strong>: refers to findings or conclusions that can be applied beyond the specific context in which they were derived. It indicates that the results are not limited to a particular dataset, methodology, or experimental setup, but instead can be extended to broader populations, situations, or conditions. By combining replicable and robust research, we can obtain more generalisable results.</p></li>
+</ul>
+</section>
+<section id="open-science" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="open-science"><span class="header-section-number">3.2</span> Open Science</h2>
+<p>Open Science is an approach to the scientific process that promotes cooperative work and new ways of diffusing knowledge accessible to everyone, without barriers such as paywalls or restrictions on the use of research outputs. By making research more accessible and transparent, open science seeks to enable more efficient scientific progress, enhance reproducibility, and increase the societal impact of research findings. A definition provided by <span class="citation" data-cites="vicente-saez2018Open">Vicente-Saez and Martinez-Fuentes (<a href="references.html#ref-vicente-saez2018Open" role="doc-biblioref">2018</a>)</span> gives an overall good idea of what open science is referring to: “<em>Open Science is transparent and accessible knowledge that is shared and developed through collaborative networks, [it] helps the scientific community, the business world, political actors, and citizens […] and stimulates an open debate about the social, economic, and human added value of this phenomenon.</em>” Additionally, the United Nations Educational, Scientific and Cultural Organization (UNESCO) promote the following message in their Recommendation on Open Science: “<em>By promoting science that is more accessible, inclusive and transparent, open science furthers the right of everyone to share in scientific advancement and its benefits as stated in Article 27.1 of the Universal Declaration of Human Rights</em>”.</p>
+<p>Open Science includes related concepts such as Open Data <span class="citation" data-cites="Whata">(<a href="references.html#ref-Whata" role="doc-biblioref">n.d.a</a>)</span>, Open Source <span class="citation" data-cites="Open">(<a href="references.html#ref-Open" role="doc-biblioref"><span>“The <span>Open Definition</span> - <span>Open Definition</span> - <span>Defining Open</span> in <span>Open Data</span>, <span>Open Content</span> and <span>Open Knowledge</span>”</span> n.d.</a>)</span> and Open Access <span class="citation" data-cites="suber2012Open">(<a href="references.html#ref-suber2012Open" role="doc-biblioref">Suber 2012</a>)</span> among others <span class="citation" data-cites="Opena parsons2022Communitysourced turingwaycommunity2019TuringWayHandbook Opena">(<a href="references.html#ref-Opena" role="doc-biblioref">n.d.c</a>, <a href="references.html#ref-Opena" role="doc-biblioref">n.d.c</a>; <a href="references.html#ref-parsons2022Communitysourced" role="doc-biblioref">Parsons et al. 2022</a>; <a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">Turing Way Community et al. 2019</a>)</span>. <strong>Open Data</strong> refers to the openness and accessibility of data. It involves thinking (and acting) about data sharing, privacy, and protection, as well as considerations like consent and the nuances of handling sensitive data. In the context of computational projects like this PhD, <strong>Open Source</strong> applies to both software (e.g., programs and applications used) and hardware (e.g., types of machines involved) that are released under <strong>Open Licensing</strong>, making them publicly accessible for anyone to view, modify, use, and distribute. <span class="citation" data-cites="Guide kreutzer2014Open">(<a href="references.html#ref-Guide" role="doc-biblioref">n.d.b</a>; <a href="references.html#ref-kreutzer2014Open" role="doc-biblioref"><em>Open Content - a Practical Guide to Using Creative Commons Licences</em> 2014</a>)</span>. <strong>Open Access</strong> refers to how freely available research content is. There are different ways to achieve this; some times, open access might involve paying an Article Processing Charge to a journal, which then publishes the final version of the article under an open license <span class="citation" data-cites="borrego2023Article">(<a href="references.html#ref-borrego2023Article" role="doc-biblioref">Borrego 2023</a>)</span>, making it permanently free to access online (this is known as Gold Open Access). Sometimes, it may involve self-archiving a version of the research, often alongside preprints, allowing public access without direct journal fees (this is known as Green Open Access) <span class="citation" data-cites="bjork2014Anatomy">(<a href="references.html#ref-bjork2014Anatomy" role="doc-biblioref">Björk et al. 2014</a>)</span>.</p>
+<p>In order to achieve Open Science, the research process should:</p>
+<ol type="1">
+<li><p><strong>Be publicly available</strong>: It’s hard to benefit from knowledge hidden behind barriers like passwords and paywalls.</p></li>
+<li><p><strong>Be reusable</strong>: Research outputs should be licensed adequately, informing potential users of any restrictions on reuse.</p></li>
+<li><p><strong>Be transparent</strong>: With appropriate metadata to provide clear statements of how research output was produced and what it contains.</p></li>
+</ol>
+<p>Additionally, Open Science and its various elements are directly related with the broader concept of <strong>Open Scholarship</strong> <span class="citation" data-cites="scanlon2014Scholarship tennant2019Foundations">(<a href="references.html#ref-scanlon2014Scholarship" role="doc-biblioref">Scanlon 2014</a>; <a href="references.html#ref-tennant2019Foundations" role="doc-biblioref">Tennant et al. 2019</a>)</span>. Open Scholarship promotes transparency and accessibility in teaching, learning, research, and academia <span class="citation" data-cites="emeryLibGuides">(<a href="references.html#ref-emeryLibGuides" role="doc-biblioref">Emery n.d.</a>)</span>. More importantly, Open Scholarship emphasizes equity, diversity, and inclusion, ensuring that knowledge is openly available to everyone, regardless of ethnicity, gender, sexual orientation, or other protected characteristics.</p>
+<p>It is worth noting that Open Science does not mean “sharing absolutely everything”. Many fields of science involve working with sensitive personal data, with medical research being the most obvious example, where data is not to be widely shared. Likewise, privacy and data protection, as well as consent, and national and commercially sensitive data can be some of the most common examples of when data cannot always be open <span class="citation" data-cites="regulation2016RegulationEU2016">(<a href="references.html#ref-regulation2016RegulationEU2016" role="doc-biblioref">Regulation 2016</a>)</span>. If access to data needs to be restricted due to security reasons, however, the justification for this should be made clear. Free access to and subsequent use of data is of significant value to society and the economy. The concept of Open Science views that data should, therefore, be open by default and only as closed as necessary.</p>
+</section>
+<section id="fair-principles-for-open-and-reproducible-science" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="fair-principles-for-open-and-reproducible-science"><span class="header-section-number">3.3</span> FAIR Principles for Open and Reproducible Science</h2>
+<p>Weaved in with the topics already discussed, are the FAIR principles for scientific data management. These principles were created as a guideline to develop and collectively support a clear and measurable set of principles that allow for <strong>F</strong>indability, <strong>A</strong>ccessibility, <strong>I</strong>nteroperability and <strong>R</strong>eusability of digital assets, to ultimately support more reproducible research <span class="citation" data-cites="wilkinson2016FAIRa">(<a href="references.html#ref-wilkinson2016FAIRa" role="doc-biblioref">Wilkinson et al. 2016</a>)</span>. FAIR principles, therefore, serve as a valuable framework for conducting research with integrity.</p>
+<p>The advantages of applying FAIR principles become apparent when we understand each principle <span class="citation" data-cites="cole2017Using kremen2018Improving kim2024Findability">(<a href="references.html#ref-cole2017Using" role="doc-biblioref">Cole et al. 2017-03-20Z</a>; <a href="references.html#ref-kremen2018Improving" role="doc-biblioref">Kremen and Necasky 2018</a>; <a href="references.html#ref-kim2024Findability" role="doc-biblioref">I. Kim 2024</a>)</span>. Specifically linked to computational projects such as this PhD, FAIR practices can lead to more efficient code, minimising time spent on things like model retraining/rewriting, and reducing redundant data generation and storage <span class="citation" data-cites="hasselbring2019FAIR borrego2023Article">(<a href="references.html#ref-hasselbring2019FAIR" role="doc-biblioref">Hasselbring et al. 2019</a>; <a href="references.html#ref-borrego2023Article" role="doc-biblioref">Borrego 2023</a>)</span>. Likewise, the interoperability aspect of FAIR principles enables researchers to integrate datasets from various sources, fostering new insights and innovative problem-solving approaches. For example, application of FAIR principles can result in lowering carbon footprint of computer simulations as less time and resources are wasted trying to run models that lacks useful information on how to run it <span class="citation" data-cites="lannelongue2023GREENER">(<a href="references.html#ref-lannelongue2023GREENER" role="doc-biblioref">Lannelongue et al. 2023</a>)</span>.</p>
+<p>It is not uncommon for scientific code and workflows to originate within small, specialised research groups, often resulting in ad-hoc code that functions as a ‘black box’ to external researchers and developers. As this process unfolds and mixes with the fast-paced mindset mentioned above, if a workflow and materials are not clear from the beginning, future researchers may prioritise immediate functionality over long-term code quality, often due to constraints such as tight deadlines, limited resources, or evolving project requirements, causing something known as technical debt where the long term costs of workflow opacity costs human effort, money and time. One of the goals of this thesis project is to provide a workflow that enables reusability at initial creation and at the time of reuse, so that technical debt is decreased and the barriers for driving community interactions and innovations are lowered as a result.</p>
+</section>
+<section id="important-steps-taken-to-apply-fair-principles-open-science-by-design-and-reproducibility" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="important-steps-taken-to-apply-fair-principles-open-science-by-design-and-reproducibility"><span class="header-section-number">3.4</span> Important steps taken to apply FAIR principles, Open Science by Design and Reproducibility</h2>
+<p>While extensive literature and tutorials exist on best practices for reproducibility, the following provides a personal account of the tools and methods I have employed, along with their practical benefits in creating a computational model that others can reproduce. This section not only demonstrates the practical implementation of these practices but also showcases this PhD as an example of working towards a reproducible, open, and ethics-focused PhD in Computational Neuroscience. I reflect on how I have engaged with these principles, adopted the most relevant practices for this project, and integrated them into my research.</p>
+<p>I begin by outlining the steps taken to align with each of the FAIR principles, before exploring additional strategies that, while extending beyond the FAIR principles, still support FAIR research overarching goals.</p>
+<section id="findable" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="findable"><span class="header-section-number">3.4.1</span> Findable:</h3>
+<p><em>Data is well-described with rich metadata, making it easier to locate by both humans and machines</em> <span class="citation" data-cites="jacobsen2020FAIR">(<a href="references.html#ref-jacobsen2020FAIR" role="doc-biblioref">Jacobsen et al. 2020</a>)</span>.</p>
+<ul>
+<li>The dataset will be available with a Digital Object Identifier (DOI) upon finalization.</li>
+<li>Presentations, workshops, and papers are available with persistent identifiers where applicable (for example, see <span class="citation" data-cites="garcia2022Thinkinga romangarcia2023Data">(<a href="references.html#ref-garcia2022Thinkinga" role="doc-biblioref">Garcia, Sterratt, and Stefan 2022</a>; <a href="references.html#ref-romangarcia2023Data" role="doc-biblioref">Roman Garcia [2023] 2023</a>)</span>).</li>
+<li>Metadata used in the model follows human-readable naming conventions while still being domain-specific within neuroscience. Although some terminology is niche, notations and explanations are provided.</li>
+</ul>
+</section>
+<section id="accessible" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="accessible"><span class="header-section-number">3.4.2</span> Accessible</h3>
+<p><em>Data is stored in a way that ensures users can retrieve it with clear licensing and open protocols</em> <span class="citation" data-cites="jacobsen2020FAIR">(<a href="references.html#ref-jacobsen2020FAIR" role="doc-biblioref">Jacobsen et al. 2020</a>)</span>.</p>
+<ul>
+<li>The models created during this PhD project are open and accessible through GitHub, with documentation explaining their use and specifications.</li>
+<li>Related to the point above, README files provide clear guidance on protocols and explain how each repository works and what they contain, including licensing where appropriate.</li>
+<li>As well as models, workshops and presentations associated with my research are also available in public repositories such as Zenodo (and GitHub). These platforms are invaluable in making the tools and materials I have developed publicly accessible, while also offering mechanisms for proper citation through DOIs and appropriate licensing, where applicable.</li>
+<li>Data will be stored in a database, , ensuring long-term accessibility</li>
+<li>There are plans for the model to be made available in a platform such as BioModels, which is a freely accessible online repository of mathematical models representing biological and biomedical systems.</li>
+<li>Research resulting from this PhD has been made publicly accessible through preprints <span class="citation" data-cites="garcia2024Data">(<a href="references.html#ref-garcia2024Data" role="doc-biblioref">Garcia et al. 2024</a>)</span> (Green Open Access, allows access without the need for direct journal fees <span class="citation" data-cites="bjork2014Anatomy">(<a href="references.html#ref-bjork2014Anatomy" role="doc-biblioref">Björk et al. 2014</a>)</span>), and Open Access publication when publishing in journals <span class="citation" data-cites="garcia2025Data">(<a href="references.html#ref-garcia2025Data" role="doc-biblioref">García et al. 2025</a>)</span>, making it permanently free to access online (this is known as Gold Open Access <span class="citation" data-cites="borrego2023Article">(<a href="references.html#ref-borrego2023Article" role="doc-biblioref">Borrego 2023</a>)</span>).</li>
+</ul>
+</section>
+<section id="interoperable" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="interoperable"><span class="header-section-number">3.4.3</span> Interoperable</h3>
+<p><em>Data is formatted using standardised vocabularies and structures, enabling seamless integration across different applications or workflows</em> <span class="citation" data-cites="jacobsen2020FAIR">(<a href="references.html#ref-jacobsen2020FAIR" role="doc-biblioref">Jacobsen et al. 2020</a>)</span>.</p>
+<ul>
+<li>Interoperability is particularly relevant to this project, as the model needs to interface with multiple software tools (e.g., BioNetGen, MCell, Python) (see <a href="30-modelling_background.html#sec-how-do-we-model" class="quarto-xref"><span>Section 2.2</span></a>). By structuring the data and code to be compatible across these platforms, I ensure that the model can be integrated with future datasets and incorporated into diverse workflows for analysis, storage, and processing.</li>
+<li>The scripts written in Python utilize libraries that facilitate cross-software integration, making the model adaptable.</li>
+<li>The nomenclature in this project follows similar vocabulary/naming of molecules, albeit with slight variances in naming as the model, molecules functions and behaviours are not the same as other models. However, using BioNetGen Language and Python allows for a formal, accessible, shared and broadly applicable language.</li>
+</ul>
+</section>
+<section id="reusable" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="reusable"><span class="header-section-number">3.4.4</span> Reusable</h3>
+<p><em>Data is well-documented, with detailed provenance and clear usage rights, supporting reproducibility and future research</em> <span class="citation" data-cites="jacobsen2020FAIR">(<a href="references.html#ref-jacobsen2020FAIR" role="doc-biblioref">Jacobsen et al. 2020</a>)</span>.</p>
+<ul>
+<li>I have provided a detailed description of the model and its components, ensuring that (meta)data are richly annotated with relevant descriptors and attributes. Specifically, I outline the specifications for usage of data, including kinetic rates, molecule reaction rule names, and their sources or calculation methods.</li>
+<li>Where appropriate (for example when using GitHub repositories), I have explicitly licensed the data and stated usage rights, making it clear how others can build upon this work.</li>
+<li>The model includes comprehensive provenance details (in <a href="30-model.html" class="quarto-xref"><span>Chapter 5</span></a>), documenting data origins, derivation methods, and any transformations applied.</li>
+</ul>
+</section>
+<section id="good-computational-research-practices" class="level3" data-number="3.4.5">
+<h3 data-number="3.4.5" class="anchored" data-anchor-id="good-computational-research-practices"><span class="header-section-number">3.4.5</span> Good Computational Research Practices</h3>
+<p>In addition to the steps outlined above in alignment with the FAIR principles, this section elaborates on the broader computational practices adopted throughout this PhD to further support the goals of reproducibility and open science. These practices include maintaining comprehensive documentation of code and methods, managing computational environments to ensure consistency, carefully tracking and addressing errors, and using version control to log changes and facilitate collaboration. These practices form the foundation of reproducible research and have been central to building a workflow that is transparent and accessible to others.</p>
+<section id="comprehensive-documentation" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="comprehensive-documentation">Comprehensive Documentation</h4>
+<p>Ensuring that my code is clear, well-documented, and reusable has proven essential for both my own future reference and for others who may build upon this work. Indeed, code that is human readable with useful comments (see The Turing Way for guidelines on good code comment practices <span class="citation" data-cites="turingwaycommunity2019TuringWayHandbook">(<a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">Turing Way Community et al. 2019</a>)</span>) not only enhances reproducibility but also facilitates collaboration by making it easier to understand, modify, and extend. One of the key strategies I have implemented to achieve clarity and reusability is incorporating detailed and clear comments throughout the code to explain its purpose, logic, and key functions has been essential to help anyone (including my future self) quickly grasp what each section does without having to decipher it from scratch. Comments also help to clarify why certain decisions were made, which is crucial for long-term sustainability of the project.</p>
+<p>Beyond inline comments, comprehensive documentation has also been key. I have documented the broader aspects of my computational work, including the software, hardware specifications, and version numbers used (see <a href="20-data-hazards.html" class="quarto-xref"><span>Chapter 4</span></a>). This ensures that the research can be replicated under similar conditions, minimising inconsistencies caused by version mismatches or dependency issues. Likewise, each repository includes a README file <span class="citation" data-cites="githubREADMEs">(<a href="references.html#ref-githubREADMEs" role="doc-biblioref">GitHub n.d.</a>)</span> that provides an overview of the project, instructions for installation, dependencies, and usage guidelines. This serves as an entry point for users, making it easier to navigate the codebase and understand how to run and interpret the scripts.</p>
+</section>
+<section id="computational-environments" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="computational-environments">Computational Environments</h4>
+<p>I run the model on my local machine, as well as on the university’s high-performance computing (HPC) cluster. Additionally, if my supervisors or collaborators wish to run the model on their own machines, their computer environments will be different again. So the model is bound to be run in different environments depending on who’s running it and where. Every computer operates within a unique computational environment, encompassing its operating system, installed software, specific versions of packages, libraries, and system configurations.</p>
+<p>Since the model depends on these components, ensuring compatibility across different setups is essential for seamless execution. Even minor variations in library versions can cause unexpected errors or inconsistencies in results, or worse, prevent the code from running entirely <span class="citation" data-cites="spinellis2003Code">(<a href="references.html#ref-spinellis2003Code" role="doc-biblioref">Spinellis 2003</a>)</span>. To address these challenges, as well as the comprehensive code and documentation, I have created computational environments using package management systems (see definition <span class="citation" data-cites="turingwaycommunity2019TuringWayHandbook">(<a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">Turing Way Community et al. 2019</a>)</span>) that collaborators can use in their own machines when running the model. Computational environments act as, as per their name, “containers/environments” where all required software, libraries, and packages are pre-defined, allowing the model to run under controlled conditions <span class="citation" data-cites="gruning2018Practical maji2020Demystifying">(<a href="references.html#ref-gruning2018Practical" role="doc-biblioref">Grüning et al. 2018</a>; <a href="references.html#ref-maji2020Demystifying" role="doc-biblioref">Maji, Gorenstein, and Lentner 2020</a>)</span>. In this project, I use Conda (https://conda.io) as my preferred package management system for creating environments, as I find it the most intuitive and flexible. However, other environment managers can be used depending on user preference. These environments allow specific versions of software and libraries to be installed without affecting the global system setup. This ensures that the model runs identically on any machine with the same environment, providing a robust solution for running the same model on different machines.</p>
+<div id="fig-environment" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Computational Environments" data-fig-pos="H">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-environment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="22-reproducibility-figures\environment.PNG" class="img-fluid figure-img" data-fig-scap="Computational Environments" data-fig-pos="H">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-environment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: As an example of how environments work, the model is initially created on Machine 1, which runs the Windows operating system, has MCell version 4 installed, and uses Python version 4.1. To ensure that the model can be successfully executed on a different system, a dedicated computational environment is set up, capturing all the necessary dependencies. The environment setup and the model files are uploaded to a GitHub repository. This repository can contain the environment.yml file listing the required dependencies, including Python 3.9, NumPy, and pandas, as well as the model files (ABC_model.py and ABC_model.bngl), and a README.md file with instructions (such as downloading MCell version 4). On Machine 2, which runs Linux, has MCell version 3.3, and Python version 3.8, the user can, according to README instructions, update MCell to version 4 and use the specified environment by activating the environment.yml file. The model can be run within this contained environment.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="prepare-for-errors" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="prepare-for-errors">Prepare for Errors</h4>
+<p>Regularly testing code is, unsurprisingly, helpful for ensuring reliable and reproducible research. Throughout my PhD, I have incorporated various testing strategies to improve the reliability of my code. One key practice has been anticipating and preparing for errors, which has helped me catch potential issues before they become major problems. This is nothing ground-breaking but rather following good-practice coding, such as readable, commented code, as explained above, having print statements to know what the code is doing where and when, error handling and creating validation steps throughout. For me, creating validation steps involved carefully adding reactions one by one, running the code, and confirming that the molecules were reacting as expected —or at least within a reasonable range— since the model is stochastic (see <a href="30-modelling_background.html#sec-how-do-we-model" class="quarto-xref"><span>Section 2.2</span></a>) and may exhibit emergent behaviours that were not predicted. I have also learned to validate my code step by step through debugging <span class="citation" data-cites="mccauley2008Debugging">(<a href="references.html#ref-mccauley2008Debugging" role="doc-biblioref">McCauley et al. 2008</a>)</span>, the process of identifying, analyzing, and fixing errors or bugs in a program, to break down how the code is working and pinpoint where things go wrong. Additionally, I have used mock or dummy test models, such as the (ABC_model: https://github.com/Susana465/test_ABC), to simplify testing when the main model is too complex to easily trace errors.</p>
+</section>
+<section id="version-control" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="version-control">Version Control</h4>
+<p>Version control is a pillar of most, if not all, guides for reproducible research <span class="citation" data-cites="sandve2013Ten stodden2014Implementing sullivan2019Open turingwaycommunity2019TuringWayHandbook peikert2021Reproducible hamra2025Advancing">(<a href="references.html#ref-sandve2013Ten" role="doc-biblioref">Sandve et al. 2013</a>; <a href="references.html#ref-stodden2014Implementing" role="doc-biblioref">Stodden, Leisch, and Peng 2014</a>; <a href="references.html#ref-sullivan2019Open" role="doc-biblioref">Sullivan, DeHaven, and Mellor 2019</a>; <a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">Turing Way Community et al. 2019</a>; <a href="references.html#ref-peikert2021Reproducible" role="doc-biblioref">Peikert, van Lissa, and Brandmaier 2021</a>; <a href="references.html#ref-hamra2025Advancing" role="doc-biblioref">Hamra et al. 2025</a>)</span>. Version control is a method for tracking and managing changes to files or projects over time. It allows you and your collaborators to monitor modifications, review past edits, and restore previous versions if needed. Using version control helps maintain a relatively organized and traceable record of updates across different stages of development. This is extremely helpful for times when I needed to check back on when and where I did a specific change to my work, or when working collaboratively to know who wrote what and when. In terms of reproducibility, this means that version control helps with having clear provenance of information <span class="citation" data-cites="hamra2025Advancing">(<a href="references.html#ref-hamra2025Advancing" role="doc-biblioref">Hamra et al. 2025</a>)</span>. As a result of using version control, I have made my life easier (and potentially others in the future too) as I could track what version of the code and data produced specific outputs, for example. As datasets grow larger and more complex, by having a solid version control workflow you are doing your future self (and collaborators) a huge favour.</p>
+<p>There are various ways to implement version control <span class="citation" data-cites="atkins2002Using pilato2008Version milentijevic2008Version hethey2013GitLab">(<a href="references.html#ref-atkins2002Using" role="doc-biblioref">Atkins et al. 2002</a>; <a href="references.html#ref-pilato2008Version" role="doc-biblioref">Pilato, Collins-Sussman, and Fitzpatrick 2008</a>; <a href="references.html#ref-milentijevic2008Version" role="doc-biblioref">Milentijevic, Ciric, and Vojinovic 2008</a>; <a href="references.html#ref-hethey2013GitLab" role="doc-biblioref">Hethey 2013</a>)</span>, but I primarily use Git and GitHub <span class="citation" data-cites="loeliger2012Version">(<a href="references.html#ref-loeliger2012Version" role="doc-biblioref">Loeliger and McCullough 2012</a>)</span> —partly because they are widely adopted and partly because they were the tools introduced in the version control courses I attended. With Git, each version update (or “commit”) can include a message describing the changes made, such as “changed value x=1 to x=2.” This has made it much easier to track modifications over time and follow the evolution of this project. Version control is therefore, especially useful when sharing analyses, as it ensures transparency, reproducibility, and auditability -key aspects of good scientific practice.</p>
+<section id="gradual-development-and-validation" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="gradual-development-and-validation">Gradual Development and Validation</h5>
+<p>The way I built the model for this project involved gradually developing the code; for example, starting with CaMKII as a monomer, then a hexamer, and finally a dodecamer. This step-by-step approach ensured proof of concept and allowed me to develop the model incrementally, building on solid, validated foundations before moving to the next stage. Git’s branching feature made this process much smoother, as it let me work on different aspects of the model in separate lines of development without affecting the main project. This meant I could experiment, test, and refine changes in parallel workspaces, keeping the main codebase stable until updates were ready to be merged. Further details on model validation can be found in <a href="30-model.html#sec-validating-model" class="quarto-xref"><span>Section 5.3</span></a>.</p>
+</section>
+<section id="data-management" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="data-management">Data Management</h5>
+<p>With this gradual development, the datasets evolved, variable names changed, and file hierarchies were adjusted throughout. As a result, managing large data outputs eventually became a challenge (see Challenges in Version Controlling Data described by <span class="citation" data-cites="turingwaycommunity2019TuringWayHandbook">Turing Way Community et al. (<a href="references.html#ref-turingwaycommunity2019TuringWayHandbook" role="doc-biblioref">2019</a>)</span>). For example, GitHub imposes a limit of 100MB per file, preventing the storage of large files directly within the repository. Whilst Git can be used for data versioning by installing tools like git-annex, Git LFS, or git submodules, this means integration of more complex tools, which can introduce accessibility issues for newcomers. For example, with a data version control add-on tool like DataLad (which builds upon git and git-annex (https://git-annex.branchable.com/)), users may be able to see the files in the repository, but they won’t be able to access or download it directly, instead they would have to clone the entire repository, which may be far from ideal. This added complexity can be a barrier for those who are not familiar with the tools, potentially hindering the ease of use for collaborative projects.</p>
+<p>To address data versioning, I implemented various strategies. Firstly, timestamping output files: I saved output files with timestamps rather than overwriting them. This practice ensures that each file’s creation time is preserved, although it does not allow for version control of those files. While this means any modifications to the files won’t be tracked automatically, the documentation clearly specifies that any updates to the files should be reflected in the file names, maintaining clarity and transparency. Secondly, I developed a simplified version of the model, called the ABC_model, which mirrors the workflow of the main CaMKII_dodecamer_model. This model tracks fewer molecules (e.g., a + b -&gt; c) and produces less complex, smaller output files. Although this doesn’t address the version control of the primary model’s data, it is an effective tool for monitoring how outputs are generated and understanding their structure during testing phases. Additionally, I uploaded final outputs to a database: once the final, validated outputs were produced, I uploaded them to a database for proper storage and sharing. This step ensures that the final, reproducible data is securely stored and accessible. Likewise, packing data output files into smaller sized files (for example, zipping them), allows for data to be tracked, albeit, sometimes this is not a viable solution because data may still be too big.</p>
+</section>
+<section id="quarto-for-version-controlled-documents" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="quarto-for-version-controlled-documents">Quarto for Version-Controlled Documents</h5>
+<p>In addition to maintaining version control of the model(s), I also used Quarto <span class="citation" data-cites="allaire2024Quarto">(<a href="references.html#ref-allaire2024Quarto" role="doc-biblioref">Allaire et al. 2024</a>)</span>, an open-source publishing system designed for scientific and technical writing. Quarto enables the dynamic generation of various file formats, including Markdown, LaTeX, HTML, PDF, and Word, all of which can be version controlled. This functionality has been invaluable in creating a structured, traceable workflow within a single, integrated system. By leveraging Quarto’s flexibility, I have been able to write my thesis in Markdown, a highly intuitive and lightweight markup language, while keeping individual .qmd (Quarto Markdown) files under version control. Quarto then renders these files into my preferred output format, including PDF, Word, LaTeX, among other formats. This approach has been significantly more efficient than the previous ad-hoc method of manually tracking document versions (e.g., final, final_forreal, final_forreal2), which lacked transparency and made it difficult to trace specific changes. With Quarto, I can use version control of the files and precisely track modifications, review previous iterations, and revert to earlier versions when necessary, greatly improving both the organisation and reliability of my work.</p>
+</section>
+</section>
+<section id="automation-for-efficacy-and-sustainability" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="automation-for-efficacy-and-sustainability">Automation for Efficacy and Sustainability</h4>
+<p>Beyond ensuring clarity, documentation, and reproducibility, automation plays a key role in making code more sustainable. By automating repetitive tasks, I reduce the likelihood of human error, save time, and ensure consistency across different runs of the model. This is particularly important when working with complex simulations, large datasets, or high-performance computing (HPC) environments, where manually setting up and executing processes can be inefficient and error-prone.</p>
+<p>One example of automation in this project is the use of scripts for setting up environments and running simulations. Instead of manually installing dependencies and configuring settings each time the model is used, I have created scripts that automatically execute the necessary commands to run the model, as well as provide computational environment files that can be used to run the model in different machines. This eliminates the risk of missing dependencies, ensures the correct software versions are used, and reduces the setup burden for new users. Additionally, I have automated data processing workflows to streamline the handling of simulation outputs. Large-scale simulations generate significant amounts of data, and manually processing these results would be time-consuming and inconsistent. By writing reusable scripts for tasks such as data cleaning, aggregation, and visualization, I ensure that results are processed systematically and efficiently. This not only saves time but also makes it easier to compare outputs across different runs, improving the reproducibility of results.</p>
+</section>
+</section>
+</section>
+<section id="reflections-and-future-steps" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="reflections-and-future-steps"><span class="header-section-number">3.5</span> Reflections and Future Steps</h2>
+<p>As with most research projects, there are always opportunities for refinement and further exploration. While I am pleased with the level of effort and attention put into reproducibility throughout this work, there are several directions in which this could be extended and strengthened.</p>
+<p>Although the model was successfully run on different machines, showcasing practical reproducibility, due to time constraints, I was unable to include the figures to back up this demonstration within this chapter. However, the tools, code, and documentation are fully available in the accompanying GitHub repository, enabling others to explore and replicate these reproducibility tests for themselves.</p>
+<p>Looking ahead, I am keen to extend this work through a formal publication that includes a more comprehensive evaluation of how the project aligns with FAIR and open science principles. A structured FAIR assessment, such as the one proposed by Balaur et al. <span class="citation" data-cites="balaur2025FAIRification">(<a href="references.html#ref-balaur2025FAIRification" role="doc-biblioref">Balaur et al. 2025</a>)</span>, could provide a detailed appraisal of the reusability and transparency of the models developed. In support of these reflections, I refer to the reproducibility framework developed by Tiwari et al.&nbsp;(2021). Based on the rubric provided (see <a href="#fig-tiwari-rubric" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>), I have scored this project at 6.5 out of 8. As described throughout this chapter, considerable effort has gone into meeting the majority of the quick criteria proposed by <span class="citation" data-cites="tiwari2021Reproducibility">Tiwari et al. (<a href="references.html#ref-tiwari2021Reproducibility" role="doc-biblioref">2021b</a>)</span>.</p>
+<div id="fig-tiwari-rubric" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Reproducibility Scorecard">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tiwari-rubric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="22-reproducibility-figures\tiwari-rubric.PNG" class="img-fluid figure-img" data-fig-scap="Reproducibility Scorecard">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tiwari-rubric-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Reproducibility Scorecard suggested by <span class="citation" data-cites="tiwari2021Reproducibility">Tiwari et al. (<a href="references.html#ref-tiwari2021Reproducibility" role="doc-biblioref">2021b</a>)</span>, adapted.
+</figcaption>
+</figure>
+</div>
+<p>One area still under development is the conversion of the model code into standardised formats such as SBML, with the intention of submitting it to a public repository for mathematical models of biological and biomedical systems, such as BioModels <span class="citation" data-cites="lenovere2006BioModels malik-sheriff2020BioModels">(<a href="references.html#ref-lenovere2006BioModels" role="doc-biblioref">Le Novère et al. 2006</a>; <a href="references.html#ref-malik-sheriff2020BioModels" role="doc-biblioref">Malik-Sheriff et al. 2020</a>)</span>. BioModels requires submissions to follow specific guidelines, which include the provision of SED-ML (Simulation Experiment Description Markup Languag) files —a format used to describe the simulation experiments performed on computational models, including details of the algorithms, tasks, and outputs. Experimental data, simulation results, and associated metadata can also be submitted in a COMBINE archive, a single container file that brings together all relevant documents required to fully describe, reproduce, and share a computational modelling project <span class="citation" data-cites="bergmann2014COMBINE">(<a href="references.html#ref-bergmann2014COMBINE" role="doc-biblioref">Bergmann et al. 2014</a>)</span>.</p>
+<p>With respect to the seventh criterion in the Tiwari et al.&nbsp;(2021) framework, I awarded a partial point. The model is well annotated, with inline comments and supporting tables that describe variables and their meanings, thus aiding interpretability. However, molecule and reaction naming conventions, while consistent within the project, could benefit from further simplification. This is a known challenge in computational biology, where names must often strike a balance between being human-readable and programmatically functional (see, for example, discussions on standardised biological ontologies) <span class="citation" data-cites="bodenreider2006Bioontologies brochhausen2018Discussion fitzpatrick2022Validation">(<a href="references.html#ref-bodenreider2006Bioontologies" role="doc-biblioref">Bodenreider and Stevens 2006</a>; <a href="references.html#ref-brochhausen2018Discussion" role="doc-biblioref">Brochhausen et al. 2018</a>; <a href="references.html#ref-fitzpatrick2022Validation" role="doc-biblioref">Fitzpatrick and Stefan 2022</a>)</span>.</p>
+<p>Overall, the limitations identified here present valuable opportunities for growth and refinement, typical of any ongoing research effort. Future steps represent an exciting part of the process that will enhance the transparency, accessibility, and usefulness of the model for the broader research community. By ensuring that models follow FAIR, open principles we not only strengthen the scientific rigour of this PhD, but also uphold the ethical responsibility of researchers to share their work in a way that benefits the wider community. This is precisely what is discussed next.</p>
+</section>
+<section id="defining-ethical-science" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="defining-ethical-science"><span class="header-section-number">3.6</span> Defining Ethical Science</h2>
+<p>Open, reproducible and FAIR ideas are fundamentally linked to ethics, as these practices ultimately promote more ethical and responsible research by fostering transparency, integrity, and accountability <span class="citation" data-cites="farrow2016Framework kushwaha2024Ethical">(<a href="references.html#ref-farrow2016Framework" role="doc-biblioref">Farrow 2016</a>; <a href="references.html#ref-kushwaha2024Ethical" role="doc-biblioref">Kushwaha et al. 2024</a>)</span>. No matter how efficient or reproducible a study may be, its value is questionable if it causes harm to a group of individuals. Likewise, recognizing biases and risks in our research without providing the necessary resources for replication may undermine the advancement of truly ethical and reliable research.</p>
+<p>Here, we refer to “scientific ethics” as the principles and guidelines that govern the behaviour of scientists in their work, and their impact in wider society <span class="citation" data-cites="rollin2006Science edel2018Science menapace2019Scientific">(<a href="references.html#ref-rollin2006Science" role="doc-biblioref">Rollin 2006</a>; <a href="references.html#ref-edel2018Science" role="doc-biblioref">Edel 2018</a>; <a href="references.html#ref-menapace2019Scientific" role="doc-biblioref">Menapace 2019</a>)</span>. More broadly, ethics can be seen as a system of moral values and principles that a particular society or community upholds <span class="citation" data-cites="gensler2017Ethics">(<a href="references.html#ref-gensler2017Ethics" role="doc-biblioref">Gensler 2017</a>)</span>. Ethics can be understood as a core aspect of moral philosophy -an area of study that, among other things, seeks to differentiate between right and wrong. Viewing ethics as the study of what constitutes appropriate or inappropriate behaviour emphasizes its connection to action. Therefore, we can see how ethics is relevant when considering the impact of actions and behaviours of scientists throughout the research process. Recognizing this also highlights the fundamental role of moral philosophy and ethics in shaping how research impacts society.</p>
+<p>Ethical standards and beliefs evolve over time, and as a result, so do the ethical guidelines that govern scientific research <span class="citation" data-cites="joyner2002Evolution kim2003Ethical macklin2008Standard">(<a href="references.html#ref-joyner2002Evolution" role="doc-biblioref">Joyner and Payne 2002</a>; <a href="references.html#ref-kim2003Ethical" role="doc-biblioref">Y. Kim and Choi 2003</a>; <a href="references.html#ref-macklin2008Standard" role="doc-biblioref">Macklin 2008</a>)</span>. Practices that were once considered acceptable may no longer align with contemporary ethical norms, just as certain current methodologies may be deemed unethical in the future. Either way, throughout history, including current times, there are numerous examples of scientific research leading to significant ethical concerns and harmful consequences <span class="citation" data-cites="jackson2005Origins seth2009Putting birhane2020Decolonising garcia2022Thinkinga">(<a href="references.html#ref-jackson2005Origins" role="doc-biblioref">Jackson, Weidman, and Rubin 2005–2006</a>; <a href="references.html#ref-seth2009Putting" role="doc-biblioref">Seth 2009</a>; <a href="references.html#ref-birhane2020Decolonising" role="doc-biblioref">Birhane and Guest 2020</a>; <a href="references.html#ref-garcia2022Thinkinga" role="doc-biblioref">Garcia, Sterratt, and Stefan 2022</a>)</span>, as discussed more in detail in the article included in <a href="20-data-hazards.html" class="quarto-xref"><span>Chapter 4</span></a>. I believe it is important to recognise the heavy weight that science carries, of not only unethical but also oppressive research that has undermined and hurt minoritised groups and individuals throughout time. Unless we recognise where scientific research stands and where it comes from, we cannot stop repeating the same oppressive behaviours that may go unspoken or unrecognised otherwise.</p>
+<p>In a presentation I delivered in 2022, I provided several examples of historical social biases that persist in scientific research, with a focus on Medicine, Neuroscience and Computer Science, including examples of racism, sexism, ableism, and speciesism <span class="citation" data-cites="garcia2022Thinkinga">(<a href="references.html#ref-garcia2022Thinkinga" role="doc-biblioref">Garcia, Sterratt, and Stefan 2022</a>)</span>. I define social bias as a systematic and often unconscious prejudice or favouritism toward certain groups over others, based on characteristics such as race, gender, species, or other socially constructed categories. A good example of embedded biases in science is given by <span class="citation" data-cites="branch2022Discussionsa">Branch et al. (<a href="references.html#ref-branch2022Discussionsa" role="doc-biblioref">2022</a>)</span> as they eloquently articulate how a desire to quantify and establish hierarchies among organisms was not purely for scientific interest, but that there is extensive evidence in the fact that the roots of evolutionary biology, which serves as a baseline for many other disciplines like neuroscience, are steeped in histories of white-supremacism, eugenics, and scientific racism. They discuss the definition of the “Not-So-Fit”, and how this limits the diverse thought and investigative potential in biology. This is important to recognise for this thesis, as I use hierarchies and models of biology that are based on a historical context of how science has reached its current status of knowledge.</p>
+</section>
+<section id="why-is-this-important" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="why-is-this-important"><span class="header-section-number">3.7</span> Why is this important?</h2>
+<p>Reflecting on the ethical history and potential future implications of research helps to uphold accountability and minimise harm, as further discussed in the Data Hazards <a href="20-data-hazards.html" class="quarto-xref"><span>Chapter 4</span></a>. It is the synergy of combining opennes, reproducibility and ethics that create research that shows integrity and enhances credibility <span class="citation" data-cites="medicine2017Fostering zhaksylyk2023Research">(<a href="references.html#ref-medicine2017Fostering" role="doc-biblioref">Medicine et al. 2017</a>; <a href="references.html#ref-zhaksylyk2023Research" role="doc-biblioref">Zhaksylyk et al. 2023</a>)</span>. Thinking about reproducibility can, in turn, help to think how you will share your data, as well as where your own data has come from. Hence, reaching an increased awareness of how data was sourced and its ethics and potential biases. Working with ethics, philosophy, reproducibility and an openness to discuss the wider context of where our research rests, may add time to the research timeline, but can very much enrich a fuller and more complex understanding of the shortcomings of our research and how to do better moving forward. This is why I believe that continuous reflection on ethical standards is essential, and why I have made a big emphasis on reiterative reflection throughout this PhD.</p>
+<p>As we have seen, creating research that takes into account opennes, reproducibility and ethical considerations offers benefits not only for researchers but for society as a whole. Researchers can directly benefit through increased visibility and citation rates, greater opportunities for collaboration, and reduced waste of time and resources. Additionally, fostering open scientific practices helps build a stronger sense of community, in contrast to the traditionally competitive nature of research. Embedding these considerations into research workflows can enhance the credibility and reliability of scientific findings. Furthermore, reflecting on the broader impact of research promotes accountability and encourages proactive measures to mitigate potential harm.</p>
+<p>Beyond academic advantages, open, ethical, and reproducible research contributes to more equitable knowledge dissemination. When data, methods, and findings are openly shared, barriers to access are reduced, enabling a wider range of researchers, institutions, and communities to engage with and build upon existing work. This can drive innovation, improve public trust in science, and ensure that research benefits can be reaped by as many individuals as possible.</p>
+<section id="a-personal-account-where-it-started" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="a-personal-account-where-it-started"><span class="header-section-number">3.7.1</span> A personal account: Where it started</h3>
+<p>Before turning to the technical discussion of Data Hazards in the following chapter, I offer a brief personal account of how I came to engage with these issues, alongside a poster I developed to capture the key questions and reflections that have shaped my thinking throughout this PhD.</p>
+<p>A common experience in my academic career has been the limited focus on the social dimensions of ethics in the research I conduct. As I became aware that much of the research I conduct is based on biased views of how the world works <span class="citation" data-cites="tjeltveit2015Appropriately mayson2018Bias ross2020Everyday">(<a href="references.html#ref-tjeltveit2015Appropriately" role="doc-biblioref">Tjeltveit 2015</a>; <a href="references.html#ref-mayson2018Bias" role="doc-biblioref">Mayson 2018–2019</a>; <a href="references.html#ref-ross2020Everyday" role="doc-biblioref">Ross 2020</a>)</span>, I developed a keen interest in examining the biases within my own work.</p>
+<p>My position as a woman, an immigrant in the UK, and someone from a working-class background has deeply shaped my experience in academia. It has influenced how I am perceived, the hurdles I’ve had to overcome, and the opportunities available to me. Over time, these experiences have led me to care deeply about the inequalities I kept encountering. At the same time, I also acknowledge the privileges I hold, being perceived as white, European, and a student at a prestigious university. These intersecting experiences of marginalisation and privilege have shaped and motivated my commitment to critically examine implicit biases within society and strive for a more equitable and accessible research process.</p>
+<p>My focus on addressing biases in my research made me realise the need for greater reproducibility and accessibility to ensure open, meaningful dialogues, and progress. The initial bias I encountered was the assumption that “there is no need to account for social bias in my research”, because one might think my research topic is neutral at first glance: computer simulations of proteins does not scream a need for ethical considerations, mainly because we are not directly using animals, human or non-human.</p>
+<p>In an effort to challenge the initial notion that my project does not require ethical considerations, I began exploring how others were thinking about bias and reproducibility. This led to the creation of a detailed (though wordy) poster, which framed my PhD journey as a series of milestones. I presented this poster at the COMBINE and ICSB 2022 conferences <span class="citation" data-cites="romangarcia2022Biasa">(<a href="references.html#ref-romangarcia2022Biasa" role="doc-biblioref">Roman Garcia et al. [2022] 2022</a>)</span>, where I shared how I address bias and reproducibility in my own work, and encouraged researchers at various stages of their careers to reflect on these aspects in theirs. A common concern raised during these discussions was the additional time and effort required to make research fully reproducible. While it is true that ensuring reproducibility can increase an individual’s workload and extend the research timeline, it ultimately proves more efficient in the long run. By making research accessible, well-documented, and easy to build upon, future researchers are better equipped to continue and expand on existing work, reducing redundancy and advancing scientific progress more effectively.</p>
+<p>At each milestone proposed in the poster, I present potential biases that could influence the work, along with tools to either mitigate or highlight them. At the same time, I recognised that for my PhD to be truly ethical, it needed to prioritise both reproducibility and accessibility. To reflect this, I organised the questions I had been grappling with into different sections of the research process. All of this is documented in a publicly available GitHub repository <span class="citation" data-cites="romangarcia2022Biasa">(<a href="references.html#ref-romangarcia2022Biasa" role="doc-biblioref">Roman Garcia et al. [2022] 2022</a>)</span>.</p>
+<p>For instance, during the design of the computational model I use, I consider questions such as: Who is my data including or excluding? What assumptions am I making? To what extent am I simplifying? In my research, I work mostly with data from non-human animals. A common assumption in the field is that findings from experiments on mice can be extrapolated to humans. However, it is essential to acknowledge that this remains an assumption, not a certainty. Similarly, my work often involves explaining memory and learning in highly simplified terms, typically focusing on specific molecular mechanisms. Yet, these processes are inherently complex, and we do not fully understand all their nuances. Recognising these limitations is crucial for maintaining scientific integrity and ensuring that findings are interpreted within their appropriate context (see <a href="#fig-posterPhDjourney" class="quarto-xref">Figure&nbsp;<span>3.4</span></a> for resources I used).</p>
+<p>These questions around data provenance and the ethical dimensions of my research are explored in greater depth in the next section, where I introduce and explore the Data Hazards framework (see chapter <a href="20-data-hazards.html" class="quarto-xref"><span>Chapter 4</span></a>). This framework encourages researchers to critically assess not only the potential risks and limitations of their work, but also how it might be used in future, and what biases it could be perpetuating. Reflecting on these concerns shaped the design of my computational model and prompted a broader engagement with the ethics and reproducibility of research in neuroscience. This line of thinking ultimately led to the development and publication of the paper included in the following chapter “Data Hazards as an Ethical Toolkit for Neuroscience” <span class="citation" data-cites="garcia2025Data">(<a href="references.html#ref-garcia2025Data" role="doc-biblioref">García et al. 2025</a>)</span>.</p>
+<div id="fig-posterPhDjourney" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="h" data-fig-scap="Poster about bias and reproducibility" width="500">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-posterPhDjourney-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://github.com/Susana465/Bias-and-Reproducibility-Poster/blob/main/20221006_poster_phd_journey.jpg"><img src="22-reproducibility-figures\20221006_poster_phd_journey.jpg" class="img-fluid figure-img" data-fig-scap="Poster about bias and reproducibility" data-fig-pos="h" width="500"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-posterPhDjourney-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: Poster about bias and reproducibility, showing research cycle as a journey which starts with design, then data collection, data analysis and final reporting, and compares this through images to growing an apple tree, collecting the apples and then selling them.
+</figcaption>
+</figure>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-aert2019Publication" class="csl-entry" role="listitem">
+Aert, Robbie C. M. van, Jelte M. Wicherts, and Marcel A. L. M. van Assen. 2019. <span>“Publication Bias Examined in Meta-Analyses from Psychology and Medicine: <span>A</span> Meta-Meta-Analysis.”</span> <em>PLOS ONE</em> 14 (4): e0215052. <a href="https://doi.org/10.1371/journal.pone.0215052">https://doi.org/10.1371/journal.pone.0215052</a>.
+</div>
+<div id="ref-afonso2024Perils" class="csl-entry" role="listitem">
+Afonso, José, Rodrigo Ramirez-Campillo, Filipe Manuel Clemente, Fionn Cléirigh Büttner, and Renato Andrade. 2024. <span>“The <span>Perils</span> of <span>Misinterpreting</span> and <span>Misusing</span> <span>‘<span>Publication Bias</span>’</span> in <span class="nocase">Meta-analyses</span>: <span>An Education Review</span> on <span>Funnel Plot-Based Methods</span>.”</span> <em>Sports Med</em> 54 (2): 257–69. <a href="https://doi.org/10.1007/s40279-023-01927-9">https://doi.org/10.1007/s40279-023-01927-9</a>.
+</div>
+<div id="ref-aksnes2019Citations" class="csl-entry" role="listitem">
+Aksnes, Dag W., Liv Langfeldt, and Paul Wouters. 2019. <span>“Citations, <span>Citation Indicators</span>, and <span>Research Quality</span>: <span>An Overview</span> of <span>Basic Concepts</span> and <span>Theories</span>.”</span> <em>SAGE Open</em> 9 (1): 2158244019829575. <a href="https://doi.org/10.1177/2158244019829575">https://doi.org/10.1177/2158244019829575</a>.
+</div>
+<div id="ref-allaire2024Quarto" class="csl-entry" role="listitem">
+Allaire, J. J., Charles Teague, Carlos Scheidegger, Yihui Xie, Christophe Dervieux, and Gordon Woodhull. 2024. <span>“Quarto.”</span> <a href="https://doi.org/10.5281/zenodo.5960048">https://doi.org/10.5281/zenodo.5960048</a>.
+</div>
+<div id="ref-amutuhaire2022Reality" class="csl-entry" role="listitem">
+Amutuhaire, Tibelius. 2022. <span>“The <span>Reality</span> of the <span>‘<span>Publish</span> or <span>Perish</span>’</span> <span>Concept</span>, <span>Perspectives</span> from the <span>Global South</span>.”</span> <em>Pub Res Q</em> 38 (2): 281–94. <a href="https://doi.org/10.1007/s12109-022-09879-0">https://doi.org/10.1007/s12109-022-09879-0</a>.
+</div>
+<div id="ref-angell1986Publish" class="csl-entry" role="listitem">
+ANGELL, MARCIA. 1986. <span>“Publish or <span>Perish</span>: <span>A Proposal</span>.”</span> <em>Ann Intern Med</em> 104 (2): 261–62. <a href="https://doi.org/10.7326/0003-4819-104-2-261">https://doi.org/10.7326/0003-4819-104-2-261</a>.
+</div>
+<div id="ref-atkins2002Using" class="csl-entry" role="listitem">
+Atkins, D. L., T. Ball, T. L. Graves, and A. Mockus. 2002. <span>“Using Version Control Data to Evaluate the Impact of Software Tools: A Case Study of the <span>Version Editor</span>.”</span> <em>IEEE Transactions on Software Engineering</em> 28 (7): 625–37. <a href="https://doi.org/10.1109/TSE.2002.1019478">https://doi.org/10.1109/TSE.2002.1019478</a>.
+</div>
+<div id="ref-baker2016500ScientistsLift" class="csl-entry" role="listitem">
+Baker, Monya. 2016. <span>“1,500 Scientists Lift the Lid on Reproducibility.”</span> <em>Nature</em> 533 (7604, 7604): 452–54. <a href="https://doi.org/10.1038/533452a">https://doi.org/10.1038/533452a</a>.
+</div>
+<div id="ref-balaur2025FAIRification" class="csl-entry" role="listitem">
+Balaur, Irina, David P. Nickerson, Danielle Welter, Judith A. H. Wodke, Francois Ancien, Tom Gebhardt, Valentin Grouès, et al. 2025. <span>“<span>FAIRification</span> of Computational Models in Biology.”</span> March 24, 2025. <a href="https://doi.org/10.1101/2025.03.21.644517">https://doi.org/10.1101/2025.03.21.644517</a>.
+</div>
+<div id="ref-barba2018TerminologiesReproducibleResearch" class="csl-entry" role="listitem">
+Barba, Lorena A. 2018. <span>“Terminologies for <span>Reproducible Research</span>.”</span> February 9, 2018. <a href="https://doi.org/10.48550/arXiv.1802.03311">https://doi.org/10.48550/arXiv.1802.03311</a>.
+</div>
+<div id="ref-bausell2021Problem" class="csl-entry" role="listitem">
+Bausell, R. Barker. 2021. <em>The <span>Problem</span> with <span>Science</span>: <span>The Reproducibility Crisis</span> and <span>What</span> to Do <span>About It</span></em>. Oxford University Press. <a href="https://books.google.com?id=oHEWEAAAQBAJ">https://books.google.com?id=oHEWEAAAQBAJ</a>.
+</div>
+<div id="ref-bergmann2014COMBINE" class="csl-entry" role="listitem">
+Bergmann, Frank T., Richard Adams, Stuart Moodie, Jonathan Cooper, Mihai Glont, Martin Golebiewski, Michael Hucka, et al. 2014. <span>“<span>COMBINE</span> Archive and <span>OMEX</span> Format: One File to Share All Information to Reproduce a Modeling Project.”</span> <em>BMC Bioinformatics</em> 15 (1): 369. <a href="https://doi.org/10.1186/s12859-014-0369-z">https://doi.org/10.1186/s12859-014-0369-z</a>.
+</div>
+<div id="ref-bhandari2004Association" class="csl-entry" role="listitem">
+Bhandari, Mohit, Jason W. Busse, Dianne Jackowski, Victor M. Montori, Holger Schünemann, Sheila Sprague, Derek Mears, Emil H. Schemitsch, Dianne Heels-Ansdell, and P. J. Devereaux. 2004. <span>“Association Between Industry Funding and Statistically Significant Pro-Industry Findings in Medical and Surgical Randomized Trials.”</span> <em>CMAJ</em> 170 (4): 477–80. <a href="https://www.cmaj.ca/content/170/4/477">https://www.cmaj.ca/content/170/4/477</a>.
+</div>
+<div id="ref-birhane2020Decolonising" class="csl-entry" role="listitem">
+Birhane, Abeba, and Olivia Guest. 2020. <span>“Towards Decolonising Computational Sciences.”</span> September 29, 2020. <a href="https://doi.org/10.48550/arXiv.2009.14258">https://doi.org/10.48550/arXiv.2009.14258</a>.
+</div>
+<div id="ref-bjork2014Anatomy" class="csl-entry" role="listitem">
+Björk, Bo-Christer, Mikael Laakso, Patrik Welling, and Patrik Paetau. 2014. <span>“Anatomy of Green Open Access.”</span> <em>Journal of the Association for Information Science and Technology</em> 65 (2): 237–50. <a href="https://doi.org/10.1002/asi.22963">https://doi.org/10.1002/asi.22963</a>.
+</div>
+<div id="ref-boda2022What" class="csl-entry" role="listitem">
+Boda, Phillip Andrew, Nusbaum, and Saili S. and Kulkarni. 2022. <span>“From <span>‘What Is’</span> Toward <span>‘What If’</span> Through Intersectionality: Problematizing Ableist Erasures and Coloniality in Racially Just Research.”</span> <em>International Journal of Research &amp; Method in Education</em> 45 (4): 356–69. <a href="https://doi.org/10.1080/1743727X.2022.2054981">https://doi.org/10.1080/1743727X.2022.2054981</a>.
+</div>
+<div id="ref-bodenreider2006Bioontologies" class="csl-entry" role="listitem">
+Bodenreider, Olivier, and Robert Stevens. 2006. <span>“Bio-Ontologies: Current Trends and Future Directions.”</span> <em>Briefings in Bioinformatics</em> 7 (3): 256–74. <a href="https://doi.org/10.1093/bib/bbl027">https://doi.org/10.1093/bib/bbl027</a>.
+</div>
+<div id="ref-borrego2023Article" class="csl-entry" role="listitem">
+Borrego, Ángel. 2023. <span>“Article Processing Charges for Open Access Journal Publishing: <span>A</span> Review.”</span> <em>Learned Publishing</em> 36 (3): 359–78. <a href="https://doi.org/10.1002/leap.1558">https://doi.org/10.1002/leap.1558</a>.
+</div>
+<div id="ref-branch2022Discussionsa" class="csl-entry" role="listitem">
+Branch, Haley A., Amanda N. Klingler, Kelsey J. R. P. Byers, Aaron Panofsky, and Danielle Peers. 2022. <span>“Discussions of the <span>‘<span>Not So Fit</span>’</span>: <span>How Ableism Limits Diverse Thought</span> and <span>Investigative Potential</span> in <span>Evolutionary Biology</span>.”</span> <em>The American Naturalist</em> 200 (1): 101–13. <a href="https://doi.org/10.1086/720003">https://doi.org/10.1086/720003</a>.
+</div>
+<div id="ref-brochhausen2018Discussion" class="csl-entry" role="listitem">
+Brochhausen, M., A. Burgun, W. Ceusters, A. Hasman, T. Y. Leong, M. Musen, J. L. Oliveira, M. Peleg, A. Rector, and S. Schulz. 2018. <span>“Discussion of <span>‘<span>Biomedical Ontologies</span>: <span>Toward Scientific Debate</span>’</span>.”</span> <em>Methods of Information in Medicine</em> 50 (January): 217–36. <a href="https://doi.org/10.1055/s-0038-1625243">https://doi.org/10.1055/s-0038-1625243</a>.
+</div>
+<div id="ref-campbell2019Prestige" class="csl-entry" role="listitem">
+Campbell, Corbin M., Marisol Jimenez, and Christine Arlene N. Arrozal. 2019. <span>“Prestige or Education: College Teaching and Rigor of Courses in Prestigious and Non-Prestigious Institutions in the <span>U</span>.<span>S</span>.”</span> <em>High Educ</em> 77 (4): 717–38. <a href="https://doi.org/10.1007/s10734-018-0297-3">https://doi.org/10.1007/s10734-018-0297-3</a>.
+</div>
+<div id="ref-carlson2012Understanding" class="csl-entry" role="listitem">
+Carlson, Kevin D., and Andrew O. Herdman. 2012. <span>“Understanding the <span>Impact</span> of <span>Convergent Validity</span> on <span>Research Results</span>.”</span> <em>Organizational Research Methods</em> 15 (1): 17–32. <a href="https://doi.org/10.1177/1094428110392383">https://doi.org/10.1177/1094428110392383</a>.
+</div>
+<div id="ref-castrotorres2022North" class="csl-entry" role="listitem">
+Castro Torres, Andrés F., and Diego Alburez-Gutierrez. 2022. <span>“North and <span>South</span>: <span>Naming</span> Practices and the Hidden Dimension of Global Disparities in Knowledge Production.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (10): e2119373119. <a href="https://doi.org/10.1073/pnas.2119373119">https://doi.org/10.1073/pnas.2119373119</a>.
+</div>
+<div id="ref-chan2014Increasing" class="csl-entry" role="listitem">
+Chan, An-Wen, Fujian Song, Andrew Vickers, Tom Jefferson, Kay Dickersin, Peter C. Gøtzsche, Harlan M. Krumholz, Davina Ghersi, and H. Bart van der Worp. 2014. <span>“Increasing Value and Reducing Waste: Addressing Inaccessible Research.”</span> <em>The Lancet</em> 383 (9913): 257–66. <a href="https://doi.org/10.1016/S0140-6736(13)62296-5">https://doi.org/10.1016/S0140-6736(13)62296-5</a>.
+</div>
+<div id="ref-claerbout1992ElectronicDocumentsGive" class="csl-entry" role="listitem">
+Claerbout, Jon F., and Martin Karrenbach. 1992. <span>“Electronic Documents Give Reproducible Research a New Meaning.”</span> In <em><span>SEG Technical Program Expanded Abstracts</span> 1992</em>, 601–4. <span>SEG Technical Program Expanded Abstracts</span>. Society of Exploration Geophysicists. <a href="https://doi.org/10.1190/1.1822162">https://doi.org/10.1190/1.1822162</a>.
+</div>
+<div id="ref-cole2017Using" class="csl-entry" role="listitem">
+Cole, Timothy W., Myung-Ja K. Han, Maria Janina Sarol, Monika Biel, and David Maus. 2017-03-20Z. <span>“Using Linked Open Data to Enhance the Discoverability, Functionality and Impact of <span>Emblematica Online</span>.”</span> <em>Library Hi Tech</em> 35 (1): 159–78. <a href="https://doi.org/10.1108/LHT-11-2016-0126">https://doi.org/10.1108/LHT-11-2016-0126</a>.
+</div>
+<div id="ref-collyer2018Global" class="csl-entry" role="listitem">
+Collyer, Fran M. 2018. <span>“Global Patterns in the Publishing of Academic Knowledge: <span>Global North</span>, Global <span>South</span>.”</span> <em>Current Sociology</em> 66 (1): 56–73. <a href="https://doi.org/10.1177/0011392116680020">https://doi.org/10.1177/0011392116680020</a>.
+</div>
+<div id="ref-ebadi2016How" class="csl-entry" role="listitem">
+Ebadi, Ashkan, and Andrea Schiffauerova. 2016. <span>“How to Boost Scientific Production? <span>A</span> Statistical Analysis of Research Funding and Other Influencing Factors.”</span> <em>Scientometrics</em> 106 (3): 1093–1116. <a href="https://doi.org/10.1007/s11192-015-1825-x">https://doi.org/10.1007/s11192-015-1825-x</a>.
+</div>
+<div id="ref-edel2018Science" class="csl-entry" role="listitem">
+Edel, Abraham, ed. 2018. <em>Science and the <span>Structure</span> of <span>Ethics</span></em>. New York: Routledge. <a href="https://doi.org/10.4324/9781351291002">https://doi.org/10.4324/9781351291002</a>.
+</div>
+<div id="ref-elbanna2023Publish" class="csl-entry" role="listitem">
+Elbanna, Said, and John Child. 2023. <span>“From <span>‘Publish or Perish’</span> to <span>‘Publish for Purpose’</span>.”</span> <em>European Management Review</em> 20 (4): 614–18. <a href="https://doi.org/10.1111/emre.12618">https://doi.org/10.1111/emre.12618</a>.
+</div>
+<div id="ref-emeryLibGuides" class="csl-entry" role="listitem">
+Emery, Jill. n.d. <span>“<span>LibGuides</span>: <span>Discovery</span> of <span>Scholarly Open Access Content</span>: <span>What</span> Is <span>Open Scholarship</span>?”</span> Accessed February 10, 2025. <a href="https://guides.library.pdx.edu/c.php?g=931273&amp;p=6711316">https://guides.library.pdx.edu/c.php?g=931273&amp;p=6711316</a>.
+</div>
+<div id="ref-esarey2016Measuring" class="csl-entry" role="listitem">
+Esarey, Justin, and Ahra Wu. 2016. <span>“Measuring the Effects of Publication Bias in Political Science.”</span> <em>Research &amp; Politics</em> 3 (3): 2053168016665856. <a href="https://doi.org/10.1177/2053168016665856">https://doi.org/10.1177/2053168016665856</a>.
+</div>
+<div id="ref-farrow2016Framework" class="csl-entry" role="listitem">
+Farrow, Rob. 2016. <span>“A <span>Framework</span> for the <span>Ethics</span> of <span>Open Education</span>.”</span> <em>Open Praxis</em> 8 (2): 93–109. <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=5474032">https://dialnet.unirioja.es/servlet/articulo?codigo=5474032</a>.
+</div>
+<div id="ref-fitzpatrick2022Validation" class="csl-entry" role="listitem">
+Fitzpatrick, Richard, and Melanie I. Stefan. 2022. <span>“Validation <span>Through Collaboration</span>: <span>Encouraging Team Efforts</span> to <span>Ensure Internal</span> and <span>External Validity</span> of <span>Computational Models</span> of <span>Biochemical Pathways</span>.”</span> <em>Neuroinform</em> 20 (1): 277–84. <a href="https://doi.org/10.1007/s12021-022-09584-5">https://doi.org/10.1007/s12021-022-09584-5</a>.
+</div>
+<div id="ref-flier2017Irreproducibility" class="csl-entry" role="listitem">
+Flier, Jeffrey S. 2017. <span>“Irreproducibility of Published Bioscience Research: <span>Diagnosis</span>, Pathogenesis and Therapy.”</span> <em>Molecular Metabolism</em> 6 (1): 2–9. <a href="https://doi.org/10.1016/j.molmet.2016.11.006">https://doi.org/10.1016/j.molmet.2016.11.006</a>.
+</div>
+<div id="ref-friese2020PHacking" class="csl-entry" role="listitem">
+Friese, Malte, and Julius Frankenbach. 2020. <span>“P-<span>Hacking</span> and Publication Bias Interact to Distort Meta-Analytic Effect Size Estimates.”</span> <em>Psychological Methods</em> 25 (4): 456–71. <a href="https://doi.org/10.1037/met0000246">https://doi.org/10.1037/met0000246</a>.
+</div>
+<div id="ref-garcia2022Thinkinga" class="csl-entry" role="listitem">
+Garcia, Susana Roman, David Sterratt, and Melanie Stefan. 2022. <span>“Thinking about <span>Ethics</span> in (<span>Computer</span>) <span>Science</span>.”</span> <a href="https://doi.org/10.5281/zenodo.6973796">https://doi.org/10.5281/zenodo.6973796</a>.
+</div>
+<div id="ref-garcia2024Data" class="csl-entry" role="listitem">
+Garcia, Susana Roman, Ceilidh Welsh, Nina Di Cara, David Sterratt, Nicola Romano, and Melanie Stefan. 2024. <span>“Data <span>Hazards</span> as an Ethical Toolkit for Neuroscience.”</span> March 11, 2024. <a href="https://doi.org/10.31219/osf.io/yn2j9">https://doi.org/10.31219/osf.io/yn2j9</a>.
+</div>
+<div id="ref-garcia2025Data" class="csl-entry" role="listitem">
+García, Susana Román, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. 2025. <span>“Data <span>Hazards</span> as <span>An Ethical Toolkit</span> for <span>Neuroscience</span>.”</span> <em>Neuroethics</em> 18 (1, 1): 1–21. <a href="https://doi.org/10.1007/s12152-024-09580-3">https://doi.org/10.1007/s12152-024-09580-3</a>.
+</div>
+<div id="ref-gensler2017Ethics" class="csl-entry" role="listitem">
+Gensler, Harry J. 2017. <em>Ethics: <span>A Contemporary Introduction</span></em>. 3rd ed. New York: Routledge. <a href="https://doi.org/10.4324/9781351231831">https://doi.org/10.4324/9781351231831</a>.
+</div>
+<div id="ref-githubREADMEs" class="csl-entry" role="listitem">
+GitHub, Wiki. n.d. <span>“About <span>READMEs</span>.”</span> GitHub Docs. Accessed April 13, 2025. <a href="https://docs-internal.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">https://docs-internal.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes</a>.
+</div>
+<div id="ref-gruning2018Practical" class="csl-entry" role="listitem">
+Grüning, Björn, John Chilton, Johannes Köster, Ryan Dale, Nicola Soranzo, Marius van den Beek, Jeremy Goecks, Rolf Backofen, Anton Nekrutenko, and James Taylor. 2018. <span>“Practical <span>Computational Reproducibility</span> in the <span>Life Sciences</span>.”</span> <em>Cels</em> 6 (6): 631–35. <a href="https://doi.org/10.1016/j.cels.2018.03.014">https://doi.org/10.1016/j.cels.2018.03.014</a>.
+</div>
+<div id="ref-hamra2025Advancing" class="csl-entry" role="listitem">
+Hamra, Ghassan B., Ian D. Buller, Corinne A. Riddell, Lauren B. Wilner, Audrey Brown, and Nathaniel S. MacNell. 2025. <span>“Advancing <span>Reproducible Research Through Version Control Technology</span>.”</span> <em>Epidemiology</em> 36 (3): 344. <a href="https://doi.org/10.1097/EDE.0000000000001845">https://doi.org/10.1097/EDE.0000000000001845</a>.
+</div>
+<div id="ref-hangel2017Why" class="csl-entry" role="listitem">
+Hangel, Nora, and Diana Schmidt-Pfister. 2017-09-18Z. <span>“Why Do You Publish? <span>On</span> the Tensions Between Generating Scientific Knowledge and Publication Pressure.”</span> <em>Aslib Journal of Information Management</em> 69 (5): 529–44. <a href="https://doi.org/10.1108/AJIM-01-2017-0019">https://doi.org/10.1108/AJIM-01-2017-0019</a>.
+</div>
+<div id="ref-hartgerink2017Too" class="csl-entry" role="listitem">
+Hartgerink, C. H. J., J. M. Wicherts, and M. A. L. M. van Assen. 2017. <span>“Too <span>Good</span> to Be <span>False</span>: <span>Nonsignificant Results Revisited</span>.”</span> <em>Collabra: Psychology</em> 3 (1): 9. <a href="https://doi.org/10.1525/collabra.71">https://doi.org/10.1525/collabra.71</a>.
+</div>
+<div id="ref-hasselbring2019FAIR" class="csl-entry" role="listitem">
+Hasselbring, Wilhelm, Leslie Carr, Simon Hettrick, Heather Packer, and Thanassis Tiropanis. 2019. <span>“<span>FAIR</span> and <span>Open Computer Science Research Software</span>.”</span> August 16, 2019. <a href="https://doi.org/10.48550/arXiv.1908.05986">https://doi.org/10.48550/arXiv.1908.05986</a>.
+</div>
+<div id="ref-hethey2013GitLab" class="csl-entry" role="listitem">
+Hethey, Jonathan M. 2013. <em><span>GitLab Repository Management</span></em>. Packt Publishing.
+</div>
+<div id="ref-hopkins2013Disparities" class="csl-entry" role="listitem">
+Hopkins, Allison L., James W. Jawitz, Christopher McCarty, Alex Goldman, and Nandita B. Basu. 2013. <span>“Disparities in Publication Patterns by Gender, Race and Ethnicity Based on a Survey of a Random Sample of Authors.”</span> <em>Scientometrics</em> 96 (2): 515–34. <a href="https://doi.org/10.1007/s11192-012-0893-4">https://doi.org/10.1007/s11192-012-0893-4</a>.
+</div>
+<div id="ref-ioannidis2005Whya" class="csl-entry" role="listitem">
+Ioannidis, John P. A. 2005. <span>“Why <span>Most Published Research Findings Are False</span>.”</span> <em>PLOS Medicine</em> 2 (8): e124. <a href="https://doi.org/10.1371/journal.pmed.0020124">https://doi.org/10.1371/journal.pmed.0020124</a>.
+</div>
+<div id="ref-ivie2018ReproducibilityScientificComputing" class="csl-entry" role="listitem">
+Ivie, Peter, and Douglas Thain. 2018. <span>“Reproducibility in <span>Scientific Computing</span>.”</span> <em>ACM Comput. Surv.</em> 51 (3): 63:1–36. <a href="https://doi.org/10.1145/3186266">https://doi.org/10.1145/3186266</a>.
+</div>
+<div id="ref-jackson2005Origins" class="csl-entry" role="listitem">
+Jackson, John P., Nadine M. Weidman, and Gretchen Rubin. 2005–2006. <span>“The <span>Origins</span> of <span>Scientific Racism</span>.”</span> <em>The Journal of Blacks in Higher Education</em>, no. 50 (Winter): 66–79. <a href="https://www.proquest.com/docview/195541933/abstract/7D2B19E7A5E4D1DPQ/1">https://www.proquest.com/docview/195541933/abstract/7D2B19E7A5E4D1DPQ/1</a>.
+</div>
+<div id="ref-jacobsen2020FAIR" class="csl-entry" role="listitem">
+Jacobsen, Annika, Ricardo de Miranda Azevedo, Nick Juty, Dominique Batista, Simon Coles, Ronald Cornet, Mélanie Courtot, et al. 2020. <span>“<span>FAIR Principles</span>: <span>Interpretations</span> and <span>Implementation Considerations</span>.”</span> <em>Data Intelligence</em> 2 (1-2): 10–29. <a href="https://doi.org/10.1162/dint_r_00024">https://doi.org/10.1162/dint_r_00024</a>.
+</div>
+<div id="ref-jazeel2010Limits" class="csl-entry" role="listitem">
+Jazeel, Tariq, and Colin McFarlane. 2010. <span>“The Limits of Responsibility: A Postcolonial Politics of Academic Knowledge Production.”</span> <em>Transactions of the Institute of British Geographers</em> 35 (1): 109–24. <a href="https://doi.org/10.1111/j.1475-5661.2009.00367.x">https://doi.org/10.1111/j.1475-5661.2009.00367.x</a>.
+</div>
+<div id="ref-john2012Measuring" class="csl-entry" role="listitem">
+John, Leslie K., George Loewenstein, and Drazen Prelec. 2012. <span>“Measuring the <span>Prevalence</span> of <span>Questionable Research Practices With Incentives</span> for <span>Truth Telling</span>.”</span> <em>Psychol Sci</em> 23 (5): 524–32. <a href="https://doi.org/10.1177/0956797611430953">https://doi.org/10.1177/0956797611430953</a>.
+</div>
+<div id="ref-joyner2002Evolution" class="csl-entry" role="listitem">
+Joyner, Brenda E., and Dinah Payne. 2002. <span>“Evolution and <span>Implementation</span>: <span>A Study</span> of <span>Values</span>, <span>Business Ethics</span> and <span>Corporate Social Responsibility</span>.”</span> <em>Journal of Business Ethics</em> 41 (4): 297–311. <a href="https://doi.org/10.1023/A:1021237420663">https://doi.org/10.1023/A:1021237420663</a>.
+</div>
+<div id="ref-jyothis2016NeuroOppression" class="csl-entry" role="listitem">
+Jyothis, James. 2016. <span>“Neuro-<span>Oppression</span>: <span>Does Neuroscience Perpetuate Social Marginalization</span>?”</span> Thesis for Bachelor of Arts, Lake Forest College.
+</div>
+<div id="ref-kicinski2013Publication" class="csl-entry" role="listitem">
+Kicinski, Michal. 2013. <span>“Publication <span>Bias</span> in <span>Recent Meta-Analyses</span>.”</span> <em>PLOS ONE</em> 8 (11): e81823. <a href="https://doi.org/10.1371/journal.pone.0081823">https://doi.org/10.1371/journal.pone.0081823</a>.
+</div>
+<div id="ref-kicinski2014How" class="csl-entry" role="listitem">
+———. 2014. <span>“How Does Under-Reporting of Negative and Inconclusive Results Affect the False-Positive Rate in Meta-Analysis? <span>A</span> Simulation Study.”</span> <em>BMJ Open</em> 4 (8): e004831. <a href="https://doi.org/10.1136/bmjopen-2014-004831">https://doi.org/10.1136/bmjopen-2014-004831</a>.
+</div>
+<div id="ref-kim2024Findability" class="csl-entry" role="listitem">
+Kim, Inji. 2024. <span>“Findability and Discoverability of Qualitative Research Data in Social Sciences. <span>An</span> Explorative Study Using Re3data <span>API</span> and Systematic Evidence Searching,”</span> October. <a href="https://irf.fhnw.ch/handle/11654/49487">https://irf.fhnw.ch/handle/11654/49487</a>.
+</div>
+<div id="ref-kim2003Ethical" class="csl-entry" role="listitem">
+Kim, Yungwook, and Youjin Choi. 2003. <span>“Ethical Standards Appear to Change with Age and Ideology: A Survey of Practitioners.”</span> <em>Public Relations Review</em> 29 (1): 79–89. <a href="https://doi.org/10.1016/S0363-8111(02)00197-2">https://doi.org/10.1016/S0363-8111(02)00197-2</a>.
+</div>
+<div id="ref-kremen2018Improving" class="csl-entry" role="listitem">
+Kremen, Petr, and Martin Necasky. 2018. <span>“Improving <span>Discoverability</span> of <span>Open Government Data</span> with <span>Rich Metadata Descriptions Using Semantic Government Vocabulary</span>.”</span> SSRN Scholarly Paper. Rochester, NY. December 18, 2018. <a href="https://doi.org/10.2139/ssrn.3303148">https://doi.org/10.2139/ssrn.3303148</a>.
+</div>
+<div id="ref-kushwaha2024Ethical" class="csl-entry" role="listitem">
+Kushwaha, Ravindra Kumar, Kamlesh Yadav, Pradeep Kumar Yadav, and Mukesh Kumar Yadav. 2024. <em>Ethical <span>Frameworks</span> in <span>Special Education</span>: <span>A Guide</span> for <span>Researchers</span></em>. Blue Rose Publishers. <a href="https://books.google.com?id=xSAaEQAAQBAJ">https://books.google.com?id=xSAaEQAAQBAJ</a>.
+</div>
+<div id="ref-lannelongue2023GREENER" class="csl-entry" role="listitem">
+Lannelongue, Loïc, Hans-Erik G. Aronson, Alex Bateman, Ewan Birney, Talia Caplan, Martin Juckes, Johanna McEntyre, Andrew D. Morris, Gerry Reilly, and Michael Inouye. 2023. <span>“<span>GREENER</span> Principles for Environmentally Sustainable Computational Science.”</span> <em>Nat Comput Sci</em> 3 (6): 514–21. <a href="https://doi.org/10.1038/s43588-023-00461-y">https://doi.org/10.1038/s43588-023-00461-y</a>.
+</div>
+<div id="ref-lenovere2006BioModels" class="csl-entry" role="listitem">
+Le Novère, Nicolas, Benjamin Bornstein, Alexander Broicher, Mélanie Courtot, Marco Donizelli, Harish Dharuri, Lu Li, et al. 2006. <span>“<span>BioModels Database</span>: A Free, Centralized Database of Curated, Published, Quantitative Kinetic Models of Biochemical and Cellular Systems.”</span> <em>Nucleic Acids Research</em> 34 (January): D689–91. <a href="https://doi.org/10.1093/nar/gkj092">https://doi.org/10.1093/nar/gkj092</a>.
+</div>
+<div id="ref-leite2021Juggling" class="csl-entry" role="listitem">
+Leite, Luciana, and Luisa Maria Diele-Viegas. 2021. <span>“Juggling Slow and Fast Science.”</span> <em>Nat Hum Behav</em> 5 (4): 409–9. <a href="https://doi.org/10.1038/s41562-021-01080-1">https://doi.org/10.1038/s41562-021-01080-1</a>.
+</div>
+<div id="ref-lew2020Reckless" class="csl-entry" role="listitem">
+Lew, Michael J. 2020. <span>“A <span>Reckless Guide</span> to <span class="nocase">P-values</span>.”</span> In <em>Good <span>Research Practice</span> in <span>Non-Clinical Pharmacology</span> and <span>Biomedicine</span></em>, edited by Anton Bespalov, Martin C. Michel, and Thomas Steckler, 223–56. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/164_2019_286">https://doi.org/10.1007/164_2019_286</a>.
+</div>
+<div id="ref-loeliger2012Version" class="csl-entry" role="listitem">
+Loeliger, Jon, and Matthew McCullough. 2012. <em>Version <span>Control</span> with <span>Git</span>: <span>Powerful Tools</span> and <span>Techniques</span> for <span>Collaborative Software Development</span></em>. "O’Reilly Media, Inc.".
+</div>
+<div id="ref-lynch2007Commercially" class="csl-entry" role="listitem">
+Lynch, Joseph R., Mary R. A. Cunningham, Winston J. Warme, Douglas C. Schaad, Fredric M. Wolf, and Seth S. Leopold. 2007. <span>“Commercially <span>Funded</span> and <span>United States-Based Research Is More Likely</span> to <span>Be Published</span>; <span>Good-Quality Studies</span> with <span>Negative Outcomes Are Not</span>.”</span> <em>JBJS</em> 89 (5): 1010. <a href="https://doi.org/10.2106/JBJS.F.01152">https://doi.org/10.2106/JBJS.F.01152</a>.
+</div>
+<div id="ref-macklin2008Standard" class="csl-entry" role="listitem">
+Macklin, Ruth. 2008. <span>“Standard of Care: An Evolution in Ethical Thinking.”</span> <em>The Lancet</em> 372 (9635): 284–85. <a href="https://doi.org/10.1016/S0140-6736(08)61098-3">https://doi.org/10.1016/S0140-6736(08)61098-3</a>.
+</div>
+<div id="ref-maji2020Demystifying" class="csl-entry" role="listitem">
+Maji, Amiya K., Lev Gorenstein, and Geoffrey Lentner. 2020. <span>“Demystifying <span>Python Package Installation</span> with Conda-Env-Mod.”</span> In <em>2020 <span>IEEE</span>/<span>ACM International Workshop</span> on <span>HPC User Support Tools</span> (<span>HUST</span>) and <span>Workshop</span> on <span>Programming</span> and <span>Performance Visualization Tools</span> (<span>ProTools</span>)</em>, 27–37. <a href="https://doi.org/10.1109/HUSTProtools51951.2020.00011">https://doi.org/10.1109/HUSTProtools51951.2020.00011</a>.
+</div>
+<div id="ref-malik-sheriff2020BioModels" class="csl-entry" role="listitem">
+Malik-Sheriff, Rahuman S, Mihai Glont, Tung V N Nguyen, Krishna Tiwari, Matthew G Roberts, Ashley Xavier, Manh T Vu, et al. 2020. <span>“<span>BioModels</span>—15 Years of Sharing Computational Models in Life Science.”</span> <em>Nucleic Acids Research</em> 48 (D1): D407–15. <a href="https://doi.org/10.1093/nar/gkz1055">https://doi.org/10.1093/nar/gkz1055</a>.
+</div>
+<div id="ref-mayson2018Bias" class="csl-entry" role="listitem">
+Mayson, Sandra G. 2018–2019. <span>“Bias in, <span>Bias</span> Out.”</span> <em>Yale L. J.</em> 128 (8): 2218–2301. <a href="https://heinonline.org/HOL/P?h=hein.journals/ylr128&amp;i=2309">https://heinonline.org/HOL/P?h=hein.journals/ylr128&amp;i=2309</a>.
+</div>
+<div id="ref-mccauley2008Debugging" class="csl-entry" role="listitem">
+McCauley, Renée, Fitzgerald, Lewandowski, Murphy, Simon, Thomas, and Carol and Zander. 2008. <span>“Debugging: A Review of the Literature from an Educational Perspective.”</span> <em>Computer Science Education</em> 18 (2): 67–92. <a href="https://doi.org/10.1080/08993400802114581">https://doi.org/10.1080/08993400802114581</a>.
+</div>
+<div id="ref-medicine2017Fostering" class="csl-entry" role="listitem">
+Medicine, and, Engineering, Policy and Global Affairs, Medicine Policy Engineering, and Committee on Responsible Science. 2017. <em>Fostering <span>Integrity</span> in <span>Research</span></em>. National Academies Press. <a href="https://books.google.com?id=f8dEDwAAQBAJ">https://books.google.com?id=f8dEDwAAQBAJ</a>.
+</div>
+<div id="ref-menapace2019Scientific" class="csl-entry" role="listitem">
+Menapace, Marcello. 2019. <span>“Scientific <span>Ethics</span>: <span>A New Approach</span>.”</span> <em>Sci Eng Ethics</em> 25 (4): 1193–1216. <a href="https://doi.org/10.1007/s11948-018-0050-4">https://doi.org/10.1007/s11948-018-0050-4</a>.
+</div>
+<div id="ref-milentijevic2008Version" class="csl-entry" role="listitem">
+Milentijevic, Ivan, Vladimir Ciric, and Oliver Vojinovic. 2008. <span>“Version Control in Project-Based Learning.”</span> <em>Computers &amp; Education</em> 50 (4): 1331–38. <a href="https://doi.org/10.1016/j.compedu.2006.12.010">https://doi.org/10.1016/j.compedu.2006.12.010</a>.
+</div>
+<div id="ref-miller2011Publish" class="csl-entry" role="listitem">
+Miller, Alan N., Shannon G. Taylor, and Arthur G. Bedeian. 2011. <span>“Publish or Perish: Academic Life as Management Faculty Live It.”</span> <em>Career Development International</em> 16 (5): 422–45. <a href="https://doi.org/10.1108/13620431111167751">https://doi.org/10.1108/13620431111167751</a>.
+</div>
+<div id="ref-morley2007Employers" class="csl-entry" role="listitem">
+Morley, Louise, and Sarah Aynsley. 2007. <span>“Employers, <span>Quality</span> and <span>Standards</span> in <span>Higher Education</span>: <span>Shared Values</span> and <span>Vocabularies</span> or <span>Elitism</span> and <span>Inequalities</span>?”</span> <em>Higher Education Quarterly</em> 61 (3): 229–49. <a href="https://doi.org/10.1111/j.1468-2273.2007.00353.x">https://doi.org/10.1111/j.1468-2273.2007.00353.x</a>.
+</div>
+<div id="ref-nature2018Challenges" class="csl-entry" role="listitem">
+Nature, Special Issue. 2018. <span>“Challenges in Irreproducible Research.”</span> Nature. October 18, 2018. <a href="https://www.nature.com/collections/prbfkwmwvz">https://www.nature.com/collections/prbfkwmwvz</a>.
+</div>
+<div id="ref-nuzzo2014Statistical" class="csl-entry" role="listitem">
+Nuzzo, Rigina. 2014. <span>“Statistical Errors: <span>P</span> Values, the ’Gold Standard’ of Statistical Validity, Are Not as Reliable as Many Scientists Assume.”</span> <em>Nature</em> 506 (7487): 150–53. <a href="https://go.gale.com/ps/i.do?p=HRCA&amp;sw=w&amp;issn=00280836&amp;v=2.1&amp;it=r&amp;id=GALE%7CA362064378&amp;sid=googleScholar&amp;linkaccess=abs">https://go.gale.com/ps/i.do?p=HRCA&amp;sw=w&amp;issn=00280836&amp;v=2.1&amp;it=r&amp;id=GALE%7CA362064378&amp;sid=googleScholar&amp;linkaccess=abs</a>.
+</div>
+<div id="ref-kreutzer2014Open" class="csl-entry" role="listitem">
+<em>Open Content - a Practical Guide to Using Creative Commons Licences</em>. 2014. Bonn, Köln, Berlin: German Commission for UNESCO North Rhine-Westphalian Library Service Centre (hbz) Wikimedia Deutschland - Gesellschaft fur Förderung Freien Wissens e.V. <a href="https://d-nb.info/1063386357/04">https://d-nb.info/1063386357/04</a>.
+</div>
+<div id="ref-Whata" class="csl-entry" role="listitem">
+opendatasoft. n.d.a. <span>“What Is Open Data? - <span>Practical Guide</span>.”</span> Opendatasoft. Accessed March 13, 2025. <a href="https://www.opendatasoft.com/en/what-is-open-data-practical-guide/">https://www.opendatasoft.com/en/what-is-open-data-practical-guide/</a>.
+</div>
+<div id="ref-Guide" class="csl-entry" role="listitem">
+OpenDefinition. n.d.b. <span>“Guide to <span>Open Licensing</span> - <span>Open Definition</span> - <span>Defining Open</span> in <span>Open Data</span>, <span>Open Content</span> and <span>Open Knowledge</span>.”</span> Accessed March 13, 2025. <a href="https://opendefinition.org/guide/">https://opendefinition.org/guide/</a>.
+</div>
+<div id="ref-page2019Assessing" class="csl-entry" role="listitem">
+Page, Matthew J, Julian PT Higgins, and Jonathan AC Sterne. 2019. <span>“Assessing Risk of Bias Due to Missing Results in a Synthesis.”</span> In <em>Cochrane <span>Handbook</span> for <span>Systematic Reviews</span> of <span>Interventions</span></em>, 349–74. John Wiley &amp; Sons, Ltd. <a href="https://doi.org/10.1002/9781119536604.ch13">https://doi.org/10.1002/9781119536604.ch13</a>.
+</div>
+<div id="ref-page2021Investigating" class="csl-entry" role="listitem">
+Page, Matthew J., Jonathan A. C. Sterne, Julian P. T. Higgins, and Matthias Egger. 2021. <span>“Investigating and Dealing with Publication Bias and Other Reporting Biases in Meta-Analyses of Health Research: <span>A</span> Review.”</span> <em>Research Synthesis Methods</em> 12 (2): 248–59. <a href="https://doi.org/10.1002/jrsm.1468">https://doi.org/10.1002/jrsm.1468</a>.
+</div>
+<div id="ref-paradeise2013Academic" class="csl-entry" role="listitem">
+Paradeise, Catherine, and Jean-Claude Thoenig. 2013. <span>“Academic <span>Institutions</span> in <span>Search</span> of <span>Quality</span>: <span>Local Orders</span> and <span>Global Standards</span>.”</span> <em>Organization Studies</em> 34 (2): 189–218. <a href="https://doi.org/10.1177/0170840612473550">https://doi.org/10.1177/0170840612473550</a>.
+</div>
+<div id="ref-parsons2022Communitysourced" class="csl-entry" role="listitem">
+Parsons, Sam, Flávio Azevedo, Mahmoud M. Elsherif, Samuel Guay, Owen N. Shahim, Gisela H. Govaart, Emma Norris, et al. 2022. <span>“A Community-Sourced Glossary of Open Scholarship Terms.”</span> <em>Nat Hum Behav</em> 6 (3): 312–18. <a href="https://doi.org/10.1038/s41562-021-01269-4">https://doi.org/10.1038/s41562-021-01269-4</a>.
+</div>
+<div id="ref-peikert2021Reproducible" class="csl-entry" role="listitem">
+Peikert, Aaron, Caspar J. van Lissa, and Andreas M. Brandmaier. 2021. <span>“Reproducible <span>Research</span> in <span>R</span>: <span>A Tutorial</span> on <span>How</span> to <span>Do</span> the <span>Same Thing More Than Once</span>.”</span> <em>Psych</em> 3 (4, 4): 836–67. <a href="https://doi.org/10.3390/psych3040053">https://doi.org/10.3390/psych3040053</a>.
+</div>
+<div id="ref-pilato2008Version" class="csl-entry" role="listitem">
+Pilato, C. Michael, Ben Collins-Sussman, and Brian W. Fitzpatrick. 2008. <em>Version <span>Control</span> with <span>Subversion</span>: <span>Next Generation Open Source Version Control</span></em>. "O’Reilly Media, Inc.". <a href="https://books.google.com?id=b3TsOSvU5TUC">https://books.google.com?id=b3TsOSvU5TUC</a>.
+</div>
+<div id="ref-plesser2018ReproducibilityVsReplicability" class="csl-entry" role="listitem">
+Plesser, Hans E. 2018. <span>“Reproducibility Vs. <span>Replicability</span>: <span>A Brief History</span> of a <span>Confused Terminology</span>.”</span> <em>Frontiers in Neuroinformatics</em> 11. <a href="https://www.frontiersin.org/articles/10.3389/fninf.2017.00076">https://www.frontiersin.org/articles/10.3389/fninf.2017.00076</a>.
+</div>
+<div id="ref-rawat2014Publish" class="csl-entry" role="listitem">
+Rawat, Seema, and Sanjay Meena. 2014. <span>“Publish or Perish: <span>Where</span> Are We Heading?”</span> <em>J Res Med Sci</em> 19 (2): 87–89. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3999612/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3999612/</a>.
+</div>
+<div id="ref-regulation2016RegulationEU2016" class="csl-entry" role="listitem">
+Regulation. 2016. <span>“Regulation (<span>EU</span>) 2016/679 of the <span>European Parliament</span> and of the <span>Council</span> of 27 <span>April</span> 2016 on the Protection of Natural Persons with Regard to the Processing of Personal Data and on the Free Movement of Such Data (<span>United Kingdom General Data Protection Regulation</span>) (<span>Text</span> with <span>EEA</span> Relevance).”</span> Text. https://webarchive.nationalarchives.gov.uk/eu-exit/https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679-20160504; King’s Printer of Acts of Parliament. 2016. <a href="https://www.legislation.gov.uk/eur/2016/679/contents">https://www.legislation.gov.uk/eur/2016/679/contents</a>.
+</div>
+<div id="ref-rollin2006Science" class="csl-entry" role="listitem">
+Rollin, Bernard E. 2006. <em>Science and <span>Ethics</span></em>. Cambridge University Press. <a href="https://books.google.com?id=a_if1WSQQHcC">https://books.google.com?id=a_if1WSQQHcC</a>.
+</div>
+<div id="ref-romangarcia2023Data" class="csl-entry" role="listitem">
+Roman Garcia, Susana. (2023) 2023. <span>“Data <span>Hazards Project Case Study</span>.”</span> <a href="https://github.com/Susana465/DH_Project_CaseStudy">https://github.com/Susana465/DH_Project_CaseStudy</a>.
+</div>
+<div id="ref-romangarcia2022Biasa" class="csl-entry" role="listitem">
+Roman Garcia, Susana, Melanie Stefan, David Sterratt, Nicola Romano, Malvika Sharan, and Claudia Fischer. (2022) 2022. <span>“Bias and Reproducibility in a Computational Neurobiology <span>PhD</span>’s Journey.”</span> <a href="https://github.com/Susana465/Bias-and-Reproducibility-Poster">https://github.com/Susana465/Bias-and-Reproducibility-Poster</a>.
+</div>
+<div id="ref-ross2020Everyday" class="csl-entry" role="listitem">
+Ross, Howard J. 2020. <em>Everyday <span>Bias</span>: <span>Identifying</span> and <span>Navigating Unconscious Judgments</span> in <span>Our Daily Lives</span></em>. Rowman &amp; Littlefield. <a href="https://books.google.com?id=ivbkDwAAQBAJ">https://books.google.com?id=ivbkDwAAQBAJ</a>.
+</div>
+<div id="ref-sandve2013Ten" class="csl-entry" role="listitem">
+Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig. 2013. <span>“Ten <span>Simple Rules</span> for <span>Reproducible Computational Research</span>.”</span> <em>PLOS Computational Biology</em> 9 (10): e1003285. <a href="https://doi.org/10.1371/journal.pcbi.1003285">https://doi.org/10.1371/journal.pcbi.1003285</a>.
+</div>
+<div id="ref-scanlon2014Scholarship" class="csl-entry" role="listitem">
+Scanlon, Eileen. 2014. <span>“Scholarship in the Digital Age: <span>Open</span> Educational Resources, Publication and Public Engagement.”</span> <em>British Journal of Educational Technology</em> 45 (1, 1): 12–23. <a href="https://oro.open.ac.uk/35646/">https://oro.open.ac.uk/35646/</a>.
+</div>
+<div id="ref-schneck2023Are" class="csl-entry" role="listitem">
+Schneck, Andreas. 2023. <span>“Are Most Published Research Findings False? <span>Trends</span> in Statistical Power, Publication Selection Bias, and the False Discovery Rate in Psychology (1975–2017).”</span> <em>PLOS ONE</em> 18 (10): e0292717. <a href="https://doi.org/10.1371/journal.pone.0292717">https://doi.org/10.1371/journal.pone.0292717</a>.
+</div>
+<div id="ref-science2023Reproducibility" class="csl-entry" role="listitem">
+Science, Innovation and Technology Committee. 2023. <span>“Reproducibility and <span>Research Integrity</span> – <span>Report Summary</span>.”</span> UK Parliament. <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/101/summary.html">https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/101/summary.html</a>.
+</div>
+<div id="ref-seth2009Putting" class="csl-entry" role="listitem">
+Seth, Suman. 2009. <span>“Putting Knowledge in Its Place: Science, Colonialism, and the Postcolonial.”</span> <em>Postcolonial Studies</em> 12 (4): 373–88. <a href="https://doi.org/10.1080/13688790903350633">https://doi.org/10.1080/13688790903350633</a>.
+</div>
+<div id="ref-sinha2006Reporting" class="csl-entry" role="listitem">
+Sinha, Mukesh K, and Victor M and Montori. 2006. <span>“Reporting Bias and Other Biases Affecting Systematic Reviews and Meta-Analyses: A Methodological Commentary.”</span> <em>Expert Review of Pharmacoeconomics &amp; Outcomes Research</em> 6 (5): 603–11. <a href="https://doi.org/10.1586/14737167.6.5.603">https://doi.org/10.1586/14737167.6.5.603</a>.
+</div>
+<div id="ref-spinellis2003Code" class="csl-entry" role="listitem">
+Spinellis, Diomidis. 2003. <em>Code <span>Reading</span>: <span>The Open Source Perspective</span></em>. Addison-Wesley Professional. <a href="https://books.google.com?id=8lYbNfsAVT4C">https://books.google.com?id=8lYbNfsAVT4C</a>.
+</div>
+<div id="ref-stahl2018Fact" class="csl-entry" role="listitem">
+Stahl, D., and A. Pickles. 2018. <span>“Fact or Fiction: Reducing the Proportion and Impact of False Positives.”</span> <em>Psychological Medicine</em> 48 (7): 1084–91. <a href="https://doi.org/10.1017/S003329171700294X">https://doi.org/10.1017/S003329171700294X</a>.
+</div>
+<div id="ref-stefan2023Big" class="csl-entry" role="listitem">
+Stefan, Angelika M., and Felix D. Schönbrodt. 2023. <span>“Big Little Lies: A Compendium and Simulation of p-Hacking Strategies.”</span> <em>Royal Society Open Science</em> 10 (2): 220346. <a href="https://doi.org/10.1098/rsos.220346">https://doi.org/10.1098/rsos.220346</a>.
+</div>
+<div id="ref-stengers2016Another" class="csl-entry" role="listitem">
+Stengers, Isabelle. 2016. <span>“<span>‘<span>Another Science Is Possible</span>!’</span>”</span> In. Brill. <a href="https://doi.org/10.1163/9789462096448_004">https://doi.org/10.1163/9789462096448_004</a>.
+</div>
+<div id="ref-stodden2014Implementing" class="csl-entry" role="listitem">
+Stodden, Victoria, Friedrich Leisch, and Roger D. Peng. 2014. <em>Implementing reproducible research</em>. CRC Press. <a href="https://doi.org/10.1201/b16868">https://doi.org/10.1201/b16868</a>.
+</div>
+<div id="ref-suber2012Open" class="csl-entry" role="listitem">
+Suber, Peter. 2012. <em>Open <span>Access</span></em>. The MIT Press. <a href="https://library.oapen.org/handle/20.500.12657/26065">https://library.oapen.org/handle/20.500.12657/26065</a>.
+</div>
+<div id="ref-sullivan2019Open" class="csl-entry" role="listitem">
+Sullivan, Ian, Alexander DeHaven, and David Mellor. 2019. <span>“Open and <span>Reproducible Research</span> on <span>Open Science Framework</span>.”</span> <em>Current Protocols Essential Laboratory Techniques</em> 18 (1): e32. <a href="https://doi.org/10.1002/cpet.32">https://doi.org/10.1002/cpet.32</a>.
+</div>
+<div id="ref-tennant2019Foundations" class="csl-entry" role="listitem">
+Tennant, John, Jennifer E. Beamer, Jeroen Bosman, Björn Brembs, Neo Christopher Chung, Gail Clement, Tom Crick, et al. 2019. <span>“Foundations for <span>Open Scholarship Strategy Development</span>,”</span> January. <a href="https://doi.org/10.31222/osf.io/b4v8p">https://doi.org/10.31222/osf.io/b4v8p</a>.
+</div>
+<div id="ref-Open" class="csl-entry" role="listitem">
+<span>“The <span>Open Definition</span> - <span>Open Definition</span> - <span>Defining Open</span> in <span>Open Data</span>, <span>Open Content</span> and <span>Open Knowledge</span>.”</span> n.d. Accessed June 16, 2023. <a href="https://opendefinition.org/">https://opendefinition.org/</a>.
+</div>
+<div id="ref-thornton2000Publication" class="csl-entry" role="listitem">
+Thornton, Alison, and Peter Lee. 2000. <span>“Publication Bias in Meta-Analysis: Its Causes and Consequences.”</span> <em>Journal of Clinical Epidemiology</em> 53 (2): 207–16. <a href="https://doi.org/10.1016/S0895-4356(99)00161-4">https://doi.org/10.1016/S0895-4356(99)00161-4</a>.
+</div>
+<div id="ref-tiwari2021ReproducibilitySystemsBiology" class="csl-entry" role="listitem">
+Tiwari, Krishna, Sarubini Kananathan, Matthew G. Roberts, Johannes P. Meyer, Mohammad Umer Sharif Shohan, Ashley Xavier, Matthieu Maire, et al. 2021a. <span>“Reproducibility in Systems Biology Modelling.”</span> <em>Mol Syst Biol</em> 17 (2): e9982. <a href="https://doi.org/10.15252/msb.20209982">https://doi.org/10.15252/msb.20209982</a>.
+</div>
+<div id="ref-tiwari2021Reproducibility" class="csl-entry" role="listitem">
+Tiwari, Krishna, Sarubini Kananathan, Matthew G Roberts, Johannes P Meyer, Mohammad Umer Sharif Shohan, Ashley Xavier, Matthieu Maire, et al. 2021b. <span>“Reproducibility in Systems Biology Modelling.”</span> <em>Molecular Systems Biology</em> 17 (2): e9982. <a href="https://doi.org/10.15252/msb.20209982">https://doi.org/10.15252/msb.20209982</a>.
+</div>
+<div id="ref-tjeltveit2015Appropriately" class="csl-entry" role="listitem">
+Tjeltveit, Alan C. 2015. <span>“Appropriately Addressing Psychological Scientists’ Inescapable Cognitive and Moral Values.”</span> <em>Journal of Theoretical and Philosophical Psychology</em> 35 (1): 35–52. <a href="https://doi.org/10.1037/a0037909">https://doi.org/10.1037/a0037909</a>.
+</div>
+<div id="ref-turingwaycommunity2019TuringWayHandbook" class="csl-entry" role="listitem">
+Turing Way Community, The, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, Anna Krystalli, Alexander Morley, Martin O’Reilly, and Kirstie Whitaker. 2019. <span>“The <span>Turing Way</span>: <span>A Handbook</span> for <span>Reproducible Data Science</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.3233986">https://doi.org/10.5281/zenodo.3233986</a>.
+</div>
+<div id="ref-umbach2024Open" class="csl-entry" role="listitem">
+Umbach, Gaby. 2024. <span>“Open <span>Science</span> and the Impact of <span>Open Access</span>, <span>Open Data</span>, and <span>FAIR</span> Publishing Principles on Data-Driven Academic Research: <span>Towards</span> Ever More Transparent, Accessible, and Reproducible Academic Output?”</span> <em>Statistical Journal of the IAOS</em> 40 (1): 59–70. <a href="https://doi.org/10.3233/SJI-240021">https://doi.org/10.3233/SJI-240021</a>.
+</div>
+<div id="ref-Opena" class="csl-entry" role="listitem">
+UNESCO. n.d.c. <span>“Open Science Glossary - <span>Open</span> Science.”</span> Accessed March 13, 2025. <a href="https://www.unesco.org/en/open-science/open-science-glossary">https://www.unesco.org/en/open-science/open-science-glossary</a>.
+</div>
+<div id="ref-vicente-saez2018Open" class="csl-entry" role="listitem">
+Vicente-Saez, Ruben, and Clara Martinez-Fuentes. 2018. <span>“Open <span>Science</span> Now: <span>A</span> Systematic Literature Review for an Integrated Definition.”</span> <em>Journal of Business Research</em> 88 (July): 428–36. <a href="https://doi.org/10.1016/j.jbusres.2017.12.043">https://doi.org/10.1016/j.jbusres.2017.12.043</a>.
+</div>
+<div id="ref-wagenmakers2007Practical" class="csl-entry" role="listitem">
+Wagenmakers, Eric-Jan. 2007. <span>“A Practical Solution to the Pervasive Problems Ofp Values.”</span> <em>Psychonomic Bulletin &amp; Review</em> 14 (5): 779–804. <a href="https://doi.org/10.3758/BF03194105">https://doi.org/10.3758/BF03194105</a>.
+</div>
+<div id="ref-wilkinson2016FAIRa" class="csl-entry" role="listitem">
+Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton, Arie Baak, Niklas Blomberg, et al. 2016. <span>“The <span>FAIR Guiding Principles</span> for Scientific Data Management and Stewardship.”</span> <em>Sci Data</em> 3 (1): 160018. <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
+</div>
+<div id="ref-willis2021Gender" class="csl-entry" role="listitem">
+Willis, Malachi, Ana J. Bridges, and Kristen N. Jozkowski. 2021. <span>“Gender and Racial/Ethnic Disparities in Rates of Publishing and Inclusion in Scientific-Review Processes.”</span> <em>Translational Issues in Psychological Science</em> 7 (4): 451–61. <a href="https://doi.org/10.1037/tps0000253">https://doi.org/10.1037/tps0000253</a>.
+</div>
+<div id="ref-york2015Defining" class="csl-entry" role="listitem">
+York, Travis T., Charles Gibson, and Susan Rankin. 2015. <span>“Defining and <span>Measuring Academic Success</span>.”</span> <em>Practical Assessment, Research &amp; Evaluation</em> 20 (5). <a href="https://eric.ed.gov/?id=EJ1059739">https://eric.ed.gov/?id=EJ1059739</a>.
+</div>
+<div id="ref-zhaksylyk2023Research" class="csl-entry" role="listitem">
+Zhaksylyk, Alikhan, Olena Zimba, Marlen Yessirkepov, and Burhan Fatih Kocyigit. 2023. <span>“Research <span>Integrity</span>: <span>Where We Are</span> and <span>Where We Are Heading</span>.”</span> <em>J Korean Med Sci</em> 38 (47). <a href="https://doi.org/10.3346/jkms.2023.38.e405">https://doi.org/10.3346/jkms.2023.38.e405</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./30-modelling_background.html" class="pagination-link" aria-label="Computational Modelling Background">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./20-data-hazards.html" class="pagination-link" aria-label="A Case Study in Ethical Reflection: Data Hazards in this PhD">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Case Study in Ethical Reflection: Data Hazards in this PhD</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

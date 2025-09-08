@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Results of In Silico Wild-Type and Mutant Models – CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./publications.html" rel="next">
+<link href="./30-model.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0a0063f14e87237348a3db0020d9102a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./40-results.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results of <em>In Silico</em> Wild-Type and Mutant Models</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CaMKII-NMDAR interactions in Learning and Memory: A Case Study in Ethical and Reproducible Modelling Approaches</a> 
+        <div class="sidebar-tools-main">
+    <a href="./CaMKII-NMDAR-interactions-in-Learning-and-Memory--A-Case-Study-in-Ethical-and-Reproducible-Modelling-Approaches.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Declaration</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-intro-biology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Biological Research Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-modelling_background.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Computational Modelling Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-repro_open.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Open, Reproducible and Ethics-focused PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-data-hazards.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Case Study in Ethical Reflection: Data Hazards in this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./30-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./40-results.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results of <em>In Silico</em> Wild-Type and Mutant Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">List of publications and presentations resulting from this PhD</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#analysis-of-the-wild-type-model" id="toc-analysis-of-the-wild-type-model" class="nav-link active" data-scroll-target="#analysis-of-the-wild-type-model"><span class="header-section-number">6.1</span> Analysis of the Wild-type model</a>
+  <ul class="collapse">
+  <li><a href="#cam-binding-and-nmdar-binding-independently-stabilise-camkii-activity-in-the-early-stages-of-the-simulation" id="toc-cam-binding-and-nmdar-binding-independently-stabilise-camkii-activity-in-the-early-stages-of-the-simulation" class="nav-link" data-scroll-target="#cam-binding-and-nmdar-binding-independently-stabilise-camkii-activity-in-the-early-stages-of-the-simulation"><span class="header-section-number">6.1.1</span> CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation</a></li>
+  <li><a href="#approximately-half-of-cam-binds-to-calcium-within-the-first-5s" id="toc-approximately-half-of-cam-binds-to-calcium-within-the-first-5s" class="nav-link" data-scroll-target="#approximately-half-of-cam-binds-to-calcium-within-the-first-5s"><span class="header-section-number">6.1.2</span> Approximately half of CaM binds to calcium within the first 5s</a></li>
+  <li><a href="#cam-stabilises-camkii-in-the-open-conformation-but-is-not-required-for-camkiinmdar-binding" id="toc-cam-stabilises-camkii-in-the-open-conformation-but-is-not-required-for-camkiinmdar-binding" class="nav-link" data-scroll-target="#cam-stabilises-camkii-in-the-open-conformation-but-is-not-required-for-camkiinmdar-binding"><span class="header-section-number">6.1.3</span> CaM stabilises CaMKII in the open conformation, but is not required for CaMKII/NMDAR binding</a></li>
+  <li><a href="#camkii-subunits-remain-open-and-autophosphorylate-at-t286-upon-nmdar-binding-regardless-of-cam-binding" id="toc-camkii-subunits-remain-open-and-autophosphorylate-at-t286-upon-nmdar-binding-regardless-of-cam-binding" class="nav-link" data-scroll-target="#camkii-subunits-remain-open-and-autophosphorylate-at-t286-upon-nmdar-binding-regardless-of-cam-binding"><span class="header-section-number">6.1.4</span> CaMKII subunits remain open and autophosphorylate at T286 upon NMDAR binding, regardless of CaM binding</a></li>
+  <li><a href="#nmdar-binding-is-the-primary-driver-of-t286-phosphorylation" id="toc-nmdar-binding-is-the-primary-driver-of-t286-phosphorylation" class="nav-link" data-scroll-target="#nmdar-binding-is-the-primary-driver-of-t286-phosphorylation"><span class="header-section-number">6.1.5</span> NMDAR binding is the primary driver of T286 phosphorylation</a></li>
+  <li><a href="#nmdar-binding-also-promotes-camkii-autophosphorylation-at-t306-site" id="toc-nmdar-binding-also-promotes-camkii-autophosphorylation-at-t306-site" class="nav-link" data-scroll-target="#nmdar-binding-also-promotes-camkii-autophosphorylation-at-t306-site"><span class="header-section-number">6.1.6</span> NMDAR binding also promotes CaMKII autophosphorylation at T306 site</a></li>
+  </ul></li>
+  <li><a href="#analysis-of-the-t286-and-camkiinmdar-binding-mutant-models" id="toc-analysis-of-the-t286-and-camkiinmdar-binding-mutant-models" class="nav-link" data-scroll-target="#analysis-of-the-t286-and-camkiinmdar-binding-mutant-models"><span class="header-section-number">6.2</span> Analysis of the T286 and CaMKII/NMDAR binding mutant models</a>
+  <ul class="collapse">
+  <li><a href="#nmdar-binding-stabilizes-camkii-open-conformation-more-readily-than-t286-phosphorylation" id="toc-nmdar-binding-stabilizes-camkii-open-conformation-more-readily-than-t286-phosphorylation" class="nav-link" data-scroll-target="#nmdar-binding-stabilizes-camkii-open-conformation-more-readily-than-t286-phosphorylation"><span class="header-section-number">6.2.1</span> NMDAR binding stabilizes CaMKII open conformation more readily than T286 phosphorylation</a></li>
+  <li><a href="#autophosphorylation-at-t286-promotes-cam-binding-but-nmdar-binding-does-not" id="toc-autophosphorylation-at-t286-promotes-cam-binding-but-nmdar-binding-does-not" class="nav-link" data-scroll-target="#autophosphorylation-at-t286-promotes-cam-binding-but-nmdar-binding-does-not"><span class="header-section-number">6.2.2</span> Autophosphorylation at T286 promotes CaM binding but NMDAR binding does not</a></li>
+  </ul></li>
+  <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion"><span class="header-section-number">6.3</span> Discussion, limitations and future directions</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">7</span> Conclusion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-results" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results of <em>In Silico</em> Wild-Type and Mutant Models</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Three principal model versions of the CaMKII/NMDAR model have been developed. The first is a wild-type (WT) model, as described in <a href="30-model.html" class="quarto-xref"><span>Chapter 5</span></a>. In addition, two mutant (MT) models were constructed: one in which CaMKII is unable to phosphorylate at T286, and another in which CaMKII cannot bind to NMDARs. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.</p>
+<p>The simulations were designed to observe whether known emergent behaviours of CaMKII could be reproduced by the model without being explicitly encoded. In particular, following the expected outputs stated in <a href="30-model.html#sec-expected-outputs" class="quarto-xref"><span>Section 5.4</span></a>, I looked for: (1) phosphorylation at T286 occurring with or without CaM binding; (2) increased NMDAR binding by T286-phosphorylated CaMKII; and (3) enhanced NMDAR binding in the CaM-bound open state, with continued association after CaM dissociation.</p>
+<p>The results show that two out of the three expected behaviours emerge from the model dynamics. T286 phosphorylation was more likely when CaM was bound, though not strictly dependent on it. Similarly, T286-phosphorylated CaMKII was increased through NMDAR binding due to its stabilised open state. Finally, CaMKII bound to CaM binding and NMDAR association were shown to be independent. These observations will be discussed in more detail in the sections that follow.</p>
+<section id="analysis-of-the-wild-type-model" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="analysis-of-the-wild-type-model"><span class="header-section-number">6.1</span> Analysis of the Wild-type model</h2>
+<p>This section presents a summary of the results obtained from the WT model. In the WT simulation, the final total number of CaMKII_open molecules reaches a mean of approximately 108 molecules at 100 seconds. The shaded area surrounding the mean trajectory in the graph represents the standard deviation (SD), indicating the degree of variability across different simulation runs.</p>
+<section id="cam-binding-and-nmdar-binding-independently-stabilise-camkii-activity-in-the-early-stages-of-the-simulation" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="cam-binding-and-nmdar-binding-independently-stabilise-camkii-activity-in-the-early-stages-of-the-simulation"><span class="header-section-number">6.1.1</span> CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation</h3>
+<p><a href="#fig-t286p-means" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> provides an overview of the key molecular interactions and states observed in the WT CaMKII/NMDAR model during the simulation. Each subpanel (a–d) captures specific aspects of the molecular dynamics, focusing particularly on the interplay between CaMKII opening, T286 phosphorylation, CaM binding, and NMDAR binding.</p>
+<p>Panel (a) in <a href="#fig-t286p-means" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> shows the evolution of the open conformation of CaMKII over time. The brown line represents the total number of CaMKII_open subunits, which steadily increases as the simulation progresses. Two main factors contribute to the stabilisation of CaMKII in the open state: (1) CaM binding (light blue line, camkii_cam_unbound_open) and (2) NMDAR binding (dark blue line, nmdar_camkii_complex). Notably, NMDAR binding can maintain CaMKII in the open conformation even in the absence of CaM binding (Fig 7.2c). Figure 7.2b focuses on T286 phosphorylation dynamics of CaMKII. The orange line (camkii_t286p) shows the total number of CaMKII subunits phosphorylated at T286, while the pink line (camkii_t286p1_bound_nmdar) represents the subset of T286-phosphorylated subunits that are also bound to NMDARs. A large fraction of phosphorylated subunits are found associated with NMDARs, indicating that NMDAR binding promotes or sustains T286 phosphorylation. Importantly, this phosphorylation happens largely independently of CaM, as further illustrated in panels (c) and (d).</p>
+<p>Panel (c) in <a href="#fig-t286p-means" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> dissects the T286-phosphorylated CaMKII subunits that are bound to NMDARs into CaM-bound and CaM-unbound populations. Here, the pink line represents all T286-phosphorylated CaMKII subunits bound to NMDARs, while the orange line shows the subset that are CaM-free (camkii_cam_unbound_t286p1_bound_nmdar). It is clear that the majority of the T286-phosphorylated CaMKII subunits bound to NMDARs are unbound from CaM, emphasizing that CaMKII can maintain phosphorylation at T286 even after CaM dissociates. This further supports the idea that NMDAR binding alone is sufficient to stabilize the active, open, phosphorylated state in this model. Figure 7.2d provides a more detailed look at T286 phosphorylation in relation to CaM binding across the whole CaMKII population. The data shows that roughly equal numbers of CaMKII subunits are phosphorylated at T286 whether they are CaM-bound or CaM-unbound. This demonstrates that although CaM binding facilitates CaMKII opening and activation, T286 phosphorylation does not require continuous CaM binding once CaMKII is locked in its open, phosphorylated conformation.</p>
+<p>To further dissect the molecular events underlying these dynamics, the following sections will explore a representative simulation run in detail, focusing on the specific behaviours of CaMKII subunits in relation to NMDAR and CaM binding, and T286 phosphorylation. For reproducibility, the simulation run used for the single-run figures was “run_2025-04-03_08-45-21_seed_2”. The model simulation files is available in the model’s GitHub repository page: https://github.com/Susana465/CaMKII_hexa_bgnl_to_mcell. In order to facilitate comprehensive understanding of the molecule names used, a summary is provided in <a href="#fig-observable_names" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>.</p>
+<div class="landscape">
+<div id="fig-t286p-means" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="CaM binding and NMDAR binding independently stabilise CaMKII activity">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t286p-means-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\t286p-means.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;6.1: CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation. Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)"><img src="40-results-figures\WT\t286p-means.PNG" class="img-fluid figure-img" data-fig-scap="CaM binding and NMDAR binding independently stabilise CaMKII activity"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t286p-means-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation. Final value means of total molecule counts (mean ± SD): camkii_open (108.00 ± 5.12); camkii_cam_ca4 (79.22 ± 3.85); nmdar_free (0.00 ± 0.00); nmdar_camkii_complex (30.00 ± 0.00); camkii_t286p (50.56 ± 5.96); camkii_t286p1_bound_nmdar (27.11 ± 1.37); camkii_cam_unbound_t286p1_bound_nmdar (24.67 ± 1.25); camkii_cam_ca4_t286p1 (24.33 ± 4.45); camkii_cam_unbound_open_t286p1 (26.22 ± 2.35)
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="fig-observable_names" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-observable_names-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\observable_names.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;6.2: Summary of observable names and their meaning."><img src="40-results-figures\observable_names.PNG" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-observable_names-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: Summary of observable names and their meaning.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="approximately-half-of-cam-binds-to-calcium-within-the-first-5s" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="approximately-half-of-cam-binds-to-calcium-within-the-first-5s"><span class="header-section-number">6.1.2</span> Approximately half of CaM binds to calcium within the first 5s</h3>
+<p>In the WT model (described in detail in <a href="30-model.html" class="quarto-xref"><span>Chapter 5</span></a>), a release of 1000 calcium ions occurs within a dendritic spine volume of 0.50588 <span class="math inline">\(\mu\text{m}^3\)</span>. This calcium subsequently binds to CaM, which can bind up to four calcium ions. Full saturation of CaM is required for subsequent binding to CaMKII, resulting in the formation of the CaMKII–CaM complex (CaMKII_CaM_Ca4).</p>
+<p>This progression is illustrated in (<a href="#fig-calcium-binding" class="quarto-xref">Figure&nbsp;<span>6.3</span></a>), where the gradual formation of partially and fully calcium-bound CaM species is shown. Although calcium itself is not displayed (due to its relatively high concentration distorting the plot scale), the stepwise increase in CaM species bound to one, two, three, and four calcium ions is clearly visible. The appearance of CaMKII bound to fully saturated CaM (camkii_cam_ca4) further confirms the expected dynamics. as per the set reaction rates and established literature, CaM fully bound to four calcium ions is immediately available for binding to CaMKII, whereas CaM bound to fewer calcium ions is less readily available for this interaction.</p>
+<p>The simulation reveals a rapid decrease in the concentration of free CaM, which stabilises at approximately half of its initial value, suggesting that roughly half of the CaM molecules remain unbound to calcium. Upon further investigation, this suggests that calcium is acting as a saturating factor. Given that each CaM molecule can bind up to four calcium ions, the 290 CaM molecules would require at least 1200 calcium ions (290 × 4 <span class="math inline">\(\approx\)</span> 1200) for full saturation. However, the model uses 1000 calcium ions, which is slightly below this threshold. It is also worth noting that calcium ions are continuously binding to and dissociating from CaM as part of the ongoing reactions, so as some calcium may dissociate from one species, it might then associate to another, allowing for dynamic and emergent molecule behaviours. Even if the calcium concentration were increased (the difference between 1000 and 1200 calcium ions would be relatively small, from 3.282 <span class="math inline">\(\mu\text{M}\)</span> to 3.938 <span class="math inline">\(\mu\text{M}\)</span>, respectively), we would expect an increase in the number of CaM molecules bound to four calcium ions, but the change might not be substantial.</p>
+<div id="fig-calcium-binding" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaM binding calcium">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-calcium-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\calcium-binding.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;6.3: CaM binding to 1,2,3 and 4 calcium ions (calcium not shown) and formation of CaMKII-CaM complex (CaMKII_CaM_Ca4)."><img src="40-results-figures\WT\calcium-binding.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaM binding calcium"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calcium-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: CaM binding to 1,2,3 and 4 calcium ions (calcium not shown) and formation of CaMKII-CaM complex (CaMKII_CaM_Ca4).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="cam-stabilises-camkii-in-the-open-conformation-but-is-not-required-for-camkiinmdar-binding" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="cam-stabilises-camkii-in-the-open-conformation-but-is-not-required-for-camkiinmdar-binding"><span class="header-section-number">6.1.3</span> CaM stabilises CaMKII in the open conformation, but is not required for CaMKII/NMDAR binding</h3>
+<p>Next, we examine CaM–CaMKII binding (<a href="#fig-cam-camkii-binding" class="quarto-xref">Figure&nbsp;<span>6.4 (a)</span></a>), focusing on how CaMKII’s open conformation of subunits stabilises over time. Out of the 720 CaMKII subunits released (not shown), a total of 104 molecules remain in the open conformation (camkii_open), at 100 seconds. Camkii_open represent the total population of CaMKII subunits that are structurally in their open state. To determine how many of these open subunits are simultaneously bound to CaM, we refer to the pink trace in <a href="#fig-cam-camkii-binding" class="quarto-xref">Figure&nbsp;<span>6.4 (a)</span></a>, which indicates that 79 subunits are CaM-bound by the end of the simulation. This shows that approximately 75% of the open CaMKII subunits are being stabilised in this state through CaM binding up until the end of the simulation.</p>
+<p>In contrast, the population of open CaMKII subunits that are not bound to CaM reaches equilibrium just before the 20-second mark, maintaining a steady count of just above 20 molecules until the end of the simulation. This accounts for the remaining 25% of the open CaMKII pool. These observations indicate that the majority of open CaMKII subunits are stabilised in their active conformation via CaM binding, while a smaller proportion is maintained in the open state by alternative mechanisms.</p>
+<p>In the model at hand, CaMKII is defined as dynamically transitioning between open and closed conformations, and unless stabilised in the open state —either through CaM binding, T286 phosphorylation, or NMDAR association— it will revert to the closed state (see <a href="30-model.html#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span>5.5</span></a>). So we can see in <a href="#fig-cam-camkii-binding" class="quarto-xref">Figure&nbsp;<span>6.4 (a)</span></a> that the majority of CaMKII open is stabilised by CaM, however, there is another mechanism that is keeping CaMKII open. This other mechanism is in direct relation with NMDAR interaction as we will explore next.</p>
+<p>By examining <a href="#fig-camkii-opening-nmdar" class="quarto-xref">Figure&nbsp;<span>6.4 (b)</span></a>, we observe that the levels of CaMKII binding to NMDARs (dark blue line: nmdar_camkii_complex) closely follow the same pattern as CaM unbinding from CaMKII (medium blue: camkii_cam_unbound_open). In other words, as CaMKII associates with NMDARs, this interaction maintains CaMKII in an open state, without the need for CaM binding to CaMKII.</p>
+<p>Interestingly, the proportion of CaMKII free from CaM that are still in their open conformation (medium blue: camkii_cam_unbound_open, <a href="#fig-camkii-opening-nmdar" class="quarto-xref">Figure&nbsp;<span>6.4 (b)</span></a>) fluctuates up and down frequently, which comes from CaMKII opening and closing (as CaM is not bound yet).</p>
+<p>Initially, the level of CaMKII free from CaM that are still in their open conformation (camkii_cam_unbound_open) fluctuates and exceeds the amount of CaMKII bound to NMDARs (nmdar_camkii_complex). This indicates that while a pool of open CaMKII is available, not all of it is bound to NMDARs at once. Over time, as CaMKII binding to NMDARs progresses and the system approaches a steady state, newly opened CaMKII subunits are quickly captured by available NMDAR binding sites. Consequently, the amount of free, open CaMKII stabilizes at a level consistently lower than the amount of NMDAR-bound CaMKII, indicating that binding to NMDARs efficiently sequesters and stabilizes open CaMKII in the later phase.</p>
+<p>Moreover, in <a href="#fig-camkii-opening-nmdar" class="quarto-xref">Figure&nbsp;<span>6.4 (b)</span></a>, we observe a three-step, ladder-like progression of CaMKII binding to NMDARs. Each step corresponds to an increase in the number of CaMKII subunits bound: first reaching approximately 12 subunits, then 24, and finally 30. This pattern suggests that entire CaMKII holoenzymes (each containing 12 subunits) sequentially bind to NMDARs. Here, looking at a single run reveals a clear pattern that was obscured when averaging across multiple simulations</p>
+<p>Initially, one holoenzyme binds rapidly, with its subunits quickly associating with available NMDARs. The process of a second holoenzyme binding is slower, likely because after the first 12 subunits are bound, there are fewer free NMDARs left. Now, the second holoenzyme has fewer choices, and it may need to “search” or “diffuse” around more to find free receptors. Finally, after the second holoenzyme binds (up to 24 subunits), a third holoenzyme binds partially, occupying the remaining 6 NMDARs. By the time the third holoenzyme tries to bind, only 6 NMDARs are free — not enough for all 12 subunits. The progressive slowing reflects decreasing availability of free NMDARs for binding. The implications of these findings are discussed in <a href="#sec-discussion" class="quarto-xref"><span>Section 6.3</span></a>. However, this particular mode of CaMKII binding to NMDARs may be an artifact of the model. Although not necessarily invalid, this aspect warrants further scrutiny and should be revisited in future research, as explored further in the discussion section below.</p>
+<p>In summary, the majority (75%) of CaMKII subunits in the open conformation are stabilized by binding to CaM. However, while CaM helps stabilize CaMKII in the open state, the binding of CaMKII to NMDARs is not dependent on CaM. As CaMKII binds to NMDARs, it maintains its open conformation even without CaM binding, indicating that the interaction between CaMKII and NMDARs can stabilize the open state of CaMKII independently of CaM.</p>
+<div id="fig-camkii-open" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camkii-open-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-camkii-open" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-cam-camkii-binding" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-cam-camkii-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\cam-camkii-binding.png" class="lightbox" data-gallery="fig-camkii-open" title="Figure&nbsp;6.4&nbsp;(a): "><img src="40-results-figures\WT\cam-camkii-binding.png" id="fig-cam-camkii-binding" class="img-fluid figure-img" data-ref-parent="fig-camkii-open"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-cam-camkii-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-camkii-open" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-camkii-opening-nmdar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-camkii-opening-nmdar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\camkii-open-nmdar.png" class="lightbox" data-gallery="fig-camkii-open" title="Figure&nbsp;6.4&nbsp;(b): "><img src="40-results-figures\WT\camkii-open-nmdar.png" id="fig-camkii-opening-nmdar" class="img-fluid figure-img" data-ref-parent="fig-camkii-open"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-camkii-opening-nmdar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camkii-open-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.4: Stabilisation of CaMKII in the Open Conformation.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="camkii-subunits-remain-open-and-autophosphorylate-at-t286-upon-nmdar-binding-regardless-of-cam-binding" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="camkii-subunits-remain-open-and-autophosphorylate-at-t286-upon-nmdar-binding-regardless-of-cam-binding"><span class="header-section-number">6.1.4</span> CaMKII subunits remain open and autophosphorylate at T286 upon NMDAR binding, regardless of CaM binding</h3>
+<p>Next we look at total number of CaMKII subunits phosphorylated at T286. Camkii_t286p reflects the full amount of T286-phosphorylated CaMKII, irrespective of any other concurrent molecular states. All CaMKII subunits categorised as camkii_t286p are necessarily in the open conformation. Therefore, camkii_t286p represents a subset of the camkii_open population (<a href="#fig-subsets-of-open-t286p1_p0" class="quarto-xref">Figure&nbsp;<span>6.5</span></a>). This is consistent with both the model’s coding and biological evidence, as phosphorylation at T286 locks CaMKII in an autonomously active, open conformation by preventing the regulatory segment from re-binding to the catalytic domain, which physically prevents closing of the subunit.</p>
+<p>Out of the 104 CaMKII subunits that are open at the end of the simulation, 45 are found to be phosphorylated at T286 (<a href="#fig-subsets-of-open-t286p1_p0" class="quarto-xref">Figure&nbsp;<span>6.5</span></a>), and the rest (104 - 45 = 59) are therefore not phosphorylated at this site. This indicates that approximately half of the open CaMKII subunits are in a T286-phosphorylated state.</p>
+<p>Of the 45 T286-phosphorylated CaMKII subunits, a subset of 25 are found to be bound to NMDARs (pink line: camkii_t286p1_bound_nmdar as shown in <a href="#fig-camkii-t286p-nmdar-b" class="quarto-xref">Figure&nbsp;<span>6.6</span></a>). The difference between these two molecules, corresponds to the number of CaMKII molecules that are T286-phosphorylated but not associated with NMDARs. This is, out of all the CaMKII subunits that are phosphorylated at T286, about half can be found bound to NMDARs, and the other half is not. <a href="#fig-subsets_nmdar-t268p" class="quarto-xref">Figure&nbsp;<span>6.7</span></a> further demonstrates that the majority of CaMKII subunits bound to NMDARs and phosphorylated at T286 are free from CaM. This complements observations in <a href="#fig-camkii-t286p-nmdar-b" class="quarto-xref">Figure&nbsp;<span>6.6</span></a>, where 25 CaMKII subunits are both T286-phosphorylated and bound to NMDARs, of which 23 are CaM-free and only 2 remain CaM-bound by the end of the simulation.</p>
+<p>Further, within the population of T286-phosphorylated CaMKII that is also bound to NMDARs (pink line: camkii_t286p1_bound_nmdar), only a very small number of subunits remain bound to CaM (<a href="#fig-subsets_nmdar-t268p" class="quarto-xref">Figure&nbsp;<span>6.7</span></a>). Thus, the majority of CaMKII subunits that are bound in a NMDAR/CaMKII complex are both phosphorylated at T286 and free from CaM (which is consistent with literature, as further discussed in <a href="#sec-discussion" class="quarto-xref"><span>Section 6.3</span></a>). This is, once CaMKII is bound to the NMDARs, the holoenzyme subunits can remain open, and autophosphorylate even in the absence of CaM.</p>
+<div id="fig-subsets-of-open-t286p1_p0" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII open and T286 phosphorylated">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subsets-of-open-t286p1_p0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\subsets-of-open-t286p1_p0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6.5: Approximately half of CaMKII that is open (camkii_open) is also phosphorylated at T286 (camkii_t286p). The difference between 104 and 45 is the amount of CaMKII that is open and unphosphorylated at T286."><img src="40-results-figures\WT\subsets-of-open-t286p1_p0.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII open and T286 phosphorylated"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subsets-of-open-t286p1_p0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.5: Approximately half of CaMKII that is open (camkii_open) is also phosphorylated at T286 (camkii_t286p). The difference between 104 and 45 is the amount of CaMKII that is open and unphosphorylated at T286.
+</figcaption>
+</figure>
+</div>
+<div id="fig-camkii-t286p-nmdar-b" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII T286 phosphorylated and bound to CaM">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camkii-t286p-nmdar-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\camkii-t286p.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6.6: Approximately half of all T286-phosphorylated CaMKII subunits (camkii_t286p) are also bound to NMDARs (camkii_t286p_bound_nmdar) by the end of the simulation."><img src="40-results-figures\WT\camkii-t286p.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII T286 phosphorylated and bound to CaM"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camkii-t286p-nmdar-b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.6: Approximately half of all T286-phosphorylated CaMKII subunits (camkii_t286p) are also bound to NMDARs (camkii_t286p_bound_nmdar) by the end of the simulation.
+</figcaption>
+</figure>
+</div>
+<div id="fig-subsets_nmdar-t268p" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="Most CaMKII phosphorylated at T286 and bound to NMDARs is free from CaM ">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subsets_nmdar-t268p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\subsets_nmdar-t268p.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;6.7: Most CaMKII phosphorylated at T286 and bound to NMDARs (camkii_t286p1_bound_nmdar) is free from CaM (camkii_cam_unbound_t286p1_nmdar)."><img src="40-results-figures\WT\subsets_nmdar-t268p.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="Most CaMKII phosphorylated at T286 and bound to NMDARs is free from CaM "></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subsets_nmdar-t268p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.7: Most CaMKII phosphorylated at T286 and bound to NMDARs (camkii_t286p1_bound_nmdar) is free from CaM (camkii_cam_unbound_t286p1_nmdar).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="nmdar-binding-is-the-primary-driver-of-t286-phosphorylation" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="nmdar-binding-is-the-primary-driver-of-t286-phosphorylation"><span class="header-section-number">6.1.5</span> NMDAR binding is the primary driver of T286 phosphorylation</h3>
+<p>As explained in <a href="20-intro-biology.html#sec-cam-binding-and-t286-p" class="quarto-xref"><span>Section 1.4.1</span></a>, we use a ‘conformational selection’ approach to modelling CaMKII activation, where CaMKII can exist in both open and closed states independently, and CaM selectively binds to and stabilizes the open conformation, without <em>inducing</em> a conformational change. In order to understand how CaM is interacting with CaMKII T286 phosphorylation, we look at <a href="#fig-subsets-of-camkii-t286p-cam-binding" class="quarto-xref">Figure&nbsp;<span>6.8</span></a>. Here we can see that among all CaMKII subunits phosphorylated at T286, approximately half (23 molecules) are also bound to CaM, represented by the peach-coloured trace <em>“camkii_cam_ca4_t286p1”</em>, while the remaining half (22 molecules) are unbound from CaM (brown-coloured trace: <em>“camkii_cam_unbound_open_t286p1”</em>).</p>
+<p>This indicates that, although CaM binding co-occurs with T286 phosphorylation, T286 is not necessarily more likely when subunits are bound to CaM. In fact, subunits that are both CaM-bound and T286-phosphorylated emerge more slowly during the simulation (<a href="#fig-subsets-of-camkii-t286p-cam-binding" class="quarto-xref">Figure&nbsp;<span>6.8</span></a>), suggesting that CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, but as we will see next, NMDAR binding is (by keeping CaMKII subunits in their open conformation and allowing subsequent T286 autophosphorylation).</p>
+<p>T286-phosphorylated CaMKII which is free from CaM (peach-coloured line in <a href="#fig-xsubsets_nmdar-t268p" class="quarto-xref">Figure&nbsp;<span>6.9</span></a>) corresponds in timing with the formation of the CaMKII/NMDAR complex (<a href="#fig-subsets_nmdar-t268p" class="quarto-xref">Figure&nbsp;<span>6.7</span></a>). This suggests that, once CaMKII binds to NMDARs and its subunits are held in the open conformation, autophosphorylation at T286 is further facilitated in the CaMKII subunits that are part of the CaMKII/NMDAR complex.</p>
+<p>Interestingly, a slight increase in the population of CaMKII free from CaM and T286 phosphorylated is observed around 80 seconds. This rise suggests that subunits of holoenzymes locked into the CaMKII/NMDAR complex undergo further autophosphorylation of neighbouring subunits, resulting in a momentary increase in CaMKII subunits that are free from CaM and phosphorylated at T286.</p>
+<div id="fig-subsets-of-camkii-t286p-cam-binding" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subsets-of-camkii-t286p-cam-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;6.8: CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, as out of all the CaMKII that is T286 phosphorylated (camki_t286p), most of it first increases in a state that is free from CaM (camkii_cam_unbound_open_t286p1), whereas CaMKII that is bound to CaM and T286 phosphorylated (camkii_cam_ca4_t286p1) increases more slowly and later."><img src="40-results-figures/WT/subsets-of-camkii-t286p-cam-binding.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subsets-of-camkii-t286p-cam-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.8: CaM binding is not the main event leading to the increase of initial CaMKII T286 phosphorylation, as out of all the CaMKII that is T286 phosphorylated (camki_t286p), most of it first increases in a state that is free from CaM (camkii_cam_unbound_open_t286p1), whereas CaMKII that is bound to CaM and T286 phosphorylated (camkii_cam_ca4_t286p1) increases more slowly and later.
+</figcaption>
+</figure>
+</div>
+<div id="fig-xsubsets_nmdar-t268p" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Binding of CaMKII to NMDARs promotes and stabilizes the open conformation of its subunits">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-xsubsets_nmdar-t268p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\xsubsets_nmdar-t268p.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;6.9: Binding of CaMKII to NMDARs promotes and stabilizes the open conformation of its subunits, facilitating T286 autophosphorylation within the CaMKII/NMDAR complex."><img src="40-results-figures\WT\xsubsets_nmdar-t268p.png" class="img-fluid figure-img" data-fig-scap="Binding of CaMKII to NMDARs promotes and stabilizes the open conformation of its subunits"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-xsubsets_nmdar-t268p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.9: Binding of CaMKII to NMDARs promotes and stabilizes the open conformation of its subunits, facilitating T286 autophosphorylation within the CaMKII/NMDAR complex.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="nmdar-binding-also-promotes-camkii-autophosphorylation-at-t306-site" class="level3" data-number="6.1.6">
+<h3 data-number="6.1.6" class="anchored" data-anchor-id="nmdar-binding-also-promotes-camkii-autophosphorylation-at-t306-site"><span class="header-section-number">6.1.6</span> NMDAR binding also promotes CaMKII autophosphorylation at T306 site</h3>
+<p>Phosphorylation at the T306 site is known to occur at a slower rate than phosphorylation at T286 <span class="citation" data-cites="otmakhov2015Fast chang2017CaMKII">(<a href="references.html#ref-otmakhov2015Fast" role="doc-biblioref">Otmakhov, Regmi, and Lisman 2015</a>; <a href="references.html#ref-chang2017CaMKII" role="doc-biblioref">Chang et al. 2017</a>)</span>, and this is reflected in the model outputs. A total of 25 CaMKII subunits become phosphorylated at T306 over the course of the simulation (burgundy trace: camkii_t306p in <a href="#fig-t306p" class="quarto-xref">Figure&nbsp;<span>6.10</span></a>), of which 21 are bound to the NMDAR (golden trace:camkii_cam_unbound_t306p1_bound_nmdar in <a href="#fig-t306p" class="quarto-xref">Figure&nbsp;<span>6.10</span></a>) —indicating that approximately 84% of T306-phosphorylated subunits are part of NMDAR complexes.</p>
+<p>Moreover, the accumulation of doubly phosphorylated subunits (T286P and T306P; here referred to as CaMKII_PP, hot pink trace in <a href="#fig-t306p" class="quarto-xref">Figure&nbsp;<span>6.10</span></a>) appears to track closely with the rate of T306 phosphorylation. This indicates that T306 phosphorylation typically follows T286 phosphorylation, particularly during the earlier stages of the simulation. This behaviour is consistent with both the modelled mechanisms and findings reported in the literature <span class="citation" data-cites="pi2010Autonomousa">(<a href="references.html#ref-pi2010Autonomousa" role="doc-biblioref">Pi et al. 2010</a>)</span>.</p>
+<div id="fig-t306p" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="T306 phosphorylation can occur and persist independently of T286">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t306p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\t306p.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;6.10: At later stages, T306 phosphorylation can occur and persist independently of T286 in CaMKII that is bound to NMDARs.Initially, most of the CaMKII phosphorylated at T306 (camkii_t306p) is also phosphorylated at T286—i.e., it is in the doubly phosphorylated state (camkii_pp_bound_nmdar). This indicates that early T306 phosphorylation often coincides with T286 phosphorylation. After 60 seconds, the amount of CaMKII that is bound to NMDARs and phosphorylated only at T306 (camkii_cam_unbound_t306p1_bound_nmdar) surpasses the doubly phosphorylated form. Saying cam_unbound (CaM free) in this molecule name is redundant as camkii that is t306p is necessarily free from CaM."><img src="40-results-figures\WT\t306p.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="T306 phosphorylation can occur and persist independently of T286"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t306p-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.10: At later stages, T306 phosphorylation can occur and persist independently of T286 in CaMKII that is bound to NMDARs.Initially, most of the CaMKII phosphorylated at T306 (camkii_t306p) is also phosphorylated at T286—i.e., it is in the doubly phosphorylated state (camkii_pp_bound_nmdar). This indicates that early T306 phosphorylation often coincides with T286 phosphorylation. After 60 seconds, the amount of CaMKII that is bound to NMDARs and phosphorylated only at T306 (camkii_cam_unbound_t306p1_bound_nmdar<em>) surpasses the doubly phosphorylated form. </em>Saying cam_unbound (CaM free) in this molecule name is redundant as camkii that is t306p is necessarily free from CaM.
+</figcaption>
+</figure>
+</div>
+<p>Interestingly, after around 60 seconds, subunits that are solely phosphorylated at T306 continue to increase above CaMKII_PP (<a href="#fig-t306p" class="quarto-xref">Figure&nbsp;<span>6.10</span></a>). This suggests that, at later stages in the simulation, T306 phosphorylation can occur and persist independently of T286 phosphorylation. Extending the simulation time may offer further insights into this dynamic, as it could support the biological hypothesis that initial T286 phosphorylation enables subsequent T306 phosphorylation, but that T306P can then be maintained even in the absence of T286 phosphorylation <span class="citation" data-cites="hanson1992Inhibitory pi2010Autonomousa bhattacharyya2020Flexible">(<a href="references.html#ref-hanson1992Inhibitory" role="doc-biblioref">Hanson and Schulman 1992</a>; <a href="references.html#ref-pi2010Autonomousa" role="doc-biblioref">Pi et al. 2010</a>; <a href="references.html#ref-bhattacharyya2020Flexible" role="doc-biblioref">Bhattacharyya et al. 2020</a>)</span>.</p>
+<p>Furthermore, T306 phosphorylation follows NMDAR binding dynamics closely. As shown in <a href="#fig-t306p-nmdar-binding" class="quarto-xref">Figure&nbsp;<span>6.11</span></a>, CaMKII subunits initially bind to NMDARs in an unphosphorylated T306 state (slate-green: camkii_t306p0_bound_nmdar in <a href="#fig-t306p-nmdar-binding" class="quarto-xref">Figure&nbsp;<span>6.11</span></a>). Once the CaMKII–NMDAR complex reaches equilibrium, levels of T306 phosphorylation increase correspondingly, as unphosphorylated T306 decreases.</p>
+<div id="fig-t306p-nmdar-binding" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaMKII binds unphosphorylated to NMDARs">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t306p-nmdar-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\WT\t306p-nmdar-binding.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;6.11: CaMKII binds unphosphorylated to NMDARs (camkii_00_bound_nmdar). T286 phosphorylation ensues, followed by an increase in T306 phosphorylation (camkii_t306p1_bound_nmdar) -and a T306 unphosphorylated state decrease (camkii_t306p0_bound_nmdar). All these molecules are a subset of CaMKII bound to NMDARs (nmdar_camkii_complex)."><img src="40-results-figures\WT\t306p-nmdar-binding.png" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="CaMKII binds unphosphorylated to NMDARs"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t306p-nmdar-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.11: CaMKII binds unphosphorylated to NMDARs (camkii_00_bound_nmdar). T286 phosphorylation ensues, followed by an increase in T306 phosphorylation (camkii_t306p1_bound_nmdar) -and a T306 unphosphorylated state decrease (camkii_t306p0_bound_nmdar). All these molecules are a subset of CaMKII bound to NMDARs (nmdar_camkii_complex).
+</figcaption>
+</figure>
+</div>
+<p>In the final phase of CaMKII binding to NMDARs, after approximately 40 seconds —when all NMDARs are saturated, T306 phosphorylation continues to rise. This is likely supported by the concurrent increase in T286 phosphorylation, and by a decrease in CaM binding to CaMKII subunits already bound to NMDARs. This aligns with expectations, as CaM binding and T306 phosphorylation are mutually exclusive processes —CaM must be unbound for T306 phosphorylation to occur. Therefore, as the model shows a decrease in CaM binding to CaMKII subunits that are already part of the CaMKII–NMDAR complex, the opportunity for T306 phosphorylation increases. In other words, the less CaM is bound to CaMKII subunits, the more likely it is that T306 can become phosphorylated, and the less likely CaM is to bind.</p>
+<p><a href="#fig-t306p-nmdar-binding" class="quarto-xref">Figure&nbsp;<span>6.11</span></a> shows three distinct peaks, each representing CaMKII subunits that are in the “p00” state — meaning they are not phosphorylated at either T286 or T306. This pattern highlights three important insights. First, CaMKII binds to NMDARs before any phosphorylation has occurred. Second, although phosphorylation is not required for binding, once CaMKII is incorporated into an NMDAR complex, autophosphorylation becomes more likely. Third, phosphorylation at T306 follows phosphorylation at T286, following a sequential phosphorylation mechanism as expected.</p>
+<p>These findings show that the formation of CaMKII-NMDAR complexes does not depend on prior phosphorylation at T286. However, once T286 phosphorylation occurs, it can initiate a cascade of further autophosphorylation events, including at T306, within the same NMDAR/CaMKII complex. Previous studies have shown that CaMKII does not need to be phosphorylated at T286 in order to bind to NMDARs or to perform its catalytic functions. That said, phosphorylation at T286 can modulate or enhance both the binding affinity and the enzymatic activity of CaMKII, making it an important regulatory step rather than an absolute requirement.</p>
+</section>
+</section>
+<section id="analysis-of-the-t286-and-camkiinmdar-binding-mutant-models" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="analysis-of-the-t286-and-camkiinmdar-binding-mutant-models"><span class="header-section-number">6.2</span> Analysis of the T286 and CaMKII/NMDAR binding mutant models</h2>
+<p>The T286 MT model is similar biologically to the CaMKII T286A MT, in which the critical autophosphorylation site T286 is substituted with alanine, preventing phosphorylation at this site. This mutation has been extensively characterised in both <em>in vitro</em> biochemical assays and <em>in vivo</em> using mice that were genetically modified. T286A mutation has been shown to impair LTP and spatial learning in rodents. This computational implementation allows investigation into how the loss of T286 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions under different stimulation conditions. In the T286 MT model, this mutation is represented by setting reaction rule #8 to zero (<a href="30-model.html#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span>5.5</span></a>), so phosphorylation can not happen.</p>
+<p>The NMDAR/CaMKII binding MT model simulates a mutation that disrupts the interaction between CaMKII and the GluN2B subunit of NMDARs. This disruption can be achieved through mutations in either CaMKII or GluN2B, preventing their binding without necessarily altering other functions such as kinase activity <span class="citation" data-cites="sanhueza2013CaMKII">(<a href="references.html#ref-sanhueza2013CaMKII" role="doc-biblioref">Sanhueza and Lisman 2013</a>)</span>. A well-characterized example is the CaMKII I205K mutation, where isoleucine is replaced by lysine. This substitution significantly impairs binding to GluN2B while leaving kinase activity intact <span class="citation" data-cites="bayer2001Interactiona">(<a href="references.html#ref-bayer2001Interactiona" role="doc-biblioref">K.-Ulrich Bayer et al. 2001a</a>)</span>. Experimental evidence shows that this mutation also reduces CaMKII accumulation at synapses following LTP induction <span class="citation" data-cites="bayer2001Interactiona">(<a href="references.html#ref-bayer2001Interactiona" role="doc-biblioref">K.-Ulrich Bayer et al. 2001a</a>)</span>. In the CaMKII/NMDAR MT model, this binding disruption is represented by setting reaction rule #12 to zero (<a href="30-model.html#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span>5.5</span></a>), so NMDAR and CaMKII binding can not proceed.</p>
+<p>The following analysis compares WT simulations with those of the two MT models. The total number of simulation runs for each group is as follows: WT (N = 9), T286 MT (N = 9), and CaMKII/NMDAR MT (N = 4). T-tests and one-way ANOVAs were performed after testing for normality of the datasets using the Shapiro-Wilk test.</p>
+<p>Simulations were conducted under identical parameters across all conditions (see <a href="30-model.html#fig-molecule-concentrations" class="quarto-xref">Figure&nbsp;<span>5.1</span></a> for initial molecule release and <a href="30-model.html#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span>5.5</span></a> for reaction rates), except for two CaMKII/NMDAR MT runs, as I explain below, which were part of preliminary tests involving a different CaMKII release state. Aside from this, the only intended differences between groups were the modifications to the relevant reaction rules described above.</p>
+<p>The reduced number of simulations for the CaMKII/NMDAR MT model resulted from a human error during file execution, which will be explored in greater detail in the discussion section below. Due to this error, only four usable simulation runs were available for this model. It is important to note that, while all other simulation groups released CaMKII in its open state, the CaMKII/NMDAR MT group includes two runs with CaMKII released in the closed state and two with CaMKII released in the open state. These files, originally generated during preliminary testing (data not shown), were the only available usable runs for this condition due to the aforementioned error. As no substantial differences in simulation outcomes were observed between the two release states, all four runs were retained in the analysis. This detail is provided here for transparency.</p>
+<section id="nmdar-binding-stabilizes-camkii-open-conformation-more-readily-than-t286-phosphorylation" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="nmdar-binding-stabilizes-camkii-open-conformation-more-readily-than-t286-phosphorylation"><span class="header-section-number">6.2.1</span> NMDAR binding stabilizes CaMKII open conformation more readily than T286 phosphorylation</h3>
+<p>Having established the simulation conditions for each model, we now present quantitative comparisons between WT and MT simulations across key molecular outputs. A primary focus of this analysis is the extent of CaMKII opening, as this conformational state is influenced by both T286 phosphorylation and binding to NMDARs. Given that both of these interactions promote and stabilise the open conformation of CaMKII, it was expected that disrupting either mechanism, through mutation at T286 or impairment of NMDAR binding, would lead to a reduction in CaMKII opening.</p>
+<p><a href="#fig-camkii_open_anova" class="quarto-xref">Figure&nbsp;<span>6.12</span></a> displays the results of an ANOVA, with an F-statistic of 36.327, indicating a substantial difference between the group means relative to the variation within each group. Further, the associated p-value of <span class="math inline">\(3.219 \times 10^{-7}\)</span> indicates a very low probability that the observed differences between the groups are due to random chance.</p>
+<p>Both mutations significantly decreased CaMKII opening relative to the WT control. The reduction observed in the T286_MT group was modest, with a mean of 100 compared to 109 in the WT group, but statistically significant (p &lt; 0.05), supporting the role of T286 phosphorylation in stabilising the open conformation of CaMKII. These results were expected, as abolishing T286 phosphorylation means decreasing the chances of CaMKII subunits being kept in their open conformation via this mechanism.</p>
+<p>The NMDAR_CaMKII_MT group exhibited a much more pronounced and highly significant reduction in CaMKII opening compared to the WT group (p &lt; 0.0001). As expected, reduced binding to NMDARs corresponds to a decreased likelihood of CaMKII remaining in its open conformation. Interestingly, CaMKII opening in the NMDAR_CaMKII_MT group was not only significantly lower than in the WT group, but also lower than in the T286_MT group (p &lt; 0.0001). These findings reinforce the idea that NMDAR binding plays a central role in maintaining CaMKII in its open state in our simulations. While T286 phosphorylation is also important, it is the disruption of CaMKII/NMDAR binding that most strongly impacts CaMKII opening levels.</p>
+<div id="fig-camkii_open_anova" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="Both the T286 MT and the NMDAR/CaMKII binding MT exhibit significantly lower levels of CaMKII opening compared to WT">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camkii_open_anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\statistics\camkii_open_anova.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;6.12: Both the T286 MT (T286_MT) and the NMDAR/CaMKII binding MT (NMDAR_CaMKII_MT) exhibit significantly lower levels of CaMKII opening compared to WT, with the largest reduction observed in the NMDAR_CaMKII_MT condition. Final molecule counts for camkii_open are shown for each simulation run (dots), with group-level distributions represented as boxplots. Solid lines represent medians, and dashed lines represent means. Statistical comparisons were performed using one-way ANOVA followed by Tukey’s HSD post hoc test. Asterisks indicate levels of statistical significance from Tukey’s HSD post hoc test: p < 0.05 (*), p < 0.001 (), and p < 0.0001 (**). ANOVA F-statistic between groups = 36.327, and p = 3.219 \times 10^{-7}."><img src="40-results-figures\statistics\camkii_open_anova.png" class="img-fluid figure-img" data-fig-scap="Both the T286 MT and the NMDAR/CaMKII binding MT exhibit significantly lower levels of CaMKII opening compared to WT" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camkii_open_anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.12: Both the T286 MT (T286_MT) and the NMDAR/CaMKII binding MT (NMDAR_CaMKII_MT) exhibit significantly lower levels of CaMKII opening compared to WT, with the largest reduction observed in the NMDAR_CaMKII_MT condition. Final molecule counts for camkii_open are shown for each simulation run (dots), with group-level distributions represented as boxplots. Solid lines represent medians, and dashed lines represent means. Statistical comparisons were performed using one-way ANOVA followed by Tukey’s HSD post hoc test. Asterisks indicate levels of statistical significance from Tukey’s HSD post hoc test: p &lt; 0.05 (*), p &lt; 0.001 (<strong>), and p &lt; 0.0001 (</strong>**). ANOVA F-statistic between groups = 36.327, and <span class="math inline">\(p = 3.219 \times 10^{-7}\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="autophosphorylation-at-t286-promotes-cam-binding-but-nmdar-binding-does-not" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="autophosphorylation-at-t286-promotes-cam-binding-but-nmdar-binding-does-not"><span class="header-section-number">6.2.2</span> Autophosphorylation at T286 promotes CaM binding but NMDAR binding does not</h3>
+<p>Next, I aimed to examine whether CaM binding to CaMKII was affected across the three models. Given the expected reduction in CaMKII opening, I expected that this decrease might also result in reduced CaM binding in both MT models. Specifically, I wanted to explore how CaM binding is related to both T286 phosphorylation and NMDAR/CaMKII binding.</p>
+<p>As shown in <a href="#fig-CaMKII_CaM_Ca4_anova" class="quarto-xref">Figure&nbsp;<span>6.13</span></a>, total CaMKII bound to CaM (camkii_cam_ca4) was significantly reduced only in the T286 MT. The F-value of 4.668 indicates that the variance <em>between</em> groups (i.e., how much the CaM binding values differ between the WT, T286_MT, and NMDAR/CaMKII_MT) is considerably larger than the variance <em>within</em> groups (i.e., how much individual data points vary within each group). In other words, the groups are not just randomly different; the differences between the groups are meaningful and consistent. The significant reduction in CaM binding in the T286 MT (p &lt; 0.05), and the lack of difference in the NMDAR/CaMKII MT compared to WT, suggests that T286 phosphorylation influences CaM binding to CaMKII by keeping it in the open state. On the other hand, NMDAR binding does not appear to have a similar effect.</p>
+<p>These findings were initially unexpected, as I had anticipated that reduced CaMKII opening in both MTs might affect CaM binding in both models. However, the results are actually consistent with the underlying mechanisms that we had previously observed. In the WT model, CaM binding and NMDAR binding to CaMKII subunits appeared to be independent processes. Notably, the majority of CaMKII bound to NMDARs did not interact with CaM. This independence between NMDAR binding and CaM binding to CaMKII helps explain why the NMDAR/CaMKII MT, which disrupts NMDAR binding, does not significantly affect CaM binding. Since NMDAR binding and CaM binding to CaMKII are independent events, disrupting NMDAR binding does not impact the ability of CaMKII to bind to or release CaM. In contrast, the T286 mutation does lead to a reduction in CaM binding, highlighting the specific role of T286 phosphorylation in regulating CaM binding.</p>
+<div id="fig-CaMKII_CaM_Ca4_anova" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="CaM binding to CaMKII is significantly reduced only with the loss of T286 phosphorylation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CaMKII_CaM_Ca4_anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\statistics\CaMKII_CaM_Ca4_anova.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;6.13: CaM binding to CaMKII is significantly reduced only with the loss of T286 phosphorylation. Final molecule counts for camkii_cam_ca4 are shown for each simulation run (dots), with group-level distributions represented as boxplots. Solid lines represent medians, and dashed lines represent means. The T286 MT (T286_MT) shows a significant reduction in CaM-bound CaMKII compared to WT (p < 0.05), whereas no significant difference (‘ns’) is observed between WT and the NMDAR/CaMKII MT (NMDAR_CaMKII_MT), or between the two MT groups. Statistical analysis was performed using one-way ANOVA (F = 4.668, p = 0.022), followed by Tukey’s HSD post hoc test."><img src="40-results-figures\statistics\CaMKII_CaM_Ca4_anova.png" class="img-fluid figure-img" data-fig-scap="CaM binding to CaMKII is significantly reduced only with the loss of T286 phosphorylation" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CaMKII_CaM_Ca4_anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.13: CaM binding to CaMKII is significantly reduced only with the loss of T286 phosphorylation. Final molecule counts for camkii_cam_ca4 are shown for each simulation run (dots), with group-level distributions represented as boxplots. Solid lines represent medians, and dashed lines represent means. The T286 MT (T286_MT) shows a significant reduction in CaM-bound CaMKII compared to WT (p &lt; 0.05), whereas no significant difference (‘ns’) is observed between WT and the NMDAR/CaMKII MT (NMDAR_CaMKII_MT), or between the two MT groups. Statistical analysis was performed using one-way ANOVA (F = 4.668, p = 0.022), followed by Tukey’s HSD post hoc test.
+</figcaption>
+</figure>
+</div>
+<section id="nmdar-binding-is-the-main-stabiliser-of-camkiis-open-state" class="level4">
+<h4 class="anchored" data-anchor-id="nmdar-binding-is-the-main-stabiliser-of-camkiis-open-state">NMDAR binding is the main stabiliser of CaMKII’s open state</h4>
+<p>To further explore how NMDARs and T286 phosphorylation affect CaMKII opening, I looked at the amount of CaMKII subunits that remain free from CaM and are kept in their open state (denoted as CaMKII–CaM_unbound_open, <a href="#fig-camkii_cam_unbound_open" class="quarto-xref">Figure&nbsp;<span>6.14</span></a>). I observed a significant decrease in this molecule count in the NMDAR/CaMKII binding MT. As discussed previously, in the WT model, NMDARs play an active role in stabilizing CaMKII in its open state, even in the absence of CaM. This means that, in this model, NMDARs are crucial for maintaining CaMKII in its open form, free from calmodulin. When this stabilizing mechanism is disrupted in the NMDAR/CaMKII mutant, less CaMKII remains in the open state without CaM, because the NMDAR binding, which normally helps keep the CaMKII subunits open and CaM-free, is no longer functioning. As a result, there is a reduction in the amount of CaMKII remaining in its open state. Conversely, in the T286 mutant model, the ability of NMDARs to keep CaMKII in its open, CaM-free state is still intact, which explains why this aspect remains unaffected in this model.</p>
+<div id="fig-camkii_cam_unbound_open" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camkii_cam_unbound_open-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\statistics\camkii_cam_unbound_open.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;6.14: NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state (camkii_cam_unbound_open). Boxplot shows final molecule counts for camkii_cam_unbound_open across WT, T286 phosphorylation mutant (T286_MT), and NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) models. Individual simulation runs are represented as dots. Boxes represent the interquartile range, solid lines show medians, and dashed lines show group means. A one-way ANOVA revealed a significant group effect (F = 236.180, p = 3.80 \times 10^{-14}), with post hoc Tukey’s HSD tests indicating significantly fewer CaMKII molecules in this state in the NMDAR/CaMKII mutant compared to both WT and T286_MT (**p < 0.001). No significant difference was observed between WT and T286_MT."><img src="40-results-figures\statistics\camkii_cam_unbound_open.png" class="img-fluid figure-img" data-fig-scap="NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camkii_cam_unbound_open-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.14: NMDAR binding is crucial for maintaining CaMKII in its open, CaM-free state (camkii_cam_unbound_open). Boxplot shows final molecule counts for camkii_cam_unbound_open across WT, T286 phosphorylation mutant (T286_MT), and NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) models. Individual simulation runs are represented as dots. Boxes represent the interquartile range, solid lines show medians, and dashed lines show group means. A one-way ANOVA revealed a significant group effect (F = 236.180, <span class="math inline">\(p = 3.80 \times 10^{-14}\)</span>), with post hoc Tukey’s HSD tests indicating significantly fewer CaMKII molecules in this state in the NMDAR/CaMKII mutant compared to both WT and T286_MT (**p &lt; 0.001). No significant difference was observed between WT and T286_MT.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="nmdar-binding-stabilizes-camkii-open-conformation-and-drives-t286-and-t306-phosphorylation" class="level4">
+<h4 class="anchored" data-anchor-id="nmdar-binding-stabilizes-camkii-open-conformation-and-drives-t286-and-t306-phosphorylation">NMDAR binding stabilizes CaMKII open conformation and drives T286 and T306 phosphorylation</h4>
+<p>Since NMDARs play an essential role in keeping CaMKII subunits open and free from CaM (as shown by the CaMKII_cam_unbound_open data), this opens up the question of whether T286 phosphorylation, which is a key event for CaMKII activation, is also influenced by NMDAR signalling. In the WT model, we observed that CaMKII subunits bind to NMDARs in an unphosphorylated state, and T286 phosphorylation is subsequently stabilized once these subunits associate with NMDARs, even in the absence of CaM. What is more, NMDAR binding was identified as the key event leading to T286 phosphorylation, as it helps maintain CaMKII in its open conformation, thus enabling T286 autophosphorylation. Consequently, in the NMDAR/CaMKII binding mutant, where NMDAR-CaMKII interaction is disrupted, we expect T286 phosphorylation to be significantly reduced due to the loss of this stabilisation mechanism. As expected, in the NMDAR/CaMKII binding MT, we observed a significant reduction in T286 phosphorylation, confirming the importance of NMDAR-CaMKII binding in T286 autophosphorylation (<a href="#fig-camkii_t286p_nmdarMT" class="quarto-xref">Figure&nbsp;<span>6.15</span></a>).</p>
+<p>Further, as previously observed in the WT model, phosphorylation at T306 was promoted following T286 phosphorylation in CaMKII subunits already bound to NMDARs, suggesting that NMDAR association is a key upstream event driving T306 phosphorylation. Looking at <a href="#fig-t306p_anova" class="quarto-xref">Figure&nbsp;<span>6.16</span></a>, we can see that T306 phosphorylation is significantly reduced in the NMDAR/CaMKII mutant model compared to both the WT and the T286 mutant, indicating that indeed NMDAR binding is important for T306 phosphorylation. Interestingly, the T286 mutant does not show a significant reduction in T306 phosphorylation relative to WT. Given that in the WT model T306 phosphorylation typically follows T286 phosphorylation, one might expect the T286 mutant to also exhibit reduced T306 levels. However, these results suggest that T306 phosphorylation can still occur independently of prior T286 phosphorylation, highlighting the dominant role of NMDAR binding in promoting the T306 phosphorylation event. The biological significance of these results is further explored in the discussion section below.</p>
+<div id="fig-camkii_t286p_nmdarMT" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="NMDAR binding is critical for promoting T286 phosphorylation of CaMKII">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-camkii_t286p_nmdarMT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\statistics\camkii_t286p_nmdarMT.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;6.15: NMDAR binding is critical for promoting T286 phosphorylation of CaMKII. Individual simulation runs are shown as dots; boxes indicate the interquartile range, with solid lines denoting the median and dashed lines the mean. A two-tailed t-test revealed a highly significant reduction in T286-phosphorylated CaMKII in the NMDAR mutant (t = 7.73, p < 0.0001, ***), consistent with the proposed mechanism where NMDAR binding stabilizes CaMKII in an open conformation that favours autophosphorylation at T286."><img src="40-results-figures\statistics\camkii_t286p_nmdarMT.png" class="img-fluid figure-img" data-fig-scap="NMDAR binding is critical for promoting T286 phosphorylation of CaMKII" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-camkii_t286p_nmdarMT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.15: NMDAR binding is critical for promoting T286 phosphorylation of CaMKII. Individual simulation runs are shown as dots; boxes indicate the interquartile range, with solid lines denoting the median and dashed lines the mean. A two-tailed t-test revealed a highly significant reduction in T286-phosphorylated CaMKII in the NMDAR mutant (t = 7.73, p &lt; 0.0001, ***), consistent with the proposed mechanism where NMDAR binding stabilizes CaMKII in an open conformation that favours autophosphorylation at T286.
+</figcaption>
+</figure>
+</div>
+<div id="fig-t306p_anova" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="NMDAR binding is critical for T306 phosphorylation of CaMKII">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-t306p_anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\statistics\t306p_anova.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;6.16: NMDAR binding is critical for T306 phosphorylation of CaMKII, while T286 phosphorylation has no significant effect. Boxplot showing final camkii_t306p molecule counts for WT, T286 mutant (T286_MT), and NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) models. Individual simulation runs are shown as dots; boxes indicate the interquartile range, with solid lines denoting the median and dashed lines the mean. A one-way ANOVA revealed a significant overall effect (F = 77.035, p = 7.674e–10), with Tukey’s HSD post hoc test confirming significantly reduced T306 phosphorylation in the NMDAR_CaMKII_MT compared to both WT and T286_MT (***), while the difference between WT and T286_MT was not statistically significant (ns). This suggests that NMDAR-CaMKII interactions, but not T286 phosphorylation status, are critical for enabling T306 phosphorylation."><img src="40-results-figures\statistics\t306p_anova.png" class="img-fluid figure-img" data-fig-scap="NMDAR binding is critical for T306 phosphorylation of CaMKII" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t306p_anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.16: NMDAR binding is critical for T306 phosphorylation of CaMKII, while T286 phosphorylation has no significant effect. Boxplot showing final camkii_t306p molecule counts for WT, T286 mutant (T286_MT), and NMDAR/CaMKII binding mutant (NMDAR_CaMKII_MT) models. Individual simulation runs are shown as dots; boxes indicate the interquartile range, with solid lines denoting the median and dashed lines the mean. A one-way ANOVA revealed a significant overall effect (F = 77.035, p = 7.674e–10), with Tukey’s HSD post hoc test confirming significantly reduced T306 phosphorylation in the NMDAR_CaMKII_MT compared to both WT and T286_MT (***), while the difference between WT and T286_MT was not statistically significant (ns). This suggests that NMDAR-CaMKII interactions, but not T286 phosphorylation status, are critical for enabling T306 phosphorylation.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="t286-phosphorylation-does-not-influence-the-binding-of-camkii-to-nmdars" class="level4">
+<h4 class="anchored" data-anchor-id="t286-phosphorylation-does-not-influence-the-binding-of-camkii-to-nmdars">T286 phosphorylation does not influence the binding of CaMKII to NMDARs</h4>
+<p>As shown in <a href="#fig-nmdar_MTvsWT" class="quarto-xref">Figure&nbsp;<span>6.17</span></a>, both the T286 mutant model and the wild-type (WT) eventually plateau at 30 bound CaMKII/NMDAR complexes. This indicates that, despite the absence of T286 phosphorylation in the mutant model, the number of CaMKII subunits bound to NMDARs reaches the same final value as in the WT. This observation further strengthens the idea that NMDAR binding plays a critical role in promoting T286 phosphorylation of CaMKII, while the phosphorylation state of T286 does not influence the ability of CaMKII to bind to NMDARs. Furthermore, as observed in the WT runs above (refer back to <a href="#fig-t306p-nmdar-binding" class="quarto-xref">Figure&nbsp;<span>6.11</span></a>), CaMKII can bind to NMDARs in an unphosphorylated state, providing additional support for the conclusion that, in the model used here, NMDAR binding is a key driver of T286 phosphorylation but not the other way around.</p>
+<div id="fig-nmdar_MTvsWT" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="NMDAR binding reaches full saturation in both WT and NMDAR/CaMKII mutant models">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nmdar_MTvsWT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="40-results-figures\statistics\nmdar_MTvsWT.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;6.17: NMDAR binding reaches full saturation in both WT and NMDAR/CaMKII mutant models. Shaded areas indicate the standard deviation. Both models ultimately reach a plateau of 30 bound CaMKII/NMDAR complexes. Due to the lack of variability in the final molecule count (both reach 30 with no variance), statistical comparisons of the end-point data are not shown."><img src="40-results-figures\statistics\nmdar_MTvsWT.png" class="img-fluid figure-img" data-fig-scap="NMDAR binding reaches full saturation in both WT and NMDAR/CaMKII mutant models" data-fig-pos="H"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nmdar_MTvsWT-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.17: NMDAR binding reaches full saturation in both WT and NMDAR/CaMKII mutant models. Shaded areas indicate the standard deviation. Both models ultimately reach a plateau of 30 bound CaMKII/NMDAR complexes. Due to the lack of variability in the final molecule count (both reach 30 with no variance), statistical comparisons of the end-point data are not shown.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="sec-discussion" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-discussion"><span class="header-section-number">6.3</span> Discussion, limitations and future directions</h2>
+<p>An overarching aim of this study was to investigate how the functional states of CaMKII—particularly through its phosphorylation and binding to NMDARs—affect the stability of the CaMKII/NMDAR complex and its role in synaptic signalling. To address this, I examined how the interaction between CaMKII and NMDARs influences CaMKII activity and function, using an in silico mutation model where CaMKII–NMDAR binding is disrupted. Likewise, I explored how CaMKII phosphorylation impacts its binding to NMDARs by investigating a model in which CaMKII cannot be phosphorylated at the T286 site. The following discussion will interpret the results from these <em>in silico</em> mutation models, assess their relevance to the original research questions, and highlight how these findings contribute to a deeper understanding of the molecular processes underlying synaptic plasticity.</p>
+<p>Previous studies have shown that transient CaMKII activity induces a reversible, CaM-dependent binding of GluN2B to the substrate-binding site within CaMKII’s catalytic domain. Additionally, prolonged CaMKII activation leads to a persistent interaction between GluN2B and the T286 phospho-site on CaMKII, which locks CaMKII in an active conformation. Moreover, studies have shown that even if CaM dissociates, CaMKII can remain active and have autonomous activity without CaM <span class="citation" data-cites="braun1995Multifunctional miller1986Regulation coultrap2010CaMKIIa buard2010CaMKII chang2017CaMKII">(<a href="references.html#ref-braun1995Multifunctional" role="doc-biblioref">Braun and Schulman 1995</a>; <a href="references.html#ref-miller1986Regulation" role="doc-biblioref">Miller and Kennedy 1986</a>; <a href="references.html#ref-coultrap2010CaMKIIa" role="doc-biblioref">Coultrap et al. 2010</a>; <a href="references.html#ref-buard2010CaMKII" role="doc-biblioref">Buard et al. 2010</a>; <a href="references.html#ref-chang2017CaMKII" role="doc-biblioref">Chang et al. 2017</a>)</span>. The results observed in this model are in line with these findings reported in the literature. The results show that CaMKII can maintain its open, active conformation through interactions with NMDARs, even in the absence of CaM. Notably, in the NMDAR/CaMKII MT model, there is a significant reduction in the proportion of CaMKII that remains in the open, active state when compared with both the WT and T286A MT models. This finding aligns with the literature proposal that NMDAR binding plays a critical role in stabilising CaMKII in its active conformation <span class="citation" data-cites="bayer2001Interaction bayer2006Transitionb nicoll2023Synaptic">(<a href="references.html#ref-bayer2001Interaction" role="doc-biblioref">K.-Ulrich Bayer et al. 2001b</a>; <a href="references.html#ref-bayer2006Transitionb" role="doc-biblioref">K. Ulrich Bayer et al. 2006</a>; <a href="references.html#ref-nicoll2023Synaptic" role="doc-biblioref">Nicoll and Schulman 2023</a>)</span>.</p>
+<p>Moreover, the NMDAR/CaMKII mutant model shows a substantial decrease in the amount of CaMKII in its open, active form when compared to both the WT and T286 mutant models. This suggests that NMDAR binding is integral to maintaining CaMKII in its open conformation. While the T286 mutation also leads to a reduction in CaMKII openness, consistent with the established role of autophosphorylation at T286 in promoting autonomous activity, the effect is notably less severe than that observed in the NMDAR-binding mutant. This aligns with prior findings indicating that CaMKII binding to GluN2B induces a conformational change that sustains kinase activity even in the absence of T286 phosphorylation.</p>
+<p>CaMKII opening is also reduced when T286 phosphorylation is abolished, but this effect is less pronounced than in the NMDAR/CaMKII binding-deficient mutant. Previous studies have shown that CaMKII binding to GluN2B triggers a conformational change that enables the enzyme to remain autonomously active <span class="citation" data-cites="bayer2001Interaction barcomb2016CaMKIIa">(<a href="references.html#ref-bayer2001Interaction" role="doc-biblioref">K.-Ulrich Bayer et al. 2001b</a>; <a href="references.html#ref-barcomb2016CaMKIIa" role="doc-biblioref">Barcomb et al. 2016</a>)</span>, even in the absence of T286 phosphorylation. This is consistent with the significant decrease in CaMKII open state observed in Figure 6.16 for the NMDAR/CaMKII mutant, compared to the relatively smaller effect seen in the T286A mutant. Even without T286 phosphorylation, CaMKII opening is less disrupted than when NMDAR/CaMKII binding is completely abolished. Thus, the data support a model in which NMDAR binding serves as the primary mechanism for maintaining CaMKII in its open state, while T286 phosphorylation provides a secondary stabilising influence. The more substantial loss of open CaMKII in the NMDAR/CaMKII mutant, compared to the T286 mutant, reinforces the idea that membrane anchoring to NMDARs is functionally dominant in regulating CaMKII conformational dynamics under these conditions.</p>
+<p>In the model at hand, it appears that an entire CaMKII holoenzyme initially binds to a single NMDAR, with subsequent subunits from the same holoenzyme engaging with adjacent NMDARs. This effectively results in one holoenzyme binding to and “trapping” up to 12 NMDARs simultaneously, where we observed a stepwise increase in CaMKII binding across three phases, indicating that individual holoenzymes sequentially bind to available NMDARs (<a href="#fig-camkii-opening-nmdar" class="quarto-xref">Figure&nbsp;<span>6.4 (b)</span></a>). Given the structure and known conformations of the CaMKII holoenzyme, such multivalent binding across multiple receptors seems unlikely. It is more plausible that only one or possibly two subunits from a single holoenzyme engage with NMDARs, due to spatial limitations imposed by the protein’s quaternary structure <span class="citation" data-cites="bayer2001Interaction ozden2022CaMKII">(<a href="references.html#ref-bayer2001Interaction" role="doc-biblioref">K.-Ulrich Bayer et al. 2001b</a>; <a href="references.html#ref-ozden2022CaMKII" role="doc-biblioref">Özden et al. 2022</a>)</span>.</p>
+<p>This mode of binding arises from the way reaction rules are encoded in the model, as it does not prevent multiple CaMKII subunits within a holoenzyme from binding to NMDARs simultaneously. A potential improvement for future work would be to introduce a rule where only one CaMKII subunit per holoenzyme can bind to an NMDAR, which would increase the likelihood of different CaMKII holoenzymes interacting with NMDARs. By limiting the binding to one subunit per holoenzyme, there would be more CaMKII holoenzymes available in the vicinity of NMDARs, rather than a single holoenzyme trying to bind to multiple receptors at once. This would allow for a more distributed interaction where multiple holoenzymes could engage with a set of receptors, rather than a single holoenzyme “trapping” all the receptors.</p>
+<p>An intriguing observation in the results of this model is the emergent behaviour of CaM trapping. CaM trapping refers to the phenomenon whereby phosphorylation of CaMKII at T286 increases its affinity for CaM, preventing the dissociation of the complex <span class="citation" data-cites="cook2021CaMKIIb goodell2017DAPK1 goodell2017DAPK1">(<a href="references.html#ref-cook2021CaMKIIb" role="doc-biblioref">Cook et al. 2021</a>; <a href="references.html#ref-goodell2017DAPK1" role="doc-biblioref">Goodell et al. 2017</a>, <a href="references.html#ref-goodell2017DAPK1" role="doc-biblioref">2017</a>)</span>. This effect has not been explicitly encoded into the current model, as we have not specified an increased affinity for CaM upon T286 phosphorylation. Despite this, we observe that autophosphorylation at T286 does indeed promote CaM binding. Interestingly, when T286 phosphorylation is abolished, the binding of CaM is reduced. In contrast, the NMDAR/CaMKII mutant model does not show a decrease in CaM binding, likely because this mutant still retains T286 phosphorylation, which is what seems to be important for CaM binding. In summary, although the model does not explicitly incorporate the usual increase in affinity for CaM upon T286 phosphorylation, the phosphorylation event itself plays a significant role in promoting CaM binding, likely by maintaining CaMKII in its open state.</p>
+<p>Although both T286 phosphorylation and NMDAR binding contribute to maintaining CaMKII in its open state, T286 phosphorylation appears to play a more critical role in facilitating CaM binding. This is likely due to the fact that T286 phosphorylation is leading to this emergent CaM trapping behaviour, whereas NMDAR binding keeps CaMKII in an open conformation independently of CaM. Furthermore, NMDAR binding not only stabilises the open conformation of CaMKII but also promotes further phosphorylation at T286 and T306, with the latter competing for the CaM binding site. Therefore, when T286 phosphorylation is abolished, CaM binding decreases, as the phosphorylation event at T286 is the primary mechanism that facilitates CaM binding by keeping CaMKII in its open state. In contrast, when NMDAR binding is disrupted, the main mechanism for CaM binding —T286 phosphorylation— remains intact, and as a result, CaM binding is preserved (refer back to <a href="#fig-CaMKII_CaM_Ca4_anova" class="quarto-xref">Figure&nbsp;<span>6.13</span></a>).</p>
+<p>There is ongoing debate on the role of T306 phosphorylation in synaptic plasticity <span class="citation" data-cites="hanson1992Inhibitory colbran1993Inactivation cook2021CaMKIIb">(<a href="references.html#ref-hanson1992Inhibitory" role="doc-biblioref">Hanson and Schulman 1992</a>; <a href="references.html#ref-colbran1993Inactivation" role="doc-biblioref">Colbran 1993</a>; <a href="references.html#ref-cook2021CaMKIIb" role="doc-biblioref">Cook et al. 2021</a>)</span>. As discussed in <a href="20-intro-biology.html" class="quarto-xref"><span>Chapter 1</span></a>, the experimental literature remains divided on whether T305/306 phosphorylation alone inhibits LTP and facilitates long-term depression LTD, or if its effects are mediated in concert with the activation of competing kinases, such as DAPK1, which play a role in regulating these bidirectional processes. In the model presented here, the majority of T306 phosphorylation is driven by NMDAR binding. This is an intriguing finding, as it may suggest that NMDAR signalling plays a critical role not only in maintaining CaMKII in an open, CaM-free conformation, but also in enabling downstream T306 phosphorylation. However, these results should be interpreted cautiously, as they could be an artefact of the model, given the way CaMKII is binding to NMDARs (one holoenzyme can bind multiple NMDARs). Future studies should consider testing the proposal that only one CaMKII subunit binds per NMDAR, as well as incorporating CaMKII’s competing kinase, DAPK1, to further regulate CaMKII binding and T306 phosphorylation. DAPK1 has been shown to directly phosphorylate CaMKII at T306 and displace it from NMDARs, suggesting it plays a critical antagonistic role in regulating CaMKII-NMDAR interactions and synaptic plasticity outcomes. Including DAPK1 would allow the model to test how kinase competition dynamically regulates CaMKII activity and subunit phosphorylation, especially under conditions favouring LTD induction.</p>
+<p>Previous studies have shown that CaMKII binding to NMDARs can induce a conformational change that preserves CaMKII’s autonomous activity, even in the absence of T286 phosphorylation <span class="citation" data-cites="bayer2001Interaction">(<a href="references.html#ref-bayer2001Interaction" role="doc-biblioref">K.-Ulrich Bayer et al. 2001b</a>)</span>. Suggesting that CaMKII could remain active and NMDAR-bound even after dephosphorylation at T286, highlighting the critical role of NMDAR-induced CaMKII opening. However, in the current model, this scenario is not observed: CaMKII subunits bound to NMDARs consistently remain phosphorylated at T286. This discrepancy may, in part, stem from the relatively low PP1 concentration used in the model. Empirical studies report neuronal PP1 concentrations ranging from 1–10 <span class="math inline">\(\mu\text{M}\)</span> <span class="citation" data-cites="cohen2002Protein">(<a href="references.html#ref-cohen2002Protein" role="doc-biblioref">Cohen 2002</a>)</span>, with CaMKII concentrations around 5 <span class="math inline">\(\mu\text{M}\)</span>, yielding a physiologically relevant ratio of approximately 5:1. In contrast, the current model uses a PP1 concentration of 0.039 <span class="math inline">\(\mu\text{M}\)</span> and a CaMKII concentration of 2.36 <span class="math inline">\(\mu\text{M}\)</span>, resulting in a CaMKII:PP1 ratio of roughly 60:1. This may bias the system towards sustained phosphorylation and kinase dominance. Future versions of the model should consider incorporating higher PP1 concentrations to better reflect the CaMKII to PP1 ratio. Moreover, it has been suggested that PP1 binding is sterically hindered when CaM is bound to CaMKII <span class="citation" data-cites="pharris2019Multistate">(<a href="references.html#ref-pharris2019Multistate" role="doc-biblioref">Pharris et al. 2019</a>)</span>, implying that CaMKII-NMDAR complexes with unbound CaM may be more accessible to PP1. Thus, future refinements to the model could include this regulatory mechanism to account for a more detailed spatial and allosteric regulation of PP1 access, particularly in the context of CaM dissociation and subunit-specific interactions within CaMKII-NMDAR complexes.</p>
+<p>Likewise, although the current model uses biologically plausible molecular concentrations (as discussed in <a href="20-intro-biology.html" class="quarto-xref"><span>Chapter 1</span></a>), future adaptations of this model should consider optimising them further, especially calcium and CaMKII concentrations as they reflect lower end of reported concentrations <span class="citation" data-cites="brette2012Handbook zheng2018Monitoring otmakhov2012Measuring lee2009Activation feng2011Quantitative otmakhov2012Measuring">(<a href="references.html#ref-brette2012Handbook" role="doc-biblioref">Brette and Destexhe 2012</a>; <a href="references.html#ref-zheng2018Monitoring" role="doc-biblioref">Zheng, Jensen, and Rusakov 2018</a>; <a href="references.html#ref-otmakhov2012Measuring" role="doc-biblioref">Otmakhov and Lisman 2012</a>, <a href="references.html#ref-otmakhov2012Measuring" role="doc-biblioref">2012</a>; <a href="references.html#ref-lee2009Activation" role="doc-biblioref">Lee et al. 2009</a>; <a href="references.html#ref-feng2011Quantitative" role="doc-biblioref">Feng, Raghavachari, and Lisman 2011</a>)</span>. Increasing these concentrations would not only elevate total molecular outputs but also enhance the likelihood of key interactions, such as CaMKII binding to NMDARs or CaM. For example, increasing calcium concentrations could facilitate full CaM saturation and promote more extensive CaMKII phosphorylation, potentially aligning better with experimentally observed dynamics. Conversely, if increasing molecular concentrations yields no significant change in outputs, this would serve as evidence for the model’s robustness to variations in input conditions.</p>
+<p>Furthermore, future implementations could introduce calcium pulses to enable the model to more accurately investigate how the timing, frequency, and amplitude of calcium signals influence downstream molecular interactions, such as CaM binding and CaMKII phosphorylation. In the present study, the model simulates a single calcium stimulus to initiate signalling events. Future model developments could incorporate repetitive calcium bursts—akin to the approach used by <span class="citation" data-cites="chang2019Mechanismsa">(<a href="references.html#ref-chang2019Mechanismsa" role="doc-biblioref">Chang et al. 2019</a>)</span>—designed to emulate theta burst stimulation, a well-established protocol for inducing LTP. Incorporating such bursts would allow for the investigation of threshold effects (e.g., how many pulses are required for full CaMKII activation and sustained LTP). It would also enable exploration of further temporal integration, a key feature of CaMKII, which responds not just to the presence of calcium signals but also to their frequency and duration, thereby shaping downstream signalling outcomes <span class="citation" data-cites="chang2017CaMKII">(<a href="references.html#ref-chang2017CaMKII" role="doc-biblioref">Chang et al. 2017</a>)</span>. As a potential direction for this future implementation, calcium pulses could be incorporated directly into the BNGL file using time-dependent functions.</p>
+<p>In addition to the proposed biochemical refinements, future adaptations of the model could benefit from incorporating spatial visualisation using MCell’s viz_output feature in CellBlender <span class="citation" data-cites="gupta2018Spatial">(<a href="references.html#ref-gupta2018Spatial" role="doc-biblioref">Gupta et al. 2018</a>)</span>. This would allow the model to move beyond abstract molecule counts and provide an intuitive, dynamic representation of molecular interactions within a defined spatial environment. Such visualisations can help identify spatial effects—such as molecular crowding, diffusion limitations, or compartmental segregation—that may influence the behaviour of key species like CaMKII, CaM, or PP1. For example, experimental evidence has shown that mutations disrupting CaMKII binding to NMDARs reduces CaMKII accumulation at synapses following LTP induction <span class="citation" data-cites="bayer2001Interactiona">(<a href="references.html#ref-bayer2001Interactiona" role="doc-biblioref">K.-Ulrich Bayer et al. 2001a</a>)</span>, which could be effectively visualised and explored in future models. For example, experimental evidence has shown that mutations disrupting CaMKII binding to NMDARs reduces CaMKII accumulation at synapses following LTP induction <span class="citation" data-cites="bayer2001Interactiona">(<a href="references.html#ref-bayer2001Interactiona" role="doc-biblioref">K.-Ulrich Bayer et al. 2001a</a>)</span>, which could be effectively visualised and explored in future models. Although preliminary simulation runs with visual output were conducted, time constraints precluded their full integration and analysis in the present study. Nevertheless, spatial visualisation remains a valuable avenue for expanding the interpretability and realism of future CaMKII-NMDAR models.</p>
+<p>Furthermore, future implementations could introduce calcium pulses would allow the model to more accurately explore how the timing, frequency, and amplitude of calcium signals influence downstream molecular interactions, such as CaM binding and CaMKII phosphorylation. In the current study, the model simulates the release of a single calcium stimulus to initiate signalling events. Future implementations could incorporate repetitive calcium bursts, perhaps similarly to what <span class="citation" data-cites="chang2019Mechanismsa">(<a href="references.html#ref-chang2019Mechanismsa" role="doc-biblioref">Chang et al. 2019</a>)</span> did, designed to emulate theta burst stimulation, which is a well established protocol for inducing LTP. Implementing calcium bursts in this form would allow the exploration of threshold effects (e.g., how many pulses are required for full CaMKII activation and sustained LTP) and would enable probing of temporal integration, a hallmark feature of CaMKII, which can decode the frequency and duration of calcium transients to determine downstream signalling outcomes.</p>
+<p>Recent research suggests that the CaMKII/NMDAR complex may facilitate activity-dependent CaMKII incorporation into postsynaptic sites, acting as a structural seed to recruit PSD proteins and promote synapse remodelling and plasticity <span class="citation" data-cites="kim2016Interplay ozden2022CaMKII">(<a href="references.html#ref-kim2016Interplay" role="doc-biblioref">Kim et al. 2016</a>; <a href="references.html#ref-ozden2022CaMKII" role="doc-biblioref">Özden et al. 2022</a>)</span>. Ultimately, any structural CaMKII mechanism will also involve CaMKII’s interactions with filamentous (F)-actin cytoskeleton in dendritic spines. A promising future direction could be to explore the dynamic reshaping of the cytoskeleton in dendritic neurons, potentially using BioDynaMo (Biology Dynamics Modeller) <span class="citation" data-cites="breitwieser2021BioDynaMo">(<a href="references.html#ref-breitwieser2021BioDynaMo" role="doc-biblioref">Breitwieser et al. 2021</a>)</span> to model these processes.</p>
+<p>Similar to MCell, BioDynaMo is an agent-based modelling tool that enables the simulation of 3D biophysical molecular interactions <span class="citation" data-cites="breitwieser2021BioDynaMo">(<a href="references.html#ref-breitwieser2021BioDynaMo" role="doc-biblioref">Breitwieser et al. 2021</a>)</span>. However, unlike MCell, BioDynaMo supports dynamic geometry modelling, allowing the simulation of geometries that change in size or shape during the simulation. In contrast, MCell uses static and predefined geometries that remain fixed throughout the simulation process. For dynamic changes such as geometry growth, shrinkage, or reshaping, BioDynaMo offers significant advantages. While MCell and BioNetGen allow for the modelling of multimeric protein dynamics using a rule-based approach (which BioDynaMo lacks), BioDynaMo’s capability to model dynamic geometry is a key strength. Notably, BioNetGen can export models written in BNGL to the SBML format, enabling interoperability with BioDynaMo. This allows for the integration of BioNetGen’s rule-based modelling strengths with BioDynaMo’s advanced capabilities for dynamic geometry simulations, creating an ideal platform for modelling both molecular interactions and structural changes in the cytoskeleton.</p>
+<p>To demonstrate the possibility of using BioDynaMo as a tool to simulate neuronal growth through formation of an actin cytoskeleton inside dendritic spines, I helped with supervision of a project that carried out by Adrian Trajlinek <span class="citation" data-cites="trajlinek2022How">(<a href="references.html#ref-trajlinek2022How" role="doc-biblioref">Trajlinek 2022</a>)</span>. The model works with actin filaments represented as molecular agents with cylindrical shapes. These can then be modelled to support tree-like structures that can branch out, sever, polymerize and depolymerize in similar manners to the biological equivalent. Overall, this project provided proof of concept that actin dynamics can be modelled in BioDynaMo, and further research can be developed from here onwards. Tools like MCell+CellBlender, BioDynaMo and RuleBender provide an exciting prospect of modelling how the morphology of dendritic spines changes during synaptic plasticity. Together, they provide tools to build a general-purpose platform for large-scale biological simulations.</p>
+</section>
+<section id="conclusion" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Conclusion</h1>
+<p>The <em>in silico</em> models presented in this research suggest that NMDAR binding constitutes an early and important mechanism for maintaining CaMKII in its open, active conformation. The mode of CaMKII binding, whereby the holoenzyme anchors itself to NMDARs, underscores the potential role of its dodecameric structure as a molecular scaffold, locally organising and stabilising signalling complexes. This structural arrangement may contribute to the spatial coordination of signalling molecules during LTP, offering a potential mechanism by which CaMKII supports activity-dependent synaptic strengthening.</p>
+<p>As outlined in the discussion, further investigations are warranted to elucidate the precise dynamics and constraints governing CaMKII–NMDAR interactions, particularly in the context of subunit accessibility and spatial organisation. Additionally, the simulations revealed distinct contributions of NMDAR binding and T286 autophosphorylation to CaM binding dynamics: while NMDAR-mediated activation appears largely independent of CaM, T286 phosphorylation facilitates and stabilises CaM association with CaMKII. Finally, the findings indicate that NMDAR binding not only maintains CaMKII in an open conformation but also promotes phosphorylation at T286 and T306 sites. These results collectively support a model in which NMDARs serve as pivotal regulators of CaMKII activation, both structurally and biochemically.</p>
+<p>In addition to the biological findings, this PhD has placed considerable emphasis on the principles of reproducibility, research integrity, and ethical responsibility. These values were integrated throughout the research process, from model development and data analysis to documentation and dissemination. In particular, this work serves as a case study in how computational neuroscience can be conducted with a strong commitment to transparency and responsible research practices.</p>
+<p>Issues such as data hazard classification, future societal implications, and ethical foresight were actively considered and discussed in detail. These reflections highlight that, while computational modelling may seem distant from direct experimental risks, it too carries responsibilities. Addressing these challenges is not without complexity or time costs, but as with all rigorous science, I believe the investment in doing so with integrity is worthwhile.It is my hope that this thesis contributes not only to the scientific understanding of CaMKII–NMDAR signalling in memory-related processes; but also offers a useful example for how to embed reproducibility and ethics into research. Reproducible and ethically grounded research should not be viewed as an idealistic add-on, but as an integral part of good science, something achievable, impactful, and worth striving for. This has been the guiding principle throughout this PhD, and it is what I have consistently aimed to uphold.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-barcomb2016CaMKIIa" class="csl-entry" role="listitem">
+Barcomb, Kelsey, Johannes W. Hell, Tim A. Benke, and K. Ulrich Bayer. 2016. <span>“The <span>CaMKII</span>/<span>GluN2B Protein Interaction Maintains Synaptic Strength</span> *.”</span> <em>Journal of Biological Chemistry</em> 291 (31): 16082–89. <a href="https://doi.org/10.1074/jbc.M116.734822">https://doi.org/10.1074/jbc.M116.734822</a>.
+</div>
+<div id="ref-bayer2006Transitionb" class="csl-entry" role="listitem">
+Bayer, K. Ulrich, Eric LeBel, Greg L. McDonald, Heather O’Leary, Howard Schulman, and Paul De Koninck. 2006. <span>“Transition from Reversible to Persistent Binding of <span>CaMKII</span> to Postsynaptic Sites and <span>NR2B</span>.”</span> <em>J Neurosci</em> 26 (4): 1164–74. <a href="https://doi.org/10.1523/JNEUROSCI.3116-05.2006">https://doi.org/10.1523/JNEUROSCI.3116-05.2006</a>.
+</div>
+<div id="ref-bayer2001Interaction" class="csl-entry" role="listitem">
+Bayer, K.-Ulrich, Paul De Koninck, A. Soren Leonard, Johannes W. Hell, and Howard Schulman. 2001b. <span>“Interaction with the <span>NMDA</span> Receptor Locks <span>CaMKII</span> in an Active Conformation.”</span> <em>Nature</em> 411 (6839): 801–5. <a href="https://doi.org/10.1038/35081080">https://doi.org/10.1038/35081080</a>.
+</div>
+<div id="ref-bayer2001Interactiona" class="csl-entry" role="listitem">
+———. 2001a. <span>“Interaction with the <span>NMDA</span> Receptor Locks <span>CaMKII</span> in an Active Conformation.”</span> <em>Nature</em> 411 (6839): 801–5. <a href="https://doi.org/10.1038/35081080">https://doi.org/10.1038/35081080</a>.
+</div>
+<div id="ref-bhattacharyya2020Flexible" class="csl-entry" role="listitem">
+Bhattacharyya, Moitrayee, Young Kwang Lee, Serena Muratcioglu, Baiyu Qiu, Priya Nyayapati, Howard Schulman, Jay T Groves, and John Kuriyan. 2020. <span>“Flexible Linkers in <span>CaMKII</span> Control the Balance Between Activating and Inhibitory Autophosphorylation.”</span> Edited by Tony Hunter, Jonathan A Cooper, John D Scott, and Stefan Knapp. <em>eLife</em> 9 (March): e53670. <a href="https://doi.org/10.7554/eLife.53670">https://doi.org/10.7554/eLife.53670</a>.
+</div>
+<div id="ref-braun1995Multifunctional" class="csl-entry" role="listitem">
+Braun, A. P., and H. Schulman. 1995. <span>“The Multifunctional Calcium/Calmodulin-Dependent Protein Kinase: From Form to Function.”</span> <em>Annu Rev Physiol</em> 57: 417–45. <a href="https://doi.org/10.1146/annurev.ph.57.030195.002221">https://doi.org/10.1146/annurev.ph.57.030195.002221</a>.
+</div>
+<div id="ref-breitwieser2021BioDynaMo" class="csl-entry" role="listitem">
+Breitwieser, Lukas, Ahmad Hesam, Jean de Montigny, Vasileios Vavourakis, Alexandros Iosif, Jack Jennings, Marcus Kaiser, et al. 2021. <span>“<span>BioDynaMo</span>: A Modular Platform for High-Performance Agent-Based Simulation.”</span> <em>Bioinformatics</em> 38 (2): 453–60. <a href="https://doi.org/10.1093/bioinformatics/btab649">https://doi.org/10.1093/bioinformatics/btab649</a>.
+</div>
+<div id="ref-brette2012Handbook" class="csl-entry" role="listitem">
+Brette, Romain, and Alain Destexhe. 2012. <em>Handbook of <span>Neural Activity Measurement</span></em>. Cambridge University Press. <a href="https://books.google.com?id=YLyGmfVuBsIC">https://books.google.com?id=YLyGmfVuBsIC</a>.
+</div>
+<div id="ref-buard2010CaMKII" class="csl-entry" role="listitem">
+Buard, Isabelle, Steven J. Coultrap, Ronald K. Freund, Yong-Seok Lee, Mark L. Dell’Acqua, Alcino J. Silva, and K. Ulrich Bayer. 2010. <span>“<span>CaMKII</span> <span>‘<span>Autonomy</span>’</span> <span>Is Required</span> for <span>Initiating But Not</span> for <span>Maintaining Neuronal Long-Term Information Storage</span>.”</span> <em>J. Neurosci.</em> 30 (24): 8214–20. <a href="https://doi.org/10.1523/JNEUROSCI.1469-10.2010">https://doi.org/10.1523/JNEUROSCI.1469-10.2010</a>.
+</div>
+<div id="ref-chang2019Mechanismsa" class="csl-entry" role="listitem">
+Chang, Jui-Yun, Yoshihisa Nakahata, Yuki Hayano, and Ryohei Yasuda. 2019. <span>“Mechanisms of <span>Ca2</span>+/Calmodulin-Dependent Kinase <span>II</span> Activation in Single Dendritic Spines.”</span> <em>Nat Commun</em> 10 (1): 2784. <a href="https://doi.org/10.1038/s41467-019-10694-z">https://doi.org/10.1038/s41467-019-10694-z</a>.
+</div>
+<div id="ref-chang2017CaMKII" class="csl-entry" role="listitem">
+Chang, Jui-Yun, Paula Parra-Bueno, Tal Laviv, Erzsebet M. Szatmari, Seok-Jin R. Lee, and Ryohei Yasuda. 2017. <span>“<span>CaMKII Autophosphorylation Is Necessary</span> for <span>Optimal Integration</span> of <span>Ca2</span>+ <span>Signals</span> During <span>LTP Induction</span>, but <span>Not Maintenance</span>.”</span> <em>Neuron</em> 94 (4): 800–808.e4. <a href="https://doi.org/10.1016/j.neuron.2017.04.041">https://doi.org/10.1016/j.neuron.2017.04.041</a>.
+</div>
+<div id="ref-cohen2002Protein" class="csl-entry" role="listitem">
+Cohen, Patricia T. W. 2002. <span>“Protein Phosphatase 1–Targeted in Many Directions.”</span> <em>J Cell Sci</em> 115 (January): 241–56. <a href="https://doi.org/10.1242/jcs.115.2.241">https://doi.org/10.1242/jcs.115.2.241</a>.
+</div>
+<div id="ref-colbran1993Inactivation" class="csl-entry" role="listitem">
+Colbran, R. J. 1993. <span>“Inactivation of <span>Ca2</span>+/Calmodulin-Dependent Protein Kinase <span>II</span> by Basal Autophosphorylation.”</span> <em>J Biol Chem</em> 268 (10): 7163–70.
+</div>
+<div id="ref-cook2021CaMKIIb" class="csl-entry" role="listitem">
+Cook, S. G., O. R. Buonarati, S. J. Coultrap, and K. U. Bayer. 2021. <span>“<span>CaMKII</span> Holoenzyme Mechanisms That Govern the <span>LTP</span> Versus <span>LTD</span> Decision.”</span> <em>Science Advances</em> 7 (16). <a href="https://doi.org/10.1126/sciadv.abe2300">https://doi.org/10.1126/sciadv.abe2300</a>.
+</div>
+<div id="ref-coultrap2010CaMKIIa" class="csl-entry" role="listitem">
+Coultrap, Steven J., Isabelle Buard, Jaqueline R. Kulbe, Mark L. Dell’Acqua, and K. Ulrich Bayer. 2010. <span>“<span class="nocase">CaMKII Autonomy Is Substrate-dependent</span> and <span>Further Stimulated</span> by <span>Ca2</span>+/<span>Calmodulin</span>*.”</span> <em>Journal of Biological Chemistry</em> 285 (23): 17930–37. <a href="https://doi.org/10.1074/jbc.M109.069351">https://doi.org/10.1074/jbc.M109.069351</a>.
+</div>
+<div id="ref-feng2011Quantitative" class="csl-entry" role="listitem">
+Feng, Bihua, Sridhar Raghavachari, and John Lisman. 2011. <span>“Quantitative Estimates of the Cytoplasmic, <span>PSD</span>, and <span class="nocase">NMDAR-bound</span> Pools of <span>CaMKII</span> in Dendritic Spines.”</span> <em>Brain Research</em> 1419 (October): 46–52. <a href="https://doi.org/10.1016/j.brainres.2011.08.051">https://doi.org/10.1016/j.brainres.2011.08.051</a>.
+</div>
+<div id="ref-goodell2017DAPK1" class="csl-entry" role="listitem">
+Goodell, Dayton J., Vincent Zaegel, Steven J. Coultrap, Johannes W. Hell, and K. Ulrich Bayer. 2017. <span>“<span>DAPK1 Mediates LTD</span> by <span>Making CaMKII</span>/<span>GluN2B Binding LTP Specific</span>.”</span> <em>Cell Reports</em> 19 (11): 2231–43. <a href="https://doi.org/10.1016/j.celrep.2017.05.068">https://doi.org/10.1016/j.celrep.2017.05.068</a>.
+</div>
+<div id="ref-gupta2018Spatial" class="csl-entry" role="listitem">
+Gupta, Sanjana, Jacob Czech, Robert Kuczewski, Thomas M. Bartol, Terrence J. Sejnowski, Robin E. C. Lee, and James R. Faeder. 2018. <span>“Spatial <span>Stochastic Modeling</span> with <span>MCell</span> and <span>CellBlender</span>.”</span> September 30, 2018. <a href="https://doi.org/10.48550/arXiv.1810.00499">https://doi.org/10.48550/arXiv.1810.00499</a>.
+</div>
+<div id="ref-hanson1992Inhibitory" class="csl-entry" role="listitem">
+Hanson, P. I., and H. Schulman. 1992. <span>“Inhibitory Autophosphorylation of Multifunctional <span>Ca2</span>+/Calmodulin-Dependent Protein Kinase Analyzed by Site-Directed Mutagenesis.”</span> <em>J Biol Chem</em> 267 (24): 17216–24.
+</div>
+<div id="ref-kim2016Interplay" class="csl-entry" role="listitem">
+Kim, Karam, Takeo Saneyoshi, Tomohisa Hosokawa, Kenichi Okamoto, and Yasunori Hayashi. 2016. <span>“Interplay of Enzymatic and Structural Functions of <span>CaMKII</span> in Long-Term Potentiation.”</span> <em>Journal of Neurochemistry</em> 139 (6): 959–72. <a href="https://doi.org/10.1111/jnc.13672">https://doi.org/10.1111/jnc.13672</a>.
+</div>
+<div id="ref-lee2009Activation" class="csl-entry" role="listitem">
+Lee, Seok-Jin R., Yasmin Escobedo-Lozoya, Erzsebet M. Szatmari, and Ryohei Yasuda. 2009. <span>“Activation of <span>CaMKII</span> in Single Dendritic Spines During Long-Term Potentiation.”</span> <em>Nature</em> 458 (7236): 299–304. <a href="https://doi.org/10.1038/nature07842">https://doi.org/10.1038/nature07842</a>.
+</div>
+<div id="ref-miller1986Regulation" class="csl-entry" role="listitem">
+Miller, S. G., and M. B. Kennedy. 1986. <span>“Regulation of Brain Type <span>II Ca2</span>+/Calmodulin-Dependent Protein Kinase by Autophosphorylation: A <span>Ca2</span>+-Triggered Molecular Switch.”</span> <em>Cell</em> 44 (6): 861–70. <a href="https://doi.org/10.1016/0092-8674(86)90008-5">https://doi.org/10.1016/0092-8674(86)90008-5</a>.
+</div>
+<div id="ref-nicoll2023Synaptic" class="csl-entry" role="listitem">
+Nicoll, Roger A., and Howard Schulman. 2023. <span>“Synaptic Memory and <span>CaMKII</span>.”</span> <em>Physiol Rev</em> 103 (4): 2897–2945. <a href="https://doi.org/10.1152/physrev.00034.2022">https://doi.org/10.1152/physrev.00034.2022</a>.
+</div>
+<div id="ref-otmakhov2012Measuring" class="csl-entry" role="listitem">
+Otmakhov, Nikolai, and John Lisman. 2012. <span>“Measuring <span>CaMKII</span> Concentration in Dendritic Spines.”</span> <em>Journal of Neuroscience Methods</em> 203 (1): 106–14. <a href="https://doi.org/10.1016/j.jneumeth.2011.09.022">https://doi.org/10.1016/j.jneumeth.2011.09.022</a>.
+</div>
+<div id="ref-otmakhov2015Fast" class="csl-entry" role="listitem">
+Otmakhov, Nikolai, Shaurav Regmi, and John E. Lisman. 2015. <span>“Fast <span>Decay</span> of <span>CaMKII FRET Sensor Signal</span> in <span>Spines</span> After <span>LTP Induction Is Not Due</span> to <span>Its Dephosphorylation</span>.”</span> <em>PLOS ONE</em> 10 (6): e0130457. <a href="https://doi.org/10.1371/journal.pone.0130457">https://doi.org/10.1371/journal.pone.0130457</a>.
+</div>
+<div id="ref-ozden2022CaMKII" class="csl-entry" role="listitem">
+Özden, Can, Roman Sloutsky, Tomohiro Mitsugi, Nicholas Santos, Emily Agnello, Christl Gaubitz, Joshua Foster, et al. 2022. <span>“<span>CaMKII</span> Binds Both Substrates and Activators at the Active Site.”</span> <em>Cell Reports</em> 40 (2). <a href="https://doi.org/10.1016/j.celrep.2022.111064">https://doi.org/10.1016/j.celrep.2022.111064</a>.
+</div>
+<div id="ref-pharris2019Multistate" class="csl-entry" role="listitem">
+Pharris, Matthew C., Neal M. Patel, Tyler G. VanDyk, Thomas M. Bartol, Terrence J. Sejnowski, Mary B. Kennedy, Melanie I. Stefan, and Tamara L. Kinzer-Ursem. 2019. <span>“A Multi-State Model of the <span>CaMKII</span> Dodecamer Suggests a Role for Calmodulin in Maintenance of Autophosphorylation.”</span> <em>PLOS Computational Biology</em> 15 (12): e1006941. <a href="https://doi.org/10.1371/journal.pcbi.1006941">https://doi.org/10.1371/journal.pcbi.1006941</a>.
+</div>
+<div id="ref-pi2010Autonomousa" class="csl-entry" role="listitem">
+Pi, Hyun Jae, Nikolai Otmakhov, David Lemelin, Paul De Koninck, and John Lisman. 2010. <span>“Autonomous <span>CaMKII Can Promote</span> Either <span>Long-Term Potentiation</span> or <span>Long-Term Depression</span>, <span>Depending</span> on the <span>State</span> of <span>T305</span>/<span>T306 Phosphorylation</span>.”</span> <em>J. Neurosci.</em> 30 (26): 8704–9. <a href="https://doi.org/10.1523/JNEUROSCI.0133-10.2010">https://doi.org/10.1523/JNEUROSCI.0133-10.2010</a>.
+</div>
+<div id="ref-sanhueza2013CaMKII" class="csl-entry" role="listitem">
+Sanhueza, Magdalena, and John Lisman. 2013. <span>“The <span>CaMKII</span>/<span>NMDAR</span> Complex as a Molecular Memory.”</span> <em>Molecular Brain</em> 6 (1): 10. <a href="https://doi.org/10.1186/1756-6606-6-10">https://doi.org/10.1186/1756-6606-6-10</a>.
+</div>
+<div id="ref-trajlinek2022How" class="csl-entry" role="listitem">
+Trajlinek, Adrian. 2022. <span>“How Do Connections Between Brain Cells Grow? <span>Implementation</span> of <span>3D</span> Model in <span>BioDynaMo</span> (<span>Not</span> Published).”</span> University of Edinburgh.
+</div>
+<div id="ref-zheng2018Monitoring" class="csl-entry" role="listitem">
+Zheng, Kaiyu, Thomas P. Jensen, and Dmitri A. Rusakov. 2018. <span>“Monitoring Intracellular Nanomolar Calcium Using Fluorescence Lifetime Imaging.”</span> <em>Nat Protoc</em> 13 (3): 581–97. <a href="https://doi.org/10.1038/nprot.2017.154">https://doi.org/10.1038/nprot.2017.154</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./30-model.html" class="pagination-link" aria-label="In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./publications.html" class="pagination-link" aria-label="List of publications and presentations resulting from this PhD">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">List of publications and presentations resulting from this PhD</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
