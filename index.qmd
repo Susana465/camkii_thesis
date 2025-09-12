@@ -82,6 +82,49 @@ This PhD would have not been possible without the amazing support of my supervis
 }
 ```
 
+# List of Abbreviations
+
+| Abbreviation             | Meaning |
+|--------------------------|---------|
+| AMPAR                    |         |
+| BIODYNAMO                |         |
+| BNGL                     |         |
+| BIONETGEN LANGUAGE       |         |
+| CaM                      |         |
+| CALCIUM                  |         |
+| CAMKII                   |         |
+| CREB                     |         |
+| DAPK1                    |         |
+| DOI                      |         |
+| E-LTP                    |         |
+| FAIR                     |         |
+| HPC                      |         |
+| Ko                       |         |
+| L-LTP                    |         |
+| LTD                      |         |
+| LTP                      |         |
+| MAGNESIUM                |         |
+| MCELL                    |         |
+| MT                       |         |
+| Neurogranin              | Ng      |
+| NMDAR                    |         |
+| ODE                      |         |
+| PKC                      |         |
+| PP1                      |         |
+| PP2B                     |         |
+| POTASSIUM                |         |
+| PSD                      |         |
+| PyBNG                    |         |
+| RBM                      |         |
+| SD                       | STANDARD DEVIATION |
+| SODIUM                   |         |
+| SSA                      |         |
+| SBML                     |         |
+| T286                     |         |
+| T305/306                 |         |
+| HARKing                  |         |
+
+
 # Publications and Author Contributions {-}
 Chapter 5 includes a published article titled “Data Hazards as an Ethical Toolkit for Neuroscience”, co-authored with Susana Román García, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. The article was published in the Journal of Neuroethics on 19 February 2025.
 
