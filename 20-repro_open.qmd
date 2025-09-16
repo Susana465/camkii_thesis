@@ -78,7 +78,7 @@ _Data is well-described with rich metadata, making it easier to locate by both h
 ### Accessible
 _Data is stored in a way that ensures users can retrieve it with clear licensing and open protocols_ [@jacobsen2020FAIR].
 
-- The models created during this PhD project are open and accessible through GitHub, with documentation explaining their use and specifications [https://github.com/Susana465/CaMKII_hexa_bgnl_to_mcell].
+- The models created during this PhD project are open and accessible through GitHub, with documentation explaining their use and specifications [<https://github.com/Susana465/CaMKII_hexa_bgnl_to_mcell>].
 - Related to the point above, README files provide clear guidance on protocols and explain how each repository works and what they contain, including licensing where appropriate. 
 - As well as models, workshops and presentations associated with my research are also available in public repositories such as Zenodo (and GitHub). These platforms are invaluable in making the tools and materials I have developed publicly accessible, while also offering mechanisms for proper citation through DOIs and appropriate licensing, where applicable. 
 - Data will be stored in a database, , ensuring long-term accessibility
