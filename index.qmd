@@ -84,46 +84,47 @@ This PhD would have not been possible without the amazing support of my supervis
 
 # List of Abbreviations
 
-| Abbreviation             | Meaning |
-|--------------------------|---------|
-| AMPAR                    |         |
-| BIODYNAMO                |         |
-| BNGL                     |         |
-| BIONETGEN LANGUAGE       |         |
-| CaM                      |         |
-| CALCIUM                  |         |
-| CAMKII                   |         |
-| CREB                     |         |
-| DAPK1                    |         |
-| DOI                      |         |
-| E-LTP                    |         |
-| FAIR                     |         |
-| HPC                      |         |
-| Ko                       |         |
-| L-LTP                    |         |
-| LTD                      |         |
-| LTP                      |         |
-| MAGNESIUM                |         |
-| MCELL                    |         |
-| MT                       |         |
-| Neurogranin              | Ng      |
-| NMDAR                    |         |
-| ODE                      |         |
-| PKC                      |         |
-| PP1                      |         |
-| PP2B                     |         |
-| POTASSIUM                |         |
-| PSD                      |         |
-| PyBNG                    |         |
-| RBM                      |         |
-| SD                       | STANDARD DEVIATION |
-| SODIUM                   |         |
-| SSA                      |         |
-| SBML                     |         |
-| T286                     |         |
-| T305/306                 |         |
-| HARKing                  |         |
+Here is a short explanation of what this table contains.  
 
+\noindent
+\begin{tabularx}{\textwidth}{lX}
+\hline
+Abbreviation & Meaning \\
+\hline
+AMPAR & alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptor \\
+BioDynaMo & Biological Dynamic Modeller \\
+BNGL & BioNetGen Language \\
+CaM & Calmodulin \\
+CaMKII & Calcium/calmodulin-dependent protein kinase II \\
+CREB & cAMP response element-binding protein \\
+DAPK1 & Death-associated protein kinase 1 \\
+DOI & Digital Object Identifier \\
+E-LTP & Early long-term potentiation \\
+FAIR & Findable, Accessible, Interoperable, and Reusable (data principles) \\
+HPC & High-performance computing \\
+L-LTP & Late long-term potentiation \\
+LTD & Long-term depression \\
+LTP & Long-term potentiation \\
+MCELL & Monte Carlo Cell Simulator \\
+MT & Mutant \\
+Ng & Neurogranin (calmodulin-binding protein) \\
+NMDAR & N-methyl-D-aspartate receptor \\
+ODE & Ordinary Differential Equation \\
+PKC & Protein kinase C \\
+PP1 & Protein phosphatase 1 \\
+PP2B & Protein phosphatase 2B (Calcineurin) \\
+PSD & Postsynaptic density \\
+PyBNG & Python interface to BioNetGen \\
+RBM & Rule-based modelling \\
+SD & Standard deviation \\
+SSA & Stochastic Simulation Algorithm \\
+SBML & Systems Biology Markup Language \\
+T286 & Threonine 286 phosphorylation site (on CaMKII) \\
+T305/306 & Threonine 305/306 phosphorylation sites (on CaMKII) \\
+HARKing & Hypothesizing After the Results are Known \\
+WT & Wild Type \\
+\hline
+\end{tabularx}
 
 # Publications and Author Contributions {-}
 Chapter 5 includes a published article titled “Data Hazards as an Ethical Toolkit for Neuroscience”, co-authored with Susana Román García, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. The article was published in the Journal of Neuroethics on 19 February 2025.
