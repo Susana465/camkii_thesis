@@ -81,7 +81,7 @@ _Data is stored in a way that ensures users can retrieve it with clear licensing
 - The models created during this PhD project are open and accessible through GitHub, with documentation explaining their use and specifications [<https://github.com/Susana465/CaMKII_hexa_bgnl_to_mcell>].
 - Related to the point above, README files provide clear guidance on protocols and explain how each repository works and what they contain, including licensing where appropriate. 
 - As well as models, workshops and presentations associated with my research are also available in public repositories such as Zenodo (and GitHub). These platforms are invaluable in making the tools and materials I have developed publicly accessible, while also offering mechanisms for proper citation through DOIs and appropriate licensing, where applicable. 
-- Data will be stored in a database, , ensuring long-term accessibility
+- Data will be stored in a database, ensuring long-term accessibility
 - There are plans for the model to be made available in a platform such as BioModels, which is a freely accessible online repository of mathematical models representing biological and biomedical systems.
 - Research resulting from this PhD has been made publicly accessible through preprints [@garcia2024Data] (Green Open Access, allows access without the need for direct journal fees [@bjork2014Anatomy]), and Open Access publication when publishing in journals [@garcia2025Data], making it permanently free to access online (this is known as Gold Open Access [@borrego2023Article]).
 
