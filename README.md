@@ -3,6 +3,10 @@
 - However, I recommend that in order to get the full rendering of the structure in pdf and html formats, you download and work with Quarto either via VS code or RStudio. 
 - More instructions on how to get started with Quarto can be found [here](https://quarto.org/docs/tools/vscode.html).
 
+## How to read the thesis
+- The thesis is available to download and read in the _book/ directory of this repository. 
+- It is rendered in both .pdf and .doc, which may change its appearance slightly but the content is all there.
+
 ## How to contribute
 - You can branch from 'main' and add/remove content that way, and give feedback by adding comments.
 - You can also render the document into pdf, and add comments that way if you prefer that.
