@@ -16,7 +16,7 @@
 ## Repository and Thesis Structure
 The repository is organized to mirror the structure of the thesis document. The following project file structure provides an overview of the thesis' structure. Consult the code in the repository for a better understanding of how Quarto ties everything together. 
 
-You might find some files in the repository that are not part of the below diagram, this is likely because I have added them as extra notes for myself, or I have not decided yet where to put their content. 
+You might find some files in the repository that are not part of the below diagram, this is likely because I am readjusting the content or I have added files as extra notes for myself...or I have not decided yet where to put their content. 
 
 ```python
 camkii_thesis/               # Root directory
