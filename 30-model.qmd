@@ -39,7 +39,7 @@ $$
 3.32*10^{-6} \text{M}
 $${#eq-molec-concentrations-calc-example}
 
-CaMKII is modelled as a dodecameric molecule, which is biologically accurate. The model contains four protein species: CaM, PP1, CaMKII and NMDARS (@fig-molecule-concentrations). Initial molecules released inside the cell are: $\mathrm{Ca^{2+}}$ ions, CaM, CaMKII and PP1, inside the cytosol, and NMDARs as cell surface molecules. Interactions between different molecules are modelled as rules in BNGL, where each molecule reacts according to specified conditions and kinetic rates (@fig-tbl-1). 
+CaMKII is modelled as a dodecameric molecule, which is biologically accurate. The model contains the following molecules: CaM, PP1, CaMKII, NMDARS, and calcium, each defined with distinct molecular binding sites (@fig-molecule-concentrations). $\mathrm{Ca^{2+}}$ ions, CaM, CaMKII and PP1, are initially released inside the cytosol, and NMDARs are released as cell surface molecules. Interactions between calcium, CaM, and the other molecular species, can be found in @fig-tbl-1.
 
 ![Molecules released into the model, including their defined possible states specified in BioNetGen. Concentrations were calculated using Equation @eq-molec-concentrations-calc, based on a simulation volume of 0.50588 $\mu\text{m}^3$. *Note: 60 CaMKII holoenzymes, each comprising 12 subunits, correspond to a total of 720 subunits (60 × 12).](30-methods-figures\molecule-concentrations.PNG){#fig-molecule-concentrations fig-scap="Molecule concentrations in the model" fig-pos='H'}
 
