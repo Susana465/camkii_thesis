@@ -187,7 +187,7 @@ Below is a list of observables defined for sanity checks, along with a descripti
 - Rationale: CaM binding and T306 phosphorylation are mutually exclusive. T306 lies within the CaM-binding domain of CaMKII, and its phosphorylation prevents CaM association. Thus, the coexistence of CaM and T306 phosphorylation is structurally impossible.
 
 ##### **CaMKII_CaM_Ca4_T306P1**
-- Description: CaMKII bound to Ca⁴⁺-CaM, phosphorylated at T306 only.
+- Description: CaMKII bound to CaM_Ca4 phosphorylated at T306 only.
 - Expected Output: 0
 - Rationale: Similar to the case above, T306 phosphorylation sterically blocks CaM binding. Therefore, this species cannot exist under correct model logic.
 
