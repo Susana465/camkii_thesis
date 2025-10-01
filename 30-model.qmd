@@ -27,7 +27,7 @@ N \, \text{molecules} \times
 \frac{1 \, \text{mol}}{N_A \, \text{molecules}} \times 
 \frac{1}{V(\mu \text{m}^3)} \times 
 \frac{V \, (\mu \text{m}^3)}{V \, (\text{L})} = 
-C_1 \, (\text{M})
+Concentration \, (\text{M})
 $${#eq-molec-concentrations-calc}
 
 The example calculation below considers an initial release of 10000 molecules and a dendritic volume of 0.5 µm³  (@eq-molec-concentrations-calc-example). 
