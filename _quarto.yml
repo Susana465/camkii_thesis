@@ -54,6 +54,7 @@ format:
     lof: false
     number-sections: true
     documentclass: scrreprt
+    keep-tex: true 
     latex_engine: xelatex
     include-in-header:
       text: |
