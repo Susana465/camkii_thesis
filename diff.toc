@@ -1,0 +1,113 @@
+\contentsline {chapter}{Declaration}{2}{chapter*.1}%
+\contentsline {chapter}{Abstract}{3}{chapter*.2}%
+\contentsline {chapter}{Lay Summary}{4}{chapter*.3}%
+\contentsline {chapter}{Acknowledgements}{6}{chapter*.4}%
+\contentsline {chapter}{List of Abbreviations}{9}{chapter*.7}%
+\contentsline {chapter}{Publications and Author Contributions}{10}{chapter*.8}%
+\contentsline {chapter}{Introduction}{11}{chapter*.9}%
+\contentsline {section}{Research objectives of this PhD}{11}{section*.10}%
+\contentsline {section}{Chapters Outline}{12}{section*.11}%
+\contentsline {paragraph}{Chapter 1}{12}{section*.12}%
+\contentsline {paragraph}{Chapter 2}{12}{section*.13}%
+\contentsline {paragraph}{Chapter 3}{12}{section*.14}%
+\contentsline {paragraph}{Chapter 4}{12}{section*.15}%
+\contentsline {paragraph}{Chapter 5}{12}{section*.16}%
+\contentsline {paragraph}{Chapter 6}{13}{section*.17}%
+\contentsline {paragraph}{Chapter 7}{13}{section*.18}%
+\contentsline {paragraph}{Chapter 8}{13}{section*.19}%
+\contentsline {chapter}{\numberline {1}Biological Research Background}{14}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Learning, memory and synaptic plasticity}{14}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Studying synaptic plasticity at the hippocampus}{16}{section.1.2}%
+\contentsline {section}{\numberline {1.3}LTP as an attractive model to explain memory and learning}{16}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Dividing LTP into phases}{17}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Key features of NMDAR-dependent LTP}{19}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Molecular Signalling in LTP: Role of Calcium, CaMKII and Phosphatases}{22}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Biophysical properties of CaMKII}{24}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}CaM binding and T286 phosphorylation}{26}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}CaMKII T305/306 phosphorylation}{28}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}CaMKII association with NMDARs: enzymatic vs structural roles in LTP}{29}{subsection.1.4.3}%
+\contentsline {subsection}{What we don't know}{33}{section*.29}%
+\contentsline {chapter}{\numberline {2}Computational Modelling Background}{35}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Why use computational modelling to study biological systems?}{35}{section.2.1}%
+\contentsline {section}{\numberline {2.2}How do we model biochemical systems networks?}{37}{section.2.2}%
+\contentsline {subsection}{Reaction-based modelling:}{38}{section*.31}%
+\contentsline {subsection}{Deterministic modelling:}{39}{section*.32}%
+\contentsline {subsection}{Stochastic modelling:}{39}{section*.33}%
+\contentsline {section}{\numberline {2.3}Complexity in Systems Biology: Modelling approaches and challenges}{40}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Rule based modelling}{41}{section.2.4}%
+\contentsline {subsection}{BioNetGen: A tool for rule based modelling}{42}{section*.34}%
+\contentsline {subsection}{MCell: A tool for dynamic protein visualisation and modelling}{44}{section*.36}%
+\contentsline {subsubsection}{MCell and BioNetGen integration}{45}{section*.38}%
+\contentsline {subsubsection}{Birds eye view of model inputs and outputs}{47}{section*.41}%
+\contentsline {chapter}{\numberline {3}Open, Reproducible and Ethics-focused PhD}{50}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Reproducibility Definition Used in this PhD}{52}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Open Science}{53}{section.3.2}%
+\contentsline {section}{\numberline {3.3}FAIR Principles for Open and Reproducible Science}{54}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Important steps taken to apply FAIR principles, Open Science by Design and Reproducibility}{54}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Findable:}{54}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Accessible}{55}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Interoperable}{55}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Reusable}{55}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Good Computational Research Practices}{56}{subsection.3.4.5}%
+\contentsline {subsubsection}{Comprehensive Documentation}{56}{section*.44}%
+\contentsline {subsubsection}{Computational Environments}{56}{section*.45}%
+\contentsline {subsubsection}{Prepare for Errors}{57}{section*.47}%
+\contentsline {subsubsection}{Version Control}{58}{section*.48}%
+\contentsline {paragraph}{Gradual Development and Validation}{58}{section*.49}%
+\contentsline {paragraph}{Data Management}{59}{section*.50}%
+\contentsline {paragraph}{Quarto for Version-Controlled Documents}{59}{section*.51}%
+\contentsline {subsubsection}{Automation for Efficacy and Sustainability}{59}{section*.52}%
+\contentsline {section}{\numberline {3.5}Reflections and Future Steps}{60}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Defining Ethical Science}{62}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Why is this important?}{63}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}A personal account: Where it started}{63}{subsection.3.7.1}%
+\contentsline {chapter}{\numberline {4}A Case Study in Ethical Reflection: Data Hazards in this PhD}{66}{chapter.4}%
+\contentsline {section}{Conclusion}{89}{section*.56}%
+\contentsline {chapter}{\numberline {5}In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules}{90}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Previous work}{90}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Model Description}{91}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Molecule concentrations, localization and cell volume}{91}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Biological Plausibility}{92}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Modelling CaMKII as a dodecamer}{93}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}CaMKII and NMDAR binding}{93}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Binding of calcium to calmodulin}{95}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}CaMKII subunits flicker between open and closed states}{96}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Binding of CaM to CaMKII}{97}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}CaMKII phosphorylation and dephosphorylation}{97}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}T286 phosphorylation}{97}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}T306 phosphorylation}{98}{subsection.5.2.10}%
+\contentsline {subsection}{\numberline {5.2.11}Dephosphorylation of CaMKII subunits}{98}{subsection.5.2.11}%
+\contentsline {subsection}{\numberline {5.2.12}Reaction rules and kinetic rates}{99}{subsection.5.2.12}%
+\contentsline {section}{\numberline {5.3}Validating Model Behaviour}{101}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Incremental Construction and Stepwise Validation}{101}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Sanity Checks}{102}{subsection.5.3.2}%
+\contentsline {paragraph}{\nonumberline \textbf {CaMKII\_CaM\_Ca4\_PP}}{103}{paragraph*.66}%
+\contentsline {paragraph}{\nonumberline \textbf {CaMKII\_CaM\_Ca4\_T306P1}}{103}{paragraph*.68}%
+\contentsline {paragraph}{\nonumberline \textbf {CaMKII\_CaM\_closed}}{103}{paragraph*.70}%
+\contentsline {paragraph}{\nonumberline \textbf {CaMKII\_CaM\_unbound\_closed\_T286P1}}{103}{paragraph*.72}%
+\contentsline {paragraph}{\nonumberline \textbf {CaMKII\_closed\_complex}}{103}{paragraph*.74}%
+\contentsline {subsection}{\numberline {5.3.3}Exploration of Uncertain Parameters}{104}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Expected Model Outcomes}{108}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Results of \emph {In Silico} Wild-Type and Mutant Models}{109}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Analysis of the Wild-type model}{109}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}CaM binding and NMDAR binding independently stabilise CaMKII activity in the early stages of the simulation}{109}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Approximately half of CaM binds to calcium within the first 5s}{112}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}CaM stabilises CaMKII in the open conformation, but is not required for CaMKII/NMDAR binding}{114}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}CaMKII subunits remain open and autophosphorylate at T286 upon NMDAR binding, regardless of CaM binding}{117}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}NMDAR binding is the primary driver of T286 phosphorylation}{119}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}NMDAR binding also promotes CaMKII autophosphorylation at T306 site}{120}{subsection.6.1.6}%
+\contentsline {section}{\numberline {6.2}Analysis of the T286 and CaMKII/NMDAR binding mutant models}{123}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}NMDAR binding stabilizes CaMKII open conformation more readily than T286 phosphorylation}{124}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Autophosphorylation at T286 promotes CaM binding but NMDAR binding does not}{125}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}NMDAR binding is the main stabiliser of CaMKII's open state}{127}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}NMDAR binding stabilizes CaMKII open conformation and drives T286 and T306 phosphorylation}{128}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}T286 phosphorylation does not influence the binding of CaMKII to NMDARs}{130}{subsection.6.2.5}%
+\contentsline {chapter}{\numberline {7}Discussion of results?}{132}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Discussion, limitations and future directions}{133}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Summary of project objectives: what have I done to tackle each aim in this PhD?}{133}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Summary of main results}{135}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Discussion}{138}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Conclusion}{142}{chapter.9}%
+\contentsline {chapter}{\numberline {10}List of publications and presentations resulting from this PhD}{143}{chapter.10}%
+\contentsline {chapter}{References}{145}{chapter*.96}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
