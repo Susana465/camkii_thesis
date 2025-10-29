@@ -9,7 +9,7 @@ This PhD project combines biological research with ethical considerations. It in
 
 Alongside the biological focus, this project also looks at how computational models can be used to study these mechanisms in a way that is reproducible and ethically responsible. Therefore, this thesis integrates molecular neuroscience, computational modelling, and research ethics into an interdisciplinary PhD project. As such, the structure of this thesis reflects its multifaceted aims: to deepen understanding of the molecular basis of learning and memory, to advance how such systems can be computationally modelled, and to question the ethical responsibilities of this work. Building on an interdisciplinary foundation, this PhD project has the following aims. These aims reflect the biological, computational, and ethical dimensions of the work, and together they define the scope and direction of the research.
 
-## Research objectives of this PhD {.unnumbered}
+## Research objectives of this PhD {#sec-objectives}
 The overarching objective of this PhD research is to investigate how CaMKII and NMDARs interact in a postsynaptic dendrite following calcium entry, using reproducible computational models. To achieve this, the research is structured around the following specific aims:
 
 **Aim 1.** Develop a computational model of CaMKII/NMDAR interactions based on published models and known findings on CaMKII regulation. This way, the model itself functions as a testable hypothesis that synthesises literature knowledge about CaMKII/NMDAR interactions.

@@ -1,4 +1,4 @@
-# List of publications and presentations resulting from this PhD
+# List of publications and presentations resulting from this PhD {.unnumbered}
 
 The following publications have emerged as a direct outcome of the research conducted during this PhD. They reflect the various strands of work undertaken, ranging from the development and application of computational models to contributions in open science and data ethics. Together, they demonstrate the interdisciplinary impact of the project and the collaborative efforts that supported its progress.
 
