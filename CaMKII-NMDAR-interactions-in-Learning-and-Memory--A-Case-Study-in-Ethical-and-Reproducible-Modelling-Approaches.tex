@@ -202,7 +202,7 @@
 \title{CaMKII-NMDAR interactions in Learning and Memory: A Case Study in
 Ethical and Reproducible Modelling Approaches}
 \author{Susana Román García}
-\date{October 29, 2025}
+\date{October 31, 2025}
 
 \begin{document}
 \cleardoublepage
@@ -218,7 +218,7 @@ Study in Ethical and Reproducible Modelling Approaches \par}
 \vskip 0cm plus 2fill
 {\bfseries\large Doctor of Philosophy \par}
 \vspace{3ex}
-{\bfseries\large October 29, 2025 \par}
+{\bfseries\large October 31, 2025 \par}
 \vspace{12ex}
 %
 %
@@ -4301,8 +4301,9 @@ research, and contribute to improving research integrity more broadly.
 
 \bookmarksetup{startatroot}
 
-\chapter{In Silico Model of CaMKII, NMDARs, and Associated Signalling
-Molecules}\label{sec-model-description}
+\chapter{\texorpdfstring{\emph{In Silico} Model of CaMKII, NMDARs, and
+Associated Signalling
+Molecules}{In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules}}\label{sec-model-description}
 
 Numerous computational models of CaMKII dynamics have been developed
 over the past decade to look at different interactions of CaMKII and its
@@ -4341,6 +4342,25 @@ important to understand how CaMKII/NMDAR interactions evolve over time.
 The duration and timing of CaMKII activation influence whether synaptic
 changes are transient or long-lasting, affecting the induction and
 maintenance of LTP and LTD.
+
+The overarching objective of this PhD research is to investigate how
+CaMKII and NMDARs interact within the postsynaptic dendrite following
+calcium entry, using reproducible computational models. These
+interactions are central to synaptic plasticity, as CaMKII activation
+and its association with NMDARs play key roles in regulating the
+molecular mechanisms underlying learning and memory. Understanding these
+processes in greater detail can provide insight into how synaptic
+strength is modified at the molecular level.
+
+The research here is therefore structured around a series of specific
+aims, investigated through three versions of a CaMKII/NMDAR model, one
+wild type model and two mutant versions. The following section details
+how the wild-type (WT) model was constructed. The two mutant (MT) models
+differ only in a single modification each: one in which CaMKII cannot
+phosphorylate at T286, and another in which CaMKII is unable to bind to
+NMDARs. These mutations were implemented by setting the reaction rates
+corresponding to CaMKII autophosphorylation and CaMKII--NMDAR binding,
+respectively, to zero.
 
 \section{Previous work}\label{previous-work}
 
@@ -6596,41 +6616,45 @@ CaMKII phosphorylation on the CaMKII/NMDAR complex. For this latter aim,
 I created another \emph{in silico} mutant model in which CaMKII cannot
 be phosphorylated at T286.
 
-The NMDAR/CaMKII mutant model showed a substantial decrease in the
-amount of CaMKII in its open, active form when compared to both the WT
-and T286 mutant models. Suggesting that NMDAR binding is integral to
-maintaining CaMKII in its open conformation. While the T286 mutation
-also leads to a reduction in CaMKII openness, consistent with the
-established role of autophosphorylation at T286 in promoting autonomous
-activity, the effect is notably less severe than that observed in the
-NMDAR-binding mutant. This aligns with prior findings indicating that
-CaMKII binding to GluN2B induces a conformational change that sustains
-kinase activity even in the absence of T286 phosphorylation {[}REFERENCE
-NEEDED{]}. Furthermore, the T286 mutant model revealed that the T286
-phosphorylation mutation affects CaMKII opening and calmodulin binding,
-but does not disrupt CaMKII binding to NMDARs. These results suggest
-that while T286 phosphorylation regulates the conformational dynamics
-and calmodulin interactions of CaMKII, it is not required for
-stabilizing the CaMKII/NMDAR complex itself.
+The NMDAR/CaMKII mutant model exhibited a substantial decrease in the
+proportion of CaMKII in its open, active conformation compared with both
+the WT and T286 mutant models. This finding suggests that NMDAR binding
+is integral to maintaining CaMKII in its open, active state. While the
+T286 mutation also resulted in a reduction in CaMKII openness
+---consistent with the established role of autophosphorylation at T286
+in promoting autonomous kinase activity--- the effect was notably less
+severe than that observed in the NMDAR-binding mutant. These results
+align with previous reports demonstrating that CaMKII binding to the
+GluN2B subunit of the NMDAR induces a conformational change that
+sustains kinase activity even in the absence of T286 phosphorylation
+{[}\citeproc{ref-rumian2024LTP}{211},
+\citeproc{ref-cook2022CaMKIIb}{213}{]}. Furthermore, analysis of the
+T286 mutant model revealed that the loss of phosphorylation at this site
+alters CaMKII opening and CaM binding but does not disrupt CaMKII/NMDAR
+binding. Collectively, these findings suggest that although T286
+phosphorylation modulates CaMKII conformational dynamics and CaM
+interactions, it is not required to stabilize the CaMKII/NMDAR complex
+itself.
 
-Previous studies have demonstrated that prolonged CaMKII activation
-leads to sustained binding to NMDARs. The present models align with
-these findings, supporting the notion that NMDAR association is a key
-factor in maintaining prolonged CaMKII activation. The models in this
-project further indicate that CaMKII can remain active even after CaM
-dissociation, retaining an open conformation when bound to NMDARs. In
-addition, our models reproduce an emergent CaM trapping behaviour.
-Although the models do not explicitly increase CaM affinity following
-T286 phosphorylation, the phosphorylation event still enhances CaM
-binding, likely by stabilising the open state of CaMKII. In contrast to
-previous reports, however, the model predicts that CaMKII binding to
-NMDARs occurs independently of CaM. Some studies suggest that NMDAR
-binding alone can keep CaMKII active even without T286 phosphorylation
-{[}REFERENCE{]}. However, in this research, CaMKII remains
-phosphorylated at T286 when NMDAR-bound. The simulations also identify
-CaMKII--NMDAR binding as a key driver of CaMKII autophosphorylation
-(Figures 6.15 and 6.16), whereas T286 phosphorylation itself does not
-appear to influence CaMKII--NMDAR binding (Figures 6.11 and 6.17).\_
+Previous studies have shown that prolonged CaMKII activation leads to
+sustained association with NMDARs, and the present simulations are
+consistent with this mechanism. The models indicate that NMDAR binding
+is a key determinant of prolonged CaMKII activation, enabling the kinase
+to remain in an open, active state even after CaM dissociation. This
+behavior reproduces an emergent form of CaM trapping, wherein CaMKII
+retains high CaM affinity as a result of its stabilized open
+conformation. Although the models do not explicitly increase CaM
+affinity following T286 phosphorylation, the phosphorylation event
+appears to enhance CaM binding indirectly by stabilizing the active
+state of the enzyme. Complementary to these structural findings, the
+simulations reveal that NMDAR binding not only maintains CaMKII in an
+open state but also actively promotes T286 autophosphorylation. This is
+consistent with prior evidence that the NMDAR--CaMKII interaction
+facilitates CaMKII activation {[}REFERENCE{]}. Furthermore, T286
+phosphorylation does not appear to influence the strength or stability
+of NMDAR binding, suggesting that NMDAR binding drives
+autophosphorylation and structural activation, whereas phosphorylation
+primarily sustains CaMKII activity once bound to NMDARs.
 
 Finally, the sixth aim was to evaluate ethical risks using Data Hazards
 to ensure responsible research. To address this aim, I progressively
@@ -6642,10 +6666,11 @@ facilitating several workshops on Data Hazards and co-developing the
 framework itself, as well as co-organising and co-hosting a one-day
 symposium focused on ethics, reproducibility, and responsible research
 practice. The outcomes of this work culminated in a paper publication,
-Data Hazards as an Ethical Toolkit for Neuroscience (Chapter 4), which
-formalises and extends the framework as a practical resource for the
-wider scientific community, and uses this PhD as a case study on how to
-apply the Data Hazards framework.
+Data Hazards as an Ethical Toolkit for Neuroscience
+(Chapter~\ref{sec-data-hazards-chapter}), which formalises and extends
+the framework as a practical resource for the wider scientific
+community, and uses this PhD as a case study on how to apply the Data
+Hazards framework.
 
 \bookmarksetup{startatroot}
 
