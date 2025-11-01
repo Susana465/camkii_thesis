@@ -84,8 +84,6 @@ This PhD would have not been possible without the amazing support of my supervis
 
 # List of Abbreviations
 
-Here is a short explanation of what this table contains.  
-
 \noindent
 \begin{tabularx}{\textwidth}{lX}
 \hline
