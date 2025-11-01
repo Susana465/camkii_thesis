@@ -231,14 +231,7 @@ To demonstrate the possibility of using BioDynaMo as a tool to simulate neuronal
 
 ## Conclusion
 
-An overarching aim of this study was to investigate how the functional states of CaMKII —particularly through its phosphorylation and binding to NMDARs— affect the stability of the CaMKII/NMDAR complex and its role in synaptic signalling. This is important because the dynamic regulation of CaMKII activity and its association with NMDARs are central to mechanisms of synaptic plasticity, including learning and memory. To address this aim, I examined how the interaction between CaMKII and NMDARs influences CaMKII activity and function, using an in silico mutation model where CaMKII–NMDAR binding is disrupted. Likewise, I explored how CaMKII phosphorylation impacts its binding to NMDARs by investigating a model in which CaMKII cannot be phosphorylated at the T286 site. The following discussion will interpret the results from these _in silico_ mutation models, assess their relevance to the original research questions, and highlight how these findings contribute to a deeper understanding of the molecular processes underlying synaptic plasticity.
-
-This PhD project started with a neuroscience and computer modelling focus: how do CaMKII and NMDARs interact in the postsynaptic density?
-
-It evolved into an effort to embed ethics and reproducibility as I create these models.
-
-Case study for how to implement reproducibility/ethics into a computational neuroscience PhD.
-
+This PhD project began with a focus on neuroscience and computational modeling, specifically investigating how CaMKII and NMDARs interact in the postsynaptic density. Over time, it also evolved into a broader effort to embed reproducibility, ethics, and research integrity into the development and analysis of these models, serving as a case study for how such principles can be implemented in computational neuroscience research.
 
 The _in silico_ models presented in this research suggest that NMDAR binding constitutes an early and important mechanism for maintaining CaMKII in its open, active conformation. The mode of CaMKII binding, whereby the holoenzyme anchors itself to NMDARs, underscores the potential role of its dodecameric structure as a molecular scaffold, locally organising and stabilising signalling complexes. This structural arrangement may contribute to the spatial coordination of signalling molecules during LTP, offering a potential mechanism by which CaMKII supports activity-dependent synaptic strengthening.
 
