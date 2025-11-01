@@ -19,7 +19,6 @@ camkii_thesis/               # Root directory of the thesis project
 ├── _quarto.yml              # Quarto configuration file
 ├── chapters-figures/        # Folder containing all chapter figures
 │   ├── figures.png
-│   └── ...                  # (other figure files as needed)
 │
 ├── index.qmd                # Includes: Abstract, Lay Summary, Acknowledgements,  List of Figures, List of Abbreviations, Publications and Author Contributions Declaration
 │
