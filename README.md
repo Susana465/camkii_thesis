@@ -29,7 +29,7 @@ camkii_thesis/               # Root directory of the thesis project
 ├── 20-repro_open.qmd        # Chapter: Open, Reproducible and Ethics-focused PhD
 ├── 20-data-hazards.qmd      # Chapter: A Case Study in Ethical Reflection: Data Hazards in this PhD
 │
-├── 30-model.qmd             #5 Chapter: In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules
+├── 30-model.qmd             # Chapter: In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules
 ├── 40-results.qmd           # Results, summary and discussion chapters
 │
 ├── publications.qmd         # List or discussion of related publications
