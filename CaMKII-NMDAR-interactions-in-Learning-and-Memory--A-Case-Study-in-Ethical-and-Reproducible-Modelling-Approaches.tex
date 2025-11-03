@@ -202,7 +202,7 @@
 \title{CaMKII-NMDAR interactions in Learning and Memory: A Case Study in
 Ethical and Reproducible Modelling Approaches}
 \author{Susana Román García}
-\date{November 2, 2025}
+\date{November 3, 2025}
 
 \begin{document}
 \cleardoublepage
@@ -218,7 +218,7 @@ Study in Ethical and Reproducible Modelling Approaches \par}
 \vskip 0cm plus 2fill
 {\bfseries\large Doctor of Philosophy \par}
 \vspace{3ex}
-{\bfseries\large November 2, 2025 \par}
+{\bfseries\large November 3, 2025 \par}
 \vspace{12ex}
 %
 %
@@ -1325,16 +1325,16 @@ or weakening of synapses during learning and memory processes
 \caption[LTP and LTD pathways]{\label{fig-ltp-ltd}Molecular Signalling
 in Synaptic Plasticity: CaMKII in LTP and LTD Pathways. High frequency
 stimulation leads to LTP (left), characterised by a large and sustained
-Ca²⁺ influx through NMDARs. This activates CaM, which in turn stimulates
-CaMKII and PKC, promoting AMPAR phosphorylation and insertion into the
-PSD, strengthening synaptic transmission. During LTP, CaMKII isoforms
-associated to F-actin filaments separate from it and allow the dendritic
-spine to grow. Low-frequency stimulation induces LTD (right), where a
-smaller Ca²⁺ influx preferentially activates PP2B over CaMKII, leading
-to PP1 activation and AMPAR dephosphorylation. The downregulation of
-AMPARs from the synaptic membrane weakens synaptic transmission.
-Additionally, reduced CaMKII dissociation from actin filaments
-contributes to synaptic depression.}
+\(\mathrm{Ca^{2+}}\) influx through NMDARs. This activates CaM, which in
+turn stimulates CaMKII and PKC, promoting AMPAR phosphorylation and
+insertion into the PSD, strengthening synaptic transmission. During LTP,
+CaMKII isoforms associated to F-actin filaments separate from it and
+allow the dendritic spine to grow. Low-frequency stimulation induces LTD
+(right), where a smaller Ca\textsuperscript{2+} influx preferentially
+activates PP2B over CaMKII, leading to PP1 activation and AMPAR
+dephosphorylation. The downregulation of AMPARs from the synaptic
+membrane weakens synaptic transmission. Additionally, reduced CaMKII
+dissociation from actin filaments contributes to synaptic depression.}
 
 \end{figure}%
 
@@ -4299,9 +4299,9 @@ research, and contribute to improving research integrity more broadly.
 
 \bookmarksetup{startatroot}
 
-\chapter{\texorpdfstring{\emph{In Silico} Model of CaMKII, NMDARs, and
+\chapter{\texorpdfstring{\emph{In Silico} Models of CaMKII, NMDARs, and
 Associated Signalling
-Molecules}{In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules}}\label{sec-model-description}
+Molecules}{In Silico Models of CaMKII, NMDARs, and Associated Signalling Molecules}}\label{sec-model-description}
 
 Numerous computational models of CaMKII dynamics have been developed
 over the past decade to look at different interactions of CaMKII and its
@@ -4352,13 +4352,31 @@ strength is modified at the molecular level.
 
 The research here is therefore structured around a series of specific
 aims, investigated through three versions of a CaMKII/NMDAR model, one
-wild type model and two mutant versions. The following section details
-how the wild-type (WT) model was constructed. The two mutant (MT) models
-differ only in a single modification each: one in which CaMKII cannot
-phosphorylate at T286, and another in which CaMKII is unable to bind to
-NMDARs. These mutations were implemented by setting the reaction rates
-corresponding to CaMKII autophosphorylation and CaMKII--NMDAR binding,
-respectively, to zero.
+main wild type model and two mutant versions. The following section
+details how the wild-type (WT) model was constructed. The two mutant
+(MT) models differ only in a single modification each: one in which
+CaMKII cannot phosphorylate at T286, and another in which CaMKII is
+unable to bind to NMDARs. These mutations were implemented by setting
+the reaction rates corresponding to CaMKII autophosphorylation and
+CaMKII--NMDAR binding, respectively, to zero (Figure~\ref{fig-WTvsMT}).
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{30-methods-figures/WTvsMT.PNG}}
+
+}
+
+\caption[Wild Type vs Mutant model changes]{\label{fig-WTvsMT}Each
+mutant differs from the WT by a single change in reaction kinetics. In
+the T286 mutant, CaMKII autophosphorylation at threonine 286 is disabled
+by setting the catalytic rate constant (k\textsubscript{cat}) of
+Reaction \#8 to zero. In the CaMKII/NMDAR mutant, CaMKII--NMDAR binding
+is prevented by setting the association rate constant
+(k\textsubscript{on}) of Reaction \#12 to zero.}
+
+\end{figure}%
 
 \section{Previous work}\label{previous-work}
 
