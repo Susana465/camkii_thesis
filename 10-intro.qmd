@@ -49,5 +49,4 @@ This chapter presents and discusses the results generated from the computational
 This chapter summarises key findings in relation to the main objectives of this thesis, reflects on the research questions, and outlines broader implications for the field.
 
 ##### Chapter 8 {.unnumbered}
-This chapter provides the overall conclusions of the thesis. It summarises key findings, reflects on
-the research questions, and outlines broader implications for the field.
+This chapter provides the overall conclusions of the thesis. It summarises key findings, reflects on the research questions, and outlines broader implications for the field.
