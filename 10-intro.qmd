@@ -46,7 +46,8 @@ This chapter describes the computational model developed for this PhD, focusing 
 This chapter presents and discusses the results generated from the computational models. I first introduce findings from the wild-type model, including calcium signalling, CaMKII activation, phosphorylation patterns, and interactions with NMDARs. I then explore mutant models, specifically those affecting T286 phosphorylation and CaMKII/NMDAR binding. Findings are discussed in the context of existing literature, with particular attention to unexpected results and their possible implications. Limitations of the models are acknowledged, and potential directions for refining model complexity and experimental validation are proposed.
 
 ##### Chapter 7 {.unnumbered}
-This chapter provides the overall conclusions of the thesis. It summarises key findings, reflects on the research questions, and outlines broader implications for the field.
+This chapter summarises key findings in relation to the main objectives of this thesis, reflects on the research questions, and outlines broader implications for the field.
 
 ##### Chapter 8 {.unnumbered}
-This final chapter lists the publications and presentations that have resulted from this PhD project.
+This chapter provides the overall conclusions of the thesis. It summarises key findings, reflects on
+the research questions, and outlines broader implications for the field.
