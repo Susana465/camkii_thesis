@@ -440,7 +440,7 @@ Figure&nbsp;5.5: We model calcium binding to CaM following “scheme 3” propos
 <p>In BNGL, reaction rules are specified as discrete transformations. For example, the rule “CaM(ca~0,camkii) + Ca() &lt;-&gt; CaM(ca~1,camkii)” represents the binding of a single calcium ion to CaM that is not bound to CaMKII (see reaction #1 in <a href="#fig-tbl-1" class="quarto-xref">Figure&nbsp;<span>5.6</span></a>). The assigned rate constants for each rule are used to calculate the probability of the reaction occurring when the two involved molecules collide, or at each time step for unimolecular transformations.</p>
 <p>As molecules diffuse within the simulation volume, all molecules within a specified radius along a given trajectory or at the point of collision on a surface are considered for potential reactions. For example, when a calcium ion molecule encounters a free CaM molecule at the point of collision, they react according to the specified rule in the model, resulting in the formation of the molecule CaM_Ca1. CaM_Ca1 can continue to diffuse based on the parameters defined in the simulation and can interact with other molecules as well (see back for diagram example explanation in <a href="30-modelling_background.html#fig-mcell-works" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>).</p>
 <p>The reaction rules defined below follow the “don’t care, don’t write” principle of rule-based modelling: if a molecular feature is irrelevant to a particular reaction, it is simply omitted from the reaction definition. For example, in reaction #5, which describes the flickering of CaMKII subunits between open and closed states, the conditions specified are that the subunit’s CaM-binding site must be free, the subunit must be unphosphorylated at T286, and the subunit must be open. However, the phosphorylation state at T306 is irrelevant to this reaction, and therefore is not specified.</p>
-<div id="fig-tbl-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Reactions and rate constants used in the model" data-fig-pos="H">
+<div id="fig-tbl-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="Reactions and rate constants used in the model">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="30-methods-figures\table_rxns1.PNG" class="img-fluid figure-img" data-fig-pos="H" data-fig-scap="Reactions and rate constants used in the model">
@@ -450,7 +450,7 @@ Figure&nbsp;5.6: Reaction rules and rate constants used in the model. <span clas
 </figcaption>
 </figure>
 </div>
-<div id="fig-camkii-binding-rxns" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-scap="Reaction rules depicted for possible reaction pathways of CaMKII subunits" data-fig-pos="H">
+<div id="fig-camkii-binding-rxns" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-scap="Reaction rules depicted for possible reaction pathways of CaMKII subunits">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-camkii-binding-rxns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="30-methods-figures\camkii-binding-rxns.PNG" class="img-fluid figure-img" style="width:90.0%" data-fig-pos="H" data-fig-scap="Reaction rules depicted for possible reaction pathways of CaMKII subunits">
