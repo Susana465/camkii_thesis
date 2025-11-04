@@ -125,6 +125,6 @@ WT & Wild Type \\
 \end{tabularx}
 
 # Publications and Author Contributions {-}
-Chapter 5 includes a published article titled “Data Hazards as an Ethical Toolkit for Neuroscience”, co-authored with Susana Román García, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. The article was published in the Journal of Neuroethics on 19 February 2025.
+@sec-data-hazards-chapter includes a published article titled “Data Hazards as an Ethical Toolkit for Neuroscience”, co-authored with Susana Román García, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. The article was published in the Journal of Neuroethics on 19 February 2025.
 
 Co-author contributions are detailed in the chapter using Contributor Roles Taxonomy (CRediT) (https://credit.niso.org/). 
