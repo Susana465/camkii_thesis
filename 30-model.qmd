@@ -23,7 +23,7 @@ More recently, @bartol2024Spatial have published a study using the same version 
 Each of these models represents a step towards the development of the present study, which advances the field by explicitly modelling CaMKII as a dodecamer that directly interacts with NMDARs on the surface of the postsynaptic dendrite.
 
 ## Model Description
-In this model, CaMKII is represented as a dodecamer using BioNetGen(@sec-camkii-as-dodecamer). The model simulates its diffusion over time and space within a postsynaptic density (PSD) volume. Other molecules involved in the system include calcium, CaM, PP1, and NMDARs. The following sections provide a detailed breakdown of how these reactions are modelled, highlighting their biological relevance. 
+In this model, CaMKII is represented as a dodecamer using BioNetGen (@sec-camkii-as-dodecamer). The model simulates its diffusion over time and space within a postsynaptic density (PSD) volume. Other molecules involved in the system include calcium, CaM, PP1, and NMDARs. The following sections provide a detailed breakdown of how these reactions are modelled, highlighting their biological relevance. 
 
 ### Molecule concentrations, localization and cell volume
 All molecules (except NMDARs which are surface molecules) are released from inside the cell to interact with each other. Molecules are released as discrete molecule numbers. Concentrations can be calculated as shown below in @eq-molec-concentrations-calc, where we begin with the number of molecules $N$ and convert it to moles using Avogadro's number $N_A$. Next, we account for the volume in cubic micrometers, represented as $V \, (\mu \text{m}^3)$. This equation gives us concentration in Molar.
