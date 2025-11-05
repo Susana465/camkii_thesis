@@ -202,7 +202,7 @@
 \title{CaMKII-NMDAR interactions in Learning and Memory: A Case Study in
 Ethical and Reproducible Modelling Approaches}
 \author{Susana Román García}
-\date{October 23, 2025}
+\date{November 5, 2025}
 
 \begin{document}
 \cleardoublepage
@@ -218,7 +218,7 @@ Study in Ethical and Reproducible Modelling Approaches \par}
 \vskip 0cm plus 2fill
 {\bfseries\large Doctor of Philosophy \par}
 \vspace{3ex}
-{\bfseries\large October 23, 2025 \par}
+{\bfseries\large November 5, 2025 \par}
 \vspace{12ex}
 %
 %
@@ -381,14 +381,14 @@ larger molecular networks.
 
 Moreover, the interaction between NMDARs and CaMKII plays a crucial role
 at the molecular level in processes related to memory and learning. For
-example, studies \emph{ab}-using rodents have shown that impairing these
-molecules interacting, or abolishing their functions leads to memory
-impairment. Additionally, changes in the function of these molecules
-have been implicated in a range of diseases and conditions, including
-age-related cognitive decline in human and non-human animals and
-neurodegenerative diseases. Likewise, these changes have also been shown
-to be implicated in epilepsy, schizophrenia, addiction, autism spectrum,
-and multiple neurodevelopmental disorders.
+example, studies \emph{ab}-using rodents have shown that disrupting the
+interaction or function of these molecules leads to memory impairment.
+Additionally, changes in the function of these molecules have been
+implicated in a range of diseases and conditions, including age-related
+cognitive decline in human and non-human animals and neurodegenerative
+diseases. Likewise, these changes have also been shown to be implicated
+in epilepsy, schizophrenia, addiction, autism spectrum, and multiple
+neurodevelopmental disorders.
 
 I use computational models to simulate molecular interactions and
 investigate these molecular processes. A key innovation in my research
@@ -528,8 +528,6 @@ truly.
 
 \markboth{List of Abbreviations}{List of Abbreviations}
 
-Here is a short explanation of what this table contains.
-
 \noindent
 
 \begin{tabularx}{\textwidth}{lX}
@@ -580,11 +578,11 @@ Contributions}\label{publications-and-author-contributions}
 \markboth{Publications and Author Contributions}{Publications and Author
 Contributions}
 
-Chapter 5 includes a published article titled ``Data Hazards as an
-Ethical Toolkit for Neuroscience'', co-authored with Susana Román
-García, Ceilidh Welsh, Nina H. Di Cara, David C. Sterratt, Nicola
-Romanò, and Melanie I. Stefan. The article was published in the Journal
-of Neuroethics on 19 February 2025.
+Chapter~\ref{sec-data-hazards-chapter} includes a published article
+titled ``Data Hazards as an Ethical Toolkit for Neuroscience'',
+co-authored with Susana Román García, Ceilidh Welsh, Nina H. Di Cara,
+David C. Sterratt, Nicola Romanò, and Melanie I. Stefan. The article was
+published in the Journal of Neuroethics on 19 February 2025.
 
 Co-author contributions are detailed in the chapter using Contributor
 Roles Taxonomy (CRediT) (https://credit.niso.org/).
@@ -625,8 +623,7 @@ foundation, this PhD project has the following aims. These aims reflect
 the biological, computational, and ethical dimensions of the work, and
 together they define the scope and direction of the research.
 
-\section*{Research objectives of this
-PhD}\label{research-objectives-of-this-phd}
+\section*{Research objectives of this PhD}\label{sec-objectives}
 \addcontentsline{toc}{section}{Research objectives of this PhD}
 
 \markright{Research objectives of this PhD}
@@ -636,6 +633,11 @@ CaMKII and NMDARs interact in a postsynaptic dendrite following calcium
 entry, using reproducible computational models. To achieve this, the
 research is structured around the following specific aims:
 
+\textbf{Aim 1.} Develop a computational model of CaMKII/NMDAR
+interactions based on published models and known findings on CaMKII
+regulation. This way, the model itself functions as a testable
+hypothesis that synthesises literature knowledge about CaMKII/NMDAR
+interactions.
 
 \textbf{Aim 2.} Throughout the model development process, ensure that
 the computational models follow FAIR (Findable, Accessible,
@@ -743,15 +745,16 @@ proposed.
 \paragraph*{Chapter 7}\label{chapter-7}
 \addcontentsline{toc}{paragraph}{Chapter 7}
 
-This chapter provides the overall conclusions of the thesis. It
-summarises key findings, reflects on the research questions, and
-outlines broader implications for the field.
+This chapter summarises key findings in relation to the main objectives
+of this thesis, reflects on the research questions, and outlines broader
+implications for the field.
 
 \paragraph*{Chapter 8}\label{chapter-8}
 \addcontentsline{toc}{paragraph}{Chapter 8}
 
-This final chapter lists the publications and presentations that have
-resulted from this PhD project.
+This chapter provides the overall conclusions of the thesis. It
+summarises key findings, reflects on the research questions, and
+outlines broader implications for the field.
 
 \bookmarksetup{startatroot}
 
@@ -768,7 +771,8 @@ interest ---N-methyl-D-aspartate receptors (NMDARs) and
 calcium/calmodulin-dependent protein kinase II (CaMKII) --- and their
 critical involvement in the mechanisms underlying LTP.
 
-
+Importantly, CaMKII/NMDAR binding is known to be a key molecular
+interaction for synaptic plasticity during learning and memory
 {[}\citeproc{ref-sanhueza2013CaMKII}{9}--\citeproc{ref-bayer2024Revised}{11}{]},
 and the disruption of their binding has been shown to contribute to
 neurodegeneration, spineopathies and memory impairment in diseases such
@@ -1322,16 +1326,16 @@ or weakening of synapses during learning and memory processes
 \caption[LTP and LTD pathways]{\label{fig-ltp-ltd}Molecular Signalling
 in Synaptic Plasticity: CaMKII in LTP and LTD Pathways. High frequency
 stimulation leads to LTP (left), characterised by a large and sustained
-Ca²⁺ influx through NMDARs. This activates CaM, which in turn stimulates
-CaMKII and PKC, promoting AMPAR phosphorylation and insertion into the
-PSD, strengthening synaptic transmission. During LTP, CaMKII isoforms
-associated to F-actin filaments separate from it and allow the dendritic
-spine to grow. Low-frequency stimulation induces LTD (right), where a
-smaller Ca²⁺ influx preferentially activates PP2B over CaMKII, leading
-to PP1 activation and AMPAR dephosphorylation. The downregulation of
-AMPARs from the synaptic membrane weakens synaptic transmission.
-Additionally, reduced CaMKII dissociation from actin filaments
-contributes to synaptic depression.}
+\(\mathrm{Ca^{2+}}\) influx through NMDARs. This activates CaM, which in
+turn stimulates CaMKII and PKC, promoting AMPAR phosphorylation and
+insertion into the PSD, strengthening synaptic transmission. During LTP,
+CaMKII isoforms associated to F-actin filaments separate from it and
+allow the dendritic spine to grow. Low-frequency stimulation induces LTD
+(right), where a smaller Ca\textsuperscript{2+} influx preferentially
+activates PP2B over CaMKII, leading to PP1 activation and AMPAR
+dephosphorylation. The downregulation of AMPARs from the synaptic
+membrane weakens synaptic transmission. Additionally, reduced CaMKII
+dissociation from actin filaments contributes to synaptic depression.}
 
 \end{figure}%
 
@@ -3475,7 +3479,8 @@ clear licensing and open protocols}
   mechanisms for proper citation through DOIs and appropriate licensing,
   where applicable.
 \item
-  Data will be stored in a database, ensuring long-term accessibility
+  Data to re-run the model and recreate figures is available in the
+  model's GitHub repository with instructions.
 \item
   There are plans for the model to be made available in a platform such
   as BioModels, which is a freely accessible online repository of
@@ -4296,8 +4301,9 @@ research, and contribute to improving research integrity more broadly.
 
 \bookmarksetup{startatroot}
 
-\chapter{In Silico Model of CaMKII, NMDARs, and Associated Signalling
-Molecules}\label{sec-model-description}
+\chapter{\texorpdfstring{\emph{In Silico} Models of CaMKII, NMDARs, and
+Associated Signalling
+Molecules}{In Silico Models of CaMKII, NMDARs, and Associated Signalling Molecules}}\label{sec-model-description}
 
 Numerous computational models of CaMKII dynamics have been developed
 over the past decade to look at different interactions of CaMKII and its
@@ -4336,6 +4342,43 @@ important to understand how CaMKII/NMDAR interactions evolve over time.
 The duration and timing of CaMKII activation influence whether synaptic
 changes are transient or long-lasting, affecting the induction and
 maintenance of LTP and LTD.
+
+The overarching objective of this PhD research is to investigate how
+CaMKII and NMDARs interact within the postsynaptic dendrite following
+calcium entry, using reproducible computational models. These
+interactions are central to synaptic plasticity, as CaMKII activation
+and its association with NMDARs play key roles in regulating the
+molecular mechanisms underlying learning and memory. Understanding these
+processes in greater detail can provide insight into how synaptic
+strength is modified at the molecular level.
+
+The research here is therefore structured around a series of specific
+aims, investigated through three versions of a CaMKII/NMDAR model, one
+main wild type model and two mutant versions. The following section
+details how the wild-type (WT) model was constructed. The two mutant
+(MT) models differ only in a single modification each: one in which
+CaMKII cannot phosphorylate at T286, and another in which CaMKII is
+unable to bind to NMDARs. These mutations were implemented by setting
+the reaction rates corresponding to CaMKII autophosphorylation and
+CaMKII--NMDAR binding, respectively, to zero (Figure~\ref{fig-WTvsMT}).
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{30-methods-figures/WTvsMT.PNG}}
+
+}
+
+\caption[Wild Type vs Mutant model changes]{\label{fig-WTvsMT}Each
+mutant differs from the WT by a single change in reaction kinetics. In
+the T286 mutant, CaMKII autophosphorylation at threonine 286 is disabled
+by setting the catalytic rate constant (k\textsubscript{cat}) of
+Reaction \#8 to zero. In the CaMKII/NMDAR mutant, CaMKII--NMDAR binding
+is prevented by setting the association rate constant
+(k\textsubscript{on}) of Reaction \#12 to zero.}
+
+\end{figure}%
 
 \section{Previous work}\label{previous-work}
 
@@ -4384,12 +4427,13 @@ postsynaptic dendrite.
 
 \section{Model Description}\label{model-description}
 
-In this model, CaMKII is represented as a dodecamer using BioNetGen
-Section~\ref{sec-camkii-as-dodecamer}. The model simulates its diffusion
-over time and space within a postsynaptic density (PSD) volume. Other
-molecules involved in the system include calcium, CaM, PP1, and NMDARs.
-The following sections provide a detailed breakdown of how these
-reactions are modelled, highlighting their biological relevance.
+In this model, CaMKII is represented as a dodecamer using
+BioNetGen(Section~\ref{sec-camkii-as-dodecamer}). The model simulates
+its diffusion over time and space within a postsynaptic density (PSD)
+volume. Other molecules involved in the system include calcium, CaM,
+PP1, and NMDARs. The following sections provide a detailed breakdown of
+how these reactions are modelled, highlighting their biological
+relevance.
 
 \subsection{Molecule concentrations, localization and cell
 volume}\label{molecule-concentrations-localization-and-cell-volume}
@@ -5303,8 +5347,8 @@ multiple sources, parameter exploration was performed to ensure robust
 and consistent dynamics aligned with the existing literature.
 Specifically, we varied the opening and closing rates by factors of
 0.01, 0.1, and 1 relative to the values proposed by Pharris et al.
-{[}\citeproc{ref-pharris2019Multistate}{185}{]}, where \(k_\text{off}\)
-= \(1.00 \times 10^7\) \(\mathrm{s}^{-1}\) and \(k_\text{off}\) =
+{[}\citeproc{ref-pharris2019Multistate}{185}{]}, where \(k_\text{on}\) =
+\(1.00 \times 10^7\) \(\mathrm{s}^{-1}\) and \(k_\text{off}\) =
 \(2.00 \times 10^4\) \(\mathrm{M}^{-1}\mathrm{s}^{-1}\).
 
 To ensure that the behaviour of CaMKII was well-understood and stable
@@ -5605,10 +5649,10 @@ simulation progresses. Two main factors contribute to the stabilisation
 of CaMKII in the open state: (1) CaM binding (light blue line,
 camkii\_cam\_unbound\_open) and (2) NMDAR binding (dark blue line,
 nmdar\_camkii\_complex). Notably, NMDAR binding can maintain CaMKII in
-the open conformation even in the absence of CaM binding (Fig 7.2c).
-Figure 7.2b focuses on T286 phosphorylation dynamics of CaMKII. The
-orange line (camkii\_t286p) shows the total number of CaMKII subunits
-phosphorylated at T286, while the pink line
+the open conformation even in the absence of CaM binding (panel c).
+Panel (b) Figure~\ref{fig-t286p-means} focuses on T286 phosphorylation
+dynamics of CaMKII. The orange line (camkii\_t286p) shows the total
+number of CaMKII subunits phosphorylated at T286, while the pink line
 (camkii\_t286p1\_bound\_nmdar) represents the subset of
 T286-phosphorylated subunits that are also bound to NMDARs. A large
 fraction of phosphorylated subunits are found associated with NMDARs,
@@ -5626,7 +5670,7 @@ majority of the T286-phosphorylated CaMKII subunits bound to NMDARs are
 unbound from CaM, emphasizing that CaMKII can maintain phosphorylation
 at T286 even after CaM dissociates. This further supports the idea that
 NMDAR binding alone is sufficient to stabilize the active, open,
-phosphorylated state in this model. Figure 7.2d provides a more detailed
+phosphorylated state in this model. Panel d provides a more detailed
 look at T286 phosphorylation in relation to CaM binding across the whole
 CaMKII population. The data shows that roughly equal numbers of CaMKII
 subunits are phosphorylated at T286 whether they are CaM-bound or
@@ -5733,9 +5777,17 @@ calcium ions, but the change might not be substantial.
 
 }
 
-\caption[CaM binding calcium]{\label{fig-calcium-binding}CaM binding to
-1,2,3 and 4 calcium ions (calcium not shown) and formation of CaMKII-CaM
-complex (CaMKII\_CaM\_Ca4).}
+\caption[CaM binding calcium]{\label{fig-calcium-binding}(Top) The
+concentration of free calcium initially drops sharply as it binds to CaM
+species, before stabilizing and gradually increasing toward the end of
+the simulation. Shown separate to other molecules due to difference in
+scale. (Bottom) The molecular counts of different CaM species show the
+distribution of CaM bound to 1, 2, 3, and 4 calcium ions
+(cam\_ca1--cam\_ca4), free CaM (cam\_free), and the CaMKII--CaM\_Ca4
+complex. Free CaM rapidly decreases after the start, while CaM species
+with bound calcium transiently rise. The CaMKII\_CaM\_Ca4 complex
+steadily accumulates over time, indicating progressive activation of
+CaMKII through CaM binding.}
 
 \end{figure}%
 
@@ -6390,7 +6442,7 @@ NMDAR/CaMKII mutant compared to both WT and T286\_MT (**p \textless{}
 T286 and T306
 phosphorylation}\label{nmdar-binding-stabilizes-camkii-open-conformation-and-drives-t286-and-t306-phosphorylation}
 
-Since NMDARs play an essential role in keeping CaMKII subunits open and
+Since NMDARs play an essential role in keeping CaMKII subunits open when
 free from CaM (as shown by the CaMKII\_cam\_unbound\_open data), this
 opens up the question of whether T286 phosphorylation, which is a key
 event for CaMKII activation, is also influenced by NMDAR signalling. In
@@ -6497,54 +6549,30 @@ phosphorylation but not the other way around.
 }
 
 \caption[NMDAR binding reaches full saturation in both WT and
-NMDAR/CaMKII mutant models]{\label{fig-nmdar_MTvsWT}NMDAR binding
-reaches full saturation in both WT and NMDAR/CaMKII mutant models.
-Shaded areas indicate the standard deviation. Both models ultimately
-reach a plateau of 30 bound CaMKII/NMDAR complexes. Due to the lack of
-variability in the final molecule count (both reach 30 with no
-variance), statistical comparisons of the end-point data are not shown.}
+NMDAR/CaMKII mutant models]{\label{fig-nmdar_MTvsWT}Lack of T286
+phosphorylation does not seem to influence the binding of CaMKII to
+NMDARs. NMDAR binding reaches full saturation in both WT and T286 mutant
+models. Shaded areas indicate the standard deviation. Both models
+ultimately reach a plateau of 30 bound CaMKII/NMDAR complexes. Due to
+the lack of variability in the final molecule count (both reach 30 with
+no variance), statistical comparisons of the end-point data are not
+shown.}
 
 \end{figure}%
 
 \bookmarksetup{startatroot}
 
-\chapter{Discussion of results?}\label{discussion-of-results}
+\chapter{Summary of main findings: what have I done to tackle the aims
+of this
+PhD?}\label{summary-of-main-findings-what-have-i-done-to-tackle-the-aims-of-this-phd}
 
-\bookmarksetup{startatroot}
-
-\chapter{Discussion, limitations and future
-directions}\label{sec-discussion}
-
-This PhD project originated with a focus on neuroscience and
-computational modelling, specifically investigating how CaMKII and
-NMDARs interact within the postsynaptic density. As the research
-progressed, the scope expanded beyond the biological mechanisms
-themselves to consider how such computational models are constructed,
-shared, and evaluated. In particular, the project developed into a
-broader exploration of how ethical awareness and reproducibility can be
-systematically integrated into the modelling process. Ultimately, it
-serves as a case study on embedding principles of transparency,
-accountability, and responsible research conduct within the practical
-workflow of a computational neuroscience PhD.
-
-The relevance of this PhD lies in both its scientific and methodological
-contributions. The interaction between CaMKII and NMDAR is known to play
-a crucial role in synaptic plasticity and understanding the molecular
-mechanisms underlying memory. To my knowledge, this is the first model
-to represent CaMKII as a dodecamer interacting directly with NMDARs in
-both time and space, first model to represent CaMKII as a dodecamer
-interacting directly with NMDARs in both time and space, which makes
-this project novel in the field. Beyond this, the project also stands as
-a practical example of how ethics and reproducibility can be implemented
-throughout the modelling process, demonstrating that rigorous science
-and responsible research practice can develop hand in hand.
-
-I NEED TO BRING IT BACKAS TO WHY I AM STUDYING CAMKII/NMDAR AND REPRO
-ETHICS ALLTOGETHER. WEAVE THE THREAD HERE TOO.
-
-\section{Summary of project objectives: what have I done to tackle each
-aim in this
-PhD?}\label{summary-of-project-objectives-what-have-i-done-to-tackle-each-aim-in-this-phd}
+This PhD was structured around six main aims that guided both the
+scientific and methodological progression of the project. Each aim built
+on the previous one, moving from the development of a detailed
+computational model of CaMKII--NMDAR interactions to the evaluation of
+how these models can be made more transparent, reproducible, and
+ethically grounded. The following section summarises the approaches
+taken to achieve each aim and the key findings that emerged from them.
 
 The first aim of this PhD was to develop a computational model of
 CaMKII/NMDAR interactions. To achieve this, I built a model of CaMKII
@@ -6609,105 +6637,106 @@ CaMKII phosphorylation on the CaMKII/NMDAR complex. For this latter aim,
 I created another \emph{in silico} mutant model in which CaMKII cannot
 be phosphorylated at T286.
 
-The NMDAR/CaMKII mutant model showed a substantial decrease in the
-amount of CaMKII in its open, active form when compared to both the WT
-and T286 mutant models. Suggesting that NMDAR binding is integral to
-maintaining CaMKII in its open conformation. While the T286 mutation
-also leads to a reduction in CaMKII openness, consistent with the
-established role of autophosphorylation at T286 in promoting autonomous
-activity, the effect is notably less severe than that observed in the
-NMDAR-binding mutant. This aligns with prior findings indicating that
-CaMKII binding to GluN2B induces a conformational change that sustains
-kinase activity even in the absence of T286 phosphorylation {[}REFERENCE
-NEEDED{]}. Furthermore, the T286 mutant model revealed that the T286
-phosphorylation mutation affects CaMKII opening and calmodulin binding,
-but does not disrupt CaMKII binding to NMDARs. These results suggest
-that while T286 phosphorylation regulates the conformational dynamics
-and calmodulin interactions of CaMKII, it is not required for
-stabilizing the CaMKII/NMDAR complex itself.
+The NMDAR/CaMKII mutant model exhibited a substantial decrease in the
+proportion of CaMKII in its open, active conformation compared with both
+the WT and T286 mutant models. This finding suggests that NMDAR binding
+is integral to maintaining CaMKII in its open, active state. While the
+T286 mutation also resulted in a reduction in CaMKII openness
+---consistent with the established role of autophosphorylation at T286
+in promoting autonomous kinase activity--- the effect was notably less
+severe than that observed in the NMDAR-binding mutant. These results
+align with previous reports demonstrating that CaMKII binding to the
+GluN2B subunit of the NMDAR induces a conformational change that
+sustains kinase activity even in the absence of T286 phosphorylation
+{[}\citeproc{ref-rumian2024LTP}{211},
+\citeproc{ref-cook2022CaMKIIb}{213}{]}. Furthermore, analysis of the
+T286 mutant model revealed that the loss of phosphorylation at this site
+alters CaMKII opening and CaM binding but does not disrupt CaMKII/NMDAR
+binding. Collectively, these findings suggest that although T286
+phosphorylation modulates CaMKII conformational dynamics and CaM
+interactions, it is not required to stabilize the CaMKII/NMDAR complex
+itself.
 
-In summary, previous studies have demonstrated that prolonged CaMKII
-activation leads to sustained binding to NMDARs. The present model
-aligns with these findings, supporting the notion that NMDAR association
-is a key factor in maintaining prolonged CaMKII activation. The model in
-this project further indicates that CaMKII can remain active even after
-CaM dissociation, retaining an open conformation when bound to NMDARs.
-In addition, our model model reproduces an emergent CaM trapping
-behaviour. Although the model does not explicitly increase CaM affinity
-following T286 phosphorylation, the phosphorylation event still enhances
-CaM binding, likely by stabilising the open state of CaMKII. In contrast
-to previous reports, however, the model predicts that CaMKII binding to
-NMDARs occurs independently of CaM.
+Previous studies have shown that prolonged CaMKII activation leads to
+sustained association with NMDARs, and the present simulations are
+consistent with this mechanism. The models indicate that NMDAR binding
+is a key determinant of prolonged CaMKII activation, enabling the kinase
+to remain in an open, active state even after CaM dissociation. This
+behavior reproduces an emergent form of CaM trapping, wherein CaMKII
+retains high CaM affinity as a result of its stabilized open
+conformation. Although the models do not explicitly increase CaM
+affinity following T286 phosphorylation, the phosphorylation event
+appears to enhance CaM binding indirectly by stabilizing the active
+state of the enzyme. Complementary to these structural findings, the
+simulations reveal that NMDAR binding not only maintains CaMKII in an
+open state but also actively promotes T286 autophosphorylation. This is
+consistent with prior evidence that the NMDAR/CaMKII interaction
+facilitates CaMKII activation {[}\citeproc{ref-bayer2024Revised}{11},
+\citeproc{ref-rumian2024LTP}{211},
+\citeproc{ref-cook2022CaMKIIb}{213}{]}. Furthermore, T286
+phosphorylation does not appear to influence the strength or stability
+of NMDAR binding, suggesting that NMDAR binding drives
+autophosphorylation and structural activation, whereas phosphorylation
+primarily sustains CaMKII activity once bound to NMDARs.
 
-Some studies suggest that NMDAR binding alone can keep CaMKII active
-even without T286 phosphorylation {[}REFERENCE{]}. However, in my model,
-CaMKII remains phosphorylated at T286 when NMDAR-bound.
+Finally, the sixth aim was to evaluate ethical risks using Data Hazards
+to ensure responsible research. To address this aim, I progressively
+applied the Data Hazards framework throughout the PhD research to
+identify and mitigate potential ethical risks associated with the
+project. Beyond implementing the framework in my own work, I also
+contributed to its broader development and dissemination. This included
+facilitating several workshops on Data Hazards and co-developing the
+framework itself, as well as co-organising and co-hosting a one-day
+symposium focused on ethics, reproducibility, and responsible research
+practice. The outcomes of this work culminated in a paper publication,
+``Data Hazards as an Ethical Toolkit for Neuroscience''
+(Chapter~\ref{sec-data-hazards-chapter}), which formalises and extends
+the framework as a practical resource for the wider scientific
+community, and uses this PhD as a case study on how to apply the Data
+Hazards framework.
 
-The simulations also identify CaMKII--NMDAR binding as a key driver of
-CaMKII autophosphorylation (Figures 6.15 and 6.16), whereas T286
-phosphorylation itself does not appear to influence CaMKII--NMDAR
-binding (Figures 6.11 and 6.17).
+\bookmarksetup{startatroot}
 
-so to summarise: What is consistent with exisitng literature: Prior
-studies have shown that prolonged CaMKII activation leads to persistent
-NMDAR binding - my model supports that NMDAR binding is key for
-prolonged CaMKII activation.
+\chapter{Field perspectives, limitations and future
+directions}\label{sec-discussion}
 
-CaMKII can remain active even after CaM dissociates, maintaining an open
-conformation when bound to NMDARs.
+CaMKII--NMDAR binding represents a key molecular interaction underlying
+synaptic plasticity, the cellular basis of learning and memory
+{[}\citeproc{ref-sanhueza2013CaMKII}{9}--\citeproc{ref-bayer2024Revised}{11}{]}.
+Disruption of this interaction has been implicated in neurodegenerative
+processes, spineopathies, and cognitive deficit disorders
+{[}\citeproc{ref-ghosh2015Calciuma}{5}--\citeproc{ref-yang2023NMDA}{8}{]}.
+Gaining a deeper understanding of how these proteins contribute to the
+structure and function of neuronal networks is therefore crucial,
+particularly in the context of spineopathies that alter both the
+biochemical composition and the morphology of dendritic spines
+{[}\citeproc{ref-fink2002Moleculara}{12}--\citeproc{ref-yasuda2017Biophysics}{15}{]}.
 
-This model supports an emergent CaM trapping behavior. Even though the
-model doesn't explicitly increase CaM affinity upon T286
-phosphorylation, T286 phosphorylation still promotes CaM binding, likely
-by stabilizing the open state of CaMKII. what is new or different in my
-results: CaMKII binding to NMDARs appears to be CaM-independent.
+This PhD project originated from that scientific motivation---using
+computational modelling to investigate how CaMKII and NMDARs interact
+within the postsynaptic density. These interactions are central to
+synaptic signalling, yet their spatiotemporal complexity makes them
+difficult to characterise experimentally. Computational models thus
+provide a powerful framework for exploring how changes in CaMKII
+functional states influence NMDAR binding and downstream signalling.
 
-Some studies suggest that NMDAR binding alone can keep CaMKII active
-even without T286 phosphorylation. However, in my model, CaMKII remains
-phosphorylated at T286 when NMDAR-bound.
+As the research progressed, the focus expanded beyond the biological
+mechanisms to include how computational models are constructed and
+assessed, with particular attention to integrating ethical awareness and
+reproducibility into the modelling process. Ultimately, this PhD serves
+as a case study on embedding principles of transparency, accountability,
+and responsible research conduct within the practical workflow of a
+computational neuroscience PhD.
 
-CaMKII/NMDAR binding is a key driver for CaMKII autophosphorylation
-(Figures 6.15, 6.16).
-
-T286 phosphorylation doesn't influence CaMKII/NMDAR binding (Figures
-6.11 and 6.17).
-
-Aim 6. Evaluate the ethical considerations of this research using the
-Data Hazards framework, a community-driven interdisciplinary vocabulary
-for assessing ethical risks in computational and biological research.
-
-\section{Summary of main results}\label{summary-of-main-results}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{0.0417}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\emph{As shown in Figure 6.12, the NMDAR/CaMKII binding mutant exhibits
-a significantly reduced number of CaMKII molecules in the open state
-compared to wild-type, as well as compared to the T286 mutant examined
-next. This suggests that NMDAR binding is important not only for
-maintaining CaMKII in its open conformation but also for promoting T286
-phosphorylation, highlighting a key role for CaMKII/NMDAR interactions
-in regulating CaMKII function.} \\
-\end{longtable}
-
-An overarching aim of this study was to investigate how the functional
-states of CaMKII---particularly through its phosphorylation and binding
-to NMDARs---affect the stability of the CaMKII/NMDAR complex and its
-role in synaptic signalling. To address this, I examined how the
-interaction between CaMKII and NMDARs influences CaMKII activity and
-function, using an in silico mutation model where CaMKII--NMDAR binding
-is disrupted. Likewise, I explored how CaMKII phosphorylation impacts
-its binding to NMDARs by investigating a model in which CaMKII cannot be
-phosphorylated at the T286 site. The following discussion will interpret
-the results from these \emph{in silico} mutation models, assess their
-relevance to the original research questions, and highlight how these
-findings contribute to a deeper understanding of the molecular processes
-underlying synaptic plasticity.
-
-\section{Discussion}\label{discussion}
+The relevance of this project lies in both its scientific and
+methodological contributions. The interaction between CaMKII and NMDAR
+is a central mechanism in synaptic plasticity and the molecular basis of
+memory. To my knowledge, this work presents the first model to represent
+CaMKII as a dodecamer interacting directly with NMDARs in both time and
+space, marking a novel contribution to the field. Beyond its scientific
+insights, the project also demonstrates how ethical and reproducible
+research practices can be systematically integrated into computational
+modelling.
 
 Previous studies have shown that transient CaMKII activity induces a
 reversible, CaM-dependent binding of GluN2B to the substrate-binding
@@ -6718,7 +6747,7 @@ Moreover, studies have shown that even if CaM dissociates, CaMKII can
 remain active and have autonomous activity without CaM
 {[}\citeproc{ref-chang2017CaMKII}{153},
 \citeproc{ref-braun1995Multifunctional}{186}--\citeproc{ref-buard2010CaMKII}{189}{]}.
-The results observed in this model are in line with these findings
+The results observed in our models are in line with these findings
 reported in the literature. The results show that CaMKII can maintain
 its open, active conformation through interactions with NMDARs, even in
 the absence of CaM. Notably, in the NMDAR/CaMKII MT model, there is a
@@ -6739,13 +6768,15 @@ established role of autophosphorylation at T286 in promoting autonomous
 activity, the effect is notably less severe than that observed in the
 NMDAR-binding mutant. This aligns with prior findings indicating that
 CaMKII binding to GluN2B induces a conformational change that sustains
-kinase activity even in the absence of T286 phosphorylation.
+kinase activity even in the absence of T286 phosphorylation
+{[}\citeproc{ref-rumian2024LTP}{211},
+\citeproc{ref-cook2022CaMKIIb}{213}{]}.
 
-CaMKII opening is also reduced when T286 phosphorylation is abolished,
-but this effect is less pronounced than in the NMDAR/CaMKII
-binding-deficient mutant. Previous studies have shown that CaMKII
-binding to GluN2B triggers a conformational change that enables the
-enzyme to remain autonomously active
+CaMKII opening is also reduced when T286 phosphorylation is abolished in
+the T286 mutant model, but this effect is less pronounced than in the
+NMDAR/CaMKII binding-deficient mutant. Previous studies have shown that
+CaMKII binding to GluN2B triggers a conformational change that enables
+the enzyme to remain autonomously active
 {[}\citeproc{ref-bayer2001Interaction}{168},
 \citeproc{ref-barcomb2016CaMKIIa}{452}{]}, even in the absence of T286
 phosphorylation. This is consistent with the significant decrease in
@@ -6761,10 +6792,10 @@ reinforces the idea that membrane anchoring to NMDARs is functionally
 dominant in regulating CaMKII conformational dynamics under these
 conditions.
 
-In the model at hand (wild type), it appears that an entire CaMKII
-holoenzyme initially binds to a single NMDAR, with subsequent subunits
-from the same holoenzyme engaging with adjacent NMDARs. This effectively
-results in one holoenzyme binding to and ``trapping'' up to 12 NMDARs
+In the models at hand, it appears that an entire CaMKII holoenzyme
+initially binds to a single NMDAR, with subsequent subunits from the
+same holoenzyme engaging with adjacent NMDARs. This effectively results
+in one holoenzyme binding to and ``trapping'' up to 12 NMDARs
 simultaneously, where we observed a stepwise increase in CaMKII binding
 across three phases, indicating that individual holoenzymes sequentially
 bind to available NMDARs (Figure~\ref{fig-camkii-opening-nmdar}). Given
@@ -6967,36 +6998,20 @@ in BNGL to the SBML format, enabling interoperability with BioDynaMo.
 This allows for the integration of BioNetGen's rule-based modelling
 strengths with BioDynaMo's advanced capabilities for dynamic geometry
 simulations, creating an ideal platform for modelling both molecular
-interactions and structural changes in the cytoskeleton.
+interactions and structural changes in the cytoskeleton. In the future,
+incorporating cytoskeleton dynamics into the models created in this PhD
+could provide a more complete picture of CaMKII-driven synaptic
+remodeling during LTP.
 
-To demonstrate the possibility of using BioDynaMo as a tool to simulate
-neuronal growth through formation of an actin cytoskeleton inside
-dendritic spines, I helped with supervision of a project that was
-carried out by Adrian Trajlinek
-{[}\citeproc{ref-trajlinek2022How}{478}{]}. The model works with actin
-filaments represented as molecular agents with cylindrical shapes. These
-can then be modelled to support tree-like structures that can branch
-out, sever, polymerize and depolymerize in similar manners to the
-biological equivalent. Overall, this project provided proof of concept
-that actin dynamics can be modelled in BioDynaMo, and further research
-can be developed from here onwards. Tools like MCell+CellBlender,
-BioDynaMo and RuleBender provide an exciting prospect of modelling how
-the morphology of dendritic spines changes during synaptic plasticity.
-Together, they provide tools to build a general-purpose platform for
-large-scale biological simulations.
+\section{Conclusion}\label{conclusion-1}
 
-\bookmarksetup{startatroot}
-
-\chapter{Conclusion}\label{conclusion-1}
-
-This PhD project started with a neuroscience and computer modelling
-focus: how do CaMKII and NMDARs interact in the postsynaptic density?
-
-It evolved into an effort to embed ethics and reproducibility as I
-create these models.
-
-Case study for how to implement reproducibility/ethics into a
-computational neuroscience PhD.
+This PhD project began with a focus on neuroscience and computational
+modeling, specifically investigating how CaMKII and NMDARs interact in
+the postsynaptic density. Over time, it also evolved into a broader
+effort to embed reproducibility, ethics, and research integrity into the
+development and analysis of these models, serving as a case study for
+how such principles can be implemented in computational neuroscience
+research.
 
 The \emph{in silico} models presented in this research suggest that
 NMDAR binding constitutes an early and important mechanism for
@@ -7029,12 +7044,12 @@ documentation and dissemination. In particular, this work serves as a
 case study in how computational neuroscience can be conducted with a
 strong commitment to transparency and responsible research practices.
 
-Issues such as data hazard classification, future societal implications,
-and ethical foresight were actively considered and discussed in detail.
-These reflections highlight that, while computational modelling may seem
-distant from direct experimental risks, it too carries responsibilities.
-Addressing these challenges is not without complexity or time costs, but
-as with all rigorous science, I believe the investment in doing so with
+Data hazard classification, future societal implications, and ethical
+considerations were actively discussed in detail. These reflections
+highlight that, while computational modelling may seem distant from
+direct experimental risks, it too carries responsibilities. Addressing
+these challenges is not without complexity or time costs, but as with
+all rigorous science, I believe the investment in doing so with
 integrity is worthwhile.It is my hope that this thesis contributes not
 only to the scientific understanding of CaMKII--NMDAR signalling in
 memory-related processes; but also offers a useful example for how to
@@ -7046,8 +7061,13 @@ throughout this PhD, and it is what I have consistently aimed to uphold.
 
 \bookmarksetup{startatroot}
 
-\chapter{List of publications and presentations resulting from this
+\chapter*{List of publications and presentations resulting from this
 PhD}\label{list-of-publications-and-presentations-resulting-from-this-phd}
+\addcontentsline{toc}{chapter}{List of publications and presentations
+resulting from this PhD}
+
+\markboth{List of publications and presentations resulting from this
+PhD}{List of publications and presentations resulting from this PhD}
 
 The following publications have emerged as a direct outcome of the
 research conducted during this PhD. They reflect the various strands of
@@ -7182,7 +7202,7 @@ stress disorder. \emph{Neurobiology of Stress}, \emph{29}, 100606.
 \CSLLeftMargin{5. }%
 \CSLRightInline{Ghosh, A., \& Giese, K. P. (2015).
 Calcium/calmodulin-dependent kinase {II} and {Alzheimer}'s disease.
-\emph{Mol Brain}, \emph{8}(1), 78.
+\emph{Molecular Brain}, \emph{8}(1), 78.
 \url{https://doi.org/10.1186/s13041-015-0166-2}}
 
 \bibitem[\citeproctext]{ref-liang2017Computational}
@@ -7199,7 +7219,7 @@ in {Alzheimer}'s disease. \emph{PLOS ONE}, \emph{12}(8), e0182743.
 L., Dal Cengio, L., Ko, Y., \ldots{} Hayden, M. R. (2020). {DAPK1
 Promotes Extrasynaptic GluN2B Phosphorylation} and {Striatal Spine
 Instability} in the {YAC128 Mouse Model} of {Huntington Disease}.
-\emph{Front. Cell. Neurosci.}, \emph{14}.
+\emph{Frontiers in Cellular Neuroscience}, \emph{14}.
 \url{https://doi.org/10.3389/fncel.2020.590569}}
 
 \bibitem[\citeproctext]{ref-yang2023NMDA}
@@ -7226,14 +7246,14 @@ of {LTP} by the {CaMKII}/{NMDAR} complex. (2015). \emph{Brain Research},
 \bibitem[\citeproctext]{ref-bayer2024Revised}
 \CSLLeftMargin{11. }%
 \CSLRightInline{Bayer, K. U., \& Giese, K. P. (2024). A revised view of
-the role of {CaMKII} in learning and memory. \emph{Nat Neurosci}, 1--11.
-\url{https://doi.org/10.1038/s41593-024-01809-x}}
+the role of {CaMKII} in learning and memory. \emph{Nature Neuroscience},
+1--11. \url{https://doi.org/10.1038/s41593-024-01809-x}}
 
 \bibitem[\citeproctext]{ref-fink2002Moleculara}
 \CSLLeftMargin{12. }%
 \CSLRightInline{Fink, C. C., \& Meyer, T. (2002). Molecular mechanisms
-of {CaMKII} activation in neuronal plasticity. \emph{Curr Opin
-Neurobiol}, \emph{12}(3), 293--299.
+of {CaMKII} activation in neuronal plasticity. \emph{Current opinion in
+neurobiology}, \emph{12}(3), 293--299.
 \url{https://doi.org/10.1016/s0959-4388(02)00327-6}}
 
 \bibitem[\citeproctext]{ref-halpain2005Dynamics}
@@ -7268,8 +7288,8 @@ neurons. \emph{Hippocampus}, \emph{9}(4), 365--384.
 \bibitem[\citeproctext]{ref-lamprecht2004Structural}
 \CSLLeftMargin{17. }%
 \CSLRightInline{Lamprecht, R., \& LeDoux, J. (2004). Structural
-plasticity and memory. \emph{Nat Rev Neurosci}, \emph{5}(1), 45--54.
-\url{https://doi.org/10.1038/nrn1301}}
+plasticity and memory. \emph{Nature Reviews Neuroscience}, \emph{5}(1),
+45--54. \url{https://doi.org/10.1038/nrn1301}}
 
 \bibitem[\citeproctext]{ref-takeuchi2014Synaptic}
 \CSLLeftMargin{18. }%
@@ -7283,7 +7303,7 @@ B: Biological Sciences}, \emph{369}(1633), 20130288.
 \CSLLeftMargin{19. }%
 \CSLRightInline{Abraham, W. C., Jones, O. D., \& Glanzman, D. L. (2019).
 Is plasticity of synapses the mechanism of long-term memory storage?
-\emph{npj Sci. Learn.}, \emph{4}(1), 1--10.
+\emph{npj Science of Learning}, \emph{4}(1), 1--10.
 \url{https://doi.org/10.1038/s41539-019-0048-y}}
 
 \bibitem[\citeproctext]{ref-ramonycajal1909HistologieSystemeNerveux}
@@ -7301,8 +7321,8 @@ a neuropsychological theory} (pp. xix, 335). Oxford, England: Wiley.}
 \CSLLeftMargin{22. }%
 \CSLRightInline{Lomo, T. (1971). Patterns of activation in a
 monosynaptic cortical pathway: The perforant path input to the dentate
-area of the hippocampal formation. \emph{Exp Brain Res}, \emph{12}(1),
-18--45.}
+area of the hippocampal formation. \emph{Experimental Brain Research},
+\emph{12}(1), 18--45.}
 
 \bibitem[\citeproctext]{ref-bliss1973Longlasting}
 \CSLLeftMargin{23. }%
@@ -7359,8 +7379,9 @@ hippocampus. \emph{Behavioral and Neural Biology}, \emph{48}(1),
 \bibitem[\citeproctext]{ref-kim2002Stressed}
 \CSLLeftMargin{30. }%
 \CSLRightInline{Kim, J. J., \& Diamond, D. M. (2002). The stressed
-hippocampus, synaptic plasticity and lost memories. \emph{Nat Rev
-Neurosci}, \emph{3}(6), 453--462. \url{https://doi.org/10.1038/nrn849}}
+hippocampus, synaptic plasticity and lost memories. \emph{Nature Reviews
+Neuroscience}, \emph{3}(6), 453--462.
+\url{https://doi.org/10.1038/nrn849}}
 
 \bibitem[\citeproctext]{ref-zemla2017Hippocampal}
 \CSLLeftMargin{31. }%
@@ -7379,8 +7400,9 @@ Biology}, \emph{25}(23), R1116--R1121.
 \CSLRightInline{Park, P., Kang, H., Sanderson, T. M., Bortolotto, Z. A.,
 Georgiou, J., Zhuo, M., \ldots{} Collingridge, G. L. (2018). The {Role}
 of {Calcium-Permeable AMPARs} in {Long-Term Potentiation} at {Principal
-Neurons} in the {Rodent Hippocampus}. \emph{Front. Synaptic Neurosci.},
-\emph{10}. \url{https://doi.org/10.3389/fnsyn.2018.00042}}
+Neurons} in the {Rodent Hippocampus}. \emph{Frontiers in Synaptic
+Neuroscience}, \emph{10}.
+\url{https://doi.org/10.3389/fnsyn.2018.00042}}
 
 \bibitem[\citeproctext]{ref-moscovitch2016Episodic}
 \CSLLeftMargin{34. }%
@@ -7423,7 +7445,7 @@ Encoding and retrieval in a model of the hippocampal CA1 microcircuit.
 \CSLLeftMargin{39. }%
 \CSLRightInline{Rebola, N., Carta, M., \& Mulle, C. (2017). Operation
 and plasticity of hippocampal {CA3} circuits: Implications for memory
-encoding. \emph{Nat Rev Neurosci}, \emph{18}(4), 208--220.
+encoding. \emph{Nature Reviews Neuroscience}, \emph{18}(4), 208--220.
 \url{https://doi.org/10.1038/nrn.2017.10}}
 
 \bibitem[\citeproctext]{ref-malenka2004LTPLTDEmbarrassment}
@@ -7444,8 +7466,8 @@ Society B: Biological Sciences}, \emph{379}(1906), 20230218.
 \CSLLeftMargin{42. }%
 \CSLRightInline{Lüscher, C., \& Malenka, R. C. (2012). {NMDA
 Receptor-Dependent Long-Term Potentiation} and {Long-Term Depression}
-({LTP}/{LTD}). \emph{Cold Spring Harb Perspect Biol}, \emph{4}(6),
-a005710. \url{https://doi.org/10.1101/cshperspect.a005710}}
+({LTP}/{LTD}). \emph{Cold Spring Harbor Perspectives in Biology},
+\emph{4}(6), a005710. \url{https://doi.org/10.1101/cshperspect.a005710}}
 
 \bibitem[\citeproctext]{ref-nabavi2014Engineering}
 \CSLLeftMargin{43. }%
@@ -7464,8 +7486,8 @@ R. Y., \& Malinow, R. (2014). Engineering a memory with {LTD} and {LTP}.
 \bibitem[\citeproctext]{ref-najenson2024LTP}
 \CSLLeftMargin{45. }%
 \CSLRightInline{Najenson, J. (2024). {LTP Revisited}: {Reconsidering}
-the {Explanatory Power} of {Synaptic Efficacy}. \emph{Rev.Phil.Psych.},
-\emph{15}(4), 1281--1306.
+the {Explanatory Power} of {Synaptic Efficacy}. \emph{Review of
+Philosophy and Psychology}, \emph{15}(4), 1281--1306.
 \url{https://doi.org/10.1007/s13164-023-00694-w}}
 
 \bibitem[\citeproctext]{ref-stevens1994Role}
@@ -7480,8 +7502,8 @@ plasticity. \emph{Current Biology}, \emph{4}(8), 687--693.
 \CSLRightInline{Incontro, S., Díaz-Alonso, J., Iafrati, J., Vieira, M.,
 Asensio, C. S., Sohal, V. S., \ldots{} Nicoll, R. A. (2018). The
 {CaMKII}/{NMDA} receptor complex controls hippocampal synaptic
-transmission by kinase-dependent and independent mechanisms. \emph{Nat
-Commun}, \emph{9}(1), 2069.
+transmission by kinase-dependent and independent mechanisms.
+\emph{Nature Communications}, \emph{9}(1), 2069.
 \url{https://doi.org/10.1038/s41467-018-04439-7}}
 
 \bibitem[\citeproctext]{ref-bannerman1995Distinct}
@@ -7508,8 +7530,8 @@ the {Function} of {Hippocampal Long-Term Potentiation}. \emph{Neuron},
 \CSLLeftMargin{51. }%
 \CSLRightInline{Lüscher, C., \& Malenka, R. C. (2012). {NMDA
 Receptor-Dependent Long-Term Potentiation} and {Long-Term Depression}
-({LTP}/{LTD}). \emph{Cold Spring Harb Perspect Biol}, \emph{4}(6),
-a005710. \url{https://doi.org/10.1101/cshperspect.a005710}}
+({LTP}/{LTD}). \emph{Cold Spring Harbor Perspectives in Biology},
+\emph{4}(6), a005710. \url{https://doi.org/10.1101/cshperspect.a005710}}
 
 \bibitem[\citeproctext]{ref-cameron2015Adult}
 \CSLLeftMargin{52. }%
@@ -7546,7 +7568,7 @@ synaptic efficacy in the human inferior and middle temporal cortex.
 \CSLLeftMargin{56. }%
 \CSLRightInline{Beck, H., Goussakov, I. V., Lie, A., Helmstaedter, C.,
 \& Elger, C. E. (2000). Synaptic {Plasticity} in the {Human Dentate
-Gyrus}. \emph{J. Neurosci.}, \emph{20}(18), 7080--7086.
+Gyrus}. \emph{Journal of Neuroscience}, \emph{20}(18), 7080--7086.
 \url{https://doi.org/10.1523/JNEUROSCI.20-18-07080.2000}}
 
 \bibitem[\citeproctext]{ref-nicoll2017BriefHistoryLongTerm}
@@ -7613,8 +7635,8 @@ metabotropic receptors in area {CA1} of the hippocampus.
 \CSLLeftMargin{65. }%
 \CSLRightInline{Bortolotto, Z. A., Fitzjohn, S. M., \& Collingridge, G.
 L. (1999). Roles of metabotropic glutamate receptors in {LTP} and {LTD}
-in the hippocampus. \emph{Curr Opin Neurobiol}, \emph{9}(3), 299--304.
-\url{https://doi.org/10.1016/s0959-4388(99)80044-0}}
+in the hippocampus. \emph{Current Opinion in Neurobiology}, \emph{9}(3),
+299--304. \url{https://doi.org/10.1016/s0959-4388(99)80044-0}}
 
 \bibitem[\citeproctext]{ref-cavus1996Two}
 \CSLLeftMargin{66. }%
@@ -7626,15 +7648,16 @@ cascades. \emph{Journal of Neurophysiology}, \emph{76}(5), 3038--3047.
 \bibitem[\citeproctext]{ref-grover1998Evidence}
 \CSLLeftMargin{67. }%
 \CSLRightInline{Grover, L. M. (1998). Evidence for postsynaptic
-induction and expression of {NMDA} receptor independent {LTP}. \emph{J
-Neurophysiol}, \emph{79}(3), 1167--1182.
+induction and expression of {NMDA} receptor independent {LTP}.
+\emph{Journal of Neurophysiology}, \emph{79}(3), 1167--1182.
 \url{https://doi.org/10.1152/jn.1998.79.3.1167}}
 
 \bibitem[\citeproctext]{ref-nicoll2005SynapticPlasticityHippocampal}
 \CSLLeftMargin{68. }%
 \CSLRightInline{Nicoll, R. A., \& Schmitz, D. (2005). Synaptic
-plasticity at hippocampal mossy fibre synapses. \emph{Nat Rev Neurosci},
-\emph{6}(11), 863--876. \url{https://doi.org/10.1038/nrn1786}}
+plasticity at hippocampal mossy fibre synapses. \emph{Nature Reviews.
+Neuroscience}, \emph{6}(11), 863--876.
+\url{https://doi.org/10.1038/nrn1786}}
 
 \bibitem[\citeproctext]{ref-aou2003Orexinhypocretin1}
 \CSLLeftMargin{69. }%
@@ -7656,15 +7679,16 @@ potentiation of {NMDA-EPSCs} at hippocampal mossy fiber synapses.
 \CSLLeftMargin{71. }%
 \CSLRightInline{Erondu, N. E., \& Kennedy, M. B. (1985). Regional
 distribution of type {II Ca2}+/calmodulin-dependent protein kinase in
-rat brain. \emph{J Neurosci}, \emph{5}(12), 3270--3277.
+rat brain. \emph{The Journal of Neuroscience: The Official Journal of
+the Society for Neuroscience}, \emph{5}(12), 3270--3277.
 \url{https://doi.org/10.1523/JNEUROSCI.05-12-03270.1985}}
 
 \bibitem[\citeproctext]{ref-kumar2011LongTerm}
 \CSLLeftMargin{72. }%
 \CSLRightInline{Kumar, A. (2011). Long-{Term Potentiation} at
 {CA3}--{CA1 Hippocampal Synapses} with {Special Emphasis} on {Aging},
-{Disease}, and {Stress}. \emph{Front Aging Neurosci}, \emph{3}, 7.
-\url{https://doi.org/10.3389/fnagi.2011.00007}}
+{Disease}, and {Stress}. \emph{Frontiers in Aging Neuroscience},
+\emph{3}, 7. \url{https://doi.org/10.3389/fnagi.2011.00007}}
 
 \bibitem[\citeproctext]{ref-sweatt2010Chaptera}
 \CSLLeftMargin{73. }%
@@ -7686,8 +7710,9 @@ Cellular Neuroscience}, \emph{91}, 82--94.
 \CSLLeftMargin{75. }%
 \CSLRightInline{Otmakhova, N. A., Otmakhov, N., \& Lisman, J. E. (2002).
 Pathway-{Specific Properties} of {AMPA} and {NMDA-Mediated Transmission}
-in {CA1 Hippocampal Pyramidal Cells}. \emph{J Neurosci}, \emph{22}(4),
-1199--1207. \url{https://doi.org/10.1523/JNEUROSCI.22-04-01199.2002}}
+in {CA1 Hippocampal Pyramidal Cells}. \emph{The Journal of
+Neuroscience}, \emph{22}(4), 1199--1207.
+\url{https://doi.org/10.1523/JNEUROSCI.22-04-01199.2002}}
 
 \bibitem[\citeproctext]{ref-fuenzalida2010Role}
 \CSLLeftMargin{76. }%
@@ -7701,14 +7726,14 @@ Plasticity}. \emph{Journal of Neurophysiology}, \emph{103}(1), 47--54.
 \CSLLeftMargin{77. }%
 \CSLRightInline{Morrison, A., Diesmann, M., \& Gerstner, W. (2008).
 Phenomenological models of synaptic plasticity based on spike timing.
-\emph{Biol Cybern}, \emph{98}(6), 459--478.
+\emph{Biological Cybernetics}, \emph{98}(6), 459--478.
 \url{https://doi.org/10.1007/s00422-008-0233-1}}
 
 \bibitem[\citeproctext]{ref-stefanescu2015NMDA}
 \CSLLeftMargin{78. }%
 \CSLRightInline{Stefanescu, R. A., \& Shore, S. (2015). {NMDA} receptors
 mediate stimulus-timing-dependent plasticity and neural synchrony in the
-dorsal cochlear nucleus. \emph{Front. Neural Circuits}, \emph{9}.
+dorsal cochlear nucleus. \emph{Frontiers in Neural Circuits}, \emph{9}.
 \url{https://doi.org/10.3389/fncir.2015.00075}}
 
 \bibitem[\citeproctext]{ref-martinez-gallego2022Role}
@@ -7746,8 +7771,9 @@ S. Sossin, J.-C. Lacaille, V. F. Castellucci, \& S. Belleville (Eds.),
 \CSLLeftMargin{83. }%
 \CSLRightInline{Purkey, A. M., \& Dell'Acqua, M. L. (2020).
 Phosphorylation-{Dependent Regulation} of {Ca2}+-{Permeable AMPA
-Receptors During Hippocampal Synaptic Plasticity}. \emph{Front. Synaptic
-Neurosci.}, \emph{12}. \url{https://doi.org/10.3389/fnsyn.2020.00008}}
+Receptors During Hippocampal Synaptic Plasticity}. \emph{Frontiers in
+Synaptic Neuroscience}, \emph{12}.
+\url{https://doi.org/10.3389/fnsyn.2020.00008}}
 
 \bibitem[\citeproctext]{ref-sala2014Dendritic}
 \CSLLeftMargin{84. }%
@@ -7781,8 +7807,8 @@ plasticity and memory. \emph{Current Opinion in Neurobiology},
 \bibitem[\citeproctext]{ref-lamprecht2004Structurala}
 \CSLLeftMargin{88. }%
 \CSLRightInline{Lamprecht, R., \& LeDoux, J. (2004). Structural
-plasticity and memory. \emph{Nat Rev Neurosci}, \emph{5}(1), 45--54.
-\url{https://doi.org/10.1038/nrn1301}}
+plasticity and memory. \emph{Nature Reviews Neuroscience}, \emph{5}(1),
+45--54. \url{https://doi.org/10.1038/nrn1301}}
 
 \bibitem[\citeproctext]{ref-debartolomeis2004Postsynaptic}
 \CSLLeftMargin{89. }%
@@ -7795,7 +7821,7 @@ Academic Press. \url{https://doi.org/10.1016/S0074-7742(04)59009-8}}
 \bibitem[\citeproctext]{ref-ivie2018ReproducibilityScientificComputing}
 \CSLLeftMargin{90. }%
 \CSLRightInline{Ivie, P., \& Thain, D. (2018). Reproducibility in
-{Scientific Computing}. \emph{ACM Comput. Surv.}, \emph{51}(3),
+{Scientific Computing}. \emph{ACM Computing Surveys}, \emph{51}(3),
 63:1--63:36. \url{https://doi.org/10.1145/3186266}}
 
 \bibitem[\citeproctext]{ref-huang1998Synaptic}
@@ -7891,14 +7917,15 @@ stimulation and {LTP} by neurotrophins in the hippocampus.
 \CSLRightInline{Mohns, E. J., \& Blumberg, M. S. (2008). Synchronous
 {Bursts} of {Neuronal Activity} in the {Developing Hippocampus}:
 {Modulation} by {Active Sleep} and {Association} with {Emerging Gamma}
-and {Theta Rhythms}. \emph{J. Neurosci.}, \emph{28}(40), 10134--10144.
-\url{https://doi.org/10.1523/JNEUROSCI.1967-08.2008}}
+and {Theta Rhythms}. \emph{Journal of Neuroscience}, \emph{28}(40),
+10134--10144. \url{https://doi.org/10.1523/JNEUROSCI.1967-08.2008}}
 
 \bibitem[\citeproctext]{ref-baltaci2019Molecular}
 \CSLLeftMargin{104. }%
 \CSLRightInline{Baltaci, S. B., Mogulkoc, R., \& Baltaci, A. K. (2019).
-Molecular {Mechanisms} of {Early} and {Late LTP}. \emph{Neurochem Res},
-\emph{44}(2), 281--296. \url{https://doi.org/10.1007/s11064-018-2695-4}}
+Molecular {Mechanisms} of {Early} and {Late LTP}. \emph{Neurochemical
+Research}, \emph{44}(2), 281--296.
+\url{https://doi.org/10.1007/s11064-018-2695-4}}
 
 \bibitem[\citeproctext]{ref-pfeiffer2006Current}
 \CSLLeftMargin{105. }%
@@ -7910,20 +7937,21 @@ Molecular {Mechanisms} of {Early} and {Late LTP}. \emph{Neurochem Res},
 \bibitem[\citeproctext]{ref-abraham2003Properties}
 \CSLLeftMargin{106. }%
 \CSLRightInline{Abraham, W. C., \& Williams, J. M. (2003). Properties
-and mechanisms of {LTP} maintenance. \emph{Neuroscientist}, \emph{9}(6),
+and mechanisms of {LTP} maintenance. \emph{The Neuroscientist: A Review
+Journal Bringing Neurobiology, Neurology and Psychiatry}, \emph{9}(6),
 463--474. \url{https://doi.org/10.1177/1073858403259119}}
 
 \bibitem[\citeproctext]{ref-roberson1996Biochemists}
 \CSLLeftMargin{107. }%
 \CSLRightInline{Roberson, E. D., English, J. D., \& Sweatt, J. D.
-(1996). A biochemist's view of long-term potentiation. \emph{Learn.
-Mem.}, \emph{3}(1), 1--24. \url{https://doi.org/10.1101/lm.3.1.1}}
+(1996). A biochemist's view of long-term potentiation. \emph{Learning \&
+Memory}, \emph{3}(1), 1--24. \url{https://doi.org/10.1101/lm.3.1.1}}
 
 \bibitem[\citeproctext]{ref-kandel2001Molecular}
 \CSLLeftMargin{108. }%
 \CSLRightInline{Kandel, E. R. (2001). The molecular biology of memory
-storage: A dialogue between genes and synapses. \emph{Science},
-\emph{294}(5544), 1030--1038.
+storage: A dialogue between genes and synapses. \emph{Science (New York,
+N.Y.)}, \emph{294}(5544), 1030--1038.
 \url{https://doi.org/10.1126/science.1067020}}
 
 \bibitem[\citeproctext]{ref-nicoll2003Expression}
@@ -7938,7 +7966,7 @@ Transactions of the Royal Society B: Biological Sciences},
 \CSLRightInline{Volianskis, A., France, G., Jensen, M. S., Bortolotto,
 Z. A., Jane, D. E., \& Collingridge, G. L. (2015). Long-term
 potentiation and the role of {N-methyl-D-aspartate} receptors.
-\emph{Brain Res}, \emph{1621}, 5--16.
+\emph{Brain Research}, \emph{1621}, 5--16.
 \url{https://doi.org/10.1016/j.brainres.2015.01.016}}
 
 \bibitem[\citeproctext]{ref-ciabarra1995CloningCharacterizationChi1}
@@ -7946,7 +7974,8 @@ potentiation and the role of {N-methyl-D-aspartate} receptors.
 \CSLRightInline{Ciabarra, A. M., Sullivan, J. M., Gahn, L. G., Pecht,
 G., Heinemann, S., \& Sevarino, K. A. (1995). Cloning and
 characterization of chi-1: A developmentally regulated member of a novel
-class of the ionotropic glutamate receptor family. \emph{J Neurosci},
+class of the ionotropic glutamate receptor family. \emph{The Journal of
+Neuroscience: The Official Journal of the Society for Neuroscience},
 \emph{15}(10), 6498--6508.
 \url{https://doi.org/10.1523/JNEUROSCI.15-10-06498.1995}}
 
@@ -7987,7 +8016,8 @@ Independently} of {GluN2 Subunit-Specific GluN2 C-Terminal Sequences}.
 \CSLLeftMargin{116. }%
 \CSLRightInline{Liu, X.-B., Murray, K. D., \& Jones, E. G. (2004).
 Switching of {NMDA} receptor {2A} and {2B} subunits at thalamic and
-cortical synapses during early postnatal development. \emph{J Neurosci},
+cortical synapses during early postnatal development. \emph{The Journal
+of Neuroscience: The Official Journal of the Society for Neuroscience},
 \emph{24}(40), 8885--8895.
 \url{https://doi.org/10.1523/JNEUROSCI.2476-04.2004}}
 
@@ -8017,8 +8047,8 @@ and {Function}. \emph{Pharmacological Reviews}, \emph{62}(3), 405--496.
 \CSLLeftMargin{120. }%
 \CSLRightInline{Henneberger, C., Bard, L., King, C., Jennings, A., \&
 Rusakov, D. A. (2013). {NMDA Receptor Activation}: {Two Targets} for
-{Two Co-Agonists}. \emph{Neurochem Res}, \emph{38}(6), 1156--1162.
-\url{https://doi.org/10.1007/s11064-013-0987-2}}
+{Two Co-Agonists}. \emph{Neurochemical Research}, \emph{38}(6),
+1156--1162. \url{https://doi.org/10.1007/s11064-013-0987-2}}
 
 \bibitem[\citeproctext]{ref-hansen2018Structure}
 \CSLLeftMargin{121. }%
@@ -8087,14 +8117,17 @@ plasticity of {NMDA} receptors: Mechanisms and functional implications.
 \CSLLeftMargin{129. }%
 \CSLRightInline{Chater, T. E., \& Goda, Y. (2014). The role of {AMPA}
 receptors in postsynaptic mechanisms of synaptic plasticity.
-\emph{Front. Cell. Neurosci.}, \emph{8}.
+\emph{Frontiers in Cellular Neuroscience}, \emph{8}.
 \url{https://doi.org/10.3389/fncel.2014.00401}}
 
 \bibitem[\citeproctext]{ref-jonas2000Time}
 \CSLLeftMargin{130. }%
 \CSLRightInline{Jonas, P. (2000). The {Time Course} of {Signaling} at
-{Central Glutamatergic Synapses}. \emph{News Physiol Sci}, \emph{15},
-83--89. \url{https://doi.org/10.1152/physiologyonline.2000.15.2.83}}
+{Central Glutamatergic Synapses}. \emph{News in Physiological Sciences:
+An International Journal of Physiology Produced Jointly by the
+International Union of Physiological Sciences and the American
+Physiological Society}, \emph{15}, 83--89.
+\url{https://doi.org/10.1152/physiologyonline.2000.15.2.83}}
 
 \bibitem[\citeproctext]{ref-nielsen2004Modulation}
 \CSLLeftMargin{131. }%
@@ -8151,22 +8184,24 @@ the Neural Interface}, \emph{25}(8), 1289--1298.
 \bibitem[\citeproctext]{ref-gnegy2000Ca2}
 \CSLLeftMargin{138. }%
 \CSLRightInline{Gnegy, M. E. (2000). Ca2+/{Calmodulin Signaling} in
-{NMDA-lnduced Synaptic Plasticity}. \emph{CRN}, \emph{14}(2).
+{NMDA-lnduced Synaptic Plasticity}. \emph{Critical Reviews\&trade; in
+Neurobiology}, \emph{14}(2).
 \url{https://doi.org/10.1615/CritRevNeurobiol.v14.i2.10}}
 
 \bibitem[\citeproctext]{ref-xia2005Role}
 \CSLLeftMargin{139. }%
 \CSLRightInline{Xia, Z., \& Storm, D. R. (2005). The role of calmodulin
-as a signal integrator for synaptic plasticity. \emph{Nat Rev Neurosci},
-\emph{6}(4), 267--276. \url{https://doi.org/10.1038/nrn1647}}
+as a signal integrator for synaptic plasticity. \emph{Nature Reviews
+Neuroscience}, \emph{6}(4), 267--276.
+\url{https://doi.org/10.1038/nrn1647}}
 
 \bibitem[\citeproctext]{ref-mohanan2022Role}
 \CSLLeftMargin{140. }%
 \CSLRightInline{Mohanan, A. G., Gunasekaran, S., Jacob, R. S., \&
 Omkumar, R. V. (2022). Role of {Ca2}+/{Calmodulin-Dependent Protein
 Kinase Type II} in {Mediating Function} and {Dysfunction} at
-{Glutamatergic Synapses}. \emph{Front. Mol. Neurosci.}, \emph{15}.
-\url{https://doi.org/10.3389/fnmol.2022.855752}}
+{Glutamatergic Synapses}. \emph{Frontiers in Molecular Neuroscience},
+\emph{15}. \url{https://doi.org/10.3389/fnmol.2022.855752}}
 
 \bibitem[\citeproctext]{ref-hayashi2000Driving}
 \CSLLeftMargin{141. }%
@@ -8194,7 +8229,7 @@ Biochemistry}, \emph{131}(1), 1--15.
 \CSLLeftMargin{144. }%
 \CSLRightInline{Kim, S., \& Ziff, E. B. (2014). Calcineurin {Mediates
 Synaptic Scaling Via Synaptic Trafficking} of {Ca2}+-{Permeable AMPA
-Receptors}. \emph{PLoS Biol}, \emph{12}(7), e1001900.
+Receptors}. \emph{PLoS Biology}, \emph{12}(7), e1001900.
 \url{https://doi.org/10.1371/journal.pbio.1001900}}
 
 \bibitem[\citeproctext]{ref-zhou2024Calcineurin}
@@ -8216,15 +8251,15 @@ structural plasticity. \emph{FEBS Letters}, \emph{567}(1), 121--128.
 \CSLLeftMargin{147. }%
 \CSLRightInline{Colbran, R. J. (2004). Protein {Phosphatases} and
 {Calcium}/{Calmodulin-Dependent Protein Kinase II-Dependent Synaptic
-Plasticity}. \emph{J. Neurosci.}, \emph{24}(39), 8404--8409.
+Plasticity}. \emph{Journal of Neuroscience}, \emph{24}(39), 8404--8409.
 \url{https://doi.org/10.1523/JNEUROSCI.3602-04.2004}}
 
 \bibitem[\citeproctext]{ref-belmeguenai2005Role}
 \CSLLeftMargin{148. }%
 \CSLRightInline{Belmeguenai, A., \& Hansel, C. (2005). A {Role} for
 {Protein Phosphatases} 1, {2A}, and {2B} in {Cerebellar Long-Term
-Potentiation}. \emph{J. Neurosci.}, \emph{25}(46), 10768--10772.
-\url{https://doi.org/10.1523/JNEUROSCI.2876-05.2005}}
+Potentiation}. \emph{Journal of Neuroscience}, \emph{25}(46),
+10768--10772. \url{https://doi.org/10.1523/JNEUROSCI.2876-05.2005}}
 
 \bibitem[\citeproctext]{ref-gladding2011Mechanisms}
 \CSLLeftMargin{149. }%
@@ -8250,8 +8285,8 @@ in mammalian nervous system. \emph{Progress in Neurobiology},
 \bibitem[\citeproctext]{ref-lisman2012MechanismsCaMKIIAction}
 \CSLLeftMargin{152. }%
 \CSLRightInline{Lisman, J., Yasuda, R., \& Raghavachari, S. (2012).
-Mechanisms of {CaMKII} action in long-term potentiation. \emph{Nat Rev
-Neurosci}, \emph{13}(3, 3), 169--182.
+Mechanisms of {CaMKII} action in long-term potentiation. \emph{Nature
+Reviews Neuroscience}, \emph{13}(3, 3), 169--182.
 \url{https://doi.org/10.1038/nrn3192}}
 
 \bibitem[\citeproctext]{ref-chang2017CaMKII}
@@ -8280,7 +8315,7 @@ of the National Academy of Sciences}, \emph{121}(26), e2402783121.
 \CSLLeftMargin{156. }%
 \CSLRightInline{Zalcman, G., Federman, N., \& Romano, A. (2018). {CaMKII
 Isoforms} in {Learning} and {Memory}: {Localization} and {Function}.
-\emph{Front. Mol. Neurosci.}, \emph{11}.
+\emph{Frontiers in Molecular Neuroscience}, \emph{11}.
 \url{https://doi.org/10.3389/fnmol.2018.00445}}
 
 \bibitem[\citeproctext]{ref-tullis2023Distinct}
@@ -8295,7 +8330,8 @@ pools of {DAPK1} differentially regulate activity-dependent synaptic
 \CSLRightInline{Kennedy, M. B., Bennett, M. K., \& Erondu, N. E. (1983).
 Biochemical and immunochemical evidence that the "major postsynaptic
 density protein" is a subunit of a calmodulin-dependent protein kinase.
-\emph{Proc Natl Acad Sci U S A}, \emph{80}(23), 7357--7361.
+\emph{Proceedings of the National Academy of Sciences of the United
+States of America}, \emph{80}(23), 7357--7361.
 \url{https://doi.org/10.1073/pnas.80.23.7357}}
 
 \bibitem[\citeproctext]{ref-chen2005Mass}
@@ -8316,7 +8352,7 @@ postsynaptic density and enumeration of three key molecules.
 \CSLLeftMargin{161. }%
 \CSLRightInline{Yasuda, R., Hayashi, Y., \& Hell, J. W. (2022).
 {CaMKII}: A central molecular organizer of synaptic plasticity, learning
-and memory. \emph{Nat Rev Neurosci}, \emph{23}(11), 666--682.
+and memory. \emph{Nature Reviews Neuroscience}, \emph{23}(11), 666--682.
 \url{https://doi.org/10.1038/s41583-022-00624-2}}
 
 \bibitem[\citeproctext]{ref-rosenberg2005StructureAutoinhibitedKinase}
@@ -8340,22 +8376,24 @@ Ca2}+/{Calmodulin- Dependent Kinase II Holoenzyme}. \emph{Cell},
 \CSLLeftMargin{164. }%
 \CSLRightInline{Myers, J. B., Zaegel, V., Coultrap, S. J., Miller, A.
 P., Bayer, K. U., \& Reichow, S. L. (2017). The {CaMKII} holoenzyme
-structure in activation-competent conformations. \emph{Nat Commun},
-\emph{8}, 15742. \url{https://doi.org/10.1038/ncomms15742}}
+structure in activation-competent conformations. \emph{Nature
+Communications}, \emph{8}, 15742.
+\url{https://doi.org/10.1038/ncomms15742}}
 
 \bibitem[\citeproctext]{ref-buonarati2021Conserved}
 \CSLLeftMargin{165. }%
 \CSLRightInline{Buonarati, O. R., Miller, A. P., Coultrap, S. J., Bayer,
 K. U., \& Reichow, S. L. (2021). Conserved and divergent features of
 neuronal {CaMKII} holoenzyme structure, function, and high-order
-assembly. \emph{Cell Rep}, \emph{37}(13), 110168.
+assembly. \emph{Cell reports}, \emph{37}(13), 110168.
 \url{https://doi.org/10.1016/j.celrep.2021.110168}}
 
 \bibitem[\citeproctext]{ref-pellicena2014CaMKII}
 \CSLLeftMargin{166. }%
 \CSLRightInline{Pellicena, P., \& Schulman, H. (2014). {CaMKII}
-inhibitors: From research tools to therapeutic agents. \emph{Front.
-Pharmacol.}, \emph{5}. \url{https://doi.org/10.3389/fphar.2014.00021}}
+inhibitors: From research tools to therapeutic agents. \emph{Frontiers
+in Pharmacology}, \emph{5}.
+\url{https://doi.org/10.3389/fphar.2014.00021}}
 
 \bibitem[\citeproctext]{ref-strack2000Mechanisma}
 \CSLLeftMargin{167. }%
@@ -8390,8 +8428,8 @@ Reports}, \emph{40}(2).
 \CSLLeftMargin{171. }%
 \CSLRightInline{Hoffman, L., Stein, R. A., Colbran, R. J., \& Mchaourab,
 H. S. (2011). Conformational changes underlying
-calcium/calmodulin-dependent protein kinase {II} activation. \emph{EMBO
-J}, \emph{30}(7), 1251--1262.
+calcium/calmodulin-dependent protein kinase {II} activation. \emph{The
+EMBO journal}, \emph{30}(7), 1251--1262.
 \url{https://doi.org/10.1038/emboj.2011.40}}
 
 \bibitem[\citeproctext]{ref-bhattacharyya2020Structurala}
@@ -8399,7 +8437,7 @@ J}, \emph{30}(7), 1251--1262.
 \CSLRightInline{Bhattacharyya, M., Karandur, D., \& Kuriyan, J. (2020).
 Structural {Insights} into the {Regulation} of
 {Ca2}+/{Calmodulin-Dependent Protein Kinase II} ({CaMKII}). \emph{Cold
-Spring Harb Perspect Biol}, \emph{12}(6), a035147.
+Spring Harbor Perspectives in Biology}, \emph{12}(6), a035147.
 \url{https://doi.org/10.1101/cshperspect.a035147}}
 
 \bibitem[\citeproctext]{ref-nguyen2015Covert}
@@ -8414,8 +8452,8 @@ Interactions}. \emph{Biophysical Journal}, \emph{108}(9), 2158--2170.
 \CSLLeftMargin{174. }%
 \CSLRightInline{Pandini, A., Schulman, H., \& Khan, S. (2019).
 Conformational coupling by trans-phosphorylation in calcium calmodulin
-dependent kinase {II}. \emph{PLoS Comput Biol}, \emph{15}(5), e1006796.
-\url{https://doi.org/10.1371/journal.pcbi.1006796}}
+dependent kinase {II}. \emph{PLoS Computational Biology}, \emph{15}(5),
+e1006796. \url{https://doi.org/10.1371/journal.pcbi.1006796}}
 
 \bibitem[\citeproctext]{ref-bhattacharyya2020Flexible}
 \CSLLeftMargin{175. }%
@@ -8495,8 +8533,8 @@ Protein Kinase II} *. \emph{Journal of Biological Chemistry},
 \CSLLeftMargin{184. }%
 \CSLRightInline{Singla, S. I., Hudmon, A., Goldberg, J. M., Smith, J.
 L., \& Schulman, H. (2001). Molecular characterization of calmodulin
-trapping by calcium/calmodulin-dependent protein kinase {II}. \emph{J
-Biol Chem}, \emph{276}(31), 29353--29360.
+trapping by calcium/calmodulin-dependent protein kinase {II}. \emph{The
+Journal of Biological Chemistry}, \emph{276}(31), 29353--29360.
 \url{https://doi.org/10.1074/jbc.M101744200}}
 
 \bibitem[\citeproctext]{ref-pharris2019Multistate}
@@ -8512,7 +8550,7 @@ Computational Biology}, \emph{15}(12), e1006941.
 \CSLLeftMargin{186. }%
 \CSLRightInline{Braun, A. P., \& Schulman, H. (1995). The
 multifunctional calcium/calmodulin-dependent protein kinase: From form
-to function. \emph{Annu Rev Physiol}, \emph{57}, 417--445.
+to function. \emph{Annual Review of Physiology}, \emph{57}, 417--445.
 \url{https://doi.org/10.1146/annurev.ph.57.030195.002221}}
 
 \bibitem[\citeproctext]{ref-miller1986Regulation}
@@ -8536,7 +8574,7 @@ Biological Chemistry}, \emph{285}(23), 17930--17937.
 \CSLRightInline{Buard, I., Coultrap, S. J., Freund, R. K., Lee, Y.-S.,
 Dell'Acqua, M. L., Silva, A. J., \& Bayer, K. U. (2010). {CaMKII}
 {``{Autonomy}''} {Is Required} for {Initiating But Not} for {Maintaining
-Neuronal Long-Term Information Storage}. \emph{J. Neurosci.},
+Neuronal Long-Term Information Storage}. \emph{Journal of Neuroscience},
 \emph{30}(24), 8214--8220.
 \url{https://doi.org/10.1523/JNEUROSCI.1469-10.2010}}
 
@@ -8564,8 +8602,9 @@ Neurosciences}, \emph{35}(10), 607--618.
 \bibitem[\citeproctext]{ref-nicoll2005Synaptic}
 \CSLLeftMargin{193. }%
 \CSLRightInline{Nicoll, R. A., \& Schmitz, D. (2005). Synaptic
-plasticity at hippocampal mossy fibre synapses. \emph{Nat Rev Neurosci},
-\emph{6}(11), 863--876. \url{https://doi.org/10.1038/nrn1786}}
+plasticity at hippocampal mossy fibre synapses. \emph{Nature Reviews
+Neuroscience}, \emph{6}(11), 863--876.
+\url{https://doi.org/10.1038/nrn1786}}
 
 \bibitem[\citeproctext]{ref-erickson2008Dynamic}
 \CSLLeftMargin{194. }%
@@ -8579,22 +8618,24 @@ Oxidation}. \emph{Cell}, \emph{133}(3), 462--474.
 \CSLLeftMargin{195. }%
 \CSLRightInline{Hanson, P. I., \& Schulman, H. (1992). Inhibitory
 autophosphorylation of multifunctional {Ca2}+/calmodulin-dependent
-protein kinase analyzed by site-directed mutagenesis. \emph{J Biol
-Chem}, \emph{267}(24), 17216--17224.}
+protein kinase analyzed by site-directed mutagenesis. \emph{The Journal
+of Biological Chemistry}, \emph{267}(24), 17216--17224.}
 
 \bibitem[\citeproctext]{ref-pi2010Autonomousa}
 \CSLLeftMargin{196. }%
 \CSLRightInline{Pi, H. J., Otmakhov, N., Lemelin, D., Koninck, P. D., \&
 Lisman, J. (2010). Autonomous {CaMKII Can Promote} either {Long-Term
 Potentiation} or {Long-Term Depression}, {Depending} on the {State} of
-{T305}/{T306 Phosphorylation}. \emph{J. Neurosci.}, \emph{30}(26),
-8704--8709. \url{https://doi.org/10.1523/JNEUROSCI.0133-10.2010}}
+{T305}/{T306 Phosphorylation}. \emph{Journal of Neuroscience},
+\emph{30}(26), 8704--8709.
+\url{https://doi.org/10.1523/JNEUROSCI.0133-10.2010}}
 
 \bibitem[\citeproctext]{ref-colbran1993Inactivation}
 \CSLLeftMargin{197. }%
 \CSLRightInline{Colbran, R. J. (1993). Inactivation of
 {Ca2}+/calmodulin-dependent protein kinase {II} by basal
-autophosphorylation. \emph{J Biol Chem}, \emph{268}(10), 7163--7170.}
+autophosphorylation. \emph{The Journal of Biological Chemistry},
+\emph{268}(10), 7163--7170.}
 
 \bibitem[\citeproctext]{ref-cook2021CaMKIIb}
 \CSLLeftMargin{198. }%
@@ -8607,15 +8648,15 @@ Bayer, K. U. (2021). {CaMKII} holoenzyme mechanisms that govern the
 \CSLLeftMargin{199. }%
 \CSLRightInline{Chang, J.-Y., Nakahata, Y., Hayano, Y., \& Yasuda, R.
 (2019). Mechanisms of {Ca2}+/calmodulin-dependent kinase {II} activation
-in single dendritic spines. \emph{Nat Commun}, \emph{10}(1), 2784.
-\url{https://doi.org/10.1038/s41467-019-10694-z}}
+in single dendritic spines. \emph{Nature Communications}, \emph{10}(1),
+2784. \url{https://doi.org/10.1038/s41467-019-10694-z}}
 
 \bibitem[\citeproctext]{ref-yasuda2022CaMKII}
 \CSLLeftMargin{200. }%
 \CSLRightInline{Yasuda, R., Hayashi, Y., \& Hell, J. W. (2022).
 {CaMKII}: A central molecular organizer of synaptic plasticity, learning
-and memory. \emph{Nat Rev Neurosci}, \emph{23}(11, 11), 666--682.
-\url{https://doi.org/10.1038/s41583-022-00624-2}}
+and memory. \emph{Nature Reviews Neuroscience}, \emph{23}(11, 11),
+666--682. \url{https://doi.org/10.1038/s41583-022-00624-2}}
 
 \bibitem[\citeproctext]{ref-ordyan2020Interactionsb}
 \CSLLeftMargin{201. }%
@@ -8637,7 +8678,7 @@ Autonomous {CaMKII Mediates Both LTP} and {LTD Using} a {Mechanism} for
 \bibitem[\citeproctext]{ref-nicoll2023Synaptic}
 \CSLLeftMargin{203. }%
 \CSLRightInline{Nicoll, R. A., \& Schulman, H. (2023). Synaptic memory
-and {CaMKII}. \emph{Physiol Rev}, \emph{103}(4), 2897--2945.
+and {CaMKII}. \emph{Physiological Reviews}, \emph{103}(4), 2897--2945.
 \url{https://doi.org/10.1152/physrev.00034.2022}}
 
 \bibitem[\citeproctext]{ref-diaz-alonsoLongterm}
@@ -8724,8 +8765,9 @@ forms of long-term plasticity. \emph{Journal of Biological Chemistry},
 \CSLLeftMargin{214. }%
 \CSLRightInline{Bayer, K. U., LeBel, E., McDonald, G. L., O'Leary, H.,
 Schulman, H., \& De Koninck, P. (2006). Transition from reversible to
-persistent binding of {CaMKII} to postsynaptic sites and {NR2B}. \emph{J
-Neurosci}, \emph{26}(4), 1164--1174.
+persistent binding of {CaMKII} to postsynaptic sites and {NR2B}.
+\emph{The Journal of Neuroscience: The Official Journal of the Society
+for Neuroscience}, \emph{26}(4), 1164--1174.
 \url{https://doi.org/10.1523/JNEUROSCI.3116-05.2006}}
 
 \bibitem[\citeproctext]{ref-engelhardt2008Contribution}
@@ -8742,15 +8784,16 @@ Göngrich, C., Taylor, A., \ldots{} Monyer, H. (2008). Contribution of
 Yamasaki, M., Abe, M., \ldots{} Sakimura, K. (2009). {NMDA Receptor
 GluN2B} ({GluRε2}/{NR2B}) {Subunit Is Crucial} for {Channel Function},
 {Postsynaptic Macromolecular Organization}, and {Actin Cytoskeleton} at
-{Hippocampal CA3 Synapses}. \emph{J. Neurosci.}, \emph{29}(35),
-10869--10882. \url{https://doi.org/10.1523/JNEUROSCI.5531-08.2009}}
+{Hippocampal CA3 Synapses}. \emph{Journal of Neuroscience},
+\emph{29}(35), 10869--10882.
+\url{https://doi.org/10.1523/JNEUROSCI.5531-08.2009}}
 
 \bibitem[\citeproctext]{ref-foster2010Distinct}
 \CSLLeftMargin{217. }%
 \CSLRightInline{Foster, K. A., McLaughlin, N., Edbauer, D., Phillips,
 M., Bolton, A., Constantine-Paton, M., \& Sheng, M. (2010). Distinct
 {Roles} of {NR2A} and {NR2B Cytoplasmic Tails} in {Long-Term
-Potentiation}. \emph{J. Neurosci.}, \emph{30}(7), 2676--2685.
+Potentiation}. \emph{Journal of Neuroscience}, \emph{30}(7), 2676--2685.
 \url{https://doi.org/10.1523/JNEUROSCI.4022-09.2010}}
 
 \bibitem[\citeproctext]{ref-halt2012CaMKIIc}
@@ -8779,8 +8822,8 @@ Hayashi, Y. (2016). Interplay of enzymatic and structural functions of
 \bibitem[\citeproctext]{ref-lisman2012Mechanisms}
 \CSLLeftMargin{221. }%
 \CSLRightInline{Lisman, J., Yasuda, R., \& Raghavachari, S. (2012).
-Mechanisms of {CaMKII} action in long-term potentiation. \emph{Nat Rev
-Neurosci}, \emph{13}(3), 169--182.
+Mechanisms of {CaMKII} action in long-term potentiation. \emph{Nature
+reviews. Neuroscience}, \emph{13}(3), 169--182.
 \url{https://doi.org/10.1038/nrn3192}}
 
 \bibitem[\citeproctext]{ref-goodell2017DAPK1}
@@ -8819,7 +8862,7 @@ eabe2300. \url{https://doi.org/10.1126/sciadv.abe2300}}
 \CSLRightInline{Barcomb, K., Buard, I., Coultrap, S. J., Kulbe, J. R.,
 O'Leary, H., Benke, T. A., \& Bayer, K. U. (2014). Autonomous {CaMKII}
 requires further stimulation by {Ca2}+/calmodulin for enhancing synaptic
-strength. \emph{FASEB J}, \emph{28}(8), 3810--3819.
+strength. \emph{The FASEB Journal}, \emph{28}(8), 3810--3819.
 \url{https://doi.org/10.1096/fj.14-250407}}
 
 \bibitem[\citeproctext]{ref-shen1998CaMKIIv}
@@ -8842,8 +8885,9 @@ slices. \emph{Molecular and Cellular Neuroscience}, \emph{31}(1),
 \CSLLeftMargin{229. }%
 \CSLRightInline{Okamoto, K.-I., Narayanan, R., Lee, S. H., Murata, K.,
 \& Hayashi, Y. (2007). The role of {CaMKII} as an {F-actin-bundling}
-protein crucial for maintenance of dendritic spine structure. \emph{Proc
-Natl Acad Sci U S A}, \emph{104}(15), 6418--6423.
+protein crucial for maintenance of dendritic spine structure.
+\emph{Proceedings of the National Academy of Sciences of the United
+States of America}, \emph{104}(15), 6418--6423.
 \url{https://doi.org/10.1073/pnas.0701656104}}
 
 \bibitem[\citeproctext]{ref-wang2019Assemblies}
@@ -8851,16 +8895,17 @@ Natl Acad Sci U S A}, \emph{104}(15), 6418--6423.
 \CSLRightInline{Wang, Q., Chen, M., Schafer, N. P., Bueno, C., Song, S.
 S., Hudmon, A., \ldots{} Cheung, M. S. (2019). Assemblies of
 calcium/calmodulin-dependent kinase {II} with actin and their dynamic
-regulation by calmodulin in dendritic spines. \emph{Proc Natl Acad Sci U
-S A}, \emph{116}(38), 18937--18942.
+regulation by calmodulin in dendritic spines. \emph{Proceedings of the
+National Academy of Sciences of the United States of America},
+\emph{116}(38), 18937--18942.
 \url{https://doi.org/10.1073/pnas.1911452116}}
 
 \bibitem[\citeproctext]{ref-oleary2006CaMKIIv}
 \CSLLeftMargin{231. }%
 \CSLRightInline{O'Leary, H., Lasda, E., \& Bayer, K. U. (2006). {CaMKIIβ
 Association} with the {Actin Cytoskeleton Is Regulated} by {Alternative
-Splicing}. \emph{MBoC}, \emph{17}(11), 4656--4665.
-\url{https://doi.org/10.1091/mbc.e06-03-0252}}
+Splicing}. \emph{Molecular Biology of the Cell}, \emph{17}(11),
+4656--4665. \url{https://doi.org/10.1091/mbc.e06-03-0252}}
 
 \bibitem[\citeproctext]{ref-brocke1999Functional}
 \CSLLeftMargin{232. }%
@@ -8875,7 +8920,7 @@ H. (1999). Functional {Implications} of the {Subunit Composition} of
 \CSLRightInline{Okamoto, K.-I., Nagai, T., Miyawaki, A., \& Hayashi, Y.
 (2004). Rapid and persistent modulation of actin dynamics regulates
 postsynaptic reorganization underlying bidirectional plasticity.
-\emph{Nat Neurosci}, \emph{7}(10), 1104--1112.
+\emph{Nature Neuroscience}, \emph{7}(10), 1104--1112.
 \url{https://doi.org/10.1038/nn1311}}
 
 \bibitem[\citeproctext]{ref-okamoto2009Roles}
@@ -8929,8 +8974,9 @@ Springer Nature. \url{https://doi.org/10.1007/978-981-19-8406-8_40}}
 \bibitem[\citeproctext]{ref-xiao2015Emergent}
 \CSLLeftMargin{240. }%
 \CSLRightInline{Xiao, R., Zhang, Y., \& Huang, Z. (2015). Emergent
-computation of complex systems: A comprehensive review. \emph{IJBIC},
-\emph{7}(2), 75. \url{https://doi.org/10.1504/IJBIC.2015.069292}}
+computation of complex systems: A comprehensive review.
+\emph{International Journal of Bio-Inspired Computation}, \emph{7}(2),
+75. \url{https://doi.org/10.1504/IJBIC.2015.069292}}
 
 \bibitem[\citeproctext]{ref-stiles1996Miniaturea}
 \CSLLeftMargin{241. }%
@@ -8952,8 +8998,10 @@ Microphysiology Using MCell}. (2000). In \emph{Computational
 \CSLRightInline{Kerr, R. A., Bartol, T. M., Kaminsky, B., Dittrich, M.,
 Chang, J.-C. J., Baden, S. B., \ldots{} Stiles, J. R. (2008). {FAST
 MONTE CARLO SIMULATION METHODS FOR BIOLOGICAL REACTION-DIFFUSION SYSTEMS
-IN SOLUTION AND ON SURFACES}. \emph{SIAM J Sci Comput}, \emph{30}(6),
-3126. \url{https://doi.org/10.1137/070692017}}
+IN SOLUTION AND ON SURFACES}. \emph{SIAM journal on scientific
+computing: a publication of the Society for Industrial and Applied
+Mathematics}, \emph{30}(6), 3126.
+\url{https://doi.org/10.1137/070692017}}
 
 \bibitem[\citeproctext]{ref-husar2022MCell4}
 \CSLLeftMargin{244. }%
@@ -8974,7 +9022,7 @@ P., Gupta, S., Korsunsky, I., \ldots{} Faeder, J. R. (2016). {BioNetGen}
 \bibitem[\citeproctext]{ref-noble2002Rise}
 \CSLLeftMargin{246. }%
 \CSLRightInline{Noble, D. (2002). The rise of computational biology.
-\emph{Nat Rev Mol Cell Biol}, \emph{3}(6), 459--463.
+\emph{Nature Reviews Molecular Cell Biology}, \emph{3}(6), 459--463.
 \url{https://doi.org/10.1038/nrm810}}
 
 \bibitem[\citeproctext]{ref-kaur2021Computational}
@@ -8989,15 +9037,15 @@ Mallick, C.-M. Liu, \& V. E. Balas (Eds.), \emph{Bio-inspired
 \CSLLeftMargin{248. }%
 \CSLRightInline{Levenstein, D., Alvarez, V. A., Amarasingham, A., Azab,
 H., Chen, Z. S., Gerkin, R. C., \ldots{} Redish, A. D. (2023). On the
-{Role} of {Theory} and {Modeling} in {Neuroscience}. \emph{J.
-Neurosci.}, \emph{43}(7), 1074--1088.
+{Role} of {Theory} and {Modeling} in {Neuroscience}. \emph{Journal of
+Neuroscience}, \emph{43}(7), 1074--1088.
 \url{https://doi.org/10.1523/JNEUROSCI.1179-22.2022}}
 
 \bibitem[\citeproctext]{ref-teschendorff2021Statistical}
 \CSLLeftMargin{249. }%
 \CSLRightInline{Teschendorff, A. E., \& Feinberg, A. P. (2021).
-Statistical mechanics meets single-cell biology. \emph{Nat Rev Genet},
-\emph{22}(7), 459--476.
+Statistical mechanics meets single-cell biology. \emph{Nature Reviews
+Genetics}, \emph{22}(7), 459--476.
 \url{https://doi.org/10.1038/s41576-021-00341-z}}
 
 \bibitem[\citeproctext]{ref-demopoulos2025Chaos}
@@ -9075,8 +9123,8 @@ Mota-Rojas, D. (2023). The {Importance} of {Animal Models} in
 \CSLLeftMargin{260. }%
 \CSLRightInline{Madden, J. C., Enoch, S. J., Paini, A., \& Cronin, M. T.
 D. (2020). A {Review} of {In Silico Tools} as {Alternatives} to {Animal
-Testing}: {Principles}, {Resources} and {Applications}. \emph{Altern Lab
-Anim}, \emph{48}(4), 146--172.
+Testing}: {Principles}, {Resources} and {Applications}.
+\emph{Alternatives to Laboratory Animals}, \emph{48}(4), 146--172.
 \url{https://doi.org/10.1177/0261192920965977}}
 
 \bibitem[\citeproctext]{ref-pound2004Where}
@@ -9090,8 +9138,8 @@ benefits humans? \emph{BMJ}, \emph{328}(7438), 514--517.
 \CSLLeftMargin{262. }%
 \CSLRightInline{Ghosh, S., Matsuoka, Y., Asai, Y., Hsin, K.-Y., \&
 Kitano, H. (2011). Software for systems biology: From tools to
-integrated platforms. \emph{Nat Rev Genet}, \emph{12}(12), 821--832.
-\url{https://doi.org/10.1038/nrg3096}}
+integrated platforms. \emph{Nature Reviews Genetics}, \emph{12}(12),
+821--832. \url{https://doi.org/10.1038/nrg3096}}
 
 \bibitem[\citeproctext]{ref-olivier2016Modeling}
 \CSLLeftMargin{263. }%
@@ -9157,8 +9205,8 @@ ed.). Springer Publishing Company, Incorporated.}
 \CSLLeftMargin{271. }%
 \CSLRightInline{Earnest, T. M., Cole, J. A., \& Luthey-Schulten, Z.
 (2018). Simulating biological processes: Stochastic physics from whole
-cells to colonies. \emph{Rep. Prog. Phys.}, \emph{81}(5), 052601.
-\url{https://doi.org/10.1088/1361-6633/aaae2c}}
+cells to colonies. \emph{Reports on Progress in Physics}, \emph{81}(5),
+052601. \url{https://doi.org/10.1088/1361-6633/aaae2c}}
 
 \bibitem[\citeproctext]{ref-marin2019Kinetics}
 \CSLLeftMargin{272. }%
@@ -9181,14 +9229,15 @@ Academic Press.
 \CSLRightInline{Johnson, M. E., Chen, A., Faeder, J. R., Henning, P.,
 Moraru, I. I., Meier-Schellersheim, M., \ldots{} Uhrmacher, A. M.
 (2021). Quantifying the roles of space and stochasticity in computer
-simulations for cell biology and cellular biochemistry. \emph{MBoC},
-\emph{32}(2), 186--210. \url{https://doi.org/10.1091/mbc.E20-08-0530}}
+simulations for cell biology and cellular biochemistry. \emph{Molecular
+Biology of the Cell}, \emph{32}(2), 186--210.
+\url{https://doi.org/10.1091/mbc.E20-08-0530}}
 
 \bibitem[\citeproctext]{ref-smith2019Spatial}
 \CSLLeftMargin{275. }%
 \CSLRightInline{Smith, S., \& Grima, R. (2019). Spatial {Stochastic
 Intracellular Kinetics}: {A Review} of {Modelling Approaches}.
-\emph{Bull Math Biol}, \emph{81}(8), 2960--3009.
+\emph{Bulletin of Mathematical Biology}, \emph{81}(8), 2960--3009.
 \url{https://doi.org/10.1007/s11538-018-0443-1}}
 
 \bibitem[\citeproctext]{ref-postawa2020Comprehensive}
@@ -9201,8 +9250,9 @@ comprehensive comparison of {ODE} solvers for biochemical problems.
 \bibitem[\citeproctext]{ref-maly2009Introduction}
 \CSLLeftMargin{277. }%
 \CSLRightInline{Maly, I. V. (2009). Introduction: A practical guide to
-the systems approach in biology. \emph{Methods Mol Biol}, \emph{500},
-3--13. \url{https://doi.org/10.1007/978-1-59745-525-1_1}}
+the systems approach in biology. \emph{Methods in Molecular Biology
+(Clifton, N.J.)}, \emph{500}, 3--13.
+\url{https://doi.org/10.1007/978-1-59745-525-1_1}}
 
 \bibitem[\citeproctext]{ref-gillespie2007Stochastic}
 \CSLLeftMargin{278. }%
@@ -9230,15 +9280,15 @@ on cognitive modeling}.}
 \bibitem[\citeproctext]{ref-klamt2002Combinatorial}
 \CSLLeftMargin{281. }%
 \CSLRightInline{Klamt, S., \& Stelling, J. (2002). Combinatorial
-{Complexity} of {Pathway Analysis} in {Metabolic Networks}. \emph{Mol
-Biol Rep}, \emph{29}(1), 233--236.
+{Complexity} of {Pathway Analysis} in {Metabolic Networks}.
+\emph{Molecular Biology Reports}, \emph{29}(1), 233--236.
 \url{https://doi.org/10.1023/A:1020390132244}}
 
 \bibitem[\citeproctext]{ref-stefan2014Multistate}
 \CSLLeftMargin{282. }%
 \CSLRightInline{Stefan, M. I., Bartol, T. M., Sejnowski, T. J., \&
 Kennedy, M. B. (2014). Multi-state modeling of biomolecules. \emph{PLoS
-Comput Biol}, \emph{10}(9), e1003844.
+computational biology}, \emph{10}(9), e1003844.
 \url{https://doi.org/10.1371/journal.pcbi.1003844}}
 
 \bibitem[\citeproctext]{ref-gomperts2009Signal}
@@ -9280,7 +9330,7 @@ signaling systems. \emph{WIREs Systems Biology and Medicine},
 \CSLLeftMargin{288. }%
 \CSLRightInline{Chylek, L. A., Harris, L. A., Faeder, J. R., \&
 Hlavacek, W. S. (2015). Modeling for (physical) biologists: An
-introduction to the rule-based approach. \emph{Phys. Biol.},
+introduction to the rule-based approach. \emph{Physical Biology},
 \emph{12}(4), 045007.
 \url{https://doi.org/10.1088/1478-3975/12/4/045007}}
 
@@ -9295,8 +9345,8 @@ M., \& Blinov, M. L. (2016). Rule-based modeling with {Virtual Cell}.
 \CSLLeftMargin{290. }%
 \CSLRightInline{Faeder, J. R., Blinov, M. L., \& Hlavacek, W. S. (2009).
 Rule-based modeling of biochemical systems with {BioNetGen}.
-\emph{Methods Mol Biol}, \emph{500}, 113--167.
-\url{https://doi.org/10.1007/978-1-59745-525-1_5}}
+\emph{Methods in Molecular Biology (Clifton, N.J.)}, \emph{500},
+113--167. \url{https://doi.org/10.1007/978-1-59745-525-1_5}}
 
 \bibitem[\citeproctext]{ref-lopez2013Programming}
 \CSLLeftMargin{291. }%
@@ -9387,14 +9437,15 @@ extensible format for the exchange and reuse of biological models.
 \bibitem[\citeproctext]{ref-angell1986Publish}
 \CSLLeftMargin{302. }%
 \CSLRightInline{ANGELL, M. (1986). Publish or {Perish}: {A Proposal}.
-\emph{Ann Intern Med}, \emph{104}(2), 261--262.
+\emph{Annals of Internal Medicine}, \emph{104}(2), 261--262.
 \url{https://doi.org/10.7326/0003-4819-104-2-261}}
 
 \bibitem[\citeproctext]{ref-rawat2014Publish}
 \CSLLeftMargin{303. }%
 \CSLRightInline{Rawat, S., \& Meena, S. (2014). Publish or perish:
-{Where} are we heading? \emph{J Res Med Sci}, \emph{19}(2), 87--89.
-Retrieved from
+{Where} are we heading? \emph{Journal of Research in Medical Sciences :
+The Official Journal of Isfahan University of Medical Sciences},
+\emph{19}(2), 87--89. Retrieved from
 \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3999612/}}
 
 \bibitem[\citeproctext]{ref-york2015Defining}
@@ -9452,8 +9503,8 @@ Standards}. \emph{Organization Studies}, \emph{34}(2), 189--218.
 \CSLLeftMargin{311. }%
 \CSLRightInline{Campbell, C. M., Jimenez, M., \& Arrozal, C. A. N.
 (2019). Prestige or education: College teaching and rigor of courses in
-prestigious and non-prestigious institutions in the {U}.{S}. \emph{High
-Educ}, \emph{77}(4), 717--738.
+prestigious and non-prestigious institutions in the {U}.{S}.
+\emph{Higher Education}, \emph{77}(4), 717--738.
 \url{https://doi.org/10.1007/s10734-018-0297-3}}
 
 \bibitem[\citeproctext]{ref-jazeel2010Limits}
@@ -9482,7 +9533,7 @@ Academy of Sciences}, \emph{119}(10), e2119373119.
 \CSLLeftMargin{315. }%
 \CSLRightInline{Amutuhaire, T. (2022). The {Reality} of the {``{Publish}
 or {Perish}''} {Concept}, {Perspectives} from the {Global South}.
-\emph{Pub Res Q}, \emph{38}(2), 281--294.
+\emph{Publishing Research Quarterly}, \emph{38}(2), 281--294.
 \url{https://doi.org/10.1007/s12109-022-09879-0}}
 
 \bibitem[\citeproctext]{ref-chan2014Increasing}
@@ -9589,8 +9640,8 @@ the {Impact} of {Convergent Validity} on {Research Results}.
 \CSLRightInline{Afonso, J., Ramirez-Campillo, R., Clemente, F. M.,
 Büttner, F. C., \& Andrade, R. (2024). The {Perils} of {Misinterpreting}
 and {Misusing} {``{Publication Bias}''} in {Meta-analyses}: {An
-Education Review} on {Funnel Plot-Based Methods}. \emph{Sports Med},
-\emph{54}(2), 257--269.
+Education Review} on {Funnel Plot-Based Methods}. \emph{Sports
+Medicine}, \emph{54}(2), 257--269.
 \url{https://doi.org/10.1007/s40279-023-01927-9}}
 
 \bibitem[\citeproctext]{ref-kicinski2013Publication}
@@ -9631,7 +9682,7 @@ Possible}!''} In. Brill.
 \bibitem[\citeproctext]{ref-leite2021Juggling}
 \CSLLeftMargin{335. }%
 \CSLRightInline{Leite, L., \& Diele-Viegas, L. M. (2021). Juggling slow
-and fast science. \emph{Nat Hum Behav}, \emph{5}(4), 409--409.
+and fast science. \emph{Nature Human Behaviour}, \emph{5}(4), 409--409.
 \url{https://doi.org/10.1038/s41562-021-01080-1}}
 
 \bibitem[\citeproctext]{ref-baker2016500ScientistsLift}
@@ -9644,8 +9695,9 @@ reproducibility. \emph{Nature}, \emph{533}(7604, 7604), 452--454.
 \CSLLeftMargin{337. }%
 \CSLRightInline{Tiwari, K., Kananathan, S., Roberts, M. G., Meyer, J.
 P., Sharif Shohan, M. U., Xavier, A., \ldots{} Malik-Sheriff, R. S.
-(2021). Reproducibility in systems biology modelling. \emph{Mol Syst
-Biol}, \emph{17}(2), e9982. \url{https://doi.org/10.15252/msb.20209982}}
+(2021). Reproducibility in systems biology modelling. \emph{Molecular
+Systems Biology}, \emph{17}(2), e9982.
+\url{https://doi.org/10.15252/msb.20209982}}
 
 \bibitem[\citeproctext]{ref-ioannidis2005Whya}
 \CSLLeftMargin{338. }%
@@ -9738,8 +9790,8 @@ other influencing factors. \emph{Scientometrics}, \emph{106}(3),
 \CSLLeftMargin{350. }%
 \CSLRightInline{John, L. K., Loewenstein, G., \& Prelec, D. (2012).
 Measuring the {Prevalence} of {Questionable Research Practices With
-Incentives} for {Truth Telling}. \emph{Psychol Sci}, \emph{23}(5),
-524--532. \url{https://doi.org/10.1177/0956797611430953}}
+Incentives} for {Truth Telling}. \emph{Psychological Science},
+\emph{23}(5), 524--532. \url{https://doi.org/10.1177/0956797611430953}}
 
 \bibitem[\citeproctext]{ref-umbach2024Open}
 \CSLLeftMargin{351. }%
@@ -9818,8 +9870,8 @@ Retrieved March 13, 2025, from
 \CSLLeftMargin{362. }%
 \CSLRightInline{Parsons, S., Azevedo, F., Elsherif, M. M., Guay, S.,
 Shahim, O. N., Govaart, G. H., \ldots{} Aczel, B. (2022). A
-community-sourced glossary of open scholarship terms. \emph{Nat Hum
-Behav}, \emph{6}(3), 312--318.
+community-sourced glossary of open scholarship terms. \emph{Nature Human
+Behaviour}, \emph{6}(3), 312--318.
 \url{https://doi.org/10.1038/s41562-021-01269-4}}
 
 \bibitem[\citeproctext]{ref-Guide}
@@ -9887,7 +9939,7 @@ King's Printer of Acts of Parliament. Retrieved June 16, 2023, from
 \CSLRightInline{Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J.,
 Appleton, G., Axton, M., Baak, A., \ldots{} Mons, B. (2016). The {FAIR
 Guiding Principles} for scientific data management and stewardship.
-\emph{Sci Data}, \emph{3}(1), 160018.
+\emph{Scientific Data}, \emph{3}(1), 160018.
 \url{https://doi.org/10.1038/sdata.2016.18}}
 
 \bibitem[\citeproctext]{ref-cole2017Using}
@@ -9924,7 +9976,7 @@ Research Software}. \url{https://doi.org/10.48550/arXiv.1908.05986}}
 \CSLRightInline{Lannelongue, L., Aronson, H.-E. G., Bateman, A., Birney,
 E., Caplan, T., Juckes, M., \ldots{} Inouye, M. (2023). {GREENER}
 principles for environmentally sustainable computational science.
-\emph{Nat Comput Sci}, \emph{3}(6), 514--521.
+\emph{Nature Computational Science}, \emph{3}(6), 514--521.
 \url{https://doi.org/10.1038/s43588-023-00461-y}}
 
 \bibitem[\citeproctext]{ref-jacobsen2020FAIR}
@@ -9976,8 +10028,9 @@ Source Perspective}}. Addison-Wesley Professional. Retrieved from
 \CSLLeftMargin{384. }%
 \CSLRightInline{Grüning, B., Chilton, J., Köster, J., Dale, R., Soranzo,
 N., Beek, M. van den, \ldots{} Taylor, J. (2018). Practical
-{Computational Reproducibility} in the {Life Sciences}. \emph{cels},
-\emph{6}(6), 631--635. \url{https://doi.org/10.1016/j.cels.2018.03.014}}
+{Computational Reproducibility} in the {Life Sciences}. \emph{Cell
+Systems}, \emph{6}(6), 631--635.
+\url{https://doi.org/10.1016/j.cels.2018.03.014}}
 
 \bibitem[\citeproctext]{ref-maji2020Demystifying}
 \CSLLeftMargin{385. }%
@@ -10131,7 +10184,7 @@ of Information in Medicine}, \emph{50}, 217--236.
 \CSLRightInline{Fitzpatrick, R., \& Stefan, M. I. (2022). Validation
 {Through Collaboration}: {Encouraging Team Efforts} to {Ensure Internal}
 and {External Validity} of {Computational Models} of {Biochemical
-Pathways}. \emph{Neuroinform}, \emph{20}(1), 277--284.
+Pathways}. \emph{Neuroinformatics}, \emph{20}(1), 277--284.
 \url{https://doi.org/10.1007/s12021-022-09584-5}}
 
 \bibitem[\citeproctext]{ref-farrow2016Framework}
@@ -10162,8 +10215,8 @@ Cambridge University Press. Retrieved from
 \bibitem[\citeproctext]{ref-menapace2019Scientific}
 \CSLLeftMargin{410. }%
 \CSLRightInline{Menapace, M. (2019). Scientific {Ethics}: {A New
-Approach}. \emph{Sci Eng Ethics}, \emph{25}(4), 1193--1216.
-\url{https://doi.org/10.1007/s11948-018-0050-4}}
+Approach}. \emph{Science and Engineering Ethics}, \emph{25}(4),
+1193--1216. \url{https://doi.org/10.1007/s11948-018-0050-4}}
 
 \bibitem[\citeproctext]{ref-gensler2017Ethics}
 \CSLLeftMargin{411. }%
@@ -10229,7 +10282,7 @@ M., Engineering, \& Science, C. on R. (2017). \emph{Fostering
 \CSLLeftMargin{420. }%
 \CSLRightInline{Zhaksylyk, A., Zimba, O., Yessirkepov, M., \& Kocyigit,
 B. F. (2023). Research {Integrity}: {Where We Are} and {Where We Are
-Heading}. \emph{J Korean Med Sci}, \emph{38}(47).
+Heading}. \emph{Journal of Korean Medical Science}, \emph{38}(47).
 \url{https://doi.org/10.3346/jkms.2023.38.e405}}
 
 \bibitem[\citeproctext]{ref-tjeltveit2015Appropriately}
@@ -10242,7 +10295,7 @@ psychological scientists' inescapable cognitive and moral values.
 \bibitem[\citeproctext]{ref-mayson2018Bias}
 \CSLLeftMargin{422. }%
 \CSLRightInline{Mayson, S. G. (2018--2019). Bias in, {Bias} out.
-\emph{Yale L. J.}, \emph{128}(8), 2218--2301. Retrieved from
+\emph{Yale Law Journal}, \emph{128}(8), 2218--2301. Retrieved from
 \url{https://heinonline.org/HOL/P?h=hein.journals/ylr128&i=2309}}
 
 \bibitem[\citeproctext]{ref-ross2020Everyday}
@@ -10276,8 +10329,8 @@ from \url{https://github.com/Susana465/Data_Hazards_workshops}}
 \bibitem[\citeproctext]{ref-holmes2000Models}
 \CSLLeftMargin{427. }%
 \CSLRightInline{Holmes, W. R. (2000). Models of {Calmodulin Trapping}
-and {CaM Kinase II Activation} in a {Dendritic Spine}. \emph{J Comput
-Neurosci}, \emph{8}(1), 65--86.
+and {CaM Kinase II Activation} in a {Dendritic Spine}. \emph{Journal of
+Computational Neuroscience}, \emph{8}(1), 65--86.
 \url{https://doi.org/10.1023/A:1008969032563}}
 
 \bibitem[\citeproctext]{ref-lisman2001Model}
@@ -10292,7 +10345,7 @@ Transmission} by {Organizing} an {AMPA Receptor Anchoring Assembly}.
 \CSLLeftMargin{429. }%
 \CSLRightInline{Lisman, J., Schulman, H., \& Cline, H. (2002). The
 molecular basis of {CaMKII} function in synaptic and behavioural memory.
-\emph{Nat Rev Neurosci}, \emph{3}(3), 175--190.
+\emph{Nature Reviews. Neuroscience}, \emph{3}(3), 175--190.
 \url{https://doi.org/10.1038/nrn753}}
 
 \bibitem[\citeproctext]{ref-zhabotinsky2000Bistability}
@@ -10306,7 +10359,7 @@ molecular basis of {CaMKII} function in synaptic and behavioural memory.
 \CSLLeftMargin{431. }%
 \CSLRightInline{Lučić, V., Greif, G. J., \& Kennedy, M. B. (2008).
 Detailed state model of {CaMKII} activation and autophosphorylation.
-\emph{Eur Biophys J}, \emph{38}(1), 83--98.
+\emph{European Biophysics Journal}, \emph{38}(1), 83--98.
 \url{https://doi.org/10.1007/s00249-008-0362-4}}
 
 \bibitem[\citeproctext]{ref-stefan2008Allostericd}
@@ -10330,8 +10383,8 @@ the 4th {INCF Congress} of {Neuroinformatics}.
 \CSLLeftMargin{434. }%
 \CSLRightInline{Johnson, T., Bartol, T., Sejnowski, T., \& Mjolsness, E.
 (2015). Model reduction for stochastic {CaMKII} reaction kinetics in
-synapses by graph-constrained correlation dynamics. \emph{Phys. Biol.},
-\emph{12}(4), 045005.
+synapses by graph-constrained correlation dynamics. \emph{Physical
+Biology}, \emph{12}(4), 045005.
 \url{https://doi.org/10.1088/1478-3975/12/4/045005}}
 
 \bibitem[\citeproctext]{ref-ordyan2020Interactions}
@@ -10382,7 +10435,7 @@ from \url{https://books.google.com?id=YLyGmfVuBsIC}}
 \CSLLeftMargin{441. }%
 \CSLRightInline{Zheng, K., Jensen, T. P., \& Rusakov, D. A. (2018).
 Monitoring intracellular nanomolar calcium using fluorescence lifetime
-imaging. \emph{Nat Protoc}, \emph{13}(3), 581--597.
+imaging. \emph{Nature Protocols}, \emph{13}(3), 581--597.
 \url{https://doi.org/10.1038/nprot.2017.154}}
 
 \bibitem[\citeproctext]{ref-lee2009Activation}
@@ -10416,8 +10469,8 @@ NMDA Receptors} on {Neurons}. \emph{The Scientific World Journal},
 \bibitem[\citeproctext]{ref-cohen2002Protein}
 \CSLLeftMargin{446. }%
 \CSLRightInline{Cohen, P. T. W. (2002). Protein phosphatase 1--targeted
-in many directions. \emph{J Cell Sci}, \emph{115}, 241--256.
-\url{https://doi.org/10.1242/jcs.115.2.241}}
+in many directions. \emph{Journal of Cell Science}, \emph{115},
+241--256. \url{https://doi.org/10.1242/jcs.115.2.241}}
 
 \bibitem[\citeproctext]{ref-eastwood2006Minimum}
 \CSLLeftMargin{447. }%
@@ -10433,7 +10486,7 @@ The {Minimum Significant Ratio}: {A Statistical Parameter} to
 \CSLLeftMargin{448. }%
 \CSLRightInline{Yasuda, R., Hayashi, Y., \& Hell, J. W. (2022).
 {CaMKII}: A central molecular organizer of synaptic plasticity, learning
-and memory. \emph{Nat Rev Neurosci}, \emph{23}(11), 666--682.
+and memory. \emph{Nature Reviews Neuroscience}, \emph{23}(11), 666--682.
 \url{https://doi.org/10.1038/s41583-022-00624-2}}
 
 \bibitem[\citeproctext]{ref-bayer2019CaM}
@@ -10446,7 +10499,7 @@ and memory. \emph{Nat Rev Neurosci}, \emph{23}(11), 666--682.
 \CSLLeftMargin{450. }%
 \CSLRightInline{Sanabria, H., Digman, M. A., Gratton, E., \& Waxham, M.
 N. (2008). Spatial {Diffusivity} and {Availability} of {Intracellular
-Calmodulin}. \emph{Biophys J}, \emph{95}(12), 6002--6015.
+Calmodulin}. \emph{Biophysical Journal}, \emph{95}(12), 6002--6015.
 \url{https://doi.org/10.1529/biophysj.108.138974}}
 
 \bibitem[\citeproctext]{ref-goodell2014CaMKII}
@@ -10493,15 +10546,15 @@ inhibitors from molecular dynamics simulations and experimental data.
 \CSLRightInline{Linkevicius, D., Chadwick, A., Faas, G. C., Stefan, M.
 I., \& Sterratt, D. C. (2025). Fitting and comparison of
 calcium-calmodulin kinetic schemes to a common data set using non-linear
-mixed effects modelling. \emph{PLoS One}, \emph{20}(2), e0318646.
+mixed effects modelling. \emph{PLOS ONE}, \emph{20}(2), e0318646.
 \url{https://doi.org/10.1371/journal.pone.0318646}}
 
 \bibitem[\citeproctext]{ref-pullara2017Mechanisms}
 \CSLLeftMargin{457. }%
 \CSLRightInline{Pullara, F., Asciutto, E. K., \& General, I. J. (2017).
 Mechanisms of {Activation} and {Subunit Release} in
-{Ca2}+/{Calmodulin-Dependent Protein Kinase II}. \emph{J. Phys. Chem.
-B}, \emph{121}(45), 10344--10352.
+{Ca2}+/{Calmodulin-Dependent Protein Kinase II}. \emph{The Journal of
+Physical Chemistry B}, \emph{121}(45), 10344--10352.
 \url{https://doi.org/10.1021/acs.jpcb.7b09214}}
 
 \bibitem[\citeproctext]{ref-zhang2017Opposing}
@@ -10545,8 +10598,8 @@ e29406. \url{https://doi.org/10.1371/journal.pone.0029406}}
 \bibitem[\citeproctext]{ref-bossuyt2013Visualizing}
 \CSLLeftMargin{463. }%
 \CSLRightInline{Bossuyt, J., \& Bers, D. M. (2013). Visualizing {CaMKII}
-and {CaM} activity: A paradigm of compartmentalized signaling. \emph{J
-Mol Med}, \emph{91}(8), 907--916.
+and {CaM} activity: A paradigm of compartmentalized signaling.
+\emph{Journal of Molecular Medicine}, \emph{91}(8), 907--916.
 \url{https://doi.org/10.1007/s00109-013-1060-y}}
 
 \bibitem[\citeproctext]{ref-rellos2010Structure}
@@ -10554,7 +10607,7 @@ Mol Med}, \emph{91}(8), 907--916.
 \CSLRightInline{Rellos, P., Pike, A. C. W., Niesen, F. H., Salah, E.,
 Lee, W. H., von Delft, F., \& Knapp, S. (2010). Structure of the
 {CaMKIIδ}/{Calmodulin Complex Reveals} the {Molecular Mechanism} of
-{CaMKII Kinase Activation}. \emph{PLoS Biol}, \emph{8}(7), e1000426.
+{CaMKII Kinase Activation}. \emph{PLoS Biology}, \emph{8}(7), e1000426.
 \url{https://doi.org/10.1371/journal.pbio.1000426}}
 
 \bibitem[\citeproctext]{ref-migues2006Phosphorylation}
@@ -10599,8 +10652,8 @@ Biochemical Sciences}, \emph{22}(7), 245--251.
 \bibitem[\citeproctext]{ref-shioda2017Physiological}
 \CSLLeftMargin{470. }%
 \CSLRightInline{Shioda, N., \& Fukunaga, K. (2017). Physiological and
-{Pathological Roles} of {CaMKII-PP1 Signaling} in the {Brain}. \emph{Int
-J Mol Sci}, \emph{19}(1), 20.
+{Pathological Roles} of {CaMKII-PP1 Signaling} in the {Brain}.
+\emph{International Journal of Molecular Sciences}, \emph{19}(1), 20.
 \url{https://doi.org/10.3390/ijms19010020}}
 
 \bibitem[\citeproctext]{ref-romangarcia2017Computationala}
@@ -10615,8 +10668,9 @@ University of Edinburgh. School of Biological Sciences.
 \bibitem[\citeproctext]{ref-sumathi2002Priori}
 \CSLLeftMargin{472. }%
 \CSLRightInline{Sumathi, R., \& Green Jr., W. H. (2002). A priori rate
-constants for kinetic modeling. \emph{Theor Chem Acc}, \emph{108}(4),
-187--213. \url{https://doi.org/10.1007/s00214-002-0368-4}}
+constants for kinetic modeling. \emph{Theoretical Chemistry Accounts},
+\emph{108}(4), 187--213.
+\url{https://doi.org/10.1007/s00214-002-0368-4}}
 
 \bibitem[\citeproctext]{ref-turanyi2012Determination}
 \CSLLeftMargin{473. }%
@@ -10643,8 +10697,8 @@ e0130457. \url{https://doi.org/10.1371/journal.pone.0130457}}
 \CSLLeftMargin{476. }%
 \CSLRightInline{Chang, J.-Y., Nakahata, Y., Hayano, Y., \& Yasuda, R.
 (2019). Mechanisms of {Ca2}+/calmodulin-dependent kinase {II} activation
-in single dendritic spines. \emph{Nat Commun}, \emph{10}(1), 2784.
-\url{https://doi.org/10.1038/s41467-019-10694-z}}
+in single dendritic spines. \emph{Nature Communications}, \emph{10}(1),
+2784. \url{https://doi.org/10.1038/s41467-019-10694-z}}
 
 \bibitem[\citeproctext]{ref-breitwieser2021BioDynaMo}
 \CSLLeftMargin{477. }%
@@ -10653,12 +10707,6 @@ V., Iosif, A., Jennings, J., \ldots{} Bauer, R. (2021). {BioDynaMo}: A
 modular platform for high-performance agent-based simulation.
 \emph{Bioinformatics}, \emph{38}(2), 453--460.
 \url{https://doi.org/10.1093/bioinformatics/btab649}}
-
-\bibitem[\citeproctext]{ref-trajlinek2022How}
-\CSLLeftMargin{478. }%
-\CSLRightInline{Trajlinek, A. (2022). \emph{How do connections between
-brain cells grow? {Implementation} of {3D} model in {BioDynaMo} ({Not}
-published)}. University of Edinburgh.}
 
 \end{CSLReferences}
 
