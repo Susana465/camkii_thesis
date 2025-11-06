@@ -5613,13 +5613,22 @@ outputs are evaluated against known experimental observations.
 Mutant
 Models}{Results of In Silico Wild-Type and Mutant Models}}\label{sec-results}
 
-Three principal model versions of the CaMKII/NMDAR model have been
-developed. The first is a wild-type (WT) model, as described in
-Chapter~\ref{sec-model-description}. In addition, two mutant (MT) models
-were constructed: one in which CaMKII is unable to phosphorylate at
-T286, and another in which CaMKII cannot bind to NMDARs. These mutations
-were implemented by setting the reaction rates corresponding to CaMKII
-autophosphorylation and CaMKII--NMDAR binding, respectively, to zero.
+While previous computational studies have examined CaMKII temporal
+dynamics or multimeric structure, few integrate these aspects with
+NMDAR-specific interactions. Incorporating spatial, temporal, and
+multimeric dimensions is important because they shape CaMKII activation
+patterns, which influence synaptic plasticity
+{[}\citeproc{ref-yasuda2017Biophysics}{15},
+\citeproc{ref-ohno2002Pharmacogenetic}{208}{]}. Building on the
+CaMKII/NMDAR models described in Chapter~\ref{sec-model-description},
+this chapter explores the emergent behaviors of CaMKII and NMDARs
+arising from the model dynamics.
+
+Here, three model variants are considered: the wild-type (WT) model, and
+two mutants (MT) in which either T286 phosphorylation or NMDAR binding
+is abolished. These mutations were implemented by setting the reaction
+rates corresponding to CaMKII autophosphorylation and CaMKII--NMDAR
+binding, respectively, to zero.
 
 The simulations were designed to observe whether known emergent
 behaviours of CaMKII could be reproduced by the model without being
