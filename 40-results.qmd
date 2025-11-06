@@ -5,7 +5,7 @@ lightbox: true
 
 # Results of _In Silico_ Wild-Type and Mutant Models {#sec-results}
 
-While previous computational studies have examined CaMKII temporal dynamics or multimeric structure, few integrate these aspects with NMDAR-specific interactions. Incorporating spatial, temporal, and multimeric dimensions is important because they shape CaMKII activation patterns, which influence synaptic plasticity [@ohno2002Pharmacogenetic; @yasuda2017Biophysics]. Building on the CaMKII/NMDAR models described in @sec-model-description, this chapter explores the emergent behaviors of CaMKII and NMDARs arising from the model dynamics.
+While previous computational studies have examined CaMKII temporal dynamics or multimeric structure, few integrate these aspects with NMDAR-specific interactions. Incorporating spatial, temporal, and multimeric dimensions is important because they shape CaMKII activation patterns, which influence synaptic plasticity [@ohno2002Pharmacogenetic; @yasuda2017Biophysics]. Building on the CaMKII/NMDAR models described in @sec-model-description, this chapter explores the emergent behaviors of CaMKII and NMDARs arising from the models' dynamics.
 
 Here, three model variants are considered: the wild-type (WT) model, and two mutants (MT) in which either T286 phosphorylation or NMDAR binding is abolished. These mutations were implemented by setting the reaction rates corresponding to CaMKII autophosphorylation and CaMKII–NMDAR binding, respectively, to zero.
 
