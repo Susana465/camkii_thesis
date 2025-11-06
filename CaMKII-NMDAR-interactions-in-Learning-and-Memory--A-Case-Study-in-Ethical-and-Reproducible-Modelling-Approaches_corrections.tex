@@ -202,7 +202,7 @@
 \title{CaMKII-NMDAR interactions in Learning and Memory: A Case Study in
 Ethical and Reproducible Modelling Approaches}
 \author{Susana Román García}
-\date{November 5, 2025}
+\date{November 6, 2025}
 
 \begin{document}
 \cleardoublepage
@@ -218,7 +218,7 @@ Study in Ethical and Reproducible Modelling Approaches \par}
 \vskip 0cm plus 2fill
 {\bfseries\large Doctor of Philosophy \par}
 \vspace{3ex}
-{\bfseries\large November 5, 2025 \par}
+{\bfseries\large November 6, 2025 \par}
 \vspace{12ex}
 %
 %
@@ -1492,7 +1492,7 @@ closely packed or extended outward. In contrast, the open/closed states
 describe the structural relationship between the kinase domain (dark
 blue) and regulatory (green, purple, grey) domain. In the open state,
 these domains are separated, enabling kinase activity; in the closed
-state, they are bound together, limiting activity. We illustrates two
+state, they are bound together, limiting activity. We illustrate two
 docked subunits, one in an open and one in a closed conformation,
 positioned near the hub. The remaining subunits are undocked, with one
 shown in the closed state. (B) All subunits are shown in the undocked
@@ -2117,7 +2117,7 @@ investigate experimentally.
 \section{Why use computational modelling to study biological
 systems?}\label{why-use-computational-modelling-to-study-biological-systems}
 
-Computational models are becoming increasingly popular in Neuroscience
+Computational models are becoming increasingly popular in neuroscience
 (and in the sciences in general)
 {[}\citeproc{ref-noble2002Rise}{246}--\citeproc{ref-levenstein2023Role}{248}{]},
 as they provide useful advances to enhance our understanding of systems
@@ -2140,6 +2140,19 @@ they enable data to be analysed with virtually any level of precision,
 both in terms of time and space
 {[}\citeproc{ref-levenstein2023Role}{248}{]}.
 
+While modelling is often expected to produce novel predictions,
+postdictions ---the ability of a model to explain known phenomena---
+play an equally valuable role in assessing a model's validity. Many
+major advances in science began as postdictions, such as explaining the
+gravitational basis of planetary orbits, where existing observations
+were given coherent theoretical foundations. In biological modelling,
+such cases are common and valuable, as they test whether models can
+reproduce and generalize known behaviour, offering new perspectives
+rather than focusing solely on new predictions
+{[}\citeproc{ref-abbott2008Theoretical}{249}{]}. Ultimately, a model's
+value lies not only in its ability to predict the unknown, but also in
+its capacity to make postdictions that generalize across other systems.
+
 It is important to note that when modelling, just like with wet-lab,
 care must be taken when interpreting simulation results, as they are
 subject to finite accuracy. Errors can arise from a variety of reasons,
@@ -2147,8 +2160,8 @@ such as the properties used in simulations, the mathematical models,
 their numerical algorithms, and more (this is further discussed in
 Chapter~\ref{sec-data-hazards-chapter}). Moreover, biological systems
 are inherently stochastic and exhibit natural variability
-{[}\citeproc{ref-teschendorff2021Statistical}{249},
-\citeproc{ref-demopoulos2025Chaos}{250}{]}. Simulations are carefully
+{[}\citeproc{ref-teschendorff2021Statistical}{250},
+\citeproc{ref-demopoulos2025Chaos}{251}{]}. Simulations are carefully
 validated by comparing their behaviour to experimental data; and
 inconsistencies can suggest incomplete assumptions or
 misinterpretations. However, it is also important to recognize that even
@@ -2169,7 +2182,7 @@ experimentally, offering insights into the workings and principles of
 biological systems. This way, modelling aims to clarify the current
 state of knowledge about a system by precisely defining its elements and
 interactions, which can reveal gaps in understanding
-{[}\citeproc{ref-szekely2014Stochastic}{251}{]}. Whilst it is true that
+{[}\citeproc{ref-szekely2014Stochastic}{252}{]}. Whilst it is true that
 models may omit certain details of a biological system, the purpose of
 computational models is not to replicate every detail of a biological
 system, but rather to offer a specific representation that captures the
@@ -2186,8 +2199,8 @@ model does not encompass every element of the system, it remains a
 powerful tool for identifying critical relationships, predict system
 behaviour, guiding experimental design, generating hypotheses and
 offering structured frameworks for exploring complex biological
-phenomena {[}\citeproc{ref-szekely2014Stochastic}{251},
-\citeproc{ref-brodland2015How}{252}{]}.
+phenomena {[}\citeproc{ref-szekely2014Stochastic}{252},
+\citeproc{ref-brodland2015How}{253}{]}.
 
 \begin{figure}
 
@@ -2201,7 +2214,7 @@ phenomena {[}\citeproc{ref-szekely2014Stochastic}{251},
 research]{\label{fig-dry-wet-lab-cycle}Computational models can guide
 and refine biological experiments and vice versa, creating an iterative
 cycle that improves both approaches. Adapted from
-{[}\citeproc{ref-szekely2014Stochastic}{251}{]}.}
+{[}\citeproc{ref-szekely2014Stochastic}{252}{]}.}
 
 \end{figure}%
 
@@ -2212,8 +2225,8 @@ vitro} and \emph{in vivo} experiments are still needed to advance our
 understanding of biological processes, conducting \emph{in silico}, or
 computer-simulated experiments can help guide the wet-lab process by
 narrowing the experimental search space
-{[}\citeproc{ref-robinson2004Simulation}{253},
-\citeproc{ref-reppas2023Leveraging}{254}{]}. Importantly, this creates
+{[}\citeproc{ref-robinson2004Simulation}{254},
+\citeproc{ref-reppas2023Leveraging}{255}{]}. Importantly, this creates
 an iterative cycle, where computational models inform experimental
 design, and experimental findings, in turn, refine and improve the
 models. This continuous process strengthens both approaches, leading to
@@ -2232,24 +2245,24 @@ reduction, and refinement of animal use in research; I am particularly
 committed to the goals of replacement and reduction. I don't believe in
 the speciesist beliefs that place one species above another, justifying
 the harm of those deemed inferior for research
-{[}\citeproc{ref-lafollette1995Utilizing}{255}--\citeproc{ref-jaquet2021Debunking}{257}{]}.
+{[}\citeproc{ref-lafollette1995Utilizing}{256}--\citeproc{ref-jaquet2021Debunking}{258}{]}.
 
 In my opinion, computational modelling research such as the one
 undertaken in this PhD, however, cannot be fully separated from animal
 research because experimental data is often derived from studies that
 have involved using animals to a certain degree
-{[}\citeproc{ref-dominguez-oliva2023Importance}{258},
-\citeproc{ref-mukherjee2022Role}{259}{]}. Moreover, models must usually
+{[}\citeproc{ref-dominguez-oliva2023Importance}{259},
+\citeproc{ref-mukherjee2022Role}{260}{]}. Moreover, models must usually
 be validated against experimental results to confirm their biological
 relevance, and in many cases, such validation still depends on data from
 \emph{in vivo} or \emph{in vitro} studies
-{[}\citeproc{ref-madden2020Review}{260}{]}. Nevertheless, I advocate for
+{[}\citeproc{ref-madden2020Review}{261}{]}. Nevertheless, I advocate for
 a shift toward computational research that not only minimizes reliance
 on animal studies but also emphasizes reproducibility. Ensuring that
 research is reproducible helps avoid redundant experimentation by
 allowing scientists to verify and build upon existing findings rather
 than repeating studies due to unclear methodologies or irreproducible
-results {[}\citeproc{ref-pound2004Where}{261}{]}. When computational
+results {[}\citeproc{ref-pound2004Where}{262}{]}. When computational
 models are rigorously validated and openly shared, they can serve as
 reliable references, reducing the need for additional animal-based
 experiments to confirm previous findings. Reproducibility and openness
@@ -2309,7 +2322,7 @@ suitable for studying a particular system of interest? See deterministic
 modelling and stochastic modelling below. Additionally, there is an
 expanding array of tools and modelling approaches available that
 researchers can choose from
-{[}\citeproc{ref-ghosh2011Software}{262}--\citeproc{ref-kohl2011Standards}{265}{]};
+{[}\citeproc{ref-ghosh2011Software}{263}--\citeproc{ref-kohl2011Standards}{266}{]};
 translating biological processes into mathematical models on a computer
 requires not only the appropriate algorithms but also a suitable
 programming language. There is a wide range of programming languages to
@@ -2324,10 +2337,10 @@ relevant to this PhD.
 When translating biological and chemical systems (such as CaMKII and
 NMDARs interactions in the postsynaptic neuron) into algorithms, one way
 of describing these systems can be through networks of chemical
-reactions {[}\citeproc{ref-cook2009Programmability}{266}{]}. This
+reactions {[}\citeproc{ref-cook2009Programmability}{267}{]}. This
 approach is known as \emph{reaction-based modelling}, where mathematical
 models are used to represent the dynamics of biological systems in a
-computer {[}\citeproc{ref-besozzi2016ReactionBased}{267}{]}.
+computer {[}\citeproc{ref-besozzi2016ReactionBased}{268}{]}.
 Reaction-based models are formalized as sets of reactions that describe
 the given system in terms of mechanistic interactions between the
 species of interest. This is, biochemical networks are a set of chemical
@@ -2339,7 +2352,7 @@ chemical species and this usually requires explicit mathematical
 expressions for the velocity at which the reactions proceed (kinetic
 reaction rates). Once kinetics have been specified, these systems can be
 used directly to construct full dynamic simulations of the system
-behaviour {[}\citeproc{ref-cook2009Programmability}{266}{]}.
+behaviour {[}\citeproc{ref-cook2009Programmability}{267}{]}.
 
 Biochemical network models allow us to gather insight by simulating
 chemical interactions over time; we can observe changes in species
@@ -2360,18 +2373,18 @@ Chapter~\ref{sec-model-description}.
 
 Biological systems can be simulated in different ways using different
 algorithms depending on the assumptions made about the underlying
-kinetics {[}{[}\citeproc{ref-resat2009Kinetic}{268}{]};{]}, as discussed
+kinetics {[}{[}\citeproc{ref-resat2009Kinetic}{269}{]};{]}, as discussed
 below; and different formalisms are usually applied to describe the
 dynamics of these biochemical systems
-{[}\citeproc{ref-marchetti2017Simulation}{269}{]}. The kinetics of
+{[}\citeproc{ref-marchetti2017Simulation}{270}{]}. The kinetics of
 chemical reactions vary based on the timing of molecular interactions,
 with reactions unfolding over a timescale determined by the microscopic
 mechanics involved. Molecular collisions occur randomly inside cells,
 and are influenced by factors like thermal motion and diffusion. This
 randomness means that the number of molecules of a particular species
 fluctuates as a random variable
-{[}\citeproc{ref-mazo2008PROBABILITY}{270},
-\citeproc{ref-earnest2018Simulating}{271}{]}.
+{[}\citeproc{ref-mazo2008PROBABILITY}{271},
+\citeproc{ref-earnest2018Simulating}{272}{]}.
 
 However, when we observe large-scale, or macroscopic, quantities ---such
 as the concentration of a substance over time--- the outcomes tend to be
@@ -2401,10 +2414,10 @@ for distinct purposes:
 
 Deterministic approaches to chemical kinetics are often used to
 characterize time evolutions of chemical reactions in large systems
-{[}\citeproc{ref-marin2019Kinetics}{272}{]}. A popular representation
+{[}\citeproc{ref-marin2019Kinetics}{273}{]}. A popular representation
 for these models is to use ordinary differential equations (ODEs) to
 describe the change in the concentrations of chemical species
-{[}\citeproc{ref-hoops2016Chapter}{273}{]}. Running the same set of
+{[}\citeproc{ref-hoops2016Chapter}{274}{]}. Running the same set of
 parameters using deterministic simulations will produce the same results
 each time by solving these ODEs. Such descriptions are appropriate when
 the number of particles involved in the biochemical network is large
@@ -2417,25 +2430,25 @@ processes are useful and accurate in the high-concentration limit, but
 often fail to capture stochastic cellular dynamics accurately because
 the deterministic continuous formulation assumes spatial homogeneity and
 continuous molecular concentrations
-{[}\citeproc{ref-johnson2021Quantifying}{274},
-\citeproc{ref-smith2019Spatial}{275}{]}.
+{[}\citeproc{ref-johnson2021Quantifying}{275},
+\citeproc{ref-smith2019Spatial}{276}{]}.
 
 These ODE models can be used to simulate the dynamics of the
 concentrations of the chemical species along time given their initial
 values. This is achieved by numerical integration of the system of ODE
 which can be carried out with well-established algorithms
-{[}\citeproc{ref-postawa2020Comprehensive}{276}{]}. They are also useful
+{[}\citeproc{ref-postawa2020Comprehensive}{277}{]}. They are also useful
 to find, for example, steady states of the system, which are conditions
 when the concentrations of the chemical species do not change
-{[}\citeproc{ref-maly2009Introduction}{277}{]}.
+{[}\citeproc{ref-maly2009Introduction}{278}{]}.
 
 \subsection*{Stochastic modelling:}\label{stochastic-modelling}
 \addcontentsline{toc}{subsection}{Stochastic modelling:}
 
 As a general rule, stochastic simulations are preferred where the
 numbers of particles of a chemical species is small
-{[}\citeproc{ref-szekely2014Stochastic}{251},
-\citeproc{ref-gillespie2007Stochastic}{278}{]}; the ODE approach is
+{[}\citeproc{ref-szekely2014Stochastic}{252},
+\citeproc{ref-gillespie2007Stochastic}{279}{]}; the ODE approach is
 required when the number of particles is large because the stochastic
 approach might be computationally intractable. However, when the
 assumption of continuous concentration fails due to small-scale cellular
@@ -2444,8 +2457,8 @@ fails. It is here when stochastic simulations are useful. Unlike ODE
 models, which assume continuous concentrations, stochastic simulations
 track individual reaction events using probability distribution
 functions. Stochastic Simulation Algorithms (SSAs)
-{[}\citeproc{ref-szekely2014Stochastic}{251},
-\citeproc{ref-gillespie2007Stochastic}{278}{]}, determine the timing and
+{[}\citeproc{ref-szekely2014Stochastic}{252},
+\citeproc{ref-gillespie2007Stochastic}{279}{]}, determine the timing and
 sequence of reactions based on these probabilities.
 
 It is important to stress that one simulation run according to
@@ -2457,8 +2470,8 @@ range of behaviour presented by such a system to estimate a probability
 distribution for each chemical species and its dynamic evolution. The
 number of required runs depends on the system's complexity and the
 degree of variability in its dynamics, with guidelines available in the
-literature {[}\citeproc{ref-ritter2011Determining}{279},
-\citeproc{ref-byrne2013How}{280}{]} for determining sufficient sampling
+literature {[}\citeproc{ref-ritter2011Determining}{280},
+\citeproc{ref-byrne2013How}{281}{]} for determining sufficient sampling
 (for example based on statistical confidence intervals).
 
 Ultimately, both SSAs and ODEs offer valuable modelling insights, and
@@ -2504,7 +2517,7 @@ molecular complexes {[}\citeproc{ref-sanhueza2013CaMKII}{9},
 \citeproc{ref-2015Biochemical}{10}{]}. These types of interactions are
 hallmark drivers of something known as \emph{combinatorial complexity}
 in cellular systems and biochemical networks
-{[}\citeproc{ref-klamt2002Combinatorial}{281}{]}.
+{[}\citeproc{ref-klamt2002Combinatorial}{282}{]}.
 
 When proteins interact, they create unique states that alter the
 protein's function, structure, or binding capabilities. Meaning that
@@ -2519,14 +2532,14 @@ explosion where every modification or binding event adds another layer
 of potential molecular arrangements. This high number in potential
 molecular arrangements is referred to as \emph{combinatorial
 complexity}, a defining feature of cellular systems and biochemical
-networks {[}\citeproc{ref-stefan2014Multistate}{282}{]}.
+networks {[}\citeproc{ref-stefan2014Multistate}{283}{]}.
 
 Moreover, these distinct molecular species states do not exist in
 isolation. They are interconnected through an extensive network of
 reactions, further amplifying the system's complexity. Intricate network
 of protein--protein interactions is in fact a prominent feature of any
-signal-transduction system {[}\citeproc{ref-gomperts2009Signal}{283},
-\citeproc{ref-hunter2000Signaling}{284}{]}. These interactions can occur
+signal-transduction system {[}\citeproc{ref-gomperts2009Signal}{284},
+\citeproc{ref-hunter2000Signaling}{285}{]}. These interactions can occur
 at multiple levels, including feedback loops, cross-talk between
 pathways, and spatial-temporal variations. Each reaction acts as a link
 within a larger network, creating pathways that connect different
@@ -2535,7 +2548,7 @@ to the difficulty in capturing all possible interactions and the
 uncertainty in the exact nature of these interactions; i.e.~not all
 possible states of a molecular species may be relevant for its functions
 {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-changeux2005Allosteric}{285}{]}.
+\citeproc{ref-changeux2005Allosteric}{286}{]}.
 
 The magnitude of combinatorial complexity can be exemplified well with
 the CaMKII holoenzyme studied in this PhD. CaMKII is a multi-subunit
@@ -2561,7 +2574,7 @@ proteins impacts both the process of writing the model, known as the
 \emph{specification problem}, and the computational demands of running
 it, particularly in terms of time and resources, known as the
 \emph{computation problem}
-{[}\citeproc{ref-stefan2014Multistate}{282}{]}. The specification
+{[}\citeproc{ref-stefan2014Multistate}{283}{]}. The specification
 problem encompasses challenges such as representing all possible states
 of a molecule like CaMKII, the various complexes it can form, the
 transformations those complexes can undergo, and the parameters and
@@ -2587,7 +2600,7 @@ help by using a set of logical rules to describe how molecules interact
 with each other. With this type of modelling, the system is modelled by
 specifying the reactions (or rules) that describe how molecules interact
 and change
-{[}\citeproc{ref-harris2009Compartmental}{286}--\citeproc{ref-chylek2015Modeling}{288}{]}.
+{[}\citeproc{ref-harris2009Compartmental}{287}--\citeproc{ref-chylek2015Modeling}{289}{]}.
 Instead of listing every individual interaction or molecular species
 explicitly, rules are used to represent how molecules bind, modify, and
 transform. These rules, which are primarily based on experimental
@@ -2620,7 +2633,7 @@ which these interactions occur.
 
 Different approaches to RBM are used depending on one's objectives and
 modelling focus
-{[}\citeproc{ref-schaff2016Rulebased}{289}--\citeproc{ref-boutillier2018Kappa}{292}{]}.
+{[}\citeproc{ref-schaff2016Rulebased}{290}--\citeproc{ref-boutillier2018Kappa}{293}{]}.
 In our approach, we employ BioNetGen and its associated language BNGL,
 as it provides some key advantages for the research at hand. Firstly,
 BNGL provides a language that is tailored towards modelling biochemical
@@ -2636,7 +2649,7 @@ site-specific details of protein-protein interactions allows these
 dynamics to be captured systematically.
 
 Guided by the ``don't care, don't write'' principle at the heart of RBM
-modeling {[}\citeproc{ref-chylek2014Rulebased}{287}{]}, BNGL allows us
+modeling {[}\citeproc{ref-chylek2014Rulebased}{288}{]}, BNGL allows us
 to specify only the relevant states for a given reaction. This approach
 eliminates the need to define every possible state explicitly. That is,
 the rules determine when an implicitly defined reaction can happen and
@@ -2689,14 +2702,14 @@ a free binding site to bind with B, and vice versa) and the rest is left
 unspecified. In more complex models such as the one used in this thesis,
 this dramatically reduces the number of reactions that need to be
 written
-{[}\citeproc{ref-karp1975Computational}{293}--\citeproc{ref-suarez2009Challenges}{296}{]}.
+{[}\citeproc{ref-karp1975Computational}{294}--\citeproc{ref-suarez2009Challenges}{297}{]}.
 Details of how this is done in our model are described in
 Chapter~\ref{sec-model-description}.
 
 Additionally, BNGL supports the inclusion of cellular compartments
 through its compartmental extension (cBNGL), enabling explicit modelling
 of the compartmental organization of the cell and its effects on system
-dynamics {[}\citeproc{ref-harris2009Compartmental}{286}{]}. This way, we
+dynamics {[}\citeproc{ref-harris2009Compartmental}{287}{]}. This way, we
 can introduce localization attributes for molecular species, as well as
 appropriate volumetric scaling of reaction rates. BioNetGen and its
 associated language BNGL have been integrated with MCell via pyBNGL, a
@@ -2724,7 +2737,7 @@ signalling or interactions at the cellular level studied in this PhD. To
 facilitate the visualisation of these complex geometries, MCell
 integrates with CellBlender. CellBlender is an addon for Blender, a
 widely used open-source 3D modelling and animation software
-{[}\citeproc{ref-gupta2018Spatial}{297}{]}.
+{[}\citeproc{ref-gupta2018Spatial}{298}{]}.
 
 Reaction-based models typically rely on networks to represent chemical
 interactions (as discussed in
@@ -2750,14 +2763,14 @@ operates as follows: as a volume molecule diffuses, all molecules within
 a given radius along its trajectory, or at the point of collision on a
 surface, are considered for a reaction. For surface molecules (in
 membranes), the molecule first diffuses, and then its neighbours are
-evaluated for reaction Figure~\ref{fig-mcell-works}. Moreover, MCell
+evaluated for reaction (Figure~\ref{fig-mcell-works}). Moreover, MCell
 allows defining arbitrary geometry, and complex models such as a 180
 \(\mu\text{m}^3\) 3DEM reconstruction of hippocampal neuropil have been
 used to construct a geometrically-precise simulation of 100s of neuronal
-synapses at once {[}\citeproc{ref-bartol2015Computational}{298}{]}. A
+synapses at once {[}\citeproc{ref-bartol2015Computational}{299}{]}. A
 detailed description of mathematical foundations of MCell's algorithms
 can be found here {[}\citeproc{ref-kerr2008FAST}{243},
-\citeproc{ref-bartol2000Monte}{299}{]}
+\citeproc{ref-bartol2000Monte}{300}{]}
 
 \begin{figure}
 
@@ -2809,7 +2822,7 @@ interaction between various libraries and engines, include: a PyMCell
 library which offers a Python interface and contains classes to manage
 the model representation. The MCell4 engine, responsible for executing
 simulation algorithms, and a pyBNG library, which provides methods for
-resolving BioNetGen reactions Figure~\ref{fig-mcellparsing}.
+resolving BioNetGen reactions (Figure~\ref{fig-mcellparsing}).
 
 \begin{figure}
 
@@ -3009,8 +3022,8 @@ integrated with software that supports Systems Biology Markup Language
 (SBML), a widely recognised standard for representing biological models.
 SBML enables the translation and integration of models written in
 different formats, allowing them to be executed across a range of
-software platforms {[}\citeproc{ref-hucka2003Systems}{300},
-\citeproc{ref-keating2020SBML}{301}{]}. As a well-established standard,
+software platforms {[}\citeproc{ref-hucka2003Systems}{301},
+\citeproc{ref-keating2020SBML}{302}{]}. As a well-established standard,
 SBML is frequently used to describe chemical reaction networks, such as
 those involved in metabolic processes or cell signalling pathways.
 Critically, BioNetGen can export models written in BNGL to the SBML
@@ -3036,8 +3049,8 @@ PhD}\label{sec-open-repro-chapter}
 In recent decades, scientific research has accelerated significantly,
 with a ``publish or perish'' culture becoming deeply ingrained in the
 academic community's consciousness
-{[}\citeproc{ref-angell1986Publish}{302},
-\citeproc{ref-rawat2014Publish}{303}{]}. Frequent publication is widely
+{[}\citeproc{ref-angell1986Publish}{303},
+\citeproc{ref-rawat2014Publish}{304}{]}. Frequent publication is widely
 regarded as a powerful tool for scholars to showcase their expertise and
 gain recognition among their peers. Likewise, there is a generalised
 view that this keeps academics constantly engaged with relevant
@@ -3049,31 +3062,31 @@ attracting greater funding opportunities. Moreover, academic
 institutions and universities commonly use the number of publications
 credited to a researcher as a key indicator of their competence and
 career progression
-{[}\citeproc{ref-york2015Defining}{304}--\citeproc{ref-elbanna2023Publish}{306}{]}.
+{[}\citeproc{ref-york2015Defining}{305}--\citeproc{ref-elbanna2023Publish}{307}{]}.
 In this view, a strong publication record can be beneficial, opening up
 opportunities for researchers and their institutions.
 
 However, this mindset exerts significant pressure on researchers to
 continuously publish in order to secure funding and advance their
-careers {[}\citeproc{ref-miller2011Publish}{307},
-\citeproc{ref-hangel2017Why}{308}{]}. Alongside this, there are
+careers {[}\citeproc{ref-miller2011Publish}{308},
+\citeproc{ref-hangel2017Why}{309}{]}. Alongside this, there are
 persistent biases in academic publishing, where work affiliated with
 prestigious institutions is often (wrongly) perceived as higher quality
 than that from less well-known or under-resourced institutions,
 regardless of the actual merit of the research
-{[}\citeproc{ref-morley2007Employers}{309}--\citeproc{ref-campbell2019Prestige}{311}{]}.
+{[}\citeproc{ref-morley2007Employers}{310}--\citeproc{ref-campbell2019Prestige}{312}{]}.
 On top of this, the Eurocentric bias where academic knowledge produced
 in wealthier countries is often regarded as superior, marginalises and
 even dismisses the realities and contributions of the Global South
-{[}\citeproc{ref-jazeel2010Limits}{312}--\citeproc{ref-amutuhaire2022Reality}{315}{]}.
+{[}\citeproc{ref-jazeel2010Limits}{313}--\citeproc{ref-amutuhaire2022Reality}{316}{]}.
 Similarly, the expectation for a high volume of publications impacts
 disproportionately low-paid academics in resource-constrained countries,
 who can face a variety of structural barriers, including limited grant
-funding {[}\citeproc{ref-castrotorres2022North}{314}{]} and inaccessible
-academic journal costs {[}\citeproc{ref-chan2014Increasing}{316},
-\citeproc{ref-collyer2018Global}{317}{]} among many other reasons
-{[}\citeproc{ref-hopkins2013Disparities}{318},
-\citeproc{ref-willis2021Gender}{319}{]}.
+funding {[}\citeproc{ref-castrotorres2022North}{315}{]} and inaccessible
+academic journal costs {[}\citeproc{ref-chan2014Increasing}{317},
+\citeproc{ref-collyer2018Global}{318}{]} among many other reasons
+{[}\citeproc{ref-hopkins2013Disparities}{319},
+\citeproc{ref-willis2021Gender}{320}{]}.
 
 In the culture of continuously publishing and publishing fast, those who
 are already at a disadvantage due to systemic bias and oppression are
@@ -3082,7 +3095,7 @@ that minoritised communities ---whether this be due to race, gender,
 sexual orientation, or other factors--- are underrepresented in
 prestigious journals, partly due to implicit biases and the dominance of
 Western academic frameworks
-{[}\citeproc{ref-hopkins2013Disparities}{318}--\citeproc{ref-boda2022What}{320}{]}.
+{[}\citeproc{ref-hopkins2013Disparities}{319}--\citeproc{ref-boda2022What}{321}{]}.
 Consequently, the ``publish or perish'' culture overwhelmingly benefits
 scholars in wealthier countries while deepening global inequalities in
 knowledge production.
@@ -3095,13 +3108,13 @@ typically results in a preference for publishing significant or positive
 results, disrupting the balance of findings and favouring those that are
 deemed novel or noteworthy. Whilst negative or inconclusive results are
 rarely published or considered less worthy of publication
-{[}\citeproc{ref-thornton2000Publication}{321},
-\citeproc{ref-page2021Investigating}{322}{]}.
+{[}\citeproc{ref-thornton2000Publication}{322},
+\citeproc{ref-page2021Investigating}{323}{]}.
 
 Examining this bias towards positive results reveals substantial
 evidence of a troubling trend: an overrepresentation of false-positive
 findings in the scientific literature
-{[}\citeproc{ref-sinha2006Reporting}{323}--\citeproc{ref-schneck2023Are}{327}{]}.
+{[}\citeproc{ref-sinha2006Reporting}{324}--\citeproc{ref-schneck2023Are}{328}{]}.
 This bias towards positive results has several concerning and wasteful
 consequences, including, but not restricted to a significant number of
 valid negative results remaining unpublished, which excludes critical
@@ -3112,14 +3125,14 @@ until, by chance or artifact, a positive result is obtained. These
 chance positive results are then published, as they align with the
 preference for significant findings, even when substantial and more
 definitive contradictory evidence may exist in contrast to it
-{[}\citeproc{ref-carlson2012Understanding}{328}{]}. What is more, this
+{[}\citeproc{ref-carlson2012Understanding}{329}{]}. What is more, this
 underreporting of negative results introduces bias into meta-analysis,
 which consequently misinforms researchers, doctors, policymakers and the
-public in general {[}\citeproc{ref-afonso2024Perils}{329}{]}.
+public in general {[}\citeproc{ref-afonso2024Perils}{330}{]}.
 Additionally, more resources are wasted on already disputed research
 that remains unpublished and therefore unavailable to the scientific
 community
-{[}\citeproc{ref-kicinski2013Publication}{330}--\citeproc{ref-page2019Assessing}{333}{]}.
+{[}\citeproc{ref-kicinski2013Publication}{331}--\citeproc{ref-page2019Assessing}{334}{]}.
 
 This cycle sustains an error-prone body of scientific literature,
 undermining the reliability of published research. Hand in hand with
@@ -3127,15 +3140,15 @@ this publication bias, comes something now known as a
 \emph{Reproducibility Crisis}, where it is becoming increasingly
 apparent that making ``fast-science'', while not the sole cause, is
 associated with a lack of being able to reproduce research
-{[}\citeproc{ref-stengers2016Another}{334},
-\citeproc{ref-leite2021Juggling}{335}{]}. The reproducibility crisis has
+{[}\citeproc{ref-stengers2016Another}{335},
+\citeproc{ref-leite2021Juggling}{336}{]}. The reproducibility crisis has
 been on the rise for the past few decades as we uncover the fact that
 much of the research that is published fails to be reproduced by others.
 To give some examples, a survey of 1576 scientists published in Nature
-{[}\citeproc{ref-baker2016500ScientistsLift}{336}{]} reported that over
+{[}\citeproc{ref-baker2016500ScientistsLift}{337}{]} reported that over
 70\% of the participants failed to reproduce others' experiments and
 over 50\% failed to reproduce their own results. Similarly,
-{[}\citeproc{ref-tiwari2021ReproducibilitySystemsBiology}{337}{]}
+{[}\citeproc{ref-tiwari2021ReproducibilitySystemsBiology}{338}{]}
 assessed the reproducibility of 455 mathematical models in systems
 biology and found that about 50\% of published models were not
 reproducible either due to incorrect or missing information in the
@@ -3146,33 +3159,33 @@ still provide reliable insights when properly documented.
 
 Much of the criticism surrounding the reproducibility crisis centres on
 statistical methods and research practices
-{[}\citeproc{ref-ioannidis2005Whya}{338}--\citeproc{ref-stefan2023Big}{340}{]}.
+{[}\citeproc{ref-ioannidis2005Whya}{339}--\citeproc{ref-stefan2023Big}{341}{]}.
 Problematic scientific behaviours, such as HARKing (Hypothesising After
 the Results are Known), p-hacking (manipulating data analysis to achieve
 statistical significance), and selectively reporting only positive
 outcomes, as discussed above, have been identified as major contributors
 to irreproducibility
-{[}\citeproc{ref-wagenmakers2007Practical}{341}--\citeproc{ref-lew2020Reckless}{343}{]}.
+{[}\citeproc{ref-wagenmakers2007Practical}{342}--\citeproc{ref-lew2020Reckless}{344}{]}.
 Indeed, this reliance on p-values, provided they meet the conventional
 threshold of statistical significance (typically p \textless{} 0.05),
 can sometimes lead to studies being treated as definitive evidence, even
 when their findings are not robust or reproducible
-{[}\citeproc{ref-lew2020Reckless}{343}{]}.
+{[}\citeproc{ref-lew2020Reckless}{344}{]}.
 
 The list of factors contributing to irreproducibility is extensive and
 is not restricted to statistical methods. A lack of access to raw data
 or, in some cases, outright data fabrication also plays a role
-{[}\citeproc{ref-flier2017Irreproducibility}{344},
-\citeproc{ref-bausell2021Problem}{345}{]}. Ambiguities in experimental
+{[}\citeproc{ref-flier2017Irreproducibility}{345},
+\citeproc{ref-bausell2021Problem}{346}{]}. Ambiguities in experimental
 procedures and data analysis steps further undermine research
 reliability. On a broader, more systemic level, there's an important
 discussion regarding how current academic systems often prioritize
 novelty and statistically significant findings, as research funding is
 more likely to be secured and promoted when the outcomes are more
 profitable
-{[}\citeproc{ref-bhandari2004Association}{346}--\citeproc{ref-ebadi2016How}{348}{]}.
+{[}\citeproc{ref-bhandari2004Association}{347}--\citeproc{ref-ebadi2016How}{349}{]}.
 Although these behaviours fall under scientific misconduct
-{[}\citeproc{ref-science2023Reproducibility}{349}{]} and are not
+{[}\citeproc{ref-science2023Reproducibility}{350}{]} and are not
 considered acceptable scientific practice, they continue to occur as the
 mindset of publish or perish continues to embed itself in how scientists
 work.
@@ -3182,7 +3195,7 @@ psychologists (with 2,155 responses) assessed self-reported engagement
 in some of these questionable research practices (for example
 ambiguities in experimental procedures, p-harking, etc) known to
 introduce bias into research findings
-{[}\citeproc{ref-john2012Measuring}{350}{]}. Notably, respondents often
+{[}\citeproc{ref-john2012Measuring}{351}{]}. Notably, respondents often
 justified their own use of these practices while simultaneously viewing
 them as unacceptable when used by others. This is just one example, and
 it is worth noting that scientific standards and methodologies
@@ -3192,7 +3205,7 @@ be recognised as problematic, reflecting our ability to reassess and
 refine ethical and methodological frameworks. Encouragingly, awareness
 of the reproducibility crisis is growing, and there is a gradual shift
 towards promoting open and reproducible research practices
-{[}\citeproc{ref-nature2018Challenges}{352}{]}.
+{[}\citeproc{ref-nature2018Challenges}{353}{]}.
 
 Together, the issues outlined above, from the reproducibility crisis and
 publication bias to the prevalence of questionable research practices,
@@ -3219,13 +3232,13 @@ There is a long history of the terms reproducibility and replicability
 being used interchangeably, or their meanings being swapped depending on
 the field of study
 {[}\citeproc{ref-ivie2018ReproducibilityScientificComputing}{90},
-\citeproc{ref-claerbout1992ElectronicDocumentsGive}{353},
-\citeproc{ref-plesser2018ReproducibilityVsReplicability}{354}{]}. For
+\citeproc{ref-claerbout1992ElectronicDocumentsGive}{354},
+\citeproc{ref-plesser2018ReproducibilityVsReplicability}{355}{]}. For
 example, a review on the usage of reproducible/replicable meanings
-{[}\citeproc{ref-barba2018TerminologiesReproducibleResearch}{355}{]}
+{[}\citeproc{ref-barba2018TerminologiesReproducibleResearch}{356}{]}
 showed that most papers and disciplines use the terminology as defined
 by Claerbout and Karrenbach
-{[}\citeproc{ref-claerbout1992ElectronicDocumentsGive}{353}{]}, whereas
+{[}\citeproc{ref-claerbout1992ElectronicDocumentsGive}{354}{]}, whereas
 microbiology, immunology and computer science tend to follow the
 Association for Computing Machinery use of reproducibility and
 replication given by
@@ -3234,7 +3247,7 @@ political science and economics literature, both terms are used
 interchangeably.
 
 In this PhD, we use the definition used by
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356}{]}, where
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357}{]}, where
 reproducible research is understood as ``\emph{work that can be
 independently recreated from the same data and the same code that the
 original team used}''. Reproducible, replicable, robust and
@@ -3251,7 +3264,7 @@ generalisable have different meanings as described in the table below.
 \caption[How The Turing Way defines reproducible
 research]{\label{fig-repro-definitions}How The Turing Way defines
 reproducible research. Adapted from
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356}{]}.}
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357}{]}.}
 
 \end{figure}%
 
@@ -3288,7 +3301,7 @@ everyone, without barriers such as paywalls or restrictions on the use
 of research outputs. By making research more accessible and transparent,
 open science seeks to enable more efficient scientific progress, enhance
 reproducibility, and increase the societal impact of research findings.
-A definition provided by {[}\citeproc{ref-vicente-saez2018Open}{357}{]}
+A definition provided by {[}\citeproc{ref-vicente-saez2018Open}{358}{]}
 gives an overall good idea of what open science is referring to:
 ``\emph{Open Science is transparent and accessible knowledge that is
 shared and developed through collaborative networks, {[}it{]} helps the
@@ -3303,12 +3316,12 @@ scientific advancement and its benefits as stated in Article 27.1 of the
 Universal Declaration of Human Rights}''.
 
 Open Science includes related concepts such as Open Data
-{[}\citeproc{ref-Whata}{358}{]}, Open Source
-{[}\citeproc{ref-Open}{359}{]} and Open Access
-{[}\citeproc{ref-suber2012Open}{360}{]} among others
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356},
-\citeproc{ref-Opena}{361}, \citeproc{ref-Opena}{361},
-\citeproc{ref-parsons2022Communitysourced}{362}{]}. \textbf{Open Data}
+{[}\citeproc{ref-Whata}{359}{]}, Open Source
+{[}\citeproc{ref-Open}{360}{]} and Open Access
+{[}\citeproc{ref-suber2012Open}{361}{]} among others
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357},
+\citeproc{ref-Opena}{362}, \citeproc{ref-Opena}{362},
+\citeproc{ref-parsons2022Communitysourced}{363}{]}. \textbf{Open Data}
 refers to the openness and accessibility of data. It involves thinking
 (and acting) about data sharing, privacy, and protection, as well as
 considerations like consent and the nuances of handling sensitive data.
@@ -3316,17 +3329,17 @@ In the context of computational projects like this PhD, \textbf{Open
 Source} applies to both software (e.g., programs and applications used)
 and hardware (e.g., types of machines involved) that are released under
 \textbf{Open Licensing}, making them publicly accessible for anyone to
-view, modify, use, and distribute. {[}\citeproc{ref-Guide}{363},
-\citeproc{ref-kreutzer2014Open}{364}{]}. \textbf{Open Access} refers to
+view, modify, use, and distribute. {[}\citeproc{ref-Guide}{364},
+\citeproc{ref-kreutzer2014Open}{365}{]}. \textbf{Open Access} refers to
 how freely available research content is. There are different ways to
 achieve this; some times, open access might involve paying an Article
 Processing Charge to a journal, which then publishes the final version
 of the article under an open license
-{[}\citeproc{ref-borrego2023Article}{365}{]}, making it permanently free
+{[}\citeproc{ref-borrego2023Article}{366}{]}, making it permanently free
 to access online (this is known as Gold Open Access). Sometimes, it may
 involve self-archiving a version of the research, often alongside
 preprints, allowing public access without direct journal fees (this is
-known as Green Open Access) {[}\citeproc{ref-bjork2014Anatomy}{366}{]}.
+known as Green Open Access) {[}\citeproc{ref-bjork2014Anatomy}{367}{]}.
 
 In order to achieve Open Science, the research process should:
 
@@ -3345,10 +3358,10 @@ In order to achieve Open Science, the research process should:
 
 Additionally, Open Science and its various elements are directly related
 with the broader concept of \textbf{Open Scholarship}
-{[}\citeproc{ref-scanlon2014Scholarship}{367},
-\citeproc{ref-tennant2019Foundations}{368}{]}. Open Scholarship promotes
+{[}\citeproc{ref-scanlon2014Scholarship}{368},
+\citeproc{ref-tennant2019Foundations}{369}{]}. Open Scholarship promotes
 transparency and accessibility in teaching, learning, research, and
-academia {[}\citeproc{ref-emeryLibGuides}{369}{]}. More importantly,
+academia {[}\citeproc{ref-emeryLibGuides}{370}{]}. More importantly,
 Open Scholarship emphasizes equity, diversity, and inclusion, ensuring
 that knowledge is openly available to everyone, regardless of ethnicity,
 gender, sexual orientation, or other protected characteristics.
@@ -3359,7 +3372,7 @@ personal data, with medical research being the most obvious example,
 where data is not to be widely shared. Likewise, privacy and data
 protection, as well as consent, and national and commercially sensitive
 data can be some of the most common examples of when data cannot always
-be open {[}\citeproc{ref-regulation2016RegulationEU2016}{370}{]}. If
+be open {[}\citeproc{ref-regulation2016RegulationEU2016}{371}{]}. If
 access to data needs to be restricted due to security reasons, however,
 the justification for this should be made clear. Free access to and
 subsequent use of data is of significant value to society and the
@@ -3375,27 +3388,27 @@ to develop and collectively support a clear and measurable set of
 principles that allow for \textbf{F}indability, \textbf{A}ccessibility,
 \textbf{I}nteroperability and \textbf{R}eusability of digital assets, to
 ultimately support more reproducible research
-{[}\citeproc{ref-wilkinson2016FAIRa}{371}{]}. FAIR principles,
+{[}\citeproc{ref-wilkinson2016FAIRa}{372}{]}. FAIR principles,
 therefore, serve as a valuable framework for conducting research with
 integrity.
 
 The advantages of applying FAIR principles become apparent when we
 understand each principle
-{[}\citeproc{ref-cole2017Using}{372}--\citeproc{ref-kim2024Findability}{374}{]}.
+{[}\citeproc{ref-cole2017Using}{373}--\citeproc{ref-kim2024Findability}{375}{]}.
 Specifically linked to computational projects such as this PhD, FAIR
 practices can lead to more efficient code -not just in terms of
 computational speed, but also in readability, reproducibility, and
 reusability- minimising time spent on things like model
 retraining/rewriting, and reducing redundant data generation and storage
-{[}\citeproc{ref-borrego2023Article}{365},
-\citeproc{ref-hasselbring2019FAIR}{375}{]}. Likewise, the
+{[}\citeproc{ref-borrego2023Article}{366},
+\citeproc{ref-hasselbring2019FAIR}{376}{]}. Likewise, the
 interoperability aspect of FAIR principles enables researchers to
 integrate datasets from various sources, fostering new insights and
 innovative problem-solving approaches. For example, application of FAIR
 principles can result in lowering carbon footprint of computer
 simulations as less time and resources are wasted trying to run models
 that lacks useful information on how to run it
-{[}\citeproc{ref-lannelongue2023GREENER}{376}{]}.
+{[}\citeproc{ref-lannelongue2023GREENER}{377}{]}.
 
 It is not uncommon for scientific code and workflows to originate within
 small, specialised research groups, often resulting in ad-hoc code that
@@ -3436,7 +3449,7 @@ goals.
 
 \emph{Data is well-described with rich metadata, making it easier to
 locate by both humans and machines}
-{[}\citeproc{ref-jacobsen2020FAIR}{377}{]}.
+{[}\citeproc{ref-jacobsen2020FAIR}{378}{]}.
 
 \begin{itemize}
 \tightlist
@@ -3446,8 +3459,8 @@ locate by both humans and machines}
 \item
   Presentations, workshops, and papers are available with persistent
   identifiers where applicable (for example, see
-  {[}\citeproc{ref-garcia2022Thinkinga}{378},
-  \citeproc{ref-romangarcia2023Data}{379}{]}).
+  {[}\citeproc{ref-garcia2022Thinkinga}{379},
+  \citeproc{ref-romangarcia2023Data}{380}{]}).
 \item
   Metadata used in the model follows human-readable naming conventions
   while still being domain-specific within neuroscience. Although some
@@ -3458,7 +3471,7 @@ locate by both humans and machines}
 
 \emph{Data is stored in a way that ensures users can retrieve it with
 clear licensing and open protocols}
-{[}\citeproc{ref-jacobsen2020FAIR}{377}{]}.
+{[}\citeproc{ref-jacobsen2020FAIR}{378}{]}.
 
 \begin{itemize}
 \tightlist
@@ -3487,20 +3500,20 @@ clear licensing and open protocols}
   mathematical models representing biological and biomedical systems.
 \item
   Research resulting from this PhD has been made publicly accessible
-  through preprints {[}\citeproc{ref-garcia2024Data}{380}{]} (Green Open
+  through preprints {[}\citeproc{ref-garcia2024Data}{381}{]} (Green Open
   Access, allows access without the need for direct journal fees
-  {[}\citeproc{ref-bjork2014Anatomy}{366}{]}), and Open Access
+  {[}\citeproc{ref-bjork2014Anatomy}{367}{]}), and Open Access
   publication when publishing in journals
-  {[}\citeproc{ref-garcia2025Data}{381}{]}, making it permanently free
+  {[}\citeproc{ref-garcia2025Data}{382}{]}, making it permanently free
   to access online (this is known as Gold Open Access
-  {[}\citeproc{ref-borrego2023Article}{365}{]}).
+  {[}\citeproc{ref-borrego2023Article}{366}{]}).
 \end{itemize}
 
 \subsection{Interoperable}\label{interoperable}
 
 \emph{Data is formatted using standardised vocabularies and structures,
 enabling seamless integration across different applications or
-workflows} {[}\citeproc{ref-jacobsen2020FAIR}{377}{]}.
+workflows} {[}\citeproc{ref-jacobsen2020FAIR}{378}{]}.
 
 \begin{itemize}
 \tightlist
@@ -3527,7 +3540,7 @@ workflows} {[}\citeproc{ref-jacobsen2020FAIR}{377}{]}.
 
 \emph{Data is well-documented, with detailed provenance and clear usage
 rights, supporting reproducibility and future research}
-{[}\citeproc{ref-jacobsen2020FAIR}{377}{]}.
+{[}\citeproc{ref-jacobsen2020FAIR}{378}{]}.
 
 \begin{itemize}
 \tightlist
@@ -3569,7 +3582,7 @@ Ensuring that my code is clear, well-documented, and reusable has proven
 essential for both my own future reference and for others who may build
 upon this work. Indeed, code that is human readable with useful comments
 (see The Turing Way for guidelines on good code comment practices
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356}{]}) not
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357}{]}) not
 only enhances reproducibility but also facilitates collaboration by
 making it easier to understand, modify, and extend. One of the key
 strategies I have implemented to achieve clarity and reusability is
@@ -3587,7 +3600,7 @@ Chapter~\ref{sec-data-hazards-chapter}). This ensures that the research
 can be replicated under similar conditions, minimising inconsistencies
 caused by version mismatches or dependency issues. Likewise, each
 repository includes a README file
-{[}\citeproc{ref-githubREADMEs}{382}{]} that provides an overview of the
+{[}\citeproc{ref-githubREADMEs}{383}{]} that provides an overview of the
 project, instructions for installation, dependencies, and usage
 guidelines. This serves as an entry point for users, making it easier to
 navigate the codebase and understand how to run and interpret the
@@ -3611,17 +3624,17 @@ Since the model depends on these components, ensuring compatibility
 across different setups is essential for seamless execution. Even minor
 variations in library versions can cause unexpected errors or
 inconsistencies in results, or worse, prevent the code from running
-entirely {[}\citeproc{ref-spinellis2003Code}{383}{]}. To address these
+entirely {[}\citeproc{ref-spinellis2003Code}{384}{]}. To address these
 challenges, as well as the comprehensive code and documentation, I have
 created computational environments using package management systems (see
 definition
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356}{]}) that
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357}{]}) that
 collaborators can use in their own machines when running the model.
 Computational environments act as, as per their name,
 ``containers/environments'' where all required software, libraries, and
 packages are pre-defined, allowing the model to run under controlled
-conditions {[}\citeproc{ref-gruning2018Practical}{384},
-\citeproc{ref-maji2020Demystifying}{385}{]}. In this project, I use
+conditions {[}\citeproc{ref-gruning2018Practical}{385},
+\citeproc{ref-maji2020Demystifying}{386}{]}. In this project, I use
 Conda (https://conda.io) as my preferred package management system for
 creating environments, as I find it the most intuitive and flexible.
 Unlike Python-only tools such as pip, Conda can also manage non-Python
@@ -3681,7 +3694,7 @@ biology. Importantly, when deviations from expected patterns did occur,
 I treated these as potentially meaningful, since in a stochastic model
 they can reflect emergent behaviours. I have also learned to validate my
 code step by step through debugging
-{[}\citeproc{ref-mccauley2008Debugging}{386}{]}, the process of
+{[}\citeproc{ref-mccauley2008Debugging}{387}{]}, the process of
 identifying, analyzing, and fixing errors or bugs in a program, to break
 down how the code is working and pinpoint where things go wrong.
 Additionally, I have used mock or dummy test models, such as the
@@ -3692,8 +3705,8 @@ testing when the main model is too complex to easily trace errors.
 \addcontentsline{toc}{subsubsection}{Version Control}
 
 Version control is a pillar of most, if not all, guides for reproducible
-research {[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356},
-\citeproc{ref-sandve2013Ten}{387}--\citeproc{ref-hamra2025Advancing}{391}{]}.
+research {[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357},
+\citeproc{ref-sandve2013Ten}{388}--\citeproc{ref-hamra2025Advancing}{392}{]}.
 Version control is a method for tracking and managing changes to files
 or projects over time. It allows you and your collaborators to monitor
 modifications, review past edits, and restore previous versions if
@@ -3703,7 +3716,7 @@ is extremely helpful for times when I needed to check back on when and
 where I did a specific change to my work, or when working
 collaboratively to know who wrote what and when. In terms of
 reproducibility, this means that version control helps with having clear
-provenance of information {[}\citeproc{ref-hamra2025Advancing}{391}{]}.
+provenance of information {[}\citeproc{ref-hamra2025Advancing}{392}{]}.
 As a result of using version control, I have made my life easier (and
 potentially others in the future too) as I could track what version of
 the code and data produced specific outputs, for example. As datasets
@@ -3711,9 +3724,9 @@ grow larger and more complex, by having a solid version control workflow
 you are doing your future self (and collaborators) a huge favour.
 
 There are various ways to implement version control
-{[}\citeproc{ref-atkins2002Using}{392}--\citeproc{ref-hethey2013GitLab}{395}{]},
+{[}\citeproc{ref-atkins2002Using}{393}--\citeproc{ref-hethey2013GitLab}{396}{]},
 but I primarily use Git and GitHub
-{[}\citeproc{ref-loeliger2012Version}{396}{]} ---partly because they are
+{[}\citeproc{ref-loeliger2012Version}{397}{]} ---partly because they are
 widely adopted and partly because they were the tools introduced in the
 version control courses I attended. With Git, each version update (or
 ``commit'') can include a message describing the changes made, such as
@@ -3747,7 +3760,7 @@ With this gradual development, the datasets evolved, variable names
 changed, and file hierarchies were adjusted throughout. As a result,
 managing large data outputs eventually became a challenge (see
 Challenges in Version Controlling Data described by
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356}{]}). For
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357}{]}). For
 example, GitHub imposes a limit of 100MB per file, preventing the
 storage of large files directly within the repository. Whilst Git can be
 used for data versioning by installing tools like git-annex, Git LFS, or
@@ -3789,7 +3802,7 @@ Documents}\label{quarto-for-version-controlled-documents}
 Documents}
 
 In addition to maintaining version control of the model(s), I also used
-Quarto {[}\citeproc{ref-allaire2024Quarto}{397}{]}, an open-source
+Quarto {[}\citeproc{ref-allaire2024Quarto}{398}{]}, an open-source
 publishing system designed for scientific and technical writing. Quarto
 enables the dynamic generation of various file formats, including
 Markdown, LaTeX, HTML, PDF, and Word, all of which can be version
@@ -3860,7 +3873,7 @@ Looking ahead, I am keen to extend this work through a formal
 publication that includes a more comprehensive evaluation of how the
 project aligns with FAIR and open science principles. A structured FAIR
 assessment, such as the one proposed by Balaur et al.
-{[}\citeproc{ref-balaur2025FAIRification}{398}{]}, could provide a
+{[}\citeproc{ref-balaur2025FAIRification}{399}{]}, could provide a
 detailed appraisal of the reusability and transparency of the models
 developed. In support of these reflections, I refer to the
 reproducibility framework developed by Tiwari et al.~(2021). Based on
@@ -3868,7 +3881,7 @@ the rubric provided (see Figure~\ref{fig-tiwari-rubric}), I have scored
 this project at 6.5 out of 8. As described throughout this chapter,
 considerable effort has gone into meeting the majority of the quick
 criteria proposed by
-{[}\citeproc{ref-tiwari2021Reproducibility}{399}{]}.
+{[}\citeproc{ref-tiwari2021Reproducibility}{400}{]}.
 
 \begin{figure}
 
@@ -3880,7 +3893,7 @@ criteria proposed by
 
 \caption[Reproducibility
 Scorecard]{\label{fig-tiwari-rubric}Reproducibility Scorecard suggested
-by {[}\citeproc{ref-tiwari2021Reproducibility}{399}{]}, adapted.}
+by {[}\citeproc{ref-tiwari2021Reproducibility}{400}{]}, adapted.}
 
 \end{figure}%
 
@@ -3888,8 +3901,8 @@ One area still under development is the conversion of the model code
 into standardised formats such as SBML, with the intention of submitting
 it to a public repository for mathematical models of biological and
 biomedical systems, such as BioModels
-{[}\citeproc{ref-lenovere2006BioModels}{400},
-\citeproc{ref-malik-sheriff2020BioModels}{401}{]}. BioModels requires
+{[}\citeproc{ref-lenovere2006BioModels}{401},
+\citeproc{ref-malik-sheriff2020BioModels}{402}{]}. BioModels requires
 submissions to follow specific guidelines, which include the provision
 of SED-ML (Simulation Experiment Description Markup Languag) files ---a
 format used to describe the simulation experiments performed on
@@ -3898,7 +3911,7 @@ outputs. Experimental data, simulation results, and associated metadata
 can also be submitted in a COMBINE archive, a single container file that
 brings together all relevant documents required to fully describe,
 reproduce, and share a computational modelling project
-{[}\citeproc{ref-bergmann2014COMBINE}{402}{]}.
+{[}\citeproc{ref-bergmann2014COMBINE}{403}{]}.
 
 With respect to the seventh criterion in the Tiwari et al.~(2021)
 framework, I awarded a partial point. The model is well annotated, with
@@ -3909,7 +3922,7 @@ from further simplification. This is a known challenge in computational
 biology, where names must often strike a balance between being
 human-readable and programmatically functional (see, for example,
 discussions on standardised biological ontologies)
-{[}\citeproc{ref-bodenreider2006Bioontologies}{403}--\citeproc{ref-fitzpatrick2022Validation}{405}{]}.
+{[}\citeproc{ref-bodenreider2006Bioontologies}{404}--\citeproc{ref-fitzpatrick2022Validation}{406}{]}.
 
 Overall, the limitations identified here present valuable opportunities
 for growth and refinement, typical of any ongoing research effort.
@@ -3926,8 +3939,8 @@ is discussed next.
 Open, reproducible and FAIR ideas are fundamentally linked to ethics, as
 these practices ultimately promote more ethical and responsible research
 by fostering transparency, integrity, and accountability
-{[}\citeproc{ref-farrow2016Framework}{406},
-\citeproc{ref-kushwaha2024Ethical}{407}{]}. No matter how efficient or
+{[}\citeproc{ref-farrow2016Framework}{407},
+\citeproc{ref-kushwaha2024Ethical}{408}{]}. No matter how efficient or
 reproducible a study may be, its value is questionable if it causes harm
 to a group of individuals. Likewise, recognizing biases and risks in our
 research without providing the necessary resources for replication may
@@ -3936,10 +3949,10 @@ undermine the advancement of truly ethical and reliable research.
 Here, we refer to ``scientific ethics'' as the principles and guidelines
 that govern the behaviour of scientists in their work, and their impact
 in wider society
-{[}\citeproc{ref-rollin2006Science}{408}--\citeproc{ref-menapace2019Scientific}{410}{]}.
+{[}\citeproc{ref-rollin2006Science}{409}--\citeproc{ref-menapace2019Scientific}{411}{]}.
 More broadly, ethics can be seen as a system of moral values and
 principles that a particular society or community upholds
-{[}\citeproc{ref-gensler2017Ethics}{411}{]}. Ethics can be understood as
+{[}\citeproc{ref-gensler2017Ethics}{412}{]}. Ethics can be understood as
 a core aspect of moral philosophy -an area of study that, among other
 things, seeks to differentiate between right and wrong. Viewing ethics
 as the study of what constitutes appropriate or inappropriate behaviour
@@ -3951,14 +3964,14 @@ shaping how research impacts society.
 
 Ethical standards and beliefs evolve over time, and as a result, so do
 the ethical guidelines that govern scientific research
-{[}\citeproc{ref-joyner2002Evolution}{412}--\citeproc{ref-macklin2008Standard}{414}{]}.
+{[}\citeproc{ref-joyner2002Evolution}{413}--\citeproc{ref-macklin2008Standard}{415}{]}.
 Practices that were once considered acceptable may no longer align with
 contemporary ethical norms, just as certain current methodologies may be
 deemed unethical in the future. Either way, throughout history,
 including current times, there are numerous examples of scientific
 research leading to significant ethical concerns and harmful
-consequences {[}\citeproc{ref-garcia2022Thinkinga}{378},
-\citeproc{ref-jackson2005Origins}{415}--\citeproc{ref-birhane2020Decolonising}{417}{]},
+consequences {[}\citeproc{ref-garcia2022Thinkinga}{379},
+\citeproc{ref-jackson2005Origins}{416}--\citeproc{ref-birhane2020Decolonising}{418}{]},
 as discussed more in detail in the article included in
 Chapter~\ref{sec-data-hazards-chapter}. I believe it is important to
 recognise the heavy weight that science carries, of not only unethical
@@ -3972,12 +3985,12 @@ In a presentation I delivered in 2022, I provided several examples of
 historical social biases that persist in scientific research, with a
 focus on medicine, neuroscience and computer Science, including examples
 of racism, sexism, ableism, and speciesism
-{[}\citeproc{ref-garcia2022Thinkinga}{378}{]}. I define social bias as a
+{[}\citeproc{ref-garcia2022Thinkinga}{379}{]}. I define social bias as a
 systematic and often unconscious prejudice or favouritism toward certain
 groups over others, based on characteristics such as race, gender,
 species, or other socially constructed categories. A good example of
 embedded biases in science is given by
-{[}\citeproc{ref-branch2022Discussionsa}{418}{]} as they eloquently
+{[}\citeproc{ref-branch2022Discussionsa}{419}{]} as they eloquently
 articulate how a desire to quantify and establish hierarchies among
 organisms was not purely for scientific interest, but that there is
 extensive evidence in the fact that the roots of evolutionary biology,
@@ -3996,8 +4009,8 @@ research helps to uphold accountability and minimise harm, as further
 discussed in the Data Hazards Chapter~\ref{sec-data-hazards-chapter}. It
 is the synergy of combining openness, reproducibility and ethics that
 create research that shows integrity and enhances credibility
-{[}\citeproc{ref-medicine2017Fostering}{419},
-\citeproc{ref-zhaksylyk2023Research}{420}{]}. Thinking about
+{[}\citeproc{ref-medicine2017Fostering}{420},
+\citeproc{ref-zhaksylyk2023Research}{421}{]}. Thinking about
 reproducibility can, in turn, help to think how you will share your
 data, as well as where your own data has come from. Hence, reaching an
 increased awareness of how data was sourced and its ethics and potential
@@ -4043,7 +4056,7 @@ A common experience in my academic career has been the limited focus on
 the social dimensions of ethics in the research I conduct. As I became
 aware that much of the research I conduct is based on biased views of
 how the world works
-{[}\citeproc{ref-tjeltveit2015Appropriately}{421}--\citeproc{ref-ross2020Everyday}{423}{]},
+{[}\citeproc{ref-tjeltveit2015Appropriately}{422}--\citeproc{ref-ross2020Everyday}{424}{]},
 I developed a keen interest in examining the biases within my own work.
 
 My position as a woman, an immigrant in the UK, and someone from a
@@ -4071,7 +4084,7 @@ require ethical considerations, I began exploring how others were
 thinking about bias and reproducibility. This led to the creation of a
 detailed (though wordy) poster, which framed my PhD journey as a series
 of milestones. I presented this poster at the COMBINE and ICSB 2022
-conferences {[}\citeproc{ref-romangarcia2022Biasa}{424}{]}, where I
+conferences {[}\citeproc{ref-romangarcia2022Biasa}{425}{]}, where I
 shared how I address bias and reproducibility in my own work, and
 encouraged researchers at various stages of their careers to reflect on
 these aspects in theirs. A common concern raised during these
@@ -4090,7 +4103,7 @@ truly ethical, it needed to prioritise both reproducibility and
 accessibility. To reflect this, I organised the questions I had been
 grappling with into different sections of the research process. All of
 this is documented in a publicly available GitHub repository
-{[}\citeproc{ref-romangarcia2022Biasa}{424}{]}.
+{[}\citeproc{ref-romangarcia2022Biasa}{425}{]}.
 
 For instance, during the design of the computational model I use, I
 consider questions such as: Who is my data including or excluding? What
@@ -4119,7 +4132,7 @@ engagement with the ethics and reproducibility of research in
 neuroscience. This line of thinking ultimately led to the development
 and publication of the paper included in the following chapter ``Data
 Hazards as an Ethical Toolkit for Neuroscience''
-{[}\citeproc{ref-garcia2025Data}{381}{]}.
+{[}\citeproc{ref-garcia2025Data}{382}{]}.
 
 \begin{figure}[h]
 
@@ -4146,7 +4159,7 @@ PhD}\label{sec-data-hazards-chapter}
 As discussed in more detail below, the Data Hazards initiative was
 developed as a community-driven, shared vocabulary to identify and
 address risks and potential harms in data science
-{[}\citeproc{ref-zelenka2023Data}{425}{]}. This project aims to mitigate
+{[}\citeproc{ref-zelenka2023Data}{426}{]}. This project aims to mitigate
 risks by helping researchers recognize potential ethical challenges that
 may not have been initially considered and explore strategies for
 addressing them. While data scientists are typically trained to solve
@@ -4168,17 +4181,17 @@ research, I encountered the Data Hazards Project in 2021. Since then, I
 have progressively applied the Data Hazards framework to my PhD
 research. In addition to incorporating Data Hazards into my own
 research, I have facilitated several workshops on the topic
-{[}\citeproc{ref-roman-garcia2022Data}{426}{]}. In 2023, I co-organised
+{[}\citeproc{ref-roman-garcia2022Data}{427}{]}. In 2023, I co-organised
 and co-hosted a one-day symposium focused on Data Hazards, ethics, and
 reproducibility. Furthermore, I co-authored a chapter on Data Hazards to
 The Turing Way handbook
-{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{356}{]}.
+{[}\citeproc{ref-turingwaycommunity2019TuringWayHandbook}{357}{]}.
 
 The work that ultimately led to the development of the paper ``Data
 Hazards as an Ethical Toolkit for Neuroscience'' was preceded by an
 earlier collaboration with the Data Hazards team. As part of this, I
 designed a poster for AI UK 2023 that followed the methodology outlined
-in Method 1 of the {[}\citeproc{ref-romangarcia2023Data}{379}{]}. This
+in Method 1 of the {[}\citeproc{ref-romangarcia2023Data}{380}{]}. This
 poster served as an interactive tool, enabling reflective discussions
 with conference attendees who were invited to engage by selecting Data
 Hazard labels they felt were applicable to my PhD project
@@ -4309,7 +4322,7 @@ Numerous computational models of CaMKII dynamics have been developed
 over the past decade to look at different interactions of CaMKII and its
 substrates or binding partners at varying levels of detail
 {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-holmes2000Models}{427}--\citeproc{ref-bartol2024Spatial}{436}{]}.
+\citeproc{ref-holmes2000Models}{428}--\citeproc{ref-bartol2024Spatial}{437}{]}.
 Many of these models center on the binding of calcium to calmodulin
 (CaM) and the subsequent formation of the CaM-CaMKII complex. While
 these studies provide a good foundation for understanding CaMKII
@@ -4318,8 +4331,8 @@ considering geometry, or explore both spatial and temporal dynamics but
 do not model CaMKII as a multimeric molecule. Some models do account for
 CaMKII as a multimeric dodecamer
 {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-ordyan2020Interactions}{435},
-\citeproc{ref-bartol2024Spatial}{436}{]} but do not focus on its
+\citeproc{ref-ordyan2020Interactions}{436},
+\citeproc{ref-bartol2024Spatial}{437}{]} but do not focus on its
 interactions with NMDARs. To my knowledge, this research is novel in the
 field, as it incorporates all these aspects: modeling CaMKII as a
 dodecamer, examining spatiotemporal dynamics, and focusing specifically
@@ -4327,8 +4340,8 @@ on the CaMKII/NMDAR complex.
 
 The research carried out in this PhD project follows recent studies
 {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-ordyan2020Interactions}{435},
-\citeproc{ref-bartol2024Spatial}{436}{]} that have looked at CaMKII as a
+\citeproc{ref-ordyan2020Interactions}{436},
+\citeproc{ref-bartol2024Spatial}{437}{]} that have looked at CaMKII as a
 dodecamer to study its autophosphorylation and spatiotemporal regulation
 in postsynaptic dendrites using BioNetGen and MCell. Incorporating
 spatial, temporal, and multimeric aspects is crucial because these
@@ -4337,7 +4350,7 @@ the CaMKII/NMDAR interaction. Spatial dynamics can reveal how the
 molecules interact within different cellular regions; CaMKII
 phosphorylation levels, as well as its functions have been shown to
 differ depending on its subcellular localization
-{[}\citeproc{ref-davies2007ACaMKII}{437}{]}. Temporal dynamics are
+{[}\citeproc{ref-davies2007ACaMKII}{438}{]}. Temporal dynamics are
 important to understand how CaMKII/NMDAR interactions evolve over time.
 The duration and timing of CaMKII activation influence whether synaptic
 changes are transient or long-lasting, affecting the induction and
@@ -4385,12 +4398,12 @@ is prevented by setting the association rate constant
 Several multi-state models of CaMKII have been proposed, each differing
 in focus and scope from the present one
 {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-holmes2000Models}{427}--\citeproc{ref-bartol2024Spatial}{436}{]}.
+\citeproc{ref-holmes2000Models}{428}--\citeproc{ref-bartol2024Spatial}{437}{]}.
 Notably, there are multiple models by Stefan et al.
-{[}\citeproc{ref-stefan2008Allostericd}{432},
-\citeproc{ref-stefan2011MultiStage}{433}{]} on CaMKII which explore the
+{[}\citeproc{ref-stefan2008Allostericd}{433},
+\citeproc{ref-stefan2011MultiStage}{434}{]} on CaMKII which explore the
 dynamics between CaMKII and CaM using Stochsim simulator
-{[}\citeproc{ref-lenovere2001StochSim}{438}{]} which does not account
+{[}\citeproc{ref-lenovere2001StochSim}{439}{]} which does not account
 for spatial effects, unlike MCell. These computational models provide
 insights into the mechanisms of calcium binding to CaM and the
 subsequent interaction with CaMKII, influencing the kinase's activation,
@@ -4404,7 +4417,7 @@ holoenzymes themselves were non-diffusing. Instead, the authors
 implemented a model in which CaM could diffuse and interact with a
 non-diffusing multi-state representation of CaMKII.
 
-{[}\citeproc{ref-ordyan2020Interactions}{435}{]} employed a BioNetGen
+{[}\citeproc{ref-ordyan2020Interactions}{436}{]} employed a BioNetGen
 rule-based modelling approach using Monte Carlo methods, similar to the
 present study, to investigate how \(\mathrm{Ca^{2+}}\) signals influence
 CaMKII phosphorylation dynamics within the PSD. Their work primarily
@@ -4412,7 +4425,7 @@ focuses on the interactions between CaM and the scaffolding molecule
 Neurogranin (Ng) in regulating CaMKII dynamics. However, their study
 does not investigate the crucial interaction between CaMKII and NMDARs.
 
-More recently, {[}\citeproc{ref-bartol2024Spatial}{436}{]} have
+More recently, {[}\citeproc{ref-bartol2024Spatial}{437}{]} have
 published a study using the same version of MCell 4 as the model used in
 this PhD. They use particle-based stochastic simulations in MCell4 to
 model the activation of CaMKII by \(\mathrm{Ca^{2+}}\) flowing through
@@ -4427,9 +4440,9 @@ postsynaptic dendrite.
 
 \section{Model Description}\label{model-description}
 
-In this model, CaMKII is represented as a dodecamer using
-BioNetGen(Section~\ref{sec-camkii-as-dodecamer}). The model simulates
-its diffusion over time and space within a postsynaptic density (PSD)
+In this model, CaMKII is represented as a dodecamer using BioNetGen
+(Section~\ref{sec-camkii-as-dodecamer}). The model simulates its
+diffusion over time and space within a postsynaptic density (PSD)
 volume. Other molecules involved in the system include calcium, CaM,
 PP1, and NMDARs. The following sections provide a detailed breakdown of
 how these reactions are modelled, highlighting their biological
@@ -4512,10 +4525,10 @@ In the model presented here, reactions of cytoplasmatic molecules
 specified in BNGL, were placed into the geometry of a postysnaptic
 dendritic spine with a volume of 0.50588 \(\mu\text{m}^3\), which
 matches the volume chosen by
-{[}\citeproc{ref-ordyan2020Interactions}{435}{]} in their model of
+{[}\citeproc{ref-ordyan2020Interactions}{436}{]} in their model of
 CaMKII in the PSD and is within ranges of spine volume of 0.004 to 0.6
 μm3 in hippocampal CA1 neurons (Harris et al., 1989). Moreover, Tonnesen
-et al. {[}\citeproc{ref-tonnesen2018SuperResolution}{439}{]} report a
+et al. {[}\citeproc{ref-tonnesen2018SuperResolution}{440}{]} report a
 median spine volume of 0.1 \(\mu\text{m}^3\), with some spines reaching
 up to 0.5\textasciitilde{}\(\mu\text{m}^3\). As such, a volume of 0.5
 \(\mu\text{m}^3\) is within physiologically observed bounds, albeit on
@@ -4527,8 +4540,8 @@ ions corresponds to a concentration of 3.28\,\(\mu\text{M}\).
 Fluorescent \(\mathrm{Ca^{2+}}\) indicator studies show resting
 intracellular \(\mathrm{Ca^{2+}}\) concentrations between
 0.05--0.1\,\(\mu\text{M}\), with increases up to 100-fold during
-stimulation {[}\citeproc{ref-brette2012Handbook}{440},
-\citeproc{ref-zheng2018Monitoring}{441}{]}. Therefore, the calcium
+stimulation {[}\citeproc{ref-brette2012Handbook}{441},
+\citeproc{ref-zheng2018Monitoring}{442}{]}. Therefore, the calcium
 concentrations used are within ranges of stimulated neuronal activation.
 I discuss this further in the discussion section and future steps of the
 model.
@@ -4536,9 +4549,9 @@ model.
 With respect to CaMKII, concentrations of CaMKIIα subunits have been
 reported to range between 5 and 100\,\(\mu\text{M}\) in neuronal
 dendrites
-{[}\citeproc{ref-lee2009Activation}{442}--\citeproc{ref-otmakhov2012Measuring}{444}{]}.
+{[}\citeproc{ref-lee2009Activation}{443}--\citeproc{ref-otmakhov2012Measuring}{445}{]}.
 NMDARs are typically found at approximately 10 to 100 receptors per
-synapse {[}\citeproc{ref-petralia2012Distribution}{445}{]}. In the
+synapse {[}\citeproc{ref-petralia2012Distribution}{446}{]}. In the
 present model, the concentrations of CaMKII and NMDARs are positioned at
 the lower end of these reported ranges, primarily due to the relatively
 large spine volume modelled. Specifically, we include 290 CaMKII
@@ -4548,7 +4561,7 @@ model is on the lower end of reported values, this choice remains valid
 given the larger spine volume incorporated in the model, which dilutes
 the concentration of CaMKII while maintaining a reasonable estimate for
 its overall abundance
-{[}\citeproc{ref-lee2009Activation}{442}--\citeproc{ref-otmakhov2012Measuring}{444}{]}.
+{[}\citeproc{ref-lee2009Activation}{443}--\citeproc{ref-otmakhov2012Measuring}{445}{]}.
 Furthermore, the number of NMDARs in the model is within the reported
 range, reinforcing the biological relevance of the simulation. The
 limitations of these parameter choices and potential future directions
@@ -4557,7 +4570,7 @@ section.
 
 PP1 concentrations in neurons are typically reported between 1
 \(\mu\text{M}\) and 10 \(\mu\text{M}\)
-{[}\citeproc{ref-cohen2002Protein}{446}{]}, with CaMKII concentrations
+{[}\citeproc{ref-cohen2002Protein}{447}{]}, with CaMKII concentrations
 around 5 \(\mu\text{M}\), yielding a literature-based ratio of
 approximately 5:1. In the model, PP1 is present at 0.039
 \(\mu\text{M}\), and CaMKII at 2.36 \(\mu\text{M}\), resulting in a
@@ -4569,7 +4582,7 @@ activation dynamics and regulation under varying conditions.
 PP1 concentration values are on the lower end of the reported ranges but
 remain within an order of magnitude of typical experimental data. This
 margin is reasonable, particularly given the experimental variability
-{[}\citeproc{ref-eastwood2006Minimum}{447}{]}. Additionally, the
+{[}\citeproc{ref-eastwood2006Minimum}{448}{]}. Additionally, the
 relative abundance of these molecules is often more important than their
 absolute concentrations, as it governs the signalling dynamics. The
 values used in this model were taken from other computational models
@@ -4582,8 +4595,8 @@ previous models that accurately represent the biological system at hand.
 Albeit, because the model uses a cell volume that is on the larger side
 for dendritic spines, the molecular concentrations are slightly lower
 than what others report {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-bartol2024Spatial}{436},
-\citeproc{ref-yasuda2022CaMKIIa}{448}{]}. In the future, running the
+\citeproc{ref-bartol2024Spatial}{437},
+\citeproc{ref-yasuda2022CaMKIIa}{449}{]}. In the future, running the
 model with a slightly smaller cell volume would naturally increase the
 total observed molecular concentrations. However, the actual behaviour
 of the molecules is not expected to change significantly, as the
@@ -4666,13 +4679,13 @@ in an open state due to the structural requirements for high-affinity
 binding. Electron microscopy of rat \(\alpha\)-CaMKII in Sf9 cells
 {[}\citeproc{ref-myers2017CaMKII}{164}{]} suggests that fewer than 3\%
 of CaMKII subunits adopt a compact, docked-like conformation
-{[}\citeproc{ref-bayer2019CaM}{449}{]}. The model therefore assumes all
+{[}\citeproc{ref-bayer2019CaM}{450}{]}. The model therefore assumes all
 CaMKII to be in an undocked confirmation, in order to streamline the
 focus on the fundamental functional states of CaMKII.
 
 Each CaMKII holoenzyme diffuses through the cell volume with a specified
 diffusion constant of \(1\times 10^{-6} \text{cm}^2/\text{s}\), which is
-within biological limits {[}\citeproc{ref-sanabria2008Spatial}{450}{]}.
+within biological limits {[}\citeproc{ref-sanabria2008Spatial}{451}{]}.
 In the model, CaMKII subunits can interact with NMDA receptors located
 on the cell surface. When they interact, CaMKII can bind reversibly to
 the NMDA receptor, forming a complex in which the CaMKII subunit that
@@ -4697,8 +4710,8 @@ the GluN2B subunit, and the behaviour of the whole NMDAR complex is
 inferred based on these more controlled interactions
 {[}\citeproc{ref-rumian2024LTP}{211},
 \citeproc{ref-akashi2009NMDA}{216},
-\citeproc{ref-goodell2014CaMKII}{451},
-\citeproc{ref-barcomb2016CaMKIIa}{452}{]}. Therefore, for the purposes
+\citeproc{ref-goodell2014CaMKII}{452},
+\citeproc{ref-barcomb2016CaMKIIa}{453}{]}. Therefore, for the purposes
 of this model, referring to the system as NMDAR aligns with the
 established experimental approach, even though the underlying
 interactions are predominantly occurring via the GluN2B subunit. Further
@@ -4755,12 +4768,12 @@ C-terminal lobe containing the other two EF hands. Each lobe can bind
 two calcium ions, so in our model, CaM is capable of binding four
 calcium ions in total. The N lobe binds calcium faster with lower
 affinity and the C lobe binds slower with higher affinity
-{[}\citeproc{ref-kawasaki2017Conformational}{453}{]}. Numerous models
+{[}\citeproc{ref-kawasaki2017Conformational}{454}{]}. Numerous models
 have been developed to investigate the dynamics of calcium ions binding
-to CaM {[}\citeproc{ref-stefan2008Allostericd}{432},
-\citeproc{ref-pepke2010Dynamic}{454},
-\citeproc{ref-gonzalez-andrade2016Insights}{455}{]}.
-{[}\citeproc{ref-linkevicius2025Fitting}{456}{]} examined and compared
+to CaM {[}\citeproc{ref-stefan2008Allostericd}{433},
+\citeproc{ref-pepke2010Dynamic}{455},
+\citeproc{ref-gonzalez-andrade2016Insights}{456}{]}.
+{[}\citeproc{ref-linkevicius2025Fitting}{457}{]} examined and compared
 various of these models, providing a useful summary of the typical
 categories for modeling CaM binding to \(\mathrm{Ca^{2+}}\). The model
 used here falls under their proposed ``scheme 3''
@@ -4782,7 +4795,7 @@ allowing us to focus on further CaMKII and NMDARs interactions.
 
 \caption[Calcium binding to CaM]{\label{fig-scheme3-cam}We model calcium
 binding to CaM following ``scheme 3'' proposed by Linkevicius et al.,
-2024 ({[}\citeproc{ref-linkevicius2025Fitting}{456}{]}). It is a
+2024 {[}\citeproc{ref-linkevicius2025Fitting}{457}{]}. It is a
 sequential CaM scheme where each binding site is represented
 individually.}
 
@@ -4792,9 +4805,9 @@ individually.}
 states}\label{sec-camkii-flicker}
 
 It is well established that CaMKII subunits can exist in both open and
-closed conformations {[}\citeproc{ref-pullara2017Mechanisms}{457},
-\citeproc{ref-zhang2017Opposing}{458}{]}, even in the absence of CaM
-{[}\citeproc{ref-asciutto2021Physicalc}{459}{]}. While the notion that
+closed conformations {[}\citeproc{ref-pullara2017Mechanisms}{458},
+\citeproc{ref-zhang2017Opposing}{459}{]}, even in the absence of CaM
+{[}\citeproc{ref-asciutto2021Physicalc}{460}{]}. While the notion that
 CaM induces a conformational change in CaMKII is the common view, the
 assumption that this binding event directly triggers subunit activation
 is largely based on the induced-fit model, as discussed in
@@ -4806,7 +4819,7 @@ CaMKII subunits inherently fluctuate between different conformational
 states (open and closed), and an alternative perspective is that CaM
 does not directly induce the opening of the subunit but rather
 stabilises the open conformation upon binding
-{[}\citeproc{ref-asciutto2021Physicalc}{459}{]}. This suggests that the
+{[}\citeproc{ref-asciutto2021Physicalc}{460}{]}. This suggests that the
 enzyme does not strictly require CaM to transition into an open state;
 rather, CaM serves to stabilise and prolong this conformation, thereby
 sustaining enzymatic activity. From a dynamic standpoint, it is
@@ -4815,7 +4828,7 @@ the subunit adopting an open conformation due to intrinsic structural
 fluctuations. Upon CaM binding, this equilibrium may shift, favouring
 the stabilisation of the open state and ultimately leading to the full
 activation observed in vitro
-{[}\citeproc{ref-asciutto2021Physicalc}{459}{]}. Accordingly, in this
+{[}\citeproc{ref-asciutto2021Physicalc}{460}{]}. Accordingly, in this
 model, CaMKII subunits are considered to undergo spontaneous transitions
 between open and closed conformations (see \#a in
 Figure~\ref{fig-camkii-binding-rxns} for schematic depiction), and the
@@ -4856,9 +4869,9 @@ one or more of the following events:
 
 CaM bound to different amounts of calcium has been shown to bind to
 CaMKII with different affinities, with CaM bound to four calcium having
-the highest affinity {[}\citeproc{ref-ordyan2020Interactions}{435},
-\citeproc{ref-linkevicius2025Fitting}{456},
-\citeproc{ref-khan2024Realtimea}{460}{]}. While CaM binding to the
+the highest affinity {[}\citeproc{ref-ordyan2020Interactions}{436},
+\citeproc{ref-linkevicius2025Fitting}{457},
+\citeproc{ref-khan2024Realtimea}{461}{]}. While CaM binding to the
 low-affinity site is compatible with CaMKII remaining in a closed state,
 binding to the high-affinity site is thought to structurally prevent
 CaMKII from closing {[}\citeproc{ref-hoffman2011Conformational}{171},
@@ -4866,7 +4879,7 @@ CaMKII from closing {[}\citeproc{ref-hoffman2011Conformational}{171},
 \citeproc{ref-gaertner2004Comparative}{179}{]}. The literature suggests
 that CaM binding in itself is not sufficient for CaMKII activation,
 although high-affinity binding of CaM is
-{[}\citeproc{ref-evans2009Energetics}{461}--\citeproc{ref-bossuyt2013Visualizing}{463}{]}.
+{[}\citeproc{ref-evans2009Energetics}{462}--\citeproc{ref-bossuyt2013Visualizing}{464}{]}.
 This is likely due to the stabilising effect of high affinity binding of
 CaM to CaMKII structurally keeping the kinase in its active state.
 
@@ -4876,7 +4889,7 @@ subunits. Additionally, CaM binds to a CaMKII subunit only if T306 is
 dephosphorylated. The T305/T306 site lies within the CaM binding region.
 It has been shown that autophosphorylation at T305/T306 (T306 hereforth)
 impedes CaM binding, and similarly CaM binding prevents T306
-phosphorylation {[}\citeproc{ref-rellos2010Structure}{464}{]}. In the
+phosphorylation {[}\citeproc{ref-rellos2010Structure}{465}{]}. In the
 model here, CaM is able to bind to CaMKII with the following rules:
 
 \begin{itemize}
@@ -4914,8 +4927,8 @@ localization at the PSD during LTP, which is of relevance for synaptic
 plasticity as well as learning and memory
 see~\ref{sec-cam-binding-and-t286-p}. Likewise, in this study, we focus
 on these two sites. While other phosphorylation sites on CaMKII have
-been identified {[}\citeproc{ref-migues2006Phosphorylation}{465},
-\citeproc{ref-gangopadhyay2008Regulation}{466}{]}, their functions are
+been identified {[}\citeproc{ref-migues2006Phosphorylation}{466},
+\citeproc{ref-gangopadhyay2008Regulation}{467}{]}, their functions are
 not yet fully understood and are not within the scope of this study.
 
 \subsection{T286 phosphorylation}\label{t286-phosphorylation}
@@ -4925,8 +4938,8 @@ two adjascent CaMKII subunits are in their open states. Research shows
 that CaMKII subunits need to be open to expose the ATP binding site in
 the regulatory domain, allowing the gamma-phosphate of ATP to transfer
 to the threonine residue at T286
-{[}\citeproc{ref-lou1986Activation}{467},
-\citeproc{ref-hoffman2011Investigation}{468}{]}. The open (kinase domain
+{[}\citeproc{ref-lou1986Activation}{468},
+\citeproc{ref-hoffman2011Investigation}{469}{]}. The open (kinase domain
 available) and undocked (subunits can reach their neighbours) states of
 two neighbouring subunits is crucial for the catalytic site of one
 subunit to reach and phosphorylate its neighbouring subunit. In our
@@ -4988,11 +5001,11 @@ subunits}\label{dephosphorylation-of-camkii-subunits}
 
 There are multiple known phosphatases which act to dephosphorylate
 CaMKII in the PSD {[}\citeproc{ref-colbran2004Protein}{147},
-\citeproc{ref-cohen1997Novel}{469}{]}. Different phosphatase proteins
+\citeproc{ref-cohen1997Novel}{470}{]}. Different phosphatase proteins
 will carry out their function depending on their localization and what
 protein assemblies they are bound to or are available for them. The
 Ser/Thr phosphatase PP1 is a key regulator of CaMKII signalling
-{[}\citeproc{ref-shioda2017Physiological}{470}{]}; and it can
+{[}\citeproc{ref-shioda2017Physiological}{471}{]}; and it can
 dephosphorylate both T286 and T306 sites of the kinase.
 
 The colocalization with PSD-associated PP1 or sequestration away from
@@ -5118,7 +5131,7 @@ validate individual components before integrating them into the full
 system. For example, the model was first tested by incorporating the
 calcium binding to CaM reactions. These were validated by comparing the
 outputs to those of a previously published and experimentally validated
-model {[}\citeproc{ref-romangarcia2017Computationala}{471}{]}. Once
+model {[}\citeproc{ref-romangarcia2017Computationala}{472}{]}. Once
 consistent behaviour was observed, the next layer ---CaM binding to
 CaMKII--- was added and validated in a similar manner. Finally,
 interactions between CaMKII and NMDARs were introduced and tested. While
@@ -5316,21 +5329,21 @@ serve as predictive tools to deepen our understanding of the mechanisms
 underlying observed biochemical processes. However, parameters such as
 rate constants, activation energies, diffusion coefficients, etcetera,
 are rarely known with precision
-{[}\citeproc{ref-sumathi2002Priori}{472}--\citeproc{ref-mcdonald2022Parameter}{474}{]}.
+{[}\citeproc{ref-sumathi2002Priori}{473}--\citeproc{ref-mcdonald2022Parameter}{475}{]}.
 Consequently, predictions are typically subject to uncertainty. Thus
 understanding how parameter variations influence outcomes is a crucial
 part of model development and validation.
 
 While other models have explored the dynamics of calcium, calmodulin,
 and CaMKII {[}\citeproc{ref-pharris2019Multistate}{185},
-\citeproc{ref-holmes2000Models}{427}--\citeproc{ref-bartol2024Spatial}{436}{]},
+\citeproc{ref-holmes2000Models}{428}--\citeproc{ref-bartol2024Spatial}{437}{]},
 to the best of our knowledge none have specifically focused on the
 direct interactions between CaMKII and NMDARs, as is done in the present
 study. Consequently, determining parameters for calcium binding to CaM
 and CaM binding to CaMKII was relatively straightforward, as there are
 studies that have provided analyses and reviews of parameters that best
 fit biological phenomena
-{[}\citeproc{ref-linkevicius2025Fitting}{456}{]}. However, there were
+{[}\citeproc{ref-linkevicius2025Fitting}{457}{]}. However, there were
 four reaction parameters that were more uncertain and key for this
 study: \(k_\text{on}\)/\(k_\text{off}\) for CaMKII flicker of opening
 and closing (reaction rule \#5 in Figure~\ref{fig-tbl-1}), and
@@ -5485,7 +5498,7 @@ However, to the best of our knowledge, we could not find estimated
 values for the GluN2B subunit, to which CaMKII binds more readily
 {[}\citeproc{ref-strack1998Autophosphorylationdependent}{124}--\citeproc{ref-barria2005NMDA}{126}{]}.
 We therefore proceeded to use the parameters from a previously validated
-model {[}\citeproc{ref-romangarcia2017Computationala}{471}{]}, with a
+model {[}\citeproc{ref-romangarcia2017Computationala}{472}{]}, with a
 \(k_{\text{D}}\) value of \(1.5 \times 10^{-7} \text{M}\). We ran the
 simulation by varying this \(k_{\text{D}}\) by factors of 0.1 and 0.01.
 
@@ -6092,7 +6105,7 @@ site}\label{nmdar-binding-also-promotes-camkii-autophosphorylation-at-t306-site}
 
 Phosphorylation at the T306 site is known to occur at a slower rate than
 phosphorylation at T286 {[}\citeproc{ref-chang2017CaMKII}{153},
-\citeproc{ref-otmakhov2015Fast}{475}{]}, and this is reflected in the
+\citeproc{ref-otmakhov2015Fast}{476}{]}, and this is reflected in the
 model outputs. A total of 25 CaMKII subunits become phosphorylated at
 T306 over the course of the simulation (burgundy trace: camkii\_t306p in
 Figure~\ref{fig-t306p}), of which 21 are bound to the NMDAR (golden
@@ -6217,7 +6230,7 @@ has been shown to impair LTP and spatial learning in rodents
 {[}\citeproc{ref-colbran2004Protein}{147},
 \citeproc{ref-miller1986Regulation}{187},
 \citeproc{ref-coultrap2010CaMKIIa}{188},
-\citeproc{ref-lou1986Activation}{467}{]}. This computational
+\citeproc{ref-lou1986Activation}{468}{]}. This computational
 implementation allows investigation into how the loss of T286
 phosphorylation alters CaMKII dynamics and downstream NMDAR interactions
 under different stimulation conditions. In the T286 MT model, this
@@ -6781,7 +6794,7 @@ NMDAR/CaMKII binding-deficient mutant. Previous studies have shown that
 CaMKII binding to GluN2B triggers a conformational change that enables
 the enzyme to remain autonomously active
 {[}\citeproc{ref-bayer2001Interaction}{168},
-\citeproc{ref-barcomb2016CaMKIIa}{452}{]}, even in the absence of T286
+\citeproc{ref-barcomb2016CaMKIIa}{453}{]}, even in the absence of T286
 phosphorylation. This is consistent with the significant decrease in
 CaMKII open state observed in Figure 6.16 for the NMDAR/CaMKII mutant,
 compared to the relatively smaller effect seen in the T286A mutant. Even
@@ -6896,7 +6909,7 @@ subunits bound to NMDARs consistently remain phosphorylated at T286.
 This discrepancy may, in part, stem from the relatively low PP1
 concentration used in the model. Empirical studies report neuronal PP1
 concentrations ranging from 1--10\,\(\mu\text{M}\)
-{[}\citeproc{ref-cohen2002Protein}{446}{]}, with CaMKII concentrations
+{[}\citeproc{ref-cohen2002Protein}{447}{]}, with CaMKII concentrations
 around 5\,\(\mu\text{M}\), yielding a physiologically relevant ratio of
 approximately 5:1. In contrast, the current model uses a PP1
 concentration of 0.039\,\(\mu\text{M}\) and a CaMKII concentration of
@@ -6919,8 +6932,8 @@ molecular concentrations (as discussed in
 Chapter~\ref{sec-biology-chapter}), future adaptations of this model
 should consider optimising them further, especially calcium and CaMKII
 concentrations as they reflect lower end of reported concentrations
-{[}\citeproc{ref-brette2012Handbook}{440}--\citeproc{ref-otmakhov2012Measuring}{444},
-\citeproc{ref-otmakhov2012Measuring}{444}{]}. Increasing these
+{[}\citeproc{ref-brette2012Handbook}{441}--\citeproc{ref-otmakhov2012Measuring}{445},
+\citeproc{ref-otmakhov2012Measuring}{445}{]}. Increasing these
 concentrations would not only elevate total molecular outputs but also
 enhance the likelihood of key interactions, such as CaMKII binding to
 NMDARs or CaM. For example, increasing calcium concentrations could
@@ -6937,7 +6950,7 @@ molecular interactions, such as CaM binding and CaMKII phosphorylation.
 In the present study, the model simulates a single calcium stimulus to
 initiate signalling events. Future model developments could incorporate
 repetitive calcium bursts, similar to the approach used by
-{[}\citeproc{ref-chang2019Mechanismsa}{476}{]}, designed to emulate
+{[}\citeproc{ref-chang2019Mechanismsa}{477}{]}, designed to emulate
 theta burst stimulation, a well-established protocol for inducing LTP.
 Incorporating such bursts would allow for the investigation of threshold
 effects (e.g., how many pulses are required for full CaMKII activation
@@ -6952,7 +6965,7 @@ directly into the BNGL file using time-dependent functions.
 In addition to the proposed biochemical refinements, future adaptations
 of the model could benefit from incorporating spatial visualisation
 using MCell's viz\_output feature in CellBlender
-{[}\citeproc{ref-gupta2018Spatial}{297}{]}. This would allow the model
+{[}\citeproc{ref-gupta2018Spatial}{298}{]}. This would allow the model
 to move beyond abstract molecule counts and provide an intuitive,
 dynamic representation of molecular interactions within a defined
 spatial environment. Such visualisations can help identify spatial
@@ -6982,12 +6995,12 @@ CaMKII mechanism will also involve CaMKII's interactions with
 filamentous (F)-actin cytoskeleton in dendritic spines. A promising
 future direction could be to explore the dynamic reshaping of the
 cytoskeleton in dendritic neurons, potentially using BioDynaMo (Biology
-Dynamics Modeller) {[}\citeproc{ref-breitwieser2021BioDynaMo}{477}{]} to
+Dynamics Modeller) {[}\citeproc{ref-breitwieser2021BioDynaMo}{478}{]} to
 model these processes.
 
 Similar to MCell, BioDynaMo is an agent-based modelling tool that
 enables the simulation of 3D biophysical molecular interactions
-{[}\citeproc{ref-breitwieser2021BioDynaMo}{477}{]}. However, unlike
+{[}\citeproc{ref-breitwieser2021BioDynaMo}{478}{]}. However, unlike
 MCell, BioDynaMo supports dynamic geometry modelling, allowing the
 simulation of geometries that change in size or shape during the
 simulation. In contrast, MCell uses static and predefined geometries
@@ -9044,35 +9057,41 @@ H., Chen, Z. S., Gerkin, R. C., \ldots{} Redish, A. D. (2023). On the
 Neuroscience}, \emph{43}(7), 1074--1088.
 \url{https://doi.org/10.1523/JNEUROSCI.1179-22.2022}}
 
-\bibitem[\citeproctext]{ref-teschendorff2021Statistical}
+\bibitem[\citeproctext]{ref-abbott2008Theoretical}
 \CSLLeftMargin{249. }%
+\CSLRightInline{Abbott, L. F. (2008). Theoretical {Neuroscience Rising}.
+\emph{Neuron}, \emph{60}(3), 489--495.
+\url{https://doi.org/10.1016/j.neuron.2008.10.019}}
+
+\bibitem[\citeproctext]{ref-teschendorff2021Statistical}
+\CSLLeftMargin{250. }%
 \CSLRightInline{Teschendorff, A. E., \& Feinberg, A. P. (2021).
 Statistical mechanics meets single-cell biology. \emph{Nature Reviews
 Genetics}, \emph{22}(7), 459--476.
 \url{https://doi.org/10.1038/s41576-021-00341-z}}
 
 \bibitem[\citeproctext]{ref-demopoulos2025Chaos}
-\CSLLeftMargin{250. }%
+\CSLLeftMargin{251. }%
 \CSLRightInline{Demopoulos, N. (2025, February 21). From {Chaos} to
 {Order}: {A Stochastic Approach} to {Self Organizing Systems}.
 \url{https://doi.org/10.20944/preprints202502.1719.v1}}
 
 \bibitem[\citeproctext]{ref-szekely2014Stochastic}
-\CSLLeftMargin{251. }%
+\CSLLeftMargin{252. }%
 \CSLRightInline{Székely, T., \& Burrage, K. (2014). Stochastic
 simulation in systems biology. \emph{Computational and Structural
 Biotechnology Journal}, \emph{12}(20), 14--25.
 \url{https://doi.org/10.1016/j.csbj.2014.10.003}}
 
 \bibitem[\citeproctext]{ref-brodland2015How}
-\CSLLeftMargin{252. }%
+\CSLLeftMargin{253. }%
 \CSLRightInline{Brodland, G. W. (2015). How computational models can
 help unlock biological systems. \emph{Seminars in Cell \& Developmental
 Biology}, \emph{47--48}, 62--73.
 \url{https://doi.org/10.1016/j.semcdb.2015.07.001}}
 
 \bibitem[\citeproctext]{ref-robinson2004Simulation}
-\CSLLeftMargin{253. }%
+\CSLLeftMargin{254. }%
 \CSLRightInline{Robinson, S., Nance, R. E., Paul, R. J., Pidd, M., \&
 Taylor, S. J. E. (2004). Simulation model reuse: Definitions, benefits
 and obstacles. \emph{Simulation Modelling Practice and Theory},
@@ -9080,7 +9099,7 @@ and obstacles. \emph{Simulation Modelling Practice and Theory},
 \url{https://doi.org/10.1016/j.simpat.2003.11.006}}
 
 \bibitem[\citeproctext]{ref-reppas2023Leveraging}
-\CSLLeftMargin{254. }%
+\CSLLeftMargin{255. }%
 \CSLRightInline{Reppas, C., Kuentz, M., Bauer-Brandl, A., Carlert, S.,
 Dallmann, A., Dietrich, S., \ldots{} O'Dwyer, P. J. (2023). Leveraging
 the use of {\emph{in Vitro}} and computational methods to support the
@@ -9089,25 +9108,25 @@ development of enabling oral drug products: {An InPharma} commentary.
 \url{https://doi.org/10.1016/j.ejps.2023.106505}}
 
 \bibitem[\citeproctext]{ref-lafollette1995Utilizing}
-\CSLLeftMargin{255. }%
+\CSLLeftMargin{256. }%
 \CSLRightInline{LaFOLLETTE, H., \& Shanks, N. (1995). Util-izing
 {Animals}. \emph{Journal of Applied Philosophy}, \emph{12}(1), 13--25.
 \url{https://doi.org/10.1111/j.1468-5930.1995.tb00116.x}}
 
 \bibitem[\citeproctext]{ref-dhont2019Psychology}
-\CSLLeftMargin{256. }%
+\CSLLeftMargin{257. }%
 \CSLRightInline{Dhont, K., Hodson, G., Leite, A. C., \& Salmen, A.
 (2019). The {Psychology} of {Speciesism}. In \emph{Why {We Love} and
 {Exploit Animals}}. Routledge.}
 
 \bibitem[\citeproctext]{ref-jaquet2021Debunking}
-\CSLLeftMargin{257. }%
+\CSLLeftMargin{258. }%
 \CSLRightInline{Jaquet, F. (2021). A debunking argument against
 speciesism. \emph{Synthese}, \emph{198}(2), 1011--1027.
 \url{https://doi.org/10.1007/s11229-019-02080-5}}
 
 \bibitem[\citeproctext]{ref-dominguez-oliva2023Importance}
-\CSLLeftMargin{258. }%
+\CSLLeftMargin{259. }%
 \CSLRightInline{Domínguez-Oliva, A., Hernández-Ávalos, I.,
 Martínez-Burnes, J., Olmos-Hernández, A., Verduzco-Mendoza, A., \&
 Mota-Rojas, D. (2023). The {Importance} of {Animal Models} in
@@ -9116,14 +9135,14 @@ Mota-Rojas, D. (2023). The {Importance} of {Animal Models} in
 \url{https://doi.org/10.3390/ani13071223}}
 
 \bibitem[\citeproctext]{ref-mukherjee2022Role}
-\CSLLeftMargin{259. }%
+\CSLLeftMargin{260. }%
 \CSLRightInline{Mukherjee, P., Roy, S., Ghosh, D., \& Nandi, S. K.
 (2022). Role of animal models in biomedical research: A review.
 \emph{Laboratory Animal Research}, \emph{38}(1), 18.
 \url{https://doi.org/10.1186/s42826-022-00128-1}}
 
 \bibitem[\citeproctext]{ref-madden2020Review}
-\CSLLeftMargin{260. }%
+\CSLLeftMargin{261. }%
 \CSLRightInline{Madden, J. C., Enoch, S. J., Paini, A., \& Cronin, M. T.
 D. (2020). A {Review} of {In Silico Tools} as {Alternatives} to {Animal
 Testing}: {Principles}, {Resources} and {Applications}.
@@ -9131,21 +9150,21 @@ Testing}: {Principles}, {Resources} and {Applications}.
 \url{https://doi.org/10.1177/0261192920965977}}
 
 \bibitem[\citeproctext]{ref-pound2004Where}
-\CSLLeftMargin{261. }%
+\CSLLeftMargin{262. }%
 \CSLRightInline{Pound, P., Ebrahim, S., Sandercock, P., Bracken, M. B.,
 \& Roberts, I. (2004). Where is the evidence that animal research
 benefits humans? \emph{BMJ}, \emph{328}(7438), 514--517.
 \url{https://doi.org/10.1136/bmj.328.7438.514}}
 
 \bibitem[\citeproctext]{ref-ghosh2011Software}
-\CSLLeftMargin{262. }%
+\CSLLeftMargin{263. }%
 \CSLRightInline{Ghosh, S., Matsuoka, Y., Asai, Y., Hsin, K.-Y., \&
 Kitano, H. (2011). Software for systems biology: From tools to
 integrated platforms. \emph{Nature Reviews Genetics}, \emph{12}(12),
 821--832. \url{https://doi.org/10.1038/nrg3096}}
 
 \bibitem[\citeproctext]{ref-olivier2016Modeling}
-\CSLLeftMargin{263. }%
+\CSLLeftMargin{264. }%
 \CSLRightInline{Olivier, B. G., Swat, M. J., \& Moné, M. J. (2016).
 Modeling and {Simulation Tools}: {From Systems Biology} to {Systems
 Medicine}. In U. Schmitz \& O. Wolkenhauer (Eds.), \emph{Systems
@@ -9153,14 +9172,14 @@ Medicine}. In U. Schmitz \& O. Wolkenhauer (Eds.), \emph{Systems
 \url{https://doi.org/10.1007/978-1-4939-3283-2_19}}
 
 \bibitem[\citeproctext]{ref-bartocci2016Computational}
-\CSLLeftMargin{264. }%
+\CSLLeftMargin{265. }%
 \CSLRightInline{Bartocci, E., \& Lió, P. (2016). Computational
 {Modeling}, {Formal Analysis}, and {Tools} for {Systems Biology}.
 \emph{PLOS Computational Biology}, \emph{12}(1), e1004591.
 \url{https://doi.org/10.1371/journal.pcbi.1004591}}
 
 \bibitem[\citeproctext]{ref-kohl2011Standards}
-\CSLLeftMargin{265. }%
+\CSLLeftMargin{266. }%
 \CSLRightInline{Kohl, M. (2011). Standards, {Databases}, and {Modeling
 Tools} in {Systems Biology}. In M. Hamacher, M. Eisenacher, \& C.
 Stephan (Eds.), \emph{Data {Mining} in {Proteomics}: {From Standards} to
@@ -9168,7 +9187,7 @@ Stephan (Eds.), \emph{Data {Mining} in {Proteomics}: {From Standards} to
 \url{https://doi.org/10.1007/978-1-60761-987-1_26}}
 
 \bibitem[\citeproctext]{ref-cook2009Programmability}
-\CSLLeftMargin{266. }%
+\CSLLeftMargin{267. }%
 \CSLRightInline{Cook, M., Soloveichik, D., Winfree, E., \& Bruck, J.
 (2009). Programmability of~{Chemical Reaction Networks}. In A. Condon,
 D. Harel, J. N. Kok, A. Salomaa, \& E. Winfree (Eds.), \emph{Algorithmic
@@ -9176,7 +9195,7 @@ D. Harel, J. N. Kok, A. Salomaa, \& E. Winfree (Eds.), \emph{Algorithmic
 \url{https://doi.org/10.1007/978-3-540-88869-7_27}}
 
 \bibitem[\citeproctext]{ref-besozzi2016ReactionBased}
-\CSLLeftMargin{267. }%
+\CSLLeftMargin{268. }%
 \CSLRightInline{Besozzi, D. (2016). Reaction-{Based Models} of
 {Biochemical Networks}. In A. Beckmann, L. Bienvenu, \& N. Jonoska
 (Eds.), \emph{Pursuit of the {Universal}} (pp. 24--34). Cham: Springer
@@ -9184,7 +9203,7 @@ International Publishing.
 \url{https://doi.org/10.1007/978-3-319-40189-8_3}}
 
 \bibitem[\citeproctext]{ref-resat2009Kinetic}
-\CSLLeftMargin{268. }%
+\CSLLeftMargin{269. }%
 \CSLRightInline{Resat, H., Petzold, L., \& Pettigrew, M. F. (2009).
 Kinetic {Modeling} of {Biological Systems}. In R. Ireton, K. Montgomery,
 R. Bumgarner, R. Samudrala, \& J. McDermott (Eds.), \emph{Computational
@@ -9192,34 +9211,34 @@ R. Bumgarner, R. Samudrala, \& J. McDermott (Eds.), \emph{Computational
 \url{https://doi.org/10.1007/978-1-59745-243-4_14}}
 
 \bibitem[\citeproctext]{ref-marchetti2017Simulation}
-\CSLLeftMargin{269. }%
+\CSLLeftMargin{270. }%
 \CSLRightInline{Marchetti, L., Priami, C., \& Thanh, V. H. (2017).
 \emph{Simulation {Algorithms} for {Computational Systems Biology}} (1st
 ed.). Springer Publishing Company, Incorporated.}
 
 \bibitem[\citeproctext]{ref-mazo2008PROBABILITY}
-\CSLLeftMargin{270. }%
+\CSLLeftMargin{271. }%
 \CSLRightInline{Mazo, R. M. (2008). {PROBABILITY THEORY}. In R. M. Mazo
 (Ed.), \emph{Brownian {Motion}: {Fluctuations}, {Dynamics}, and
 {Applications}} (p. 0). Oxford University Press.
 \url{https://doi.org/10.1093/acprof:oso/9780199556441.003.0002}}
 
 \bibitem[\citeproctext]{ref-earnest2018Simulating}
-\CSLLeftMargin{271. }%
+\CSLLeftMargin{272. }%
 \CSLRightInline{Earnest, T. M., Cole, J. A., \& Luthey-Schulten, Z.
 (2018). Simulating biological processes: Stochastic physics from whole
 cells to colonies. \emph{Reports on Progress in Physics}, \emph{81}(5),
 052601. \url{https://doi.org/10.1088/1361-6633/aaae2c}}
 
 \bibitem[\citeproctext]{ref-marin2019Kinetics}
-\CSLLeftMargin{272. }%
+\CSLLeftMargin{273. }%
 \CSLRightInline{Marin, G. B., Yablonsky, G. S., \& Constales, D. (2019).
 \emph{Kinetics of {Chemical Reactions}: {Decoding Complexity}}. John
 Wiley \& Sons. Retrieved from
 \url{https://books.google.com?id=v357DwAAQBAJ}}
 
 \bibitem[\citeproctext]{ref-hoops2016Chapter}
-\CSLLeftMargin{273. }%
+\CSLLeftMargin{274. }%
 \CSLRightInline{Hoops, S., Hontecillas, R., Abedi, V., Leber, A.,
 Philipson, C., Carbo, A., \& Bassaganya-Riera, J. (2016). Chapter 5 -
 {Ordinary Differential Equations} ({ODEs}) {Based Modeling}. In J.
@@ -9228,7 +9247,7 @@ Academic Press.
 \url{https://doi.org/10.1016/B978-0-12-803697-6.00005-9}}
 
 \bibitem[\citeproctext]{ref-johnson2021Quantifying}
-\CSLLeftMargin{274. }%
+\CSLLeftMargin{275. }%
 \CSLRightInline{Johnson, M. E., Chen, A., Faeder, J. R., Henning, P.,
 Moraru, I. I., Meier-Schellersheim, M., \ldots{} Uhrmacher, A. M.
 (2021). Quantifying the roles of space and stochasticity in computer
@@ -9237,35 +9256,35 @@ Biology of the Cell}, \emph{32}(2), 186--210.
 \url{https://doi.org/10.1091/mbc.E20-08-0530}}
 
 \bibitem[\citeproctext]{ref-smith2019Spatial}
-\CSLLeftMargin{275. }%
+\CSLLeftMargin{276. }%
 \CSLRightInline{Smith, S., \& Grima, R. (2019). Spatial {Stochastic
 Intracellular Kinetics}: {A Review} of {Modelling Approaches}.
 \emph{Bulletin of Mathematical Biology}, \emph{81}(8), 2960--3009.
 \url{https://doi.org/10.1007/s11538-018-0443-1}}
 
 \bibitem[\citeproctext]{ref-postawa2020Comprehensive}
-\CSLLeftMargin{276. }%
+\CSLLeftMargin{277. }%
 \CSLRightInline{Postawa, K., Szczygieł, J., \& Kułażyński, M. (2020). A
 comprehensive comparison of {ODE} solvers for biochemical problems.
 \emph{Renewable Energy}, \emph{156}, 624--633.
 \url{https://doi.org/10.1016/j.renene.2020.04.089}}
 
 \bibitem[\citeproctext]{ref-maly2009Introduction}
-\CSLLeftMargin{277. }%
+\CSLLeftMargin{278. }%
 \CSLRightInline{Maly, I. V. (2009). Introduction: A practical guide to
 the systems approach in biology. \emph{Methods in Molecular Biology
 (Clifton, N.J.)}, \emph{500}, 3--13.
 \url{https://doi.org/10.1007/978-1-59745-525-1_1}}
 
 \bibitem[\citeproctext]{ref-gillespie2007Stochastic}
-\CSLLeftMargin{278. }%
+\CSLLeftMargin{279. }%
 \CSLRightInline{Gillespie, D. T. (2007). Stochastic {Simulation} of
 {Chemical Kinetics}. \emph{Annual Review of Physical Chemistry},
 \emph{58}, 35--55.
 \url{https://doi.org/10.1146/annurev.physchem.58.032806.104637}}
 
 \bibitem[\citeproctext]{ref-ritter2011Determining}
-\CSLLeftMargin{279. }%
+\CSLLeftMargin{280. }%
 \CSLRightInline{Ritter, F. E., Schoelles, M. J., Quigley, K. S., \&
 Klein, L. C. (2011). Determining the {Number} of {Simulation Runs}:
 {Treating Simulations} as {Theories} by {Not Sampling Their Behavior}.
@@ -9274,46 +9293,46 @@ Simulations}: {Methods} and {Practice}} (pp. 97--116). London: Springer.
 \url{https://doi.org/10.1007/978-0-85729-883-6_5}}
 
 \bibitem[\citeproctext]{ref-byrne2013How}
-\CSLLeftMargin{280. }%
+\CSLLeftMargin{281. }%
 \CSLRightInline{Byrne, M. D. (2013). How {Many Times Should} a
 {Stochastic Model Be Run}? {An Approach Based} on {Confidence
 Intervals}. In \emph{Proceedings of the 12th {International} conference
 on cognitive modeling}.}
 
 \bibitem[\citeproctext]{ref-klamt2002Combinatorial}
-\CSLLeftMargin{281. }%
+\CSLLeftMargin{282. }%
 \CSLRightInline{Klamt, S., \& Stelling, J. (2002). Combinatorial
 {Complexity} of {Pathway Analysis} in {Metabolic Networks}.
 \emph{Molecular Biology Reports}, \emph{29}(1), 233--236.
 \url{https://doi.org/10.1023/A:1020390132244}}
 
 \bibitem[\citeproctext]{ref-stefan2014Multistate}
-\CSLLeftMargin{282. }%
+\CSLLeftMargin{283. }%
 \CSLRightInline{Stefan, M. I., Bartol, T. M., Sejnowski, T. J., \&
 Kennedy, M. B. (2014). Multi-state modeling of biomolecules. \emph{PLoS
 computational biology}, \emph{10}(9), e1003844.
 \url{https://doi.org/10.1371/journal.pcbi.1003844}}
 
 \bibitem[\citeproctext]{ref-gomperts2009Signal}
-\CSLLeftMargin{283. }%
+\CSLLeftMargin{284. }%
 \CSLRightInline{Gomperts, B. D., Tatham, P. E. R., \& Kramer, I. M.
 (2009). \emph{Signal {Transduction}}. Elsevier/Academic Press. Retrieved
 from \url{https://books.google.com?id=5ZvNngEACAAJ}}
 
 \bibitem[\citeproctext]{ref-hunter2000Signaling}
-\CSLLeftMargin{284. }%
+\CSLLeftMargin{285. }%
 \CSLRightInline{Hunter, T. (2000). Signaling---2000 and {Beyond}.
 \emph{Cell}, \emph{100}, 113--27.
 \url{https://doi.org/10.1016/S0092-8674(00)81688-8}}
 
 \bibitem[\citeproctext]{ref-changeux2005Allosteric}
-\CSLLeftMargin{285. }%
+\CSLLeftMargin{286. }%
 \CSLRightInline{Changeux, J.-P., \& Edelstein, S. J. (2005). Allosteric
 {Mechanisms} of {Signal Transduction}. \emph{Science}, \emph{308}(5727),
 1424--1428. \url{https://doi.org/10.1126/science.1108595}}
 
 \bibitem[\citeproctext]{ref-harris2009Compartmental}
-\CSLLeftMargin{286. }%
+\CSLLeftMargin{287. }%
 \CSLRightInline{Harris, L. A., Hogg, J. S., \& Faeder, J. R. (2009).
 Compartmental rule-based modeling of biochemical systems. In
 \emph{Proceedings of the 2009 {Winter Simulation Conference} ({WSC})}
@@ -9322,7 +9341,7 @@ Simulation Conference} ({WSC}).
 \url{https://doi.org/10.1109/WSC.2009.5429719}}
 
 \bibitem[\citeproctext]{ref-chylek2014Rulebased}
-\CSLLeftMargin{287. }%
+\CSLLeftMargin{288. }%
 \CSLRightInline{Chylek, L. A., Harris, L. A., Tung, C.-S., Faeder, J.
 R., Lopez, C. F., \& Hlavacek, W. S. (2014). Rule-based modeling: A
 computational approach for studying biomolecular site dynamics in cell
@@ -9330,7 +9349,7 @@ signaling systems. \emph{WIREs Systems Biology and Medicine},
 \emph{6}(1), 13--36. \url{https://doi.org/10.1002/wsbm.1245}}
 
 \bibitem[\citeproctext]{ref-chylek2015Modeling}
-\CSLLeftMargin{288. }%
+\CSLLeftMargin{289. }%
 \CSLRightInline{Chylek, L. A., Harris, L. A., Faeder, J. R., \&
 Hlavacek, W. S. (2015). Modeling for (physical) biologists: An
 introduction to the rule-based approach. \emph{Physical Biology},
@@ -9338,41 +9357,41 @@ introduction to the rule-based approach. \emph{Physical Biology},
 \url{https://doi.org/10.1088/1478-3975/12/4/045007}}
 
 \bibitem[\citeproctext]{ref-schaff2016Rulebased}
-\CSLLeftMargin{289. }%
+\CSLLeftMargin{290. }%
 \CSLRightInline{Schaff, J. C., Vasilescu, D., Moraru, I. I., Loew, L.
 M., \& Blinov, M. L. (2016). Rule-based modeling with {Virtual Cell}.
 \emph{Bioinformatics}, \emph{32}(18), 2880--2882.
 \url{https://doi.org/10.1093/bioinformatics/btw353}}
 
 \bibitem[\citeproctext]{ref-faeder2009Rulebased}
-\CSLLeftMargin{290. }%
+\CSLLeftMargin{291. }%
 \CSLRightInline{Faeder, J. R., Blinov, M. L., \& Hlavacek, W. S. (2009).
 Rule-based modeling of biochemical systems with {BioNetGen}.
 \emph{Methods in Molecular Biology (Clifton, N.J.)}, \emph{500},
 113--167. \url{https://doi.org/10.1007/978-1-59745-525-1_5}}
 
 \bibitem[\citeproctext]{ref-lopez2013Programming}
-\CSLLeftMargin{291. }%
+\CSLLeftMargin{292. }%
 \CSLRightInline{Lopez, C. F., Muhlich, J. L., Bachman, J. A., \& Sorger,
 P. K. (2013). Programming biological models in {Python} using {PySB}.
 \emph{Molecular Systems Biology}, \emph{9}(1), 646.
 \url{https://doi.org/10.1038/msb.2013.1}}
 
 \bibitem[\citeproctext]{ref-boutillier2018Kappa}
-\CSLLeftMargin{292. }%
+\CSLLeftMargin{293. }%
 \CSLRightInline{Boutillier, P., Maasha, M., Li, X., Medina-Abarca, H.
 F., Krivine, J., Feret, J., \ldots{} Fontana, W. (2018). The {Kappa}
 platform for rule-based modeling. \emph{Bioinformatics}, \emph{34}(13),
 i583--i592. \url{https://doi.org/10.1093/bioinformatics/bty272}}
 
 \bibitem[\citeproctext]{ref-karp1975Computational}
-\CSLLeftMargin{293. }%
+\CSLLeftMargin{294. }%
 \CSLRightInline{Karp, R. M. (1975). On the {Computational Complexity} of
 {Combinatorial Problems}. \emph{Networks}, \emph{5}(1), 45--68.
 \url{https://doi.org/10.1002/net.1975.5.1.45}}
 
 \bibitem[\citeproctext]{ref-karp1972Reducibility}
-\CSLLeftMargin{294. }%
+\CSLLeftMargin{295. }%
 \CSLRightInline{Karp, R. M. (1972). Reducibility among {Combinatorial
 Problems}. In R. E. Miller, J. W. Thatcher, \& J. D. Bohlinger (Eds.),
 \emph{Complexity of {Computer Computations}: {Proceedings} of a
@@ -9384,28 +9403,28 @@ Research Mathematical Sciences Department}} (pp. 85--103). Boston, MA:
 Springer US. \url{https://doi.org/10.1007/978-1-4684-2001-2_9}}
 
 \bibitem[\citeproctext]{ref-blazewicz2005Selected}
-\CSLLeftMargin{295. }%
+\CSLLeftMargin{296. }%
 \CSLRightInline{Błażewicz, J., Formanowicz, P., \& Kasprzak, M. (2005).
 Selected combinatorial problems of computational biology. \emph{European
 Journal of Operational Research}, \emph{161}(3), 585--597.
 \url{https://doi.org/10.1016/j.ejor.2003.10.054}}
 
 \bibitem[\citeproctext]{ref-suarez2009Challenges}
-\CSLLeftMargin{296. }%
+\CSLLeftMargin{297. }%
 \CSLRightInline{Suárez, M., \& Jaramillo, A. (2009). Challenges in the
 computational design of proteins. \emph{Journal of the Royal Society
 Interface}, \emph{6}, S477.
 \url{https://doi.org/10.1098/rsif.2008.0508.focus}}
 
 \bibitem[\citeproctext]{ref-gupta2018Spatial}
-\CSLLeftMargin{297. }%
+\CSLLeftMargin{298. }%
 \CSLRightInline{Gupta, S., Czech, J., Kuczewski, R., Bartol, T. M.,
 Sejnowski, T. J., Lee, R. E. C., \& Faeder, J. R. (2018, September 30).
 Spatial {Stochastic Modeling} with {MCell} and {CellBlender}.
 \url{https://doi.org/10.48550/arXiv.1810.00499}}
 
 \bibitem[\citeproctext]{ref-bartol2015Computational}
-\CSLLeftMargin{298. }%
+\CSLLeftMargin{299. }%
 \CSLRightInline{Bartol, T. M., Keller, D. X., Kinney, J. P., Bajaj, C.
 L., Harris, K. M., Sejnowski, T. J., \& Kennedy, M. B. (2015).
 Computational reconstitution of spine calcium transients from individual
@@ -9414,14 +9433,14 @@ from
 \url{https://www.frontiersin.org/articles/10.3389/fnsyn.2015.00017}}
 
 \bibitem[\citeproctext]{ref-bartol2000Monte}
-\CSLLeftMargin{299. }%
+\CSLLeftMargin{300. }%
 \CSLRightInline{Bartol, T. M., \& Stiles, J. R. (2000). \emph{Monte
 {Carlo Methods} for {Simulating Realistic Synaptic Microphysiology Using
 MCell}} (Vol. chapter 4). CRC Press. Retrieved from
 \url{https://books.google.com?id=8TLpBwAAQBAJ}}
 
 \bibitem[\citeproctext]{ref-hucka2003Systems}
-\CSLLeftMargin{300. }%
+\CSLLeftMargin{301. }%
 \CSLRightInline{Hucka, M., Finney, A., Sauro, H. M., Bolouri, H., Doyle,
 J. C., Kitano, H., \ldots{} and the rest of the SBML Forum: (2003). The
 systems biology markup language ({SBML}): A medium for representation
@@ -9430,7 +9449,7 @@ and exchange of biochemical network models. \emph{Bioinformatics},
 \url{https://doi.org/10.1093/bioinformatics/btg015}}
 
 \bibitem[\citeproctext]{ref-keating2020SBML}
-\CSLLeftMargin{301. }%
+\CSLLeftMargin{302. }%
 \CSLRightInline{Keating, S. M., Waltemath, D., König, M., Zhang, F.,
 Dräger, A., Chaouiya, C., \ldots{} Zucker, J. (2020). {SBML Level} 3: An
 extensible format for the exchange and reuse of biological models.
@@ -9438,13 +9457,13 @@ extensible format for the exchange and reuse of biological models.
 \url{https://doi.org/10.15252/msb.20199110}}
 
 \bibitem[\citeproctext]{ref-angell1986Publish}
-\CSLLeftMargin{302. }%
+\CSLLeftMargin{303. }%
 \CSLRightInline{ANGELL, M. (1986). Publish or {Perish}: {A Proposal}.
 \emph{Annals of Internal Medicine}, \emph{104}(2), 261--262.
 \url{https://doi.org/10.7326/0003-4819-104-2-261}}
 
 \bibitem[\citeproctext]{ref-rawat2014Publish}
-\CSLLeftMargin{303. }%
+\CSLLeftMargin{304. }%
 \CSLRightInline{Rawat, S., \& Meena, S. (2014). Publish or perish:
 {Where} are we heading? \emph{Journal of Research in Medical Sciences :
 The Official Journal of Isfahan University of Medical Sciences},
@@ -9452,35 +9471,35 @@ The Official Journal of Isfahan University of Medical Sciences},
 \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3999612/}}
 
 \bibitem[\citeproctext]{ref-york2015Defining}
-\CSLLeftMargin{304. }%
+\CSLLeftMargin{305. }%
 \CSLRightInline{York, T. T., Gibson, C., \& Rankin, S. (2015). Defining
 and {Measuring Academic Success}. \emph{Practical Assessment, Research
 \& Evaluation}, \emph{20}(5). Retrieved from
 \url{https://eric.ed.gov/?id=EJ1059739}}
 
 \bibitem[\citeproctext]{ref-aksnes2019Citations}
-\CSLLeftMargin{305. }%
+\CSLLeftMargin{306. }%
 \CSLRightInline{Aksnes, D. W., Langfeldt, L., \& Wouters, P. (2019).
 Citations, {Citation Indicators}, and {Research Quality}: {An Overview}
 of {Basic Concepts} and {Theories}. \emph{SAGE Open}, \emph{9}(1),
 2158244019829575. \url{https://doi.org/10.1177/2158244019829575}}
 
 \bibitem[\citeproctext]{ref-elbanna2023Publish}
-\CSLLeftMargin{306. }%
+\CSLLeftMargin{307. }%
 \CSLRightInline{Elbanna, S., \& Child, J. (2023). From {``publish or
 perish''} to {``publish for purpose.''} \emph{European Management
 Review}, \emph{20}(4), 614--618.
 \url{https://doi.org/10.1111/emre.12618}}
 
 \bibitem[\citeproctext]{ref-miller2011Publish}
-\CSLLeftMargin{307. }%
+\CSLLeftMargin{308. }%
 \CSLRightInline{Miller, A. N., Taylor, S. G., \& Bedeian, A. G. (2011).
 Publish or perish: Academic life as management faculty live it.
 \emph{Career Development International}, \emph{16}(5), 422--445.
 \url{https://doi.org/10.1108/13620431111167751}}
 
 \bibitem[\citeproctext]{ref-hangel2017Why}
-\CSLLeftMargin{308. }%
+\CSLLeftMargin{309. }%
 \CSLRightInline{Hangel, N., \& Schmidt-Pfister, D. (2017-09-18Z). Why do
 you publish? {On} the tensions between generating scientific knowledge
 and publication pressure. \emph{Aslib Journal of Information
@@ -9488,7 +9507,7 @@ Management}, \emph{69}(5), 529--544.
 \url{https://doi.org/10.1108/AJIM-01-2017-0019}}
 
 \bibitem[\citeproctext]{ref-morley2007Employers}
-\CSLLeftMargin{309. }%
+\CSLLeftMargin{310. }%
 \CSLRightInline{Morley, L., \& Aynsley, S. (2007). Employers, {Quality}
 and {Standards} in {Higher Education}: {Shared Values} and
 {Vocabularies} or {Elitism} and {Inequalities}? \emph{Higher Education
@@ -9496,14 +9515,14 @@ Quarterly}, \emph{61}(3), 229--249.
 \url{https://doi.org/10.1111/j.1468-2273.2007.00353.x}}
 
 \bibitem[\citeproctext]{ref-paradeise2013Academic}
-\CSLLeftMargin{310. }%
+\CSLLeftMargin{311. }%
 \CSLRightInline{Paradeise, C., \& Thoenig, J.-C. (2013). Academic
 {Institutions} in {Search} of {Quality}: {Local Orders} and {Global
 Standards}. \emph{Organization Studies}, \emph{34}(2), 189--218.
 \url{https://doi.org/10.1177/0170840612473550}}
 
 \bibitem[\citeproctext]{ref-campbell2019Prestige}
-\CSLLeftMargin{311. }%
+\CSLLeftMargin{312. }%
 \CSLRightInline{Campbell, C. M., Jimenez, M., \& Arrozal, C. A. N.
 (2019). Prestige or education: College teaching and rigor of courses in
 prestigious and non-prestigious institutions in the {U}.{S}.
@@ -9511,7 +9530,7 @@ prestigious and non-prestigious institutions in the {U}.{S}.
 \url{https://doi.org/10.1007/s10734-018-0297-3}}
 
 \bibitem[\citeproctext]{ref-jazeel2010Limits}
-\CSLLeftMargin{312. }%
+\CSLLeftMargin{313. }%
 \CSLRightInline{Jazeel, T., \& McFarlane, C. (2010). The limits of
 responsibility: A postcolonial politics of academic knowledge
 production. \emph{Transactions of the Institute of British Geographers},
@@ -9519,13 +9538,13 @@ production. \emph{Transactions of the Institute of British Geographers},
 \url{https://doi.org/10.1111/j.1475-5661.2009.00367.x}}
 
 \bibitem[\citeproctext]{ref-jyothis2016NeuroOppression}
-\CSLLeftMargin{313. }%
+\CSLLeftMargin{314. }%
 \CSLRightInline{Jyothis, J. (2016). \emph{Neuro-{Oppression}: {Does
 Neuroscience Perpetuate Social Marginalization}?} (Thesis for Bachelor
 of Arts). Lake Forest College.}
 
 \bibitem[\citeproctext]{ref-castrotorres2022North}
-\CSLLeftMargin{314. }%
+\CSLLeftMargin{315. }%
 \CSLRightInline{Castro Torres, A. F., \& Alburez-Gutierrez, D. (2022).
 North and {South}: {Naming} practices and the hidden dimension of global
 disparities in knowledge production. \emph{Proceedings of the National
@@ -9533,14 +9552,14 @@ Academy of Sciences}, \emph{119}(10), e2119373119.
 \url{https://doi.org/10.1073/pnas.2119373119}}
 
 \bibitem[\citeproctext]{ref-amutuhaire2022Reality}
-\CSLLeftMargin{315. }%
+\CSLLeftMargin{316. }%
 \CSLRightInline{Amutuhaire, T. (2022). The {Reality} of the {``{Publish}
 or {Perish}''} {Concept}, {Perspectives} from the {Global South}.
 \emph{Publishing Research Quarterly}, \emph{38}(2), 281--294.
 \url{https://doi.org/10.1007/s12109-022-09879-0}}
 
 \bibitem[\citeproctext]{ref-chan2014Increasing}
-\CSLLeftMargin{316. }%
+\CSLLeftMargin{317. }%
 \CSLRightInline{Chan, A.-W., Song, F., Vickers, A., Jefferson, T.,
 Dickersin, K., Gøtzsche, P. C., \ldots{} Worp, H. B. van der. (2014).
 Increasing value and reducing waste: Addressing inaccessible research.
@@ -9548,14 +9567,14 @@ Increasing value and reducing waste: Addressing inaccessible research.
 \url{https://doi.org/10.1016/S0140-6736(13)62296-5}}
 
 \bibitem[\citeproctext]{ref-collyer2018Global}
-\CSLLeftMargin{317. }%
+\CSLLeftMargin{318. }%
 \CSLRightInline{Collyer, F. M. (2018). Global patterns in the publishing
 of academic knowledge: {Global North}, global {South}. \emph{Current
 Sociology}, \emph{66}(1), 56--73.
 \url{https://doi.org/10.1177/0011392116680020}}
 
 \bibitem[\citeproctext]{ref-hopkins2013Disparities}
-\CSLLeftMargin{318. }%
+\CSLLeftMargin{319. }%
 \CSLRightInline{Hopkins, A. L., Jawitz, J. W., McCarty, C., Goldman, A.,
 \& Basu, N. B. (2013). Disparities in publication patterns by gender,
 race and ethnicity based on a survey of a random sample of authors.
@@ -9563,7 +9582,7 @@ race and ethnicity based on a survey of a random sample of authors.
 \url{https://doi.org/10.1007/s11192-012-0893-4}}
 
 \bibitem[\citeproctext]{ref-willis2021Gender}
-\CSLLeftMargin{319. }%
+\CSLLeftMargin{320. }%
 \CSLRightInline{Willis, M., Bridges, A. J., \& Jozkowski, K. N. (2021).
 Gender and racial/ethnic disparities in rates of publishing and
 inclusion in scientific-review processes. \emph{Translational Issues in
@@ -9571,7 +9590,7 @@ Psychological Science}, \emph{7}(4), 451--461.
 \url{https://doi.org/10.1037/tps0000253}}
 
 \bibitem[\citeproctext]{ref-boda2022What}
-\CSLLeftMargin{320. }%
+\CSLLeftMargin{321. }%
 \CSLRightInline{Boda, P. A., Nusbaum, \& and Kulkarni, S. S. (2022).
 From {``what is''} toward {``what if''} through intersectionality:
 Problematizing ableist erasures and coloniality in racially just
@@ -9580,14 +9599,14 @@ Education}, \emph{45}(4), 356--369.
 \url{https://doi.org/10.1080/1743727X.2022.2054981}}
 
 \bibitem[\citeproctext]{ref-thornton2000Publication}
-\CSLLeftMargin{321. }%
+\CSLLeftMargin{322. }%
 \CSLRightInline{Thornton, A., \& Lee, P. (2000). Publication bias in
 meta-analysis: Its causes and consequences. \emph{Journal of Clinical
 Epidemiology}, \emph{53}(2), 207--216.
 \url{https://doi.org/10.1016/S0895-4356(99)00161-4}}
 
 \bibitem[\citeproctext]{ref-page2021Investigating}
-\CSLLeftMargin{322. }%
+\CSLLeftMargin{323. }%
 \CSLRightInline{Page, M. J., Sterne, J. A. C., Higgins, J. P. T., \&
 Egger, M. (2021). Investigating and dealing with publication bias and
 other reporting biases in meta-analyses of health research: {A} review.
@@ -9595,7 +9614,7 @@ other reporting biases in meta-analyses of health research: {A} review.
 \url{https://doi.org/10.1002/jrsm.1468}}
 
 \bibitem[\citeproctext]{ref-sinha2006Reporting}
-\CSLLeftMargin{323. }%
+\CSLLeftMargin{324. }%
 \CSLRightInline{Sinha, M. K., \& and Montori, V. M. (2006). Reporting
 bias and other biases affecting systematic reviews and meta-analyses: A
 methodological commentary. \emph{Expert Review of Pharmacoeconomics \&
@@ -9603,28 +9622,28 @@ Outcomes Research}, \emph{6}(5), 603--611.
 \url{https://doi.org/10.1586/14737167.6.5.603}}
 
 \bibitem[\citeproctext]{ref-esarey2016Measuring}
-\CSLLeftMargin{324. }%
+\CSLLeftMargin{325. }%
 \CSLRightInline{Esarey, J., \& Wu, A. (2016). Measuring the effects of
 publication bias in political science. \emph{Research \& Politics},
 \emph{3}(3), 2053168016665856.
 \url{https://doi.org/10.1177/2053168016665856}}
 
 \bibitem[\citeproctext]{ref-hartgerink2017Too}
-\CSLLeftMargin{325. }%
+\CSLLeftMargin{326. }%
 \CSLRightInline{Hartgerink, C. H. J., Wicherts, J. M., \& van Assen, M.
 A. L. M. (2017). Too {Good} to be {False}: {Nonsignificant Results
 Revisited}. \emph{Collabra: Psychology}, \emph{3}(1), 9.
 \url{https://doi.org/10.1525/collabra.71}}
 
 \bibitem[\citeproctext]{ref-stahl2018Fact}
-\CSLLeftMargin{326. }%
+\CSLLeftMargin{327. }%
 \CSLRightInline{Stahl, D., \& Pickles, A. (2018). Fact or fiction:
 Reducing the proportion and impact of false positives.
 \emph{Psychological Medicine}, \emph{48}(7), 1084--1091.
 \url{https://doi.org/10.1017/S003329171700294X}}
 
 \bibitem[\citeproctext]{ref-schneck2023Are}
-\CSLLeftMargin{327. }%
+\CSLLeftMargin{328. }%
 \CSLRightInline{Schneck, A. (2023). Are most published research findings
 false? {Trends} in statistical power, publication selection bias, and
 the false discovery rate in psychology (1975--2017). \emph{PLOS ONE},
@@ -9632,14 +9651,14 @@ the false discovery rate in psychology (1975--2017). \emph{PLOS ONE},
 \url{https://doi.org/10.1371/journal.pone.0292717}}
 
 \bibitem[\citeproctext]{ref-carlson2012Understanding}
-\CSLLeftMargin{328. }%
+\CSLLeftMargin{329. }%
 \CSLRightInline{Carlson, K. D., \& Herdman, A. O. (2012). Understanding
 the {Impact} of {Convergent Validity} on {Research Results}.
 \emph{Organizational Research Methods}, \emph{15}(1), 17--32.
 \url{https://doi.org/10.1177/1094428110392383}}
 
 \bibitem[\citeproctext]{ref-afonso2024Perils}
-\CSLLeftMargin{329. }%
+\CSLLeftMargin{330. }%
 \CSLRightInline{Afonso, J., Ramirez-Campillo, R., Clemente, F. M.,
 Büttner, F. C., \& Andrade, R. (2024). The {Perils} of {Misinterpreting}
 and {Misusing} {``{Publication Bias}''} in {Meta-analyses}: {An
@@ -9648,20 +9667,20 @@ Medicine}, \emph{54}(2), 257--269.
 \url{https://doi.org/10.1007/s40279-023-01927-9}}
 
 \bibitem[\citeproctext]{ref-kicinski2013Publication}
-\CSLLeftMargin{330. }%
+\CSLLeftMargin{331. }%
 \CSLRightInline{Kicinski, M. (2013). Publication {Bias} in {Recent
 Meta-Analyses}. \emph{PLOS ONE}, \emph{8}(11), e81823.
 \url{https://doi.org/10.1371/journal.pone.0081823}}
 
 \bibitem[\citeproctext]{ref-kicinski2014How}
-\CSLLeftMargin{331. }%
+\CSLLeftMargin{332. }%
 \CSLRightInline{Kicinski, M. (2014). How does under-reporting of
 negative and inconclusive results affect the false-positive rate in
 meta-analysis? {A} simulation study. \emph{BMJ Open}, \emph{4}(8),
 e004831. \url{https://doi.org/10.1136/bmjopen-2014-004831}}
 
 \bibitem[\citeproctext]{ref-aert2019Publication}
-\CSLLeftMargin{332. }%
+\CSLLeftMargin{333. }%
 \CSLRightInline{Aert, R. C. M. van, Wicherts, J. M., \& Assen, M. A. L.
 M. van. (2019). Publication bias examined in meta-analyses from
 psychology and medicine: {A} meta-meta-analysis. \emph{PLOS ONE},
@@ -9669,7 +9688,7 @@ psychology and medicine: {A} meta-meta-analysis. \emph{PLOS ONE},
 \url{https://doi.org/10.1371/journal.pone.0215052}}
 
 \bibitem[\citeproctext]{ref-page2019Assessing}
-\CSLLeftMargin{333. }%
+\CSLLeftMargin{334. }%
 \CSLRightInline{Page, M. J., Higgins, J. P., \& Sterne, J. A. (2019).
 Assessing risk of bias due to missing results in a synthesis. In
 \emph{Cochrane {Handbook} for {Systematic Reviews} of {Interventions}}
@@ -9677,25 +9696,25 @@ Assessing risk of bias due to missing results in a synthesis. In
 \url{https://doi.org/10.1002/9781119536604.ch13}}
 
 \bibitem[\citeproctext]{ref-stengers2016Another}
-\CSLLeftMargin{334. }%
+\CSLLeftMargin{335. }%
 \CSLRightInline{Stengers, I. (2016). {``{Another Science Is
 Possible}!''} In. Brill.
 \url{https://doi.org/10.1163/9789462096448_004}}
 
 \bibitem[\citeproctext]{ref-leite2021Juggling}
-\CSLLeftMargin{335. }%
+\CSLLeftMargin{336. }%
 \CSLRightInline{Leite, L., \& Diele-Viegas, L. M. (2021). Juggling slow
 and fast science. \emph{Nature Human Behaviour}, \emph{5}(4), 409--409.
 \url{https://doi.org/10.1038/s41562-021-01080-1}}
 
 \bibitem[\citeproctext]{ref-baker2016500ScientistsLift}
-\CSLLeftMargin{336. }%
+\CSLLeftMargin{337. }%
 \CSLRightInline{Baker, M. (2016). 1,500 scientists lift the lid on
 reproducibility. \emph{Nature}, \emph{533}(7604, 7604), 452--454.
 \url{https://doi.org/10.1038/533452a}}
 
 \bibitem[\citeproctext]{ref-tiwari2021ReproducibilitySystemsBiology}
-\CSLLeftMargin{337. }%
+\CSLLeftMargin{338. }%
 \CSLRightInline{Tiwari, K., Kananathan, S., Roberts, M. G., Meyer, J.
 P., Sharif Shohan, M. U., Xavier, A., \ldots{} Malik-Sheriff, R. S.
 (2021). Reproducibility in systems biology modelling. \emph{Molecular
@@ -9703,33 +9722,33 @@ Systems Biology}, \emph{17}(2), e9982.
 \url{https://doi.org/10.15252/msb.20209982}}
 
 \bibitem[\citeproctext]{ref-ioannidis2005Whya}
-\CSLLeftMargin{338. }%
+\CSLLeftMargin{339. }%
 \CSLRightInline{Ioannidis, J. P. A. (2005). Why {Most Published Research
 Findings Are False}. \emph{PLOS Medicine}, \emph{2}(8), e124.
 \url{https://doi.org/10.1371/journal.pmed.0020124}}
 
 \bibitem[\citeproctext]{ref-friese2020PHacking}
-\CSLLeftMargin{339. }%
+\CSLLeftMargin{340. }%
 \CSLRightInline{Friese, M., \& Frankenbach, J. (2020). P-{Hacking} and
 publication bias interact to distort meta-analytic effect size
 estimates. \emph{Psychological Methods}, \emph{25}(4), 456--471.
 \url{https://doi.org/10.1037/met0000246}}
 
 \bibitem[\citeproctext]{ref-stefan2023Big}
-\CSLLeftMargin{340. }%
+\CSLLeftMargin{341. }%
 \CSLRightInline{Stefan, A. M., \& Schönbrodt, F. D. (2023). Big little
 lies: A compendium and simulation of p-hacking strategies. \emph{Royal
 Society Open Science}, \emph{10}(2), 220346.
 \url{https://doi.org/10.1098/rsos.220346}}
 
 \bibitem[\citeproctext]{ref-wagenmakers2007Practical}
-\CSLLeftMargin{341. }%
+\CSLLeftMargin{342. }%
 \CSLRightInline{Wagenmakers, E.-J. (2007). A practical solution to the
 pervasive problems ofp values. \emph{Psychonomic Bulletin \& Review},
 \emph{14}(5), 779--804. \url{https://doi.org/10.3758/BF03194105}}
 
 \bibitem[\citeproctext]{ref-nuzzo2014Statistical}
-\CSLLeftMargin{342. }%
+\CSLLeftMargin{343. }%
 \CSLRightInline{Nuzzo, R. (2014). Statistical errors: {P} values, the
 'gold standard' of statistical validity, are not as reliable as many
 scientists assume. \emph{Nature}, \emph{506}(7487), 150--153. Retrieved
@@ -9737,7 +9756,7 @@ from
 \url{https://go.gale.com/ps/i.do?p=HRCA&sw=w&issn=00280836&v=2.1&it=r&id=GALE\%7CA362064378&sid=googleScholar&linkaccess=abs}}
 
 \bibitem[\citeproctext]{ref-lew2020Reckless}
-\CSLLeftMargin{343. }%
+\CSLLeftMargin{344. }%
 \CSLRightInline{Lew, M. J. (2020). A {Reckless Guide} to {P-values}. In
 A. Bespalov, M. C. Michel, \& T. Steckler (Eds.), \emph{Good {Research
 Practice} in {Non-Clinical Pharmacology} and {Biomedicine}} (pp.
@@ -9745,21 +9764,21 @@ Practice} in {Non-Clinical Pharmacology} and {Biomedicine}} (pp.
 \url{https://doi.org/10.1007/164_2019_286}}
 
 \bibitem[\citeproctext]{ref-flier2017Irreproducibility}
-\CSLLeftMargin{344. }%
+\CSLLeftMargin{345. }%
 \CSLRightInline{Flier, J. S. (2017). Irreproducibility of published
 bioscience research: {Diagnosis}, pathogenesis and therapy.
 \emph{Molecular Metabolism}, \emph{6}(1), 2--9.
 \url{https://doi.org/10.1016/j.molmet.2016.11.006}}
 
 \bibitem[\citeproctext]{ref-bausell2021Problem}
-\CSLLeftMargin{345. }%
+\CSLLeftMargin{346. }%
 \CSLRightInline{Bausell, R. B. (2021). \emph{The {Problem} with
 {Science}: {The Reproducibility Crisis} and {What} to do {About It}}.
 Oxford University Press. Retrieved from
 \url{https://books.google.com?id=oHEWEAAAQBAJ}}
 
 \bibitem[\citeproctext]{ref-bhandari2004Association}
-\CSLLeftMargin{346. }%
+\CSLLeftMargin{347. }%
 \CSLRightInline{Bhandari, M., Busse, J. W., Jackowski, D., Montori, V.
 M., Schünemann, H., Sprague, S., \ldots{} Devereaux, P. J. (2004).
 Association between industry funding and statistically significant
@@ -9768,7 +9787,7 @@ pro-industry findings in medical and surgical randomized trials.
 \url{https://www.cmaj.ca/content/170/4/477}}
 
 \bibitem[\citeproctext]{ref-lynch2007Commercially}
-\CSLLeftMargin{347. }%
+\CSLLeftMargin{348. }%
 \CSLRightInline{Lynch, J. R., Cunningham, M. R. A., Warme, W. J.,
 Schaad, D. C., Wolf, F. M., \& Leopold, S. S. (2007). Commercially
 {Funded} and {United States-Based Research Is More Likely} to {Be
@@ -9777,27 +9796,27 @@ Published}; {Good-Quality Studies} with {Negative Outcomes Are Not}.
 \url{https://doi.org/10.2106/JBJS.F.01152}}
 
 \bibitem[\citeproctext]{ref-ebadi2016How}
-\CSLLeftMargin{348. }%
+\CSLLeftMargin{349. }%
 \CSLRightInline{Ebadi, A., \& Schiffauerova, A. (2016). How to boost
 scientific production? {A} statistical analysis of research funding and
 other influencing factors. \emph{Scientometrics}, \emph{106}(3),
 1093--1116. \url{https://doi.org/10.1007/s11192-015-1825-x}}
 
 \bibitem[\citeproctext]{ref-science2023Reproducibility}
-\CSLLeftMargin{349. }%
+\CSLLeftMargin{350. }%
 \CSLRightInline{Science, I. and T. C. (2023). Reproducibility and
 {Research Integrity} -- {Report Summary}. UK Parliament. Retrieved from
 \url{https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/101/summary.html}}
 
 \bibitem[\citeproctext]{ref-john2012Measuring}
-\CSLLeftMargin{350. }%
+\CSLLeftMargin{351. }%
 \CSLRightInline{John, L. K., Loewenstein, G., \& Prelec, D. (2012).
 Measuring the {Prevalence} of {Questionable Research Practices With
 Incentives} for {Truth Telling}. \emph{Psychological Science},
 \emph{23}(5), 524--532. \url{https://doi.org/10.1177/0956797611430953}}
 
 \bibitem[\citeproctext]{ref-umbach2024Open}
-\CSLLeftMargin{351. }%
+\CSLLeftMargin{352. }%
 \CSLRightInline{Umbach, G. (2024). Open {Science} and the impact of
 {Open Access}, {Open Data}, and {FAIR} publishing principles on
 data-driven academic research: {Towards} ever more transparent,
@@ -9806,71 +9825,71 @@ of the IAOS}, \emph{40}(1), 59--70.
 \url{https://doi.org/10.3233/SJI-240021}}
 
 \bibitem[\citeproctext]{ref-nature2018Challenges}
-\CSLLeftMargin{352. }%
+\CSLLeftMargin{353. }%
 \CSLRightInline{Nature, S. I. (2018, October 18). Challenges in
 irreproducible research. Nature. Retrieved February 10, 2025, from
 \url{https://www.nature.com/collections/prbfkwmwvz}}
 
 \bibitem[\citeproctext]{ref-claerbout1992ElectronicDocumentsGive}
-\CSLLeftMargin{353. }%
+\CSLLeftMargin{354. }%
 \CSLRightInline{Claerbout, J. F., \& Karrenbach, M. (1992). Electronic
 documents give reproducible research a new meaning. In \emph{{SEG
 Technical Program Expanded Abstracts} 1992} (pp. 601--604). Society of
 Exploration Geophysicists. \url{https://doi.org/10.1190/1.1822162}}
 
 \bibitem[\citeproctext]{ref-plesser2018ReproducibilityVsReplicability}
-\CSLLeftMargin{354. }%
+\CSLLeftMargin{355. }%
 \CSLRightInline{Plesser, H. E. (2018). Reproducibility vs.
 {Replicability}: {A Brief History} of a {Confused Terminology}.
 \emph{Frontiers in Neuroinformatics}, \emph{11}. Retrieved from
 \url{https://www.frontiersin.org/articles/10.3389/fninf.2017.00076}}
 
 \bibitem[\citeproctext]{ref-barba2018TerminologiesReproducibleResearch}
-\CSLLeftMargin{355. }%
+\CSLLeftMargin{356. }%
 \CSLRightInline{Barba, L. A. (2018, February 9). Terminologies for
 {Reproducible Research}.
 \url{https://doi.org/10.48550/arXiv.1802.03311}}
 
 \bibitem[\citeproctext]{ref-turingwaycommunity2019TuringWayHandbook}
-\CSLLeftMargin{356. }%
+\CSLLeftMargin{357. }%
 \CSLRightInline{Turing Way Community, T., Bowler, L., Gibson, S.,
 Herterich, P., Higman, R., Krystalli, A., \ldots{} Whitaker, K. (2019,
 March 25). The {Turing Way}: {A Handbook} for {Reproducible Data
 Science}. Zenodo. \url{https://doi.org/10.5281/zenodo.3233986}}
 
 \bibitem[\citeproctext]{ref-vicente-saez2018Open}
-\CSLLeftMargin{357. }%
+\CSLLeftMargin{358. }%
 \CSLRightInline{Vicente-Saez, R., \& Martinez-Fuentes, C. (2018). Open
 {Science} now: {A} systematic literature review for an integrated
 definition. \emph{Journal of Business Research}, \emph{88}, 428--436.
 \url{https://doi.org/10.1016/j.jbusres.2017.12.043}}
 
 \bibitem[\citeproctext]{ref-Whata}
-\CSLLeftMargin{358. }%
+\CSLLeftMargin{359. }%
 \CSLRightInline{opendatasoft. (n.d.). What is open data? - {Practical
 Guide}. Opendatasoft. Retrieved March 13, 2025, from
 \url{https://www.opendatasoft.com/en/what-is-open-data-practical-guide/}}
 
 \bibitem[\citeproctext]{ref-Open}
-\CSLLeftMargin{359. }%
+\CSLLeftMargin{360. }%
 \CSLRightInline{The {Open Definition} - {Open Definition} - {Defining
 Open} in {Open Data}, {Open Content} and {Open Knowledge}. (n.d.).
 Retrieved June 16, 2023, from \url{https://opendefinition.org/}}
 
 \bibitem[\citeproctext]{ref-suber2012Open}
-\CSLLeftMargin{360. }%
+\CSLLeftMargin{361. }%
 \CSLRightInline{Suber, P. (2012). \emph{Open {Access}}. The MIT Press.
 Retrieved from
 \url{https://library.oapen.org/handle/20.500.12657/26065}}
 
 \bibitem[\citeproctext]{ref-Opena}
-\CSLLeftMargin{361. }%
+\CSLLeftMargin{362. }%
 \CSLRightInline{UNESCO. (n.d.). Open science glossary - {Open} science.
 Retrieved March 13, 2025, from
 \url{https://www.unesco.org/en/open-science/open-science-glossary}}
 
 \bibitem[\citeproctext]{ref-parsons2022Communitysourced}
-\CSLLeftMargin{362. }%
+\CSLLeftMargin{363. }%
 \CSLRightInline{Parsons, S., Azevedo, F., Elsherif, M. M., Guay, S.,
 Shahim, O. N., Govaart, G. H., \ldots{} Aczel, B. (2022). A
 community-sourced glossary of open scholarship terms. \emph{Nature Human
@@ -9878,14 +9897,14 @@ Behaviour}, \emph{6}(3), 312--318.
 \url{https://doi.org/10.1038/s41562-021-01269-4}}
 
 \bibitem[\citeproctext]{ref-Guide}
-\CSLLeftMargin{363. }%
+\CSLLeftMargin{364. }%
 \CSLRightInline{OpenDefinition. (n.d.). Guide to {Open Licensing} -
 {Open Definition} - {Defining Open} in {Open Data}, {Open Content} and
 {Open Knowledge}. Retrieved March 13, 2025, from
 \url{https://opendefinition.org/guide/}}
 
 \bibitem[\citeproctext]{ref-kreutzer2014Open}
-\CSLLeftMargin{364. }%
+\CSLLeftMargin{365. }%
 \CSLRightInline{\emph{Open content - a practical guide to using creative
 commons licences}. (2014). Bonn, Köln, Berlin: German Commission for
 UNESCO North Rhine-Westphalian Library Service Centre (hbz) Wikimedia
@@ -9893,41 +9912,41 @@ Deutschland - Gesellschaft fur Förderung Freien Wissens e.V. Retrieved
 from \url{https://d-nb.info/1063386357/04}}
 
 \bibitem[\citeproctext]{ref-borrego2023Article}
-\CSLLeftMargin{365. }%
+\CSLLeftMargin{366. }%
 \CSLRightInline{Borrego, Á. (2023). Article processing charges for open
 access journal publishing: {A} review. \emph{Learned Publishing},
 \emph{36}(3), 359--378. \url{https://doi.org/10.1002/leap.1558}}
 
 \bibitem[\citeproctext]{ref-bjork2014Anatomy}
-\CSLLeftMargin{366. }%
+\CSLLeftMargin{367. }%
 \CSLRightInline{Björk, B.-C., Laakso, M., Welling, P., \& Paetau, P.
 (2014). Anatomy of green open access. \emph{Journal of the Association
 for Information Science and Technology}, \emph{65}(2), 237--250.
 \url{https://doi.org/10.1002/asi.22963}}
 
 \bibitem[\citeproctext]{ref-scanlon2014Scholarship}
-\CSLLeftMargin{367. }%
+\CSLLeftMargin{368. }%
 \CSLRightInline{Scanlon, E. (2014). Scholarship in the digital age:
 {Open} educational resources, publication and public engagement.
 \emph{British Journal of Educational Technology}, \emph{45}(1, 1),
 12--23. Retrieved from \url{https://oro.open.ac.uk/35646/}}
 
 \bibitem[\citeproctext]{ref-tennant2019Foundations}
-\CSLLeftMargin{368. }%
+\CSLLeftMargin{369. }%
 \CSLRightInline{Tennant, J., Beamer, J. E., Bosman, J., Brembs, B.,
 Chung, N. C., Clement, G., \ldots{} Turner, A. (2019). Foundations for
 {Open Scholarship Strategy Development}.
 \url{https://doi.org/10.31222/osf.io/b4v8p}}
 
 \bibitem[\citeproctext]{ref-emeryLibGuides}
-\CSLLeftMargin{369. }%
+\CSLLeftMargin{370. }%
 \CSLRightInline{Emery, J. (n.d.). {LibGuides}: {Discovery} of {Scholarly
 Open Access Content}: {What} is {Open Scholarship}? Retrieved February
 10, 2025, from
 \url{https://guides.library.pdx.edu/c.php?g=931273&p=6711316}}
 
 \bibitem[\citeproctext]{ref-regulation2016RegulationEU2016}
-\CSLLeftMargin{370. }%
+\CSLLeftMargin{371. }%
 \CSLRightInline{Regulation. (2016). Regulation ({EU}) 2016/679 of the
 {European Parliament} and of the {Council} of 27 {April} 2016 on the
 protection of natural persons with regard to the processing of personal
@@ -9938,7 +9957,7 @@ King's Printer of Acts of Parliament. Retrieved June 16, 2023, from
 \url{https://www.legislation.gov.uk/eur/2016/679/contents}}
 
 \bibitem[\citeproctext]{ref-wilkinson2016FAIRa}
-\CSLLeftMargin{371. }%
+\CSLLeftMargin{372. }%
 \CSLRightInline{Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J.,
 Appleton, G., Axton, M., Baak, A., \ldots{} Mons, B. (2016). The {FAIR
 Guiding Principles} for scientific data management and stewardship.
@@ -9946,7 +9965,7 @@ Guiding Principles} for scientific data management and stewardship.
 \url{https://doi.org/10.1038/sdata.2016.18}}
 
 \bibitem[\citeproctext]{ref-cole2017Using}
-\CSLLeftMargin{372. }%
+\CSLLeftMargin{373. }%
 \CSLRightInline{Cole, T. W., Han, M.-J. K., Sarol, M. J., Biel, M., \&
 Maus, D. (2017-03-20Z). Using linked open data to enhance the
 discoverability, functionality and impact of {Emblematica Online}.
@@ -9954,7 +9973,7 @@ discoverability, functionality and impact of {Emblematica Online}.
 \url{https://doi.org/10.1108/LHT-11-2016-0126}}
 
 \bibitem[\citeproctext]{ref-kremen2018Improving}
-\CSLLeftMargin{373. }%
+\CSLLeftMargin{374. }%
 \CSLRightInline{Kremen, P., \& Necasky, M. (2018, December 18).
 Improving {Discoverability} of {Open Government Data} with {Rich
 Metadata Descriptions Using Semantic Government Vocabulary}. SSRN
@@ -9962,20 +9981,20 @@ Scholarly Paper, Rochester, NY.
 \url{https://doi.org/10.2139/ssrn.3303148}}
 
 \bibitem[\citeproctext]{ref-kim2024Findability}
-\CSLLeftMargin{374. }%
+\CSLLeftMargin{375. }%
 \CSLRightInline{Kim, I. (2024). Findability and discoverability of
 qualitative research data in social sciences. {An} explorative study
 using Re3data {API} and systematic evidence searching. Retrieved from
 \url{https://irf.fhnw.ch/handle/11654/49487}}
 
 \bibitem[\citeproctext]{ref-hasselbring2019FAIR}
-\CSLLeftMargin{375. }%
+\CSLLeftMargin{376. }%
 \CSLRightInline{Hasselbring, W., Carr, L., Hettrick, S., Packer, H., \&
 Tiropanis, T. (2019, August 16). {FAIR} and {Open Computer Science
 Research Software}. \url{https://doi.org/10.48550/arXiv.1908.05986}}
 
 \bibitem[\citeproctext]{ref-lannelongue2023GREENER}
-\CSLLeftMargin{376. }%
+\CSLLeftMargin{377. }%
 \CSLRightInline{Lannelongue, L., Aronson, H.-E. G., Bateman, A., Birney,
 E., Caplan, T., Juckes, M., \ldots{} Inouye, M. (2023). {GREENER}
 principles for environmentally sustainable computational science.
@@ -9983,7 +10002,7 @@ principles for environmentally sustainable computational science.
 \url{https://doi.org/10.1038/s43588-023-00461-y}}
 
 \bibitem[\citeproctext]{ref-jacobsen2020FAIR}
-\CSLLeftMargin{377. }%
+\CSLLeftMargin{378. }%
 \CSLRightInline{Jacobsen, A., de Miranda Azevedo, R., Juty, N., Batista,
 D., Coles, S., Cornet, R., \ldots{} Schultes, E. (2020). {FAIR
 Principles}: {Interpretations} and {Implementation Considerations}.
@@ -9991,44 +10010,44 @@ Principles}: {Interpretations} and {Implementation Considerations}.
 \url{https://doi.org/10.1162/dint_r_00024}}
 
 \bibitem[\citeproctext]{ref-garcia2022Thinkinga}
-\CSLLeftMargin{378. }%
+\CSLLeftMargin{379. }%
 \CSLRightInline{Garcia, S. R., Sterratt, D., \& Stefan, M. (2022, August
 8). \emph{Thinking about {Ethics} in ({Computer}) {Science}}.
 \url{https://doi.org/10.5281/zenodo.6973796}}
 
 \bibitem[\citeproctext]{ref-romangarcia2023Data}
-\CSLLeftMargin{379. }%
+\CSLLeftMargin{380. }%
 \CSLRightInline{Roman Garcia, S. (2023, May). Data {Hazards Project Case
 Study}. Retrieved from
 \url{https://github.com/Susana465/DH_Project_CaseStudy}}
 
 \bibitem[\citeproctext]{ref-garcia2024Data}
-\CSLLeftMargin{380. }%
+\CSLLeftMargin{381. }%
 \CSLRightInline{Garcia, S. R., Welsh, C., Cara, N. D., Sterratt, D.,
 Romano, N., \& Stefan, M. (2024, March 11). Data {Hazards} as an ethical
 toolkit for neuroscience. \url{https://doi.org/10.31219/osf.io/yn2j9}}
 
 \bibitem[\citeproctext]{ref-garcia2025Data}
-\CSLLeftMargin{381. }%
+\CSLLeftMargin{382. }%
 \CSLRightInline{García, S. R., Welsh, C., Di Cara, N. H., Sterratt, D.
 C., Romanò, N., \& Stefan, M. I. (2025). Data {Hazards} as {An Ethical
 Toolkit} for {Neuroscience}. \emph{Neuroethics}, \emph{18}(1, 1), 1--21.
 \url{https://doi.org/10.1007/s12152-024-09580-3}}
 
 \bibitem[\citeproctext]{ref-githubREADMEs}
-\CSLLeftMargin{382. }%
+\CSLLeftMargin{383. }%
 \CSLRightInline{GitHub, W. (n.d.). About {READMEs}. GitHub Docs.
 Retrieved April 13, 2025, from
 \url{https://docs-internal.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes}}
 
 \bibitem[\citeproctext]{ref-spinellis2003Code}
-\CSLLeftMargin{383. }%
+\CSLLeftMargin{384. }%
 \CSLRightInline{Spinellis, D. (2003). \emph{Code {Reading}: {The Open
 Source Perspective}}. Addison-Wesley Professional. Retrieved from
 \url{https://books.google.com?id=8lYbNfsAVT4C}}
 
 \bibitem[\citeproctext]{ref-gruning2018Practical}
-\CSLLeftMargin{384. }%
+\CSLLeftMargin{385. }%
 \CSLRightInline{Grüning, B., Chilton, J., Köster, J., Dale, R., Soranzo,
 N., Beek, M. van den, \ldots{} Taylor, J. (2018). Practical
 {Computational Reproducibility} in the {Life Sciences}. \emph{Cell
@@ -10036,7 +10055,7 @@ Systems}, \emph{6}(6), 631--635.
 \url{https://doi.org/10.1016/j.cels.2018.03.014}}
 
 \bibitem[\citeproctext]{ref-maji2020Demystifying}
-\CSLLeftMargin{385. }%
+\CSLLeftMargin{386. }%
 \CSLRightInline{Maji, A. K., Gorenstein, L., \& Lentner, G. (2020).
 Demystifying {Python Package Installation} with conda-env-mod. In
 \emph{2020 {IEEE}/{ACM International Workshop} on {HPC User Support
@@ -10048,48 +10067,48 @@ and {Workshop} on {Programming} and {Performance Visualization Tools}
 \url{https://doi.org/10.1109/HUSTProtools51951.2020.00011}}
 
 \bibitem[\citeproctext]{ref-mccauley2008Debugging}
-\CSLLeftMargin{386. }%
+\CSLLeftMargin{387. }%
 \CSLRightInline{McCauley, R., Fitzgerald, Lewandowski, Murphy, Simon,
 Thomas, \& and Zander, C. (2008). Debugging: A review of the literature
 from an educational perspective. \emph{Computer Science Education},
 \emph{18}(2), 67--92. \url{https://doi.org/10.1080/08993400802114581}}
 
 \bibitem[\citeproctext]{ref-sandve2013Ten}
-\CSLLeftMargin{387. }%
+\CSLLeftMargin{388. }%
 \CSLRightInline{Sandve, G. K., Nekrutenko, A., Taylor, J., \& Hovig, E.
 (2013). Ten {Simple Rules} for {Reproducible Computational Research}.
 \emph{PLOS Computational Biology}, \emph{9}(10), e1003285.
 \url{https://doi.org/10.1371/journal.pcbi.1003285}}
 
 \bibitem[\citeproctext]{ref-stodden2014Implementing}
-\CSLLeftMargin{388. }%
+\CSLLeftMargin{389. }%
 \CSLRightInline{Stodden, V., Leisch, F., \& Peng, R. D. (2014).
 \emph{Implementing reproducible research}. CRC Press.
 \url{https://doi.org/10.1201/b16868}}
 
 \bibitem[\citeproctext]{ref-sullivan2019Open}
-\CSLLeftMargin{389. }%
+\CSLLeftMargin{390. }%
 \CSLRightInline{Sullivan, I., DeHaven, A., \& Mellor, D. (2019). Open
 and {Reproducible Research} on {Open Science Framework}. \emph{Current
 Protocols Essential Laboratory Techniques}, \emph{18}(1), e32.
 \url{https://doi.org/10.1002/cpet.32}}
 
 \bibitem[\citeproctext]{ref-peikert2021Reproducible}
-\CSLLeftMargin{390. }%
+\CSLLeftMargin{391. }%
 \CSLRightInline{Peikert, A., van Lissa, C. J., \& Brandmaier, A. M.
 (2021). Reproducible {Research} in {R}: {A Tutorial} on {How} to {Do}
 the {Same Thing More Than Once}. \emph{Psych}, \emph{3}(4, 4), 836--867.
 \url{https://doi.org/10.3390/psych3040053}}
 
 \bibitem[\citeproctext]{ref-hamra2025Advancing}
-\CSLLeftMargin{391. }%
+\CSLLeftMargin{392. }%
 \CSLRightInline{Hamra, G. B., Buller, I. D., Riddell, C. A., Wilner, L.
 B., Brown, A., \& MacNell, N. S. (2025). Advancing {Reproducible
 Research Through Version Control Technology}. \emph{Epidemiology},
 \emph{36}(3), 344. \url{https://doi.org/10.1097/EDE.0000000000001845}}
 
 \bibitem[\citeproctext]{ref-atkins2002Using}
-\CSLLeftMargin{392. }%
+\CSLLeftMargin{393. }%
 \CSLRightInline{Atkins, D. L., Ball, T., Graves, T. L., \& Mockus, A.
 (2002). Using version control data to evaluate the impact of software
 tools: A case study of the {Version Editor}. \emph{IEEE Transactions on
@@ -10097,45 +10116,45 @@ Software Engineering}, \emph{28}(7), 625--637.
 \url{https://doi.org/10.1109/TSE.2002.1019478}}
 
 \bibitem[\citeproctext]{ref-pilato2008Version}
-\CSLLeftMargin{393. }%
+\CSLLeftMargin{394. }%
 \CSLRightInline{Pilato, C. M., Collins-Sussman, B., \& Fitzpatrick, B.
 W. (2008). \emph{Version {Control} with {Subversion}: {Next Generation
 Open Source Version Control}}. "O'Reilly Media, Inc.". Retrieved from
 \url{https://books.google.com?id=b3TsOSvU5TUC}}
 
 \bibitem[\citeproctext]{ref-milentijevic2008Version}
-\CSLLeftMargin{394. }%
+\CSLLeftMargin{395. }%
 \CSLRightInline{Milentijevic, I., Ciric, V., \& Vojinovic, O. (2008).
 Version control in project-based learning. \emph{Computers \&
 Education}, \emph{50}(4), 1331--1338.
 \url{https://doi.org/10.1016/j.compedu.2006.12.010}}
 
 \bibitem[\citeproctext]{ref-hethey2013GitLab}
-\CSLLeftMargin{395. }%
+\CSLLeftMargin{396. }%
 \CSLRightInline{Hethey, J. M. (2013). \emph{{GitLab Repository
 Management}}. Packt Publishing.}
 
 \bibitem[\citeproctext]{ref-loeliger2012Version}
-\CSLLeftMargin{396. }%
+\CSLLeftMargin{397. }%
 \CSLRightInline{Loeliger, J., \& McCullough, M. (2012). \emph{Version
 {Control} with {Git}: {Powerful Tools} and {Techniques} for
 {Collaborative Software Development}}. "O'Reilly Media, Inc.".}
 
 \bibitem[\citeproctext]{ref-allaire2024Quarto}
-\CSLLeftMargin{397. }%
+\CSLLeftMargin{398. }%
 \CSLRightInline{Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y.,
 Dervieux, C., \& Woodhull, G. (2024, November). Quarto.
 \url{https://doi.org/10.5281/zenodo.5960048}}
 
 \bibitem[\citeproctext]{ref-balaur2025FAIRification}
-\CSLLeftMargin{398. }%
+\CSLLeftMargin{399. }%
 \CSLRightInline{Balaur, I., Nickerson, D. P., Welter, D., Wodke, J. A.
 H., Ancien, F., Gebhardt, T., \ldots{} Waltemath, D. (2025, March 24).
 {FAIRification} of computational models in biology.
 \url{https://doi.org/10.1101/2025.03.21.644517}}
 
 \bibitem[\citeproctext]{ref-tiwari2021Reproducibility}
-\CSLLeftMargin{399. }%
+\CSLLeftMargin{400. }%
 \CSLRightInline{Tiwari, K., Kananathan, S., Roberts, M. G., Meyer, J.
 P., Sharif Shohan, M. U., Xavier, A., \ldots{} Malik-Sheriff, R. S.
 (2021). Reproducibility in systems biology modelling. \emph{Molecular
@@ -10143,7 +10162,7 @@ Systems Biology}, \emph{17}(2), e9982.
 \url{https://doi.org/10.15252/msb.20209982}}
 
 \bibitem[\citeproctext]{ref-lenovere2006BioModels}
-\CSLLeftMargin{400. }%
+\CSLLeftMargin{401. }%
 \CSLRightInline{Le Novère, N., Bornstein, B., Broicher, A., Courtot, M.,
 Donizelli, M., Dharuri, H., \ldots{} Hucka, M. (2006). {BioModels
 Database}: A free, centralized database of curated, published,
@@ -10152,7 +10171,7 @@ quantitative kinetic models of biochemical and cellular systems.
 \url{https://doi.org/10.1093/nar/gkj092}}
 
 \bibitem[\citeproctext]{ref-malik-sheriff2020BioModels}
-\CSLLeftMargin{401. }%
+\CSLLeftMargin{402. }%
 \CSLRightInline{Malik-Sheriff, R. S., Glont, M., Nguyen, T. V. N.,
 Tiwari, K., Roberts, M. G., Xavier, A., \ldots{} Hermjakob, H. (2020).
 {BioModels}---15 years of sharing computational models in life science.
@@ -10160,7 +10179,7 @@ Tiwari, K., Roberts, M. G., Xavier, A., \ldots{} Hermjakob, H. (2020).
 \url{https://doi.org/10.1093/nar/gkz1055}}
 
 \bibitem[\citeproctext]{ref-bergmann2014COMBINE}
-\CSLLeftMargin{402. }%
+\CSLLeftMargin{403. }%
 \CSLRightInline{Bergmann, F. T., Adams, R., Moodie, S., Cooper, J.,
 Glont, M., Golebiewski, M., \ldots{} Le Novère, N. (2014). {COMBINE}
 archive and {OMEX} format: One file to share all information to
@@ -10168,14 +10187,14 @@ reproduce a modeling project. \emph{BMC Bioinformatics}, \emph{15}(1),
 369. \url{https://doi.org/10.1186/s12859-014-0369-z}}
 
 \bibitem[\citeproctext]{ref-bodenreider2006Bioontologies}
-\CSLLeftMargin{403. }%
+\CSLLeftMargin{404. }%
 \CSLRightInline{Bodenreider, O., \& Stevens, R. (2006). Bio-ontologies:
 Current trends and future directions. \emph{Briefings in
 Bioinformatics}, \emph{7}(3), 256--274.
 \url{https://doi.org/10.1093/bib/bbl027}}
 
 \bibitem[\citeproctext]{ref-brochhausen2018Discussion}
-\CSLLeftMargin{404. }%
+\CSLLeftMargin{405. }%
 \CSLRightInline{Brochhausen, M., Burgun, A., Ceusters, W., Hasman, A.,
 Leong, T. Y., Musen, M., \ldots{} Schulz, S. (2018). Discussion of
 {``{Biomedical Ontologies}: {Toward Scientific Debate}.''} \emph{Methods
@@ -10183,7 +10202,7 @@ of Information in Medicine}, \emph{50}, 217--236.
 \url{https://doi.org/10.1055/s-0038-1625243}}
 
 \bibitem[\citeproctext]{ref-fitzpatrick2022Validation}
-\CSLLeftMargin{405. }%
+\CSLLeftMargin{406. }%
 \CSLRightInline{Fitzpatrick, R., \& Stefan, M. I. (2022). Validation
 {Through Collaboration}: {Encouraging Team Efforts} to {Ensure Internal}
 and {External Validity} of {Computational Models} of {Biochemical
@@ -10191,83 +10210,83 @@ Pathways}. \emph{Neuroinformatics}, \emph{20}(1), 277--284.
 \url{https://doi.org/10.1007/s12021-022-09584-5}}
 
 \bibitem[\citeproctext]{ref-farrow2016Framework}
-\CSLLeftMargin{406. }%
+\CSLLeftMargin{407. }%
 \CSLRightInline{Farrow, R. (2016). A {Framework} for the {Ethics} of
 {Open Education}. \emph{Open Praxis}, \emph{8}(2), 93--109. Retrieved
 from \url{https://dialnet.unirioja.es/servlet/articulo?codigo=5474032}}
 
 \bibitem[\citeproctext]{ref-kushwaha2024Ethical}
-\CSLLeftMargin{407. }%
+\CSLLeftMargin{408. }%
 \CSLRightInline{Kushwaha, R. K., Yadav, K., Yadav, P. K., \& Yadav, M.
 K. (2024). \emph{Ethical {Frameworks} in {Special Education}: {A Guide}
 for {Researchers}}. Blue Rose Publishers. Retrieved from
 \url{https://books.google.com?id=xSAaEQAAQBAJ}}
 
 \bibitem[\citeproctext]{ref-rollin2006Science}
-\CSLLeftMargin{408. }%
+\CSLLeftMargin{409. }%
 \CSLRightInline{Rollin, B. E. (2006). \emph{Science and {Ethics}}.
 Cambridge University Press. Retrieved from
 \url{https://books.google.com?id=a_if1WSQQHcC}}
 
 \bibitem[\citeproctext]{ref-edel2018Science}
-\CSLLeftMargin{409. }%
+\CSLLeftMargin{410. }%
 \CSLRightInline{Edel, A. (Ed.). (2018). \emph{Science and the
 {Structure} of {Ethics}}. New York: Routledge.
 \url{https://doi.org/10.4324/9781351291002}}
 
 \bibitem[\citeproctext]{ref-menapace2019Scientific}
-\CSLLeftMargin{410. }%
+\CSLLeftMargin{411. }%
 \CSLRightInline{Menapace, M. (2019). Scientific {Ethics}: {A New
 Approach}. \emph{Science and Engineering Ethics}, \emph{25}(4),
 1193--1216. \url{https://doi.org/10.1007/s11948-018-0050-4}}
 
 \bibitem[\citeproctext]{ref-gensler2017Ethics}
-\CSLLeftMargin{411. }%
+\CSLLeftMargin{412. }%
 \CSLRightInline{Gensler, H. J. (2017). \emph{Ethics: {A Contemporary
 Introduction}} (3rd ed.). New York: Routledge.
 \url{https://doi.org/10.4324/9781351231831}}
 
 \bibitem[\citeproctext]{ref-joyner2002Evolution}
-\CSLLeftMargin{412. }%
+\CSLLeftMargin{413. }%
 \CSLRightInline{Joyner, B. E., \& Payne, D. (2002). Evolution and
 {Implementation}: {A Study} of {Values}, {Business Ethics} and
 {Corporate Social Responsibility}. \emph{Journal of Business Ethics},
 \emph{41}(4), 297--311. \url{https://doi.org/10.1023/A:1021237420663}}
 
 \bibitem[\citeproctext]{ref-kim2003Ethical}
-\CSLLeftMargin{413. }%
+\CSLLeftMargin{414. }%
 \CSLRightInline{Kim, Y., \& Choi, Y. (2003). Ethical standards appear to
 change with age and ideology: A survey of practitioners. \emph{Public
 Relations Review}, \emph{29}(1), 79--89.
 \url{https://doi.org/10.1016/S0363-8111(02)00197-2}}
 
 \bibitem[\citeproctext]{ref-macklin2008Standard}
-\CSLLeftMargin{414. }%
+\CSLLeftMargin{415. }%
 \CSLRightInline{Macklin, R. (2008). Standard of care: An evolution in
 ethical thinking. \emph{The Lancet}, \emph{372}(9635), 284--285.
 \url{https://doi.org/10.1016/S0140-6736(08)61098-3}}
 
 \bibitem[\citeproctext]{ref-jackson2005Origins}
-\CSLLeftMargin{415. }%
+\CSLLeftMargin{416. }%
 \CSLRightInline{Jackson, J. P., Weidman, N. M., \& Rubin, G.
 (2005--2006). The {Origins} of {Scientific Racism}. \emph{The Journal of
 Blacks in Higher Education}, (50), 66--79. Retrieved from
 \url{https://www.proquest.com/docview/195541933/abstract/7D2B19E7A5E4D1DPQ/1}}
 
 \bibitem[\citeproctext]{ref-seth2009Putting}
-\CSLLeftMargin{416. }%
+\CSLLeftMargin{417. }%
 \CSLRightInline{Seth, S. (2009). Putting knowledge in its place:
 Science, colonialism, and the postcolonial. \emph{Postcolonial Studies},
 \emph{12}(4), 373--388. \url{https://doi.org/10.1080/13688790903350633}}
 
 \bibitem[\citeproctext]{ref-birhane2020Decolonising}
-\CSLLeftMargin{417. }%
+\CSLLeftMargin{418. }%
 \CSLRightInline{Birhane, A., \& Guest, O. (2020, September 29). Towards
 decolonising computational sciences.
 \url{https://doi.org/10.48550/arXiv.2009.14258}}
 
 \bibitem[\citeproctext]{ref-branch2022Discussionsa}
-\CSLLeftMargin{418. }%
+\CSLLeftMargin{419. }%
 \CSLRightInline{Branch, H. A., Klingler, A. N., Byers, K. J. R. P.,
 Panofsky, A., \& Peers, D. (2022). Discussions of the {``{Not So
 Fit}''}: {How Ableism Limits Diverse Thought} and {Investigative
@@ -10275,41 +10294,41 @@ Potential} in {Evolutionary Biology}. \emph{The American Naturalist},
 \emph{200}(1), 101--113. \url{https://doi.org/10.1086/720003}}
 
 \bibitem[\citeproctext]{ref-medicine2017Fostering}
-\CSLLeftMargin{419. }%
+\CSLLeftMargin{420. }%
 \CSLRightInline{Medicine, and, Engineering, Affairs, P. and G., Policy,
 M., Engineering, \& Science, C. on R. (2017). \emph{Fostering
 {Integrity} in {Research}}. National Academies Press. Retrieved from
 \url{https://books.google.com?id=f8dEDwAAQBAJ}}
 
 \bibitem[\citeproctext]{ref-zhaksylyk2023Research}
-\CSLLeftMargin{420. }%
+\CSLLeftMargin{421. }%
 \CSLRightInline{Zhaksylyk, A., Zimba, O., Yessirkepov, M., \& Kocyigit,
 B. F. (2023). Research {Integrity}: {Where We Are} and {Where We Are
 Heading}. \emph{Journal of Korean Medical Science}, \emph{38}(47).
 \url{https://doi.org/10.3346/jkms.2023.38.e405}}
 
 \bibitem[\citeproctext]{ref-tjeltveit2015Appropriately}
-\CSLLeftMargin{421. }%
+\CSLLeftMargin{422. }%
 \CSLRightInline{Tjeltveit, A. C. (2015). Appropriately addressing
 psychological scientists' inescapable cognitive and moral values.
 \emph{Journal of Theoretical and Philosophical Psychology},
 \emph{35}(1), 35--52. \url{https://doi.org/10.1037/a0037909}}
 
 \bibitem[\citeproctext]{ref-mayson2018Bias}
-\CSLLeftMargin{422. }%
+\CSLLeftMargin{423. }%
 \CSLRightInline{Mayson, S. G. (2018--2019). Bias in, {Bias} out.
 \emph{Yale Law Journal}, \emph{128}(8), 2218--2301. Retrieved from
 \url{https://heinonline.org/HOL/P?h=hein.journals/ylr128&i=2309}}
 
 \bibitem[\citeproctext]{ref-ross2020Everyday}
-\CSLLeftMargin{423. }%
+\CSLLeftMargin{424. }%
 \CSLRightInline{Ross, H. J. (2020). \emph{Everyday {Bias}: {Identifying}
 and {Navigating Unconscious Judgments} in {Our Daily Lives}}. Rowman \&
 Littlefield. Retrieved from
 \url{https://books.google.com?id=ivbkDwAAQBAJ}}
 
 \bibitem[\citeproctext]{ref-romangarcia2022Biasa}
-\CSLLeftMargin{424. }%
+\CSLLeftMargin{425. }%
 \CSLRightInline{Roman Garcia, S., Stefan, M., Sterratt, D., Romano, N.,
 Sharan, M., \& Fischer, C. (2022, October). \emph{Bias and
 reproducibility in a computational neurobiology {PhD}'s journey.}
@@ -10317,27 +10336,27 @@ Retrieved from
 \url{https://github.com/Susana465/Bias-and-Reproducibility-Poster}}
 
 \bibitem[\citeproctext]{ref-zelenka2023Data}
-\CSLLeftMargin{425. }%
+\CSLLeftMargin{426. }%
 \CSLRightInline{Zelenka, N., Cara, N. D., Bennet, E., Hanschke, V. A.,
 Kuwertz, E., \& Garcia, S. R. (2023, March 27). Data {Hazards} v1.0: An
 open-source vocabulary of ethical hazards for data-intensive projects.
 \url{https://doi.org/10.31219/osf.io/hzmyp}}
 
 \bibitem[\citeproctext]{ref-roman-garcia2022Data}
-\CSLLeftMargin{426. }%
+\CSLLeftMargin{427. }%
 \CSLRightInline{Roman-Garcia, S., Stefan, M., Hanschke, V., Di Cara, N.,
 \& Zelenka, N. (2022, September). Data {Hazard Workshops}. Retrieved
 from \url{https://github.com/Susana465/Data_Hazards_workshops}}
 
 \bibitem[\citeproctext]{ref-holmes2000Models}
-\CSLLeftMargin{427. }%
+\CSLLeftMargin{428. }%
 \CSLRightInline{Holmes, W. R. (2000). Models of {Calmodulin Trapping}
 and {CaM Kinase II Activation} in a {Dendritic Spine}. \emph{Journal of
 Computational Neuroscience}, \emph{8}(1), 65--86.
 \url{https://doi.org/10.1023/A:1008969032563}}
 
 \bibitem[\citeproctext]{ref-lisman2001Model}
-\CSLLeftMargin{428. }%
+\CSLLeftMargin{429. }%
 \CSLRightInline{Lisman, J. E., \& Zhabotinsky, A. M. (2001). A {Model}
 of {Synaptic Memory}: {A CaMKII}/{PP1 Switch} that {Potentiates
 Transmission} by {Organizing} an {AMPA Receptor Anchoring Assembly}.
@@ -10345,28 +10364,28 @@ Transmission} by {Organizing} an {AMPA Receptor Anchoring Assembly}.
 \url{https://doi.org/10.1016/S0896-6273(01)00364-6}}
 
 \bibitem[\citeproctext]{ref-lisman2002Molecular}
-\CSLLeftMargin{429. }%
+\CSLLeftMargin{430. }%
 \CSLRightInline{Lisman, J., Schulman, H., \& Cline, H. (2002). The
 molecular basis of {CaMKII} function in synaptic and behavioural memory.
 \emph{Nature Reviews. Neuroscience}, \emph{3}(3), 175--190.
 \url{https://doi.org/10.1038/nrn753}}
 
 \bibitem[\citeproctext]{ref-zhabotinsky2000Bistability}
-\CSLLeftMargin{430. }%
+\CSLLeftMargin{431. }%
 \CSLRightInline{Zhabotinsky, A. M. (2000). Bistability in the
 {Ca2}+/{Calmodulin-Dependent Protein Kinase-Phosphatase System}.
 \emph{Biophysical Journal}, \emph{79}(5), 2211--2221.
 \url{https://doi.org/10.1016/S0006-3495(00)76469-1}}
 
 \bibitem[\citeproctext]{ref-lucic2008Detaileda}
-\CSLLeftMargin{431. }%
+\CSLLeftMargin{432. }%
 \CSLRightInline{Lučić, V., Greif, G. J., \& Kennedy, M. B. (2008).
 Detailed state model of {CaMKII} activation and autophosphorylation.
 \emph{European Biophysics Journal}, \emph{38}(1), 83--98.
 \url{https://doi.org/10.1007/s00249-008-0362-4}}
 
 \bibitem[\citeproctext]{ref-stefan2008Allostericd}
-\CSLLeftMargin{432. }%
+\CSLLeftMargin{433. }%
 \CSLRightInline{Stefan, M. I., Edelstein, S. J., \& Le Novère, N.
 (2008). An allosteric model of calmodulin explains differential
 activation of {PP2B} and {CaMKII}. \emph{Proceedings of the National
@@ -10374,7 +10393,7 @@ Academy of Sciences}, \emph{105}(31), 10768--10773.
 \url{https://doi.org/10.1073/pnas.0804672105}}
 
 \bibitem[\citeproctext]{ref-stefan2011MultiStage}
-\CSLLeftMargin{433. }%
+\CSLLeftMargin{434. }%
 \CSLRightInline{Stefan, M., Pepke, S., Mihalas, S., Bartol, T. M.,
 Sejnowski, T. J., \& Kennedy, M. B. (2011). Multi-{Stage Modeling} of
 the {Kinetics} of {Activation} of {CaMKII}. In \emph{Multi-{Stage
@@ -10383,7 +10402,7 @@ the 4th {INCF Congress} of {Neuroinformatics}.
 \url{https://doi.org/10.3389/conf.fninf.2011.08.00033}}
 
 \bibitem[\citeproctext]{ref-johnson2015Model}
-\CSLLeftMargin{434. }%
+\CSLLeftMargin{435. }%
 \CSLRightInline{Johnson, T., Bartol, T., Sejnowski, T., \& Mjolsness, E.
 (2015). Model reduction for stochastic {CaMKII} reaction kinetics in
 synapses by graph-constrained correlation dynamics. \emph{Physical
@@ -10391,7 +10410,7 @@ Biology}, \emph{12}(4), 045005.
 \url{https://doi.org/10.1088/1478-3975/12/4/045005}}
 
 \bibitem[\citeproctext]{ref-ordyan2020Interactions}
-\CSLLeftMargin{435. }%
+\CSLLeftMargin{436. }%
 \CSLRightInline{Ordyan, M., Bartol, T., Kennedy, M., Rangamani, P., \&
 Sejnowski, T. (2020). Interactions between calmodulin and neurogranin
 govern the dynamics of {CaMKII} as a leaky integrator. \emph{PLOS
@@ -10399,7 +10418,7 @@ Computational Biology}, \emph{16}(7), e1008015.
 \url{https://doi.org/10.1371/journal.pcbi.1008015}}
 
 \bibitem[\citeproctext]{ref-bartol2024Spatial}
-\CSLLeftMargin{436. }%
+\CSLLeftMargin{437. }%
 \CSLRightInline{Bartol, T. M., Ordyan, M., Sejnowski, T. J., Rangamani,
 P., \& Kennedy, M. B. (2024, February 2). A spatial model of
 autophosphorylation of {CaMKII} in a glutamatergic spine suggests a
@@ -10407,7 +10426,7 @@ network-driven kinetic mechanism for bistable changes in synaptic
 strength. \url{https://doi.org/10.1101/2024.02.02.578696}}
 
 \bibitem[\citeproctext]{ref-davies2007ACaMKII}
-\CSLLeftMargin{437. }%
+\CSLLeftMargin{438. }%
 \CSLRightInline{Davies, K. D., Alvestad, R. M., Coultrap, S. J., \&
 Browning, M. D. (2007). {αCaMKII} autophosphorylation levels differ
 depending on subcellular localization. \emph{Brain Research},
@@ -10415,41 +10434,41 @@ depending on subcellular localization. \emph{Brain Research},
 \url{https://doi.org/10.1016/j.brainres.2007.05.008}}
 
 \bibitem[\citeproctext]{ref-lenovere2001StochSim}
-\CSLLeftMargin{438. }%
+\CSLLeftMargin{439. }%
 \CSLRightInline{Le Novère, N., \& Shimizu, T. S. (2001). {StochSim}:
 Modelling of stochastic biomolecular processes. \emph{Bioinformatics},
 \emph{17}(6), 575--576.
 \url{https://doi.org/10.1093/bioinformatics/17.6.575}}
 
 \bibitem[\citeproctext]{ref-tonnesen2018SuperResolution}
-\CSLLeftMargin{439. }%
+\CSLLeftMargin{440. }%
 \CSLRightInline{Tønnesen, J., Inavalli, V. V. G. K., \& Nägerl, U. V.
 (2018). Super-{Resolution Imaging} of the {Extracellular Space} in
 {Living Brain Tissue}. \emph{Cell}, \emph{172}(5), 1108--1121.e15.
 \url{https://doi.org/10.1016/j.cell.2018.02.007}}
 
 \bibitem[\citeproctext]{ref-brette2012Handbook}
-\CSLLeftMargin{440. }%
+\CSLLeftMargin{441. }%
 \CSLRightInline{Brette, R., \& Destexhe, A. (2012). \emph{Handbook of
 {Neural Activity Measurement}}. Cambridge University Press. Retrieved
 from \url{https://books.google.com?id=YLyGmfVuBsIC}}
 
 \bibitem[\citeproctext]{ref-zheng2018Monitoring}
-\CSLLeftMargin{441. }%
+\CSLLeftMargin{442. }%
 \CSLRightInline{Zheng, K., Jensen, T. P., \& Rusakov, D. A. (2018).
 Monitoring intracellular nanomolar calcium using fluorescence lifetime
 imaging. \emph{Nature Protocols}, \emph{13}(3), 581--597.
 \url{https://doi.org/10.1038/nprot.2017.154}}
 
 \bibitem[\citeproctext]{ref-lee2009Activation}
-\CSLLeftMargin{442. }%
+\CSLLeftMargin{443. }%
 \CSLRightInline{Lee, S.-J. R., Escobedo-Lozoya, Y., Szatmari, E. M., \&
 Yasuda, R. (2009). Activation of {CaMKII} in single dendritic spines
 during long-term potentiation. \emph{Nature}, \emph{458}(7236),
 299--304. \url{https://doi.org/10.1038/nature07842}}
 
 \bibitem[\citeproctext]{ref-feng2011Quantitative}
-\CSLLeftMargin{443. }%
+\CSLLeftMargin{444. }%
 \CSLRightInline{Feng, B., Raghavachari, S., \& Lisman, J. (2011).
 Quantitative estimates of the cytoplasmic, {PSD}, and {NMDAR-bound}
 pools of {CaMKII} in dendritic spines. \emph{Brain Research},
@@ -10457,26 +10476,26 @@ pools of {CaMKII} in dendritic spines. \emph{Brain Research},
 \url{https://doi.org/10.1016/j.brainres.2011.08.051}}
 
 \bibitem[\citeproctext]{ref-otmakhov2012Measuring}
-\CSLLeftMargin{444. }%
+\CSLLeftMargin{445. }%
 \CSLRightInline{Otmakhov, N., \& Lisman, J. (2012). Measuring {CaMKII}
 concentration in dendritic spines. \emph{Journal of Neuroscience
 Methods}, \emph{203}(1), 106--114.
 \url{https://doi.org/10.1016/j.jneumeth.2011.09.022}}
 
 \bibitem[\citeproctext]{ref-petralia2012Distribution}
-\CSLLeftMargin{445. }%
+\CSLLeftMargin{446. }%
 \CSLRightInline{Petralia, R. S. (2012). Distribution of {Extrasynaptic
 NMDA Receptors} on {Neurons}. \emph{The Scientific World Journal},
 \emph{2012}(1), 267120. \url{https://doi.org/10.1100/2012/267120}}
 
 \bibitem[\citeproctext]{ref-cohen2002Protein}
-\CSLLeftMargin{446. }%
+\CSLLeftMargin{447. }%
 \CSLRightInline{Cohen, P. T. W. (2002). Protein phosphatase 1--targeted
 in many directions. \emph{Journal of Cell Science}, \emph{115},
 241--256. \url{https://doi.org/10.1242/jcs.115.2.241}}
 
 \bibitem[\citeproctext]{ref-eastwood2006Minimum}
-\CSLLeftMargin{447. }%
+\CSLLeftMargin{448. }%
 \CSLRightInline{Eastwood, B. J., Farmen, M. W., Iversen, P. W., Craft,
 T. J., Smallwood, J. K., Garbison, K. E., \ldots{} Smith, G. F. (2006).
 The {Minimum Significant Ratio}: {A Statistical Parameter} to
@@ -10486,41 +10505,41 @@ The {Minimum Significant Ratio}: {A Statistical Parameter} to
 253--261. \url{https://doi.org/10.1177/1087057105285611}}
 
 \bibitem[\citeproctext]{ref-yasuda2022CaMKIIa}
-\CSLLeftMargin{448. }%
+\CSLLeftMargin{449. }%
 \CSLRightInline{Yasuda, R., Hayashi, Y., \& Hell, J. W. (2022).
 {CaMKII}: A central molecular organizer of synaptic plasticity, learning
 and memory. \emph{Nature Reviews Neuroscience}, \emph{23}(11), 666--682.
 \url{https://doi.org/10.1038/s41583-022-00624-2}}
 
 \bibitem[\citeproctext]{ref-bayer2019CaM}
-\CSLLeftMargin{449. }%
+\CSLLeftMargin{450. }%
 \CSLRightInline{Bayer, K. U., \& Schulman, H. (2019). {CaM Kinase}:
 {Still Inspiring} at 40. \emph{Neuron}, \emph{103}(3), 380--394.
 \url{https://doi.org/10.1016/j.neuron.2019.05.033}}
 
 \bibitem[\citeproctext]{ref-sanabria2008Spatial}
-\CSLLeftMargin{450. }%
+\CSLLeftMargin{451. }%
 \CSLRightInline{Sanabria, H., Digman, M. A., Gratton, E., \& Waxham, M.
 N. (2008). Spatial {Diffusivity} and {Availability} of {Intracellular
 Calmodulin}. \emph{Biophysical Journal}, \emph{95}(12), 6002--6015.
 \url{https://doi.org/10.1529/biophysj.108.138974}}
 
 \bibitem[\citeproctext]{ref-goodell2014CaMKII}
-\CSLLeftMargin{451. }%
+\CSLLeftMargin{452. }%
 \CSLRightInline{Goodell, D. J., Eliseeva, T. A., Coultrap, S. J., \&
 Bayer, K. U. (2014). {CaMKII Binding} to {GluN2B Is Differentially
 Affected} by {Macromolecular Crowding Reagents}. \emph{PLOS ONE},
 \emph{9}(5), e96522. \url{https://doi.org/10.1371/journal.pone.0096522}}
 
 \bibitem[\citeproctext]{ref-barcomb2016CaMKIIa}
-\CSLLeftMargin{452. }%
+\CSLLeftMargin{453. }%
 \CSLRightInline{Barcomb, K., Hell, J. W., Benke, T. A., \& Bayer, K. U.
 (2016). The {CaMKII}/{GluN2B Protein Interaction Maintains Synaptic
 Strength} *. \emph{Journal of Biological Chemistry}, \emph{291}(31),
 16082--16089. \url{https://doi.org/10.1074/jbc.M116.734822}}
 
 \bibitem[\citeproctext]{ref-kawasaki2017Conformational}
-\CSLLeftMargin{453. }%
+\CSLLeftMargin{454. }%
 \CSLRightInline{Kawasaki, H., \& Kretsinger, R. H. (2017).
 Conformational landscape mapping the difference between {N-lobes} and
 {C-lobes} of calmodulin. \emph{Journal of Inorganic Biochemistry},
@@ -10528,7 +10547,7 @@ Conformational landscape mapping the difference between {N-lobes} and
 \url{https://doi.org/10.1016/j.jinorgbio.2017.08.025}}
 
 \bibitem[\citeproctext]{ref-pepke2010Dynamic}
-\CSLLeftMargin{454. }%
+\CSLLeftMargin{455. }%
 \CSLRightInline{Pepke, S., Kinzer-Ursem, T., Mihalas, S., \& Kennedy, M.
 B. (2010). A {Dynamic Model} of {Interactions} of {Ca2}+, {Calmodulin},
 and {Catalytic Subunits} of {Ca2}+/{Calmodulin-Dependent Protein Kinase
@@ -10536,7 +10555,7 @@ II}. \emph{PLOS Computational Biology}, \emph{6}(2), e1000675.
 \url{https://doi.org/10.1371/journal.pcbi.1000675}}
 
 \bibitem[\citeproctext]{ref-gonzalez-andrade2016Insights}
-\CSLLeftMargin{455. }%
+\CSLLeftMargin{456. }%
 \CSLRightInline{González-Andrade, M., Rodríguez-Sotres, Madariaga-Mazón,
 Rivera-Chávez, Mata, Sosa-Peinado, \ldots{} and Arias-Olguín, I. I.
 (2016). Insights into molecular interactions between {CaM} and its
@@ -10545,7 +10564,7 @@ inhibitors from molecular dynamics simulations and experimental data.
 78--91. \url{https://doi.org/10.1080/07391102.2015.1022225}}
 
 \bibitem[\citeproctext]{ref-linkevicius2025Fitting}
-\CSLLeftMargin{456. }%
+\CSLLeftMargin{457. }%
 \CSLRightInline{Linkevicius, D., Chadwick, A., Faas, G. C., Stefan, M.
 I., \& Sterratt, D. C. (2025). Fitting and comparison of
 calcium-calmodulin kinetic schemes to a common data set using non-linear
@@ -10553,7 +10572,7 @@ mixed effects modelling. \emph{PLOS ONE}, \emph{20}(2), e0318646.
 \url{https://doi.org/10.1371/journal.pone.0318646}}
 
 \bibitem[\citeproctext]{ref-pullara2017Mechanisms}
-\CSLLeftMargin{457. }%
+\CSLLeftMargin{458. }%
 \CSLRightInline{Pullara, F., Asciutto, E. K., \& General, I. J. (2017).
 Mechanisms of {Activation} and {Subunit Release} in
 {Ca2}+/{Calmodulin-Dependent Protein Kinase II}. \emph{The Journal of
@@ -10561,7 +10580,7 @@ Physical Chemistry B}, \emph{121}(45), 10344--10352.
 \url{https://doi.org/10.1021/acs.jpcb.7b09214}}
 
 \bibitem[\citeproctext]{ref-zhang2017Opposing}
-\CSLLeftMargin{458. }%
+\CSLLeftMargin{459. }%
 \CSLRightInline{Zhang, P., Tripathi, S., Trinh, H., \& Cheung, M. S.
 (2017). Opposing {Intermolecular Tuning} of {Ca2}+ {Affinity} for
 {Calmodulin} by {Neurogranin} and {CaMKII Peptides}. \emph{Biophysical
@@ -10569,7 +10588,7 @@ Journal}, \emph{112}(6), 1105--1119.
 \url{https://doi.org/10.1016/j.bpj.2017.01.020}}
 
 \bibitem[\citeproctext]{ref-asciutto2021Physicalc}
-\CSLLeftMargin{459. }%
+\CSLLeftMargin{460. }%
 \CSLRightInline{Asciutto, E. K., Pantano, S., \& General, I. J. (2021).
 Physical interactions driving the activation/inhibition of
 calcium/calmodulin dependent protein kinase {II}. \emph{Journal of
@@ -10577,7 +10596,7 @@ Molecular Graphics and Modelling}, \emph{105}, 107875.
 \url{https://doi.org/10.1016/j.jmgm.2021.107875}}
 
 \bibitem[\citeproctext]{ref-khan2024Realtimea}
-\CSLLeftMargin{460. }%
+\CSLLeftMargin{461. }%
 \CSLRightInline{Khan, S., Molloy, J. E., Puhl, H., Schulman, H., \&
 Vogel, S. S. (2024). Real-time single-molecule imaging of
 {CaMKII-calmodulin} interactions. \emph{Biophysical Journal},
@@ -10585,28 +10604,28 @@ Vogel, S. S. (2024). Real-time single-molecule imaging of
 \url{https://doi.org/10.1016/j.bpj.2024.02.021}}
 
 \bibitem[\citeproctext]{ref-evans2009Energetics}
-\CSLLeftMargin{461. }%
+\CSLLeftMargin{462. }%
 \CSLRightInline{Evans, T. I. A., \& Shea, M. A. (2009). Energetics of
 calmodulin domain interactions with the calmodulin binding domain of
 {CaMKII}. \emph{Proteins: Structure, Function, and Bioinformatics},
 \emph{76}(1), 47--61. \url{https://doi.org/10.1002/prot.22317}}
 
 \bibitem[\citeproctext]{ref-stefan2012Structural}
-\CSLLeftMargin{462. }%
+\CSLLeftMargin{463. }%
 \CSLRightInline{Stefan, M. I., Marshall, D. P., \& Novère, N. L. (2012).
 Structural {Analysis} and {Stochastic Modelling Suggest} a {Mechanism}
 for {Calmodulin Trapping} by {CaMKII}. \emph{PLOS ONE}, \emph{7}(1),
 e29406. \url{https://doi.org/10.1371/journal.pone.0029406}}
 
 \bibitem[\citeproctext]{ref-bossuyt2013Visualizing}
-\CSLLeftMargin{463. }%
+\CSLLeftMargin{464. }%
 \CSLRightInline{Bossuyt, J., \& Bers, D. M. (2013). Visualizing {CaMKII}
 and {CaM} activity: A paradigm of compartmentalized signaling.
 \emph{Journal of Molecular Medicine}, \emph{91}(8), 907--916.
 \url{https://doi.org/10.1007/s00109-013-1060-y}}
 
 \bibitem[\citeproctext]{ref-rellos2010Structure}
-\CSLLeftMargin{464. }%
+\CSLLeftMargin{465. }%
 \CSLRightInline{Rellos, P., Pike, A. C. W., Niesen, F. H., Salah, E.,
 Lee, W. H., von Delft, F., \& Knapp, S. (2010). Structure of the
 {CaMKIIδ}/{Calmodulin Complex Reveals} the {Molecular Mechanism} of
@@ -10614,7 +10633,7 @@ Lee, W. H., von Delft, F., \& Knapp, S. (2010). Structure of the
 \url{https://doi.org/10.1371/journal.pbio.1000426}}
 
 \bibitem[\citeproctext]{ref-migues2006Phosphorylation}
-\CSLLeftMargin{465. }%
+\CSLLeftMargin{466. }%
 \CSLRightInline{Migues, P. V., Lehmann, I. T., Fluechter, L., Cammarota,
 M., Gurd, J. W., Sim, A. T. R., \ldots{} Rostas, J. A. P. (2006).
 Phosphorylation of {CaMKII} at {Thr253} occurs in vivo and enhances
@@ -10623,7 +10642,7 @@ Neurochemistry}, \emph{98}(1), 289--299.
 \url{https://doi.org/10.1111/j.1471-4159.2006.03876.x}}
 
 \bibitem[\citeproctext]{ref-gangopadhyay2008Regulation}
-\CSLLeftMargin{466. }%
+\CSLLeftMargin{467. }%
 \CSLRightInline{Gangopadhyay, S. S., Gallant, C., Sundberg, E. J., Lane,
 W. S., \& Morgan, K. G. (2008). Regulation of {Ca2}+/calmodulin kinase
 {II} by a small {C-terminal} domain phosphatase. \emph{Biochemical
@@ -10631,7 +10650,7 @@ Journal}, \emph{412}(3), 507--516.
 \url{https://doi.org/10.1042/BJ20071582}}
 
 \bibitem[\citeproctext]{ref-lou1986Activation}
-\CSLLeftMargin{467. }%
+\CSLLeftMargin{468. }%
 \CSLRightInline{Lou, L. L., Lloyd, S. J., \& Schulman, H. (1986).
 Activation of the multifunctional {Ca2}+/calmodulin-dependent protein
 kinase by autophosphorylation: {ATP} modulates production of an
@@ -10640,27 +10659,27 @@ Sciences}, \emph{83}(24), 9497--9501.
 \url{https://doi.org/10.1073/pnas.83.24.9497}}
 
 \bibitem[\citeproctext]{ref-hoffman2011Investigation}
-\CSLLeftMargin{468. }%
+\CSLLeftMargin{469. }%
 \CSLRightInline{Hoffman, L. R. (2011). Investigation of {CaMKII}
 activation: A model of self-regulation. Retrieved from
 \url{https://etd.library.vanderbilt.edu/etd-11302011-144712}}
 
 \bibitem[\citeproctext]{ref-cohen1997Novel}
-\CSLLeftMargin{469. }%
+\CSLLeftMargin{470. }%
 \CSLRightInline{Cohen, P. T. W. (1997). Novel protein serine/threonine
 phosphatases: {Variety} is the spice of life. \emph{Trends in
 Biochemical Sciences}, \emph{22}(7), 245--251.
 \url{https://doi.org/10.1016/S0968-0004(97)01060-8}}
 
 \bibitem[\citeproctext]{ref-shioda2017Physiological}
-\CSLLeftMargin{470. }%
+\CSLLeftMargin{471. }%
 \CSLRightInline{Shioda, N., \& Fukunaga, K. (2017). Physiological and
 {Pathological Roles} of {CaMKII-PP1 Signaling} in the {Brain}.
 \emph{International Journal of Molecular Sciences}, \emph{19}(1), 20.
 \url{https://doi.org/10.3390/ijms19010020}}
 
 \bibitem[\citeproctext]{ref-romangarcia2017Computationala}
-\CSLLeftMargin{471. }%
+\CSLLeftMargin{472. }%
 \CSLRightInline{Roman Garcia, S., \& Stefan, M. (2017, October 9).
 Computational modelling and simulation of the interaction between {NMDA}
 receptors and {CaMKII} in the postsynaptic neuron. \emph{With thanks to
@@ -10669,14 +10688,14 @@ University of Edinburgh. School of Biological Sciences.
 \url{https://doi.org/10.7488/ds/2226}}
 
 \bibitem[\citeproctext]{ref-sumathi2002Priori}
-\CSLLeftMargin{472. }%
+\CSLLeftMargin{473. }%
 \CSLRightInline{Sumathi, R., \& Green Jr., W. H. (2002). A priori rate
 constants for kinetic modeling. \emph{Theoretical Chemistry Accounts},
 \emph{108}(4), 187--213.
 \url{https://doi.org/10.1007/s00214-002-0368-4}}
 
 \bibitem[\citeproctext]{ref-turanyi2012Determination}
-\CSLLeftMargin{473. }%
+\CSLLeftMargin{474. }%
 \CSLRightInline{Turányi, T., Nagy, T., Zsély, I. Gy., Cserháti, M.,
 Varga, T., Szabó, B. T., \ldots{} Curran, H. J. (2012). Determination of
 rate parameters based on both direct and indirect measurements.
@@ -10684,27 +10703,27 @@ rate parameters based on both direct and indirect measurements.
 284--302. \url{https://doi.org/10.1002/kin.20717}}
 
 \bibitem[\citeproctext]{ref-mcdonald2022Parameter}
-\CSLLeftMargin{474. }%
+\CSLLeftMargin{475. }%
 \CSLRightInline{McDonald, A. G., \& Tipton, K. F. (2022). Parameter
 {Reliability} and {Understanding Enzyme Function}. \emph{Molecules},
 \emph{27}(1), 263. \url{https://doi.org/10.3390/molecules27010263}}
 
 \bibitem[\citeproctext]{ref-otmakhov2015Fast}
-\CSLLeftMargin{475. }%
+\CSLLeftMargin{476. }%
 \CSLRightInline{Otmakhov, N., Regmi, S., \& Lisman, J. E. (2015). Fast
 {Decay} of {CaMKII FRET Sensor Signal} in {Spines} after {LTP Induction
 Is Not Due} to {Its Dephosphorylation}. \emph{PLOS ONE}, \emph{10}(6),
 e0130457. \url{https://doi.org/10.1371/journal.pone.0130457}}
 
 \bibitem[\citeproctext]{ref-chang2019Mechanismsa}
-\CSLLeftMargin{476. }%
+\CSLLeftMargin{477. }%
 \CSLRightInline{Chang, J.-Y., Nakahata, Y., Hayano, Y., \& Yasuda, R.
 (2019). Mechanisms of {Ca2}+/calmodulin-dependent kinase {II} activation
 in single dendritic spines. \emph{Nature Communications}, \emph{10}(1),
 2784. \url{https://doi.org/10.1038/s41467-019-10694-z}}
 
 \bibitem[\citeproctext]{ref-breitwieser2021BioDynaMo}
-\CSLLeftMargin{477. }%
+\CSLLeftMargin{478. }%
 \CSLRightInline{Breitwieser, L., Hesam, A., de Montigny, J., Vavourakis,
 V., Iosif, A., Jennings, J., \ldots{} Bauer, R. (2021). {BioDynaMo}: A
 modular platform for high-performance agent-based simulation.
