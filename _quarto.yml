@@ -54,6 +54,7 @@ format:
     lof: false
     number-sections: true
     documentclass: scrreprt
+    keep-tex: true 
     latex_engine: xelatex
     include-in-header:
       text: |
@@ -63,8 +64,10 @@ format:
         \usepackage{pdfpages}
         \usepackage{afterpage}
         \usepackage[a4paper, left=2.3cm, right=2.3cm, top=2.3cm, bottom=2.3cm]{geometry}
+        \usepackage{tabularx}
 
         \addtokomafont{disposition}{\rmfamily}
+  
 
     include-after-body: 
       text: |

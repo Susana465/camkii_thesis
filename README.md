@@ -3,10 +3,6 @@
 - However, I recommend that in order to get the full rendering of the structure in pdf and html formats, you download and work with Quarto either via VS code or RStudio. 
 - More instructions on how to get started with Quarto can be found [here](https://quarto.org/docs/tools/vscode.html).
 
-## How to read the thesis
-- The thesis is available to download and read in the _book/ directory of this repository. 
-- It is rendered in both .pdf and .doc, which may change its appearance slightly but the content is all there.
-
 ## How to contribute
 - You can branch from 'main' and add/remove content that way, and give feedback by adding comments.
 - You can also render the document into pdf, and add comments that way if you prefer that.
@@ -16,27 +12,28 @@
 ## Repository and Thesis Structure
 The repository is organized to mirror the structure of the thesis document. The following project file structure provides an overview of the thesis' structure. Consult the code in the repository for a better understanding of how Quarto ties everything together. 
 
-You might find some files in the repository that are not part of the below diagram, this is likely because I am readjusting the content or I have added files as extra notes for myself...or I have not decided yet where to put their content. 
+You might find some files in the repository that are not part of the below diagram, this is likely because I have added them as extra notes for myself, or I have not decided yet where to put their content. 
 
 ```python
-camkii_thesis/               # Root directory
-├── _quarto.yml              # Configuration file for Quarto
-└── chapters-figures/        # Subdirectory for chapters figures
-    ├── figures.png
-├── index.qmd                # The main entry point of your dissertation
-├── 10-intro.qmd             # Directory for the introduction part, containing subchapters
-│   ├── 11-philosophy.md
-├── 20-background.md         # Directory for the background part, containing subchapters.
-│   ├── 21-complex_systems.md
-│   ├── 22-reproducibility_open_science.md
-│   ├── 23-memory_learning.md
-│   ├── 24-why_modelling.md
-│   ├── 25-ssa_ode.md
-│   ├── 26-rule_based.ipynb
-│   ├── 27-software.md
-│   └── 28-necklace_numbers.rmd
-├── 30-methods.md
-├── 40-results.md
-├── references.qmd           # File for managing references
-├── references.bib           # There's different .bib files that need organizing. 
+camkii_thesis/               # Root directory of the thesis project
+├── _quarto.yml              # Quarto configuration file
+├── chapters-figures/        # Folder containing all chapter figures
+│   ├── figures.png
+│
+├── index.qmd                # Includes: Abstract, Lay Summary, Acknowledgements,  List of Figures, List of Abbreviations, Publications and Author Contributions Declaration
+│
+├── 10-intro.qmd             # Chapter: General introduction and chapter overview
+├── 20-intro-biology.qmd     # Chapter: Biological Research Background
+├── 30-modelling_background.qmd  # Computational Modelling Background
+│
+├── 20-repro_open.qmd        # Chapter: Open, Reproducible and Ethics-focused PhD
+├── 20-data-hazards.qmd      # Chapter: A Case Study in Ethical Reflection: Data Hazards in this PhD
+│
+├── 30-model.qmd             # Chapter: In Silico Model of CaMKII, NMDARs, and Associated Signalling Molecules
+├── 40-results.qmd           # Results, summary and discussion chapters
+│
+├── publications.qmd         # List or discussion of related publications
+│
+├── references.qmd           # Reference management (Quarto format)
+├── references.bib           # Bibliography file (may include multiple .bib sources)
 ```
