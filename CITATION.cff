@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this thesis in your research, please cite it as below."
+title: "CaMKII–NMDAR Interactions in Learning and Memory — A Case Study in Ethical and Reproducible Modelling Approaches"
+version: "1.0.0"
+authors:
+  - family-names: "Roman Garcia"
+    given-names: "Susana"
+    orcid: "https://orcid.org/0009-0004-6967-7754"
+date-released: 2025-10-08
+url: "https://github.com/Susana465/camkii_thesis"
+type: "thesis"
