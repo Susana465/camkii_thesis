@@ -9,6 +9,9 @@
 - Add issues for tasks that need actioning.
 - Close issues that have been actioned.
 
+## Where to find the thesis pdf
+You can find a pdf to download in the _book folder in this repository. [View the _book folder](./_book/).
+
 ## Repository and Thesis Structure
 The repository is organized to mirror the structure of the thesis document. The following project file structure provides an overview of the thesis' structure. Consult the code in the repository for a better understanding of how Quarto ties everything together. 
 
