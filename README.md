@@ -12,6 +12,8 @@
 ## Where to find the thesis pdf
 You can find a pdf to download in the _book folder in this repository. [View the _book folder](./_book/).
 
+Or just go [here](https://github.com/Susana465/camkii_thesis/blob/main/_book/CaMKII-NMDAR-interactions-in-Learning-and-Memory--A-Case-Study-in-Ethical-and-Reproducible-Modelling-Approaches.pdf) 
+
 ## Repository and Thesis Structure
 The repository is organized to mirror the structure of the thesis document. The following project file structure provides an overview of the thesis' structure. Consult the code in the repository for a better understanding of how Quarto ties everything together. 
 
